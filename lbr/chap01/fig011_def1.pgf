@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+%Assioma 14
+\tkzDefPoint(0,0){L}
+\tkzDefShiftPoint[L](0:.5){A}
+\tkzDefShiftPoint[L](0:5.3){C}
+\tkzDefShiftPoint[L](0:3){O}
+\tkzDefShiftPoint[L](0:1.7){B}
+\tkzDefShiftPoint[L](0:6){M}
+\tkzDefShiftPoint[L](0:6){r}
+\tkzDrawSegment(L,M)
+\tkzDrawPoints(A,B,C,O)
+\tkzLabelPoints[font=\small, above](A,B,C,O)
+\tkzLabelPoint[font=\small](r){r}
+\end{tikzpicture}

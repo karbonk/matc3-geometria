@@ -1,0 +1,31 @@
+\begin{tikzpicture}[font=\small]
+%segmenti consecutivi
+\tkzDefPoint(0,0){B}
+\tkzDefShiftPoint[B](120:2){A}
+\tkzDefShiftPoint[B](0:2.5){C}
+\tkzDrawPoints(A,B,C)
+\tkzLabelPoints[font=\small](B,C)
+\tkzLabelPoint[font=\small,right](A){A}
+\tkzDrawSegments(A,B B,C)
+\node at(1.25,-.7){segmenti consecutivi};
+
+%non consecutivi
+\tkzDefPoint(4,0){E}
+\tkzDefShiftPoint[E](120:.7){F}
+\tkzDefShiftPoint[E](120:2){D}
+\tkzDefShiftPoint[F](10:2.5){G}
+\tkzDrawPoints(E,F,D,G)
+\tkzLabelPoints[font=\small,left](E,F,D)
+\tkzLabelPoint[font=\small,above](G){G}
+\tkzDrawSegments(E,D F,G)
+\node at(6.5,-.7){Segmenti non consecutivi};
+
+\tkzDefPoint(7,0){H}
+\tkzDefShiftPoint[H](100:2){I}
+\tkzDefShiftPoint[H](60:1.5){L}
+\tkzDefShiftPoint[H](10:3){M}
+\tkzDrawPoints(H,I,L,M)
+\tkzLabelPoints[font=\small,right](H,I)
+\tkzLabelPoints[font=\small,above](L,M)
+\tkzDrawSegments(H,I L,M)
+\end{tikzpicture}

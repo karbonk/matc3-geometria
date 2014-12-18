@@ -1,0 +1,29 @@
+\begin{tikzpicture}[font=\small]
+%segmenti adiacenti
+\tkzDefPoint(0,0){A}
+\tkzDefShiftPoint[A](60:1.5){B}
+\tkzDefShiftPoint[A](60:2.5){C}
+\tkzDrawPoints(A,B,C)
+\tkzLabelPoints[font=\small,right](A,B,C)
+\tkzDrawSegment(A,C)
+\node at(.3,-.5){segmenti adiacenti};
+
+%non consecutivi
+\tkzDefPoint(4,0){D}
+\tkzDefShiftPoint[D](60:.7){E}
+\tkzDefShiftPoint[D](60:1.7){F}
+\tkzDefShiftPoint[D](60:2.5){G}
+\tkzDrawPoints(E,F,D,G)
+\tkzLabelPoints[font=\small,right](D,E,F,G)
+\tkzDrawSegments(E,D F,G)
+\tkzDrawSegment[dashed](E,F)
+\node at(5.5,-.5){Segmenti non adiacenti};
+
+\tkzDefPoint(7,0){H}
+\tkzDefShiftPoint[H](60:1){L}
+\tkzDefShiftPoint[H](60:1.5){I}
+\tkzDefShiftPoint[H](60:2.5){M}
+\tkzDrawPoints(H,I,L,M)
+\tkzLabelPoints[font=\small,right](H,I,L,M)
+\tkzDrawSegment(H,M)
+\end{tikzpicture}

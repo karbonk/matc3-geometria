@@ -1,0 +1,17 @@
+\begin{tikzpicture}[font=\small]
+%i punti
+
+\tkzDefPoint(0,0){O}
+\tkzDefPoint(4,.7){c}
+\tkzDefPoint(1,-.5){A}
+\tkzDefPoint(2.4,2){a}
+\tkzDefPoint(.2,1.6){D}
+\tkzDefPoint(4,1.2){b}
+\tkzInterLL(A,a)(O,c) \tkzGetPoint{K}
+\tkzInterLL(A,a)(D,b) \tkzGetPoint{L}
+\tkzMarkAngles[fill=blue!10, size=.5](A,L,b c,K,a)
+\tkzDrawSegments[](O,c A,a D,b)
+\tkzLabelPoints(a,c)
+\tkzLabelPoint[above](b){b}
+
+\end{tikzpicture}

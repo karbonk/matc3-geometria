@@ -1,0 +1,168 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% geometria_4ed_completo.tex
+%% Copyright 2015 Dimitrios Vrettos
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is 
+% Dimitrios Vrettos - d.vrettos@gmail.com
+%
+% This work consists of the files:
+%  -  algebra1_3ed_completo.tex (this file)
+%  -  Makefile
+%  -  README
+%  -  the part of code of the files under chap/ and lbr/ directories
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt,a4paper,openright]{matc3mem}
+%========================
+%  Lingua & codifica
+%========================
+\usepackage[T1]{fontenc} 
+\usepackage{textcomp} 	
+\usepackage[utf8x]{inputenc}
+\usepackage[polutonikogreek,italian]{babel} %aggiunto da claudio polutonikogreek
+%========================
+% Font
+%========================
+\renewcommand{\rmdefault}{ppl}
+\usepackage{mathpazo}
+\usepackage[scaled=.95]{helvet}
+\usepackage{eulervm}
+%========================
+% Tipografia
+%========================
+\usepackage[bindingoffset=6mm]{geometry}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{indentfirst}
+\usepackage{emptypage}
+\usepackage{nonumonpart}
+\usepackage{enumitem}
+\usepackage{tabto}
+\usepackage{microtype}
+\usepackage{quoting} %aggiunto da claudio per citazioni lunghe
+\quotingsetup{font=small}
+%========================
+% Tabelle aggiunto da claudio
+%========================
+\usepackage{threeparttable}
+%========================
+% Matematica I
+%========================
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{cancel}
+\usepackage[]{units} %questo manca nella versione originale
+%========================
+% Grafica
+%========================
+\usepackage[pdftex]{graphicx}
+\usepackage{rotating}
+\usepackage{shadow}
+\usepackage{fancybox}
+\usepackage{empheq}
+\usepackage{framed}
+\usepackage{wrapfig}
+%========================
+% pgf & TikZ
+%========================
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepgfplotslibrary{patchplots}
+\pgfplotsset{compat=1.8}
+\usepackage{tkz-euclide}
+\usepackage{tkz-fct}
+\usepackage{circuitikz}
+\usetkzobj{all}
+%========================
+% Librerie TikZ
+%========================
+\usetikzlibrary{arrows,%
+		automata,%
+		backgrounds,%
+		calc,%
+		decorations.markings,%
+		decorations.shapes,%
+		decorations.text,% 
+		decorations.pathreplacing,%
+		fit,%
+		matrix,%
+		mindmap,%
+		patterns,%
+		positioning,%
+		intersections,%aggiunto da claudio
+		shapes,%
+		shapes.geometric}
+%========================
+% Simboli
+%========================
+\usepackage{marvosym}
+\usepackage{eurosym}
+\usepackage{pifont}
+%========================
+% Geometria Razionale
+%========================
+\usepackage{matc3}
+%========================
+% Collegamenti
+%========================
+\usepackage[colorlinks, hypertexnames=false]{hyperref}
+\usepackage{bookmark}
+%========================
+% Personalizzazioni
+%========================
+\input{lbr/variabili}
+\graphicspath{{img/}}
+\setsecnumdepth{subsection} 
+\maxtocdepth{subsection}
+\setlength{\cftpartnumwidth}{2.25em}
+\setlength{\shadeboxsep}{5pt} 
+\setlength{\shadeboxrule}{.4pt} 
+\setlength{\shadedtextwidth}{\textwidth}
+\addtolength{\shadedtextwidth}{-2\shadeboxsep}
+\addtolength{\shadedtextwidth}{-2\shadeboxrule}
+\setlength{\shadeleftshift}{0pt}
+\setlength{\shaderightshift}{0pt}
+\linespread{1.05}
+\captionnamefont{\small\scshape}
+\captiontitlefont{\small}
+\newcommand{\mail}[1]{\href{mailto:#1}{\texttt{#1}}}
+\definecolor{grigio80}{gray}{0.8}
+\definecolor{grigio70}{gray}{0.7}
+\hypersetup{%
+  pdffitwindow=true,%
+  linkcolor=RoyalBlue,%	
+  linktocpage=true,%
+  filecolor=black,%
+  urlcolor=RoyalBlue,%
+  plainpages=false,%
+  pdftitle={\pdftitolo, \edizione \tipo},%
+  pdfauthor=Dimitrios Vrettos,%
+  pdfdisplaydoctitle=true%
+}
+\bookmarksetup{startatroot}
+%\include{lbr/stile}
+
+%========================
+% Documento
+%========================
+\begin{document}
+\frontmatter
+\include{chap/frontespizio}
+\include{chap/colophon}
+\include{chap/indice}
+\include{chap/prefazione}
+\mainmatter
+%=========================
+% Primo capitolo
+%=========================
+\include{chap/01_fondamenti}
+\end{document}

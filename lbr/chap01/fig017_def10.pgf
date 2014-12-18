@@ -1,0 +1,27 @@
+\begin{tikzpicture}[font=\small]
+%definizione di segmento
+\tkzDefPoint(0,0){r}
+\tkzDefShiftPoint[r](0:9){s}
+\tkzDefShiftPoint[r](0:3){A}
+\tkzDefShiftPoint[r](0:6){B}
+\tkzDefPoint(1.5,.5){e1}
+\tkzDefPoint(7.5,.5){e2}
+\tkzDefPoint(4.5,0){p}
+\tkzDefPoint(1.5,-.5){s1}
+\tkzDefPoint(7.5,-.5){s2}
+\tkzDrawSegments[style=dashed](r,A B,s)
+\tkzDrawSegment[very thick](A,B)
+\tkzDrawPoints[fill=red](A,B)
+\tkzLabelPoints[font=\small,above](r,s)
+\tkzLabelPoints[font=\small,above](A,B)
+\tkzLabelPoint[font=\small,above](p){punti interni}
+\tkzLabelPoint[font=\small,below](4.5,-.5){segmento AB}
+\tkzLabelPoint[font=\small,below](s1){semiretta di origine A}
+\tkzLabelPoint[font=\small,below](s2){semiretta di origine B}
+\tkzLabelPoint[font=\small,above](e1){estremo}
+\tkzLabelPoint[font=\small,above](e2){estremo}
+\tkzDrawSegments[thick,dotted,->,-latex](e1,A e2,B)
+\tkzDrawSegment[thick,dotted,->,-latex]({4.5,-.5},{4.5,0})
+\draw[thick,dotted,->,-latex](0.5,-0.5).. controls (2,-.2)..(1,0);
+\draw[thick,dotted,->,-latex](8.5,-0.5).. controls (7,-.2)..(8,0);
+\end{tikzpicture}

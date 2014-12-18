@@ -1,0 +1,38 @@
+\begin{tikzpicture}[font=\small]
+%convesso
+\tkzDefPoints{0/1/A,
+1.4/.8/B,
+3.5/2/C,
+1.6/3.2/D,
+.6/2/E}
+\tkzDefShiftPoint[A](30:.5){A1}
+\tkzDefShiftPoint[A1](40:2.1){D1}
+\tkzDefShiftPoint[A1](5:.5){A2}
+\tkzDefShiftPoint[A1](10:2.1){D2}
+%concavo
+\tkzDefPoints{5/2.6/H,
+5.8/3/I,
+7/2/L,
+8.2/2.8/M,
+8.5/1.3/N,
+8/.3/O,
+7/.2/P,
+6/.3/Q,
+5/.8/R,
+5.2/1.7/S}
+\tkzDefShiftPoint[H](-3:.7){H1}
+\tkzDefShiftPoint[M](-110:.6){M1}
+\tkzDefShiftPoint[H](-60:.7){H2}
+\tkzDefShiftPoint[L](-40:1){L1}
+\tkzDefShiftPoint[R](-10:.5){Q1}
+\tkzDefShiftPoint[Q1](10:2.5){Q2}
+
+\tkzDrawPolygon[fill=blue!10,rounded corners](A,B,C,D,E)
+\tkzDrawPolygon[fill=yellow!30,rounded corners](H,I,L,M,N,O,P,Q,R,S)
+\tkzDrawSegments(A1,D1 A2,D2 H1,M1 H2,L1 Q1,Q2)
+\tkzDrawPoints(A1,D1,A2,D2,H1,M1,H2,L1,Q1,Q2)
+\tkzLabelPoint[below,font=\small](H1){P}
+\tkzLabelPoint[below,font=\small](M1){Q}
+
+\end{tikzpicture}
+

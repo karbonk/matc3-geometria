@@ -1,0 +1,48 @@
+\begin{tikzpicture}
+%assioma 15
+\tkzDefPoint(0,0){B}
+\tkzDefShiftPoint[B](0:2.5){A}
+\tkzDefShiftPoint[B](0:3){I}
+\tkzDefShiftPoint[B](30:2.5){C}
+\tkzDefShiftPoint[B](30:3){H}
+\tkzDrawPoints(A,B,C)
+\tkzDrawSegments(B,H B,I)
+\tkzLabelPoints[font=\small](B,C,A)
+\tkzMarkAngle[fill=orange,opacity=.3,size=1cm](A,B,C)
+
+\tkzDefShiftPoint[B](0:5){B'}
+\tkzDefShiftPoint[B'](0:2.5){C'}
+\tkzDefShiftPoint[B'](0:3){M}
+\tkzDefShiftPoint[B'](30:2.5){E}
+\tkzDefShiftPoint[B'](30:3){L}
+\tkzDefShiftPoint[B'](-30:2.5){D}
+\tkzDefShiftPoint[B'](-30:3){N}
+\tkzDrawPoints(B',E,C',D)
+\tkzDrawSegments(B',L B',M B',N)
+\tkzLabelPoints[font=\small](E,C')
+\tkzLabelPoints[font=\small,below](B',D)
+\tkzMarkAngle[fill=orange,opacity=.3,size=1cm](D,B',C')
+\tkzMarkAngle[fill=orange,opacity=.3,size=.9cm](C',B',E)
+
+% % % % % %
+\begin{comment}
+\tkzDefShiftPoint[I](0:4){L}
+\tkzDefPoint(1.5,1){V}
+\tkzDefMidPoint(V,L)	\tkzGetPoint{M1}
+\tkzDefMidPoint(V,M)	\tkzGetPoint{M2}
+\tkzDrawSegments(V,L V,M)
+\tkzFillPolygon[red!30,opacity=.25](L,V,M,H,I)
+\tkzFillPolygon[blue!30,opacity=.25](L,V,M)
+%\tkzDrawSegment[style=dashed](C,M)
+\tkzDrawPoint(V)
+\tkzLabelPoint[above right](.5,.1){Angolo}
+\tkzLabelPoint[right](2.5,1){Angolo}
+\tkzLabelPoint[font=\small, left](V){vertice}
+\tkzLabelPoint[font=\small, above](V){V}
+\tkzLabelPoint[font=\small, above](M1){lato}
+\tkzLabelPoint[font=\small, below](M2){lato}
+\tkzLabelPoint[font=\small, below left](L){r}
+\tkzLabelPoint[font=\small, above left](M){s}
+% % % % % % %
+\end{comment}
+\end{tikzpicture}

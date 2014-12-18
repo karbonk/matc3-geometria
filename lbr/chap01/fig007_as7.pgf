@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+%Assioma 7
+\tkzDefPoint(0,0){O}
+\tkzDefShiftPoint[O](0:.5){A}
+\tkzDefShiftPoint[O](0:1.2){B}
+\tkzDefShiftPoint[O](0:1.9){C}
+\tkzDefShiftPoint[O](0:2.5){M}
+\tkzDefShiftPoint[O](0:2.5){r}
+\tkzDrawSegment(O,M)
+\tkzDrawPoints(A,B,C)
+\tkzLabelPoints[font=\small, above](A,B,C)
+\tkzLabelPoint[font=\small](r){r}
+\end{tikzpicture}

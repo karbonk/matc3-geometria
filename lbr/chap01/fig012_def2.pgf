@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+%Semiretta
+\tkzDefPoint(0,0){O}
+\tkzDefShiftPoint[O](0:5){C}
+\tkzDefShiftPoint[O](0:6){M}
+\tkzDrawSegment(O,C)
+\tkzDrawSegment[style=dashed](C,M)
+\tkzDrawPoint(O)
+\tkzLabelPoint[font=\small, above](O){O}
+\end{tikzpicture}

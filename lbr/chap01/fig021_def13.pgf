@@ -1,0 +1,16 @@
+\begin{tikzpicture}[font=\small]
+%semipiani
+\tkzDefPoint(0,0){D}
+\tkzDefShiftPoint[D](50:2){G}
+\tkzDefShiftPoint[G](0:2.5){F}
+\tkzDefShiftPoint[D](0:2.5){E}
+\tkzDefShiftPoint[D](50:.7){L}
+\tkzDefMidPoint(F,E) \tkzGetPoint{M}
+%\tkzDrawSegment(L,M)
+\tkzLabelPoint[right](M){$ r $}
+\tkzLabelPoint[right](F){$\pi$}
+\tkzDrawPolygon[fill=blue!10](L,G,F,M)
+\tkzDrawPolygon[fill=yellow!30](D,L,M,E)
+\node at(1.6,.3){semipiano};
+\node at(2.1,1.2){semipiano};
+\end{tikzpicture}

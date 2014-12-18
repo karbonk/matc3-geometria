@@ -1,0 +1,31 @@
+\begin{tikzpicture}[font=\small]
+%rette coincidenti
+\tkzDefPoint(0,0){A}
+\tkzDefShiftPoint[A](20:3){B}
+\tkzDefPoint(0,-.05){C}
+\tkzDefShiftPoint[C](20:3){D}
+\tkzLabelPoint[font=\small,above](B){$ r $}
+\tkzLabelPoint[font=\small,below](D){$ s $}
+\tkzDrawSegments(A,B C,D)
+\node at(1.5,-1){$ r $ e $ s $ sono coincidenti};
+
+%rette incidenti
+\tkzDefPoint(3.5,0){A}
+\tkzDefShiftPoint[A](20:3){B}
+\tkzDefPoint(4,-.3){C}
+\tkzDefShiftPoint[C](40:2.5){D}
+\tkzLabelPoint[font=\small,below](B){$ v $}
+\tkzLabelPoint[font=\small,above](D){$ u $}
+\tkzDrawSegments(A,B C,D)
+\node at(5,-1){$ u $ e $ v $ sono incidenti};
+
+%rette parallele
+\tkzDefPoint(7,0){A}
+\tkzDefShiftPoint[A](30:3){B}
+\tkzDefPoint(7.5,-.3){C}
+\tkzDefShiftPoint[C](30:3){D}
+\tkzLabelPoint[font=\small,above](B){$ m $}
+\tkzLabelPoint[font=\small,below](D){$ n $}
+\tkzDrawSegments(A,B C,D)
+\node at(8.5,-1){$ m $ e $ n $ sono parallele};
+\end{tikzpicture}
