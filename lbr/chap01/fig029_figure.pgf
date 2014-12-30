@@ -7,14 +7,16 @@
 \coordinate (c) at (3,2);
 \coordinate (d) at (3,0.7);
 \draw[thick, fill={gray!40!white}] (a) -- (b) -- (c) -- (d) -- cycle;
+\node at (1.5,-0.3) {(a)};
 \end{scope}
 
-\begin{scope}[xshift=4cm, yshift=-2cm, scale=2]
+\begin{scope}[xshift=3cm, yshift=-2cm, scale=2]
 \coordinate (a) at (0,0);
 \coordinate (b) at (1,2);
 \coordinate (c) at (3,2);
 \coordinate (d) at (3,0.7);
 \draw[thick, fill={gray!40!white}] (a) -- (b) -- (c) -- (d) -- cycle;
+\node at (1.7,-0.03) {(b)};
 \end{scope}
 
 \end{tikzpicture}

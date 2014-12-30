@@ -1,0 +1,28 @@
+\begin{tikzpicture}[scale=.9,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (0,0);
+\coordinate (b) at (1.5,0);
+\coordinate (c) at (2,-2.2);
+\coordinate (d) at (1.5,-3.5);
+\coordinate (e) at (0,-3.5);
+\coordinate (f) at (-0.5,-2.2);
+\coordinate (g) at (0,-1.5);
+\draw[thick, fill={gray!40!white}] (a) -- (b) -- (c) -- (d) -- (e) -- (f) -- (g) -- cycle;
+\node at (0.75,-4) {(i)};
+\end{scope}
+
+\begin{scope}[xshift=5cm, xscale=-1]
+\coordinate (a) at (0,0);
+\coordinate (b) at (1.5,0);
+\coordinate (c) at (2,-2.2);
+\coordinate (d) at (1.5,-3.5);
+\coordinate (e) at (0,-3.5);
+\coordinate (f) at (-0.5,-2.2);
+\coordinate (g) at (0,-1.5);
+\draw[thick, fill={gray!40!white}] (a) -- (b) -- (c) -- (d) -- (e) -- (f) -- (g) -- cycle;
+\node at (0.75,-4) {(j)};
+\end{scope}
+
+\end{tikzpicture}
