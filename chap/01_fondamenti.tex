@@ -27,7 +27,7 @@ La geometria, sin dai tempi di Euclide, è stata organizzata assiomaticamente, p
 
 \subsection{Nozioni di logica}
 
-Assumiamo come ``primitivo'' il concetto base di proposizione (o ``giudizio'' secondo la terminologia del grande filosofo greco Aristotele\footnote{(383 \aC{} - 322 \aC).}): chiamiamo \emph{proposizione} una frase (affermativa o negativa) a cui abbia senso associare un valore di verità, sia esso vero (\emph{V}) oppure falso (\emph{F}).
+Assumiamo come ``primitivo'' il concetto base di proposizione (o ``giudizio'' secondo la terminologia del grande filosofo greco Aristotele\footnote{(384 o 383 \aC{} - 322 \aC).}): chiamiamo \emph{proposizione} una frase (affermativa o negativa) a cui abbia senso associare un valore di verità, sia esso vero (\emph{V}) oppure falso (\emph{F}).
 
 Per esempio, sono proposizioni logiche affermazioni del tipo <<Una retta ha infiniti punti>>, <<2+3=10>>. Non sono proposizioni logiche le frasi <<\np{1000} è un numero grande>>, <<il quadrato è semplice>>. Mentre la prima frase esprime un'affermazione vera e la seconda un'affermazione falsa, la terza e la quarta esprimono affermazioni non valutabili oggettivamente pertanto di queste ultime non si può dire se sono vere o false.
 
@@ -117,8 +117,8 @@ Date le seguenti proposizioni $p=$~<<un triangolo ha tre lati>> (Vera), $q=$~<<u
 
 È piuttosto semplice capire il meccanismo della negazione se applicata a proposizioni atomiche, spesso è meno intuitivo il valore di verità della negazione di una proposizione più complessa.
 Ad esempio, la negazione di $p\wedge q$ non è $\neg p\wedge \neg q$ bensì $\neg p\vee \neg q$, mentre la negazione di $p\vee q$ è $\neg p\wedge \neg q$ e non $\neg p\vee \neg q$.
-
-In formule: $\neg (p\wedge q)\equiv (\neg p)\vee (\neg q)$ e $\neg (p\vee q)\equiv (\neg p)\wedge (\neg q)$.
+In formule:
+\[\neg (p\wedge q)\equiv (\neg p)\vee (\neg q)\qquad\text{e}\qquad\neg (p\vee q)\equiv (\neg p)\wedge (\neg q).\]
 
 Per esempio, <<non è vero che Marco e Luca sono stati bocciati>> può voler dire che entrambi non sono stati bocciati o solo uno di loro non è stato bocciato.
 
@@ -150,7 +150,7 @@ Per esempio, la proposizione composta $p\wedge \neg p$ è una contraddizione in 
 
 \subsection{Predicati e quantificatori}
 
-Una proposizione che fa riferimento a una proprietà o caratteristica di alcuni elementi di un insieme si chiama \emph{predicato}. Le frasi formate da un predicato che ha alcuni argomenti incogniti si dicono \emph{enunciati aperti}.
+Una proposizione che fa riferimento a una proprietà o caratteristica di alcuni elementi di un insieme si chiama \emph{predicato} (o \emph{enunciato}). Le frasi formate da un predicato che ha alcuni argomenti incogniti si dicono \emph{enunciati aperti}.
 Per esempio, $p=$~<<$x$ è un numero intero maggiore di 10>> è un enunciato aperto.
 
 Consideriamo ora le seguenti affermazioni:
@@ -172,19 +172,19 @@ I termini ``c'è almeno'', ``alcuni'', ``esiste almeno uno'' si dicono \emph{qua
 Bisogna prestare particolare attenzione quando si negano frasi in cui compaiono i quantificatori. Per esempio la negazione di <<tutti i gatti fanno le fusa>> non è <<nessun gatto fa le fusa>> bensì <<non tutti i gatti fanno le fusa>> che si può esprimere anche con il quantificatore esistenziale <<C'è almeno un gatto che non fa le fusa>>.
 La negazione della frase <<l'anno scorso siamo stati tutti promossi>> non è <<l'anno scorso siamo stati tutti bocciati>> ma <<l'anno scorso non siamo stati tutti promossi>> ovvero <<l'anno scorso c'è stato almeno uno di noi che non è stato promosso>>.
 La negazione della proposizione $p=$~<<tutti i quadrati hanno due diagonali>> è la proposizione ${\lnot}p=$~<<non tutti i quadrati hanno due diagonali>>.
-Il linguaggio comune ci indurrebbe a considerare come negazione di $p$ la proposizione <<nessun quadrato ha due diagonali>>, in realtà per avere la negazione della proposizione $p$ basta che esista almeno un quadrato che non ha due diagonali.
+Il linguaggio comune ci potrebbe portare a considerare come negazione di $p$ la proposizione <<nessun quadrato ha due diagonali>>, in realtà per avere la negazione della proposizione $p$ basta che esista almeno un quadrato che non ha due diagonali.
 
 \subsection{Implicazione}
 
 Nel linguaggio matematico sono comuni proposizioni del tipo <<Se $p$ allora $q$>>. Ad esempio <<se un numero è multiplo di $12$ allora è multiplo di $3$>>. La frase precedente può essere espressa dicendo <<essere multiplo di $12$ \emph{implica} essere multiplo di $3$>>.
 
 In logica frasi del tipo <<se $p$ allora $q$>> vengono tradotte utilizzando l'operatore $\Rightarrow$ detto \emph{implicazione}.
-La scrittura <<se $p$ allora $q$>> si traduce con la scrittura $p\Rightarrow q$, che si legge ``$p$ implica $q$''.
+La scrittura <<se $p$ allora $q$>> si traduce quindi con la scrittura $p\Rightarrow q$, che si legge ``$p$ implica $q$''.
 
 La proposizione $p$ è detta \emph{antecedente}, (o \emph{ipotesi}) e la proposizione $q$ è detta \emph{conseguente} (o \emph{tesi}).
 Il significato logico della proposizione $p\Rightarrow q$ è che <<tutte le volte che la proposizione $p$ è vera allora risulta vera anche la proposizione $q$>>. Ovvero non si specifica il caso in cui $p$ sia falsa.
 
-Per esempio, l'affermazione <<se c'è il sole andiamo al mare>> è falsa solo quando c'è il sole e non andiamo al mare; l'affermazione, infatti, non dice nulla se il sole non c'è: quindi se non c'è il sole si è liberi di andare o non andare al mare. Anche l'affermazione <<se studi sarai promosso>> dice solo che se studi conseguirai la promozione, non dice nulla per il caso in cui tu non studi: in questo caso, infatti, potrai essere ugualmente promosso.
+Per esempio, l'affermazione <<se c'è il sole andiamo al mare>> è falsa solo quando c'è il sole e non andiamo al mare; l'affermazione, infatti, non dice nulla se il sole non c'è: quindi se non c'è il sole si è liberi di andare o non andare al mare. Anche l'affermazione <<se studi sarai promosso>> dice solo che se studi conseguirai la promozione, non dice nulla per il caso in cui tu non studi: in questo caso, infatti, potresti essere ugualmente promosso.
 
 La tavola di verità è la seguente:
 \begin{center}
@@ -203,14 +203,14 @@ La tavola di verità è la seguente:
 Uno degli errori logici più comuni è quello di pensare che da $p\Rightarrow q$ si possa dedurre  $\neg p\Rightarrow \neg q$.
 Ad esempio dall'affermazione <<se piove prendo l'ombrello>> qualcuno può pensare che si possa dedurre <<se non piove non prendo l'ombrello>>. Riflettendoci, si intuisce che le due frasi non sono affatto consequenziali. Basta pensare che chi pronuncia la prima frase sta affermando che tutte le volte che piove prende naturalmente l'ombrello, ma non esclude la possibilità di prenderlo anche quando non piove (in effetti è saggio farlo se il cielo è coperto da nuvoloni neri!).
 
-Così la frase: a) <<se $x$ è multiplo di $12$ allora è multiplo di $3$>> non vuol dire: b) <<se $x$ non è multiplo di $12$ allora non è multiplo di $3$>>.
+Così la frase (a) <<se $x$ è multiplo di $12$ allora è multiplo di $3$>> non vuol dire (b) <<se $x$ non è multiplo di $12$ allora non è multiplo di $3$>>.
 Infatti la (a) è vera, mentre la (b) è falsa (si pensi ad esempio al numero $6$ che non è multiplo di $12$ ma è comunque multiplo di $3$).
 
 Ciò che ragionevolmente si può dedurre da $p\Rightarrow q$ è $\neg q\Rightarrow \neg p$.
-Ad esempio da <<se $x$ è multiplo di $12$ allora è multiplo di $3$>> si può dedurre <<se $x$ non è multiplo di $3$ allora non è multiplo di $12$>>.
+Ad esempio, da <<se $x$ è multiplo di $12$ allora è multiplo di $3$>> si può dedurre <<se $x$ non è multiplo di $3$ allora non è multiplo di $12$>>.
 
 Data l'implicazione $p\Rightarrow q$, la proposizione $p$ viene detta \emph{condizione sufficiente} per $q$. Mentre la proposizione $q$ viene detta \emph{condizione necessaria} per $p$.
-Per esempio, studiare è condizione necessaria per essere promossi ma non è sufficiente.
+Per esempio, <<studiare>> è condizione necessaria per <<essere promossi>> ma non è sufficiente.
 Quest'ultima espressione fa appunto riferimento al fatto che da $p\Rightarrow q$ si può dedurre  $\neg q\Rightarrow \neg p$. Ossia $q$ è necessaria per $p$ in quanto se non è vera $q$ non è vera neanche $p$.
 
 Calcoliamo la tavola di verità di $p\Rightarrow q$ e di $\neg q\Rightarrow \neg p$ 
@@ -235,7 +235,7 @@ In generale, data un'implicazione $p\Rightarrow q$ (\emph{proposizione diretta})
 \item l'implicazione $\neg q\Rightarrow \neg p$ si dice \emph{contronominale} (o \emph{controinversa}) di $p\Rightarrow q$.
 \end{itemize*}
 
-\paragraph{La doppia implicazione} o \emph{equivalenza logica} di due proposizioni $p$ e $q$ dà luogo a una proposizione che in simboli si rappresenta $p\Leftrightarrow q$ (leggasi ``$p$ se e solo se $q$'') che è vera se $p$ e $q$ sono entrambe vere o entrambe false. La tavola di verità è la seguente:
+\paragraph{La doppia implicazione} o \emph{equivalenza logica} di due proposizioni $p$ e $q$ dà luogo a una proposizione che in simboli si rappresenta $p\Leftrightarrow q$ (leggasi ``$p$ se e solo se $q$'') che è vera solo se $p$ e $q$ sono entrambe vere o entrambe false. La tavola di verità è la seguente:
 \begin{center}
  \begin{tabular*}{.75 \textwidth}{@{\extracolsep{\fill}}*{6}{c}}
  \toprule
@@ -248,7 +248,7 @@ In generale, data un'implicazione $p\Rightarrow q$ (\emph{proposizione diretta})
 \bottomrule
  \end{tabular*}
 \end{center}
-L'operatore $\Leftrightarrow $ è detto \emph{doppia implicazione} perché se vale $p\Leftrightarrow q$ allora valgono anche $p\Rightarrow q$ e $q\Rightarrow p$, e viceversa. Nella tabella precedente, infatti, è stata messa in evidenza l'equivalenza logica tra la proposizione $p\Leftrightarrow q$ e la proposizione $(p\Rightarrow q)\wedge (q\Rightarrow p)$.
+L'operatore $\Leftrightarrow $ è detto \emph{doppia implicazione} perché se vale $p\Leftrightarrow q$ allora valgono sia $p\Rightarrow q$ che $q\Rightarrow p$ (e viceversa). Nella tabella precedente, infatti, è stata messa in evidenza l'equivalenza logica tra la proposizione $p\Leftrightarrow q$ e la proposizione $(p\Rightarrow q)\wedge (q\Rightarrow p)$.
 
 L'equivalenza logica è un relazione di equivalenza, infatti verifica le seguenti proprietà:
 \begin{itemize*}
@@ -276,14 +276,14 @@ Così come abbiamo visto che non è possibile definire tutto e che quindi bisogn
 In generale, come abbiamo detto, dato un teorema (diretto) del tipo $p\Rightarrow q$, la sua validità non garantisce la validità del teorema inverso $q\Rightarrow p$. Questo però può succedere. In ogni caso, se sono vere $p\Rightarrow q$ e $q\Rightarrow p$, le due proposizioni sono \emph{logicamente equivalenti}, ossia $p\Leftrightarrow q$.
 \begin{exrig}
 \begin{esempio}
-Teorema: un triangolo che ha i lati uguali ha anche gli angoli uguali.
+Teorema: <<un triangolo che ha i lati uguali ha anche gli angoli uguali>>.
 \begin{itemize}
 \item Il teorema si può schematizzare nel seguente modo: $p=$~<<un triangolo ha i lati uguali>>; $q=$~<<un triangolo ha gli angoli uguali>>. Il teorema enunciato è $p\Rightarrow q$.
 \item  Il teorema inverso è  $q\Rightarrow p$, cioè <<un triangolo che ha gli angoli uguali ha anche i lati uguali>>.
 \end{itemize}
 In tale esempio sono validi sia il teorema diretto che quello inverso. Il fatto che uno dei due teoremi sia chiamato diretto e l'altro inverso è un fatto soggettivo, che può dipendere semplicemente dall'ordine con cui si enunciano i teoremi.
 Il teorema precedente si può esporre allora nel seguente modo:
-\item Teorema: un triangolo ha i lati uguali se e solo se ha gli angoli uguali.
+\item Teorema: <<un triangolo ha i lati uguali se e solo se ha gli angoli uguali>>.
 \end{esempio}
 \end{exrig}
 
@@ -291,14 +291,15 @@ Il teorema precedente si può esporre allora nel seguente modo:
 
 Nel paragrafo precedente abbiamo parlato in modo generico di implicazione, deduzione, dimostrazione. Facciamo ora un po' di chiarezza sull'uso di questi termini. L'\emph{implicazione} è un'operazione tra proposizioni, mentre la \emph{deduzione} è il ragionamento logico che costituisce la base della dimostrazione di un teorema. Per l'implicazione materiale si usa il simbolo $\rightarrow$ mentre per la deduzione logica si usa il simbolo $\Rightarrow$.
 
-La frase <<se 5 è un numero pari, allora il triangolo ha 4 lati>> è perfettamente valida ed anzi è vera, poiché la premessa (proposizione antecedente) è falsa, per cui l'implicazione è vera anche se la proposizione conseguente è falsa (si tenga presente la tavola di verità di $p\Rightarrow q$).
+La frase <<se 5 è un numero pari, allora il triangolo ha 4 lati>> è perfettamente valida dal punto di vista logico ed anzi è vera, poiché la premessa (proposizione antecedente) è falsa, per cui l'implicazione è vera anche se la proposizione conseguente è falsa (si tenga presente la tavola di verità di $p\Rightarrow q$).
 Si noti però che la definizione di implicazione ha senso solamente se la premessa è vera, il suo ampliamento al caso in cui la premessa è falsa è motivata da ragioni di completezza della trattazione. Bisogna quindi fare attenzione ad usare l'implicazione logica quando la premessa è falsa. Teniamo comunque conto che se $p$ è falsa allora $(p\Rightarrow q)\wedge(p\Rightarrow \neg q)$ cioè $p\Rightarrow (q\wedge \neg q)$ è vera. Ma  $q\wedge \neg q$ è una contraddizione, quindi una premessa falsa implica sempre una contraddizione.
 
-In realtà, la \emph{dimostrazione} di un teorema non è la verifica della validità dell'implicazione, anzi è un procedimento che fa uso della validità dell'implicazione stessa. In un teorema si parte dal supporre vera l'ipotesi e si dimostra, mediante gli assiomi ed altri teoremi già dimostrati in precedenza, che anche la tesi è vera (questo se si vuole seguire il \emph{procedimento diretto}). Se si vuole seguire il procedimento indiretto (o \emph{per assurdo}), si suppone che la tesi sia falsa e, sempre mediante assiomi e altri teoremi già dimostrati, si arriva ad affermare che l'ipotesi è falsa (cosa che non si deve accettare).
+In realtà, la \emph{dimostrazione} di un teorema non è la verifica della validità dell'implicazione, anzi è un procedimento che fa uso della validità dell'implicazione stessa. In un teorema si parte dal supporre vera l'ipotesi e si dimostra, mediante un ragionamento logico che si basa sugli assiomi e su altri teoremi già dimostrati in precedenza, che anche la tesi è vera (questo se si segue il \emph{procedimento diretto}). Se si segue invece il \emph{procedimento indiretto} (o \emph{per assurdo}), si suppone che la tesi sia falsa e, sempre mediante ragionamento logico basato su assiomi e altri teoremi già dimostrati, si arriva ad affermare che l'ipotesi è falsa (cosa che non si deve accettare).
 
 Le principali regole del corretto ragionamento seguono alcuni schemi particolari (detti \emph{sillogismi}, dal nome attribuito ad essi da Aristotele). Presentiamo qui i quattro principali sillogismi: il \emph{modus ponens}, il \emph{modus tollens}, il \emph{sillogismo disgiuntivo} e il \emph{sillogismo ipotetico}.
 \begin{center}
  \begin{tabular*}{.8 \textwidth}{@{\extracolsep{\fill}}*{6}{c}}
+ \toprule
  &Modus&Modus&\multicolumn{2}{c}{Sillogismo}&Sillogismo\\
  &ponens&tollens&\multicolumn{2}{c}{disgiuntivo}&ipotetico\\
 \midrule
@@ -306,6 +307,7 @@ Le principali regole del corretto ragionamento seguono alcuni schemi particolari
 2\textsuperscript{a} premessa & $ p $ & $ \neg q $ & $ \neg p $ & $ \neg q $  & $q\Rightarrow r$\\
 \midrule
 conclusione & $ q $ & $ \neg p $ & $ q $ & $ p $ & $p\Rightarrow r$\\
+\bottomrule
  \end{tabular*}
 \end{center}
 Suggeriamo una lettura degli schemi appena esposti:
@@ -319,41 +321,54 @@ Suggeriamo una lettura degli schemi appena esposti:
 Altre regole (note come i \emph{giudizi} di Aristotele) fanno uso dei predicati e dei quantificatori. Riprendiamo un esempio precedente traducendo la frase <<tutti i quadrati hanno due diagonali>> e la sua negazione <<non tutti i quadrati hanno due diagonali>> in formule che fanno uso anche del linguaggio degli insiemi. Se chiamiamo $Q$ l'insieme di tutti i quadrati e $P$ la proprietà dell'avere due diagonali, se $x$ è il generico quadrato (elemento di $Q$), $P(x)$ è il predicato <<$x$ gode della proprietà $P$>>, cioè <<$x$ ha due diagonali>>, la frase <<tutti i quadrati hanno due diagonali>> si traduce in simboli: ${\forall}x\in Q$, $P(x)$.
 
 La sua negazione è: <<esiste almeno un quadrato che non ha due diagonali>>, cioè che non gode della proprietà $P$, e si traduce in simboli così: $\exists x\in Q$, $\neg P(x)$.
-In quest'ultimo caso, la virgola può anche essere sostituita da una barra verticale (``\textbar'') e si legge ``tale che''.
+In quest'ultimo caso, la virgola può anche essere sostituita da una barra verticale (``\textbar'') o da ``:'' e si legge ``tale che''.
 
 Analogamente, una frase del tipo <<esiste almeno un numero naturale che sia divisore di $10$>> può scriversi come: $\exists n\in\insN\mid D(n)$, dove $D$ è la proprietà dell'essere divisore di $10$ e $D(n)$ significa che $n$ verifica la proprietà $D$, cioè che $n$ è un divisore di $10$. La sua negazione è <<nessun numero naturale è divisore di 10>>, ovvero <<preso un qualsiasi numero naturale $n$, questo non gode della proprietà $D$>>, la traduzione in simboli di tale frase è: $\forall n\in\insN$, ${\neg}D(n)$.
 
 Mettiamo in tabella le quattro proposizioni, che corrispondono ai giudizi di Aristotele):
+%\begin{center}
+% \begin{tabular*}{.8 \textwidth}{@{\extracolsep{\fill}}*{2}{l}}
+% \multirow{2}*{A: Giudizio universale affermativo}&$\forall x\in Q$, $P(x)$\\
+% & $P$ è vera per ogni $x$ \\
+%\midrule
+% \multirow{2}*{E: Giudizio universale negativo}&$\forall n\in\insN$, $\neg D(n)$\\
+% & $D$ è falsa per ogni $n$ \\
+%\midrule
+% \multirow{2}*{I: Giudizio particolare positivo}&$\exists n\in\insN\mid D(n)$\\
+% & $D$ è vera per almeno un $n$ \\
+%\midrule
+% \multirow{2}*{O: Giudizio particolare negativo}&$\exists x\in Q\mid\neg P(x)$\\
+% & $P$ è falsa per almeno un $x$ \\
+% \end{tabular*}
+%\end{center}
 \begin{center}
- \begin{tabular*}{.8 \textwidth}{@{\extracolsep{\fill}}*{2}{l}}
- \multirow{2}*{A: Giudizio universale affermativo}&$\forall x\in Q$, $P(x)$\\
- & $P$ è vera per ogni $x$ \\
+ \begin{tabular}{cc|cc}
+ \toprule
+ \multirow{3}{2.5cm}{A: Giudizio universale affermativo}&$\forall x\in Q$, $P(x)$&\multirow{3}{2.5cm}{I: Giudizio particolare affermativo}&$\exists n\in\insN\mid D(n)$\\
+&\multirow{2}*{$P$ è vera per ogni $x$}& &\multirow{2}*{$D$ è vera per almeno un $n$}\\
+&&&\\
 \midrule
- \multirow{2}*{E: Giudizio universale negativo}&$\forall n\in\insN$, $\neg D(n)$\\
- & $D$ è falsa per ogni $n$ \\
-\midrule
- \multirow{2}*{I: Giudizio particolare positivo}&$\exists n\in\insN\mid D(n)$\\
- & $D$ è vera per almeno un $n$ \\
-\midrule
- \multirow{2}*{O: Giudizio particolare negativo}&$\exists x\in Q\mid\neg P(x)$\\
- & $P$ è falsa per almeno un $x$ \\
- \end{tabular*}
+ \multirow{3}{2.5cm}{E: Giudizio universale negativo}&$\forall n\in\insN$, $\neg D(n)$&\multirow{3}{2.5cm}{O: Giudizio particolare negativo}&$\exists x\in Q\mid\neg P(x)$\\
+ &\multirow{2}*{$D$ è falsa per ogni $n$}& &\multirow{2}*{$P$ è falsa per almeno un $x$}\\
+ &&&\\
+ \bottomrule
+ \end{tabular}
 \end{center}
 I quattro giudizi di Aristotele si possono rappresentare con gli insiemi di Venn (figura~\ref{fig:1.1}).
-\begin{figure}[b,t,h]
+\begin{figure}[bth]
  \centering\input{./lbr/chap01/fig001_arist.pgf}
  \caption{Rappresentazione con gli insiemi di Venn dei giudizi di Aristotele}\label{fig:1.1}
 \end{figure}
 
 \subsection{La dimostrazione}
 
-Tenendo conto di quanto detto precedentemente, dimostrare che $I\Rightarrow T$ significa fare un ragionamento che permetta di concludere che la tesi $T$ è vera avendo supposto che l'ipotesi $I$ sia vera.
+Tenendo conto di quanto detto precedentemente, dimostrare che $I\Rightarrow T$ significa fare un ragionamento logico che permetta di concludere che la tesi $T$ è vera avendo supposto che l'ipotesi $I$ sia vera.
 
-Quando attraverso un ragionamento logico, e cioè attraverso una catena di implicazioni del tipo  $I\Rightarrow A\Rightarrow B\Rightarrow \ldots{} \Rightarrow T$, si riesce a dedurre la verità di una proposizione $T$ a partire dalla verità di una proposizione $I$, si dice che si è data una \emph{dimostrazione diretta} del teorema $I\Rightarrow T$ (attraverso le regole del modus ponens e del sillogismo ipotetico).
+Quando attraverso un ragionamento logico, e cioè attraverso una catena di implicazioni del tipo  $I\Rightarrow A\Rightarrow B\Rightarrow \ldots{} \Rightarrow T$, si riesce a dedurre la verità di una proposizione $T$ a partire dalla verità di una proposizione $I$. Si dice che si è data una \emph{dimostrazione diretta} del teorema $I\Rightarrow T$ (attraverso le regole del modus ponens e del sillogismo ipotetico).
 
-Un teorema può anche essere \emph{dimostrato per assurdo}, o con metodo indiretto. Questa dimostrazione consiste nel partire dalla negazione di $T$ e, attraverso una catena di implicazioni, arrivare alla negazione di $I$ o, in generale, ad una contraddizione.
+Un teorema può anche essere \emph{dimostrato per assurdo}, o con metodo \emph{indiretto}. Questo tipo di dimostrazione consiste nel partire dalla negazione di $T$ e, attraverso una catena di implicazioni, arrivare alla negazione di $I$ o, in generale, ad una contraddizione.
 
-Esistono altri metodi di dimostrazione, di cui eventualmente si parlerà più diffusamente qualora si dovesse ricorrere ad essi. Per ora ci limitiamo a citarne un paio: \emph{dimostrazione per induzione} e \emph{dimostrazione mediante esempio o controesempio}.
+Esistono altri metodi di dimostrazione, di cui eventualmente si parlerà più diffusamente qualora si dovesse ricorrere ad essi. Per ora ci limitiamo a citarne un paio: \emph{dimostrazione per induzione} e \emph{dimostrazione mediante esempio} o \emph{controesempio}.
 
 La \emph{dimostrazione per induzione} si usa in particolare quando vogliamo dimostrare una proprietà generale che vale per molte categorie di figure ma che non si può esprimere in maniera unica per tutte le categorie (ad esempio una proprietà che vale per tutti i poligoni ma che dipende dal numero dei lati, come l'estensione dei criteri di congruenza dei triangoli a poligoni di più lati).
 
@@ -365,19 +380,21 @@ Ma a cosa serve studiare la dimostrazione di un teorema? Perché non ci limitiam
 
 Quando si studia una dimostrazione non bisogna limitarsi a leggerla e a impararla a memoria, occorre leggerla attivamente, ponendo attenzione su cosa si fa e cercando di anticipare i passaggi. Se un passaggio non è chiaro bisogna prima tornare indietro per capire come ci si è arrivati e quindi cercare di capire il motivo per cui l'autore ha messo quel passaggio. In generale, una dimostrazione va letta più volte smettendo solo quando la si è compresa a fondo.
 
+
 \section{Gli enti fondamentali della geometria}
+
 In questo paragrafo diamo un cenno del sistema assiomatico della geometria razionale facendo riferimento principalmente all'impostazione assiomatica di Hilbert.
 
 \subsection{Concetti primitivi}
 
 Sono concetti primitivi per la geometria il \emph{punto}, la \emph{retta} e il \emph{piano}. Di essi non si dà una definizione e costituiscono la base per definire tutti gli altri enti della geometria.
 
-Oltre a questi tre enti primitivi occorre poi assumere l'esistenza di tre relazioni primitive tra gli enti geometrici: \emph{giacere su}, \emph{stare fra}, \emph{essere congruente a}. Queste relazioni permettono di stabilire dei legami tra gli enti geometrici, per esempio: ``un punto giace su una retta'', ``un punto sta fra altri due punti'', ``un segmento è congruente a un altro segmento'', \ldots
+Oltre a questi tre enti primitivi occorre poi assumere l'esistenza di tre relazioni primitive tra gli enti geometrici: \emph{giacere su}, \emph{stare fra}, \emph{essere congruente a}. Queste relazioni permettono di stabilire dei legami tra gli enti geometrici, per esempio: <<un punto giace su una retta>>, <<un punto sta fra altri due punti>>, <<un segmento è congruente a un altro segmento>>, \ldots
 
 Esiste una simbologia convenzionale, condivisa dagli studiosi, per indicare questi enti:
 \begin{itemize}
-\item per indicare un punto usiamo una lettera maiuscola: A, B, C, \ldots;
-\item per indicare una retta usiamo una lettera minuscola: a, b, c, \ldots;
+\item per indicare un punto usiamo una lettera maiuscola: $A$, $B$, $C$, \ldots;
+\item per indicare una retta usiamo una lettera minuscola: $a$, $b$, $c$, \ldots;
 \item per indicare un piano usiamo una lettera greca: $\alpha$, $\beta$, $\gamma$, \ldots
 \end{itemize}
 
@@ -436,7 +453,7 @@ Euclide nei suoi \emph{Elementi} aveva individuato un gruppo di cinque assiomi, 
 
 Nell'impostazione assiomatica moderna di Hilbert, gli assiomi hanno la funzione di definire implicitamente gli enti primitivi, cioè di fissare le proprietà alle quali questi enti devono soddisfare. Hilbert aggiunge inoltre altri assiomi che Euclide stesso non aveva esplicitato chiaramente.
 
-\subsubsection*{Assiomi di Hilbert}
+\subsubsection*{Assiomi di Hilbert}\label{sect:ass_Hilbert}
 
 L'esposizione che segue è una semplificazione degli assiomi del grande matematico tedesco.\footnote{chi volesse studiare direttamente il testo originale può consultare \url{http://www.gutenberg.org/files/17384/17384-pdf.pdf} [ultima consultazione 20.03.2014].}
 
@@ -610,7 +627,7 @@ Se due rette hanno almeno due punti in comune sono \emph{coincidenti} (figura~\r
  \centering \input{./lbr/chap01/fig016_def8.pgf}
  \caption{Relazioni tra rette complanari}\label{fig:1.12}
 \end{figure}
-Per indicare che le rette $ r $ e $ s $ sono parallele si usa il simbolo $ r \parallel s $.
+Per indicare che le rette $r$ e $s$ sono parallele si usa il simbolo $r \parallel s$.
 
 \osservazione Due rette non parallele possono appartenere a piani diversi, in questo caso non avranno punti in comune, sono cioè sghembe. Viceversa se due rette hanno un punto in comune allora sono sicuramente complanari. Inoltre, se hanno più di un punto in comune le rette coincidono, in questo caso ci sono infiniti piani che le contengono. 
 
@@ -618,23 +635,23 @@ Per indicare che le rette $ r $ e $ s $ sono parallele si usa il simbolo $ r \pa
 L'insieme di tutte le rette di un piano che passano per uno stesso punto è detto \emph{fascio proprio di rette}, il punto in comune a tutte le rette si dice centro del fascio (figura~\ref{fig:1.16}).
 \end{definizione}
 
-Prendendo due punti su una retta, $ A $ e $ B $, la retta resta divisa in tre parti: la semiretta di origine $ A $ che non contiene $ B $, la parte costituita dai punti compresi tra $ A $ e $ B $ e la semiretta di origine $ B $ che non contiene $ A $.
+Prendendo due punti su una retta, $A$ e $B$, la retta resta divisa in tre parti: la semiretta di origine $A$ che non contiene $B$, la parte costituita dai punti compresi tra $A$ e $B$ e la semiretta di origine $B$ che non contiene $A$.
 
 \begin{definizione}
 Si chiama \emph{segmento} $ AB $ l'insieme dei punti $ A $ e $ B $ e di tutti quelli che stanno tra $ A $ e $ B $.
 I punti $ A $ e $ B $ si dicono \emph{estremi} del segmento.
 \end{definizione}
 Un segmento viene indicato con le due lettere maiuscole dei suoi estremi.
-\begin{figure}[b,t,h]
+\begin{figure}[bth]
  \centering \input{./lbr/chap01/fig017_def10.pgf}
- \caption{I punti A e B formano le due semirette, $ r $ e $ s $ e il segmento AB}\label{fig:1.12}
+ \caption{I punti $A$ e $B$ formano le due semirette $r$ e $s$, e il segmento $AB$}\label{fig:1.12}
 \end{figure}
 
 Due segmenti nel piano possono trovarsi in diverse posizioni reciproche. Alcune di esse hanno un interesse per la geometria.
 \begin{definizione}
 Due segmenti si dicono \emph{consecutivi} se hanno in comune soltanto un estremo (figura~\ref{fig:1.14}).
 \end{definizione}
-\begin{figure}[b,t,h]
+\begin{figure}[bth]
  \centering \input{./lbr/chap01/fig018_def11.pgf}
  \caption{I segmenti $ AB $ e $ BC $ sono consecutivi perché hanno in comune solo il punto~$ B $ che è un estremo di entrambi; $ DE $ e $ FG $ non sono consecutivi perché hanno in comune solo il punto $ F $ ma esso non è estremo del segmento $ DE $; $ HI $ e $ LM $ non sono consecutivi perché non hanno nessun punto in comune.}\label{fig:1.14}
 \end{figure}
@@ -642,7 +659,7 @@ Due segmenti si dicono \emph{consecutivi} se hanno in comune soltanto un estremo
 \begin{definizione}
 Due segmenti si dicono \emph{adiacenti} se sono consecutivi ed appartengono alla stessa retta (figura~\ref{fig:1.15}).
 \end{definizione}
-\begin{figure}[t,b,h]
+\begin{figure}[tbh]
  \centering \input{./lbr/chap01/fig019_def12.pgf}
  \caption{I segmenti $ AB $ e $ BC $ sono adiacenti perché hanno in comune solo l'estremo $ B $ e giacciono sulla stessa retta; i segmenti $ DE $ e $ FG $ non sono adiacenti; i segmenti $ HI $ e $ LM $ non sono adiacenti.}\label{fig:1.15}
 \end{figure}
@@ -650,7 +667,7 @@ Due segmenti si dicono \emph{adiacenti} se sono consecutivi ed appartengono alla
 \subsection{Semipiani e angoli}
 
 \begin{definizione}
-Si dice \emph{semipiano} di origine la retta r la figura formata dalla retta r e da una delle due parti in cui essa divide il piano (figura~\ref{fig:1.17}).
+Si dice \emph{semipiano} di origine la retta $r$ la figura formata dalla retta $r$ e da una delle due parti in cui essa divide il piano (figura~\ref{fig:1.17}).
 \end{definizione}
 \begin{figure}[b,t,h]
  \begin{minipage}[b]{.40\textwidth}
@@ -662,7 +679,7 @@ Si dice \emph{semipiano} di origine la retta r la figura formata dalla retta r e
   \caption{Semipiani opposti}\label{fig:1.17}
   \end{minipage}
 \end{figure}
-In un piano ${\pi}$, una qualsiasi retta $r \subset \pi$ dà origine a due semipiani distinti, che si dicono semipiani opposti.
+In un piano ${\pi}$, una qualsiasi retta $r \subset \pi$ dà origine a due semipiani distinti, che si dicono semipiani \emph{opposti}.
 
 \begin{definizione}
 Una figura si dice \emph{convessa} se, considerati due suoi qualsiasi punti, il segmento che li unisce è contenuto nella figura. Si dice \emph{concava} se esistono almeno due punti per i quali il segmento che li unisce non è interamente contenuto nella figura (figura~\ref{fig:1.18}).
@@ -679,7 +696,7 @@ Un angolo si dice \emph{angolo piatto} se i suoi lati sono uno il prolungamento 
 Un angolo si dice \emph{angolo nullo} se è costituito solo da due semirette sovrapposte.
 Si dice \emph{angolo giro} l'angolo che ha per lati due semirette sovrapposte e che contiene tutti i punti del piano (figura~\ref{fig:1.19}).
 \end{definizione}
-\begin{figure}[b,t,h]
+\begin{figure}[bth]
  \centering \input{./lbr/chap01/fig023_def15.pgf}
  \caption{L'angolo  $\widehat{ab}$ a sinistra è piatto, gli angoli a destra sono rispettivamente un angolo giro e un angolo nullo.}\label{fig:1.19}
 \end{figure}
@@ -692,12 +709,12 @@ L'angolo concavo è quello punteggiato in quanto contiene i prolungamenti dei la
 
 Quando si disegna un angolo è utile, oltre a disegnare le semirette e l'origine, indicare con un archetto quale dei due angoli si intende considerare.
 
-Per indicare che l'angolo da considerare è quello convesso e non quello concavo si è usato un archetto in prossimità del vertice O.
+Per indicare che l'angolo da considerare è quello convesso e non quello concavo si è usato un archetto in prossimità del vertice $O$.
 
 Per indicare gli angoli si usano diverse convenzioni:
 \begin{itemize}
 \item  $\widehat{ab}$ se si conoscono i nomi delle semirette che ne costituiscono i lati;
-\item  $A\widehat {{O}}B$ se si conoscono i nomi del vertice e di due punti sui lati;
+\item  $A\widehat{O}B$ se si conoscono i nomi del vertice e di due punti sui lati;
 \item  $\alpha$, $\beta$, $\gamma$, \ldots{} una lettera greca per indicare direttamente l'angolo.
 \end{itemize}
 I primi due modi di indicare l'angolo non individuano con chiarezza di quale dei due angoli si tratta. Solitamente si intende l'angolo convesso, quando si vuole indicare l'angolo concavo bisogna dirlo esplicitamente.
@@ -708,31 +725,83 @@ Anche per gli angoli si danno le definizioni di angoli consecutivi e angoli adia
 Due angoli si dicono angoli \emph{consecutivi} se hanno il vertice e un lato comune e giacciono da parte opposta rispetto al lato comune.
 \end{definizione}
 
-Nella figura gli angoli  $\widehat {ab}$ e $\widehat {bc}$  sono consecutivi perché hanno il vertice e il lato $ b $ in comune;  $\widehat {a'b'}$ e $\widehat {b'c'}$  non sono consecutivi perché non hanno il vertice in comune;  $\widehat {a''b''}$ e $\widehat {a''c''}$ non sono consecutivi perché non giacciono da parti opposte rispetto al lato in comune $ a'' $.
+Nella figura gli angoli  $\widehat{ab}$ e $\widehat{bc}$  sono consecutivi perché hanno il vertice e il lato $ b $ in comune;  $\widehat {a'b'}$ e $\widehat {b'c'}$  non sono consecutivi perché non hanno il vertice in comune;  $\widehat {a''b''}$ e $\widehat {a''c''}$ non sono consecutivi perché non giacciono da parti opposte rispetto al lato in comune $ a'' $.
 
 \begin{definizione}
-Due angoli si dicono angoli \emph{adiacenti} se sono consecutivi e se i lati non comuni giacciono sulla stessa retta.
+Due angoli si dicono \emph{adiacenti} se sono consecutivi e se i lati non comuni giacciono sulla stessa retta.
 \end{definizione}
 
-I due angoli  $\widehat {ab}$  e  $\widehat {bc}$  sono adiacenti, perché sono consecutivi e i lati $ a $ e $ c $ sono uno il prolungamento dell'altro; i due angoli  $\widehat {de}$  ed  $\widehat {ef}$  non sono adiacenti in quanto $ d $ non è il prolungamento di $ f $; gli angoli  $\widehat {de}$  e  $\widehat {df}$ sono adiacenti in quanto $ f $ è il prolungamento di $ e $.
+I due angoli  $\widehat{ab}$  e  $\widehat{bc}$  sono adiacenti, perché sono consecutivi e i lati $ a $ e $ c $ sono uno il prolungamento dell'altro; i due angoli  $\widehat{de}$  ed  $\widehat{ef}$  non sono adiacenti in quanto $ d $ non è il prolungamento di $ f $; gli angoli  $\widehat{de}$  e  $\widehat{df}$ sono adiacenti in quanto $ f $ è il prolungamento di $ e $.
 
 \begin{definizione}
-Due angoli convessi si dicono angoli \emph{opposti al vertice} se i lati del primo sono i prolungamenti dei lati dell'altro.
+Due angoli convessi si dicono \emph{opposti al vertice} se i lati del primo sono i prolungamenti dei lati dell'altro.
 \end{definizione}
 
 Gli angoli formati dalle semirette a sinistra sono opposti al vertice; gli angoli formati dalle semirette a destra non lo sono.
 
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+\section{Confronto e operazioni tra segmenti e angoli}
+
+\subsection{Premessa intuitiva}
+
+Nel linguaggio comune usiamo la parola ``uguale'' con un significato generico, spesso per indicare due oggetti che si assomigliano: due macchine uguali, due orologi uguali, \ldots{} In aritmetica e in algebra usiamo la parola ``uguale'' per indicare oggetti matematici perfettamente uguali. Per esempio, $2=2$, ogni numero infatti è uguale solo a se stesso. Scriviamo anche $3+2=5$, per dire che il numero che si ottiene dalla somma di 3 e 2 è proprio il numero 5. Nei polinomi si enuncia il principio di identità dei polinomi, in base al quale due polinomi sono uguali se si possono scrivere formalmente allo stesso modo.
+
+In geometria, usiamo il termine ``uguale'' per indicare due figure coincidenti nella forma e nella posizione. In altre parole due figure sono \emph{uguali} solo se sono esattamente la stessa figura. Tuttavia, in geometria siamo interessati a studiare soprattutto figure che senza essere del tutto identiche hanno delle caratteristiche in comune. Vediamo prima degli esempi intuitivi e successivamente tratteremo lo stesso tema ma in modo formalmente corretto.
+
+Le figure a lato hanno la stessa forma ma una è più grande dell'altra, la seconda infatti è stata ottenuta dalla prima raddoppiando i lati: in geometria si dicono \emph{simili}.
+
+Queste due altre figure non hanno la stessa forma, non si somigliano affatto, però le loro superfici hanno la stessa estensione, in quanto sono costituite dallo stesso numero di quadratini: in geometria si dicono \emph{equivalenti}.
+
+Le figure a lato hanno la stessa forma e le stesse dimensioni ma sono in posizioni differenti, è possibile spostarle una sull'altra e farle coincidere. Usualmente le chiamiamo figure uguali, in geometria si dicono \emph{congruenti}.
+
+Le due figure a lato hanno la stessa forma e le stesse dimensioni, per rendersene conto basta ruotare per esempio la seconda figura in senso antiorario e poi trascinarla sulla prima per sovrapporla. Anche queste figure sono dette uguali nel linguaggio comune, in geometria si dicono congruenti.
+
+Le due figure a lato hanno stessa forma e stesse dimensioni, tuttavia non si riesce a trasportare l'una sull'altra muovendole nel piano, né trascinandole, né ruotandole, occorre ribaltarne una facendola uscire dal piano; le due figure sono una l'immagine speculare dell'altra. In geometria diciamo che sono \emph{inversamente congruenti}.
+Osserva che per ribaltare una figura occorre una dimensione in più, precisamente se si tratta di due figure piane occorre avere la terza dimensione per ribaltare una figura piana, se siamo su una retta occorre la seconda dimensione per ribaltare un segmento.
+
+Per renderci conto di quanto accade con le figure solide, possiamo pensare ai palmi delle nostre mani che con buona approssimazione si possono considerare inversamente congruenti: esse possono essere giunte, ma non sovrapposte. Infatti non è possibile vedere le proprie mani sovrapposte, entrambe dal dorso o entrambe dal palmo, con le dita rivolte verso l'alto.
+
+\subsection{La congruenza}
+
+Secondo il punto di vista del matematico tedesco Felix Klein (1848-1925), la geometria è lo studio delle proprietà delle figure che sono invarianti rispetto a certe trasformazioni. Nello studio della geometria euclidea, quella che tratteremo in questo Tema, ci occupiamo delle proprietà delle figure geometriche invarianti rispetto ai movimenti rigidi, cioè rispetto a quei movimenti che conservano forma e dimensioni delle figure. Queste trasformazioni vengono anche dette \emph{isometrie} (si intuisce dalla radice etimologica che si parla di stessa misura): significa che viene stabilita una corrispondenza biunivoca tra i punti di due figure congruenti in modo da ``mantenere'' le distanze.
+
+\begin{definizione}
+Diciamo che due figure $F$ e $G$ sono \emph{congruenti} quando esiste un movimento rigido che le sovrappone perfettamente. In simboli $F\cong G$.
+\end{definizione}
+
+Nella Premessa a questo paragrafo abbiamo dato un'idea intuitiva e sperimentale del concetto di congruenza. Ma per esplicitarlo matematicamente dobbiamo utilizzare gli assiomi di congruenza di Hilbert che abbiamo enunciato nella sezione~\ref{sect:ass_Hilbert}. Ne riportiamo alcuni per comodità del lettore.
+
 \begin{comment}
 
-Sappiamo che nel corso degli studi o nell’attività lavorativa possono presentarsi problemi di diversa natura: di tipo economico, scientifico, sociale; possono riguardare insiemi numerici o figure geometriche. La matematica ci può aiutare a risolvere i problemi quando essi possono essere tradotti in “forma matematica”, quando cioè è possibile trascrivere in simboli le relazioni che intercorrono tra le grandezze presenti nel problema e quando si può costruire, tramite queste relazioni, un modello matematico che ci permetta di raggiungere la soluzione al quesito.
+Assiomi di congruenza
+	Assioma del trasporto di un segmento. Se A, B sono due punti di una retta a e A' è un punto sulla stessa retta o su un’altra retta a', si può sempre trovare un punto B' sulla retta a o su a’, da una data parte rispetto ad A', tale che il segmento AB sia congruente al segmento A'B'.
+Questo assioma afferma che, fissato un punto A’ su una retta a’, è sempre possibile trasportare un qualunque segmento AB in modo che l’estremo A coincida con A’ e il segmento stia sulla retta a’.
+
+	La relazione di congruenza tra segmenti è transitiva, cioè se A′B′ e A′′B′′ sono congruenti ad AB, allora A′B′  è congruente a A′′B′′.
+La relazione di congruenza tra segmenti è allora un relazione di equivalenza, in quanto gode delle proprietà:
+	riflessiva: ogni segmento è congruente a se stesso;
+	simmetrica: se AB è congruente a A’B’ allora anche A’B’ è congruente ad AB;
+	transitiva: se AB è congruente ad A’B’ e A’B’ è congruente ad A”B”, allora AB è congruente ad A”B”.
+
+DEFINIZIONE. Si dice lunghezza di un segmento la classe di equivalenza dei segmenti congruenti tra di loro, cioè l’insieme di tutti i segmenti che sono congruenti tra di loro.
+	Assioma del trasporto di un angolo. Dati un angolo AB ˆCed una semiretta B'C' , esistono e sono uniche due semirette B'D e B'E, tali che l'angolo D(B"'" ) ˆC"'" è congruente all'angolo AB ˆCe l'angolo E(B"'" ) ˆC"'" è congruente all'angolo AB ˆC.
+Questo assioma ci garantisce che è sempre possibile trasportare un angolo  su una qualsiasi semiretta, facendo coincidere il vertice dell’angolo con l’origine della semiretta e un lato dell’angolo con la semiretta stessa.
+	La relazione di congruenza tra angoli è transitiva, cioè se A"'" (B"'" ) ˆC"'"  eA"''" (B"''" ) ˆC"''"   sono congruenti ad AB ˆC, allora A"'" (B"'" ) ˆC"'"≡A"''" (B"''" ) ˆC"''" .
+
+\end{comment}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+
+Sappiamo che nel corso degli studi o nell'attività lavorativa possono presentarsi problemi di diversa natura: di tipo economico, scientifico, sociale; possono riguardare insiemi numerici o figure geometriche. La matematica ci può aiutare a risolvere i problemi quando essi possono essere tradotti in ``forma matematica'', quando cioè è possibile trascrivere in simboli le relazioni che intercorrono tra le grandezze presenti nel problema e quando si può costruire, tramite queste relazioni, un modello matematico che ci permetta di raggiungere la soluzione al quesito.
 
 Affronteremo problemi di tipo algebrico o geometrico, che potranno essere formalizzati attraverso equazioni di secondo grado in una sola incognita.
 Teniamo presente, prima di buttarci nella risoluzione del problema, alcuni passi che ci aiuteranno a costruire il modello matematico:
 \begin{itemize*}
-\item la lettura “attenta” del testo al fine di individuare l’ambiente del problema, le parole chiave, i dati e le informazioni implicite, l’obiettivo;
-\item la scelta della grandezza incognita del problema, la descrizione dell’insieme in cui si ricerca il suo valore, le condizioni che devono essere soddisfatte dall’incognita;
-\item la traduzione in “forma matematica” delle relazioni che intercorrono tra i dati e l’obiettivo, cioè l’individuazione del modello matematico (equazione risolvente).
+\item la lettura ``attenta'' del testo al fine di individuare l'ambiente del problema, le parole chiave, i dati e le informazioni implicite, l'obiettivo;
+\item la scelta della grandezza incognita del problema, la descrizione dell'insieme in cui si ricerca il suo valore, le condizioni che devono essere soddisfatte dall'incognita;
+\item la traduzione in ``forma matematica'' delle relazioni che intercorrono tra i dati e l'obiettivo, cioè l'individuazione del modello matematico (equazione risolvente).
 \end{itemize*}
 \begin{center}
  \input{./lbr/test/01test.pgf}
@@ -753,7 +822,7 @@ Teniamo presente, prima di buttarci nella risoluzione del problema, alcuni passi
 \begin{center}
  \input{./lbr/test/06test.pgf}
 \end{center}
-Dal punto di vista della struttura logica, gli \emph{Elementi} di Euclide sono organizzati a partire da cinque assiomi (nozioni comuni evidenti), cinque postulati (proposizioni che si richiede siano assunte come vere, senza dimostrazione) e 23 definizioni. L’opera di Euclide è rimasta nella nostra cultura l’unico punto di riferimento per lo studio della geometria, fino a quando, contestualmente allo studio dei fondamenti delle altre branche della matematica, i matematici cercarono di dare una base più rigorosa alla geometria di Euclide. Una impostazione assiomatica più moderna venne data dal matematico tedesco David Hilbert nel libro \emph{Grundlagen der Geometrie} pubblicato nel 1899, nel quale la geometria veniva fondata su ben 21 assiomi.
+Dal punto di vista della struttura logica, gli \emph{Elementi} di Euclide sono organizzati a partire da cinque assiomi (nozioni comuni evidenti), cinque postulati (proposizioni che si richiede siano assunte come vere, senza dimostrazione) e 23 definizioni. L'opera di Euclide è rimasta nella nostra cultura l'unico punto di riferimento per lo studio della geometria, fino a quando, contestualmente allo studio dei fondamenti delle altre branche della matematica, i matematici cercarono di dare una base più rigorosa alla geometria di Euclide. Un'impostazione assiomatica più moderna venne data dal matematico tedesco David Hilbert nel libro \emph{Grundlagen der Geometrie} pubblicato nel 1899, nel quale la geometria veniva fondata su ben 21 assiomi.
 \begin{center}
  \input{./lbr/test/07test.pgf}
 \end{center}
