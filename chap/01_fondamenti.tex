@@ -27,9 +27,9 @@ La geometria, sin dai tempi di Euclide, è stata organizzata assiomaticamente, p
 
 \subsection{Nozioni di logica}
 
-Assumiamo come ``primitivo'' il concetto base di proposizione (o ``giudizio'' secondo la terminologia del grande filosofo greco Aristotele\footnote{(384 o 383 \aC{} - 322 \aC).}): chiamiamo \emph{proposizione} una frase (affermativa o negativa) a cui abbia senso associare un valore di verità, sia esso vero (\emph{V}) oppure falso (\emph{F}).
+Assumiamo come ``primitivo'' il concetto base di proposizione (o ``giudizio'' secondo la terminologia del grande filosofo greco Aristotele\footnote{(384 o 383 \aC{} - 322 \aC).}): chiamiamo \emph{proposizione} una frase (affermativa o negativa) a cui abbia senso associare un valore di verità, sia esso \emph{vero} (V) oppure \emph{falso} (F).
 
-Per esempio, sono proposizioni logiche affermazioni del tipo <<Una retta ha infiniti punti>>, <<2+3=10>>. Non sono proposizioni logiche le frasi <<\np{1000} è un numero grande>>, <<il quadrato è semplice>>. Mentre la prima frase esprime un'affermazione vera e la seconda un'affermazione falsa, la terza e la quarta esprimono affermazioni non valutabili oggettivamente pertanto di queste ultime non si può dire se sono vere o false.
+Per esempio, sono proposizioni logiche affermazioni del tipo <<Una retta ha infiniti punti>>, <<$2+3=10$>>. Non sono proposizioni logiche le frasi <<\np{1000} è un numero grande>>, <<il quadrato è semplice>>. Mentre la prima frase esprime un'affermazione vera e la seconda un'affermazione falsa, la terza e la quarta esprimono affermazioni non valutabili oggettivamente pertanto di queste ultime non si può dire se sono vere o false.
 
 La logica delle proposizioni si fonda sui seguenti tre principi della logica aristotelica:
 \begin{itemize*}
@@ -41,7 +41,11 @@ La logica delle proposizioni si fonda sui seguenti tre principi della logica ari
 Il corpo della geometria, come di qualunque altra teoria matematica, è costituito da \emph{proposizioni}, cioè da affermazioni che riguardano gli enti geometrici e che sono vere o false. Le proposizioni possono essere semplici affermazioni (\emph{proposizioni atomiche}) oppure possono essere ottenute da una o più proposizioni elementari legate tra di loro attraverso connettivi logici (elementi linguistici del tipo ``non'', ``e'', ``oppure'', ``o \ldots{} o'', ``quindi'', ``se \ldots{} allora'', ``se e solo se''). In questo caso si parla di \emph{proposizioni composte} o molecolari
 Per esempio, la proposizione <<un triangolo ha tre lati e ha tre angoli>> è composta dalle proposizioni <<un triangolo ha tre lati>> e <<un triangolo ha tre angoli>> unite dal connettivo ``e''.
 
-\paragraph{La congiunzione} di due proposizioni si ottiene con il connettivo ``e'' (\emph{et}, \emph{and}, $\wedge$): la proposizione $r$ ottenuta dalla congiunzione delle proposizioni $p$ e $q$, in simboli può essere scritta $r=p\wedge q$, ed è vera se entrambe le proposizioni $p$ e $q$ sono contestualmente vere, mentre è falsa quando anche una sola delle due proposizioni è falsa.
+\paragraph{La congiunzione} di due proposizioni si ottiene con il connettivo ``e'' (\emph{et}, \emph{and}, $\wedge$): la proposizione $r$ ottenuta dalla congiunzione delle proposizioni $p$ e $q$, in simboli può essere scritta come
+\begin{empheq}[box=\fbox]{equation*}
+\vphantom{I}r=p\wedge q
+\end{empheq}
+ed è vera se entrambe le proposizioni $p$ e $q$ sono contestualmente vere, mentre è falsa quando anche una sola delle due proposizioni è falsa.
 Per esempio, <<ho avuto 7 in italiano e matematica>> è un'affermazione vera solo quando ho avuto 7 in entrambe le materie e falsa in tutti gli altri casi.
 
 Per esprimere in maniera sintetica tutte le possibilità del valore di verità di una proposizione composta, si usa una tabella a doppia entrata, detta \emph{tavola di verità}, che per la congiunzione logica è la seguente
@@ -58,7 +62,11 @@ Per esprimere in maniera sintetica tutte le possibilità del valore di verità d
  \end{tabular*}
 \end{center}
 
-\paragraph{La disgiunzione (inclusiva)} di due proposizioni si ottiene con il connettivo ``o'' (\emph{vel}, \emph{or}, ${\vee}$): la proposizione $s$ ottenuta dalla disgiunzione di due proposizioni $p$ e $q$, in simboli $s=p\vee q$, è vera quando almeno una delle due proposizioni è vera ed è falsa solo se entrambe le proposizioni sono false.
+\paragraph{La disgiunzione (inclusiva)} di due proposizioni si ottiene con il connettivo ``o'' (\emph{vel}, \emph{or}, ${\vee}$): la proposizione $s$ ottenuta dalla disgiunzione di due proposizioni $p$ e $q$, in simboli
+\begin{empheq}[box=\fbox]{equation*}
+\vphantom{I}s=p\vee q
+\end{empheq}
+è vera quando almeno una delle due proposizioni è vera ed è falsa solo se entrambe le proposizioni sono false.
 \begin{center}
  \begin{tabular*}{.25 \textwidth}{@{\extracolsep{\fill}}*{3}{c}}
  \toprule
@@ -72,7 +80,11 @@ Per esprimere in maniera sintetica tutte le possibilità del valore di verità d
  \end{tabular*}
 \end{center}
 
-\paragraph{La negazione} di una proposizione si ottiene con il connettivo ``non'' (\emph{non}, \emph{not}, $\neg$), un operatore che, a differenza dei precedenti, non lega più proposizioni ma agisce su un'unica proposizione (per questo si dice che è un operatore unario, in analogia all'operazione insiemistica di complementazione). La negazione di una proposizione $p$ è una proposizione che si indica con il simbolo $\neg p$ che è vera se $p$ è falsa, viceversa è falsa se $p$ è vera.
+\paragraph{La negazione} di una proposizione si ottiene con il connettivo ``non'' (\emph{non}, \emph{not}, $\neg$), un operatore che, a differenza dei precedenti, non lega più proposizioni ma agisce su un'unica proposizione (per questo si dice che è un operatore unario, in analogia all'operazione insiemistica di complementazione). La proposizione $n$ data dalla negazione di una proposizione $p$ si indica con il simbolo
+\begin{empheq}[box=\fbox]{equation*}
+\vphantom{I}n=\neg p
+\end{empheq}
+ed è vera se $p$ è falsa, viceversa è falsa se $p$ è vera.
 
 La doppia negazione equivale ad un'affermazione, cioè $\neg(\neg p)$ è equivalente a $p$.
 La tavola di verità è la seguente:
@@ -87,7 +99,11 @@ La tavola di verità è la seguente:
  \end{tabular*}
 \end{center}
 
-\paragraph{La disgiunzione esclusiva} di due proposizioni si ottiene con il connettivo [o congiunzione] ``o \ldots{} o'' (\emph{aut}, \emph{xor}, $\veebar$): la proposizione $t$ ottenuta dalla disgiunzione esclusiva di due proposizioni $p$ e $q$, in simboli $t=p\veebar q$, è vera quando solo una delle due proposizioni è vera ed è falsa quando le due proposizioni sono entrambe vere o entrambe false.
+\paragraph{La disgiunzione esclusiva} di due proposizioni si ottiene con il connettivo [o congiunzione] ``o \ldots{} o'' (\emph{aut}, \emph{xor}, $\veebar$): la proposizione $t$ ottenuta dalla disgiunzione esclusiva di due proposizioni $p$ e $q$, in simboli
+\begin{empheq}[box=\fbox]{equation*}
+\vphantom{I}t=p\veebar q
+\end{empheq}
+è vera quando solo una delle due proposizioni è vera ed è falsa quando le due proposizioni sono entrambe vere o entrambe false.
 Per esempio, nell'affermazione <<oggi il Milan vince o pareggia>> la congiunzione ``o'' ha valore esclusivo.
 
 La disgiunzione esclusiva $\veebar$ a volte non viene messa tra gli operatori logici fondamentali perché è esprimibile attraverso gli altri tre operatori presentati finora.
@@ -118,12 +134,13 @@ Date le seguenti proposizioni $p=$~<<un triangolo ha tre lati>> (Vera), $q=$~<<u
 È piuttosto semplice capire il meccanismo della negazione se applicata a proposizioni atomiche, spesso è meno intuitivo il valore di verità della negazione di una proposizione più complessa.
 Ad esempio, la negazione di $p\wedge q$ non è $\neg p\wedge \neg q$ bensì $\neg p\vee \neg q$, mentre la negazione di $p\vee q$ è $\neg p\wedge \neg q$ e non $\neg p\vee \neg q$.
 In formule:
-\[\neg (p\wedge q)\equiv (\neg p)\vee (\neg q)\qquad\text{e}\qquad\neg (p\vee q)\equiv (\neg p)\wedge (\neg q).\]
+\begin{empheq}[box=\fbox]{equation*}
+\vphantom{I}\neg (p\wedge q)= (\neg p)\vee (\neg q)\qquad\text{e}\qquad\neg (p\vee q)= (\neg p)\wedge (\neg q).
+\end{empheq}
 
 Per esempio, <<non è vero che Marco e Luca sono stati bocciati>> può voler dire che entrambi non sono stati bocciati o solo uno di loro non è stato bocciato.
 
-Queste uguaglianze prendono il nome di \emph{leggi di De Morgan}.
-La verifica si può effettuare con la seguente tavola di verità:
+Queste uguaglianze prendono il nome di \emph{leggi di De Morgan}\footnote{dal nome del matematico e logico britannico Augustuts De Morgan (1806 - 1871).}, e la loro verifica può essere effettuata con la seguente tavola di verità:
 \begin{center}
  \begin{tabular*}{.8 \textwidth}{@{\extracolsep{\fill}}*{8}{c}}
  \toprule
@@ -139,9 +156,9 @@ La verifica si può effettuare con la seguente tavola di verità:
 
 Come per le operazioni aritmetiche anche per gli operatori logici è possibile analizzarne le proprietà. Ne indichiamo qualcuna a titolo di esempio:
 \begin{itemize*}
-\item $(p\wedge q)\wedge r\equiv p\wedge (q\wedge r)$ proprietà \emph{associativa} della congiunzione;
-\item $p\wedge q\equiv q\wedge p$ proprietà \emph{commutativa} della congiunzione;
-\item $p\wedge (q\vee r)\equiv (p\wedge q)\vee (p\wedge r)$ proprietà \emph{distributiva} della congiunzione rispetto alla disgiunzione.
+\item $(p\wedge q)\wedge r= p\wedge (q\wedge r)$ proprietà \emph{associativa} della congiunzione;
+\item $p\wedge q= q\wedge p$ proprietà \emph{commutativa} della congiunzione;
+\item $p\wedge (q\vee r)= (p\wedge q)\vee (p\wedge r)$ proprietà \emph{distributiva} della congiunzione rispetto alla disgiunzione.
 \end{itemize*}
 
 Una proposizione che è sempre vera indipendentemente dalla verità degli elementi che lo compongono è detta \emph{tautologia}. Una proposizione che è sempre falsa indipendentemente dalla verità dei suoi elementi è invece detta \emph{contraddizione}.
@@ -166,7 +183,7 @@ Vediamo ora i seguenti predicati:
 \item <<esiste un numero che elevato al quadrato dà $16$>>;
 \item <<alcuni numeri pari sono anche multipli di $3$>>.
 \end{itemize*}
-Queste affermazioni esprimono proprietà che sono vere almeno per un elemento dell'insieme di riferimento: la prima frase è vera per i numeri $+4$ e $-4$, la seconda frase è vera per i numeri $6$, $12$, $18$, \ldots
+Queste affermazioni esprimono proprietà che sono vere almeno per un elemento dell'insieme di riferimento: la prima frase è vera per i numeri $+4$ e $-4$, la seconda frase è vera per i numeri $6$, $12$, $18$, \ldots{}
 I termini ``c'è almeno'', ``alcuni'', ``esiste almeno uno'' si dicono \emph{quantificatori esistenziali} ed in logica matematica si indicano con il simbolo $\exists$, che si legge ``esiste''.
 
 Bisogna prestare particolare attenzione quando si negano frasi in cui compaiono i quantificatori. Per esempio la negazione di <<tutti i gatti fanno le fusa>> non è <<nessun gatto fa le fusa>> bensì <<non tutti i gatti fanno le fusa>> che si può esprimere anche con il quantificatore esistenziale <<C'è almeno un gatto che non fa le fusa>>.
@@ -179,7 +196,11 @@ Il linguaggio comune ci potrebbe portare a considerare come negazione di $p$ la 
 Nel linguaggio matematico sono comuni proposizioni del tipo <<Se $p$ allora $q$>>. Ad esempio <<se un numero è multiplo di $12$ allora è multiplo di $3$>>. La frase precedente può essere espressa dicendo <<essere multiplo di $12$ \emph{implica} essere multiplo di $3$>>.
 
 In logica frasi del tipo <<se $p$ allora $q$>> vengono tradotte utilizzando l'operatore $\Rightarrow$ detto \emph{implicazione}.
-La scrittura <<se $p$ allora $q$>> si traduce quindi con la scrittura $p\Rightarrow q$, che si legge ``$p$ implica $q$''.
+La scrittura <<se $p$ allora $q$>> si traduce quindi con la scrittura
+\begin{empheq}[box=\fbox]{equation*}
+\vphantom{I}p\Rightarrow q
+\end{empheq}
+che si legge ``$p$ implica $q$''.
 
 La proposizione $p$ è detta \emph{antecedente}, (o \emph{ipotesi}) e la proposizione $q$ è detta \emph{conseguente} (o \emph{tesi}).
 Il significato logico della proposizione $p\Rightarrow q$ è che <<tutte le volte che la proposizione $p$ è vera allora risulta vera anche la proposizione $q$>>. Ovvero non si specifica il caso in cui $p$ sia falsa.
@@ -235,7 +256,11 @@ In generale, data un'implicazione $p\Rightarrow q$ (\emph{proposizione diretta})
 \item l'implicazione $\neg q\Rightarrow \neg p$ si dice \emph{contronominale} (o \emph{controinversa}) di $p\Rightarrow q$.
 \end{itemize*}
 
-\paragraph{La doppia implicazione} o \emph{equivalenza logica} di due proposizioni $p$ e $q$ dà luogo a una proposizione che in simboli si rappresenta $p\Leftrightarrow q$ (leggasi ``$p$ se e solo se $q$'') che è vera solo se $p$ e $q$ sono entrambe vere o entrambe false. La tavola di verità è la seguente:
+\paragraph{La doppia implicazione} o \emph{equivalenza logica} di due proposizioni $p$ e $q$ dà luogo a una proposizione che in simboli si rappresenta con
+\begin{empheq}[box=\fbox]{equation*}
+\vphantom{I}p\Leftrightarrow q
+\end{empheq}
+(leggasi ``$p$ se e solo se $q$'') che è vera solo se $p$ e $q$ sono entrambe vere o entrambe false. La tavola di verità è la seguente:
 \begin{center}
  \begin{tabular*}{.75 \textwidth}{@{\extracolsep{\fill}}*{6}{c}}
  \toprule
@@ -447,7 +472,7 @@ Euclide nei suoi \emph{Elementi} aveva individuato un gruppo di cinque assiomi, 
  \centering\input{./lbr/chap01/fig003_euc.pgf}
  \end{minipage}\hfil
  \begin{minipage}{.45\textwidth}
- Nella figura, la retta $a$ taglia le rette $b$ e $c$, formando sul lato destro due angoli la cui somma è minore di due angoli retti. Prolungando opportunamente le rette $b$ e $c$ risulta che esse si incontrano sul lato destro della figura
+ Nella figura, la retta $a$ taglia le rette $b$ e $c$, formando sul lato destro due angoli la cui somma è minore di due angoli retti. Prolungando opportunamente le rette $b$ e $c$ risulta che esse si incontrano sul lato destro della figura.
   \end{minipage}
 \end{enumerate}
 
@@ -558,10 +583,10 @@ Si dice \emph{angolo} ciascuna delle due parti in cui un piano è diviso da due 
 \end{definizione}
 \begin{figure*}[b,t,h]
 \centering  \input{./lbr/chap01/fig013_def4.pgf}
-\caption{Le semirette $r$ e $s$, aventi l'origine $V$ comune individuano due regioni del piano dette angolo.}\label{fig:1.9}
+\caption{Le semirette $r$ e $s$, aventi l'origine $V$ comune, individuano due regioni del piano ognuna delle quali è detta angolo.}\label{fig:1.9}
 \end{figure*}
 
-L'angolo individuato da tre punti $A$, $B$, $C$ è l'angolo formato dalla semiretta con origine $B$ e passante per $A$ e dalla semiretta con origine $B$ e passante per $C$. Questo angolo si indica con il simbolo $A\widehat{B}C$. Nei disegni si usa indicare un angolo con un archetto.
+L'angolo individuato da tre punti $A$, $B$, $C$ è l'angolo formato dalla semiretta con origine $B$ e passante per $A$ e dalla semiretta con origine $B$ e passante per $C$. Questo angolo si indica con il simbolo $A\widehat{B}C$. Nei disegni si usa indicare l'angolo con un archetto che indica la parte di piano considerata.
 
 \begin{enumerate}[label=\Roman{*}.]
 \setcounter{enumi}{14}
@@ -607,7 +632,7 @@ Si chiama \emph{spazio} l'insieme di tutti i punti.
 \end{definizione}
 Risulta pertanto che una figura è un qualsiasi sottoinsieme dello spazio.
 
-In base agli assiomi di ordinamento un qualunque punto P su una retta divide la retta in due parti, una è costituita dai punti che "seguono" $ P $, l'altra è costituita dai punti che "precedono" $ P $.
+In base agli assiomi di ordinamento un qualunque punto $P$ su una retta divide la retta in due parti, una è costituita dai punti che ``seguono'' $P$, l'altra è costituita dai punti che ``precedono'' $P$.
 \begin{definizione}
 Si chiama \emph{semiretta} la parte di retta costituita da un punto di essa, detto origine della semiretta, e da tutti i punti che stanno dalla stessa parte rispetto all'origine.
 \end{definizione}
@@ -638,8 +663,8 @@ L'insieme di tutte le rette di un piano che passano per uno stesso punto è dett
 Prendendo due punti su una retta, $A$ e $B$, la retta resta divisa in tre parti: la semiretta di origine $A$ che non contiene $B$, la parte costituita dai punti compresi tra $A$ e $B$ e la semiretta di origine $B$ che non contiene $A$.
 
 \begin{definizione}
-Si chiama \emph{segmento} $ AB $ l'insieme dei punti $ A $ e $ B $ e di tutti quelli che stanno tra $ A $ e $ B $.
-I punti $ A $ e $ B $ si dicono \emph{estremi} del segmento.
+Si chiama \emph{segmento} $AB$ l'insieme dei punti $A$ e $B$ e di tutti quelli che stanno tra $A$ e $B$.
+I punti $A$ e $B$ si dicono \emph{estremi} del segmento.
 \end{definizione}
 Un segmento viene indicato con le due lettere maiuscole dei suoi estremi.
 \begin{figure}[bth]
@@ -653,7 +678,7 @@ Due segmenti si dicono \emph{consecutivi} se hanno in comune soltanto un estremo
 \end{definizione}
 \begin{figure}[bth]
  \centering \input{./lbr/chap01/fig018_def11.pgf}
- \caption{I segmenti $ AB $ e $ BC $ sono consecutivi perché hanno in comune solo il punto~$ B $ che è un estremo di entrambi; $ DE $ e $ FG $ non sono consecutivi perché hanno in comune solo il punto $ F $ ma esso non è estremo del segmento $ DE $; $ HI $ e $ LM $ non sono consecutivi perché non hanno nessun punto in comune.}\label{fig:1.14}
+ \caption{I segmenti $AB$ e $BC$ sono consecutivi perché hanno in comune solo il punto~$B$ che è un estremo di entrambi; $DE$ e $FG$ non sono consecutivi perché hanno in comune solo il punto $F$ ma esso non è estremo del segmento $DE$; $HI$ e $LM$ non sono consecutivi perché non hanno nessun punto in comune.}\label{fig:1.14}
 \end{figure}
 
 \begin{definizione}
@@ -661,7 +686,7 @@ Due segmenti si dicono \emph{adiacenti} se sono consecutivi ed appartengono alla
 \end{definizione}
 \begin{figure}[tbh]
  \centering \input{./lbr/chap01/fig019_def12.pgf}
- \caption{I segmenti $ AB $ e $ BC $ sono adiacenti perché hanno in comune solo l'estremo $ B $ e giacciono sulla stessa retta; i segmenti $ DE $ e $ FG $ non sono adiacenti; i segmenti $ HI $ e $ LM $ non sono adiacenti.}\label{fig:1.15}
+ \caption{I segmenti $AB$ e $BC$ sono adiacenti perché hanno in comune solo l'estremo $B$ e giacciono sulla stessa retta; i segmenti $DE$ e $FG$, pur giacendo sulla stessa retta, non sono adiacenti poiché non hanno alcun punto in comune; i segmenti $HI$ e $LM$ giacciono sulla stessa retta ma non sono adiacenti poiché hanno più di un punto in comune.}\label{fig:1.15}
 \end{figure}
 
 \subsection{Semipiani e angoli}
@@ -689,27 +714,33 @@ Una figura si dice \emph{convessa} se, considerati due suoi qualsiasi punti, il 
  \caption{La figura $ F $ è convessa, per qualsiasi coppia di punti interni a $ F $ il segmento che li unisce è interamente nella figura; la figura $ G $ è concava perché unendo i punti $ P $ e $ Q $ si ha un segmento che cade in parte esternamente alla figura.}\label{fig:1.18}
 \end{figure}
 
-Ricordiamo la definizione di angolo già data: si dice \emph{angolo} ciascuna delle due parti in cui un piano è diviso da due semirette aventi l'origine in comune; le semirette si dicono \emph{lati} dell'angolo; l'origine comune alle due semirette si dice vertice dell'angolo (figura~\ref{fig:1.9}).
+Ricordiamo la definizione di angolo già data: si dice \emph{angolo} ciascuna delle due parti in cui un piano è diviso da due semirette aventi l'origine in comune; le semirette si dicono \emph{lati} dell'angolo; l'origine comune alle due semirette si dice \emph{vertice} dell'angolo (figura~\ref{fig:1.9}).
 
 \begin{definizione}
-Un angolo si dice \emph{angolo piatto} se i suoi lati sono uno il prolungamento dell'altro.
-Un angolo si dice \emph{angolo nullo} se è costituito solo da due semirette sovrapposte.
-Si dice \emph{angolo giro} l'angolo che ha per lati due semirette sovrapposte e che contiene tutti i punti del piano (figura~\ref{fig:1.19}).
+Un angolo si dice \emph{piatto} se i suoi lati sono uno il prolungamento dell'altro.
+Un angolo si dice \emph{nullo} se è costituito solo da due semirette sovrapposte.
+\`E detto \emph{angolo giro} l'angolo che ha per lati due semirette sovrapposte e che contiene tutti i punti del piano (figura~\ref{fig:1.19}).
 \end{definizione}
 \begin{figure}[bth]
  \centering \input{./lbr/chap01/fig023_def15.pgf}
- \caption{L'angolo  $\widehat{ab}$ a sinistra è piatto, gli angoli a destra sono rispettivamente un angolo giro e un angolo nullo.}\label{fig:1.19}
+ \caption{L'angolo  $\widehat{ab}$ a sinistra è piatto (sia quello sopra che quello sotto), gli angoli a destra, individuati dalle semirette coindicenti con origine in $O$, sono rispettivamente un angolo giro e un angolo nullo.}\label{fig:1.19}
 \end{figure}
 
 \begin{definizione}
 Un angolo, i cui lati non appartengono alla stessa retta, si dice \emph{concavo} se contiene i prolungamenti dei lati, se non li contiene si dice \emph{convesso}.
 \end{definizione}
 
-L'angolo concavo è quello punteggiato in quanto contiene i prolungamenti dei lati.
+\begin{figure*}[htb]
+\centering  \input{./lbr/chap01/fig024_angolo.pgf}
+\caption{L'angolo concavo è quello in giallo in quanto contiene i prolungamenti dei lati (punteggiati)}\label{fig:1.20}
+\end{figure*}
 
 Quando si disegna un angolo è utile, oltre a disegnare le semirette e l'origine, indicare con un archetto quale dei due angoli si intende considerare.
 
-Per indicare che l'angolo da considerare è quello convesso e non quello concavo si è usato un archetto in prossimità del vertice $O$.
+\begin{figure}[htb]
+ \centering \input{./lbr/chap01/fig025_angolo.pgf}
+\caption{Per indicare che l'angolo da considerare è quello convesso e non quello concavo si è usato un archetto in prossimità del vertice $O$}\label{fig:1.21}
+\end{figure}
 
 Per indicare gli angoli si usano diverse convenzioni:
 \begin{itemize}
@@ -725,30 +756,43 @@ Anche per gli angoli si danno le definizioni di angoli consecutivi e angoli adia
 Due angoli si dicono angoli \emph{consecutivi} se hanno il vertice e un lato comune e giacciono da parte opposta rispetto al lato comune.
 \end{definizione}
 
-Nella figura gli angoli  $\widehat{ab}$ e $\widehat{bc}$  sono consecutivi perché hanno il vertice e il lato $ b $ in comune;  $\widehat {a'b'}$ e $\widehat {b'c'}$  non sono consecutivi perché non hanno il vertice in comune;  $\widehat {a''b''}$ e $\widehat {a''c''}$ non sono consecutivi perché non giacciono da parti opposte rispetto al lato in comune $ a'' $.
+\begin{figure}[htb]
+ \centering \input{./lbr/chap01/fig026_angoli_consecutivi.pgf}
+\caption{Nella figura gli angoli  $\widehat{ab}$ e $\widehat{bc}$  sono consecutivi perché hanno il vertice e il lato $ b $ in comune;  $\widehat {a'b'}$ e $\widehat {b'c'}$  non sono consecutivi perché non hanno il vertice in comune;  $\widehat {a''b''}$ e $\widehat {a''c''}$ non sono consecutivi perché non giacciono da parti opposte rispetto al lato in comune $a''$}\label{fig:1.22}
+\end{figure}
 
 \begin{definizione}
 Due angoli si dicono \emph{adiacenti} se sono consecutivi e se i lati non comuni giacciono sulla stessa retta.
 \end{definizione}
 
-I due angoli  $\widehat{ab}$  e  $\widehat{bc}$  sono adiacenti, perché sono consecutivi e i lati $ a $ e $ c $ sono uno il prolungamento dell'altro; i due angoli  $\widehat{de}$  ed  $\widehat{ef}$  non sono adiacenti in quanto $ d $ non è il prolungamento di $ f $; gli angoli  $\widehat{de}$  e  $\widehat{df}$ sono adiacenti in quanto $ f $ è il prolungamento di $ e $.
+\begin{figure}[htb]
+ \centering \input{./lbr/chap01/fig027_angoli_adiacenti.pgf}
+\caption{I due angoli $\widehat{ab}$ e $\widehat{bc}$ sono adiacenti perché sono consecutivi e i lati $a$ e $c$ sono uno il prolungamento dell'altro; i due angoli $\widehat{de}$ ed $\widehat{ef}$ non sono adiacenti in quanto $d$ non è il prolungamento di $f$; gli angoli $\widehat{de}$ e $\widehat{df}$ sono adiacenti in quanto $f$ è il prolungamento di $e$}\label{fig:1.23}
+\end{figure}
 
 \begin{definizione}
 Due angoli convessi si dicono \emph{opposti al vertice} se i lati del primo sono i prolungamenti dei lati dell'altro.
 \end{definizione}
 
-Gli angoli formati dalle semirette a sinistra sono opposti al vertice; gli angoli formati dalle semirette a destra non lo sono.
+\begin{figure}[htb]
+ \centering \input{./lbr/chap01/fig028_angoli_opposti_al_vertice.pgf}
+\caption{Gli angoli formati dalle semirette a sinistra sono opposti al vertice; gli angoli formati dalle semirette a destra non lo sono}\label{fig:1.24}
+\end{figure}
 
 
 \section{Confronto e operazioni tra segmenti e angoli}
 
 \subsection{Premessa intuitiva}
 
-Nel linguaggio comune usiamo la parola ``uguale'' con un significato generico, spesso per indicare due oggetti che si assomigliano: due macchine uguali, due orologi uguali, \ldots{} In aritmetica e in algebra usiamo la parola ``uguale'' per indicare oggetti matematici perfettamente uguali. Per esempio, $2=2$, ogni numero infatti è uguale solo a se stesso. Scriviamo anche $3+2=5$, per dire che il numero che si ottiene dalla somma di 3 e 2 è proprio il numero 5. Nei polinomi si enuncia il principio di identità dei polinomi, in base al quale due polinomi sono uguali se si possono scrivere formalmente allo stesso modo.
+Nel linguaggio comune usiamo la parola ``uguale'' con un significato generico, spesso per indicare due oggetti che si assomigliano: due macchine uguali, due orologi uguali,~\ldots{} In aritmetica e in algebra usiamo la parola ``uguale'' per indicare oggetti matematici perfettamente uguali. Per esempio, $2=2$, ogni numero infatti è uguale solo a se stesso. Scriviamo anche $3+2=5$, per dire che il numero che si ottiene dalla somma di 3 e 2 è proprio il numero 5. Nei polinomi si enuncia il principio di identità dei polinomi, in base al quale due polinomi sono uguali se si possono scrivere formalmente allo stesso modo.
 
 In geometria, usiamo il termine ``uguale'' per indicare due figure coincidenti nella forma e nella posizione. In altre parole due figure sono \emph{uguali} solo se sono esattamente la stessa figura. Tuttavia, in geometria siamo interessati a studiare soprattutto figure che senza essere del tutto identiche hanno delle caratteristiche in comune. Vediamo prima degli esempi intuitivi e successivamente tratteremo lo stesso tema ma in modo formalmente corretto.
 
-Le figure a lato hanno la stessa forma ma una è più grande dell'altra, la seconda infatti è stata ottenuta dalla prima raddoppiando i lati: in geometria si dicono \emph{simili}.
+\begin{wrapfloat}{figure}{r}{0pt}
+%\includegraphics[scale=0.35]{\input{./lbr/chap01/fig029_figure.pgf}}
+\input{./lbr/chap01/fig029_figure.pgf}
+\end{wrapfloat}
+Le figure a lato hanno la stessa forma ma una è più grande dell'altra, la seconda infatti è stata ottenuta dalla prima raddoppiando la lunghezza di ogni lato: in geometria tali figure si dicono \emph{simili}.
 
 Queste due altre figure non hanno la stessa forma, non si somigliano affatto, però le loro superfici hanno la stessa estensione, in quanto sono costituite dallo stesso numero di quadratini: in geometria si dicono \emph{equivalenti}.
 
@@ -865,9 +909,9 @@ quindi si deve verificare: $\overline {AB}^{2}= \overline {AC}^{2} + \overline {
 \end{soluzione}
 
 \begin{problema}
-Un padre aveva $26$ anni alla nascita del figlio; moltiplicando le età attuali del padre e del figlio si trova il triplo del quadrato dell’età del figlio; calcolare le due età.
+Un padre aveva $26$ anni alla nascita del figlio; moltiplicando le età attuali del padre e del figlio si trova il triplo del quadrato dell'età del figlio; calcolare le due età.
 \end{problema}
-Indichiamo con $p$ l’età attuale del padre e con $f$ l’età del figlio
+Indichiamo con $p$ l'età attuale del padre e con $f$ l'età del figlio
 
 \emph{Dati}: $p = f + 26;\; p \cdot f = 3 f^{2}$.
 writer2latex102

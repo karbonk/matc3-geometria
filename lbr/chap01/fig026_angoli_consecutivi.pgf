@@ -1,0 +1,56 @@
+\begin{tikzpicture}
+\pgfmathsetmacro{\myscale}{1};
+
+\begin{scope}[scale={\myscale},font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{40};
+\pgfmathsetmacro{\abeta}{5};
+\pgfmathsetmacro{\agamma}{-15};
+
+\coordinate (o) at (0,0);
+\draw (o) -- ++({\aalpha}:2) coordinate (a) node[right] {$a$};
+\draw (o) -- ++({\abeta}:2.3) coordinate (b) node[right] {$b$};
+\draw (o) -- ++({\agamma}:2.2) coordinate (c) node[right] {$c$};
+
+\draw[thin,blue] ([shift=({\abeta}:.55)]o) arc [radius=.55, start angle={\abeta}, end angle={\aalpha}];
+\draw[thin,blue] ([shift=({\abeta}:.6)]o) arc [radius=.6, start angle={\abeta}, end angle={\aalpha}];
+\draw[very thick, red] ([shift=({\agamma}:.7)]o) arc [radius =.7, start angle={\agamma}, end angle={\abeta}];
+\end{scope}
+
+\pgfmathsetmacro{\myxshift}{4cm};
+\begin{scope}[xshift={\myxshift}]
+\pgfmathsetmacro{\aalpha}{35};
+\pgfmathsetmacro{\abeta}{5};
+\pgfmathsetmacro{\agamma}{-15};
+
+\coordinate (o) at (0,0);
+\draw (o) -- ++({\abeta}:2.3) coordinate (b) node[right] {$b'$};
+\draw (o) -- ++({\agamma}:2.2) coordinate (c) node[right] {$c'$};
+\coordinate (u) at ($(o)!0.2!(b)$);
+\draw (u) -- ++({\aalpha}:1.9) coordinate (a) node[right] {$a'$};
+
+\draw[thin,blue] ([shift=({\abeta}:.55)]u) arc [radius=.55, start angle={\abeta}, end angle={\aalpha}];
+\draw[thin,blue] ([shift=({\abeta}:.6)]u) arc [radius=.6, start angle={\abeta}, end angle={\aalpha}];
+\draw[very thick, red] ([shift=({\agamma}:.7)]o) arc [radius =.7, start angle={\agamma}, end angle={\abeta}];
+\end{scope}
+
+\pgfmathsetmacro{\myxshift}{8cm};
+\begin{scope}[xshift={\myxshift}]
+\pgfmathsetmacro{\aalpha}{20};
+\pgfmathsetmacro{\abeta}{-20};
+\pgfmathsetmacro{\agamma}{-5};
+
+\coordinate (o) at (0,0);
+\draw (o) -- ++({\aalpha}:2) coordinate (a) node[right] {$a''$};
+\draw (o) -- ++({\abeta}:2.3) coordinate (b) node[right] {$b''$};
+\draw (o) -- ++({\agamma}:2.2) coordinate (c) node[right] {$c''$};
+
+\draw[thin,blue] ([shift=({\abeta}:.55)]o) arc [radius=.55, start angle={\abeta}, end angle={\aalpha}];
+\draw[thin,blue] ([shift=({\abeta}:.6)]o) arc [radius=.6, start angle={\abeta}, end angle={\aalpha}];
+\draw[very thick, red] ([shift=({\agamma}:.8)]o) arc [radius =.8, start angle={\agamma}, end angle={\aalpha}];
+\end{scope}
+
+\end{scope}
+\end{tikzpicture}

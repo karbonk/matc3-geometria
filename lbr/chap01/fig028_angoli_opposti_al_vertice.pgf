@@ -1,0 +1,55 @@
+\begin{tikzpicture}
+\pgfmathsetmacro{\myscale}{1};
+
+\begin{scope}[scale={\myscale},font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{20};
+\pgfmathsetmacro{\abeta}{150};
+\pgfmathsetmacro{\agamma}{200};
+\pgfmathsetmacro{\adelta}{330};
+
+\coordinate (o) at (0,0);
+\draw (o) -- ++({\aalpha}:2) coordinate (a);
+\draw (o) -- ++({\abeta}:2.1) coordinate (b);
+\draw (o) -- ++({\agamma}:2.3) coordinate (c);
+\draw (o) -- ++({\adelta}:1.9) coordinate (d);
+
+\draw[thin,blue] ([shift=({\abeta}:.45)]o) arc [radius=.45, start angle={\abeta}, end angle={\aalpha}];
+\draw[thin,blue] ([shift=({\abeta}:.5)]o) arc [radius=.5, start angle={\abeta}, end angle={\aalpha}];
+\draw[very thick, red] ([shift=({\agamma}:.6)]o) arc [radius =.6, start angle={\agamma}, end angle={\abeta}];
+\draw[thin,blue] ([shift=({\agamma}:.45)]o) arc [radius=.45, start angle={\agamma}, end angle={\adelta}];
+\draw[thin,blue] ([shift=({\agamma}:.5)]o) arc [radius=.5, start angle={\agamma}, end angle={\adelta}];
+\draw[very thick, red] ([shift=({\adelta}:.6)]o) arc [radius =.6, start angle={\adelta}, end angle={360+\aalpha}];
+
+\coordinate [label=0:angoli opposti al vertice] (l1) at (-1.9,-1.5);
+\end{scope}
+
+
+\pgfmathsetmacro{\myxshift}{6cm};
+\begin{scope}[xshift={\myxshift}]
+\pgfmathsetmacro{\aalpha}{60};
+\pgfmathsetmacro{\abeta}{160};
+\pgfmathsetmacro{\agamma}{200};
+\pgfmathsetmacro{\adelta}{330};
+
+\coordinate (o) at (0,0);
+\draw (o) -- ++({\aalpha}:1.3) coordinate (a);
+\draw (o) -- ++({\abeta}:2.3) coordinate (b);
+\draw (o) -- ++({\agamma}:2.3) coordinate (c);
+\draw (o) -- ++({\adelta}:1.7) coordinate (d);
+
+\draw[thin,blue] ([shift=({\abeta}:.45)]o) arc [radius=.45, start angle={\abeta}, end angle={\aalpha}];
+\draw[thin,blue] ([shift=({\abeta}:.5)]o) arc [radius=.5, start angle={\abeta}, end angle={\aalpha}];
+\draw[very thick, red] ([shift=({\agamma}:.6)]o) arc [radius =.6, start angle={\agamma}, end angle={\abeta}];
+\draw[thin,blue] ([shift=({\agamma}:.45)]o) arc [radius=.45, start angle={\agamma}, end angle={\adelta}];
+\draw[thin,blue] ([shift=({\agamma}:.5)]o) arc [radius=.5, start angle={\agamma}, end angle={\adelta}];
+\draw[very thick, red] ([shift=({\adelta}:.6)]o) arc [radius =.6, start angle={\adelta}, end angle={360+\aalpha}];
+
+\coordinate [label=0:angoli non opposti al vertice] (l1) at (-2.4,-1.5);
+
+\end{scope}
+
+\end{scope}
+\end{tikzpicture}

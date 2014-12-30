@@ -10,5 +10,5 @@
 \tkzDrawSegment(L,M)
 \tkzDrawPoints(A,B,C,O)
 \tkzLabelPoints[font=\small, above](A,B,C,O)
-\tkzLabelPoint[font=\small](r){r}
+\tkzLabelPoint[font=\small](r){$r$}
 \end{tikzpicture}

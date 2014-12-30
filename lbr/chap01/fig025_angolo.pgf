@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+%assioma 15
+\tkzDefPoint(0,0){O}
+\tkzDefShiftPoint[O](0:2.5){B}
+\tkzDefShiftPoint[O](0:3){I}
+\tkzDefShiftPoint[O](30:2.5){A}
+\tkzDefShiftPoint[O](30:3){H}
+\tkzDrawPoints(A,O,B)
+\tkzDrawSegments(O,H O,I)
+\tkzLabelPoints[font=\small, left](O)
+\tkzLabelPoints[font=\small, above](A)
+\tkzLabelPoints[font=\small, below](B)
+\tkzMarkAngle[fill=orange,opacity=.3,size=1cm](B,O,A)
+\tkzLabelPoint[font=\small,right](19:0.95){$\alpha$}
+\tkzLabelPoint[font=\small,above](30:3){$a$}
+\tkzLabelPoint[font=\small,below](0:3){$b$}
+\end{tikzpicture}

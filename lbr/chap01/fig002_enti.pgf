@@ -14,8 +14,8 @@
 \tkzDefShiftPoint[D](30:4){G}
 \tkzDrawSegments[style=dashed](D,E F,G)
 \tkzDrawSegment(E,F)
-\node at(4.3,.5){r};
-\node at(4.3,-.5){s};
+\node at(4.3,.5){$r$};
+\node at(4.3,-.5){$s$};
 
 \tkzDefPoint(3,-1){D}
 \tkzDefShiftPoint[D](35:1){E}

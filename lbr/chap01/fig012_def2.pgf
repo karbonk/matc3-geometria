@@ -6,5 +6,5 @@
 \tkzDrawSegment(O,C)
 \tkzDrawSegment[style=dashed](C,M)
 \tkzDrawPoint(O)
-\tkzLabelPoint[font=\small, above](O){O}
+\tkzLabelPoint[font=\small, above](O){$O$}
 \end{tikzpicture}

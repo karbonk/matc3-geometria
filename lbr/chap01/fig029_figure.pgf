@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=.7,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (0,0);
+\coordinate (b) at (1,2);
+\coordinate (c) at (3,2);
+\coordinate (d) at (3,0.7);
+\draw[thick, fill={gray!40!white}] (a) -- (b) -- (c) -- (d) -- cycle;
+\end{scope}
+
+\begin{scope}[xshift=4cm, yshift=-2cm, scale=2]
+\coordinate (a) at (0,0);
+\coordinate (b) at (1,2);
+\coordinate (c) at (3,2);
+\coordinate (d) at (3,0.7);
+\draw[thick, fill={gray!40!white}] (a) -- (b) -- (c) -- (d) -- cycle;
+\end{scope}
+
+\end{tikzpicture}

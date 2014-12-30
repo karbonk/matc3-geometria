@@ -1,0 +1,42 @@
+\begin{tikzpicture}
+\pgfmathsetmacro{\myscale}{1};
+
+\begin{scope}[scale={\myscale},font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{0};
+\pgfmathsetmacro{\abeta}{40};
+\pgfmathsetmacro{\agamma}{180};
+
+\coordinate (o) at (0,0);
+\draw (o) -- ++({\aalpha}:2.2) coordinate (a) node[right] {$a$};
+\draw (o) -- ++({\abeta}:2) coordinate (b) node[right] {$b$};
+\draw (o) -- ++({\agamma}:2) coordinate (c) node[left] {$c$};
+
+\draw[thin,blue] ([shift=({\abeta}:.65)]o) arc [radius=.65, start angle={\abeta}, end angle={\aalpha}];
+\draw[thin,blue] ([shift=({\abeta}:.7)]o) arc [radius=.7, start angle={\abeta}, end angle={\aalpha}];
+\draw[very thick, red] ([shift=({\agamma}:.5)]o) arc [radius =.5, start angle={\agamma}, end angle={\abeta}];
+\end{scope}
+
+
+\pgfmathsetmacro{\myxshift}{6cm};
+\begin{scope}[xshift={\myxshift}]
+\pgfmathsetmacro{\aalpha}{180};
+\pgfmathsetmacro{\abeta}{20};
+\pgfmathsetmacro{\agamma}{-160};
+
+\coordinate (o) at (0,0);
+\draw (o) -- ++({\aalpha}:2.1) coordinate (a) node[left] {$d$};
+\draw (o) -- ++({\abeta}:2.1) coordinate (b) node[right] {$e$};
+\draw (o) -- ++({\agamma}:2.2) coordinate (c) node[left] {$f$};
+
+\draw[thin,blue] ([shift=({\abeta}:.55)]o) arc [radius=.55, start angle={\abeta}, end angle={\aalpha}];
+\draw[thin,blue] ([shift=({\abeta}:.6)]o) arc [radius=.6, start angle={\abeta}, end angle={\aalpha}];
+\draw[very thick, red] ([shift=({\abeta}:.45)]o) arc [radius =.45, start angle={\abeta}, end angle={\agamma}];
+\draw[very thick, gray] ([shift=({\aalpha}:.7)]o) arc [radius =.7, start angle={\aalpha}, end angle={360+\agamma}];
+\draw[very thick, gray] ([shift=({\aalpha}:.8)]o) arc [radius =.8, start angle={\aalpha}, end angle={360+\agamma}];
+\end{scope}
+
+\end{scope}
+\end{tikzpicture}

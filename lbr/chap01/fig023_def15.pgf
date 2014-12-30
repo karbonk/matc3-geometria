@@ -23,4 +23,6 @@
 \tkzLabelPoint[font=\small,above](5,.7){angolo giro}
 \tkzLabelPoint[font=\small,below](6.7,0){angolo nullo}
 \tkzMarkAngle[fill=orange,opacity=.3,size=.7cm](c,O,c2)
+\tkzLabelPoints[font=\small,left](O)
+
 \end{tikzpicture}
