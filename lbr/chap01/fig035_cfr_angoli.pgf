@@ -1,0 +1,72 @@
+\begin{tikzpicture}
+\pgfmathsetmacro{\myscale}{1};
+
+\begin{scope}[scale={\myscale},font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{-20};
+\pgfmathsetmacro{\abeta}{50};
+\pgfmathsetmacro{\agamma}{150};
+\pgfmathsetmacro{\adelta}{230};
+
+\coordinate (o) at (0,0);
+\coordinate (o1) at (4,0);
+\draw (o) node[left] {$B$} -- ++({\aalpha}:2) coordinate (a) node[below] {$A$};
+\draw (o) -- ++({\abeta}:2.1) coordinate (b) node[above] {$C$};
+\draw (o1) node[right] {$E$} -- ++({\agamma}:2.3) coordinate (c) node[above] {$F$};
+\draw (o1) -- ++({\adelta}:1.9) coordinate (d) node[below] {$D$};
+
+\draw[thin,blue] ([shift=({\abeta}:.45)]o) arc [radius=.45, start angle={\abeta}, end angle={\aalpha}];
+\draw[thin,blue] ([shift=({\abeta}:.5)]o) arc [radius=.5, start angle={\abeta}, end angle={\aalpha}];
+\draw[very thick, red] ([shift=({\agamma}:.6)]o1) arc [radius=.6, start angle={\agamma}, end angle={\adelta}];
+
+\node at (2,-2.5) {(a) Situazione iniziale};
+\end{scope}
+
+
+\begin{scope}[xshift=7cm]
+\pgfmathsetmacro{\aalpha}{-20};
+\pgfmathsetmacro{\abeta}{50};
+\pgfmathsetmacro{\agamma}{150};
+\pgfmathsetmacro{\adelta}{230};
+
+\coordinate (o) at (0,0);
+\draw (o) node[above=12pt] {$B\equiv E$} -- ++({\aalpha}:1.3) coordinate (a) node[below] {$A$};
+\draw (o) -- ++({\abeta}:2.3) coordinate (b) node[above] {$C$};
+\draw (o) -- ++({\agamma}:2.3) coordinate (c) node[above] {$F$};
+\draw (o) -- ++({\adelta}:1.7) coordinate (d) node[below] {$D$};
+
+\draw[thin,blue] ([shift=({\abeta}:.45)]o) arc [radius=.45, start angle={\abeta}, end angle={\aalpha}];
+\draw[thin,blue] ([shift=({\abeta}:.5)]o) arc [radius=.5, start angle={\abeta}, end angle={\aalpha}];
+\draw[very thick, red] ([shift=({\agamma}:.6)]o) arc [radius=.6, start angle={\agamma}, end angle={\adelta}];
+
+\node at (0,-2.5) {(b) 1\textsuperscript{o} passo: facciamo};
+\node at (0,-3) {coincidere i vertici $B$ ed $E$};
+
+\end{scope}
+
+\begin{scope}[xshift=11cm]
+\pgfmathsetmacro{\aalpha}{-20};
+\pgfmathsetmacro{\abeta}{50};
+\pgfmathsetmacro{\agamma}{-20};
+\pgfmathsetmacro{\adelta}{80};
+
+\coordinate (o) at (0,0);
+\draw (o) node[left] {$B\equiv E$} -- ++({\aalpha}:1.3) coordinate (a) node[below] {$A$};
+\draw (o) -- ++({\abeta}:2.3) coordinate (b) node[above] {$C$};
+\draw (o) -- ++({\agamma}:2.3) coordinate (c) node[above] {$F$};
+\draw (o) -- ++({\adelta}:1.7) coordinate (d) node[left] {$D$};
+
+\draw[thin,blue] ([shift=({\abeta}:.45)]o) arc [radius=.45, start angle={\abeta}, end angle={\aalpha}];
+\draw[thin,blue] ([shift=({\abeta}:.5)]o) arc [radius=.5, start angle={\abeta}, end angle={\aalpha}];
+\draw[very thick, red] ([shift=({\agamma}:.6)]o) arc [radius=.6, start angle={\agamma}, end angle={\adelta}];
+
+\node at (1,-2.5) {(b) 2\textsuperscript{o} passo: facciamo};
+\node at (1,-3) {coincidere le semirette $BA$ ed $EF$};
+
+\end{scope}
+
+
+\end{scope}
+\end{tikzpicture}

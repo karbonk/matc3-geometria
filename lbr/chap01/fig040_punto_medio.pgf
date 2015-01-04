@@ -1,0 +1,16 @@
+\begin{tikzpicture}[scale=0.8,font=\small,shorten line/.style={shorten >=#1,shorten <=#1}]
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns,arrows,decorations.pathreplacing}
+
+\begin{scope}
+\coordinate (a) at (0,0);
+\coordinate (b) at (6,0);
+\coordinate (m) at (3,0);
+
+\draw[fill] (a) circle (1.5pt) node[above] {$A$} -- (b) circle (1.5pt) node[above] {$B$};
+\draw[fill] (m) circle (1.5pt) node[above] {$M$};
+\draw [gray,decorate,decoration={brace,amplitude=10pt,mirror},xshift=0.4pt,yshift=-0.4pt](0,-0.2) -- (3,-0.2) node[midway] {};
+\draw [gray,decorate,decoration={brace,amplitude=10pt,mirror},xshift=0.4pt,yshift=-0.4pt](3,-0.2) -- (6,-0.2) node[midway] {};
+\end{scope}
+
+\end{tikzpicture}

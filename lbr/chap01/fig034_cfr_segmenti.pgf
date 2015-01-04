@@ -1,0 +1,47 @@
+\begin{tikzpicture}[scale=.8,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (1,0);
+\coordinate (b) at (0,2.5);
+\coordinate (c) at (1.5,0.9);
+\coordinate (d) at (3,2.7);
+\draw[fill] (a) circle (1.5pt) node[below] {$A$} -- (b)circle (1.5pt) node[above] {$B$};
+\draw[fill] (c) circle (1.5pt) node[below] {$C$} -- (d)circle (1.5pt) node[above] {$D$};
+
+\node at (1.5,-1.5) {(a) Situazione iniziale};
+\end{scope}
+
+\begin{scope}[xshift=6cm]
+\coordinate (a) at (1,0);
+\coordinate (b) at (0,2.5);
+\coordinate (c) at (1,0);
+\coordinate (d) at (2.5,1.8);
+\draw[fill] (a) circle (1.5pt) node[below] {$A\equiv C$} -- (b) circle (1.5pt) node[above] {$B$};
+\draw[fill] (c) -- (d) circle (1.5pt) node[above] {$D$};
+
+\node at (1,-1.5) {(b) 1\textsuperscript{o} passo: facciamo};
+\node at (1,-2.0) {coincidere $A$ con $C$};
+\end{scope}
+
+\begin{scope}[xshift=13cm]
+\coordinate (a) at (1,0);
+\coordinate (b) at (0,2.5);
+\coordinate (c) at (1,0);
+%sqrt((1)^2+(2.5)^2)=2.692582404
+%sqrt((1.5)^2+(1.8)^2)=2.343074903
+%0.870196173
+\coordinate (d) at ($(a)!0.870196173!(b)$);
+\draw[dashed] ($(b)!-0.5!(a)$) -- ($(b)!1.5!(a)$);
+
+\draw[fill] (a) circle (1.5pt) node[below] {$A\equiv C$} -- (b) circle (1.5pt) node[above right=-2pt] {$B$};
+\draw[fill] (d) circle (1.5pt) node[right] {$D$};
+
+%\draw (c) -- (d) node[above] {$D$};
+
+\node at (0.5,-1.5) {(c) 2\textsuperscript{o} passo: facciamo coincidere};
+\node at (0.5,-2) {la retta $CD$ con $AB$. I punti $B$ e $D$};
+\node at (0.5,-2.5) {devono stare dalla stessa parte};
+\end{scope}
+
+\end{tikzpicture}

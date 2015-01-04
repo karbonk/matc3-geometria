@@ -1,0 +1,24 @@
+\begin{tikzpicture}[scale=0.8,font=\small,shorten line/.style={shorten >=#1,shorten <=#1}]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (0,0);
+\coordinate (b) at (3,0);
+\draw[fill] (a) circle (1.5pt) node[above] {$A$} -- (b)circle (1.5pt) node[above] {$B$};
+\coordinate (a1) at (0,-2);
+\coordinate (b1) at (3,-2);
+\coordinate (b2) at (6,-2);
+\coordinate (b3) at (9,-2);
+
+\draw[fill] (a1) circle (1.5pt) node[below] {$A$} -- (b1) circle (1.5pt) node[below] {$B\equiv A'$} -- (b2) circle (1.5pt) node[below] {$B'\equiv A''$} -- (b3) circle (1.5pt) node[below] {$B''\equiv C$};
+
+\coordinate (p1) at ($(a1)!0.5!(b1)$);
+\coordinate (p2) at ($(b1)!0.5!(b2)$);
+\coordinate (p3) at ($(b2)!0.5!(b3)$);
+
+\draw[shorten line=0.2cm,dashed, very thick, gray,->] ($(a)!(p1)!(b)$) -- (p1);
+\draw[shorten line=0.4cm,dashed, very thick, gray,->] ($(a)!(p1)!(b)$) -- (p2);
+\draw[shorten line=0.7cm,dashed, very thick, gray,->] ($(a)!(p1)!(b)$) -- (p3);
+\end{scope}
+
+\end{tikzpicture}

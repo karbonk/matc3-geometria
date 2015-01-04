@@ -1,0 +1,16 @@
+\begin{tikzpicture}[scale=0.8,font=\small,shorten line/.style={shorten >=#1,shorten <=#1}]
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns,arrows,decorations.pathreplacing}
+
+\begin{scope}
+\coordinate (a) at (0,0);
+\coordinate (b) at (6,0);
+\coordinate (m) at (3,0);
+
+\draw (-1,0) -- (7.5,0) node[above] {$r$};
+\foreach \x/\y in {0/A,1.5/B,4.5/C,6/D}{%
+\draw[fill] (\x,0) circle (1.5pt) node[above] {$\y$};
+}
+\end{scope}
+
+\end{tikzpicture}

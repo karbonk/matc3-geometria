@@ -1,0 +1,26 @@
+\begin{tikzpicture}[scale=0.8,font=\small,shorten line/.style={shorten >=#1,shorten <=#1}]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (-1,0);
+\coordinate (b) at (4,1);
+\coordinate (c) at (5,2);
+\coordinate (d) at (8,1);
+\draw[fill] (a) circle (1.5pt) node[above] {$A$} -- (b)circle (1.5pt) node[above] {$B$};
+\draw[fill] (c) circle (1.5pt) node[above] {$C$} -- (d)circle (1.5pt) node[above] {$D$};
+\coordinate (a1) at (-1,-1);
+\coordinate (b1) at ({sqrt((5^2)+1)-1},-1);
+\coordinate (c1) at (b1);
+\coordinate (d1) at ({sqrt((3^2)+1)-1)},-1);
+
+\draw[fill] (a1) circle (1.5pt) node[above] {$A\equiv C$} -- (b1) circle (1.5pt) node[above] {$B$};
+\draw[fill] (d1) circle (1.5pt) node[above] {$D$};
+
+\coordinate (p1) at ($(a1)!0.5!(b1)$);
+\coordinate (p2) at ($(a1)!0.5!(d1)$);
+
+\draw[shorten line=0.4cm,dashed, very thick, gray,->] ($(a)!(p1)!(b)$) -- (p1);
+\draw[shorten line=0.4cm,dashed, very thick, gray,->] (6.2,1.6) -- (p2);
+\end{scope}
+
+\end{tikzpicture}

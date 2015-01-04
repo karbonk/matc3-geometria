@@ -826,24 +826,153 @@ Diciamo che due figure $F$ e $G$ sono \emph{congruenti} quando esiste un movimen
 
 Nella Premessa a questo paragrafo abbiamo dato un'idea intuitiva e sperimentale del concetto di congruenza. Ma per esplicitarlo matematicamente dobbiamo utilizzare gli assiomi di congruenza di Hilbert che abbiamo enunciato nella sezione~\ref{sect:ass_Hilbert}. Ne riportiamo alcuni per comodità del lettore.
 
-\begin{comment}
 
-Assiomi di congruenza
-	Assioma del trasporto di un segmento. Se A, B sono due punti di una retta a e A' è un punto sulla stessa retta o su un’altra retta a', si può sempre trovare un punto B' sulla retta a o su a’, da una data parte rispetto ad A', tale che il segmento AB sia congruente al segmento A'B'.
-Questo assioma afferma che, fissato un punto A’ su una retta a’, è sempre possibile trasportare un qualunque segmento AB in modo che l’estremo A coincida con A’ e il segmento stia sulla retta a’.
+\subsubsection{Assiomi di congruenza}
 
-	La relazione di congruenza tra segmenti è transitiva, cioè se A′B′ e A′′B′′ sono congruenti ad AB, allora A′B′  è congruente a A′′B′′.
+\begin{enumerate}[label=\Roman{*}.]
+\setcounter{enumi}{2}
+\item \emph{Assioma del trasporto di un segmento}. Se $A$ e $B$ sono due punti di una retta $a$ e $A'$ è un punto sulla stessa retta o su un'altra retta $a'$, si può sempre trovare un punto $B'$ sulla retta $a$ o su $a'$, da una data parte rispetto ad $A'$, tale che il segmento $AB$ sia congruente al segmento $A'B'$.
+\end{enumerate}
+Questo assioma afferma che, fissato un punto $A'$ su una retta $a'$, è sempre possibile trasportare un qualunque segmento $AB$ in modo che l'estremo $A$ coincida con $A'$ e il segmento stia sulla retta $a'$.
+
+\begin{enumerate}[label=\Roman{*}.]
+\setcounter{enumi}{3}
+\item La relazione di congruenza tra segmenti è \emph{transitiva}, cioè se $A'B'$ e $A''B''$ sono entrambi congruenti ad $AB$, allora $A'B'$ è congruente a $A''B''$.
+\end{enumerate}
 La relazione di congruenza tra segmenti è allora un relazione di equivalenza, in quanto gode delle proprietà:
-	riflessiva: ogni segmento è congruente a se stesso;
-	simmetrica: se AB è congruente a A’B’ allora anche A’B’ è congruente ad AB;
-	transitiva: se AB è congruente ad A’B’ e A’B’ è congruente ad A”B”, allora AB è congruente ad A”B”.
+\begin{enumeratea}
+\item \emph{riflessiva}: ogni segmento è congruente a se stesso;
+\item \emph{simmetrica}: se $AB$ è congruente a $A'B'$ allora anche $A'B'$ è congruente ad $AB$;
+\item \emph{transitiva}: se $AB$ è congruente ad $A'B'$ e $A'B'$ è congruente ad $A''B''$, allora $AB$ è congruente ad $A''B''$.
+\end{enumeratea}
 
-DEFINIZIONE. Si dice lunghezza di un segmento la classe di equivalenza dei segmenti congruenti tra di loro, cioè l’insieme di tutti i segmenti che sono congruenti tra di loro.
-	Assioma del trasporto di un angolo. Dati un angolo AB ˆCed una semiretta B'C' , esistono e sono uniche due semirette B'D e B'E, tali che l'angolo D(B"'" ) ˆC"'" è congruente all'angolo AB ˆCe l'angolo E(B"'" ) ˆC"'" è congruente all'angolo AB ˆC.
-Questo assioma ci garantisce che è sempre possibile trasportare un angolo  su una qualsiasi semiretta, facendo coincidere il vertice dell’angolo con l’origine della semiretta e un lato dell’angolo con la semiretta stessa.
-	La relazione di congruenza tra angoli è transitiva, cioè se A"'" (B"'" ) ˆC"'"  eA"''" (B"''" ) ˆC"''"   sono congruenti ad AB ˆC, allora A"'" (B"'" ) ˆC"'"≡A"''" (B"''" ) ˆC"''" .
+\begin{definizione}
+Si dice \emph{lunghezza di un segmento} la classe di equivalenza dei segmenti congruenti tra di loro, cioè l'insieme di tutti i segmenti che sono congruenti tra di loro.
+\end{definizione}
 
-\end{comment}
+\begin{enumerate}[label=\Roman{*}.]
+\setcounter{enumi}{4}
+\item \emph{Assioma del trasporto di un angolo}. Dati un angolo $A\widehat{B}C$ ed una semiretta $B'C'$ , esistono e sono uniche due semirette $B'D$ e $B'E$, tali che l'angolo $D\widehat{B'}C'$ risulti congruente all'angolo $D\widehat{B}C$ e l'angolo $E\widehat{B'}C'$ risulti congruente all'angolo $D\widehat{B}C$.
+\end{enumerate}
+Questo assioma ci garantisce che è sempre possibile trasportare un angolo su una qualsiasi semiretta, facendo coincidere il vertice dell'angolo con l'origine della semiretta e un lato dell'angolo con la semiretta stessa.
+
+\begin{enumerate}[label=\Roman{*}.]
+\setcounter{enumi}{5}
+\item La relazione di congruenza tra angoli è \emph{transitiva}, cioè se $A'\widehat{B'}C'$ e $A''\widehat{B''}C''$ sono entrambi congruenti ad $A\widehat{B}C$, allora $A'\widehat{B'}C'$ è congruente a $A''\widehat{B''}C''$.
+\end{enumerate}
+
+Quindi anche la relazione di congruenza tra gli angoli è una relazione di equivalenza, gode cioè delle proprietà \emph{riflessiva}, \emph{simmetrica} e \emph{transitiva}.
+
+\begin{definizione}
+Si dice \emph{ampiezza di un angolo} la classe di equivalenza degli angoli congruenti tra di loro, cioè l'insieme di tutti gli angoli che sono congruenti tra di loro.
+\end{definizione}
+
+Aggiungiamo che:
+\begin{itemize*}
+\item tutte le rette sono fra loro congruenti;
+\item tutte le semirette sono fra loro congruenti;
+\item tutti i piani sono fra loro congruenti.
+\end{itemize*}
+
+\subsection{Confronto di segmenti}
+
+Per confrontare l'altezza di due persone e vedere chi è più alto, le facciamo mettere affiancate in modo che i piedi stiano allo stesso livello, dopodiché confrontiamo l'estremità della testa: è più alto chi ha l'estremità della testa più in alto. Un procedimento analogo si fa per confrontare due segmenti.
+
+Per confrontare due segmenti $AB$ e $CD$, facciamo in modo che con un movimento rigido gli estremi $A$ e $C$ coincidano, con una rotazione intorno al punto $A$ facciamo in  modo che coincidano anche le rette $AB$ e $CD$ e che gli estremi $B$ e $D$ stiano dalla stessa parte rispetto ad $A$ e $C$.
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig034_cfr_segmenti.pgf}
+\caption{Confronto di due segmenti}
+\end{figure}
+
+A questo punto sono possibili tre situazioni:
+\begin{itemize*}
+\item $B$ cade dopo l'estremo $D$, allora diciamo che $AB$ è maggiore di $CD$ e scriviamo $AB>CD$;
+\item $B$ cade esattamente su $D$, allora i due segmenti sono congruenti e scriviamo $AB\cong CD$;
+\item $B$ cade tra $C$ e $D$, allora diciamo che $AB$ è minore di $CD$ e scriviamo $AB<CD$.
+\end{itemize*}
+
+\subsection{Confronto di angoli}
+
+Per confrontare due angoli $A\widehat{B}C$ e $D\widehat{E}F$, portiamo con un movimento rigido il vertice $B$ sul vertice $E$, con una rotazione portiamo a coincidere la semiretta $BA$ con la semiretta $EF$, in modo che le altre due semirette, $BC$ e $ED$, stiano dalla stessa parte rispetto a $BA$.
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig035_cfr_angoli.pgf}
+\caption{Confronto di due angoli}
+\end{figure}
+
+A questo punto si possono avere tre situazioni distinte:
+\begin{itemize*}
+\item il lato $EF$ cade internamente all'angolo $A\widehat{B}C$ e quindi diciamo che $A\widehat{B}C>D\widehat{E}F$;
+\item il lato $EF$ cade esattamente su $BC$ e quindi i due angoli sono congruenti: $A\widehat{B}C\cong D\widehat{E}F$ ;
+\item il lato $EF$ cade esternamente all'angolo $A\widehat{B}C$ e quindi diciamo che $A\widehat{B}C<D\widehat{E}F$.
+\end{itemize*}
+
+\subsection{Operazioni con i segmenti}
+
+\paragraph{Somma di due segmenti.} La somma di due segmenti $AB$ e $CD$ è il segmento $AD$ che si ottiene trasportando con un movimento rigido il segmento $CD$ in modo che $AB$ e $CD$ siano adiacenti, con l'estremo $B$ coincidente con $C$. Scriviamo $AB + CD \cong AD$, usando l'usuale simbolo di addizione.
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig036_somma_segmenti.pgf}
+\caption{Somma di due segmenti. Il segmento $AD$ è la somma dei segmenti $AB$ e $CD$}
+\end{figure}
+
+\paragraph{Differenza di due segmenti.} La differenza di due segmenti $AB$ e $CD$, con $AB>CD$, è il segmento $DB$ che si ottiene sovrapponendo $AB$ e $CD$ facendo coincidere l'estremo $A$ con l'estremo $C$. Scriviamo $AB-CD \cong DB$.
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig037_diff_segmenti.pgf}
+\caption{Differenza di due segmenti. Il segmento $DB$ è la differenza dei segmenti $AB$ e $CD$}
+\end{figure}
+
+\paragraph{Multiplo di un segmento.} Il multiplo secondo $m$, numero naturale diverso da 0, di un segmento $AB$ è il segmento $AC$ che si ottiene sommando $m$ volte il segmento $AB$ a se stesso.
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig038_mult_segmento.pgf}
+\caption{Multiplo di un segmento. Il segmento $AC$ è il multiplo secondo 3 di $AB$, cioè $AC\cong 3AB$}
+\end{figure}
+
+Se $m=0$, il multiplo secondo $m$ di qualsiasi segmento $AB$ è il segmento nullo, ove per segmento nullo intendiamo un qualsiasi segmento in cui gli estremi coincidono, cioè il segmento ridotto a un solo punto.
+
+\paragraph{Sottomultiplo di un segmento.} Il sottomultiplo secondo $n$, numero naturale diverso da 0, di un segmento $AB$ è un segmento $AC$ tale che $AB\cong n\cdot AC$. Si può anche scrivere $AC \cong \dfrac{1}{n}AB$.
+
+In generale, il segmento $AC\cong\dfrac{m}{n}AB$ si ottiene dividendo $AB$ in $n$ parti uguali ottenendo il segmento $AD$ e poi sommando $m$ segmenti congruenti ad $AD$.
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig039_sottomult_segmento.pgf}
+\caption{Sottomultiplo di un segmento. Il segmento $AC$ è congruente a $\dfrac{7}{4}$ di $AB$, cioè $AC\cong\dfrac{7}{4}AB$, infatti $AB$ è stato suddiviso in 4 parti uguali e $AC$ è costituito da 7 di tali parti}
+\end{figure}
+
+\begin{definizione}
+Dato un segmento $AB$ si chiama \emph{punto medio di un segmento} il punto $M$ interno al segmento che lo divide in due parti tra loro congruenti ($AM\cong MB$).
+\end{definizione}
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig040_punto_medio.pgf}
+\caption{Punto medio di un segmento. $M$ è il punto medio del segmento $AB$ poiché $AM\cong MB$}
+\end{figure}
+
+Proprietà:
+\begin{itemize*}
+\item somme di segmenti a due a due congruenti sono congruenti; 
+\item differenze di segmenti a due a due congruenti sono congruenti.
+\end{itemize*}
+
+\begin{exrig}
+\begin{esempio}
+Siano $AB$ e $CD$ due segmenti congruenti appartenenti a una retta $r$ che non abbiano punti in comune. Dimostra che $AD-BC\cong 2\cdot AB$.
+\begin{proof}
+Disponiamo i punti $A$, $B$, $C$, $D$ su una retta $r$ come in figura.
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig041_esempio1.pgf}
+\end{figure}
+
+Per definizione di somma di segmenti si ha che $AD\cong AB+BC+CD$ e quindi
+\[AD-BC\cong AB+BC+CD-BC\cong AB+CD.\]
+Poiché $AB\cong CD$ si ha che
+\[AD-BC\cong AB+CD\cong AB+AB\cong 2\cdot AB.\]
+\end{proof}
+\end{esempio}
+\end{exrig}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
