@@ -472,7 +472,7 @@ Euclide nei suoi \emph{Elementi} aveva individuato un gruppo di cinque assiomi, 
  \centering\input{./lbr/chap01/fig003_euc.pgf}
  \end{minipage}\hfil
  \begin{minipage}{.45\textwidth}
- Nella figura, la retta $a$ taglia le rette $b$ e $c$, formando sul lato destro due angoli la cui somma è minore di due angoli retti. Prolungando opportunamente le rette $b$ e $c$ risulta che esse si incontrano sul lato destro della figura.
+ Nella figura a lato, la retta $a$ taglia le rette $b$ e $c$, formando sul lato destro due angoli la cui somma è minore di due angoli retti. Prolungando opportunamente le rette $b$ e $c$ risulta che esse si incontrano sul lato destro della figura.
   \end{minipage}
 \end{enumerate}
 
@@ -640,15 +640,22 @@ Solitamente, la semiretta si indica con una lettera latina minuscola.
 
 Prendendo due qualsiasi rette dello spazio esse si possono trovare in diverse posizioni reciproche, cioè una rispetto all'altra.
 \begin{definizione}
-Due rette si dicono \emph{complanari} se appartengono a uno stesso piano; se non appartengono a uno stesso piano si dicono \emph{sghembe}.
-
-Due rette complanari si dicono \emph{incidenti} se hanno uno, e uno solo, punto in comune.
-
-Due rette complanari che non hanno nessun punto in comune si dicono \emph{parallele}.
-
-Se due rette hanno almeno due punti in comune sono \emph{coincidenti} (figura~\ref{fig:1.12}).
+Due rette che appartengono ad uno stesso piano si dicono \emph{complanari}, altrimenti si dicono \emph{sghembe}.
 \end{definizione}
-\begin{figure}[b,t,h]
+
+\begin{definizione}
+Due rette complanari che non hanno nessun punto in comune si dicono \emph{parallele}.
+\end{definizione}
+
+\begin{definizione}
+Due rette che hanno un solo punto in comune si dicono \emph{incidenti}.
+\end{definizione}
+
+\begin{definizione}
+Se due rette hanno almeno due punti in comune sono \emph{coincidenti}.
+\end{definizione}
+
+\begin{figure}[hbt]
  \centering \input{./lbr/chap01/fig016_def8.pgf}
  \caption{Relazioni tra rette complanari}\label{fig:1.12}
 \end{figure}
@@ -669,7 +676,7 @@ I punti $A$ e $B$ si dicono \emph{estremi} del segmento.
 Un segmento viene indicato con le due lettere maiuscole dei suoi estremi.
 \begin{figure}[bth]
  \centering \input{./lbr/chap01/fig017_def10.pgf}
- \caption{I punti $A$ e $B$ formano le due semirette $r$ e $s$, e il segmento $AB$}\label{fig:1.12}
+ \caption{I punti $A$ e $B$ formano le due semirette $r$ e $s$, e il segmento $AB$}\label{fig:1.13}
 \end{figure}
 
 Due segmenti nel piano possono trovarsi in diverse posizioni reciproche. Alcune di esse hanno un interesse per la geometria.
@@ -718,12 +725,18 @@ Ricordiamo la definizione di angolo già data: si dice \emph{angolo} ciascuna de
 
 \begin{definizione}
 Un angolo si dice \emph{piatto} se i suoi lati sono uno il prolungamento dell'altro.
+\end{definizione}
+
+\begin{definizione}
 Un angolo si dice \emph{nullo} se è costituito solo da due semirette sovrapposte.
+\end{definizione}
+
+\begin{definizione}
 \`E detto \emph{angolo giro} l'angolo che ha per lati due semirette sovrapposte e che contiene tutti i punti del piano (figura~\ref{fig:1.19}).
 \end{definizione}
 \begin{figure}[bth]
  \centering \input{./lbr/chap01/fig023_def15.pgf}
- \caption{L'angolo  $\widehat{ab}$ a sinistra è piatto (sia quello sopra che quello sotto), gli angoli a destra, individuati dalle semirette coindicenti con origine in $O$, sono rispettivamente un angolo giro e un angolo nullo.}\label{fig:1.19}
+ \caption{L'angolo  $\widehat{ab}$ a sinistra è piatto (sia quello sopra che quello sotto), gli angoli a destra, individuati dalle semirette coindicenti con origine in $O$, sono rispettivamente un angolo giro (quello esterno) e un angolo nullo (quello interno).}\label{fig:1.19}
 \end{figure}
 
 \begin{definizione}
@@ -743,11 +756,11 @@ Quando si disegna un angolo è utile, oltre a disegnare le semirette e l'origine
 \end{figure}
 
 Per indicare gli angoli si usano diverse convenzioni:
-\begin{itemize}
-\item  $\widehat{ab}$ se si conoscono i nomi delle semirette che ne costituiscono i lati;
-\item  $A\widehat{O}B$ se si conoscono i nomi del vertice e di due punti sui lati;
-\item  $\alpha$, $\beta$, $\gamma$, \ldots{} una lettera greca per indicare direttamente l'angolo.
-\end{itemize}
+\begin{itemize*}
+\item  $\widehat{ab}$: se si conoscono i nomi delle semirette che ne costituiscono i lati;
+\item  $A\widehat{O}B$: se si conoscono i nomi del vertice e di due punti sui lati;
+\item  $\alpha$, $\beta$, $\gamma$, \ldots{} (una lettera greca): per indicare direttamente l'angolo.
+\end{itemize*}
 I primi due modi di indicare l'angolo non individuano con chiarezza di quale dei due angoli si tratta. Solitamente si intende l'angolo convesso, quando si vuole indicare l'angolo concavo bisogna dirlo esplicitamente.
 
 Anche per gli angoli si danno le definizioni di angoli consecutivi e angoli adiacenti, in parte simili a quelle date per i segmenti.
@@ -806,7 +819,7 @@ Le figure (e) ed (f) hanno la stessa forma e le stesse dimensioni ma sono in pos
 
 Le figure (g) e (h) hanno la stessa forma e le stesse dimensioni (per rendersene conto basta ruotare, per esempio, la seconda figura in senso antiorario e poi trascinarla sulla prima per sovrapporla). Anche queste figure sono dette uguali nel linguaggio comune, ma in geometria si dicono \emph{congruenti}.
 
-Le figure (i) e (j), a pagina~\pageref{fig:figure_i_j}, hanno stessa forma e stesse dimensioni, tuttavia non si riesce a trasportare l'una sull'altra muovendole nel piano, né trascinandole, né ruotandole. Per farlo è necessario ribaltarne una facendola uscire dal piano, poiché le due figure sono una l'immagine speculare dell'altra. In geometria tali figure sono dette \emph{inversamente congruenti}.
+Le figure (i) e (j) hanno stessa forma e stesse dimensioni, tuttavia non si riesce a trasportare l'una sull'altra muovendole nel piano, né trascinandole, né ruotandole. Per farlo è necessario ribaltarne una facendola uscire dal piano, poiché le due figure sono una l'immagine speculare dell'altra. In geometria tali figure sono dette \emph{inversamente congruenti}.
 
 \begin{figure}[htb]
 \centering\input{./lbr/chap01/fig033_figure.pgf}\label{fig:figure_i_j}
@@ -904,7 +917,7 @@ Per confrontare due angoli $A\widehat{B}C$ e $D\widehat{E}F$, portiamo con un mo
 A questo punto si possono avere tre situazioni distinte:
 \begin{itemize*}
 \item il lato $EF$ cade internamente all'angolo $A\widehat{B}C$ e quindi diciamo che $A\widehat{B}C>D\widehat{E}F$;
-\item il lato $EF$ cade esattamente su $BC$ e quindi i due angoli sono congruenti: $A\widehat{B}C\cong D\widehat{E}F$ ;
+\item il lato $EF$ cade esattamente su $BC$ e quindi i due angoli sono congruenti: $A\widehat{B}C\cong D\widehat{E}F$;
 \item il lato $EF$ cade esternamente all'angolo $A\widehat{B}C$ e quindi diciamo che $A\widehat{B}C<D\widehat{E}F$.
 \end{itemize*}
 
@@ -928,18 +941,18 @@ A questo punto si possono avere tre situazioni distinte:
 
 \begin{figure}[htb]
 \centering\input{./lbr/chap01/fig038_mult_segmento.pgf}
-\caption{Multiplo di un segmento. Il segmento $AC$ è il multiplo secondo 3 di $AB$, cioè $AC\cong 3AB$}
+\caption{Multiplo di un segmento. Il segmento $AC$ è il multiplo secondo 3 di $AB$, cioè $AC\cong 3\cdot AB$}
 \end{figure}
 
 Se $m=0$, il multiplo secondo $m$ di qualsiasi segmento $AB$ è il segmento nullo, ove per segmento nullo intendiamo un qualsiasi segmento in cui gli estremi coincidono, cioè il segmento ridotto a un solo punto.
 
-\paragraph{Sottomultiplo di un segmento.} Il sottomultiplo secondo $n$, numero naturale diverso da 0, di un segmento $AB$ è un segmento $AC$ tale che $AB\cong n\cdot AC$. Si può anche scrivere $AC \cong \dfrac{1}{n}AB$.
+\paragraph{Sottomultiplo di un segmento.} Il sottomultiplo secondo $n$, numero naturale diverso da 0, di un segmento $AB$ è un segmento $AC$ tale che $AB\cong n\cdot AC$. Si può anche scrivere $AC \cong \dfrac{1}{n}\cdot AB$.
 
-In generale, il segmento $AC\cong\dfrac{m}{n}AB$ si ottiene dividendo $AB$ in $n$ parti uguali ottenendo il segmento $AD$ e poi sommando $m$ segmenti congruenti ad $AD$.
+In generale, il segmento $AC\cong\dfrac{m}{n}\cdot AB$ si ottiene dividendo $AB$ in $n$ parti uguali ottenendo il segmento $AD$ e poi sommando $m$ segmenti congruenti ad $AD$.
 
 \begin{figure}[htb]
 \centering\input{./lbr/chap01/fig039_sottomult_segmento.pgf}
-\caption{Sottomultiplo di un segmento. Il segmento $AC$ è congruente a $\dfrac{7}{4}$ di $AB$, cioè $AC\cong\dfrac{7}{4}AB$, infatti $AB$ è stato suddiviso in 4 parti uguali e $AC$ è costituito da 7 di tali parti}
+\caption{Sottomultiplo di un segmento. Il segmento $AC$ è congruente a $\dfrac{7}{4}$ di $AB$, cioè $AC\cong\dfrac{7}{4}\cdot AB$, infatti $AB$ è stato suddiviso in 4 parti uguali e $AC$ è costituito da 7 di tali parti}
 \end{figure}
 
 \begin{definizione}
@@ -973,6 +986,174 @@ Poiché $AB\cong CD$ si ha che
 \end{proof}
 \end{esempio}
 \end{exrig}
+
+\subsection{Operazioni con gli angoli}
+
+\paragraph{Somma di angoli.} La somma di due angoli consecutivi $A\widehat{O}B$ e $B\widehat{O}C$ è l'angolo $A\widehat{O}C$. Per sommare due angoli che non sono consecutivi, per esempio $A\widehat{B}C$ e $D\widehat{E}F$, si costruiscono due angoli consecutivi tra di loro, uno congruente a $A\widehat{B}C$, l'altro congruente a $D\widehat{E}F$ e quindi si calcola la somma (figura~\ref{fig:1.32}).
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig042_somma_angoli.pgf}
+\caption{Somma di due angoli.}\label{fig:1.32}
+\end{figure}
+
+\paragraph{Differenza di angoli.} La differenza di due angoli, di cui il primo è maggiore o congruente al secondo, è l'angolo che addizionato al secondo dà per somma il primo (figura~\ref{fig:1.33}).
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig043_diff_angoli.pgf}
+\caption{Differenza di due angoli.}\label{fig:1.33}
+\end{figure}
+
+Se i due angoli considerati sono congruenti la loro differenza è l'angolo nullo.
+
+\paragraph{Multiplo di un angolo.} Dato un angolo $A\widehat{O}B$ e un numero $n$ naturale non nullo, il multiplo di $A\widehat{O}B$ secondo $n$ (si può scrivere $n\cdot A\widehat{O}B$) è l'angolo che si ottiene sommando $n$ angoli congruenti a $A\widehat{O}B$. Se $n=0$, il multiplo secondo $n$ di qualsiasi angolo $A\widehat{O}B$ è l'angolo nullo.
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig044_mult_angolo.pgf}
+\caption{Multiplo di un angolo. L'angolo $A'''\widehat{O}B$ è il quadruplo di $A\widehat{O}B$, cioè $A'''\widehat{O}B \cong 4\cdot A\widehat{O}B$}
+\end{figure}
+
+\paragraph{Sottomultiplo di un angolo.} Il sottomultiplo secondo $n$, naturale non nullo, di un angolo $A\widehat{O}B$ è un angolo $A\widehat{O}C$ tale che $A\widehat{O}B \cong n\cdot A\widehat{O}C$. Si può anche scrivere $A\widehat{O}C\cong \dfrac{1}{n}\cdot A\widehat{O}B$.
+
+In generale, un angolo $A\widehat{O}C\cong\dfrac{m}{n}\cdot A\widehat{O}B$ si ottiene suddividendo $A\widehat{O}B$ in $n$ angoli uguali (indichiamo con $A\widehat{O}D$ il primo di essi), quindi l'angolo $A\widehat{O}C$ è ottenuto sommando $m$ volte l'angolo $A\widehat{O}D$.
+
+\begin{definizione}
+Si dice \emph{bisettrice di un angolo} la semiretta che ha origine nel vertice dell'angolo e che lo divide in due angoli tra loro congruenti.
+\end{definizione}
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig045_bisettrice.pgf}
+\caption{La semiretta $c$ è la bisettrice dell'angolo $a\widehat{O}b$, gli angoli $a\widehat{O}c$ e $c\widehat{O}b$ sono congruenti}
+\end{figure}
+
+\subsection{Angoli particolari}
+
+Possiamo ora dare dei nomi ai seguenti angoli particolari.
+
+\begin{definizione}
+Si dice \emph{angolo retto} la metà di un angolo piatto.
+\end{definizione}
+
+Per denotare il fatto che un angolo è retto si è soliti indicarlo con un quadratino al posto dell'usuale archetto.
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig046_angolo_retto.pgf}
+\end{figure}
+
+\begin{definizione}
+Due angoli si dicono \emph{complementari} se la loro somma è un angolo retto.
+\end{definizione}
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig047_angoli_complementari.pgf}
+\end{figure}
+
+\begin{definizione}
+Due angoli si dicono \emph{supplementari} se la loro somma è un angolo piatto.
+\end{definizione}
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig048_angoli_supplementari.pgf}
+\end{figure}
+
+\begin{definizione}
+Due angoli si dicono \emph{esplementari} se la loro somma è un angolo giro.
+\end{definizione}
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig049_angoli_esplementari.pgf}
+\end{figure}
+
+\begin{definizione}
+Un angolo si dice \emph{acuto} se è minore di un angolo retto.
+\end{definizione}
+
+\begin{definizione}
+Un angolo convesso si dice \emph{ottuso} se è maggiore di un angolo retto.
+\end{definizione}
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig050_ang_acuto_ottuso.pgf}
+\end{figure}
+
+\begin{teorema}
+Angoli opposti al vertice sono congruenti.
+\end{teorema}
+
+%\begin{wrapfigure}{r}{0pt}
+%\begin{figure}[htb]
+%\centering\input{./lbr/chap01/fig051_cong_opposti_al_vertice.pgf}
+%\end{figure}
+%\end{wrapfigure}
+\begin{proof}
+Si considerino due generici angoli opposti al vertice $A\widehat{O}B$ e $C\widehat{O}D$ come nella figura seguente.
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig051_cong_opposti_al_vertice.pgf}
+\end{figure}
+Gli angoli $A\widehat{O}B$ e $A\widehat{O}D$ sono adiacenti, dato che hanno un lato in comune e gli altri due lati sono l'uno il prolungamento dell'altro. Ma anche gli angoli $A\widehat{O}D$ e $D\widehat{O}C$ sono angoli adiacenti per lo stesso motivo. Quindi gli angoli $D\widehat{O}C$ e $A\widehat{O}B$ sono adiacenti allo stesso angolo $A\widehat{O}D$.
+Indicando con $\pi$ l'angolo piatto si ha: $A\widehat{O}D + D\widehat{O}C \cong \pi$ da cui $D\widehat{O}C\cong \pi - A\widehat{O}D$. Analogamente $A\widehat{O}B+A\widehat{O}D\cong\pi$ da cui $A\widehat{O}B\cong \pi-A\widehat{O}D$. Ne consegue che $D\widehat{O}C\cong A\widehat{O}B$ e cioè la tesi.
+\end{proof}
+
+Prova tu a dimostrare il seguente teorema
+
+\begin{teorema}
+Angoli supplementari di angoli congruenti sono congruenti.
+\end{teorema}
+
+\emph{Suggerimento: Dopo aver realizzato il disegno, esplicita ipotesi e tesi. Segui poi il ragionamento del teorema precedente: se due angoli sono supplementari la loro somma è un angolo piatto \ldots{}}
+
+\subsection{Perpendicolari e altre definizioni}
+
+\begin{definizione}
+Due rette si dicono \emph{perpendicolari} se sono incidenti e formano tra loro quattro angoli retti.
+\end{definizione}
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig052_perpendicolari.pgf}
+\caption{Le rette $r$ e $s$ sono perpendicolari poiché incontrandosi formano quattro angoli retti}
+\end{figure}
+
+Per indicare che le due rette $r$ e $s$ sono perpendicolari si usa il simbolo $r\perp s$.
+
+\begin{definizione}
+Si dice \emph{distanza di un punto $P$ da una retta} la lunghezza del segmento di perpendicolare condotta dal punto $P$ alla retta.
+\end{definizione}
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig053_distanza_P_retta.pgf}
+\caption{Il segmento $PH$, appartenente alla perpendicolare a $r$ passante per $P$, è la distanza di $P$ dalla retta $r$}
+\end{figure}
+
+\begin{definizione}
+Si chiama \emph{asse di un segmento} la retta perpendicolare al segmento e passante per il suo punto medio.
+\end{definizione}
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig054_asse_segmento.pgf}
+\caption{La retta $r$ è l'asse del segmento $AB$ in quanto è perpendicolare alla retta per $AB$ e passa per $M$, il punto medio di $AB$}\label{fig:1.38}
+\end{figure}
+
+\begin{definizione}
+Due punti si dicono \emph{simmetrici rispetto a una retta} se la retta è asse del segmento che ha per estremi i due punti.
+\end{definizione}
+
+Nella figura~\ref{fig:1.38}, i punti $A$ e $B$ sono simmetrici rispetto alla retta $r$.
+
+\section{La misura}
+
+\subsection{Misura di segmenti}
+
+Riprendiamo alcune definizioni sui segmenti.
+
+Si dice \emph{segmento} di estremi $A$ e $B$ (o brevemente \emph{segmento} $AB$) l'insieme dei punti $A$ e $B$ e di tutti quelli che stanno tra $A$ e $B$.
+Due segmenti $AB$ e $CD$ si dicono \emph{congruenti} se esiste un movimento rigido che porta a coincidere $A$ con $C$ e $B$ con $D$, oppure $A$ con $D$ e $B$ con $C$. Ricordiamo che se esiste un movimento rigido che porta a coincidere $A$ con $C$ e $B$ con $D$ allora esiste anche un movimento rigido che porta a coincidere $A$ con $D$ e $B$ con $C$, e viceversa.
+
+Si dice \emph{lunghezza di un segmento} $AB$ l'insieme di tutti i segmenti congruenti ad $AB$.
+
+Si dice \emph{distanza tra due punti} $A$ e $B$ il segmento $AB$ di estremi $A$ e $B$.
+
+Diamo ora una definizione particolarmente importante per l'applicazione del calcolo numerico alla geometria: la definizione di \emph{misura}. Ricordiamo che la nozione di misura è alla base delle applicazioni del calcolo matematico non solo alla geometria ma anche alla fisica e alla tecnologia in generale. Il processo di misurazione è analogo a tutti i campi di applicazioni: si tratta di trovare un modo per assegnare a una grandezza un numero. Questo numero si ottiene confrontando due grandezze dello stesso tipo. Per esempio, per misurare la massa di un oggetto si confronta la sua massa con quella di un oggetto campione, di solito un oggetto di 1 kg.
+
+Per misurare un segmento $AB$ si confronta questo segmento con un altro segmento scelto come unità di misura, di solito indicato con $u$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

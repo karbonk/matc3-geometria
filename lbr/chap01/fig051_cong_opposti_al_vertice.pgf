@@ -1,0 +1,28 @@
+\begin{tikzpicture}
+\pgfmathsetmacro{\myscale}{1};
+
+\begin{scope}[scale={\myscale},font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{30};
+\pgfmathsetmacro{\abeta}{150};
+\pgfmathsetmacro{\agamma}{210};
+\pgfmathsetmacro{\adelta}{330};
+
+\coordinate (o) at (0,0);
+\draw (o) node[above] {$O$} -- ++({\aalpha}:2) coordinate (a) node[right] {$A$};
+\draw (o) -- ++({\abeta}:2) coordinate (b) node[left] {$D$};
+\draw (o) -- ++({\agamma}:2) coordinate (c) node[left] {$C$};
+\draw (o) -- ++({\adelta}:2) coordinate (d) node[right] {$B$};
+
+%\draw[thin,blue] ([shift=({\abeta}:.45)]o) arc [radius=.45, start angle={\abeta}, end angle={\aalpha}];
+%\draw[thin,blue] ([shift=({\abeta}:.5)]o) arc [radius=.5, start angle={\abeta}, end angle={\aalpha}];
+\draw[very thick, red] ([shift=({\agamma}:.8)]o) arc [radius =.8, start angle={\agamma}, end angle={\abeta}];
+%\draw[thin,blue] ([shift=({\agamma}:.45)]o) arc [radius=.45, start angle={\agamma}, end angle={\adelta}];
+%\draw[thin,blue] ([shift=({\agamma}:.5)]o) arc [radius=.5, start angle={\agamma}, end angle={\adelta}];
+\draw[very thick, red] ([shift=({\adelta}:.8)]o) arc [radius =.8, start angle={\adelta}, end angle={360+\aalpha}];
+\end{scope}
+
+\end{scope}
+\end{tikzpicture}

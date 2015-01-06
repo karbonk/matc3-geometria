@@ -1,0 +1,41 @@
+\begin{tikzpicture}
+\pgfmathsetmacro{\myscale}{1};
+
+\begin{scope}[scale={\myscale},font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{-15};
+\pgfmathsetmacro{\abeta}{15};
+
+\coordinate (o) at (0,0);
+\draw (o) node[left] {$O$} -- ++({\aalpha}:2) coordinate (a) node[right] {$A$};
+\draw (o) -- ++({\abeta}:2) coordinate (b) node[right] {$B$};
+
+\draw[blue] ([shift=({\abeta}:.45)]o) arc [radius=.45, start angle={\abeta}, end angle={\aalpha}];
+\end{scope}
+
+\begin{scope}[xshift=4.5cm, yshift=0.5cm]
+\pgfmathsetmacro{\aalpha}{15};
+\pgfmathsetmacro{\abeta}{-15};
+\pgfmathsetmacro{\agamma}{-45};
+\pgfmathsetmacro{\adelta}{-75};
+\pgfmathsetmacro{\aepsilon}{-105};
+
+\coordinate (o) at (0,0);
+\draw (o) node[left] {$O$} -- ++({\aalpha}:2) coordinate (a) node[right] {$B$};
+\draw (o) -- ++({\abeta}:2) coordinate (b) node[right] {$A$};
+\draw (o) -- ++({\agamma}:1.9) coordinate (c) node[right] {$A'$};
+\draw (o) -- ++({\adelta}:1.7) coordinate (d) node[below] {$A''$};
+\draw (o) -- ++({\aepsilon}:1.7) coordinate (e) node[below] {$A'''$};
+
+\draw[blue] ([shift=({\abeta}:.45)]o) arc [radius=.45, start angle={\abeta}, end angle={\aalpha}];
+\draw[blue] ([shift=({\agamma}:.6)]o) arc [radius=.6, start angle={\agamma}, end angle={\abeta}];
+\draw[blue] ([shift=({\adelta}:.45)]o) arc [radius=.45, start angle={\adelta}, end angle={\agamma}];
+\draw[blue] ([shift=({\aepsilon}:.6)]o) arc [radius=.6, start angle={\aepsilon}, end angle={\adelta}];
+
+\draw[very thick, red] ([shift=({\aepsilon}:.8)]o) arc [radius=.8, start angle={\aepsilon}, end angle={\aalpha}];
+\end{scope}
+
+\end{scope}
+\end{tikzpicture}

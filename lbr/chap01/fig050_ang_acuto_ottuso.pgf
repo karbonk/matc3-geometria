@@ -1,0 +1,40 @@
+\begin{tikzpicture}
+\pgfmathsetmacro{\myscale}{1};
+
+\begin{scope}[scale={\myscale},font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{0};
+\pgfmathsetmacro{\abeta}{60};
+\pgfmathsetmacro{\agamma}{90};
+
+\coordinate (o) at (0,0);
+\draw (o) node[below] {$O$} -- ++({\aalpha}:2) coordinate (a) node[right] {$A$};
+\draw (o) -- ++({\abeta}:1.7) coordinate (b) node[above right] {$B$};
+\draw[dotted,gray] (o) -- ++({\agamma}:1.7) coordinate (c);
+
+\draw[thin,blue] ([shift=({\abeta}:.5)]o) arc [radius=.5, start angle={\abeta}, end angle={\aalpha}];
+\draw[thin,blue] ([shift=({\abeta}:.55)]o) arc [radius=.55, start angle={\abeta}, end angle={\aalpha}];
+
+\node at (1,-1) {(a) Angolo acuto};
+\end{scope}
+
+\begin{scope}[xshift=5cm]
+\pgfmathsetmacro{\aalpha}{0};
+\pgfmathsetmacro{\abeta}{120};
+\pgfmathsetmacro{\agamma}{90};
+
+\coordinate (o) at (0,0);
+\draw (o) node[below] {$O$} -- ++({\aalpha}:2) coordinate (a) node[right] {$A$};
+\draw (o) -- ++({\abeta}:1.7) coordinate (b) node[above left] {$B$};
+\draw[dotted,gray] (o) -- ++({\agamma}:1.7) coordinate (c);
+
+\draw[thin,blue] ([shift=({\abeta}:.5)]o) arc [radius=.5, start angle={\abeta}, end angle={\aalpha}];
+\draw[thin,blue] ([shift=({\abeta}:.55)]o) arc [radius=.55, start angle={\abeta}, end angle={\aalpha}];
+
+\node at (0.5,-1) {(b) Angolo ottuso};
+\end{scope}
+
+\end{scope}
+\end{tikzpicture}

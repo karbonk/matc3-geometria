@@ -2,12 +2,13 @@
 %rette coincidenti
 \tkzDefPoint(0,0){A}
 \tkzDefShiftPoint[A](20:3){B}
-\tkzDefPoint(0,-.05){C}
-\tkzDefShiftPoint[C](20:3){D}
-\tkzLabelPoint[font=\small,above](B){$ r $}
-\tkzLabelPoint[font=\small,below](D){$ s $}
-\tkzDrawSegments(A,B C,D)
-\node at(1.5,-1){$ r $ e $ s $ sono coincidenti};
+%\tkzDefPoint(0,-.05){C}
+%\tkzDefShiftPoint[C](20:3){D}
+\tkzLabelPoint[font=\small,above](B){$r$}
+\tkzLabelPoint[font=\small,below](B){$s$}
+%\tkzDrawSegments(A,B C,D)
+\tkzDrawSegments(A,B)
+\node at(1.5,-1){$r$ e $s$ sono coincidenti};
 
 %rette incidenti
 \tkzDefPoint(3.5,0){A}

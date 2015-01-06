@@ -1,0 +1,63 @@
+\begin{tikzpicture}
+\pgfmathsetmacro{\myscale}{1};
+
+\begin{scope}[scale={\myscale},font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{250};
+\pgfmathsetmacro{\abeta}{290};
+\pgfmathsetmacro{\agamma}{320};
+
+\coordinate (o) at (0,0);
+\draw (o) node[above] {$O$} -- ++({\aalpha}:1.8) coordinate (a) node[below] {$A$};
+\draw (o) -- ++({\abeta}:1.7) coordinate (b) node[below] {$B$};
+\draw (o) -- ++({\agamma}:2.2) coordinate (c) node[below] {$C$};
+
+\draw[thin,blue] ([shift=({\abeta}:.4)]o) arc [radius=.4, start angle={\abeta}, end angle={\aalpha}];
+\draw[thin,blue] ([shift=({\abeta}:.45)]o) arc [radius=.45, start angle={\abeta}, end angle={\aalpha}];
+\draw[thick, black] ([shift=({\abeta}:.6)]o) arc [radius=.6, start angle={\abeta}, end angle={\agamma}];
+\draw[very thick, red] ([shift=({\aalpha}:.8)]o) arc [radius=.8, start angle={\aalpha}, end angle={\agamma}];
+
+\node at (0.5,-2.5) {(a) Somma di angoli consecutivi};
+\end{scope}
+
+
+\begin{scope}[xshift=5cm]
+\pgfmathsetmacro{\aalpha}{230};
+\pgfmathsetmacro{\abeta}{290};
+\pgfmathsetmacro{\agamma}{80};
+\pgfmathsetmacro{\adelta}{45};
+
+\coordinate (o) at (0,0);
+\coordinate (o1) at (1.3,-1.4);
+\draw (o) node[above] {$B$} -- ++({\aalpha}:2) coordinate (a) node[below] {$A$};
+\draw (o) -- ++({\abeta}:1.7) coordinate (b) node[below] {$C$};
+\draw (o1) node[below] {$E$} -- ++({\agamma}:1.6) coordinate (c) node[above] {$D$};
+\draw (o1) -- ++({\adelta}:1.9) coordinate (d) node[above] {$F$};
+
+\draw[thin,blue] ([shift=({\abeta}:.4)]o) arc [radius=.4, start angle={\abeta}, end angle={\aalpha}];
+\draw[thin,blue] ([shift=({\abeta}:.45)]o) arc [radius=.45, start angle={\abeta}, end angle={\aalpha}];
+\draw[thick, black] ([shift=({\agamma}:.6)]o1) arc [radius=.6, start angle={\agamma}, end angle={\adelta}];
+\end{scope}
+
+\begin{scope}[xshift=9cm]
+\pgfmathsetmacro{\aalpha}{230};
+\pgfmathsetmacro{\abeta}{290};
+\pgfmathsetmacro{\agamma}{325};
+
+\coordinate (o) at (0,0);
+\draw (o) node[above] {$B'$} -- ++({\aalpha}:2) coordinate (a) node[below] {$A'$};
+\draw (o) -- ++({\abeta}:1.7) coordinate (b) node[below] {$C'$};
+\draw (o) -- ++({\agamma}:1.9) coordinate (c) node[below] {$D'$};
+
+\draw[thin,blue] ([shift=({\abeta}:.4)]o) arc [radius=.4, start angle={\abeta}, end angle={\aalpha}];
+\draw[thin,blue] ([shift=({\abeta}:.45)]o) arc [radius=.45, start angle={\abeta}, end angle={\aalpha}];
+\draw[thick, black] ([shift=({\abeta}:.6)]o) arc [radius=.6, start angle={\abeta}, end angle={\agamma}];
+\draw[very thick, red] ([shift=({\aalpha}:.8)]o) arc [radius=.8, start angle={\aalpha}, end angle={\agamma}];
+
+\node at (-2,-2.5) {(b) Somma di angoli non consecutivi};
+\end{scope}
+
+\end{scope}
+\end{tikzpicture}

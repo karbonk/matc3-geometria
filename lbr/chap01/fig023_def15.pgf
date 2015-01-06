@@ -14,12 +14,13 @@
 \tkzLabelPoint[font=\small,below](1.5,-.8){angolo piatto}
 %angolo giro/nullo
 \tkzDefShiftPoint[a](0:5){O}
-\tkzDefPoint(5,.05){O1}
+%\tkzDefPoint(5,.05){O1}
 \tkzDefShiftPoint[O](0:2.5){c}
-\tkzDefShiftPoint[O1](0:2.5){c1}
+%\tkzDefShiftPoint[O1](0:2.5){c1}
 \tkzDefShiftPoint[O](-1:1.5){c2}
 \tkzDrawPoint(O)
-\tkzDrawSegments(O,c O1,c1)
+%\tkzDrawSegments(O,c O1,c1)
+\tkzDrawSegments(O,c)
 \tkzLabelPoint[font=\small,above](5,.7){angolo giro}
 \tkzLabelPoint[font=\small,below](6.7,0){angolo nullo}
 \tkzMarkAngle[fill=orange,opacity=.3,size=.7cm](c,O,c2)

@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+\pgfmathsetmacro{\myscale}{1};
+
+\begin{scope}[scale={\myscale},font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[thick] (-2.5,0) -- (2.5,0) node[above] {$r$};
+\draw[thick] (0,1.5) node[right] {$s$} -- (0,-1.5);
+
+\draw[red] (.55,0) -- (.55,.55) --(0,.55);
+\draw[red] (-.4,0) -- (-.4,.4) --(0,.4);
+\draw[red] (.4,0) -- (.4,-.4) --(0,-.4);
+\draw[red] (-.55,0) -- (-.55,-.55) --(0,-.55);
+\end{scope}
+
+
+\end{scope}
+\end{tikzpicture}

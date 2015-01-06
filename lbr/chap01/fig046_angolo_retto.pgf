@@ -1,0 +1,44 @@
+\begin{tikzpicture}
+\pgfmathsetmacro{\myscale}{1};
+
+\begin{scope}[scale={\myscale},font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{180};
+\pgfmathsetmacro{\abeta}{0};
+\pgfmathsetmacro{\agamma}{90};
+
+
+\coordinate (o) at (0,0);
+\draw (o) node[below] {$O$} -- ++({\aalpha}:2) coordinate (a) node[left] {$A$};
+\draw (o) -- ++({\abeta}:2) coordinate (b) node[right] {$B$};
+\draw (o) -- ++({\agamma}:1.7) coordinate (b) node[above] {$C$};
+
+\draw[thick,red] ([shift=({\abeta}:.7)]o) arc [radius=.7, start angle={\abeta}, end angle={\agamma}];
+\draw[thick,red] ([shift=({\agamma}:.5)]o) arc [radius=.5, start angle={\agamma}, end angle={\aalpha}];
+\node[above right] at (.5,.5) {angolo retto};
+\node[above left] at (-.4,.4) {angolo retto};
+\end{scope}
+
+
+\begin{scope}[xshift=6cm]
+\pgfmathsetmacro{\aalpha}{180};
+\pgfmathsetmacro{\abeta}{0};
+\pgfmathsetmacro{\agamma}{90};
+
+
+\coordinate (o) at (0,0);
+\draw (o) node[below] {$O$} -- ++({\aalpha}:2) coordinate (a) node[left] {$A$};
+\draw (o) -- ++({\abeta}:2) coordinate (b) node[right] {$B$};
+\draw (o) -- ++({\agamma}:1.7) coordinate (b) node[above] {$C$};
+
+\draw[thick,red] (.55,0) -- (.55,.55) --(0,.55);
+\draw[thick,red] (-.4,0) -- (-.4,.4) --(0,.4);
+\node[above right] at (.5,.5) {angolo retto};
+\node[above left] at (-.4,.4) {angolo retto};
+\end{scope}
+
+
+\end{scope}
+\end{tikzpicture}

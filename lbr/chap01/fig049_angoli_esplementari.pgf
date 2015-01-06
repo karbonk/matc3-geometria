@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+\pgfmathsetmacro{\myscale}{1};
+
+\begin{scope}[scale={\myscale},font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{0};
+\pgfmathsetmacro{\abeta}{50};
+
+
+\coordinate (o) at (0,0);
+\draw (o) node[left] {$O$} -- ++({\aalpha}:2) coordinate (a) node[right] {$A$};
+\draw (o) -- ++({\abeta}:1.8) coordinate (b) node[above] {$B$};
+
+\draw[thick,blue] ([shift=({\abeta}:.6)]o) arc [radius=.6, start angle={\abeta}, end angle={\aalpha+360}];
+\draw[gray] ([shift=({\aalpha}:.75)]o) arc [radius=.75, start angle={\aalpha}, end angle={\abeta}];
+\draw[gray] ([shift=({\aalpha}:.80)]o) arc [radius=.80, start angle={\aalpha}, end angle={\abeta}];
+\end{scope}
+
+\end{scope}
+\end{tikzpicture}
