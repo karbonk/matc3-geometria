@@ -1,0 +1,32 @@
+\begin{tikzpicture}[scale=2,font=\small,shorten line/.style={shorten >=#1,shorten <=#1}]
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns,arrows,decorations.pathreplacing}
+
+\begin{scope}
+\draw (0,0) -- node[above] {$u$} (1,0);
+\draw (0,-1pt) -- (0,1pt);
+\draw (1,-1pt) -- (1,1pt);
+
+\foreach \x in {0.2,0.4,...,0.8}{
+	\draw (\x,-1pt) -- (\x,0pt);
+}
+
+\draw (0,0) -- node[below=15pt] {$\frac{1}{5}u$} (0.2,0);
+\draw[shorten line=0.2cm,dotted, very thick, gray,->] (0.1,-.38) -- (0.1,0);
+\end{scope}
+
+\begin{scope}[xshift=2cm]
+\draw (0,0) -- (2.6,0);
+\foreach \x in {0.2,0.4,...,2.4}{
+	\draw (\x,-1pt) -- (\x,0pt);
+}
+\draw[fill] (0,0) circle (0.7pt) node[above] {$A$};
+\draw[fill] (2.6,0) circle (0.7pt) node[above] {$B$};
+
+\draw [gray,decorate,decoration={brace,amplitude=10pt,mirror},xshift=0.4pt,yshift=-0.4pt](0,-0.1) -- (1,-0.1) node[black,below=10pt,midway] {$u$};
+\draw [gray,decorate,decoration={brace,amplitude=10pt,mirror},xshift=0.4pt,yshift=-0.4pt](1,-0.1) -- (2,-0.1) node[black,below=10pt,midway] {$u$};
+\draw [gray,decorate,decoration={brace,amplitude=10pt,mirror},xshift=0.4pt,yshift=-0.4pt](2,-0.1) -- (2.6,-0.1) node[black,below=10pt,midway] {$\frac{3}{5}u$};
+
+\end{scope}
+
+\end{tikzpicture}

@@ -1155,6 +1155,74 @@ Diamo ora una definizione particolarmente importante per l'applicazione del calc
 
 Per misurare un segmento $AB$ si confronta questo segmento con un altro segmento scelto come unità di misura, di solito indicato con $u$.
 
+Nel confronto tra il segmento $AB$ e il segmento $u$, possono verificarsi i tre casi seguenti:
+\begin{enumerate}
+\item Il segmento $AB$ è multiplo del segmento $u$ secondo il numero naturale $n$, precisamente $AB\cong n\cdot u$. In questo caso la misura di $AB$, rispetto a $u$, è il numero naturale $n$. Si scrive $\overline{AB} = nu$.
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig055_misura_segmento_1.pgf}
+\caption{Il segmento $AB$ misura $5u$, cioè $AB\cong 6\cdot u$, cioè $\overline{AB}=6u$}
+\end{figure}
+
+\item Il segmento $AB$ non è un multiplo intero di $u$ ma è un multiplo di un sottomultiplo di $u$, precisamente $AB\cong n\cdot \dfrac{u}{m}=\dfrac{n}{m}u$. In questo caso la misura di $AB$, rispetto a $u$, è il numero razionale $\dfrac{n}{m}$. Si scrive $\overline{AB} = \dfrac{n}{m}u$.
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig056_misura_segmento_2.pgf}
+\caption{Il segmento $AB$ è congruente a 13 volte il segmento $\dfrac{1}{5}u$, quindi $AB$ misura $\dfrac{13}{5}u$, cioè $\overline{AB}=\dfrac{13}{5}u$}
+\end{figure}
+
+\item Il segmento $AB$ non è un multiplo né di $u$ né di un suo sottomultiplo. In questo caso si dice che $AB$ e $u$ sono \emph{incommensurabili} (nei casi precedenti si dice invece che sono \emph{commensurabili}). Anche in questo caso è possibile attribuire ad $AB$ un numero che ne esprime la misura rispetto a $u$, si tratta però di un numero irrazionale. La complessità dell'argomento richiede alcune conoscenze più avanzate di matematica, pertanto la tematica della misura delle grandezze incommensurabili sarà approfondita nel seguito. Qui ci limitiamo ad accennare al caso storicamente più noto di segmenti incommensurabili: la diagonale di un quadrato misurata rispetto al suo lato.
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig057_diag_quadrato.pgf}
+\caption{Prendendo come unità di misura il lato di un quadrato, la sua diagonale è incommensurabile con il lato stesso. Applicando il teorema di Pitagora, ricorderai infatti che $d=\sqrt{2}u$ e che $\sqrt{2}$ è un numero irrazionale}
+\end{figure}
+
+Proponiamo una dimostrazione dell'irrazionalità del numero $\sqrt{2}$ utilizzando il metodo della dimostrazione per assurdo.
+
+\begin{teorema}
+$\sqrt{2}$ è un numero irrazionale.
+\end{teorema}
+
+\begin{proof}
+Supponiamo per assurdo che $\sqrt{2}$ sia un numero razionale, cioè che sia possibile scrivere $\sqrt{2}=\dfrac{m}{n}$, con $m,n \in \insN$ e $n\neq 0$. Allora, per definizione di radice quadrata, si avrebbe $2=\dfrac{m^2}{n^2}$, da cui $2n^2=m^2$. I due membri dovrebbero quindi rappresentare lo stesso numero naturale (il teorema fondamentale dell'Aritmetica assicura l'unicità della scomposizione in fattori primi). Essendo 2 un numero primo, dovrebbe comparire come fattore sia al primo sia al secondo membro lo stesso numero di volte. Inoltre $m^2$ ed $n^2$ o sono dispari e quindi se contengono il fattore 2 lo contengono un numero pari di volte (vediamo qualche esempio $24=2^3\cdot3 \rightarrow 24^2=2^6\cdot3^2$, $20=2^2\cdot5 \rightarrow 20^2=2^4\cdot5^2$). Ma $2n^2$ contiene il fattore 2 un numero dispari di volte, mentre $m^2$ lo contiene un numero pari. Pertanto l'uguaglianza $2n^2=m^2$ non può essere mai verificata; l'assurdo deriva dall'aver supposto $\sqrt{2}$ razionale.
+\end{proof}
+
+Un altro esempio di numero irrazionale, e di conseguenza di due ``lunghezze'' incommensurabili, è $\pi$, che rappresenta il rapporto tra la misura della lunghezza di una circonferenza e la misura della lunghezza del suo diametro.
+\end{enumerate}
+
+In generale, dato un segmento $AB$ e un segmento $u$, preso come unità di misura, esiste sempre un numero reale positivo che esprime la misura di $AB$ rispetto a $u$. Questo numero è unico, ossia ogni segmento ha una sola misura. Viceversa, dato un qualsiasi numero reale positivo $r$ e un segmento $u$, preso come unità di misura, è sempre possibile costruire un segmento che misura esattamente $r$ rispetto all'unità di misura $u$ fissata.
+
+\textbf{Osservazioni}
+\begin{itemize*}
+\item Se due segmenti sono congruenti, le loro misure, rispetto alla stessa unità di misura, sono uguali: $AB\cong CD \rightarrow \overline{AB}=\overline{CD}$.
+\item La misura di un segmento $AB$ somma di due segmenti $CD$ e $EF$ ($AB\cong CD + EF$) è uguale alla somma delle misure di $CD$ e $EF$: $AB\cong CD + EF \rightarrow \overline{AB}=\overline{CD}+\overline{EF}$.
+\item La misura di un segmento multiplo secondo $n$ del segmento $AB$ è uguale al prodotto di $n$ per la misura di $AB$: $CD\cong n\cdot AB \rightarrow \overline{CD}=n\overline{AB}$.
+\item Definito il \emph{rapporto tra due segmenti} come il quoziente tra le loro misure $\dfrac{CD}{AB} = \dfrac{\overline{CD}}{\overline{AB}}$ (rispetto alla stessa unità di misura), si ha che il rapporto non dipende dall'unità di misura usata per misurare i segmenti, cioè il numero che si ottiene è sempre lo stesso indipendentemente dall'unità scelta per misurare.
+\end{itemize*}
+
+Possiamo pertanto parlare di misura della lunghezza di un segmento e darne la seguente definizione generale.
+
+\begin{definizione}
+Dato un segmento $AB$ e un segmento $u$, preso come unità di misura, si dice misura della lunghezza del segmento $AB$ il numero reale positivo $r$ per il quale risulta $AB\cong r\cdot u$.
+\end{definizione}
+
+Nella realtà fisica per misurare la lunghezza degli oggetti reali (l'altezza di una persona, la lunghezza di un banco, di una stanza, di un terreno, \ldots{}) si usa come unità di misura il metro, indicato con la lettera m, con i suoi  multipli (decametro, ettometro, chilometro, \ldots{}) e i suoi sottomultipli (decimetro, centimetro, millimetro, \ldots{}). Anche nella geometria, che tratta di segmenti ideali non riscontrabili perfettamente nella realtà, si usa come unità di misura un segmento di un metro.
+
+Riassumendo, ricordiamo simboli e nozioni che riguardano due punti $A$ e $B$.
+\begin{itemize*}
+\item Due punti presi singolarmente con notazione insiemistica si indicano con $A$ e $B$.
+\item La retta passante per i due punti si indica con il simbolo  $AB$ oppure $r(A,B)$.
+\item La semiretta di origine $A$ e passante per $B$ si indica con il simbolo $AB$ oppure $r(A,B)$.
+\item Il segmento di estremi $A$ e $B$ si indica con il simbolo $AB$.
+\item La distanza tra i punti $A$ e $B$, cioè il segmento $AB$, si indica con il simbolo $AB$ oppure $d(A,B)$.
+\item La lunghezza del segmento $AB$, cioè l'insieme di tutti i segmenti congruenti ad $AB$, si indica con il simbolo $\overline{AB}$.
+\item La misura della lunghezza del segmento $AB$ rispetto a una fissata unità di misura si indica con il simbolo $\overline{AB}$.
+\item La misura della distanza tra i punti $A$ e $B$, che corrisponde alla misura del segmento $AB$, si indica con il simbolo $\overline{AB}$.
+\end{itemize*}
+
+Tutte queste distinzioni sono importanti dal punto di vista dell'organizzazione teorica della geometria, tuttavia dal punto di vista applicativo e della quotidianità del linguaggio geometrico possono risultare pedanti e noiose, spesso si usano espressioni più generiche, finché si riescono ad evitare possibili malintesi. Sebbene a rigore si dovrebbe dire ``La misura della lunghezza del segmento $AB$ rispetto al centimetro è 12'' molto spesso si usa dire ``Il segmento $AB$ è lungo 12 cm'' oppure ``$AB$ misura 12 cm'' o ancora ``La distanza $AB$ è 12 cm'' o più semplicemente ``Un segmento di 12 cm'', ecc.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}

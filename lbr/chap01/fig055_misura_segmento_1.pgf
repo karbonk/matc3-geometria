@@ -1,0 +1,23 @@
+\begin{tikzpicture}[scale=1.5,font=\small,shorten line/.style={shorten >=#1,shorten <=#1}]
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns,arrows,decorations.pathreplacing}
+
+\begin{scope}
+\draw (0,0) -- node[above] {$u$} (1,0);
+\draw (0,-1pt) -- (0,1pt);
+\draw (1,-1pt) -- (1,1pt);
+\end{scope}
+
+\begin{scope}[xshift=2cm]
+\draw (0,0) -- (5,0);
+\foreach \x in {1,2,...,5}{
+	\draw (\x,-1pt) -- (\x,1pt);
+    \draw [gray,decorate,decoration={brace,amplitude=10pt,mirror},xshift=0.4pt,yshift=-0.4pt]({\x-1},-0.1) -- (\x,-0.1) node[black,below=10pt,midway] {$u$};
+
+}
+\draw[fill] (0,0) circle (1pt) node[above] {$A$};
+\draw[fill] (5,0) circle (1pt) node[above] {$B$};
+
+\end{scope}
+
+\end{tikzpicture}

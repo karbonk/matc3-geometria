@@ -1,0 +1,11 @@
+\begin{tikzpicture}[scale=2,font=\small,shorten line/.style={shorten >=#1,shorten <=#1}]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw (0,0) rectangle (1,1);
+\draw[blue] (0,0) -- node[black, above, midway, sloped] {$d$} (1,1);
+\draw (0,0) -- node[black, below, midway, sloped] {$u$} (1,0);
+
+\end{scope}
+
+\end{tikzpicture}
