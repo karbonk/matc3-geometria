@@ -1,0 +1,22 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw (0,0) -- (1,-2) -- (2,-1) -- (1.5,-0.3) -- (1,-0.9);
+\node at (1,-2.5) {$F_1$ (semplice, aperta)};
+\end{scope}
+\begin{scope}[xshift=0.5cm]
+\draw (3,-0.3) -- (5,-1.5) -- (4,-2.1) -- (4.5,0.2) -- (5.1,-0.3);
+\node at (4,-2.5) {$F_2$ (intrecciata, aperta)};
+\end{scope}
+
+\begin{scope}[xshift=7cm]
+\draw (0,0) -- (1,-2) -- (2,-0.3) -- (1.1,-0.7) -- cycle;
+\node at (1,-2.5) {$F_3$ (semplice, chiusa)};
+\end{scope}
+\begin{scope}[xshift=7.5cm]
+\draw (3.2,0.3) -- (4.8,-0.5) -- (3,-2) -- (5,-2.2) -- cycle;
+\node at (4,-2.5) {$F_4$ (intrecciata, chiusa)};
+\end{scope}
+
+\end{tikzpicture}

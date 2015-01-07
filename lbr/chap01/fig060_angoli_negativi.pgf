@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+\pgfmathsetmacro{\myscale}{1};
+
+\begin{scope}[scale={\myscale},font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{0};
+\pgfmathsetmacro{\abeta}{60};
+
+
+\coordinate (o) at (0,0);
+\draw[dotted, blue] (o) circle (.7);
+\draw (o) node[left] {$O$} -- (2.5,0) node[right] {$A$};
+\draw (o) -- (60:2.5) node[right] {$B$};
+
+\draw[very thick,blue,->] ([shift=(0:.7)]o) arc [radius=.7, start angle={\aalpha}, end angle={\abeta}];
+\end{scope}
+
+\end{scope}
+\end{tikzpicture}

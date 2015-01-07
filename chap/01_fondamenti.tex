@@ -1223,6 +1223,225 @@ Riassumendo, ricordiamo simboli e nozioni che riguardano due punti $A$ e $B$.
 
 Tutte queste distinzioni sono importanti dal punto di vista dell'organizzazione teorica della geometria, tuttavia dal punto di vista applicativo e della quotidianità del linguaggio geometrico possono risultare pedanti e noiose, spesso si usano espressioni più generiche, finché si riescono ad evitare possibili malintesi. Sebbene a rigore si dovrebbe dire ``La misura della lunghezza del segmento $AB$ rispetto al centimetro è 12'' molto spesso si usa dire ``Il segmento $AB$ è lungo 12 cm'' oppure ``$AB$ misura 12 cm'' o ancora ``La distanza $AB$ è 12 cm'' o più semplicemente ``Un segmento di 12 cm'', ecc.
 
+\subsection{Misura di angoli}
+
+Il procedimento che si usa per misurare gli angoli è del tutto analogo a quello usato per misurare i segmenti. Si fissa un'unità di misura, cioè un angolo $\widehat{u}$, e quindi si confronta l'angolo da misurare con $\widehat{u}$. Come risultato si avrà un numero reale positivo che chiamiamo misura dell'ampiezza dell'angolo.
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig058_misura_angolo.pgf}
+\caption{L'angolo $A\widehat{O}B$ misura 4 volte l'angolo unitario $\widehat{u}$}
+\end{figure}
+
+Per misurare gli angoli l'unità di misura comunemente usata è la trecentosessantesima parte dell'angolo giro, quest'angolo si chiama \emph{grado}, e si indica con un cerchietto posto in alto $\grado$. Si ha quindi, usando come unità di misura il grado, che:
+\begin{itemize*}
+\item l'angolo retto misura 90 gradi, si scrive $90\grado$;
+\item l'angolo piatto misura $180\grado$;
+\item l'angolo giro misura $360\grado$.
+\end{itemize*}
+
+I sottomultipli del grado sono il \emph{primo} che è la sessantesima parte di un grado (in simboli $1\grado=60'$) e il \emph{secondo} che è la sessantesima parte del primo (in simboli $1'=60''$) e quindi la tremilaseicentesima parte del grado (in simboli $1\grado=3600''$).
+
+\begin{exrig}
+\begin{esempio}
+Calcola la misura in gradi del supplementare dell'angolo che misura $35\grado 15' 40''$.
+Occorre eseguire la sottrazione $180\grado - 35\grado 15' 40''$. Per eseguire praticamente questa sottrazione si trasforma $1\grado$ in $60'$ e $1'$ in $60''$, precisamente si scrive $180\grado$ come $179\grado 59' 60''$, pertanto:
+
+\begin{center}
+\begin{tabular}{r@{\extracolsep{2pt}}l}
+$179\grado 59' 60''$ & $-$\\
+$35\grado 15' 40''$ & $=$\\
+\hline
+$144\grado 44' 20''$ & \\
+\end{tabular}
+\end{center}
+
+Quindi $180\grado - 35\grado 15' 40'' = 144\grado 44' 20''$.
+\end{esempio}
+\end{exrig}
+
+Il sistema di misura degli angoli che abbiamo illustrato prende il nome di \emph{sistema sessagesimale}. Spesso, però, per praticità, anziché usare i primi, i secondi e i decimi di secondo, si usano i decimi di grado: in questo caso il sistema si dice \emph{sistema sessadecimale}.
+
+In base a quanto descritto, vediamo brevemente come si passa da un sistema all'altro.
+
+\begin{itemize}
+\item $10\grado 42' 23'',2 = 10+\dfrac{42}{60}+\dfrac{23,2}{3600} = 10\grado,706\overline{4}$;
+\item $50\grado,748 = 50\grado + (0,748\cdot 60)'=50\grado + 44',88 = 50\grado + 44'+(0,88\cdot 60)'' = 50\grado 44' 52'',8$.
+\end{itemize}
+
+I sistemi sessagesimale e sessadecimale non sono gli unici usati per le misure degli angoli.
+
+Osservando i tasti di una calcolatrice scientifica, si può vedere che ci sono tre sistemi principali le cui unità sono rispettivamente il \emph{grado sessagesimale} (DEG), il \emph{grado centesimale} (GRAD) e il \emph{radiante} (RAD).
+
+Il grado centesimale è importante per gli strumenti tecnici. Si può passare dal grado sessagesimale al grado centesimale e viceversa con una semplice proporzione, sapendo che l'angolo retto, pari a $90\grado$, corrisponde a 100 gradi centesimali (in simboli 100\textsuperscript{g}).
+
+Il radiante è utile nello studio della trigonometria e dell'analisi matematica. L'angolo di misura 1~radiante (in simboli 1 rad) è congruente ad un angolo con vertice nel centro di una circonferenza e tale che la misura dell'arco da esso individuato è uguale alla misura del raggio della circonferenza stessa. Come si può facilmente intuire, il radiante ed il grado sono grandezze incommensurabili.
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig059_angolo_radianti.pgf}
+\caption{L'angolo con ampiezza di 1 radiante}\label{fig:radiante}
+\end{figure}
+
+Facendo riferimento alla figura~\ref{fig:radiante}, l'angolo~$\alpha$ formato dalle semirette~$ON$ e~$OM$ misura 1~radiante se l'arco $MN$ misura quanto il raggio della circonferenza ($\overline{OM}$), ovvero $1\text{ rad} \simeq 57\grado,297469362 \simeq 57\grado 17'51''$.
+
+La misura di un arco va fatta con una modalità differente rispetto a quella utilizzata per la misura dei segmenti. Si può immaginare di utilizzare come strumento di misura un metro flessibile, ovvero un filo flessibile ma inestensibile, che si può piegare ma non si può allungare o accorciare, su cui siano state tracciate, a distanza regolare, delle tacche corrispondenti a sottomultipli dell'unità di misura delle lunghezze; una di queste tacche viene assunta come origine del metro. Facendo combaciare l'origine del metro flessibile con il punto~$M$ e flettendo il metro in modo che si sovrapponga all'arco~$MN$ si otterrà la sua lunghezza.
+
+Ricordando che il rapporto tra la misura della circonferenza ed il raggio vale~$2\pi$, dove $\pi$ è il numero irrazionale~$3,1415\ldots{}$ (i puntini indicano che la parte decimale è infinita e non periodica), possiamo intuire che il valore dell'angolo giro ($360\grado$), corrispondente ad un arco che coincide con l'intera circonferenza, vale $2\pi$~radianti.
+
+Per convertire le ampiezze degli angoli da gradi a radianti e viceversa è sufficiente impostare la seguente proporzione:
+\[180\grado : \pi = \alpha\grado : \alpha\]
+dove con $\alpha\grado$ abbiamo indicato l'ampiezza dell'angolo in gradi e con $\alpha$ la sua ampiezza in radianti. Da cui si ottiene
+
+\[\alpha\grado = \dfrac{180\grado}{\pi}\alpha\qquad\text{e}\qquad\alpha = \dfrac{\pi}{180\grado}\alpha\grado\]
+
+Quindi, avendo un angolo espresso in radianti, per convertirlo in gradi si può utilizzare la prima formula inserendo al posto di $\alpha$ la sua effettiva misura in radianti, mentre se abbiamo un angolo espresso in gradi e lo vogliamo trasformare in radianti si può utilizzare la seconda formula inserendo al posto di $\alpha\grado$ l'effettiva misura dell'angolo in gradi.
+
+Riportiamo di seguito una tabella che fornisce i valori degli angoli più comuni espressi in radianti.
+
+\begin{center}
+\begin{tabular}{cc}
+\toprule
+angolo in gradi	& angolo in radianti\\
+\midrule
+$360\grado$ & $2\pi$\\
+$270\grado$ & $3\pi/2$\\
+$180\grado$ & $\pi$\\
+$90\grado$ & $\pi/2$\\
+$60\grado$ & $\pi/3$\\
+$45\grado$ & $\pi/4$\\
+$30\grado$ & $\pi/6$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection{Angoli negativi}
+
+Nei paragrafi precedenti abbiamo definito l'angolo come l'insieme dei punti compresi tra due semirette aventi la stessa origine $O$. Possiamo però definire l'angolo anche come rotazione di una semiretta intorno alla propria origine, la misura di un angolo diventa allora la misura dell'entità della rotazione.
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig060_angoli_negativi.pgf}
+\caption{Il verso positivo nella misura degli angoli è quello antiorario}\label{fig:1.43}
+\end{figure}
+
+Dal momento che una rotazione può essere effettuata in due versi, orario od antiorario, si assume uno dei due versi di rotazione come positivo e l'altro negativo. Per motivi storici si è assunto per convenzione come positivo il verso di rotazione antiorario e negativo quello orario.
+Da questa definizione segue che $A\widehat{O}B = -B\widehat{O}A$, dove $A\widehat{O}B$ è l'angolo formato dalla semiretta $OB$ rispetto alla semiretta $OA$ (figura~\ref{fig:1.43}).
+
+Inoltre, la misura dell'angolo è definita a meno di un multiplo intero di $360\grado$, ovvero gli angoli $\alpha$ e $\alpha+360\grado$ hanno la stessa ampiezza, lo stesso dicasi per tutti gli angoli del tipo $\alpha+n\cdot 360\grado$ o $\alpha - n\cdot 360\grado$ con $n$ intero. Per esempio, sono tra loro congruenti gli angoli di $45\grado$, $405\grado$, $765\grado$, \ldots{}
+
+
+\section{Poligoni e poligonale}
+
+\begin{definizione}
+Si chiama \emph{spezzata} una figura formata da una sequenza ordinata di segmenti uno consecutivo all'altro. I segmenti che formano la spezzata si chiamano \emph{lati}, gli estremi dei segmenti si chiamano \emph{vertici}.
+\end{definizione}
+
+Ogni vertice di una spezzata è quindi in comune a due lati, ad eccezione del primo vertice del primo segmento e dell'ultimo vertice dell'ultimo segmento che appartengono a un solo segmento.
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig061_spezzata.pgf}
+\caption{La linea $ABCDE$ è una spezzata, perché formata da segmenti consecutivi. I segmenti $AB$, $BC$, $CD$ e $DE$ sono i lati della spezzata, i punti $A$, $B$, $C$, $D$ ed $E$ sono i vertici}
+\end{figure}
+
+\begin{definizione}
+Un spezzata si dice \emph{chiusa} se il primo estremo del primo segmento coincide con l'ultimo estremo dell'ultimo segmento; si dice \emph{aperta} se il primo estremo e l'ultimo estremo sono distinti.
+\end{definizione}
+
+\begin{definizione}
+Un spezzata si dice \emph{intrecciata} se almeno due suoi lati si intersecano in punti diversi dagli estremi; si dice \emph{semplice} o \emph{non intrecciata} se ogni coppia di lati non consecutivi non ha punti in comune.
+\end{definizione}
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig062_spezzate.pgf}
+\caption{La figura $F_1$ è un spezzata semplice aperta (i lati non si intersecano e gli estremi non coincidono); la figura $F_2$ è una spezzata intrecciata aperta (due lati si intersecano e gli estremi non coincidono); la figura $F_3$ è una spezzata semplice chiusa (non ci sono lati non consecutivi che si intersecano e ogni vertice è in comune a due lati); la figura $F_4$ è una spezzata intrecciata chiusa (due lati si intersecano e ogni vertice è in comune a due lati)}
+\end{figure}
+
+\begin{definizione}
+Si chiama \emph{poligonale} una spezzata chiusa non intrecciata.
+\end{definizione}
+
+\subsection{Poligono}
+
+\begin{definizione}
+Si chiama \emph{poligono} la figura formata da una poligonale e dalla parte finita di piano da essa delimitata.
+\end{definizione}
+
+In un poligono chiamiamo:
+\begin{itemize*}
+\item \emph{vertici} del poligono i vertici della poligonale;
+\item \emph{lati} del poligono i lati della poligonale;
+\item \emph{contorno} del poligono la poligonale stessa;
+\item \emph{punti interni} i punti del poligono non situati sul contorno;
+\item \emph{punti esterni} tutti i punti del piano che non sono interni e non appartengono al contorno;
+\item \emph{perimetro} del poligono il segmento somma dei lati del poligono.
+\end{itemize*}
+
+\begin{definizione}
+Un poligono si dice \emph{convesso} se è una figura convessa, cioè se il segmento che ha per estremi due suoi punti qualsiasi è interamente contenuto nel poligono, si dice \emph{concavo} se non è convesso, cioè se esistono almeno due punti per i quali il segmento che li unisce non è contenuto interamente nel poligono.
+\end{definizione}
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig063_poligoni.pgf}
+\caption{Il poligono $P_1$ è convesso perché comunque si prendono due suoi punti interni, il segmento che li unisce è interno al poligono; il poligono $P_2$ è concavo perché il segmento $AB$ cade in parte all'esterno del poligono}
+\end{figure}
+
+Nel seguito quando parleremo di poligoni intendiamo sempre poligoni convessi.
+
+In un poligono chiamiamo:
+\begin{itemize*}
+\item \emph{angolo interno} o \emph{angolo del poligono} ognuno degli angoli che ha per lati le semirette che contengono due lati consecutivi del poligono e ha per vertice il vertice del poligono in comune a quei due lati;
+\item \emph{angolo esterno} ciascun angolo adiacente ad un angolo interno (suo supplementare).
+\end{itemize*}
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig064_angoli_poligoni.pgf}
+\caption{Nella figura (a) sono indicati gli angoli interni al poligono, nella figura (b) sono indicati gli angoli esterni, ognuno di essi è adiacente a un angolo interno}
+\end{figure}
+
+Osservazioni
+\begin{itemize*}
+\item Un poligono è convesso se ogni angolo interno è convesso.
+\item Un poligono è concavo se ha almeno un angolo interno concavo.
+\end{itemize*}
+
+Osserva che per ogni angolo interno esistono due angoli esterni, congruenti tra di loro perché opposti al vertice, ovvero perché supplementari dello stesso angolo.
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig065_angoli_est.pgf}
+\caption{Ogni angolo interno ha due angoli esterni adiacenti ad esso}
+\end{figure}
+
+Inoltre definiamo:
+\begin{itemize*}
+\item \emph{corda} ogni segmento che unisce due qualsiasi punti del contorno del poligono che non appartengono allo stesso lato;
+\item \emph{diagonale} ogni corda che unisce due vertici non consecutivi.
+\end{itemize*}
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap01/fig066_corda_diag.pgf}
+\caption{Il segmento $AB$ è una diagonale del poligono poiché unisce i vertici non consecutivi $A$ e $B$; il segmento $CD$ è una corda poiché unisce due punti posti su due lati distinti del poligono}
+\end{figure}
+
+I poligoni hanno nomi diversi a seconda del loro numero di lati:
+\begin{itemize*}
+\item \emph{triangolo} è un poligono con tre lati;
+\item \emph{quadrilatero} è un poligono con quattro lati;
+\item \emph{pentagono} è un poligono con cinque lati;
+\item \emph{esagono} è un poligono con sei lati;
+\item e così via.
+\end{itemize*}
+
+\begin{definizione}
+Un poligono si dice \emph{equilatero} se ha tutti i lati congruenti tra loro.
+\end{definizione}
+
+\begin{definizione}
+Un poligono si dice \emph{equiangolo} se ha tutti gli angoli interni congruenti tra loro.
+\end{definizione}
+
+\begin{definizione}
+Un poligono equiangolo e equilatero si dice \emph{poligono regolare}.
+\end{definizione}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}

@@ -1,0 +1,8 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw (0,0) node[above] {$A$} -- (1,-2) node[below] {$B$} -- (3,-1) node[above] {$C$} -- (4,-1.7) node[below] {$D$} -- (5.5,-0.7) node[above] {$E$};
+\end{scope}
+
+\end{tikzpicture}

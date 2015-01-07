@@ -1,0 +1,26 @@
+\begin{tikzpicture}[scale=1.3,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{60};
+\pgfmathsetmacro{\abeta}{120};
+\pgfmathsetmacro{\agamma}{200};
+
+\coordinate (o) at (0,0);
+
+\draw[thick] (o) -- ++(0:1.4) coordinate (a) -- ++({\aalpha}:1.5) coordinate (b) -- ++({\abeta}:1.2) coordinate (c) -- ++({\agamma}:1.9) coordinate (d) -- cycle;
+
+\draw[dashed] (c) -- +({\agamma}:2.9);
+\draw[dashed] (d) -- ($(d)!-0.6!(o)$);
+
+\draw[blue]
+([shift=({\agamma+180}:.4)]d) arc [radius=.4, start angle={\agamma+180}, end angle={540+\aalpha-\abeta-\agamma}];
+
+\draw[red, very thick]
+([shift=({\agamma}:.55)]d) arc [radius=.55, start angle={\agamma}, end angle={540+\aalpha-\abeta-\agamma}]([shift=({\agamma-\abeta-\aalpha}:.55)]d) arc [radius=.55, start angle={\agamma-\abeta-\aalpha}, end angle={360+\aalpha-\abeta-\agamma}];
+\node at (-1.1,0.85) {angolo esterno};
+\node at (0.6,2.55) {angolo esterno};
+\node at (0.9,1.3) {angolo interno};
+\end{scope}
+
+\end{tikzpicture}

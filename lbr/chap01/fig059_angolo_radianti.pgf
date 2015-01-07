@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+\pgfmathsetmacro{\myscale}{1};
+
+\begin{scope}[scale={\myscale},font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{0};
+\pgfmathsetmacro{\abeta}{{180/pi}};
+
+
+\coordinate (o) at (0,0);
+\draw (o) circle (1.5);
+\draw (o) node[left] {$O$} -- ({\aalpha}:2.5) node[right] {$s$};
+\draw (o) -- ({\abeta}:2.5) node[right] {$r$};
+
+\node[below] at ({\aalpha}:1.7) {$M$};
+\node[above] at ({\abeta+5}:1.5) {$N$};
+\draw[thick,red] ([shift=(0:.45)]o) arc [radius=.45, start angle={\aalpha}, end angle={\abeta}];
+\node at ({(\aalpha+\abeta)/2}:.65) {$\alpha$};
+%\node at ({(\aalpha+\abeta)/2}:1.75) {$A$};
+
+\draw[very thick,blue] ([shift=(0:1.5)]o) arc [radius=1.5, start angle={\aalpha}, end angle={\abeta}];
+\end{scope}
+
+\end{scope}
+\end{tikzpicture}

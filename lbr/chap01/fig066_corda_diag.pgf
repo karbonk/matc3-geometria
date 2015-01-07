@@ -1,0 +1,22 @@
+\begin{tikzpicture}[scale=1.5,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{60};
+\pgfmathsetmacro{\abeta}{120};
+\pgfmathsetmacro{\agamma}{200};
+
+\coordinate (o) at (0,0);
+
+\draw[thick] (o) -- ++(0:1.4) coordinate (a) -- ++({\aalpha}:1.5) coordinate (b) -- ++({\abeta}:1.2) coordinate (c) -- ++({\agamma}:1.9) coordinate (d) -- cycle;
+
+\draw[dashed] (c) node[above] {$B$} -- node[above, sloped] {diagonale} (o) node[left] {$A$};
+\draw[dashed] ($(b)!0.6!(c)$) coordinate (u) node[right] {$D$} -- node[above, sloped] {corda} ($(a)!0.3!(b)$) coordinate (v) node[right] {$C$};
+\draw[fill] (c) circle (.8pt);
+\draw[fill] (o) circle (.8pt);
+\draw[fill] (u) circle (.8pt);
+\draw[fill] (v) circle (.8pt);
+
+\end{scope}
+
+\end{tikzpicture}

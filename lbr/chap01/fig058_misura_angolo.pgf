@@ -1,0 +1,41 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc} %, angles}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{0};
+\pgfmathsetmacro{\abeta}{20};
+
+\coordinate (o) at (0,0);
+
+\draw (o) -- ({\aalpha}:2.5);
+\draw (o) -- ({\abeta}:2.5);
+
+\node[right] at ({(\aalpha+\abeta)/2}:2) {$\widehat{u}$};
+
+\draw[thick,blue] ([shift=({\aalpha}:.65)]o) arc [radius=.65, start angle={\aalpha}, end angle={\abeta}];
+\end{scope}
+
+\begin{scope}[xshift=4cm]
+\pgfmathsetmacro{\aalpha}{0};
+\pgfmathsetmacro{\abeta}{20};
+\pgfmathsetmacro{\agamma}{40};
+\pgfmathsetmacro{\adelta}{60};
+\pgfmathsetmacro{\aepsilon}{80};
+
+\coordinate (o) at (0,0);
+
+\draw (o) node[left] {$O$} -- ({\aalpha}:2.5) node[below] {$A$};
+\draw[dashed] (o) -- ({\abeta}:2.5);
+\draw[dashed] (o) -- ({\agamma}:2.5);
+\draw[dashed] (o) -- ({\adelta}:2.5);
+\draw (o) -- ({\aepsilon}:2.5) node[left] {$B$};
+
+\node at ({(\aalpha+\abeta)/2}:2.1) {$\widehat{u}$};
+\node at ({(\abeta+\agamma)/2}:2.1) {$\widehat{u}$};
+\node at ({(\agamma+\adelta)/2}:2.1) {$\widehat{u}$};
+\node at ({(\adelta+\aepsilon)/2}:2.1) {$\widehat{u}$};
+
+\draw[thick,blue] ([shift=({\aalpha}:.5)]o) arc [radius=.5, start angle={\aalpha}, end angle={\aepsilon}];
+\end{scope}
+
+\end{tikzpicture}

@@ -1,0 +1,48 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{60};
+\pgfmathsetmacro{\abeta}{120};
+\pgfmathsetmacro{\agamma}{200};
+
+\coordinate (o) at (0,0);
+
+\draw[thick] (o) -- ++(0:1.4) -- ++({\aalpha}:1.5) -- ++({\abeta}:1.2) -- ++({\agamma}:1.9) -- cycle;
+
+\draw[blue]
+([shift=(0:.45)]o) arc [radius=.45, start angle={0}, end angle={360+\aalpha-\abeta-\agamma}]
+([shift=(180:.45)]0:1.4) arc [radius=.45, start angle={180}, end angle={\aalpha}]
+++([shift=({\aalpha+180}:.45)]{\aalpha}:1.05) arc [radius=.45, start angle={\aalpha+180}, end angle={\abeta}]
+++([shift=({\abeta+180}:.45)]{\abeta}:0.75) arc [radius=.45, start angle={\abeta+180}, end angle={\agamma}]
+++([shift=({\agamma+180}:.45)]{\agamma}:1.45) arc [radius=.45, start angle={\agamma+180}, end angle={540+\aalpha-\abeta-\agamma}];
+
+\node at (1,-1.1) {(a) angoli interni};
+\end{scope}
+
+\begin{scope}[xshift=5cm]
+\pgfmathsetmacro{\aalpha}{60};
+\pgfmathsetmacro{\abeta}{120};
+\pgfmathsetmacro{\agamma}{200};
+
+\coordinate (o) at (0,0);
+
+\draw[thick] (o) -- ++(0:1.4) coordinate (a) -- ++({\aalpha}:1.5) coordinate (b) -- ++({\abeta}:1.2) coordinate (c) -- ++({\agamma}:1.9) coordinate (d) -- cycle;
+
+\draw[dashed] (o) -- +(0:2.2);
+\draw[dashed] (a) -- +({\aalpha}:2.4);
+\draw[dashed] (b) -- +({\abeta}:2.1);
+\draw[dashed] (c) -- +({\agamma}:2.7);
+\draw[dashed] (d) -- ($(d)!1.4!(o)$);
+
+\draw[red]
+([shift=(0:.45)]o) arc [radius=.45, start angle={0}, end angle={-\agamma+\abeta}]
+([shift=(0:.45)]a) arc [radius=.45, start angle={0}, end angle={\aalpha}]
+([shift=({\aalpha}:.45)]b) arc [radius=.45, start angle={\aalpha}, end angle={\abeta}]
+([shift=({\abeta}:.45)]c) arc [radius=.45, start angle={\abeta}, end angle={\agamma}]
+([shift=({\agamma}:.45)]d) arc [radius=.45, start angle={\agamma}, end angle={540+\aalpha-\abeta-\agamma}];
+
+\node at (1,-1.1) {(b) Angoli esterni};
+\end{scope}
+
+\end{tikzpicture}

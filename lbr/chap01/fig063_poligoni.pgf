@@ -1,0 +1,26 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[fill, gray!40] (0.3,0) -- (2,.4) -- (2.5,-1.5) -- (1.3,-2.3) -- (0,-1) -- cycle;
+\draw[thick] (0.3,0) -- (2,.4) -- (2.5,-1.5) -- (1.3,-2.3) -- (0,-1) -- cycle;
+\draw[fill] (0.5,-0.3) circle (0.9pt) -- (0.8,-1.6) circle (0.9pt);
+\draw[fill] (0.2,-0.8) circle (0.9pt) -- (1,0.1) circle (0.9pt);
+\draw[fill] (0.2,-1) circle (0.9pt) -- (2.2,-1.2) circle (0.9pt);
+\draw[fill] (1.2,0.1) circle (0.9pt) -- (1.9,-1.8) circle (0.9pt);
+\draw[fill] (0.5,-1.2) circle (0.9pt) -- (2,-0.4) circle (0.9pt);
+\draw[fill] (1.6,-2) circle (0.9pt) -- (1.9,0.2) circle (0.9pt);
+
+\node at (1.2,-2.9) {(a) $P_1$ (poligono convesso)};
+\end{scope}
+
+\begin{scope}[xshift=5cm]
+\draw[fill, gray!40] (0,.4) -- (.7,0) -- (1.5,-1.5) -- (2.2,0.1) -- (2.5,-1) -- (2.2,-2) -- (1,-2.5) -- cycle;
+\draw[thick] (0,.4) -- (.7,0) -- (1.5,-1.5) -- (2.2,0.1) -- (2.5,-1) -- (2.2,-2) -- (1,-2.5) -- cycle;
+
+\draw[fill] (.6,-.7) node[above] {$A$} circle (0.9pt) -- (2.15,-0.95) node[above] {$B$} circle (0.9pt);
+
+\node at (1.2,-2.9) {(b) $P_2$ (poligono concavo)};
+\end{scope}
+
+\end{tikzpicture}
