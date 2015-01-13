@@ -1,0 +1,17 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[fill, blue!15] (0,0) -- (1,2) -- (5,2) -- (4,0) -- cycle;
+\draw (0,0) -- (1,2) -- (5,2) -- (4,0) -- cycle;
+\coordinate (a) at (1,0.4);
+\coordinate (b) at (2.8,1.4);
+\coordinate (c) at (3.5,.7);
+\draw[fill] (a) circle (1.5pt) node[above] {$A$};
+\draw[fill] (b) circle (1.5pt) node[above] {$B$};
+\draw[fill] (c) circle (1.5pt) node[above] {$C$};
+\node at (5,1.5) {$\pi$};
+
+\end{scope}
+
+\end{tikzpicture}

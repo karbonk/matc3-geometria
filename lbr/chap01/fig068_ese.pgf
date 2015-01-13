@@ -1,0 +1,48 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (0,0);
+\coordinate (b) at (2,-1);
+\coordinate (c) at (0,-1);
+\coordinate (d) at (2,0);
+\draw (a) node[left] {$A$} -- (b) node[right] {$B$};
+\draw (c) node[left] {$C$} -- (d) node[right] {$D$};
+\draw[fill] (a) circle (1.5pt) (b) circle (1.5pt) (c) circle (1.5pt) (d) circle (1.5pt);
+\node at (1,-2.2) {$AB$ e $CD$ sono};
+\node at (1,-2.8) {\ldots\ldots\ldots\ldots\ldots};
+\end{scope}
+
+\begin{scope}[xshift=3.7cm]
+\coordinate (e) at (0,0);
+\coordinate (f) at (0,-1.3);
+\coordinate (g) at (2,-1.3);
+\draw (e) node[above] {$E$} -- (f) node[left] {$F$} -- (g) node[right] {$G$};
+\draw[fill] (e) circle (1.5pt) (f) circle (1.5pt) (g) circle (1.5pt);
+\node at (1,-2.2) {$EF$ e $FG$ sono};
+\node at (1,-2.8) {\ldots\ldots\ldots\ldots\ldots};
+\end{scope}
+
+\begin{scope}[xshift=7.2cm]
+\coordinate (h) at (0,-1.2);
+\coordinate (i) at (1,-0.6);
+\coordinate (l) at (2,0);
+\draw (h) node[above] {$H$} -- (i) node[above] {$I$} -- (l) node[above] {$L$};
+\draw[fill] (h) circle (1.5pt) (i) circle (1.5pt) (l) circle (1.5pt);
+\node at (1,-2.2) {$HI$ e $IL$ sono};
+\node at (1,-2.8) {\ldots\ldots\ldots\ldots\ldots};
+\end{scope}
+
+\begin{scope}[xshift=10.7cm]
+\coordinate (m) at (0,-1.5);
+\coordinate (n) at (0.5,0);
+\coordinate (o) at (1,-1.3);
+\coordinate (p) at (2,-0.3);
+\draw (m) node[left] {$M$} -- (n) node[left] {$N$};
+\draw (o) node[left] {$O$} -- (p) node[above] {$P$};
+\draw[fill] (m) circle (1.5pt) (n) circle (1.5pt) (o) circle (1.5pt) (p) circle (1.5pt);
+\node at (0.8,-2.2) {$MN$ e $OP$ sono};
+\node at (0.8,-2.8) {\ldots\ldots\ldots\ldots\ldots};
+\end{scope}
+
+\end{tikzpicture}

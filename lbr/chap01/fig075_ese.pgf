@@ -1,0 +1,69 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}[xshift=-1.5cm]
+\pgfmathsetmacro{\aalpha}{0};
+\pgfmathsetmacro{\abeta}{90};
+\coordinate (o) at (0,0);
+\begin{scope}
+\clip (o) rectangle (1.5,1.5);
+\draw[fill=orange!30] (o) circle (1cm);
+\end{scope}
+\draw (o) -- +({\aalpha}:2);
+\draw (o) -- +({\abeta}:2);
+\node at (1,-.75) {\ldots\ldots\ldots\ldots};
+\end{scope}
+
+\begin{scope}[xshift=4cm]
+\pgfmathsetmacro{\aalpha}{0};
+\pgfmathsetmacro{\abeta}{180};
+\coordinate (o) at (0,0);
+\begin{scope}
+\clip (-1.5,0) rectangle (1.5,1.5);
+\draw[fill=blue!20] (o) circle (1cm);
+\end{scope}
+\draw (o) -- +({\aalpha}:2);
+\draw (o) -- +({\abeta}:2);
+\node at (0,-.75) {\ldots\ldots\ldots\ldots};
+\end{scope}
+
+\begin{scope}[xshift=7.5cm]
+\pgfmathsetmacro{\aalpha}{20};
+\pgfmathsetmacro{\abeta}{60};
+\coordinate (o) at (0,0);
+\begin{scope}
+\clip (o) -- ({\aalpha}:1.5) -- ({\abeta}:1.5) -- cycle;
+\draw[fill=purple!20] (o) circle (1cm);
+\end{scope}
+\draw (o) -- +({\aalpha}:2);
+\draw (o) -- +({\abeta}:2);
+\node at (1,-.75) {\ldots\ldots\ldots\ldots};
+\end{scope}
+
+\begin{scope}[xshift=1.5cm, yshift=-3cm]
+\pgfmathsetmacro{\aalpha}{135};
+\pgfmathsetmacro{\abeta}{405};
+\coordinate (o) at (0,0);
+\begin{scope}
+\clip (o) -- ({\aalpha}:1.5) -- (-1.5,0) -- (-1.5,-1) -- (1.5,-1) -- (1.5,0) -- ({\abeta}:1.5) -- cycle;
+\draw[fill=green!20] (o) circle (1cm);
+\end{scope}
+\draw (o) -- +({\aalpha}:2);
+\draw (o) -- +({\abeta}:2);
+\node at (0,-1.75) {\ldots\ldots\ldots\ldots};
+\end{scope}
+
+\begin{scope}[xshift=6.5cm, yshift=-3cm]
+\pgfmathsetmacro{\aalpha}{10};
+\pgfmathsetmacro{\abeta}{150};
+\coordinate (o) at (0,0);
+\begin{scope}
+\clip (o) -- ({\aalpha}:1.5) -- (1.5,1) -- (-1.5,1) -- ({\abeta}:1.5) -- cycle;
+\draw[fill=red!20] (o) circle (1cm);
+\end{scope}
+\draw (o) -- +({\aalpha}:2);
+\draw (o) -- +({\abeta}:2);
+\node at (0,-0.75) {\ldots\ldots\ldots\ldots};
+\end{scope}
+
+\end{tikzpicture}

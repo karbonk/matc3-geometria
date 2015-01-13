@@ -1,0 +1,23 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw (0,0) coordinate (r1) -- (5,0) coordinate (r2);
+\draw  (0.5,-.3) coordinate (s1) -- (4,2) coordinate (s2);
+\draw  (1.1,2) coordinate (t1) -- +(-40:4) coordinate (t2);
+\draw  (2,2.2) coordinate (u1) -- +(-40:4) coordinate (u2);
+\coordinate (a) at (intersection of r1--r2 and s1--s2);
+\coordinate (b) at (intersection of t1--t2 and s1--s2);
+\coordinate (c) at (intersection of u1--u2 and s1--s2);
+\coordinate (d) at (intersection of t1--t2 and r1--r2);
+\coordinate (e) at (intersection of u1--u2 and r1--r2);
+\draw[fill] (a) circle (1.5pt) node[above] {$A$};
+\draw[fill] (b) circle (1.5pt) node[above] {$B$};
+\draw[fill] (c) circle (1.5pt) node[above] {$C$};
+\draw[fill] (d) circle (1.5pt) node[below] {$D$};
+\draw[fill] (e) circle (1.5pt) node[below] {$E$};
+
+\end{scope}
+
+
+\end{tikzpicture}

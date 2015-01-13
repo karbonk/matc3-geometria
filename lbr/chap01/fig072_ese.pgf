@@ -1,0 +1,23 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw (0,0) node[above] {$b$} coordinate (b1) -- (5,1) coordinate (b2);
+\draw (1,2) node[left] {$a$} coordinate (a1) -- (4,-1) coordinate (a2);
+\draw (0.8,-0.5) node[below] {$c$} coordinate (c1) -- +(70:3) coordinate (c2);
+\draw (3,-0.7) node[below] {$d$} coordinate (d1) -- +(70:3) coordinate (d2);
+
+\coordinate (p) at (intersection of b1--b2 and a1--a2);
+\draw[fill] (p) circle (1.5pt) node[above] {$P$}; 
+\coordinate (q) at (intersection of a1--a2 and c1--c2);
+\draw[fill] (q) circle (1.5pt) node[right] {$Q$}; 
+\coordinate (r) at (intersection of b1--b2 and c1--c2);
+\draw[fill] (r) circle (1.5pt) node[right=5pt, below] {$R$}; 
+\coordinate (s) at (intersection of a1--a2 and d1--d2);
+\draw[fill] (s) circle (1.5pt) node[right] {$S$}; 
+\coordinate (t) at (intersection of b1--b2 and d1--d2);
+\draw[fill] (t) circle (1.5pt) node[right=5pt, below] {$T$}; 
+
+\end{scope}
+
+\end{tikzpicture}

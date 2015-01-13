@@ -1,0 +1,21 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{0};
+\pgfmathsetmacro{\abeta}{54};
+\pgfmathsetmacro{\agamma}{117};
+\pgfmathsetmacro{\adelta}{180};
+
+\draw (0,0) coordinate (b) node[below] {$B$} -- +({\aalpha}:2.3);
+\draw[fill] (b) circle (1pt);
+\draw[fill] +({\aalpha}:1.8) circle (1pt) node[below] {$A$};
+\draw (b) -- +({\abeta}:1.8);
+\draw[fill] +({\abeta}:1.4) circle (1pt) node[right] {$E$};
+\draw (b) -- +({\agamma}:1.7);
+\draw[fill] +({\agamma}:1.5) circle (1pt) node[left] {$D$};
+\draw (b) -- +({\adelta}:2.1);
+\draw[fill] +({\adelta}:1.6) circle (1pt) node[below] {$C$};
+\end{scope}
+
+\end{tikzpicture}

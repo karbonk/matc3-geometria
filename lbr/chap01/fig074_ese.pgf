@@ -1,0 +1,16 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{240};
+\pgfmathsetmacro{\abeta}{290};
+\pgfmathsetmacro{\agamma}{265};
+\pgfmathsetmacro{\adelta}{340};
+
+\draw (0,0) coordinate (o) node[above] {$O$} -- +({\aalpha}:2) node[left] {$A$};
+\draw (o) -- +({\abeta}:2) node[right] {$B$};
+\draw (o) -- +({\agamma}:2) node[below] {$C$};
+\draw (o) -- +({\adelta}:2) node[right] {$D$};
+\end{scope}
+
+\end{tikzpicture}
