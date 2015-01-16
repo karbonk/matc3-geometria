@@ -1,0 +1,198 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\chapter{Rette parallele}
+
+\includegraphics[width=0.95\textwidth]{intersection_de_deux_paralleles.jpg}
+  \begin{center}
+    {\large ``Intersection de deux parallèles''}\par
+    Foto di OliBac\par
+    \url{http://www.flickr.com/photos/olibac/3244014009/}\par
+    Licenza: Creative Commons Attribution\par
+  \end{center}
+\newpage
+
+\section{Primo teorema dell'angolo esterno}
+
+Ricordiamo che un angolo esterno di un poligono è un angolo che ha come vertice un vertice del poligono ed è adiacente ad un angolo interno.
+
+\begin{teorema}[dell'angolo esterno]
+In un triangolo un angolo esterno è maggiore di ciascuno dei due angoli interni non adiacenti.
+\end{teorema}
+
+% figura
+
+\begin{proof}
+Sia $ABC$ un triangolo. Prolunghiamo il lato $AB$ dalla parte di $B$ e prendiamo un qualsiasi punto $D$ sul prolungamento. Vogliamo dimostrare che l'angolo $C\widehat{B}D$ è maggiore sia dell'angolo $C\widehat{A}B$ sia dell'angolo $A\widehat{C}B$. A tal fine prendiamo il punto medio del lato $CB$, lo chiamiamo $M$; uniamo $A$ con $M$ e prolunghiamo $AM$ dalla parte di $M$, prendendo un punto $N$ sul prolungamento in modo che $AM$ sia congruente a $MN$; uniamo $N$ con $B$.
+
+Osserviamo che i triangoli $AMC$ e $BNM$ sono congruenti per il primo criterio, infatti: $CM\cong MB$ perché $M$ è un punto medio per costruzione, $AM\cong MN$ per costruzione e $C\widehat{M}A\cong B\widehat{M}N$ perché opposti al vertice.
+
+Di conseguenza i restanti elementi dei due triangoli sono ordinatamente congruenti, in particolare $A\widehat{C}M\cong M\widehat{B}N$. Ma l'angolo $M\widehat{B}N$ è una parte propria dell'angolo esterno $C\widehat{B}D$ che risulta pertanto maggiore di $M\widehat{B}N$ e dell'angolo interno di vertice $C$.
+
+Rimane ora da dimostrare che $C\widehat{B}D$ è anche maggiore di $C\widehat{A}B$ ma per farlo occorre un'altra costruzione.
+
+Prolunghiamo il segmento $CB$ dalla parte di $B$ viene individuato un altro angolo esterno, che però è congruente al precedente: è anch'esso adiacente all'angolo interno di vertice $B$ ed è opposto al vertice di $C\widehat{B}D$. Usiamo tale angolo ed una costruzione analoga alla precedente a partire dal punto medio $F$ del segmento $AB$ e dal punto $G$ sul prolungamento di $CF$, con $CF\cong FG$ in modo da ottenere, dal confronto dei triangoli congruenti $AFC$ e $FGB$, che l'angolo interno di vertice $A$ è congruente all'angolo $F\widehat{B}G$ che è una parte propria dell'angolo esterno di vertice $B$.
+\end{proof}
+
+\section{Rette perpendicolari}
+
+Ricordiamo che due rette giacenti su uno stesso piano si dicono \emph{perpendicolari} se si incontrano dividendo il piano in quattro angoli congruenti. In realtà è sufficiente sapere che uno dei quattro angoli che si vengono a formare è retto, per concludere che sono tutti retti.
+
+\begin{proprieta}
+Siano $AB$ e $CD$ due rette incidenti di intersezione $E$, se risulta che l'angolo $A\widehat{E}C$ è retto, allora sono retti anche gli angoli $A\widehat{E}D$, $B\widehat{E}C$ e $B\widehat{E}D$.
+\end{proprieta}
+
+% figura
+
+\begin{proof}
+L'angolo $A\widehat{E}D$ è retto perché adiacente a un angolo retto;
+l’angolo $D\widehat{E}B$ è retto perché opposto al vertice a un angolo retto;
+l’angolo $C\widehat{E}B$ è retto perché adiacente a un angolo retto.
+\end{proof}
+
+Quindi, se due rette incidenti formano un angolo retto allora tutti gli angoli che si formano sono retti
+
+L’esistenza e l’unicità della perpendicolare sono assicurate dal seguente teorema.
+
+\begin{teorema}
+Nel piano, data una retta ed un punto, esiste ed è unica la retta perpendicolare alla retta data e passante per il punto assegnato.
+\end{teorema}
+
+% figura
+
+\begin{proof}
+Per la dimostrazione, distinguiamo due casi.
+
+Primo caso: il punto appartiene alla retta.
+Sia $AB$ una retta del piano e sia $P$ un suo punto. Allora se tracciamo la bisettrice dell'angolo piatto $A\widehat{P}B$, questa è certamente perpendicolare ad $AB$, in quanto i due angoli che si vengono a formare sono retti.
+Prolungando questa bisettrice, si viene a formare una retta $CD$ perpendicolare ad $AB$.  
+Supponiamo per assurdo che la retta $CD$ non sia l'unica perpendicolare ad $AB$ passante per il punto $P$ ma che ne esista un'altra. Detto $E$ un punto su tale ipotetica retta distinto da $P$, se $E$ appartenesse anche alla retta $CD$, allora $PE$ coinciderebbe con $CD$, quindi $PE$ non sarebbe distinta dalla retta $CD$; se invece $E$ non appartenesse a $CD$, unendo $E$ con $P$ si verrebbero a formare due angoli $A\widehat{P}E$ e $E\widehat{P}B$ di cui uno acuto ed uno ottuso e quindi la retta $EP$ non risulterebbe perpendicolare ad $AB$.
+
+Secondo caso: il punto non appartiene alla retta.
+Sia $AB$ una retta nel piano e sia $S$ un punto del piano non appartenente ad essa. Costruiamo la perpendicolare ad $AB$ passante per $S$ e dimostriamo che è unica.
+Possiamo prendere un punto $Q$ appartenente ad $AB$ e congiungere $S$ con $Q$. Se gli angoli $A\widehat{Q}S$ e $S\widehat{Q}B$ sono retti, abbiamo già trovato la perpendicolare. Altrimenti, vuol dire che gli angoli $A\widehat{Q}S$ e $S\widehat{Q}B$ sono uno acuto ed uno ottuso. Tracciamo la semiretta $QR$, di origine $Q$ e giacente nel semipiano individuato da $AB$ non contenente il punto $S$, che divide il semipiano in due angoli, $A\widehat{Q}R$ e $R\widehat{Q}B$, rispettivamente congruenti a $A\widehat{Q}S$ e $S\widehat{Q}B$. Prendiamo un punto $T$ su tale semiretta in modo che il segmento $QT$ sia congruente a $QS$. Uniamo $S$ con $T$ e chiamiamo $H$ il punto d'intersezione tra $ST$ ed $AB$. Allora il triangolo $QTS$ è isoscele sulla base $ST$ e il segmento $QH$ è la bisettrice dell'angolo al vertice $S\widehat{Q}T$, che risulta pertanto essere anche mediana ed altezza relativa alla base $ST$. Dunque gli angoli $S\widehat{H}Q$ e $T\widehat{H}Q$ sono retti e quindi la retta $ST$ è perpendicolare ad $AB$.
+Abbiamo quindi trovato la perpendicolare ad $AB$ passante per $S$. Per dimostrare che è unica possiamo ricorrere al ragionamento fatto nel primo caso, dove ora $H$ è il punto $P$ della dimostrazione precedente.
+Il teorema è pertanto dimostrato.
+\end{proof}
+
+\section{Rette parallele}
+
+Secondo la definizione di Euclide, due rette nel piano sono parallele se non hanno punti in comune.
+In maniera più moderna il concetto di parallelismo è interpretato come l'avere la stessa direzione.
+Si può anche dare una formulazione che unifichi le due definizioni precedenti; si deve però ricorrere al concetto di distanza: due rette nel piano sono parallele se mantengono sempre la stessa distanza. Se la distanza è nulla, le due rette sono coincidenti.
+Noi utilizzeremo la seguente:
+\begin{definizione}
+Due rette giacenti nello stesso piano si dicono \emph{parallele} se sono coincidenti oppure non si incontrano mai.
+\end{definizione}
+
+Assumendo dunque questa come definizione di parallelismo, abbiamo bisogno di precisare il concetto di distanza.
+Dati due punti $P$ e $Q$, la \emph{distanza} tra $P$ e $Q$ è la lunghezza del \emph{percorso più breve} che unisce i due punti. Questo concetto è valido anche se si riferisce alle distanze tra due città che si trovano negli stradari: sono riportate le lunghezze dei percorsi minimi tra tutte le strade alternative che collegano due città. Naturalmente, nel piano, ove si ``dispone'' di tutti i punti da poter ``attraversare'', il percorso più breve che collega due punti $P$ e $Q$ è il segmento $PQ$; quindi nella geometria euclidea assumiamo come distanza tra due punti la lunghezza del segmento avente per estremi i due punti.
+
+Se vogliamo parlare di distanza tra due insiemi di punti, allora va considerato il percorso più breve tra tutti i percorsi che collegano un qualsiasi punto del primo insieme con un qualsiasi punto del secondo: in pratica la distanza è la lunghezza del più piccolo segmento tra tutti quelli che collegano i due insiemi di punti. 
+
+Nel caso particolare di un punto $A$ ed una retta $BC$, se il punto appartiene alla retta allora la distanza di $A$ da $BC$ è uguale a zero, altrimenti si considera come distanza la lunghezza del segmento $AH$, dove $H$ è il punto in cui la perpendicolare a $BC$ passante per $A$ interseca la stessa retta $BC$: il motivo si intuisce in base a quanto detto, ma risulterà chiaro più avanti, quando affronteremo lo studio delle disuguaglianze tra gli elementi di un triangolo. 
+
+Analogamente, come distanza tra due rette parallele si assume la lunghezza di un qualunque segmento che unisce il punto di una delle due rette con il piede della perpendicolare mandata da esso sull'altra retta. Affermare che tali segmenti sono tutti congruenti è un modo più preciso per dire che le due rette mantengono sempre la stessa distanza.
+
+Ricordiamo la versione ``moderna'' del V Postulato di Euclide: \emph{dati una retta $r$ ed un punto $P$, allora esiste una ed una sola retta parallela ad $r$ e passante per $P$.}
+
+\begin{proposizione}
+Se due rette nel piano sono perpendicolari alla stessa retta, esse sono parallele tra loro.
+\end{proposizione}
+
+% figura
+
+\begin{proof}
+Sia $r$ una retta, e siano $s$ e $t$ due rette, entrambe perpendicolari ad $r$. 
+Se $s$ e $t$ intersecano $r$ nello stesso punto $P$, allora per il teorema precedente necessariamente coincidono, e dunque sono parallele per la nostra definizione di parallelismo. 
+Consideriamo ora il caso in cui $s$ e $t$ intersecano $r$ in due punti distinti, rispettivamente $A$ e $B$. Supponendo per assurdo che $s$ e $t$ si intersechino in un punto $C$, risulterebbero due distinte rette passanti per $C$ e perpendicolari alla stessa retta, assurdo per il teorema precedente. Dunque deve risultare $s\parallel t$.
+\end{proof}
+
+Analoghe proprietà valgono per rette parallele e per rette incidenti qualunque. Precisamente:
+\begin{proposizione}
+Siano date due rette parallele, se una terza retta è parallela ad una delle due, è parallela anche all'altra; inoltre, ogni retta che interseca una delle due, interseca anche l'altra.
+\end{proposizione}
+
+% figura
+
+\begin{proof}
+Siano $a$, $b$, $c$ tre rette, con $a\parallel b$. Se $a$ coincide con $b$, la tesi è banale. Supponiamo quindi che $a$ e $b$ non abbiano punti in comune.
+Vogliamo dimostrare che se $c\parallel a$ allora $c\parallel b$.
+La tesi è banale se $c$ coincide con $a$ oppure con $b$.
+Supponiamo dunque che $c$ sia distinta da entrambe.
+Dimostriamo che se $c$ non ha punti in comune con $a$, allora non può avere punti in comune neppure con $b$. Se per assurdo $c$ avesse un punto $P$ in comune con $b$, allora esisterebbero due rette distinte passanti per $P$ entrambe parallele alla stessa retta $a$, cosa che contraddice il quinto postulato di Euclide.
+Dimostriamo ora che se $c$ interseca la retta $a$ allora interseca anche la retta $b$. Detto $Q$ il punto di intersezione tra le rette $a$ e $c$, se per assurdo $c$ non intersecasse la retta $b$, cioè se fosse $c\parallel b$, allora $a$ e $c$ sarebbero due rette distinte passanti per $Q$ entrambe parallele alla retta $b$, contrariamente a quanto dice il quinto postulato di Euclide.
+\end{proof}
+
+\begin{osservazione}
+La proposizione precedente rappresenta una sorta di proprietà transitiva del parallelismo. In realtà si è scelto di considerare parallele sia rette nel piano che non hanno punti in comune sia rette coincidenti proprio per fare in modo che la relazione di parallelismo sia una relazione di equivalenza: riflessiva, simmetrica, transitiva. Con la definizione di parallelismo data da Euclide, al contrario, sarebbe stata solo simmetrica, ma non riflessiva né transitiva. Per convincersi della non transitività, basta considerare tre rette $a$, $b$, $c$ con $a$ e $c$ coincidenti e $b$ parallela ad entrambe e distinta da esse: allora $a\parallel b$ e $b \parallel c$, ma $a$ e $c$ non sono parallele secondo la definizione di Euclide.
+\end{osservazione}
+
+\subsection{Rette parallele tagliate da una trasversale}
+
+Due rette parallele $a$ e $b$ vengono intersecate da una retta $c$ (detta \emph{trasversale}) che non è parallela ad esse,
+\begin{itemize*}
+\item se la retta $c$ è perpendicolare (ad entrambe), si vengono a formare otto angoli retti; 
+\item se la retta $c$ non è perpendicolare ad esse, si vengono a formare otto angoli, di cui quattro acuti e quattro ottusi, rispetto alla posizione che occupano alle coppie vengono attribuiti i seguenti nomi:
+\begin{itemize*}
+\item le coppie di angoli 1 e 5, 2 e 6, 3 e 7, 4 e 8 si dicono \emph{corrispondenti} (perché occupano posizioni analoghe da una parallela all'altra);
+\item le coppie di angoli 3 e 5, 4 e 6 si dicono \emph{alterni interni} (alterni perché occupano posizioni opposte rispetto alla trasversale, interni perché si trovano all'interno delle due parallele);
+\item le coppie di angoli 1 e 7, 2 e 8 si dicono \emph{alterni esterni} (alterni perché sono opposti rispetto alla trasversale; esterni perché si trovano all'esterno della zona tra le due parallele);
+\item le coppie di angoli 3 e 6, 4 e 5 si dicono \emph{coniugati interni} (si dicono coniugati perché stanno dalla stessa parte rispetto alla trasversale);
+\item le coppie di angoli 1 e 8, 2 e 7 si dicono \emph{coniugati esterni}.
+\end{itemize*}
+\end{itemize*}
+Inoltre le coppie 1 e 3, 2 e 4, 5 e 7, 6 e 8 sono angoli opposti al vertice.
+
+\begin{teorema}[delle parallele {[}diretto{]}]
+Se due rette tagliate da una trasversale formano una coppia di angoli alterni interni congruenti allora sono parallele.
+\end{teorema}
+
+% figura
+
+\begin{proof}
+Ragioniamo per assurdo. Supponiamo che la tesi sia falsa, cioè che le rette $a$ e $b$ non siano parallele. Se non sono parallele si incontreranno in un punto $C$. 
+Allora si viene a formare il triangolo $ABC$. Per il teorema dell'angolo esterno del triangolo, l'angolo esterno $\alpha$ è maggiore dell'angolo interno $\beta$. Questa conseguenza contraddice l'ipotesi del teorema, secondo la quale gli angoli alterni interni $\alpha$ e $\beta$ sono congruenti. Allora abbiamo sbagliato a negare la tesi, che perciò risulta vera.
+\end{proof}
+
+Possiamo generalizzare il teorema precedenti ad altri casi.
+\begin{teorema}[Criterio di parallelismo]
+Se due rette tagliate da una trasversale danno origine ad una tra le seguenti coppie di angoli
+\begin{itemize*}
+\item angoli alterni interni o alterni esterni congruenti;
+\item angoli corrispondenti congruenti;
+\item angoli coniugati interni o coniugati esterni supplementari
+\end{itemize*}
+allora sono parallele.
+\end{teorema}
+
+\begin{proof}
+Tenendo conto che due angoli opposti al vertice sono congruenti e due angoli adiacenti sono supplementari, se risulta che due angoli corrispondenti qualsiasi sono congruenti, allora i quattro angoli acuti sono tutti congruenti ed i quattro angoli ottusi sono congruenti, e quindi anche angoli alterni interni. Pertanto, per il teorema precedente, le rette sono parallele. Analogamente, se risultano supplementari due qualsiasi angoli coniugati (interni o esterni) risulta sempre che i quattro angoli acuti sono tutti congruenti tra loro come i quattro angoli ottusi, pertanto gli angoli alterni interni sono congruenti e, sempre per il teorema precedente, le due rette sono parallele.
+\end{proof}
+
+\begin{teorema}[delle parallele {[}inverso{]}]
+Se due rette sono parallele allora esse formano con una trasversale qualsiasi due angoli alterni interni congruenti.
+\end{teorema}
+
+\begin{proof}
+Dimostrazione. Ragioniamo per assurdo. Supponiamo che la tesi sia falsa, cioè che esista una coppia di angoli alterni interni $\alpha$ e $\beta$ con $\alpha>\beta$. Per il punto $P$, vertice dell'angolo $\alpha$ si potrà allora tracciare una retta $a'$ in modo che l'angolo da essa formato $\alpha'$ sia congruente a $\beta$. Ne segue che $a'$ e $b$ sono parallele perché formano angoli alterni interni congruenti. Allora esisterebbero due rette distinte, $a$ e $a'$, passanti per lo stesso punto $P$, entrambe parallele alla retta $b$. Questa conclusione contraddice il V postulato di Euclide, secondo il quale per un punto esterno a una retta passa un'unica parallela. Da questa contraddizione possiamo concludere che abbiamo sbagliato a supporre falsa la tesi, in altre parole la tesi è vera.
+\end{proof}
+
+In generale possiamo enunciare il seguente
+\begin{teorema}
+Se due rette sono parallele allora esse formano con una trasversale qualunque
+\begin{itemize*}
+\item angoli alterni interni o alterni esterni congruenti;
+\item angoli corrispondenti congruenti;
+\item angoli coniugati interni o coniugati esterni supplementari.
+\end{itemize*}
+\end{teorema}
+
+\begin{proof}
+Abbiamo già dimostrato che sono congruenti gli angoli alterni interni formati da due parallele tagliate da una trasversale. Tenendo conto che gli angoli opposti al vertice sono congruenti e gli angoli adiacenti sono supplementari, si possono dedurre facilmente tutte le tesi di questo teorema.
+\end{proof}
+
+
+%\newpage
+
+%\input{./chap/02_esercizi}
+
+%\cleardoublepage

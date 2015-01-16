@@ -4,7 +4,8 @@
 \begin{scope}
 \draw (0,0) rectangle (1,1);
 \draw[blue] (0,0) -- node[black, above, midway, sloped] {$d$} (1,1);
-\draw (0,0) -- node[black, below, midway, sloped] {$u$} (1,0);
+\path (0,0) -- node[black, below, midway, sloped] {$u$} (1,0);
+\path (1,0) -- node[black, right, midway] {$u$} (1,1);
 
 \end{scope}
 

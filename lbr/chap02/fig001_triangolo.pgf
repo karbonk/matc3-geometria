@@ -1,0 +1,66 @@
+\begin{tikzpicture}[scale=1.5,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+\coordinate (b) at (0,0);
+\coordinate (a) at (1.7,1.4);
+\coordinate (c) at (2,0);
+
+\draw[thick] (b) node[below] {$B$} -- node[below,midway] {$a$} (c) node[below] {$C$} -- (a) node[above] {$A$} -- cycle;
+\draw[dotted] (c) -- ($(b)!1.35!(c)$) coordinate (d);
+
+\begin{scope}
+\clip (c) -- (d) -- (2.5,1) -- (a) -- cycle;
+\draw[red] (c) circle (0.4);
+\end{scope}
+\node at ([shift={(11pt,12pt)}]c) {$\beta$};
+
+\begin{scope}
+\clip (b) -- (a) -- (c) -- cycle;
+\draw[blue] (a) circle (0.4);
+\end{scope}
+\node at ([shift={(-5pt,-15pt)}]a) {$\alpha$};
+
+\node at (1.2,-0.6) {(a)};
+
+%\node at (2.5,1.2) {angolo};
+%\node at (2.5,0.9) {esterno};
+\end{scope}
+
+\begin{scope}[xshift=4cm]
+
+\coordinate (b) at (0,0);
+\coordinate (a) at (1.7,1.4);
+\coordinate (c) at (2,0);
+
+\draw[thick] (b) node[below] {$B$} -- (c) node[below] {$C$} -- (a) node[above] {$A$} -- cycle;
+
+%\begin{scope}
+%\clip (b) -- (a) -- (c) -- cycle;
+%\draw (a) node[left=3pt, below=15pt] {$\alpha$} circle (0.4);
+%\end{scope}
+
+\coordinate (m) at ($(b)!0.5!(c)$);
+
+\draw[green!60!black,dashdotted] ($(m)!0.7cm!90:(c)$) coordinate (r) -- ($(m)!-.4cm!90:(c)$); % asse
+\node at ([shift={(-3pt,-10pt)}]r) {$r$};
+\draw[red,dashed] (m) node[black,below] {$M$} -- (a); % mediana
+\draw[blue,dashed] (a) -- ($(b)!(a)!(c)$) node[black,below] {$H$}; % asse
+
+\node [circle] (circ1) at (a) [minimum size=2cm] {}; % circonferenza con centro in A
+\coordinate (u) at (intersection of a--b and circ1);
+\coordinate (v) at (intersection of a--c and circ1);
+\node [circle] (circ2) at (u) [minimum size=2cm] {}; % circonferenza con centro in U
+\node [circle] (circ3) at (v) [minimum size=2cm] {}; % circonferenza con centro in V
+\coordinate (bis) at (intersection 1 of circ2 and circ3);
+% la bisettrice di A passa per A e per bis1
+\coordinate (bi) at ($(a)!5!(bis)$);
+\coordinate (bt) at (intersection of b--c and a--bi);
+\draw[orange!90!black,dashed] (a) -- (bt) node [black,below] {$L$}; % bisettrice
+
+
+\node at (1,-0.6) {(b)};
+\end{scope}
+
+\end{tikzpicture}

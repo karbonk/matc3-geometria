@@ -24,11 +24,11 @@
 
 \coordinate (o) at (0,0);
 
-\draw (o) node[left] {$O$} -- ({\aalpha}:2.5) node[below] {$A$};
+\draw[thick] (o) node[left] {$O$} -- ({\aalpha}:2.5) node[below] {$A$};
 \draw[dashed] (o) -- ({\abeta}:2.5);
 \draw[dashed] (o) -- ({\agamma}:2.5);
 \draw[dashed] (o) -- ({\adelta}:2.5);
-\draw (o) -- ({\aepsilon}:2.5) node[left] {$B$};
+\draw[thick] (o) -- ({\aepsilon}:2.5) node[left] {$B$};
 
 \node at ({(\aalpha+\abeta)/2}:2.1) {$\widehat{u}$};
 \node at ({(\abeta+\agamma)/2}:2.1) {$\widehat{u}$};

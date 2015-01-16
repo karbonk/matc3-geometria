@@ -3,7 +3,8 @@
 
 \begin{scope}[rotate=20]
 \draw[thick] (-2,0) -- (3,0) node[above] {$r$};
-\draw[fill] (0,1.3) circle (1.5pt) node[above] {$P$} -- (0,0) circle (1.5pt) node[below] {$H$};
+\draw[blue] (0,1.3) -- (0,0);
+\path[fill] (0,1.3) circle (1.5pt) node[above] {$P$} -- (0,0) circle (1.5pt) node[below] {$H$};
 
 \draw[red] (.55,0) -- (.55,.55) --(0,.55);
 \draw[red] (-.4,0) -- (-.4,.4) --(0,.4);

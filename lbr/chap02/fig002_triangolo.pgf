@@ -1,0 +1,37 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (b) at (0,0);
+\coordinate (c) at (2,0);
+
+\draw[thick] (b) node[below] {$B$} -- (c) node[below] {$C$} -- +(120:2) coordinate (a) node[above] {$A$} -- cycle;
+
+\node at (1,-0.7) {triangolo equilatero};
+\node at (1,-1.2) {$AB\cong AC\cong BC$};
+\end{scope}
+
+\begin{scope}[xshift=4.5cm]
+\coordinate (b) at (0,0);
+\coordinate (a) at (0.6,1.7);
+\coordinate (c) at (1.2,0);
+
+\draw[thick] (b) node[below] {$B$} -- (c) node[below] {$C$} -- (a) node[above] {$A$} -- cycle;
+
+\node at (.6,-0.7) {triangolo isoscele};
+\node at (.6,-1.2) {$AB\cong AC$};
+\end{scope}
+
+
+\begin{scope}[xshift=8cm]
+\coordinate (b) at (0,0);
+\coordinate (a) at (1.6,1.7);
+\coordinate (c) at (2.5,0);
+
+\draw[thick] (b) node[below] {$B$} -- (c) node[below] {$C$} -- (a) node[above] {$A$} -- cycle;
+
+\node at (1.25,-0.7) {triangolo scaleno};
+\node at (1.25,-1.2) {$AB\not\cong AC$, $AB\not\cong BC$, $AC\not\cong BC$};
+\end{scope}
+
+\end{tikzpicture}

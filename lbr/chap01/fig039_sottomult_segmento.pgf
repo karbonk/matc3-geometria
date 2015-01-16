@@ -6,10 +6,10 @@
 \coordinate (b) at (4,0);
 
 \foreach \x in {1,2,3,4}{%
-\draw[fill] ({\x},0) circle (1.5pt);
+\draw ({\x},-1pt) -- ({\x},1pt);
 \node[below] at ({\x-0.5},0) {\x};
 }
-\draw[fill] (a) circle (1.5pt) node[above] {$A$} -- (b) node[above] {$B$};
+\draw[fill] (a) circle (1.5pt) node[above] {$A$} -- (b) circle (1.5pt) node[above] {$B$};
 \node[above] at (1,0) {$D$};
 \end{scope}
 
@@ -18,10 +18,10 @@
 \coordinate (c) at (7,0);
 
 \foreach \x in {1,2,...,7}{%
-\draw[fill] ({\x},0) circle (1.5pt);
+\draw ({\x},-1pt) -- ({\x},1pt);
 \node[below] at ({\x-0.5},0) {\x};
 }
-\draw[fill] (a) circle (1.5pt) node[above] {$A$} -- (c) node[above] {$C$};
+\draw[fill] (a) circle (1.5pt) node[above] {$A$} -- (c) circle (1.5pt) node[above] {$C$};
 \node[above] at (1,0) {$D$};
 \end{scope}
 

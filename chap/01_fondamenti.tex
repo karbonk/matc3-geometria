@@ -3,6 +3,15 @@
 % (c) 2014 Daniele Masini - d.masini.it@gmail.com
 \chapter{Nozioni fondamentali}
 
+\includegraphics[width=0.95\textwidth]{geometry_lesson.jpg}
+  \begin{center}
+    {\large ``Geometry lesson''}\par
+    Foto di kevindooley\par
+    \url{http://www.flickr.com/photos/pagedooley/2575606606/}\par
+    Licenza: Creative Commons Attribution\par
+  \end{center}
+\newpage
+
 \section{Introduzione alla geometria razionale}
 \subsection{Breve nota storica}
 La parola geometria deriva dal greco antico: \textgreek{gewmetr'ia}, composta da \textgreek{gew} (geo) che significa ``terra'' e da \textgreek{metr'ia} (metria) che significa ``misura'', tradotto alla lettera significa ``misura della terra''. Secondo una tradizione storica, durante il VI secolo \aC{} alcuni matematici e pensatori greci (principalmente Talete e Pitagora) cominciarono a organizzare in maniera razionale (secondo il susseguirsi di ragionamenti logici) le conoscenze geometriche che egiziani e babilonesi avevano raggiunto nei secoli precedenti. Lo storico greco Erodoto, vissuto tra il 484 \aC{} e il 425 \aC, racconta che a causa delle periodiche inondazioni del fiume Nilo gli egiziani erano costretti a ricostruire ogni anno i confini dei singoli possedimenti terrieri e in questo modo avevano sviluppato delle modalità tecniche per la misura della terra (\textgreek{gewmetr'ia} appunto).
@@ -786,7 +795,7 @@ I primi due modi di indicare l'angolo non individuano con chiarezza di quale dei
 Anche per gli angoli si danno le definizioni di angoli consecutivi e angoli adiacenti, in parte simili a quelle date per i segmenti.
 
 \begin{definizione}
-Due angoli si dicono angoli \emph{consecutivi} se hanno il vertice e un lato comune e giacciono da parte opposta rispetto al lato comune.
+Due angoli si dicono \emph{consecutivi} se hanno il vertice e un lato comune e giacciono da parte opposta rispetto al lato comune.
 \end{definizione}
 
 \begin{figure}[htb]
@@ -925,9 +934,9 @@ Per confrontare due segmenti $AB$ e $CD$, facciamo in modo che con un movimento 
 
 A questo punto sono possibili tre situazioni:
 \begin{itemize*}
-\item $B$ cade dopo l'estremo $D$, allora diciamo che $AB$ è maggiore di $CD$ e scriviamo $AB>CD$;
-\item $B$ cade esattamente su $D$, allora i due segmenti sono congruenti e scriviamo $AB\cong CD$;
-\item $B$ cade tra $C$ e $D$, allora diciamo che $AB$ è minore di $CD$ e scriviamo $AB<CD$.
+\item $B$ cade dopo l'estremo $D$, allora diciamo che $AB$ è \emph{maggiore} di $CD$ e scriviamo $AB>CD$;
+\item $B$ cade esattamente su $D$, allora i due segmenti sono \emph{congruenti} e scriviamo $AB\cong CD$;
+\item $B$ cade tra $C$ e $D$, allora diciamo che $AB$ è \emph{minore} di $CD$ e scriviamo $AB<CD$.
 \end{itemize*}
 
 \subsection{Confronto di angoli}
@@ -941,9 +950,9 @@ Per confrontare due angoli $A\widehat{B}C$ e $D\widehat{E}F$, portiamo con un mo
 
 A questo punto si possono avere tre situazioni distinte:
 \begin{itemize*}
-\item il lato $EF$ cade internamente all'angolo $A\widehat{B}C$ e quindi diciamo che $A\widehat{B}C>D\widehat{E}F$;
-\item il lato $EF$ cade esattamente su $BC$ e quindi i due angoli sono congruenti: $A\widehat{B}C\cong D\widehat{E}F$;
-\item il lato $EF$ cade esternamente all'angolo $A\widehat{B}C$ e quindi diciamo che $A\widehat{B}C<D\widehat{E}F$.
+\item il lato $EF$ cade internamente all'angolo $A\widehat{B}C$ e quindi diciamo che $A\widehat{B}C$ è \emph{maggiore} di $D\widehat{E}F$: $A\widehat{B}C>D\widehat{E}F$;
+\item il lato $EF$ cade esattamente su $BC$ e quindi i due angoli sono \emph{congruenti}: $A\widehat{B}C\cong D\widehat{E}F$;
+\item il lato $EF$ cade esternamente all'angolo $A\widehat{B}C$ e quindi diciamo che $A\widehat{B}C$ è \emph{minore} di $D\widehat{E}F$: $A\widehat{B}C<D\widehat{E}F$.
 \end{itemize*}
 
 \subsection{Operazioni con i segmenti}
@@ -995,8 +1004,6 @@ Proprietà:
 \item differenze di segmenti a due a due congruenti sono congruenti.
 \end{itemize*}
 
-\pagebreak
-
 \begin{exrig}
 \begin{esempio}
 Siano $AB$ e $CD$ due segmenti congruenti appartenenti a una retta $r$ che non abbiano punti in comune. Dimostra che $AD-BC\cong 2\cdot AB$.
@@ -1023,14 +1030,12 @@ Poiché $AB\cong CD$ si ha che
 \caption{Somma di due angoli.}\label{fig:1.32}
 \end{figure}
 
-\paragraph{Differenza di angoli.} La differenza di due angoli, di cui il primo è maggiore o congruente al secondo, è l'angolo che addizionato al secondo dà per somma il primo (figura~\ref{fig:1.33}).
+\paragraph{Differenza di angoli.} La differenza di due angoli, di cui il primo è maggiore o congruente al secondo, è l'angolo che addizionato al secondo dà per somma il primo (figura~\ref{fig:1.33}). Se i due angoli considerati sono congruenti la loro differenza è l'angolo nullo.
 
 \begin{figure}[htb]
 \centering\input{./lbr/chap01/fig043_diff_angoli.pgf}
 \caption{Differenza di due angoli.}\label{fig:1.33}
 \end{figure}
-
-Se i due angoli considerati sono congruenti la loro differenza è l'angolo nullo.
 
 \paragraph{Multiplo di un angolo.} Dato un angolo $A\widehat{O}B$ e un numero $n$ naturale non nullo, il multiplo di $A\widehat{O}B$ secondo $n$ (si può scrivere $n\cdot A\widehat{O}B$) è l'angolo che si ottiene sommando $n$ angoli congruenti a $A\widehat{O}B$. Se $n=0$, il multiplo secondo $n$ di qualsiasi angolo $A\widehat{O}B$ è l'angolo nullo.
 
@@ -1149,6 +1154,8 @@ Si dice \emph{distanza di un punto $P$ da una retta} la lunghezza del segmento d
 Si chiama \emph{asse di un segmento} la retta perpendicolare al segmento e passante per il suo punto medio.
 \end{definizione}
 
+In genere un asse viene rappresentato con una linea a ``tratto e punto''.
+
 \begin{figure}[htb]
 \centering\input{./lbr/chap01/fig054_asse_segmento.pgf}
 \caption{La retta $r$ è l'asse del segmento $AB$ in quanto è perpendicolare alla retta per $AB$ e passa per $M$, il punto medio di $AB$}\label{fig:1.38}
@@ -1186,18 +1193,18 @@ Per misurare un segmento $AB$ si confronta questo segmento con un altro segmento
 
 Nel confronto tra il segmento $AB$ e il segmento $u$, possono verificarsi i tre casi seguenti:
 \begin{enumerate}
-\item Il segmento $AB$ è multiplo del segmento $u$ secondo il numero naturale $n$, precisamente $AB\cong n\cdot u$. In questo caso la misura di $AB$, rispetto a $u$, è il numero naturale $n$. Si scrive $\overline{AB} = nu$.
+\item (figura~\ref{fig:mis_segm1}) Il segmento $AB$ è multiplo del segmento $u$ secondo il numero naturale $n$, precisamente $AB\cong n\cdot u$. In questo caso la misura di $AB$, rispetto a $u$, è il numero naturale $n$. Si scrive $\overline{AB} = nu$.
 
 \begin{figure}[htb]
 \centering\input{./lbr/chap01/fig055_misura_segmento_1.pgf}
-\caption{Il segmento $AB$ misura $5u$, cioè $AB\cong 6\cdot u$, cioè $\overline{AB}=6u$}
+\caption{Il segmento $AB$ misura $5u$, cioè $AB\cong 6\cdot u$, cioè $\overline{AB}=6u$}\label{fig:mis_segm1}
 \end{figure}
 
-\item Il segmento $AB$ non è un multiplo intero di $u$ ma è un multiplo di un sottomultiplo di $u$, precisamente $AB\cong n\cdot \dfrac{u}{m}=\dfrac{n}{m}u$. In questo caso la misura di $AB$, rispetto a $u$, è il numero razionale $\dfrac{n}{m}$. Si scrive $\overline{AB} = \dfrac{n}{m}u$.
+\item (figura~\ref{fig:mis_segm2}) Il segmento $AB$ non è un multiplo intero di $u$ ma è un multiplo di un sottomultiplo di $u$, precisamente $AB\cong n\cdot \dfrac{u}{m}=\dfrac{n}{m}u$. In questo caso la misura di $AB$, rispetto a $u$, è il numero razionale $\dfrac{n}{m}$. Si scrive $\overline{AB} = \dfrac{n}{m}u$.
 
 \begin{figure}[htb]
 \centering\input{./lbr/chap01/fig056_misura_segmento_2.pgf}
-\caption{Il segmento $AB$ è congruente a 13 volte il segmento $\dfrac{1}{5}u$, quindi $AB$ misura $\dfrac{13}{5}u$, cioè $\overline{AB}=\dfrac{13}{5}u$}
+\caption{Il segmento $AB$ è congruente a 13 volte il segmento $\dfrac{1}{5}u$, quindi $AB$ misura $\dfrac{13}{5}u$, cioè $\overline{AB}=\dfrac{13}{5}u$}\label{fig:mis_segm2}
 \end{figure}
 
 \item Il segmento $AB$ non è un multiplo né di $u$ né di un suo sottomultiplo. In questo caso si dice che $AB$ e $u$ sono \emph{incommensurabili} (nei casi precedenti si dice invece che sono \emph{commensurabili}). Anche in questo caso è possibile attribuire ad $AB$ un numero che ne esprime la misura rispetto a $u$, si tratta però di un numero irrazionale. La complessità dell'argomento richiede alcune conoscenze più avanzate di matematica, pertanto la tematica della misura delle grandezze incommensurabili sarà approfondita nel seguito. Qui ci limitiamo ad accennare al caso storicamente più noto di segmenti incommensurabili: la diagonale di un quadrato misurata rispetto al suo lato.
@@ -1222,20 +1229,18 @@ Un altro esempio di numero irrazionale, e di conseguenza di due ``lunghezze'' in
 
 In generale, dato un segmento $AB$ e un segmento $u$, preso come unità di misura, esiste sempre un numero reale positivo che esprime la misura di $AB$ rispetto a $u$. Questo numero è unico, ossia ogni segmento ha una sola misura. Viceversa, dato un qualsiasi numero reale positivo $r$ e un segmento $u$, preso come unità di misura, è sempre possibile costruire un segmento che misura esattamente $r$ rispetto all'unità di misura $u$ fissata.
 
-\pagebreak
-
 Osservazioni
 \begin{itemize*}
-\item Se due segmenti sono congruenti, le loro misure, rispetto alla stessa unità di misura, sono uguali: $AB\cong CD \rightarrow \overline{AB}=\overline{CD}$.
-\item La misura di un segmento $AB$ somma di due segmenti $CD$ e $EF$ ($AB\cong CD + EF$) è uguale alla somma delle misure di $CD$ e $EF$: $AB\cong CD + EF \rightarrow \overline{AB}=\overline{CD}+\overline{EF}$.
-\item La misura di un segmento multiplo secondo $n$ del segmento $AB$ è uguale al prodotto di $n$ per la misura di $AB$: $CD\cong n\cdot AB \rightarrow \overline{CD}=n\overline{AB}$.
-\item Definito il \emph{rapporto tra due segmenti} come il quoziente tra le loro misure $\dfrac{CD}{AB} = \dfrac{\overline{CD}}{\overline{AB}}$ (rispetto alla stessa unità di misura), si ha che il rapporto non dipende dall'unità di misura usata per misurare i segmenti, cioè il numero che si ottiene è sempre lo stesso indipendentemente dall'unità scelta per misurare.
+\item Se due segmenti sono congruenti, le loro misure, rispetto alla stessa unità di misura, sono uguali (e viceversa): $AB\cong CD \:\Leftrightarrow\: \overline{AB}=\overline{CD}$.
+\item La misura di un segmento $AB$ somma di due segmenti $CD$ e $EF$ ($AB\cong CD + EF$) è uguale alla somma delle misure di $CD$ e $EF$: $AB\cong CD + EF \:\Leftrightarrow\: \overline{AB}=\overline{CD}+\overline{EF}$.
+\item La misura di un segmento multiplo secondo $n$ del segmento $AB$ è uguale al prodotto di $n$ per la misura di $AB$: $CD\cong n\cdot AB \:\Leftrightarrow\: \overline{CD}=n\overline{AB}$.
+\item Definito il \emph{rapporto tra due segmenti} come il quoziente tra le loro misure $\dfrac{CD}{AB} = \dfrac{\overline{CD}}{\overline{AB}}$ (rispetto alla stessa unità di misura), si ha che esso non dipende dall'unità di misura usata per misurare i segmenti, cioè il numero che si ottiene è sempre lo stesso indipendentemente dall'unità scelta per misurare.
 \end{itemize*}
 
 Possiamo pertanto parlare di misura della lunghezza di un segmento e darne la seguente definizione generale.
 
 \begin{definizione}
-Dato un segmento $AB$ e un segmento $u$, preso come unità di misura, si dice misura della lunghezza del segmento $AB$ il numero reale positivo $r$ per il quale risulta $AB\cong r\cdot u$.
+Dato un segmento $AB$ e un segmento $u$ preso come unità di misura, si dice \emph{misura della lunghezza del segmento} $AB$ il numero reale positivo $r$ per il quale risulta $AB\cong r\cdot u$.
 \end{definizione}
 
 Nella realtà fisica per misurare la lunghezza degli oggetti reali (l'altezza di una persona, la lunghezza di un banco, di una stanza, di un terreno, \ldots{}) si usa come unità di misura il metro, indicato con la lettera m, con i suoi  multipli (decametro, ettometro, chilometro, \ldots{}) e i suoi sottomultipli (decimetro, centimetro, millimetro, \ldots{}). Anche nella geometria, che tratta di segmenti ideali non riscontrabili perfettamente nella realtà, si usa come unità di misura un segmento di un metro.
@@ -1252,25 +1257,25 @@ Riassumendo, ricordiamo simboli e nozioni che riguardano due punti $A$ e $B$.
 \item La misura della distanza tra i punti $A$ e $B$, che corrisponde alla misura del segmento $AB$, si indica con il simbolo $\overline{AB}$.
 \end{itemize*}
 
-Tutte queste distinzioni sono importanti dal punto di vista dell'organizzazione teorica della geometria, tuttavia dal punto di vista applicativo e della quotidianità del linguaggio geometrico possono risultare pedanti e noiose, spesso si usano espressioni più generiche, finché si riescono ad evitare possibili malintesi. Sebbene a rigore si dovrebbe dire ``La misura della lunghezza del segmento $AB$ rispetto al centimetro è 12'' molto spesso si usa dire ``Il segmento $AB$ è lungo 12 cm'' oppure ``$AB$ misura 12 cm'' o ancora ``La distanza $AB$ è 12 cm'' o più semplicemente ``Un segmento di 12 cm'', ecc.
+Tutte queste distinzioni sono importanti dal punto di vista dell'organizzazione teorica della geometria, tuttavia dal punto di vista applicativo e della quotidianità del linguaggio geometrico possono risultare pedanti e noiose, spesso si usano espressioni più generiche, finché si riescono ad evitare possibili malintesi. Sebbene a rigore si dovrebbe dire ``la misura della lunghezza del segmento $AB$ rispetto al centimetro è 12'' molto spesso si usa dire ``il segmento $AB$ è lungo 12~cm'' oppure ``$AB$ misura 12~cm'' o ancora ``la distanza tra $A$ e $B$ è 12~cm'' o più semplicemente ``il segmento $AB$ di 12~cm'', ecc.
 
 \subsection{Misura di angoli}
 
-Il procedimento che si usa per misurare gli angoli è del tutto analogo a quello usato per misurare i segmenti. Si fissa un'unità di misura, cioè un angolo $\widehat{u}$, e quindi si confronta l'angolo da misurare con $\widehat{u}$. Come risultato si avrà un numero reale positivo che chiamiamo misura dell'ampiezza dell'angolo.
+Il procedimento che si usa per misurare gli angoli è del tutto analogo a quello usato per misurare i segmenti. Si fissa un'unità di misura, cioè un angolo $\widehat{u}$, e quindi si confronta l'angolo da misurare con $\widehat{u}$. Come risultato si avrà un numero reale positivo che chiamiamo \emph{misura dell'ampiezza dell'angolo}.
 
 \begin{figure}[htb]
 \centering\input{./lbr/chap01/fig058_misura_angolo.pgf}
 \caption{L'angolo $A\widehat{O}B$ misura 4 volte l'angolo unitario $\widehat{u}$}
 \end{figure}
 
-Per misurare gli angoli l'unità di misura comunemente usata è la trecentosessantesima parte dell'angolo giro, quest'angolo si chiama \emph{grado}, e si indica con un cerchietto posto in alto $\grado$. Si ha quindi, usando come unità di misura il grado, che:
+Per misurare gli angoli, l'unità di misura comunemente usata è la trecentosessantesima parte dell'angolo giro, detta \emph{grado}, e viene indicata con un cerchietto posto in alto ($\grado$) di seguito al numero che ne esprime la misura. Si ha quindi, usando come unità di misura il grado, che:
 \begin{itemize*}
-\item l'angolo retto misura 90 gradi, si scrive $90\grado$;
+\item l'angolo retto misura 90 gradi e si scrive $90\grado$;
 \item l'angolo piatto misura $180\grado$;
 \item l'angolo giro misura $360\grado$.
 \end{itemize*}
 
-I sottomultipli del grado sono il \emph{primo} che è la sessantesima parte di un grado (in simboli $1\grado=60'$) e il \emph{secondo} che è la sessantesima parte del primo (in simboli $1'=60''$) e quindi la tremilaseicentesima parte del grado (in simboli $1\grado=\np{3600}''$).
+I sottomultipli del grado sono il \emph{primo} (minuto primo) che è la sessantesima parte di un grado (in simboli $1\grado=60'$) e il \emph{secondo} (minuto secondo) che è la sessantesima parte del primo (in simboli $1'=60''$) e quindi la tremilaseicentesima parte del grado (in simboli $1\grado=\np{3600}''$).
 
 \begin{exrig}
 \begin{esempio}
@@ -1301,30 +1306,33 @@ In base a quanto descritto, vediamo brevemente come si passa da un sistema all'a
 
 I sistemi sessagesimale e sessadecimale non sono gli unici usati per le misure degli angoli.
 
-Osservando i tasti di una calcolatrice scientifica, si può vedere che ci sono tre sistemi principali le cui unità sono rispettivamente il \emph{grado sessagesimale} (DEG), il \emph{grado centesimale} (GRAD) e il \emph{radiante} (RAD).
+Osservando i tasti di una calcolatrice scientifica, si può vedere che ci sono tre sistemi principali le cui unità sono rispettivamente il \emph{grado sessagesimale}\footnote{in realtà quasi tutte le calcolatrici utilizzano la notazione sessadecimale.} (DEG) che abbiamo precedentemente illustrato, il \emph{grado centesimale} (GRAD) e il \emph{radiante} (RAD).
 
 Il grado centesimale è importante per gli strumenti tecnici. Si può passare dal grado sessagesimale al grado centesimale e viceversa con una semplice proporzione, sapendo che l'angolo retto, pari a $90\grado$, corrisponde a 100 gradi centesimali (in simboli 100\textsuperscript{g}).
 
-Il radiante è utile nello studio della trigonometria e dell'analisi matematica. L'angolo di misura 1~radiante (in simboli 1 rad) è congruente ad un angolo con vertice nel centro di una circonferenza e tale che la misura dell'arco da esso individuato è uguale alla misura del raggio della circonferenza stessa. Come si può facilmente intuire, il radiante ed il grado sono grandezze incommensurabili.
+Il radiante è utile nello studio della trigonometria e dell'analisi matematica. L'angolo di misura 1~radiante (in simboli 1~rad\footnote{in genere l'unità di misura rad viene omessa.}) è congruente ad un angolo con vertice nel centro di una circonferenza e tale che la misura dell'arco da esso individuato è uguale alla misura del raggio della circonferenza stessa.
+Facendo riferimento alla figura~\ref{fig:radiante}, l'angolo~$\alpha$ formato dalle semirette~$ON$ e~$OM$ misura 1~radiante se l'arco $MN$ misura quanto il raggio della circonferenza ($\overline{OM}$). Come si può facilmente intuire, il radiante ed il grado sono grandezze incommensurabili.
 
 \begin{figure}[htb]
 \centering\input{./lbr/chap01/fig059_angolo_radianti.pgf}
 \caption{L'angolo con ampiezza di 1 radiante}\label{fig:radiante}
 \end{figure}
 
-Facendo riferimento alla figura~\ref{fig:radiante}, l'angolo~$\alpha$ formato dalle semirette~$ON$ e~$OM$ misura 1~radiante se l'arco $MN$ misura quanto il raggio della circonferenza ($\overline{OM}$), ovvero $1\text{ rad} \simeq 57\grado,297469362 \simeq 57\grado 17'51''$.
-
+\begin{osservazione}
 La misura di un arco va fatta con una modalità differente rispetto a quella utilizzata per la misura dei segmenti. Si può immaginare di utilizzare come strumento di misura un metro flessibile, ovvero un filo flessibile ma inestensibile, che si può piegare ma non si può allungare o accorciare, su cui siano state tracciate, a distanza regolare, delle tacche corrispondenti a sottomultipli dell'unità di misura delle lunghezze; una di queste tacche viene assunta come origine del metro. Facendo combaciare l'origine del metro flessibile con il punto~$M$ e flettendo il metro in modo che si sovrapponga all'arco~$MN$ si otterrà la sua lunghezza.
+\end{osservazione}
 
 Ricordando che il rapporto tra la misura della circonferenza ed il raggio vale~$2\pi$, dove $\pi$ è il numero irrazionale~$3,1415\ldots{}$ (i puntini indicano che la parte decimale è infinita e non periodica), possiamo intuire che il valore dell'angolo giro ($360\grado$), corrispondente ad un arco che coincide con l'intera circonferenza, vale $2\pi$~radianti.
 
-Per convertire le ampiezze degli angoli da gradi a radianti e viceversa è sufficiente impostare la seguente proporzione:
+Visto che un angolo giro corrisponde a $2\pi$~radianti, l'angolo piatto ($180\grado$) corrisponderà a $\pi$~radianti, quindi per convertire le ampiezze degli angoli da gradi a radianti e viceversa è sufficiente impostare la seguente proporzione:
 \[180\grado : \pi = \alpha\grado : \alpha\]
 dove con $\alpha\grado$ abbiamo indicato l'ampiezza dell'angolo in gradi e con $\alpha$ la sua ampiezza in radianti. Da cui si ottiene
 
 \[\alpha\grado = \dfrac{180\grado}{\pi}\alpha\qquad\text{e}\qquad\alpha = \dfrac{\pi}{180\grado}\alpha\grado\]
 
 Quindi, avendo un angolo espresso in radianti, per convertirlo in gradi si può utilizzare la prima formula inserendo al posto di $\alpha$ la sua effettiva misura in radianti, mentre se abbiamo un angolo espresso in gradi e lo vogliamo trasformare in radianti si può utilizzare la seconda formula inserendo al posto di $\alpha\grado$ l'effettiva misura dell'angolo in gradi.
+
+Possiamo pertanto calcolare la misura in gradi di un angolo di 1~radiante ponendo nella prima formula $\alpha=1$. Si ottiene così $\alpha\grado = 180\grado/\pi \simeq 57\grado,297469362 \simeq 57\grado 17'51''$.
 
 Riportiamo di seguito una tabella che fornisce i valori degli angoli più comuni espressi sia in gradi che in radianti.
 
@@ -1356,7 +1364,7 @@ Da questa definizione segue che $A\widehat{O}B = -B\widehat{O}A$, dove $A\wideha
 \caption{Il verso positivo nella misura degli angoli è quello antiorario}\label{fig:1.43}
 \end{figure}
 
-Inoltre, la misura dell'angolo è definita a meno di un multiplo intero di $360\grado$, ovvero gli angoli $\alpha$ e $\alpha+360\grado$ hanno la stessa ampiezza, lo stesso dicasi per tutti gli angoli del tipo $\alpha+n\cdot 360\grado$ o $\alpha - n\cdot 360\grado$ con $n$ intero. Per esempio, sono tra loro congruenti gli angoli di $45\grado$, $405\grado$, $765\grado$, \ldots{}
+Inoltre, la misura di un angolo è definita a meno di un multiplo intero di $360\grado$, ovvero gli angoli $\alpha$ e $\alpha+360\grado$ hanno la stessa ampiezza, lo stesso dicasi per tutti gli angoli del tipo $\alpha+n\cdot 360\grado$ o $\alpha - n\cdot 360\grado$ con $n$ intero. Per esempio, sono tra loro congruenti gli angoli di $45\grado$, $405\grado$, $765\grado$, \ldots{}
 
 \vspazio\ovalbox{\risolvii \ref{ese:1.104}, \ref{ese:1.105}, \ref{ese:1.106}, \ref{ese:1.107}, \ref{ese:1.108}, \ref{ese:1.109}, \ref{ese:1.110}, \ref{ese:1.111}, \ref{ese:1.112}, \ref{ese:1.113}, \ref{ese:1.114},}
 
@@ -1399,6 +1407,7 @@ Si chiama \emph{poligonale} una spezzata chiusa non intrecciata.
 Si chiama \emph{poligono} la figura formata da una poligonale e dalla parte finita di piano da essa delimitata.
 \end{definizione}
 
+\begin{definizione}
 In un poligono chiamiamo:
 \begin{itemize*}
 \item \emph{vertici} del poligono i vertici della poligonale;
@@ -1408,6 +1417,7 @@ In un poligono chiamiamo:
 \item \emph{punti esterni} tutti i punti del piano che non sono interni e non appartengono al contorno;
 \item \emph{perimetro} del poligono il segmento somma dei lati del poligono.
 \end{itemize*}
+\end{definizione}
 
 \begin{definizione}
 Un poligono si dice \emph{convesso} se è una figura convessa, cioè se il segmento che ha per estremi due suoi punti qualsiasi è interamente contenuto nel poligono, si dice \emph{concavo} se non è convesso, cioè se esistono almeno due punti per i quali il segmento che li unisce non è contenuto interamente nel poligono.
@@ -1418,13 +1428,15 @@ Un poligono si dice \emph{convesso} se è una figura convessa, cioè se il segme
 \caption{Il poligono $P_1$ è convesso perché comunque si prendono due suoi punti interni, il segmento che li unisce è interno al poligono; il poligono $P_2$ è concavo perché il segmento $AB$ cade in parte all'esterno del poligono}
 \end{figure}
 
-Nel seguito quando parleremo di poligoni intendiamo sempre poligoni convessi.
+Nel seguito, quando parleremo di poligoni intenderemo sempre poligoni convessi.
 
+\begin{definizione}
 In un poligono chiamiamo:
 \begin{itemize*}
 \item \emph{angolo interno} o \emph{angolo del poligono} ognuno degli angoli che ha per lati le semirette che contengono due lati consecutivi del poligono e ha per vertice il vertice del poligono in comune a quei due lati;
-\item \emph{angolo esterno} ciascun angolo adiacente ad un angolo interno (suo supplementare).
+\item \emph{angolo esterno} ciascun angolo adiacente ad un angolo interno.
 \end{itemize*}
+\end{definizione}
 
 \begin{figure}[htb]
 \centering\input{./lbr/chap01/fig064_angoli_poligoni.pgf}
@@ -1444,11 +1456,14 @@ Osserva che per ogni angolo interno esistono due angoli esterni, congruenti tra 
 \caption{Ogni angolo interno ha due angoli esterni adiacenti ad esso}
 \end{figure}
 
-Inoltre definiamo:
+Inoltre diamo le seguenti definizioni:
+\begin{definizione}
+In un poligono chiamiamo:
 \begin{itemize*}
 \item \emph{corda} ogni segmento che unisce due qualsiasi punti del contorno del poligono che non appartengono allo stesso lato;
 \item \emph{diagonale} ogni corda che unisce due vertici non consecutivi.
 \end{itemize*}
+\end{definizione}
 
 \begin{figure}[htb]
 \centering\input{./lbr/chap01/fig066_corda_diag.pgf}

@@ -34,7 +34,7 @@
 \coordinate (d) at ($(a)!0.870196173!(b)$);
 \draw[dashed] ($(b)!-0.5!(a)$) -- ($(b)!1.5!(a)$);
 
-\draw[fill] (a) circle (1.5pt) node[below] {$A\equiv C$} -- (b) circle (1.5pt) node[above right=-2pt] {$B$};
+\draw[fill] (a) circle (1.5pt) node[left] {$A\equiv C$} -- (b) circle (1.5pt) node[above right=-2pt] {$B$};
 \draw[fill] (d) circle (1.5pt) node[right] {$D$};
 
 %\draw (c) -- (d) node[above] {$D$};

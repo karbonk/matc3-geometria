@@ -16,10 +16,14 @@
 \end{scope}
 
 \begin{scope}[xshift=2cm]
-\draw (0,0) -- (2.6,0);
+\draw[thick] (0,0) -- (2.6,0);
 \foreach \x in {0.2,0.4,...,2.4}{
 	\draw (\x,-1pt) -- (\x,0pt);
 }
+\foreach \x in {1,2}{
+	\draw (\x,0pt) -- (\x,1pt);
+}
+
 \draw[fill] (0,0) circle (0.7pt) node[above] {$A$};
 \draw[fill] (2.6,0) circle (0.7pt) node[above] {$B$};
 
