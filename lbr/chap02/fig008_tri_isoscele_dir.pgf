@@ -1,0 +1,36 @@
+\begin{tikzpicture}[scale=0.9,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (-1.3,0);
+\coordinate (b) at (1.3,0);
+\coordinate (c) at (0,3);
+\coordinate (k) at (0,0);
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- cycle;
+\draw[orange] (a) circle (0.5);
+\draw[orange] (b) circle (0.5);
+\node at ([shift={(0.6,0.4)}]a) {$\alpha$};
+\node at ([shift={(-0.6,0.4)}]b) {$\beta$};
+\end{scope}
+
+\begin{scope}
+\clip (a) -- (c) -- (k) -- cycle;
+\draw[red] (c) circle (0.65);
+\end{scope}
+
+\begin{scope}
+\clip (b) -- (c) -- (k) -- cycle;
+\draw[blue] (c) circle (0.65);
+\end{scope}
+
+
+\draw[thick] (a) node[below] {$A$} -- (b) node[below] {$B$} -- (c) node[above] {$C$} -- cycle;
+\draw[dashed] (c) -- (k);
+\node[below] at (k) {$K$};
+
+\end{scope}
+
+
+\end{tikzpicture}

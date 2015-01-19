@@ -1,15 +1,17 @@
-# makefile per geo2015.tex
+# makefile per geometria.tex
 #
-# (c) 2014 Dimitrios Vrettos - d.vrettos@gmail.com
+# (c) 2015 Daniele Masini - d.masini.it@gmail.com
 # v1.0
 #
-NAME = geo2015
+NAME = geometria
 
-SHORT_NAME = geo2015_clr
+SHORT_NAME = geometria_clr
 
 TEX = $(NAME).tex
 
 PDF = $(NAME).pdf
+
+PDF_DEF = $(NAME)-def.pdf
 
 PDFLATEX = pdflatex --shell-escape
 
@@ -42,6 +44,7 @@ help:
 pdf: $(TEX)
 	$(PDFLATEX) $<
 	$(PDFLATEX) $<
+	mv -f $(PDF) $(PDF_DEF)
 
 clean: $(CLEAN_DIRS)
 $(CLEAN_DIRS):
@@ -51,7 +54,7 @@ $(CLEAN_DIRS):
 	done
 
 clean-dist: clean
-	rm -f $(PDF)
+	rm -f $(PDF_DEF)
 	rm -f *.tar.gz
 	rm -f *.zip
  
@@ -61,7 +64,7 @@ dist-zip: clean
 
 dist-tar: clean
 	rm -f $(TAR)
-	tar -czvf $(TAR) --exclude $(PDF) --exclude *.tar.gz --exclude *.zip *
+	tar -czvf $(TAR) --exclude $(PDF_DEF) --exclude *.tar.gz --exclude *.zip *
 
 # END OF MAKEFILE
 

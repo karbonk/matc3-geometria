@@ -1,0 +1,33 @@
+\begin{tikzpicture}[scale=1.1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (0,0);
+\coordinate (c) at (0.6,1.7);
+\coordinate (b) at (2.5,0);
+\draw[thick] (b)-- (c) -- (a) -- cycle;
+\end{scope}
+
+\begin{scope}[xshift=3.7cm]
+\coordinate (a) at (0,0);
+\coordinate (c) at (-.5,1.7);
+\coordinate (b) at (2.2,0);
+\draw[thick] (b)-- (c) -- (a) -- cycle;
+\end{scope}
+
+\begin{scope}[xshift=7cm, rotate=-18.5]
+\coordinate (a) at (0,0);
+\coordinate (c) at (-.5,1.5);
+\coordinate (b) at (1.7,0);
+\draw[thick] (b)-- (c) -- (a) -- cycle;
+\end{scope}
+
+\begin{scope}[xshift=9cm]
+\coordinate (a) at (0,1.2);
+\coordinate (c) at (1.2,1.7);
+\coordinate (b) at (1.2,-0.4);
+\draw[thick] (b)-- (c) -- (a) -- cycle;
+\end{scope}
+
+
+\end{tikzpicture}

@@ -1,0 +1,79 @@
+\begin{tikzpicture}[scale=0.9,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (-1.3,0);
+\coordinate (b) at (1.3,0);
+\coordinate (c) at (0,3);
+\coordinate (j) at (0,0);
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- cycle;
+\draw[fill,orange!40] (a) circle (0.5);
+\draw[fill,orange!40] (b) circle (0.5);
+\draw[fill,red!30] (c) circle (0.6);
+\node at ([shift={(0.6,0.4)}]a) {$\alpha_1$};
+\node at ([shift={(-0.6,0.4)}]b) {$\beta_1$};
+\node at ([shift={(0,-0.9)}]c) {$\gamma_1$};
+\end{scope}
+
+\begin{scope}
+\clip (a) -- (c) -- (j) -- cycle;
+\draw[thick,red] (c) circle (0.6);
+\end{scope}
+
+\begin{scope}
+\clip (b) -- (c) -- (j) -- cycle;
+\draw[thick,blue] (c) circle (0.6);
+\end{scope}
+
+\draw[dashed] (c) -- (j) node[below] {$J$};
+\draw[thick] (a) node[below] {$A$} -- (b) node[below] {$B$} -- (c) node[above] {$C$} -- cycle;
+
+\end{scope}
+
+
+\begin{scope}[xshift=4cm]
+\coordinate (a) at (-1.3,0);
+\coordinate (b) at (1.3,0);
+\coordinate (c) at (0,3);
+\coordinate (j) at (0,0);
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- cycle;
+\draw[fill,orange!40] (a) circle (0.5);
+\draw[fill,orange!40] (b) circle (0.5);
+\node at ([shift={(0.6,0.4)}]a) {$\alpha_2$};
+\node at ([shift={(-0.6,0.4)}]b) {$\beta_2$};
+\end{scope}
+
+\draw[dashed] (c) -- (j) node[below] {$K$};
+\draw[thick] (a) node[below] {$D$} -- (b) node[below] {$E$} -- (c) node[above] {$F$} -- cycle;
+
+\end{scope}
+
+\begin{scope}[xshift=8cm]
+\coordinate (a) at (-1.3,0);
+\coordinate (b) at (1.3,0);
+\coordinate (c) at (0,3);
+\coordinate (j) at (0,0);
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- cycle;
+\draw[fill,orange!40] (a) circle (0.5);
+\draw[fill,orange!40] (b) circle (0.5);
+\node at ([shift={(0.6,0.4)}]a) {$\alpha_3$};
+\node at ([shift={(-0.6,0.4)}]b) {$\beta_3$};
+\end{scope}
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- cycle;
+\draw[fill,blue!30] (j) circle (0.4);
+\end{scope}
+
+\draw[dashed] (c) -- (j) node[below] {$L$};
+\draw[thick] (a) node[below] {$G$} -- (b) node[below] {$H$} -- (c) node[above] {$I$} -- cycle;
+
+\end{scope}
+
+\end{tikzpicture}

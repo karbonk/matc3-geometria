@@ -1,0 +1,39 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (s1) at (-3,-0.7);
+\coordinate (s2) at (3,0.7);
+\coordinate (r1) at (-3,1.5);
+\coordinate (r2) at (3,-1.5);
+
+\coordinate (p) at (intersection of r1--r2 and s1--s2);
+\coordinate (a) at ($(p)!2.5cm!(r1)$);
+\coordinate (b) at ($(p)!2.5cm!(r2)$);
+\coordinate (c) at ($(p)!1.7cm!(s1)$);
+\coordinate (d) at ($(p)!1.7cm!(s2)$);
+\draw[fill] (a) circle (1.5pt) node[above] {$A$};
+\draw[fill] (b) circle (1.5pt) node[below] {$B$};
+\draw[fill] (c) circle (1.5pt) node[below] {$C$};
+\draw[fill] (d) circle (1.5pt) node[above] {$D$};
+\draw (a) -- (c) -- (b) -- (d) -- cycle;
+
+\begin{scope}
+\clip (a) -- (p) -- (c) -- cycle;
+\draw[red!90] (p) circle (0.5);
+%\node at ([shift={(0.7,0.3)}]p) {$\alpha$};
+\end{scope}
+
+\begin{scope}
+\clip (b) -- (p) -- (d) -- cycle;
+\draw[red!90] (p) circle (0.5);
+%\node at ([shift={(0.7,0.3)}]p) {$\alpha$};
+\end{scope}
+\draw (s1) node[above] {$s$} -- (s2);
+\draw (r1) node[above] {$r$} -- (r2);
+\draw[fill] (p) circle (1.5pt) node[above] {$P$};
+
+\end{scope}
+
+
+\end{tikzpicture}

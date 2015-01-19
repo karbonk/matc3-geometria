@@ -1,0 +1,44 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (-3,0);
+\coordinate (b) at (3,0);
+\coordinate (m) at (0,0);
+\coordinate (r1) at (-1.7,-2);
+\coordinate (r2) at (1.7,2);
+\coordinate (s1) at ([shift={(135:3)}]b);
+\coordinate (t1) at ([shift={(-45:3)}]a);
+\coordinate (c) at (intersection of r1--r2 and a--t1);
+\coordinate (d) at (intersection of r1--r2 and b--s1);
+
+\begin{scope}
+\clip (a) -- (m) -- (c) -- cycle;
+\draw[fill,orange!40] (a) circle (0.5);
+\draw[red!90] (m) circle (0.5);
+%\node at ([shift={(0.7,0.3)}]p) {$\alpha$};
+\end{scope}
+
+\begin{scope}
+\clip (b) -- (m) -- (d) -- cycle;
+\draw[fill,orange!40] (b) circle (0.5);
+\draw[red!90] (m) circle (0.5);
+%\node at ([shift={(0.7,0.3)}]p) {$\alpha$};
+\end{scope}
+
+\draw[fill] (a) circle (1.5pt) node[above] {$A$};
+\draw[fill] (b) circle (1.5pt) node[below] {$B$};
+\draw[fill] (c) circle (1.5pt) node[right] {$C$};
+\draw[fill] (d) circle (1.5pt) node[left] {$D$};
+\draw (a) -- (b);
+\draw (r1) -- (r2);
+\draw (a) -- (t1);
+\draw (b) -- (s1);
+
+\draw (r1) node[left] {$r$} -- (r2);
+\draw[fill] (m) circle (1.5pt) node[left = 3pt, above=0pt] {$M$};
+
+\end{scope}
+
+
+\end{tikzpicture}

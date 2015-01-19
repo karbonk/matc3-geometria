@@ -87,7 +87,7 @@ Due triangoli sono congruenti se hanno congruenti due lati e l'angolo tra essi c
 \centering\input{./lbr/chap02/fig004_1crit_cong_tri.pgf}
 \end{figure}
 
-\noindent Ipotesi: $AC\cong A'C'$, $BC\cong B'C'$, $A\widehat{C}B \cong A'\widehat{C'}B'$.\tab Tesi:  $ABC \cong A'B'C'$.
+\noindent Ipotesi: $AC\cong A'C'$, $BC\cong B'C'$, $\gamma \cong \gamma'$.\tab Tesi:  $ABC \cong A'B'C'$.
 
 \begin{proof}
 Vogliamo dimostrare che il triangolo $A’B’C’$ può essere portato a sovrapporsi perfettamente al triangolo $ABC$.
@@ -98,12 +98,12 @@ Poiché per ipotesi i segmenti $AC$ e $A’C’$ sono congruenti, se $C$ coincid
 
 %Allora i triangoli potrebbero trovarsi almeno nella seguente posizione, nella quale $A$ e $A’$ coincidono?
 %Tuttavia nemmeno questa posizione è possibile poiché
-Avendo supposto per ipotesi che gli angoli $\gamma$ e $\gamma’$ sono congruenti, la semiretta per $CB$ e la semiretta per $C’B’$ devono sovrapporsi, in quanto devono formare lo stesso angolo con la semiretta per $CA$.
+Avendo supposto per ipotesi che gli angoli $\gamma$ e $\gamma’$ sono congruenti, la semiretta per $CB$ e la semiretta per $C’B’$ devono sovrapporsi, in quanto devono formare lo stesso angolo con la semiretta per $CA$, ovvero per $C'A'$.
 
 %A questo punto, rimane da fissare la posizione di $B’$ rispetto a $B$, cioè rimane da decidere se $B’$ cade internamente al segmento $CB$, come nella figura che segue, se $B’$ cade esternamente al segmento $CB$ o se $B’$ e $B$ coincidono.
 Inoltre, poiché per ipotesi $BC\cong B'C'$, il punto $B’$ deve necessariamente coincidere con $B$.
 
-Pertanto tutti i vertici del triangolo $ABC$ si sovrappongono ai vertici del triangolo $A’B’C’$ e di conseguenza i triangoli $ABC$ e $A’B’C’$ sono congruenti.
+Pertanto tutti i vertici del triangolo $A'B'C'$ si sovrappongono ai vertici del triangolo $ABC$ e di conseguenza i triangoli $ABC$ e $A’B’C’$ sono congruenti.
 \end{proof}
 
 \begin{teorema}[2\textsuperscript{o} Criterio di congruenza dei triangoli]
@@ -126,15 +126,16 @@ Dalla congruenza degli angoli $\alpha$ e $\alpha'$ segue che la semiretta $A'C'$
 Poiché, dunque, i tre vertici si sono sovrapposti, i due triangoli sono completamente sovrapposti e quindi sono congruenti.
 \end{proof}
 
-% figura
-
 \begin{exrig}
-\begin{esempio}
+\begin{esempio}\label{esempio:2.1}
 Si considerino due rette incidenti, $r$ ed $s$, ed il loro punto in comune $P$. Sulle semirette opposte di origine $P$ si prendano punti equidistanti da $P$, come in figura, in maniera tale che $AP\cong PB$, $CP\cong PD$. Dimostra che, unendo i quattro punti in modo da costruire un quadrilatero, i quattro triangoli che si vengono a formare sono a due a due congruenti: $ACP\cong BDP$, $ADP\cong BPC$.
 
-Realizziamo il disegno ed esplicitiamo ipotesi e tesi
+Realizziamo il disegno (figura~\ref{fig:esempio2.1}) ed esplicitiamo ipotesi e tesi.
 
-% figura
+\begin{figure}[htb]
+\centering\input{./lbr/chap02/fig006_esempio.pgf}
+\caption{Esempio~\ref{esempio:2.1}}\label{fig:esempio2.1}
+\end{figure}
 
 \noindent Ipotesi: $r\cap s=P$, $AP\cong PB$, $CP\cong PD$.\tab\tab Tesi: $ACP\cong BDP$, $ADP\cong BPC$.
 
@@ -145,10 +146,13 @@ Analogamente, i triangoli $ADP$ e $BPC$ hanno: \ldots\ldots\ldots\ldots\ldots\ld
 \end{proof}
 \end{esempio}
 
-\begin{esempio}
-Si considerino un segmento $AB$ ed il suo punto medio $M$. Si tracci una generica retta $r$ passante per $M$ e distinta dalla retta per $AB$. Si traccino inoltre due semirette di origine rispettivamente $A$ e $B$, situate nei due semipiani opposti rispetto alla retta per $AB$, che intersechino la retta $r$ rispettivamente in $C$ e in $D$ e che formino con la retta per $AB$ due angoli congruenti (vedi figura). Detti $C$ e $D$ i rispettivi punti di intersezione delle due semirette con la retta $r$, dimostra che i triangoli $AMC$ e $BMD$ sono congruenti.
+\begin{esempio}\label{esempio:2.2}
+Si considerino un segmento $AB$ ed il suo punto medio $M$. Si tracci una generica retta $r$ passante per $M$ e distinta dalla retta per $AB$. Si traccino inoltre due semirette di origine rispettivamente $A$ e $B$, situate nei due semipiani opposti rispetto alla retta per $AB$, che intersechino la retta $r$ rispettivamente in $C$ e in $D$ e che formino con la retta per $AB$ due angoli congruenti (vedi figura~\ref{fig:esempio2.2}). Detti $C$ e $D$ i rispettivi punti di intersezione delle due semirette con la retta $r$, dimostra che i triangoli $AMC$ e $BMD$ sono congruenti.
 
-% figura
+\begin{figure}[htb]
+\centering\input{./lbr/chap02/fig007_esempio.pgf}
+\caption{Esempio~\ref{esempio:2.2}}\label{fig:esempio2.2}
+\end{figure}
 
 \noindent Ipotesi: $AM\cong MB$, $M\widehat{A}C\cong M\widehat{B}D$.\tab Tesi: $AMC\cong BMD$.
 
@@ -168,17 +172,21 @@ Il \emph{triangolo equilatero} è un caso particolare di triangolo isoscele: si 
 In un triangolo isoscele gli angoli alla base sono congruenti.
 \end{teorema}
 
-\noindent Ipotesi: $AC\cong BC$.\tab Tesi: $B\widehat{A}C\cong A\widehat{B}C$.
+\begin{figure}[htb]
+\centering\input{./lbr/chap02/fig008_tri_isoscele_dir.pgf}
+\end{figure}
+
+\noindent Ipotesi: $AC\cong BC$.\tab Tesi: $\alpha\cong \beta$.
 
 \begin{proof}
 Tracciamo la bisettrice $CK$ dell'angolo in $C$.
-I triangolo $ACK$ e $BCK$ sono congruenti per il primo criterio, infatti hanno:
+I triangoli $ACK$ e $BCK$ sono congruenti per il primo criterio, infatti hanno:
 \begin{itemize*}
 \item $AC\cong CB$ per ipotesi;
 \item $CK$ lato in comune;
 \item $A\widehat{C}K\cong B\widehat{C}K$ perché $CK$ è la bisettrice dell'angolo in $C$.
 \end{itemize*}
-Pertanto, essendo congruenti, i due triangoli hanno tutti gli elementi congruenti, in particolare l'angolo in $A$ è congruente all'angolo in $B$.
+Pertanto, essendo congruenti, i due triangoli hanno tutti gli elementi congruenti, in particolare l'angolo $\alpha$ (in $A$) è congruente all'angolo $\beta$ (in $B$).
 \end{proof}
 
 Il teorema precedente è invertibile, nel senso che è valido anche il teorema inverso, quello che si ottiene scambiando tra loro ipotesi e tesi.
@@ -187,16 +195,19 @@ Il teorema precedente è invertibile, nel senso che è valido anche il teorema i
 Se un triangolo ha due angoli congruenti, allora è isoscele (rispetto al lato compreso tra gli angoli congruenti preso come base).
 \end{teorema}
 
-\noindent Ipotesi: $B\widehat{A}C\cong A\widehat{B}C$.\tab Tesi: $AC\cong BC$.
+\begin{figure}[htb]
+\centering\input{./lbr/chap02/fig009_tri_isoscele_inv.pgf}
+\end{figure}
 
-% figura
+\noindent Ipotesi: $\alpha\cong \beta$.\tab Tesi: $AC\cong BC$.
 
 \begin{proof}
 Procediamo per passi, realizzando una costruzione che ci permetta di confrontare coppie di triangoli congruenti. Prolunghiamo i lati $AC$ e $BC$ dalla parte di $A$ e di $B$ rispettivamente, e sui prolungamenti prendiamo due punti $D$ ed $E$ in maniera tale che risulti $AD\cong BE$.
 
-Osserviamo che i triangoli $ADB$ e $BAE$ risultano congruenti per il 1\textsuperscript{o} criterio, avendo in comune il lato $AB$  ed essendo $AD\cong BE$ per costruzione e $D\widehat{A}B\cong A\widehat{B}E$ perché adiacenti agli angoli $C\widehat{A}B$ e $C\widehat{B}A$ congruenti per ipotesi. Pertanto, tutti gli elementi dei due triangoli $ADB$ e $AEB$ sono ordinatamente congruenti, in particolare $DB\cong AE$, $A\widehat{D}B\cong B\widehat{E}A$ e $A\widehat{B}D\cong B\widehat{A}E$.
+Osserviamo che i triangoli $ADB$ e $BAE$ risultano congruenti per il 1\textsuperscript{o} criterio, avendo in comune il lato $AB$ ed essendo $AD\cong BE$ per costruzione e $D\widehat{A}B\cong A\widehat{B}E$ perché adiacenti agli angoli $C\widehat{A}B$ e $C\widehat{B}A$ congruenti per ipotesi. Pertanto, tutti gli elementi dei due triangoli $ADB$ e $AEB$ sono ordinatamente congruenti, in particolare $DB\cong AE$, $A\widehat{D}B\cong B\widehat{E}A$ e $A\widehat{B}D\cong B\widehat{A}E$.
 
 I triangoli $CDB$ e $CAE$ risultano dunque congruenti per il 2\textsuperscript{o} criterio poiché hanno $DB\cong AE$, $C\widehat{D}B\cong C\widehat{E}A$ per quanto appena dimostrato e $C\widehat{D}B\cong C\widehat{A}E$ perché somma di angoli rispettivamente congruenti: $C\widehat{B}D\cong C\widehat{B}A + A\widehat{B}D$ e $C\widehat{A}E\cong C\widehat{A}B + B\widehat{A}E$.
+
 Pertanto, i restanti elementi dei due triangoli risultano ordinatamente congruenti, in particolare $CB\cong CA$, che è la tesi che volevamo dimostrare.
 \end{proof}
 
@@ -240,7 +251,9 @@ In ogni triangolo isoscele, la mediana relativa alla base è anche altezza e bis
 \end{proposizione}
 Nella figura, $CJ$ è per ipotesi la bisettrice dell'angolo al vertice $\gamma$ del triangolo $ABC$, $FK$ è la mediana relativa alla base $DE$ del triangolo $DEF$, $IL$ è l'altezza relativa alla base $GH$ del triangolo $GHI$.
 
-% figura
+\begin{figure}[htb]
+\centering\input{./lbr/chap02/fig010_tri_isoscele_prop.pgf}
+\end{figure}
 
 Dividiamo l'enunciato in tre parti:
 \begin{enumeratea}
@@ -251,9 +264,9 @@ Dividiamo l'enunciato in tre parti:
 
 Per ciascuna di esse scriviamo ipotesi e tesi.
 \begin{enumeratea}
-\item In $ABC$:	Ipotesi: $AC\cong CB$, $C\widehat{A}B\cong C\widehat{B}A$, $A\widehat{C}J\cong B\widehat{C}J$. Tesi: $CJ\perp AB$, $AJ\perp JB$.
-\item In $DEF$:	\,Ipotesi: $DF\cong FE$, $F\widehat{D}E\cong F\widehat{E}D$, $DK\cong KE$.\tab Tesi: $FK\perp DE$, $D\widehat{F}K\cong E\widehat{F}K$.
-\item In $GHI$:	\,Ipotesi: $IG\cong IH$, $I\widehat{G}H\cong I\widehat{H}G$, $IL\cong GH$.\tab Tesi: $GL\perp LH$, $G\widehat{I}L\cong H\widehat{I}L$.
+\item In $ABC$:	Ipotesi: $AC\cong CB$, $\alpha_1\cong \beta_1$, $A\widehat{C}J\cong B\widehat{C}J$. Tesi: $CJ\perp AB$, $AJ\perp JB$.
+\item In $DEF$:	\,Ipotesi: $DF\cong FE$, $\alpha_2\cong \beta_2$, $DK\cong KE$.\tab Tesi: $FK\perp DE$, $D\widehat{F}K\cong E\widehat{F}K$.
+\item In $GHI$:	\,Ipotesi: $IG\cong IH$, $\alpha_3\cong \beta_3$, $IL\cong GH$.\tab Tesi: $GL\perp LH$, $G\widehat{I}L\cong H\widehat{I}L$.
 \end{enumeratea}
 
 \begin{proof}
@@ -273,7 +286,15 @@ Dunque $D\widehat{F}K\cong E\widehat{F}K$ e $F\widehat{K}D\cong F\widehat{K}E$ c
 Due triangoli sono congruenti se hanno congruenti le tre coppie di lati.
 \end{teorema}
 
-\noindent Ipotesi: $AB\cong A'B'$, $BC\cong B'C'$, $AC\cong A'C'$\tab Tesi: $ABC\cong A'B'C'$.
+\begin{figure}[htb]
+\centering\input{./lbr/chap02/fig011_3crit_cong_tri.pgf}
+\end{figure}
+
+\noindent Ipotesi: $AB\cong A'B'$, $BC\cong B'C'$, $AC\cong A'C'$.\tab Tesi: $ABC\cong A'B'C'$.
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap02/fig012_3crit_cong_tri2.pgf}
+\end{figure}
 
 \begin{proof}
 Abbiamo due triangoli, $ABC$ e $A'B'C'$, dei quali sappiamo che i lati dell'uno sono congruenti a quelli dell'altro. Ribaltiamo il triangolo $A'B'C'$ e portiamo il segmento $A'B'$ sul segmento $AB$ in modo che il punto $A'$ coincida con $A$, il punto $B'$ coincida con $B$ (ciò è possibile in quanto $AB\cong A'B'$) ed in modo che il punto $C'$ cada nel semipiano individuato dalla retta $AB$ opposto a quello in cui si trova $C$. Uniamo $C$ con $C'$. Viene fuori un disegno diverso a seconda che il punto di intersezione, che chiamiamo $D$, tra il segmento $CC'$ e la retta per $AB$, sia interno o esterno al segmento $AB$ oppure coincida con uno degli estremi ($A$ o $B$). Il punto $D$ esiste in ogni caso in quanto $C$ e $C'$ sono nei due semipiani opposti individuati dalla retta $AB$, pertanto il segmento $CC'$ deve necessariamente tagliare la retta per $AB$.
@@ -284,8 +305,8 @@ $A\widehat{C}B\cong A\widehat{C}D+D\widehat{C}B\cong A\widehat{C'}D+D\widehat{C'
 In conclusione $ABC$ e $ABC'$ sono congruenti per il primo criterio perché hanno: $AC\cong AC'$, $BC\cong BC'$, $A\widehat{C}B\cong A\widehat{C'}B$. 
 Infine, poiché $ABC\cong ABC'$ e $ABC'\cong A'B'C'$ se ne deduce che $ABC\cong A'B'C'$.
 
-Caso 2: $D$ coincide con uno dei due estremi $A$ e $A'$. 
-Poiché per ipotesi $CB\cong C'B'$, il triangolo $CBC'$ è isoscele sulla base $CC'$, pertanto $A\widehat{C}B\cong A\widehat{C'}B$ in quanto angoli alla base di un triangolo isoscele. I triangoli $ABC$ e $ABC'$ sono congruenti per il primo criterio perché hanno $AC\cong AC'$, $BC\cong BC'$ e $A\widehat{C}B\cong A\widehat{C'}B$. Infine, come per il caso precedente, poiché $ABC$ è congruente ad $ABC'$ e quest'ultimo è congruente ad $A'B'C'$ anche $ABC$ è congruente a $A'B'C'$.
+Caso 2: $D$ coincide con uno dei due estremi (es.~$A$ e $A'$). 
+Poiché per ipotesi $CB\cong C'B'$, il triangolo $CBC'$ è isoscele sulla base $CC'$, pertanto $A\widehat{C}B\cong A\widehat{C'}B$ in quanto angoli alla base di un triangolo isoscele. I triangoli $ABC$ e $ABC'$ sono quindi congruenti per il primo criterio perché hanno $AC\cong AC'$, $BC\cong BC'$ e $A\widehat{C}B\cong A\widehat{C'}B$. Infine, come per il caso precedente, poiché $ABC$ è congruente ad $ABC'$ e quest'ultimo è congruente ad $A'B'C'$ anche $ABC$ è congruente a $A'B'C'$.
 
 Caso 3: $D$ cade esternamente al segmento $AB$.
 Come nel caso 1, i triangoli $CAC'$ e $CBC'$ sono isosceli sulla base $CC'$, pertanto $A\widehat{C}C'\cong A\widehat{C'}C$ e $B\widehat{C}C'\cong B\widehat{C'}C$. Per differenza di angoli congruenti si ottiene che $A\widehat{C}B\cong A\widehat{C'}B$.

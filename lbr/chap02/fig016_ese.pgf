@@ -1,0 +1,17 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+\coordinate (b) at (0,0);
+\coordinate (a) at (0.7,1.4);
+\coordinate (c) at (3,0);
+
+\draw[thick] (b) node[below] {$B$} -- (c) node[below] {$C$} -- (a) node[above] {$A$} -- cycle;
+
+\coordinate (h) at ($(b)!0.5!(c)$);
+
+\draw[blue] (h) node[black,below] {$H$} -- (a); % mediana
+\end{scope}
+
+\end{tikzpicture}

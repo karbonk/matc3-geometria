@@ -1,0 +1,25 @@
+\begin{tikzpicture}[scale=0.9,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (-1.3,0);
+\coordinate (b) at (1.3,0);
+\coordinate (c) at (0,3);
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- cycle;
+\draw[fill,orange!40] (a) circle (0.5);
+\draw[fill,orange!40] (b) circle (0.5);
+\node at ([shift={(0.6,0.4)}]a) {$\alpha$};
+\node at ([shift={(-0.6,0.4)}]b) {$\beta$};
+\end{scope}
+
+\draw[thick] (a) node[left] {$A$} -- (b) node[right] {$B$} -- (c) node[above] {$C$} -- cycle;
+
+\draw (a) -- ($(a)!-1.5cm!(c)$) node[below] {$D$} -- (b);
+\draw (b) -- ($(b)!-1.5cm!(c)$) node[below] {$E$} -- (a);
+
+\end{scope}
+
+
+\end{tikzpicture}

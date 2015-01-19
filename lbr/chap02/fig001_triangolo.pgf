@@ -46,7 +46,7 @@
 \draw[green!60!black,dashdotted] ($(m)!0.7cm!90:(c)$) coordinate (r) -- ($(m)!-.4cm!90:(c)$); % asse
 \node at ([shift={(-3pt,-10pt)}]r) {$r$};
 \draw[red,dashed] (m) node[black,below] {$M$} -- (a); % mediana
-\draw[blue,dashed] (a) -- ($(b)!(a)!(c)$) node[black,below] {$H$}; % asse
+\draw[blue,dashed] (a) -- ($(b)!(a)!(c)$) node[black,below] {$H$}; % altezza
 
 \node [circle] (circ1) at (a) [minimum size=2cm] {}; % circonferenza con centro in A
 \coordinate (u) at (intersection of a--b and circ1);

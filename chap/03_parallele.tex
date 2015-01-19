@@ -191,6 +191,104 @@ Abbiamo già dimostrato che sono congruenti gli angoli alterni interni formati d
 \end{proof}
 
 
+\section{Somma degli angoli interni di un triangolo}
+
+Passiamo ora a dimostrare il secondo teorema dell'angolo esterno di un triangolo.
+\begin{teorema}
+In un triangolo un angolo esterno è congruente alla somma dei due angoli interni non adiacenti.
+\end{teorema}
+
+\begin{proof}
+Sia $ABC$ un triangolo e sia $C\widehat{B}D$ un angolo esterno. Tracciamo la semiretta $BE\parallel AC$ che divide l'angolo $C\widehat{B}D$ in due parti, $C\widehat{B}E$ ed $E\widehat{B}D$. L'angolo $C\widehat{B}E$ risulta congruente all'angolo $A\widehat{C}B$ in quanto i due angoli sono alterni interni rispetto alle rette parallele $AC$ e $BE$ tagliate dalla trasversale $CB$; analogamente l'angolo $E\widehat{B}D$ risulta congruente all'angolo $C\widehat{A}B$ in quanto i due angoli sono corrispondenti rispetto alle rette parallele $AC$ e $BE$ tagliate dalla trasversale $AD$. Dunque $C\widehat{B}D$ è congruente alla somma degli angoli interni di vertici $A$ e $C$.
+\end{proof}
+
+\begin{corollario}
+La somma degli angoli interni di un triangolo è congruente ad un angolo piatto.
+\end{corollario}
+\begin{proof}
+Dalla figura precedente $A\widehat{B}D\cong A\widehat{B}C + C\widehat{B}E + E\widehat{B}D\cong A\widehat{B}C + B\widehat{C}A + C\widehat{A}B$, pertanto la somma degli angoli interni è congruente all'angolo piatto $A\widehat{B}D$.
+\end{proof}
+\begin{corollario}
+Un triangolo non può avere più di un angolo retto e/o ottuso.
+\end{corollario}
+Dunque, necessariamente almeno due angoli sono acuti. Di conseguenza, gli angoli alla base di un triangolo isoscele devono essere acuti.
+
+\subsection{Somma degli angoli interni di un poligono}
+
+\begin{teorema}
+Dato un poligono $P$ di $n$ lati, la somma degli angoli interni di $P$ è $(n – 2)$ angoli piatti.
+\end{teorema}
+\begin{proof}
+Infatti, dato un qualunque poligono (anche concavo) di $n$ lati, scelto un opportuno punto interno in modo che, congiunto con ciascun vertice, il poligono resti diviso in $n$ triangoli, si può osservare che la somma degli angoli interni del poligono è data dalla somma degli angoli interni di $n$ triangoli meno l'angolo giro al centro, in figura l'angolo $J$.
+\end{proof}
+
+\begin{teorema}
+La somma degli angoli esterni di un qualsiasi poligono convesso, indipendentemente dal numero dei lati, è congruente ad un angolo giro.
+\end{teorema}
+\begin{proof}
+Ogni angolo esterno è adiacente ad un angolo interno, per cui se si hanno $m$ lati e quindi $m$ vertici la somma degli angoli interni e degli angoli esterni è pari ad $m$ angoli piatti; essendo $(m – 2)$ angoli piatti la somma degli angoli interni, sarà di due angoli piatti (quindi un angolo giro) la somma degli angoli esterni.
+\end{proof}
+
+
+\section{Generalizzazione dei criteri di congruenza dei triangoli}
+
+Se due triangoli hanno rispettivamente due angoli congruenti, allora anche i terzi angoli saranno congruenti nei due triangoli, in quanto supplementari della somma di angoli congruenti.
+
+Dunque, se due triangoli hanno congruenti un lato e due angoli, anche se il lato congruente non è compreso tra i due angoli congruenti, risultano congruenti. Precisamente, vale la seguente proposizione.
+
+\begin{teorema}[2\textsuperscript{o} Criterio di congruenza generalizzato]
+Due triangoli sono congruenti se hanno rispettivamente congruenti una coppia di lati e due coppie di angoli ugualmente posti rispetto ai lati congruenti.
+\end{teorema}
+
+\begin{proof}
+Il caso in cui il lato congruente è compreso tra gli angoli congruenti è stato già esaminato ed utilizzato per la dimostrazione di varie proprietà. Ora esaminiamo l'altro caso.
+
+In figura abbiamo rappresentato due triangoli, $ABC$ e $DEF$ che hanno per ipotesi i lati $AC\cong DF$ e gli angoli $B\widehat{A}C\cong E\widehat{D}F$ e $A\widehat{B}C\cong D\widehat{E}F$. I due triangoli risultano congruenti.
+
+La tesi segue dal fatto che deve risultare $B\widehat{A}C\cong E\widehat{F}D$, in quanto tali angoli sono supplementari alla somma di angoli congruenti per ipotesi. Ci si riconduce quindi al caso del secondo criterio di congruenza già dimostrato in precedenza.
+\end{proof}
+
+Riprendiamo una proprietà dei triangoli isosceli che abbiamo enunciato ma non abbiamo dimostrato:
+\begin{proposizione}
+In un triangolo isoscele l'altezza relativa alla base è anche bisettrice dell'angolo al vertice e mediana relativa alla base.
+\end{proposizione}
+
+\noindent Ipotesi: $IG\cong IH$, $I\widehat{G}H\cong I\widehat{H}G$, $IL\perp GH$.\tab Tesi: $G\widehat{I}L\cong H\widehat{I}L$, $GL\cong LH$.
+
+\begin{proof}
+I triangoli $GLI$ e $LHI$ sono congruenti per il secondo criterio generalizzato, avendo congruenti un lato e due angoli. Di conseguenza, i restanti elementi sono ordinatamente congruenti, in particolare $GL\cong LH$ e $G\widehat{I}L\cong H\widehat{I}L$.
+\end{proof}
+
+\begin{osservazione}
+Dall'esame dei primi tre criteri di congruenza dei triangoli, nonché dalla generalizzazione del secondo criterio, si potrebbe essere indotti a pensare che due triangoli sono congruenti se hanno tre coppie di elementi rispettivamente congruenti, se almeno una delle tre coppie di elementi è costituita da lati.
+In realtà, il primo criterio non si può generalizzare come il secondo. Basta pensare alla figura seguente: $ADC$ è un triangolo isoscele, $B$ è un punto sul prolungamento della base $AD$. Unendo $B$ con $C$, vengono individuati due nuovi triangoli, $ABC$ e $DBC$ che hanno in comune il lato $CB$ e l'angolo di vertice $B$, ed hanno inoltre congruenti i lati $AC$ e $CD$, ma evidentemente non sono congruenti. Quindi se due triangoli hanno due lati ed un angolo qualsiasi congruenti, non è detto che siano congruenti. Però nei due triangoli citati in figura, gli angoli $C\widehat{A}B$ e $C\widehat{D}B$ sono supplementari.
+\end{osservazione}
+
+Tale osservazione fa da premessa al quarto criterio di congruenza dei triangoli.
+\begin{teorema}[4\textsuperscript{o} criterio di congruenza dei triangoli]
+Due triangoli sono congruenti se hanno congruenti due coppie di lati e l'angolo opposto ad uno di essi, a patto che l'angolo opposto all'altra coppia di lati congruenti sia della stessa specie (cioè sia, in entrambi i triangoli, acuto oppure retto oppure ottuso).
+\end{teorema}
+
+\noindent Ipotesi: $AC\cong DF$, $CB\cong FE$, $C\widehat{A}B\cong F\widehat{D}E$, $C\widehat{B}A\cong F\widehat{E}D$.\tab Tesi: $ABC\cong DEF$.
+
+\begin{proof}
+Sulla semiretta $AB$ prendiamo il punto $G$ in maniera tale che $AG$ sia congruente a $DE$. I triangoli $AGC$ e $DEF$ saranno congruenti per il primo criterio, poiché $AC\cong DF$ e $C\widehat{A}B\cong F\widehat{D}E$ per ipotesi, $AG\cong DE$ per costruzione. Di conseguenza anche i rimanenti elementi risulteranno congruenti, in particolare $CG\cong FE$ e $C\widehat{G}A\cong F\widehat{E}D$.
+
+Se il punto $G$ coincide con $B$, abbiamo dimostrato la congruenza dei triangoli $ABC$ e $DEF$. Altrimenti, il segmento $CG$, dovendo essere congruente ad $FE$, risulta congruente a $CB$. Dunque il triangolo $CGB$ è isoscele sulla base $GB$. Gli angoli alla base $C\widehat{G}B$ e $C\widehat{B}G$, congruenti, sono necessariamente acuti. Distinguiamo due casi:
+\begin{itemize*}
+\item se $G$ è interno al segmento $AB$, $C\widehat{G}B$ è esterno al triangolo $AGC$ e $C\widehat{B}G$ è interno al triangolo $ABC$, quindi $D\widehat{E}F\cong A\widehat{G}C$ ottuso e $A\widehat{B}C$ acuto;
+\item se $G$ è esterno al segmento $AB$, $C\widehat{G}B$ è interno al triangolo $AGC$ e $C\widehat{B}G$ è esterno al triangolo $ABC$, quindi $D\widehat{E}F\cong A\widehat{G}C$ acuto e $A\widehat{B}C$ ottuso.
+\end{itemize*}
+Dunque, in nessuno dei due casi viene rispettata l'ipotesi: sono della stessa specie.
+\end{proof}
+
+\subsection{Congruenze di triangoli rettangoli}
+
+Per quanto affermato nelle proposizioni precedenti, sappiamo che i triangoli rettangoli hanno una coppia di angoli congruenti (quelli retti, essendo tutti congruenti fra loro, come affermato dal IV postulato di Euclide) e gli altri angoli necessariamente acuti, in quanto la somma degli angoli interni di un triangolo è congruente ad un angolo piatto (come segue dal secondo teorema dell'angolo esterno e dai corollari).
+
+Tenendo conto dunque dei criteri di congruenza dei triangoli, si possono riformulare dei criteri di congruenza specifici per i triangoli rettangoli.
+
+
 %\newpage
 
 %\input{./chap/02_esercizi}

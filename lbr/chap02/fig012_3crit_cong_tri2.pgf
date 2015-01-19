@@ -1,0 +1,78 @@
+\begin{tikzpicture}[scale=.7,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (0,0);
+\coordinate (c) at (1.6,1.7);
+\coordinate (b) at (2.5,0);
+\coordinate (c1) at (1.6,-1.7);
+
+\draw[fill=gray!10] (a) -- (b) -- (c1) -- cycle;
+
+\draw[fill=yellow!10] (a) -- (b) -- (c) -- cycle;
+\draw (a) node[left] {$A\equiv A'$} -- (b) node[right] {$B\equiv B'$} -- (c) node[above] {$C$} -- cycle;
+\draw[blue,very thick] (a) -- (c);
+\draw[red,very thick] (c) -- (b);
+\draw[green!60!black,very thick] (a) -- (b);
+
+\draw[very thick,blue] (a) -- (c1);
+\draw[very thick,red] (b) -- (c1);
+\draw[dashed] (c) -- (c1) node[below] {$C'$};
+\coordinate (d) at (intersection of a--b and c--c1);
+\node[left=5pt, below] at (d) {$D$};
+
+\node at (1.25,-2.9) {Caso 1};
+
+\end{scope}
+
+
+\begin{scope}[xshift=7.5cm]
+\coordinate (a) at (0,0);
+\coordinate (c) at (0,1.7);
+\coordinate (b) at (2.5,0);
+\coordinate (c1) at (0,-1.7);
+
+\draw[fill=gray!10] (a) -- (b) -- (c1) -- cycle;
+
+\draw[fill=yellow!10] (a) -- (b) -- (c) -- cycle;
+\draw (a) node[left] {$A\equiv A'\equiv D$} -- (b) node[right] {$B\equiv B'$} -- (c) node[above] {$C$} -- cycle;
+\draw[blue,very thick] (a) -- (c);
+\draw[red,very thick] (c) -- (b);
+\draw[green!60!black,very thick] (a) -- (b);
+
+\draw[very thick,blue] (a) -- (c1);
+\draw[very thick,red] (b) -- (c1) node[black,below] {$C'$};
+\coordinate (d) at (intersection of a--b and c--c1);
+
+\node at (1.25,-2.9) {Caso 2};
+
+\end{scope}
+
+
+\begin{scope}[xshift=14cm]
+\coordinate (a) at (0,0);
+\coordinate (c) at (-1,1.7);
+\coordinate (b) at (2.5,0);
+\coordinate (c1) at (-1,-1.7);
+
+\draw[fill=gray!10] (a) -- (b) -- (c1) -- cycle;
+
+\draw[fill=yellow!10] (a) -- (b) -- (c) -- cycle;
+\draw (a) node[left=-1pt,above] {$A\equiv A'$} -- (b) node[right] {$B\equiv B'$} -- (c) node[above] {$C$} -- cycle;
+\draw[blue,very thick] (a) -- (c);
+\draw[red,very thick] (c) -- (b);
+\draw[green!60!black,very thick] (a) -- (b);
+
+\draw[very thick,blue] (a) -- (c1);
+\draw[very thick,red] (b) -- (c1);
+\draw[dashed] (c) -- (c1) node[below] {$C'$};
+\coordinate (d) at (intersection of a--b and c--c1);
+\draw[dashed] (a) -- (d);
+%\node[left=5pt, below] at (d) {$D$};
+\node[left] at (d) {$D$};
+
+\node at (1,-2.9) {Caso 3};
+
+\end{scope}
+
+\end{tikzpicture}

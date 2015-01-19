@@ -5,6 +5,7 @@
 \coordinate (a) at (0,0);
 \coordinate (c) at (1.6,1.7);
 \coordinate (b) at (2.5,0);
+\draw[fill=yellow!10] (a) -- (b) -- (c) -- cycle;
 
 \begin{scope}
 \clip (a) -- (b) -- (c) -- cycle;
@@ -22,6 +23,7 @@
 \coordinate (a) at (0,0);
 \coordinate (c) at (1.6,1.7);
 \coordinate (b) at (2.5,0);
+\draw[fill=gray!10] (a) -- (b) -- (c) -- cycle;
 
 \begin{scope}
 \clip (a) -- (b) -- (c) -- cycle;
