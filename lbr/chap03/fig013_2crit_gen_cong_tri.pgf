@@ -1,0 +1,43 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (0,0);
+\coordinate (c) at (0.8,1.7);
+\coordinate (b) at (2.5,0);
+\draw[fill=yellow!10] (a) -- (b) -- (c) -- cycle;
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- cycle;
+\draw[thick,red!50,fill] (a) circle (0.5);
+\node at ([shift={(0.6,0.4)}]a) {$\alpha$};
+\draw[thick,orange!50,fill] (b) circle (0.5);
+\node at ([shift={(-0.7,0.3)}]b) {$\beta$};
+\end{scope}
+
+\draw[thick] (a) node[below] {$A$} -- (b) node[below] {$B$} -- (c) node[above] {$C$} -- cycle;
+\draw[blue,very thick] (a) -- (c);
+
+
+\end{scope}
+
+\begin{scope}[xshift=4cm]
+\coordinate (a) at (0,0);
+\coordinate (c) at (0.8,1.7);
+\coordinate (b) at (2.5,0);
+\draw[fill=gray!10] (a) -- (b) -- (c) -- cycle;
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- cycle;
+\draw[thick,red!50,fill] (a) circle (0.5);
+\node at ([shift={(0.65,0.4)}]a) {$\alpha'$};
+\draw[thick,orange!50,fill] (b) circle (0.5);
+\node at ([shift={(-0.7,0.3)}]b) {$\beta'$};
+\end{scope}
+
+\draw[thick] (a) node[below] {$A'$} -- (b) node[below] {$B'$} -- (c) node[above] {$C'$} -- cycle;
+\draw[blue,very thick] (a) -- (c);
+
+\end{scope}
+
+\end{tikzpicture}

@@ -1,0 +1,64 @@
+\begin{tikzpicture}[scale=1.2,font=\small, dot/.style={circle,inner sep=1pt, fill, label={#1}, name=#1}, extended line/.style={shorten >=-#1,shorten <=-#1}, extended line/.default=1cm]
+\usetikzlibrary{calc, intersections}
+
+\begin{scope}
+
+\coordinate (a1) at (-2.5,0);
+\coordinate (a2) at (2.5,0);
+\coordinate (b1) at (-2.5,-1.2);
+\coordinate (b2) at (2.5,-1.2);
+
+\coordinate (c1) at (0.6,0.7);
+\coordinate (c2) at (-0.6,-1.9);
+
+\coordinate (p1) at (intersection of c1--c2 and a1--a2);
+\coordinate (p2) at (intersection of c1--c2 and b1--b2);
+
+\begin{scope}
+\clip (a1) -- (p1) -- (c1) -- cycle;
+\draw[fill, red!15] (p1) circle (0.4) node[shift={(-0.2,0.3)}, black] {1};
+\end{scope}
+
+\begin{scope}
+\clip (a2) -- (p1) -- (c1) -- cycle;
+\draw[fill, blue!15] (p1) circle (0.5) node[shift={(0.5,0.3)}, black] {2};
+\end{scope}
+
+\begin{scope}
+\clip (a2) -- (p1) -- (c2) -- cycle;
+\draw[fill, red!15] (p1) circle (0.4) node[shift={(0.2,-0.3)}, black] {3};
+\end{scope}
+
+\begin{scope}
+\clip (a1) -- (p1) -- (c2) -- cycle;
+\draw[fill, blue!15] (p1) circle (0.5) node[shift={(-0.5,-0.3)}, black] {4};
+\end{scope}
+
+\begin{scope}
+\clip (b1) -- (p2) -- (c1) -- cycle;
+\draw[fill, red!15] (p2) circle (0.4) node[shift={(-0.2,0.3)}, black] {5};
+\end{scope}
+
+\begin{scope}
+\clip (b2) -- (p2) -- (c1) -- cycle;
+\draw[fill, blue!15] (p2) circle (0.5) node[shift={(0.5,0.3)}, black] {6};
+\end{scope}
+
+\begin{scope}
+\clip (b2) -- (p2) -- (c2) -- cycle;
+\draw[fill, red!15] (p2) circle (0.4) node[shift={(0.2,-0.3)}, black] {7};
+\end{scope}
+
+\begin{scope}
+\clip (b1) -- (p2) -- (c2) -- cycle;
+\draw[fill, blue!15] (p2) circle (0.5) node[shift={(-0.5,-0.3)}, black] {8};
+\end{scope}
+
+\draw[thick] (a1)--(a2) node[right] {$a$};
+\draw[thick] (b1)--(b2) node[right] {$b$};
+\draw[thick, blue] (c1) node[above, black] {$c$} --(c2);
+
+\end{scope}
+
+
+\end{tikzpicture}

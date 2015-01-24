@@ -1,0 +1,24 @@
+\begin{tikzpicture}[scale=1.2,font=\small, dot/.style={circle,inner sep=1pt, fill, label={#1}, name=#1}, extended line/.style={shorten >=-#1,shorten <=-#1}, extended line/.default=1cm]
+\usetikzlibrary{calc, intersections}
+
+\begin{scope}
+
+\coordinate (a1) at (-2.5,0);
+\coordinate (a2) at (2.5,0);
+\coordinate (b1) at (-2.5,-1);
+\coordinate (b2) at (2.5,-1);
+
+\coordinate (c1) at (-2.5,-0.7);
+\coordinate (c2) at (2.5,-1.3);
+
+\draw[thick] (a1)--(a2) node[right] {$a$};
+\draw[thick] (b1)--(b2) node[right] {$b$};
+\draw[thick] (c1)--(c2) node[right] {$c$};
+
+\coordinate (p) at (intersection of c1--c2 and b1--b2);
+\draw[fill] (p) circle (1pt) node[above] {$P$};
+
+\end{scope}
+
+
+\end{tikzpicture}

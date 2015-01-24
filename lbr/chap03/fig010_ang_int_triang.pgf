@@ -1,0 +1,38 @@
+\begin{tikzpicture}[scale=1,font=\small, dot/.style={circle,inner sep=1pt, fill, label={#1}, name=#1}, extended line/.style={shorten >=-#1,shorten <=-#1}, extended line/.default=1cm]
+\usetikzlibrary{calc, intersections}
+
+\begin{scope}
+
+\coordinate (a) at (0,0);
+\coordinate (b) at (3,0);
+\coordinate (c) at (0.8,2);
+\coordinate (d) at (5,0);
+\coordinate (e) at (3.8,2);
+
+\draw[fill, gray!10] (a) node[below] {$A$} -- (b) node[below] {$B$} -- (c) node[above] {$C$} -- cycle;
+\draw[dotted] (b) -- ($(b)!1.2!(d)$);
+\draw[fill] (d) circle (1pt) node[below] {$D$};
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- cycle;
+\draw[red,fill=red!20] (a) circle (0.4) node[shift={(-0.85,-0.55)}, black] {$\alpha'$};
+\draw[blue,fill=blue!20] (c) circle (0.4) node[shift={(-0.85,-0.55)}, black] {$\alpha'$};
+\end{scope}
+
+\begin{scope}
+\clip (b) -- (e) -- (d) -- cycle;
+\draw[red,fill=red!20] (b) circle (0.4) node[shift={(-0.85,-0.55)}, black] {$\alpha'$};
+\end{scope}
+\begin{scope}
+\clip (b) -- (c) -- (e) -- cycle;
+\draw[blue,fill=blue!20] (b) circle (0.4) node[shift={(-0.85,-0.55)}, black] {$\alpha'$};
+\end{scope}
+
+\draw[fill] (e) circle (1pt) node[right] {$E$};
+\draw (b) -- ($(b)!1.2!(e)$);
+\draw[thick] (a) node[below] {$A$} -- (b) node[below] {$B$} -- (c) node[above] {$C$} -- cycle;
+
+\end{scope}
+
+
+\end{tikzpicture}

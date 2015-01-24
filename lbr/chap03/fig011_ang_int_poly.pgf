@@ -1,0 +1,43 @@
+\begin{tikzpicture}[scale=0.8,font=\small, dot/.style={circle,inner sep=1pt, fill, label={#1}, name=#1}, extended line/.style={shorten >=-#1,shorten <=-#1}, extended line/.default=1cm]
+\usetikzlibrary{calc, intersections}
+
+\begin{scope}
+
+\coordinate (a) at (0,0);
+\coordinate (b) at (3,1);
+\coordinate (c) at (6,-1);
+\coordinate (d) at (5,-2);
+\coordinate (e) at (2.7,-3);
+\coordinate (f) at (2,-1.7);
+\coordinate (g) at (0.5,-1.4);
+\coordinate (j) at (3,-0.7);
+
+\draw[fill, gray!10] (a) -- (b) -- (c) -- (d) -- (e) -- (f) -- (g) -- cycle;
+\draw[red, fill=red!20] (j) circle (0.5);
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- (d) -- (e) -- (f) -- (g) -- cycle;
+\draw[blue] (a) circle (0.45);
+\draw[blue] (b) circle (0.45);
+\draw[blue] (c) circle (0.45);
+\draw[blue] (d) circle (0.45);
+\draw[blue] (e) circle (0.45);
+\draw[blue] (f) circle (0.45);
+\draw[blue] (g) circle (0.45);
+\end{scope}
+
+\draw[fill] (j) circle (1pt) node[shift={(0.2,0.2)}] {$J$};
+\draw[dashed] (j) -- (a);
+\draw[dashed] (j) -- (b);
+\draw[dashed] (j) -- (c);
+\draw[dashed] (j) -- (d);
+\draw[dashed] (j) -- (e);
+\draw[dashed] (j) -- (f);
+\draw[dashed] (j) -- (g);
+
+\draw[thick] (a) node[left] {$A$} -- (b) node[above] {$B$} -- (c) node[right] {$C$} -- (d) node[shift={(0.15,-0.25)}] {$D$} -- (e) node[below] {$E$} -- (f) node[shift={(-0.2,-0.25)}] {$F$} -- (g) node[left] {$G$} -- cycle;
+
+\end{scope}
+
+
+\end{tikzpicture}

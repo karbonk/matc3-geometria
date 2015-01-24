@@ -15,21 +15,21 @@
 Ricordiamo che un angolo esterno di un poligono è un angolo che ha come vertice un vertice del poligono ed è adiacente ad un angolo interno.
 
 \begin{teorema}[dell'angolo esterno]
-In un triangolo un angolo esterno è maggiore di ciascuno dei due angoli interni non adiacenti.
+In un triangolo, un angolo esterno è maggiore di ciascuno dei due angoli interni non adiacenti.
 \end{teorema}
 
-% figura
+\begin{figure}[htb]
+\centering\input{./lbr/chap03/fig001_teo_ang_est.pgf}
+\end{figure}
 
 \begin{proof}
-Sia $ABC$ un triangolo. Prolunghiamo il lato $AB$ dalla parte di $B$ e prendiamo un qualsiasi punto $D$ sul prolungamento. Vogliamo dimostrare che l'angolo $C\widehat{B}D$ è maggiore sia dell'angolo $C\widehat{A}B$ sia dell'angolo $A\widehat{C}B$. A tal fine prendiamo il punto medio del lato $CB$, lo chiamiamo $M$; uniamo $A$ con $M$ e prolunghiamo $AM$ dalla parte di $M$, prendendo un punto $N$ sul prolungamento in modo che $AM$ sia congruente a $MN$; uniamo $N$ con $B$.
+Sia $ABC$ un triangolo (figura~a). Prolunghiamo il lato $AB$ dalla parte di $B$ e prendiamo un qualsiasi punto $D$ sul prolungamento. Vogliamo dimostrare che l'angolo $C\widehat{B}D$ è maggiore sia dell'angolo $C\widehat{A}B$ sia dell'angolo $A\widehat{C}B$. A tal fine prendiamo il punto medio del lato $CB$, lo chiamiamo $M$; uniamo $A$ con $M$ e prolunghiamo $AM$ dalla parte di $M$, prendendo un punto $N$ sul prolungamento in modo che $AM$ sia congruente a $MN$; uniamo $N$ con $B$.
 
 Osserviamo che i triangoli $AMC$ e $BNM$ sono congruenti per il primo criterio, infatti: $CM\cong MB$ perché $M$ è un punto medio per costruzione, $AM\cong MN$ per costruzione e $C\widehat{M}A\cong B\widehat{M}N$ perché opposti al vertice.
-
 Di conseguenza i restanti elementi dei due triangoli sono ordinatamente congruenti, in particolare $A\widehat{C}M\cong M\widehat{B}N$. Ma l'angolo $M\widehat{B}N$ è una parte propria dell'angolo esterno $C\widehat{B}D$ che risulta pertanto maggiore di $M\widehat{B}N$ e dell'angolo interno di vertice $C$.
 
-Rimane ora da dimostrare che $C\widehat{B}D$ è anche maggiore di $C\widehat{A}B$ ma per farlo occorre un'altra costruzione.
-
-Prolunghiamo il segmento $CB$ dalla parte di $B$ viene individuato un altro angolo esterno, che però è congruente al precedente: è anch'esso adiacente all'angolo interno di vertice $B$ ed è opposto al vertice di $C\widehat{B}D$. Usiamo tale angolo ed una costruzione analoga alla precedente a partire dal punto medio $F$ del segmento $AB$ e dal punto $G$ sul prolungamento di $CF$, con $CF\cong FG$ in modo da ottenere, dal confronto dei triangoli congruenti $AFC$ e $FGB$, che l'angolo interno di vertice $A$ è congruente all'angolo $F\widehat{B}G$ che è una parte propria dell'angolo esterno di vertice $B$.
+Rimane ora da dimostrare che $C\widehat{B}D$ è anche maggiore di $C\widehat{A}B$ ma per farlo occorre un'altra costruzione (figura~b).
+Prolunghiamo il segmento $CB$ dalla parte di $B$ viene individuato un altro angolo esterno $A\widehat{B}E$, che però è congruente al precedente: è anch'esso adiacente all'angolo interno di vertice $B$ ed è opposto al vertice di $C\widehat{B}D$. Usiamo tale angolo ed una costruzione analoga alla precedente a partire dal punto medio $F$ del segmento $AB$ e dal punto $G$ sul prolungamento di $CF$, con $CF\cong FG$, in modo da ottenere, dal confronto dei triangoli congruenti $AFC$ e $FGB$, che l'angolo interno di vertice $A$ è congruente all'angolo $F\widehat{B}G$ che è una parte propria dell'angolo esterno di vertice $B$, $A\widehat{B}E\cong C\widehat{B}D$.
 \end{proof}
 
 \section{Rette perpendicolari}
@@ -40,36 +40,43 @@ Ricordiamo che due rette giacenti su uno stesso piano si dicono \emph{perpendico
 Siano $AB$ e $CD$ due rette incidenti di intersezione $E$, se risulta che l'angolo $A\widehat{E}C$ è retto, allora sono retti anche gli angoli $A\widehat{E}D$, $B\widehat{E}C$ e $B\widehat{E}D$.
 \end{proprieta}
 
-% figura
-
-\begin{proof}
-L'angolo $A\widehat{E}D$ è retto perché adiacente a un angolo retto;
-l’angolo $D\widehat{E}B$ è retto perché opposto al vertice a un angolo retto;
-l’angolo $C\widehat{E}B$ è retto perché adiacente a un angolo retto.
+\noindent\begin{minipage}{.65\textwidth}
+\begin{proof}~\\
+L'angolo $A\widehat{E}D$ è retto perché adiacente all'angolo retto $A\widehat{E}C$.\\
+L'angolo $D\widehat{E}B$ è retto perché opposto al vertice all'angolo retto $A\widehat{E}C$.\\
+L'angolo $C\widehat{E}B$ è retto perché adiacente all'angolo retto $A\widehat{E}C$.
 \end{proof}
+\end{minipage}\hfil
+\begin{minipage}{.35\textwidth}
+\centering\input{./lbr/chap03/fig002_teo_rette_perp.pgf}
+\end{minipage}
+~\\
 
-Quindi, se due rette incidenti formano un angolo retto allora tutti gli angoli che si formano sono retti
+Quindi, se due rette incidenti formano un angolo retto allora tutti gli angoli che si formano sono retti.
 
-L’esistenza e l’unicità della perpendicolare sono assicurate dal seguente teorema.
+L'esistenza e l'unicità della perpendicolare sono assicurate dal seguente teorema.
 
 \begin{teorema}
 Nel piano, data una retta ed un punto, esiste ed è unica la retta perpendicolare alla retta data e passante per il punto assegnato.
 \end{teorema}
 
-% figura
+\begin{figure}[htb]
+\centering\input{./lbr/chap03/fig003_rette_perp_per_punto.pgf}
+\end{figure}
 
 \begin{proof}
 Per la dimostrazione, distinguiamo due casi.
 
-Primo caso: il punto appartiene alla retta.
+Primo caso: il punto appartiene alla retta (figura~a).
 Sia $AB$ una retta del piano e sia $P$ un suo punto. Allora se tracciamo la bisettrice dell'angolo piatto $A\widehat{P}B$, questa è certamente perpendicolare ad $AB$, in quanto i due angoli che si vengono a formare sono retti.
 Prolungando questa bisettrice, si viene a formare una retta $CD$ perpendicolare ad $AB$.  
 Supponiamo per assurdo che la retta $CD$ non sia l'unica perpendicolare ad $AB$ passante per il punto $P$ ma che ne esista un'altra. Detto $E$ un punto su tale ipotetica retta distinto da $P$, se $E$ appartenesse anche alla retta $CD$, allora $PE$ coinciderebbe con $CD$, quindi $PE$ non sarebbe distinta dalla retta $CD$; se invece $E$ non appartenesse a $CD$, unendo $E$ con $P$ si verrebbero a formare due angoli $A\widehat{P}E$ e $E\widehat{P}B$ di cui uno acuto ed uno ottuso e quindi la retta $EP$ non risulterebbe perpendicolare ad $AB$.
 
-Secondo caso: il punto non appartiene alla retta.
-Sia $AB$ una retta nel piano e sia $S$ un punto del piano non appartenente ad essa. Costruiamo la perpendicolare ad $AB$ passante per $S$ e dimostriamo che è unica.
-Possiamo prendere un punto $Q$ appartenente ad $AB$ e congiungere $S$ con $Q$. Se gli angoli $A\widehat{Q}S$ e $S\widehat{Q}B$ sono retti, abbiamo già trovato la perpendicolare. Altrimenti, vuol dire che gli angoli $A\widehat{Q}S$ e $S\widehat{Q}B$ sono uno acuto ed uno ottuso. Tracciamo la semiretta $QR$, di origine $Q$ e giacente nel semipiano individuato da $AB$ non contenente il punto $S$, che divide il semipiano in due angoli, $A\widehat{Q}R$ e $R\widehat{Q}B$, rispettivamente congruenti a $A\widehat{Q}S$ e $S\widehat{Q}B$. Prendiamo un punto $T$ su tale semiretta in modo che il segmento $QT$ sia congruente a $QS$. Uniamo $S$ con $T$ e chiamiamo $H$ il punto d'intersezione tra $ST$ ed $AB$. Allora il triangolo $QTS$ è isoscele sulla base $ST$ e il segmento $QH$ è la bisettrice dell'angolo al vertice $S\widehat{Q}T$, che risulta pertanto essere anche mediana ed altezza relativa alla base $ST$. Dunque gli angoli $S\widehat{H}Q$ e $T\widehat{H}Q$ sono retti e quindi la retta $ST$ è perpendicolare ad $AB$.
-Abbiamo quindi trovato la perpendicolare ad $AB$ passante per $S$. Per dimostrare che è unica possiamo ricorrere al ragionamento fatto nel primo caso, dove ora $H$ è il punto $P$ della dimostrazione precedente.
+Secondo caso: il punto non appartiene alla retta (figura~b).
+Sia $AB$ una retta nel piano e sia $P$ un punto del piano non appartenente ad essa. Costruiamo la perpendicolare ad $AB$ passante per $P$ e dimostriamo che è unica.
+Possiamo prendere un punto $Q$ appartenente ad $AB$ e congiungere $P$ con $Q$. Se gli angoli $A\widehat{Q}P$ e $P\widehat{Q}B$ sono retti, abbiamo già trovato la perpendicolare. Altrimenti, vuol dire che gli angoli $A\widehat{Q}P$ e $P\widehat{Q}B$ sono uno acuto ed uno ottuso. Tracciamo la semiretta $QR$, di origine $Q$ e giacente nel semipiano individuato da $AB$ non contenente il punto $P$: essa lo divide in due angoli, $A\widehat{Q}R$ e $R\widehat{Q}B$, rispettivamente congruenti a $A\widehat{Q}P$ e $P\widehat{Q}B$. Prendiamo un punto $T$ su tale semiretta in modo che $QT\cong QP$. Uniamo $P$ con $T$ e chiamiamo $H$ il punto di intersezione tra $PT$ ed $AB$. Allora il triangolo $QPT$ è isoscele sulla base $PT$ e il segmento $QH$ è la bisettrice dell'angolo al vertice $P\widehat{Q}T$, che risulta pertanto essere anche mediana ed altezza relativa alla base $PT$. Dunque gli angoli $P\widehat{H}Q$ e $T\widehat{H}Q$ sono retti e quindi la retta $PT$ è perpendicolare ad $AB$.
+Abbiamo quindi trovato la perpendicolare ad $AB$ passante per $P$. Per dimostrare che è unica possiamo ricorrere al ragionamento fatto nel primo caso, dove ora $H$ è il punto $P$ della dimostrazione precedente.
+
 Il teorema è pertanto dimostrato.
 \end{proof}
 
@@ -98,11 +105,14 @@ Ricordiamo la versione ``moderna'' del V Postulato di Euclide: \emph{dati una re
 Se due rette nel piano sono perpendicolari alla stessa retta, esse sono parallele tra loro.
 \end{proposizione}
 
-% figura
+\begin{figure}[htb]
+\centering\input{./lbr/chap03/fig004_rette_perp_parall.pgf}
+\end{figure}
 
 \begin{proof}
 Sia $r$ una retta, e siano $s$ e $t$ due rette, entrambe perpendicolari ad $r$. 
-Se $s$ e $t$ intersecano $r$ nello stesso punto $P$, allora per il teorema precedente necessariamente coincidono, e dunque sono parallele per la nostra definizione di parallelismo. 
+Se $s$ e $t$ intersecano $r$ nello stesso punto $P$, allora per il teorema precedente necessariamente coincidono, e dunque sono parallele, secondo la nostra definizione di parallelismo.
+
 Consideriamo ora il caso in cui $s$ e $t$ intersecano $r$ in due punti distinti, rispettivamente $A$ e $B$. Supponendo per assurdo che $s$ e $t$ si intersechino in un punto $C$, risulterebbero due distinte rette passanti per $C$ e perpendicolari alla stessa retta, assurdo per il teorema precedente. Dunque deve risultare $s\parallel t$.
 \end{proof}
 
@@ -111,15 +121,18 @@ Analoghe proprietà valgono per rette parallele e per rette incidenti qualunque.
 Siano date due rette parallele, se una terza retta è parallela ad una delle due, è parallela anche all'altra; inoltre, ogni retta che interseca una delle due, interseca anche l'altra.
 \end{proposizione}
 
-% figura
+\begin{figure}[htb]
+\centering\input{./lbr/chap03/fig005_rette_parall_1.pgf}
+\end{figure}
 
 \begin{proof}
 Siano $a$, $b$, $c$ tre rette, con $a\parallel b$. Se $a$ coincide con $b$, la tesi è banale. Supponiamo quindi che $a$ e $b$ non abbiano punti in comune.
 Vogliamo dimostrare che se $c\parallel a$ allora $c\parallel b$.
 La tesi è banale se $c$ coincide con $a$ oppure con $b$.
 Supponiamo dunque che $c$ sia distinta da entrambe.
-Dimostriamo che se $c$ non ha punti in comune con $a$, allora non può avere punti in comune neppure con $b$. Se per assurdo $c$ avesse un punto $P$ in comune con $b$, allora esisterebbero due rette distinte passanti per $P$ entrambe parallele alla stessa retta $a$, cosa che contraddice il quinto postulato di Euclide.
-Dimostriamo ora che se $c$ interseca la retta $a$ allora interseca anche la retta $b$. Detto $Q$ il punto di intersezione tra le rette $a$ e $c$, se per assurdo $c$ non intersecasse la retta $b$, cioè se fosse $c\parallel b$, allora $a$ e $c$ sarebbero due rette distinte passanti per $Q$ entrambe parallele alla retta $b$, contrariamente a quanto dice il quinto postulato di Euclide.
+Dimostriamo che se $c$ non ha punti in comune con $a$, allora non può avere punti in comune neppure con $b$. Se per assurdo $c$ avesse un punto $P$ in comune con $b$, allora esisterebbero due rette distinte passanti per $P$ entrambe parallele alla stessa retta $a$, cosa che contraddice il V postulato di Euclide.
+
+Dimostriamo ora che se $c$ interseca la retta $a$ allora interseca anche la retta $b$. Detto $Q$ il punto di intersezione tra le rette $a$ e $c$, se per assurdo $c$ non intersecasse la retta $b$, cioè se fosse $c\parallel b$, allora $a$ e $c$ sarebbero due rette distinte passanti per $Q$ entrambe parallele alla retta $b$, contrariamente a quanto dice il V postulato di Euclide.
 \end{proof}
 
 \begin{osservazione}
@@ -131,7 +144,7 @@ La proposizione precedente rappresenta una sorta di proprietà transitiva del pa
 Due rette parallele $a$ e $b$ vengono intersecate da una retta $c$ (detta \emph{trasversale}) che non è parallela ad esse,
 \begin{itemize*}
 \item se la retta $c$ è perpendicolare (ad entrambe), si vengono a formare otto angoli retti; 
-\item se la retta $c$ non è perpendicolare ad esse, si vengono a formare otto angoli, di cui quattro acuti e quattro ottusi, rispetto alla posizione che occupano alle coppie vengono attribuiti i seguenti nomi:
+\item se la retta $c$ non è perpendicolare ad esse, si vengono a formare otto angoli, di cui quattro acuti e quattro ottusi, rispetto alla posizione che occupano alle coppie vengono attribuiti i seguenti nomi (figura~\ref{fig:rette_parall_2}):
 \begin{itemize*}
 \item le coppie di angoli 1 e 5, 2 e 6, 3 e 7, 4 e 8 si dicono \emph{corrispondenti} (perché occupano posizioni analoghe da una parallela all'altra);
 \item le coppie di angoli 3 e 5, 4 e 6 si dicono \emph{alterni interni} (alterni perché occupano posizioni opposte rispetto alla trasversale, interni perché si trovano all'interno delle due parallele);
@@ -142,18 +155,24 @@ Due rette parallele $a$ e $b$ vengono intersecate da una retta $c$ (detta \emph{
 \end{itemize*}
 Inoltre le coppie 1 e 3, 2 e 4, 5 e 7, 6 e 8 sono angoli opposti al vertice.
 
+\begin{figure}[htb]
+\centering\input{./lbr/chap03/fig006_rette_parall_2.pgf}
+\caption{Le rette parallele $a$ e $b$ sono tagliate dalla trasversale $c$}\label{fig:rette_parall_2}
+\end{figure}
+
 \begin{teorema}[delle parallele {[}diretto{]}]
 Se due rette tagliate da una trasversale formano una coppia di angoli alterni interni congruenti allora sono parallele.
 \end{teorema}
 
-% figura
+\begin{figure}[htb]
+\centering\input{./lbr/chap03/fig007_teo_parall.pgf}
+\end{figure}
 
 \begin{proof}
-Ragioniamo per assurdo. Supponiamo che la tesi sia falsa, cioè che le rette $a$ e $b$ non siano parallele. Se non sono parallele si incontreranno in un punto $C$. 
-Allora si viene a formare il triangolo $ABC$. Per il teorema dell'angolo esterno del triangolo, l'angolo esterno $\alpha$ è maggiore dell'angolo interno $\beta$. Questa conseguenza contraddice l'ipotesi del teorema, secondo la quale gli angoli alterni interni $\alpha$ e $\beta$ sono congruenti. Allora abbiamo sbagliato a negare la tesi, che perciò risulta vera.
+Ragioniamo per assurdo. Supponiamo che la tesi sia falsa, cioè che le rette $a$ e $b$ non siano parallele. Se non sono parallele si incontreranno in un punto $C$ e quindi tra esse e la trasversale si viene a formare il triangolo $ABC$. Per il teorema dell'angolo esterno del triangolo, l'angolo (esterno) $\alpha$ è maggiore dell'angolo (interno) $\beta$. Questa conseguenza contraddice l'ipotesi del teorema, secondo la quale gli angoli alterni interni $\alpha$ e $\beta$ sono congruenti. Allora abbiamo sbagliato a negare la tesi, che perciò risulta vera.
 \end{proof}
 
-Possiamo generalizzare il teorema precedenti ad altri casi.
+Possiamo generalizzare il teorema precedente ad altri casi.
 \begin{teorema}[Criterio di parallelismo]
 Se due rette tagliate da una trasversale danno origine ad una tra le seguenti coppie di angoli
 \begin{itemize*}
@@ -164,17 +183,30 @@ Se due rette tagliate da una trasversale danno origine ad una tra le seguenti co
 allora sono parallele.
 \end{teorema}
 
+\noindent \begin{minipage}{0.7\textwidth}
 \begin{proof}
-Tenendo conto che due angoli opposti al vertice sono congruenti e due angoli adiacenti sono supplementari, se risulta che due angoli corrispondenti qualsiasi sono congruenti, allora i quattro angoli acuti sono tutti congruenti ed i quattro angoli ottusi sono congruenti, e quindi anche angoli alterni interni. Pertanto, per il teorema precedente, le rette sono parallele. Analogamente, se risultano supplementari due qualsiasi angoli coniugati (interni o esterni) risulta sempre che i quattro angoli acuti sono tutti congruenti tra loro come i quattro angoli ottusi, pertanto gli angoli alterni interni sono congruenti e, sempre per il teorema precedente, le due rette sono parallele.
+Tenendo conto che due angoli opposti al vertice sono congruenti e due angoli adiacenti sono supplementari, se risulta che due angoli corrispondenti qualsiasi sono congruenti, allora i quattro angoli acuti sono tutti congruenti ed i quattro angoli ottusi sono congruenti, e quindi anche angoli alterni interni. Pertanto, per il teorema precedente, le rette sono parallele.
+
+\hspace{15pt}Analogamente, se risultano supplementari due qualsiasi angoli coniugati (interni o esterni) risulta sempre che i quattro angoli acuti sono tutti congruenti tra loro come i quattro angoli ottusi, pertanto gli angoli alterni interni sono congruenti e, sempre per il teorema precedente, le due rette sono parallele.
 \end{proof}
+\end{minipage}\hfil
+\begin{minipage}{0.3\textwidth}
+\centering\input{./lbr/chap03/fig008_crit_parall.pgf}
+\end{minipage}
 
 \begin{teorema}[delle parallele {[}inverso{]}]
 Se due rette sono parallele allora esse formano con una trasversale qualsiasi due angoli alterni interni congruenti.
 \end{teorema}
 
+\noindent \begin{minipage}{0.6\textwidth}
 \begin{proof}
-Dimostrazione. Ragioniamo per assurdo. Supponiamo che la tesi sia falsa, cioè che esista una coppia di angoli alterni interni $\alpha$ e $\beta$ con $\alpha>\beta$. Per il punto $P$, vertice dell'angolo $\alpha$ si potrà allora tracciare una retta $a'$ in modo che l'angolo da essa formato $\alpha'$ sia congruente a $\beta$. Ne segue che $a'$ e $b$ sono parallele perché formano angoli alterni interni congruenti. Allora esisterebbero due rette distinte, $a$ e $a'$, passanti per lo stesso punto $P$, entrambe parallele alla retta $b$. Questa conclusione contraddice il V postulato di Euclide, secondo il quale per un punto esterno a una retta passa un'unica parallela. Da questa contraddizione possiamo concludere che abbiamo sbagliato a supporre falsa la tesi, in altre parole la tesi è vera.
+Ragioniamo per assurdo. Supponiamo che la tesi sia falsa, cioè che esista una coppia di angoli alterni interni $\alpha$ e $\beta$ con $\alpha>\beta$. Per il punto $P$, vertice dell'angolo $\alpha$ si potrà allora tracciare una retta $a'$ in modo che l'angolo da essa formato $\alpha'$ sia congruente a $\beta$. Ne segue che $a'$ e $b$ sono parallele perché formano angoli alterni interni congruenti. Allora esisterebbero due rette distinte, $a$ e $a'$, passanti per lo stesso punto $P$, entrambe parallele alla retta $b$. Questa conclusione contraddice il V postulato di Euclide, secondo il quale per un punto esterno a una retta passa un'unica parallela. In altre parole la tesi è vera.
 \end{proof}
+\end{minipage}\hfil
+\begin{minipage}{0.4\textwidth}
+\centering\input{./lbr/chap03/fig009_teo_parall_inv.pgf}
+\end{minipage}
+~\\
 
 In generale possiamo enunciare il seguente
 \begin{teorema}
@@ -195,8 +227,12 @@ Abbiamo già dimostrato che sono congruenti gli angoli alterni interni formati d
 
 Passiamo ora a dimostrare il secondo teorema dell'angolo esterno di un triangolo.
 \begin{teorema}
-In un triangolo un angolo esterno è congruente alla somma dei due angoli interni non adiacenti.
+In un triangolo, un angolo esterno è congruente alla somma dei due angoli interni non adiacenti.
 \end{teorema}
+
+\begin{figure}[htb]
+\centering\input{./lbr/chap03/fig010_ang_int_triang.pgf}
+\end{figure}
 
 \begin{proof}
 Sia $ABC$ un triangolo e sia $C\widehat{B}D$ un angolo esterno. Tracciamo la semiretta $BE\parallel AC$ che divide l'angolo $C\widehat{B}D$ in due parti, $C\widehat{B}E$ ed $E\widehat{B}D$. L'angolo $C\widehat{B}E$ risulta congruente all'angolo $A\widehat{C}B$ in quanto i due angoli sono alterni interni rispetto alle rette parallele $AC$ e $BE$ tagliate dalla trasversale $CB$; analogamente l'angolo $E\widehat{B}D$ risulta congruente all'angolo $C\widehat{A}B$ in quanto i due angoli sono corrispondenti rispetto alle rette parallele $AC$ e $BE$ tagliate dalla trasversale $AD$. Dunque $C\widehat{B}D$ è congruente alla somma degli angoli interni di vertici $A$ e $C$.
@@ -216,18 +252,28 @@ Dunque, necessariamente almeno due angoli sono acuti. Di conseguenza, gli angoli
 \subsection{Somma degli angoli interni di un poligono}
 
 \begin{teorema}
-Dato un poligono $P$ di $n$ lati, la somma degli angoli interni di $P$ è $(n – 2)$ angoli piatti.
+Dato un poligono $P$ di $n$ lati, la somma degli angoli interni di $P$ è $n-2$ angoli piatti.
 \end{teorema}
+\noindent \begin{minipage}{0.5\textwidth}
 \begin{proof}
-Infatti, dato un qualunque poligono (anche concavo) di $n$ lati, scelto un opportuno punto interno in modo che, congiunto con ciascun vertice, il poligono resti diviso in $n$ triangoli, si può osservare che la somma degli angoli interni del poligono è data dalla somma degli angoli interni di $n$ triangoli meno l'angolo giro al centro, in figura l'angolo $J$.
+Infatti, dato un qualunque poligono (anche concavo) di $n$ lati, scelto un opportuno punto interno $J$ in modo che, congiunto con esso ciascun vertice il poligono resti diviso in $n$ triangoli, si può osservare che la somma degli angoli interni del poligono è data dalla somma degli angoli interni di $n$ triangoli ($n$ angoli piatti) meno l'angolo giro (2 angoli piatti) in $J$.
 \end{proof}
+\end{minipage}\hfil
+\begin{minipage}{0.5\textwidth}
+\centering\input{./lbr/chap03/fig011_ang_int_poly.pgf}
+\end{minipage}
 
 \begin{teorema}
 La somma degli angoli esterni di un qualsiasi poligono convesso, indipendentemente dal numero dei lati, è congruente ad un angolo giro.
 \end{teorema}
+\noindent \begin{minipage}{0.5\textwidth}
 \begin{proof}
-Ogni angolo esterno è adiacente ad un angolo interno, per cui se si hanno $m$ lati e quindi $m$ vertici la somma degli angoli interni e degli angoli esterni è pari ad $m$ angoli piatti; essendo $(m – 2)$ angoli piatti la somma degli angoli interni, sarà di due angoli piatti (quindi un angolo giro) la somma degli angoli esterni.
+Ogni angolo esterno è adiacente ad un angolo interno, per cui se si hanno $m$ lati, e quindi $m$ vertici, la somma degli angoli interni e degli angoli esterni è pari ad $m$ angoli piatti. Essendo la somma degli angoli interni congruente a $m-2$ angoli piatti (per il teorema precedente), la somma degli angoli esterni sarà di due angoli piatti, cioè un angolo giro.
 \end{proof}
+\end{minipage}\hfil
+\begin{minipage}{0.5\textwidth}
+\centering\input{./lbr/chap03/fig012_ang_est_poly.pgf}
+\end{minipage}
 
 
 \section{Generalizzazione dei criteri di congruenza dei triangoli}
@@ -236,37 +282,49 @@ Se due triangoli hanno rispettivamente due angoli congruenti, allora anche i ter
 
 Dunque, se due triangoli hanno congruenti un lato e due angoli, anche se il lato congruente non è compreso tra i due angoli congruenti, risultano congruenti. Precisamente, vale la seguente proposizione.
 
-\begin{teorema}[2\textsuperscript{o} Criterio di congruenza generalizzato]
+\begin{teorema}[2\textsuperscript{o} Criterio generalizzato di congruenza dei triangoli]
 Due triangoli sono congruenti se hanno rispettivamente congruenti una coppia di lati e due coppie di angoli ugualmente posti rispetto ai lati congruenti.
 \end{teorema}
 
+\begin{figure}[htb]
+\centering\input{./lbr/chap03/fig013_2crit_gen_cong_tri.pgf}
+\end{figure}
+
 \begin{proof}
-Il caso in cui il lato congruente è compreso tra gli angoli congruenti è stato già esaminato ed utilizzato per la dimostrazione di varie proprietà. Ora esaminiamo l'altro caso.
+Il caso in cui il lato congruente è compreso tra gli angoli congruenti è stato già dimostrato (2\textsuperscript{o} criterio di congruenza dei triangoli) ed utilizzato per la dimostrazione di varie proprietà. Ora consideriamo l'altro caso.
 
-In figura abbiamo rappresentato due triangoli, $ABC$ e $DEF$ che hanno per ipotesi i lati $AC\cong DF$ e gli angoli $B\widehat{A}C\cong E\widehat{D}F$ e $A\widehat{B}C\cong D\widehat{E}F$. I due triangoli risultano congruenti.
-
-La tesi segue dal fatto che deve risultare $B\widehat{A}C\cong E\widehat{F}D$, in quanto tali angoli sono supplementari alla somma di angoli congruenti per ipotesi. Ci si riconduce quindi al caso del secondo criterio di congruenza già dimostrato in precedenza.
+In figura abbiamo rappresentato due triangoli, $ABC$ e $A'B'C'$ che hanno per ipotesi i lati $AC\cong A'C'$ e gli angoli $\alpha\cong \alpha'$ e $\beta\cong \beta'$. I due triangoli risultano congruenti, poiché deve risultare $A\widehat{C}B\cong A'\widehat{C'}B'$, in quanto tali angoli sono supplementari alla somma di angoli congruenti per ipotesi (la somma degli angoli interni di un triangolo è un angolo piatto). Ci riconduciamo quindi al caso del 2\textsuperscript{o} criterio di congruenza, già dimostrato in precedenza.
 \end{proof}
 
-Riprendiamo una proprietà dei triangoli isosceli che abbiamo enunciato ma non abbiamo dimostrato:
+Riprendiamo una proprietà dei triangoli isosceli che abbiamo enunciato ma non abbiamo dimostrato.
 \begin{proposizione}
-In un triangolo isoscele l'altezza relativa alla base è anche bisettrice dell'angolo al vertice e mediana relativa alla base.
+In un triangolo isoscele, l'altezza relativa alla base è anche bisettrice dell'angolo al vertice e mediana relativa alla base.
 \end{proposizione}
 
-\noindent Ipotesi: $IG\cong IH$, $I\widehat{G}H\cong I\widehat{H}G$, $IL\perp GH$.\tab Tesi: $G\widehat{I}L\cong H\widehat{I}L$, $GL\cong LH$.
+\noindent \begin{minipage}{0.6\textwidth}
+\noindent Ipotesi: $IG\cong IH$, $\alpha\cong \beta$, $IL\perp GH$.\\
+Tesi: $G\widehat{I}L\cong H\widehat{I}L$, $GL\cong LH$.
 
 \begin{proof}
-I triangoli $GLI$ e $LHI$ sono congruenti per il secondo criterio generalizzato, avendo congruenti un lato e due angoli. Di conseguenza, i restanti elementi sono ordinatamente congruenti, in particolare $GL\cong LH$ e $G\widehat{I}L\cong H\widehat{I}L$.
+I triangoli $GLI$ e $LHI$ sono congruenti per il secondo criterio generalizzato, avendo congruenti un lato (quello obliquo, $IG\cong IH$) e due angoli ($\alpha\cong \beta$ e $I\widehat{L}G \cong I\widehat{L}H$). Di conseguenza, i restanti elementi sono ordinatamente congruenti, in particolare $GL\cong LH$ e $G\widehat{I}L\cong H\widehat{I}L$.
 \end{proof}
+\end{minipage}\hfil
+\begin{minipage}{0.4\textwidth}
+\centering\input{./lbr/chap03/fig014_tri_isoscele_prop.pgf}
+\end{minipage}
 
-\begin{osservazione}
-Dall'esame dei primi tre criteri di congruenza dei triangoli, nonché dalla generalizzazione del secondo criterio, si potrebbe essere indotti a pensare che due triangoli sono congruenti se hanno tre coppie di elementi rispettivamente congruenti, se almeno una delle tre coppie di elementi è costituita da lati.
-In realtà, il primo criterio non si può generalizzare come il secondo. Basta pensare alla figura seguente: $ADC$ è un triangolo isoscele, $B$ è un punto sul prolungamento della base $AD$. Unendo $B$ con $C$, vengono individuati due nuovi triangoli, $ABC$ e $DBC$ che hanno in comune il lato $CB$ e l'angolo di vertice $B$, ed hanno inoltre congruenti i lati $AC$ e $CD$, ma evidentemente non sono congruenti. Quindi se due triangoli hanno due lati ed un angolo qualsiasi congruenti, non è detto che siano congruenti. Però nei due triangoli citati in figura, gli angoli $C\widehat{A}B$ e $C\widehat{D}B$ sono supplementari.
-\end{osservazione}
+\osservazione Dall'esame dei primi tre criteri di congruenza dei triangoli, nonché dalla generalizzazione del secondo criterio, si potrebbe essere indotti a pensare che due triangoli sono congruenti se hanno tre coppie di elementi rispettivamente congruenti, se almeno una delle tre coppie di elementi è costituita da lati.
 
-Tale osservazione fa da premessa al quarto criterio di congruenza dei triangoli.
+\noindent \begin{minipage}{0.6\textwidth}
+In realtà, il primo criterio non si può generalizzare come il secondo. Basta pensare alla figura a lato: $ADC$ è un triangolo isoscele, $B$ è un punto sul prolungamento della base $AD$. Unendo $B$ con $C$, vengono individuati due nuovi triangoli, $ABC$ e $BCD$ che hanno in comune il lato $CB$ e l'angolo di vertice $B$, ed hanno inoltre congruenti i lati $AC$ e $CD$, ma evidentemente non sono congruenti. Quindi se due triangoli hanno due lati ed un angolo qualsiasi congruenti, non è detto che siano congruenti. Però nei due triangoli citati in figura, gli angoli $C\widehat{A}B$ e $C\widehat{D}B$ sono supplementari.
+\end{minipage}\hfil
+\begin{minipage}{0.4\textwidth}
+\centering\input{./lbr/chap03/fig015_tri_isoscele_prop2.pgf}
+\end{minipage}
+
+Tale osservazione fa da premessa al 4\textsuperscript{o} criterio di congruenza dei triangoli.
 \begin{teorema}[4\textsuperscript{o} criterio di congruenza dei triangoli]
-Due triangoli sono congruenti se hanno congruenti due coppie di lati e l'angolo opposto ad uno di essi, a patto che l'angolo opposto all'altra coppia di lati congruenti sia della stessa specie (cioè sia, in entrambi i triangoli, acuto oppure retto oppure ottuso).
+Due triangoli sono congruenti se hanno congruenti due coppie di lati e l'angolo opposto ad uno di essi, a patto che l'angolo opposto all'altra coppia di lati congruenti sia della stessa specie (cioè sia, in entrambi i triangoli, acuto, retto, oppure ottuso).
 \end{teorema}
 
 \noindent Ipotesi: $AC\cong DF$, $CB\cong FE$, $C\widehat{A}B\cong F\widehat{D}E$, $C\widehat{B}A\cong F\widehat{E}D$.\tab Tesi: $ABC\cong DEF$.
@@ -288,9 +346,161 @@ Per quanto affermato nelle proposizioni precedenti, sappiamo che i triangoli ret
 
 Tenendo conto dunque dei criteri di congruenza dei triangoli, si possono riformulare dei criteri di congruenza specifici per i triangoli rettangoli.
 
+\begin{teorema}[Criteri di congruenza dei triangoli rettangoli]
+Due triangoli rettangoli sono congruenti se hanno rispettivamente congruenti almeno uno tra:
+\begin{itemize*}
+\item i due cateti (1\textsuperscript{o} criterio);
+\item l'ipotenusa e un angolo acuto (2\textsuperscript{o} criterio);
+\item un cateto e l'angolo acuto adiacente (2\textsuperscript{o} criterio);
+\item un cateto e l'angolo acuto opposto (2\textsuperscript{o} criterio);
+\item un cateto e l'ipotenusa (4\textsuperscript{o} criterio).
+\end{itemize*}
+\end{teorema}
 
-%\newpage
+L'ultimo criterio dell'elenco è detto anche \emph{criterio particolare di congruenza dei triangoli rettangoli} (ha naturalmente una formulazione più semplice del 4\textsuperscript{o} criterio di congruenza dei triangoli perché si sa già che le coppie di angoli non citati nell'ipotesi sono ``della stessa specie'', perché certamente acuti). Due triangoli rettangoli che hanno congruenti l'ipotenusa ed un cateto hanno congruenti due coppie di lati e l'angolo opposto ad uno di essi (l'angolo retto, opposto all'ipotenusa), ed hanno gli angoli opposti all'altra coppia di lati congruenti della stessa specie (gli angoli opposti ai cateti congruenti sono acuti in entrambi i triangoli). 
 
-%\input{./chap/02_esercizi}
+Data l'importanza di tale criterio, nonché la sua semplice dimostrazione, indipendente dal quarto criterio di congruenza dei triangoli qualunque, lo riformuliamo a parte e ne proponiamo una dimostrazione:
+\begin{teorema}[Criterio particolare di congruenza dei triangoli rettangoli]
+Due triangoli rettangoli sono congruenti se hanno ordinatamente congruenti un cateto e l'ipotenusa.
+\end{teorema}
 
-%\cleardoublepage
+\noindent Ipotesi: $\widehat{A}\cong \widehat{A'}$, $AC\cong A'C'$, $BC\cong B'C'$.\tab Tesi: $ABC\cong A'B'C'$.
+
+\begin{proof}
+Si prolunga il cateto $AB$ di un segmento $AB'$ congruente ad $A'B'$, quindi si congiunge $B'$ con $C$. Il triangolo $AB'C$ è anch'esso rettangolo in $A$, in quanto l'angolo $B'\widehat{A}C$ è adiacente ad un angolo retto ($C\widehat{A}B$). I triangoli rettangoli $AB'C$ e $A'B'C'$ sono congruenti per il primo criterio, in quanto hanno i due cateti ordinatamente congruenti: $AC\cong A'C'$ per ipotesi e $AB\cong A'B'$ per costruzione. Di conseguenza risulterà $CB\cong C'B'$ e dunque $CB'\cong CB$ (per la proprietà transitiva della congruenza, essendo $CB\cong C'B'$ per ipotesi). Quindi il triangolo $B'CB$ è isoscele sulla base $B'B$, e di conseguenza, per il teorema (diretto) del triangolo isoscele, i suoi angoli alla base sono congruenti: $A\widehat{B}C\cong A\widehat{B'}C$.
+
+Allora i triangoli $ABC$ e $A'B'C'$ sono congruenti per il secondo criterio generalizzato, avendo ordinatamente congruenti due coppie di angoli e il lato opposto ad uno di essi (l'ipotenusa).
+\end{proof}
+
+\section{Disuguaglianze tra gli elementi di un triangolo}
+
+\begin{teorema}
+In un triangolo, a lato maggiore si oppone angolo maggiore.
+\end{teorema}
+
+\noindent Ipotesi: $BC>AB$. Tesi: $B\widehat{A}C>A\widehat{C}B$.
+
+\begin{proof}
+Scegliamo opportunamente un punto $D$ sul lato maggiore $BC$ in modo che $BD$ sia congruente ad $AB$. Se uniamo $A$ con $D$, poiché il segmento $AD$ è interno al triangolo $ABC$, il triangolo $ABC$ viene diviso in due nuovi triangoli, $ADB$ e $ACD$. Il triangolo $ADB$ è isoscele sulla base $AD$ pertanto ha gli angoli alla base congruenti, per cui risulta $B\widehat{A}D\cong A\widehat{D}B$. Ma $B\widehat{A}D$ è una parte propria di $B\widehat{A}C$, mentre $A\widehat{D}B$, come angolo esterno al triangolo $ACD$ è maggiore dell'angolo $A\widehat{C}D=A\widehat{C}B$, interno non adiacente, per il primo teorema dell'angolo esterno. Si ha dunque: $B\widehat{A}C>B\widehat{A}D\cong A\widehat{D}B>A\widehat{C}B$ e quindi la tesi.
+\end{proof}
+
+\begin{teorema}
+In un triangolo, ad angolo maggiore si oppone lato maggiore.
+\end{teorema}
+
+\noindent Ipotesi: $B\widehat{A}C>A\widehat{C}B$. Tesi: $BC>AB$.
+
+\begin{proof}
+Dimostriamo la tesi in maniera indiretta, facendo uso del teorema precedente e del teorema del triangolo isoscele. Supponiamo vera l'ipotesi $B\widehat{A}C>A\widehat{C}B$. Facciamo un confronto tra i segmenti $BC$ e $AB$ considerando tutte le possibilità. \`E possibile che sia:
+\[\text{(i) }BC\cong AB\text{;}\qquad\qquad \text{(ii) }BC<AB\text{;}\quad\quad\text{(iii) }BC>AB\text{.}\]
+
+Se fosse vera la (i), il triangolo $ABC$ sarebbe isoscele sulla base $AC$ e risulterebbe $B\widehat{A}C\cong A\widehat{C}B$, per il teorema del triangolo isoscele, contro l'ipotesi.
+
+Se fosse vera la (ii), per il teorema precedente risulterebbe $B\widehat{A}C<A\widehat{C}B$, contro l'ipotesi.
+
+Rimane solo la possibilità che sia vera la (iii), la quale infatti non contraddice il teorema precedente, anzi lo conferma. Quindi la tesi è dimostrata.
+\end{proof}
+
+Da questo teorema discende la proprietà che in un triangolo rettangolo l'ipotenusa è sempre maggiore di ciascuno dei due cateti, in quanto l'ipotenusa è il lato che si oppone all'angolo maggiore, l'angolo retto.
+
+Ora dimostriamo una proprietà importante dei triangoli, nota come \emph{disuguaglianza triangolare}.
+
+\begin{teorema}[Disuguaglianza triangolare]
+In un triangolo, ciascun lato è minore della somma degli altri due e maggiore della loro differenza.
+\end{teorema}
+
+\begin{proof}
+In riferimento alla figura a lato, dimostriamo che nel triangolo $EFG$, $EF < EG + GF$. Se $EF$ fosse minore di un altro lato, sicuramente sarebbe minore della somma degli altri due e il teorema sarebbe dimostrato. Esaminiamo il caso in cui $EF$ è maggiore sia di $FG$ che di $EG$. Prolunghiamo il lato $EG$ dalla parte di $G$ e prendiamo un punto $J$ sul prolungamento in modo che il segmento $GJ$ sia congruente a $GF$. Unendo $J$ con $F$ abbiamo il triangolo $EFJ$ nel quale il lato $EJ$ è congruente alla somma dei lati $EG$ e $GF$. La tesi si riconduce dunque a dimostrare che il lato $EF$ è minore di $EJ$. Osserviamo che il triangolo $GFJ$ è isoscele sulla base $FJ$, per cui gli angoli alla base sono congruenti $G\widehat{F}J\cong G\widehat{J}F$. Ma l'angolo $G\widehat{F}J$ è una parte propria di $E\widehat{F}J$ che quindi risulta maggiore di $G\widehat{F}J\cong E\widehat{J}F$. Dunque, nel triangolo $EFJ$, il lato $EJ$, che si oppone ad angolo maggiore, è maggiore del lato $EF$, che si oppone ad angolo minore, per il teorema precedente.
+ 
+Visto che la costruzione fatta si può ripetere tale e quale rispetto a qualsiasi lato, si può concludere che $EF<EG+GF$, $EG<EF+GF$, $GF<EF+EG$ e dunque, sottraendo ad ambo i membri della prima disuguaglianza il lato $GF$ si ha $EF-EG<GF$, analogamente sottraendo uno stesso segmento si hanno $EF-GF<EG$, $EG-EF<GF$, $EG-EF<GF$, $EG-GF<EF$, $GF-EF<EG$, $GF-EG<EF$. Leggendo le relazioni da destra verso sinistra, ogni lato è maggiore della differenza degli altri due (abbiamo scritto tutte le disuguaglianze, anche se ovviamente ogni lato ha misura positiva mentre la differenza tra due lati può essere anche nulla o negativa).
+\end{proof}
+
+Proponiamo ora un teorema sulle disuguaglianze tra gli elementi di due triangoli.
+
+Supponiamo di avere due triangoli aventi due coppie di lati rispettivamente congruenti. Allora, se anche gli angoli compresi sono congruenti, i due triangoli risultano congruenti per il primo criterio. Altrimenti, se i due angoli compresi tra i lati congruenti non sono congruenti, i due triangoli non sono congruenti, ed i terzi lati sono diseguali nello stesso verso degli angoli opposti ad essi (cioè compresi tra i lati congruenti).
+
+\begin{teorema}
+Se due lati di un triangolo sono rispettivamente congruenti a due lati di un altro triangolo, e l'angolo tra essi compreso è nel primo triangolo maggiore che nel secondo, allora il terzo lato del primo triangolo è maggiore del terzo lato del secondo.
+\end{teorema}
+
+\noindent Ipotesi: $AB\cong DE$, $AC\cong DF$, $B\widehat{A}C>E\widehat{D}F$ ($AB\leq AC$). Tesi: $BC>EF$.
+
+\begin{proof}
+Tracciamo la semiretta $AS$ di origine $A$, interna all'angolo $B\widehat{A}C$, in modo tale che $B\widehat{A}S\cong E\widehat{D}F$. Se prendiamo su $AS$ il punto $H$ tale che $AH\cong DF$ ed uniamo $H$ con $B$, otteniamo un triangolo $ABH$ congruente a $DEF$ per il primo criterio.
+
+\`E importante dimostrare che il punto $H$ è esterno al triangolo $ABC$. Per dimostrare ciò, prendiamo il punto $L$, intersezione tra la semiretta $AS$ ed il lato $BC$. Notiamo che abbiamo iniziato la costruzione a partire dal lato $AB$ avendo supposto $AB\leq AC$, ma da questa disuguaglianza segue la corrispondente disuguaglianza tra gli angoli opposti: $A\widehat{B}C\geq A\widehat{C}B$. L'angolo $A\widehat{L}C$ è esterno al triangolo $ABL$, pertanto è maggiore dell'angolo $A\widehat{B}C$ per il primo teorema dell'angolo esterno. Mettendo insieme le due disuguaglianze si ha $A\widehat{L}C>A\widehat{B}C\geq A\widehat{C}B$, dunque nel triangolo $ALC$ vale la seguente relazione tra due angoli: $A\widehat{L}C>A\widehat{C}B$. Vale quindi anche la corrispondente relazione tra i lati opposti, per cui $AC>AL$. Poiché $AX\cong DF\cong AC$, il punto $L$ è interno al segmento $AH$, e dunque $H$ è esterno al triangolo $ABC$.
+
+Abbiamo già unito $H$ con $B$, uniamo $H$ anche con $C$ e ragioniamo sul triangolo $BHC$. Essendo $BH$ congruente ad $EF$, la tesi è ricondotta a dimostrare che $BC$ è maggiore di $BH$. Confrontiamo i rispettivi angoli opposti. Poiché il triangolo $AHC$ è isoscele sulla base $HC$, gli angoli alla base risultano congruenti $A\widehat{H}C\cong A\widehat{C}H$, dunque risulta $B\widehat{H}C\cong B\widehat{C}H$ perché:
+\[B\widehat{H}C=B\widehat{H}A+A\widehat{H}C>A\widehat{H}C\cong A\widehat{C}H=A\widehat{C}B+B\widehat{C}H>B\widehat{C}H.\]
+Dalla precedente disuguaglianza tra gli angoli segue la corrispondente disuguaglianza tra i lati opposti $BC>BH$ e dunque la tesi.
+\end{proof}
+
+\begin{teorema}
+Se due lati di un triangolo sono, rispettivamente, congruenti a due lati di un altro triangolo, e il terzo lato del primo triangolo è maggiore del terzo lato del secondo, allora l'angolo opposto al lato diseguale (compreso tra i lati congruenti) è nel primo triangolo maggiore che nel secondo.
+\end{teorema}
+
+\noindent Ipotesi: $AB\cong DE$, $AC\cong DF$, $BC>EF$). Tesi: $B\widehat{A}C>E\widehat{D}F$.
+
+\begin{proof}
+Procediamo per esclusione, in maniera analoga a come abbiamo fatto nel teorema inverso sulle disuguaglianze tra gli elementi di un triangolo.
+
+Supponiamo vera l'ipotesi e studiamo i vari casi delle possibili relazioni tra gli angoli citati nella tesi. Sono possibili tre casi:
+\[\text{(i) }B\widehat{A}C\cong E\widehat{D}F\text{;}\qquad\qquad \text{(ii) }B\widehat{A}C<E\widehat{D}F\text{;}\qquad\qquad \text{(iii) }B\widehat{A}C>E\widehat{D}F\text{.}\]
+
+Se valesse l'ipotesi (i), essendo anche $AB\cong DE$ e $AC\cong DF$, i triangoli risulterebbero congruenti per il primo criterio, contrariamente all'ipotesi $BC>EF$.
+
+Se valesse l'ipotesi (ii), essendo anche $AB\cong DE$ e $AC\cong DF$, per il teorema precedente risulterebbe $BC<EF$, contrariamente all'ipotesi $BC>EF$.
+
+Rimane l'ipotesi (iii), che non contraddice il teorema precedente e che anzi lo conferma. Dunque la tesi è dimostrata.
+\end{proof}
+
+Dalla disuguaglianza triangolare seguono alcune proprietà riguardanti i lati di poligoni.
+
+\begin{teorema}
+In un qualsiasi poligono, ciascun lato è minore della somma dei rimanenti.
+\end{teorema}
+
+Nel quadrilatero $ABCD$, se vogliamo dimostrare ad esempio che il lato $AD$ è minore della somma degli altri tre, tracciamo la diagonale $AC$ che divide il quadrilatero in due triangoli. Risulta $AD<AC+CD$, ed anche $AC<AB+BC$, per la disuguaglianza triangolare, per cui $AD<AB+BC+CD$.
+
+Ma la proprietà non è limitata ai quadrilateri. Nel pentagono $EFGHI$, se vogliamo dimostrare ad esempio che il lato $EI$ è minore della somma degli altri quattro, possiamo tracciare la diagonale $EG$ che divide il pentagono in un quadrilatero ed un triangolo. Se supponiamo che la tesi sia vera per i quadrilateri, verifichiamo che la tesi vale anche per i pentagoni. Infatti risulta $EI<EG+GH+HI$, in quanto la tesi è vera per i quadrilateri, e $EG<EF+FG$, per la disuguaglianza triangolare. Dunque $EI<EF+FG+GH+HI$, come volevasi dimostrare.
+
+Ma in realtà questo passaggio che abbiamo fatto dai quadrilateri ai pentagoni vale anche per passare dai pentagoni agli esagoni ecc. seguendo il procedimento per induzione.
+
+Più precisamente, poiché vale la disuguaglianza triangolare, la tesi è vera per i triangoli. Supponendo la tesi vera per tutti i poligoni di $n$ lati ($n\geq 3$) si dimostra che la tesi vale anche per i poligoni di $n+1$ lati. Allora, la tesi è vera per tutti i poligoni (di un numero qualsiasi di lati).
+
+\begin{definizione}
+Un poligono convesso si dice \emph{inscritto} in un altro se ogni vertice del primo giace sul contorno del secondo. Il secondo poligono è detto \emph{circoscritto} al primo.
+\end{definizione}
+
+\begin{teorema}
+Se un poligono convesso è inscritto in un altro, il perimetro del primo è minore di quello del secondo.
+\end{teorema}
+
+Illustriamo con un semplice esempio il contenuto del teorema. Non è da escludere il caso che un lato del primo poligono giaccia interamente su un lato del secondo (e nemmeno che la stessa situazione valga per più lati), però è semplice dimostrare la disuguaglianza anche senza considerare le parti del contorno perfettamente sovrapposte.
+
+Osserviamo i quadrilateri $EFGH$ e $ABCD$ (il primo inscritto nel secondo) in figura; per la disuguaglianza triangolare $EF<EB+BF$, $FG<FC+CG$, $GH<GD+DH$, $HE<HA+AE$. La somma dei primi membri delle quattro disuguaglianze rappresenta il perimetro di $EFGH$, la somma dei secondi membri rappresenta il perimetro di $ABCD$.
+
+La tesi del teorema precedente vale anche se il poligono, anziché essere inscritto, è semplicemente contenuto nell'altro. 
+Illustriamo questa proprietà con un semplice esempio: il poligono $NOPQR$ è contenuto in $IJKLM$. Il lato $RQ$ è minore di $RS+SQ$ per la disuguaglianza triangolare. Dunque il perimetro del poligono $NOPQR$ è minore del perimetro di $NOPQS$, e quest'ultimo poligono è inscritto in $IJKLM$, per cui il perimetro di $NOPQS$ è minore del perimetro di $IJKLM$. Dalle due disuguaglianze segue la tesi.
+
+\begin{exrig}
+\begin{esempio}
+Nel triangolo $ABC$, isoscele sulla base $BC$, si prende sul lato $AB$ un punto $D$. Dimostra che $DC>DB$.
+
+Individuiamo ipotesi, tesi e costruiamo il disegno.
+
+\noindent Ipotesi: $AB\cong AC$, $D\in AC$.\tab Tesi: $CD>BD$.
+
+\begin{proof}
+Consideriamo il triangolo $DBC$
+Poiché $B\widehat{C}D<B\widehat{C}A$ e $B\widehat{C}A\cong A\widehat{B}C$ si ha che $B\widehat{C}D<D\widehat{B}C$.
+Nel triangolo $DBC$ ad angolo maggiore si oppone lato maggiore $CD>BD$.
+\end{proof}
+\end{esempio}
+\end{exrig}
+
+\newpage
+
+\input{./chap/03_esercizi}
+
+\cleardoublepage

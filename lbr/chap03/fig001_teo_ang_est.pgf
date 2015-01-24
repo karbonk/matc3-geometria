@@ -1,0 +1,67 @@
+\begin{tikzpicture}[scale=1.1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+\coordinate (a) at (0,0);
+\coordinate (c) at (0.8,1.2);
+\coordinate (b) at (2,0);
+
+\draw[fill,gray!10] (a) -- (b) -- (c);
+
+\draw[fill] ($(a)!1.7!(b)$) circle(1pt) coordinate (d) node[below] {$D$};
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- cycle;
+\draw[fill,red!30] (c) circle (0.35);
+\end{scope}
+
+\begin{scope}
+\clip (c) -- (b) -- (d) -- cycle;
+\draw[fill,blue!20] (b) circle (0.3);
+\end{scope}
+
+\draw[very thick] (a) node[below] {$A$} -- (b) node[below] {$B$} -- (c) node[above] {$C$} -- cycle;
+\draw[dashed] (b) -- ($(a)!1.9!(b)$);
+\coordinate (m) at ($(b)!0.5!(c)$);
+\draw (a) -- ($(a)!2!(m)$) coordinate (n) node[above] {$N$} -- (b);
+\draw[fill] (m) circle (1pt);
+\path ([shift={(2pt,6pt)}]m) node {$M$};
+
+\node at (-.8,0.1) {(a)};
+
+\end{scope}
+
+\begin{scope}[xshift=7cm]
+
+\coordinate (a) at (0,0);
+\coordinate (c) at (0.8,1.2);
+\coordinate (b) at (2,0);
+
+\draw[fill,gray!10] (a) -- (b) -- (c);
+
+\draw[fill] ($(c)!1.6!(b)$) circle(1pt) coordinate (e) node[right] {$E$};
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- cycle;
+\draw[fill,green!30] (a) circle (0.4);
+\end{scope}
+
+\begin{scope}
+\clip (a) -- (b) -- (e) -- cycle;
+\draw[fill,blue!20] (b) circle (0.3);
+\end{scope}
+
+\draw[very thick] (a) node[below] {$A$} -- (b) node[right] {$B$} -- (c) node[above] {$C$} -- cycle;
+\draw[dashed] (b) -- ($(c)!1.8!(b)$);
+\coordinate (f) at ($(a)!0.5!(b)$);
+\draw (c) -- ($(c)!2!(f)$) coordinate (g) node[below] {$G$} -- (b);
+\draw[fill] (f) circle (1pt);
+\path ([shift={(-3pt,-5pt)}]f) node {$F$};
+
+\node at (-.8,0.1) {(b)};
+
+\end{scope}
+
+
+\end{tikzpicture}

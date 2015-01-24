@@ -1,0 +1,64 @@
+\begin{tikzpicture}[scale=0.7,font=\small, dot/.style={circle,inner sep=1pt, fill, label={#1}, name=#1}, extended line/.style={shorten >=-#1,shorten <=-#1}, extended line/.default=1cm]
+\usetikzlibrary{calc, intersections}
+
+\begin{scope}
+
+\coordinate (a) at (0,0);
+\coordinate (b) at (3,1);
+\coordinate (c) at (5,-1);
+\coordinate (d) at (3.5,-2.5);
+\coordinate (e) at (0,-2);
+\coordinate (f) at (2.4,-0.7);
+
+\draw[fill, gray!10] (a) -- (b) -- (c) -- (d) -- (e) -- cycle;
+%\draw[red, fill=red!20] (f) circle (0.5);
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- (d) -- (e) -- cycle;
+\draw[blue, fill=blue!20] (a) circle (0.45);
+\draw[blue, fill=blue!20] (b) circle (0.45);
+\draw[blue, fill=blue!20] (c) circle (0.45);
+\draw[blue, fill=blue!20] (d) circle (0.45);
+\draw[blue, fill=blue!20] (e) circle (0.45);
+\end{scope}
+
+\draw[dotted] (a) -- ($(a)!-1cm!(b)$) coordinate (a1);
+\draw[dotted] (b) -- ($(b)!-1cm!(c)$) coordinate (b1);
+\draw[dotted] (c) -- ($(c)!-1cm!(d)$) coordinate (c1);
+\draw[dotted] (d) -- ($(d)!-1cm!(e)$) coordinate (d1);
+\draw[dotted] (e) -- ($(e)!-1cm!(a)$) coordinate (e1);
+
+\begin{scope}
+\clip (a) -- (e) -- (a1) -- cycle;
+\draw[red, fill=red!20] (a) circle (0.45);
+\end{scope}
+\begin{scope}
+\clip (b) -- (a) -- (b1) -- cycle;
+\draw[red, fill=red!20] (b) circle (0.45);
+\end{scope}
+\begin{scope}
+\clip (c) -- (b) -- (c1) -- cycle;
+\draw[red, fill=red!20] (c) circle (0.45);
+\end{scope}
+\begin{scope}
+\clip (d) -- (c) -- (d1) -- cycle;
+\draw[red, fill=red!20] (d) circle (0.45);
+\end{scope}
+\begin{scope}
+\clip (e) -- (d) -- (e1) -- cycle;
+\draw[red, fill=red!20] (e) circle (0.45);
+\end{scope}
+
+%\draw[fill] (f) circle (1pt) node[below] {$F$};
+%\draw[dashed] (f) -- (a);
+%\draw[dashed] (f) -- (b);
+%\draw[dashed] (f) -- (c);
+%\draw[dashed] (f) -- (d);
+%\draw[dashed] (f) -- (e);
+
+\draw[thick] (a) node[above] {$A$} -- (b) node[above] {$B$} -- (c) node[right] {$C$} -- (d) node[below] {$D$} -- (e) node[left] {$E$} -- cycle;
+
+\end{scope}
+
+
+\end{tikzpicture}

@@ -1,0 +1,23 @@
+\begin{tikzpicture}[scale=1.2,font=\small, dot/.style={circle,inner sep=1pt, fill, label={#1}, name=#1}, extended line/.style={shorten >=-#1,shorten <=-#1}, extended line/.default=1cm]
+\usetikzlibrary{calc, intersections}
+
+\begin{scope}
+
+\coordinate (a) at (-1,0);
+\coordinate (b) at (1,0);
+\coordinate (a1) at (-1,0.9);
+\coordinate (a2) at (-1,-0.9);
+\coordinate (b1) at (1,0.9);
+\coordinate (b2) at (1,-0.9);
+
+\draw[fill] (a) circle (1pt) node[above=7pt,left] {$A$};
+\draw[fill] (b) circle (1pt) node[above=7pt,right] {$B$};
+\draw[thick, extended line=0.8cm] (a)--(b);
+\node at ([shift={(0.8,0)}]b) {$r$};
+\draw[thick, blue] (a1) node[right, black] {$s$} -- (a2);
+\draw[thick, blue] (b1) node[right, black] {$t$} -- (b2);
+
+\end{scope}
+
+
+\end{tikzpicture}

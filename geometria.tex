@@ -21,6 +21,9 @@
 %  -  README
 %  -  files under chap/, lbr/ and img/ directories
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pdfminorversion=5
+\pdfcompresslevel=9
+\pdfobjcompresslevel=3
 \documentclass[10pt,a4paper,openright]{matc3mem}
 %========================
 %  Lingua & codifica
@@ -147,6 +150,8 @@
   plainpages=false,%
   pdftitle={\pdftitolo, \edizione \tipo},%
   pdfauthor=Daniele Masini,%
+  pdfsubject=Testo di Geometria per la Scuola Superiore di $II$ grado,%
+  pdfkeywords=geometria scuola matematicamente,%
   pdfdisplaydoctitle=true%
 }
 \bookmarksetup{startatroot}
@@ -175,4 +180,12 @@
 % Terzo capitolo
 %=========================
 \include{chap/03_parallele}
+%=========================
+% Quarto capitolo
+%=========================
+\include{chap/04_quadrilateri}
+%=========================
+% Quinto capitolo
+%=========================
+\include{chap/05_circonferenza}
 \end{document}

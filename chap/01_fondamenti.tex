@@ -354,12 +354,12 @@ conclusione & $ q $ & $ \neg p $ & $ q $ & $ p $ & $p\Rightarrow r$\\
  \end{tabular*}
 \end{center}
 Suggeriamo una lettura degli schemi appena esposti:
-\begin{itemize}
+\begin{itemize*}
 \item \emph{modus ponens}: se sappiamo che $p$ implica $q$ e che $p$ è vera, allora possiamo concludere che anche $q$ è vera (metodo diretto di dimostrazione);
 \item \emph{modus tollens}: se sappiamo che $p$ implica $q$ e che $q$ è falsa, allora possiamo concludere che anche $p$ è falsa (metodo indiretto di dimostrazione);
 \item \emph{sillogismo disgiuntivo}: se sappiamo che, tra $p$ e $q$, almeno una delle due è vera, e sappiamo che $p$ (rispettivamente $q$) è falsa, allora possiamo concludere che $q$ (rispettivamente $p$) è vera;
 \item \emph{sillogismo ipotetico}: se sappiamo che $p$ implica $q$ e che $q$ implica $r$, allora possiamo concludere che $p$ implica $r$ (proprietà transitiva dell'implicazione).
-\end{itemize}
+\end{itemize*}
 
 Altre regole (note come i \emph{giudizi} di Aristotele) fanno uso dei predicati e dei quantificatori. Riprendiamo un esempio precedente traducendo la frase <<tutti i quadrati hanno due diagonali>> e la sua negazione <<non tutti i quadrati hanno due diagonali>> in formule che fanno uso anche del linguaggio degli insiemi. Se chiamiamo $Q$ l'insieme di tutti i quadrati e $P$ la proprietà dell'avere due diagonali, se $x$ è il generico quadrato (elemento di $Q$), $P(x)$ è il predicato <<$x$ gode della proprietà $P$>>, cioè <<$x$ ha due diagonali>>, la frase <<tutti i quadrati hanno due diagonali>> si traduce in simboli: ${\forall}x\in Q$, $P(x)$.
 
@@ -490,12 +490,12 @@ Euclide nei suoi \emph{Elementi} aveva individuato un gruppo di cinque assiomi, 
 \item Tutti gli angoli retti siano uguali tra loro.
 \item Se una retta che taglia due rette forma dallo stesso lato angoli interni la cui somma è minore di due angoli retti, prolungando illimitatamente le due rette, esse si incontreranno dalla parte dove i due angoli sono minori di due retti.
 
- \begin{minipage}{.45\textwidth}
- \centering\input{./lbr/chap01/fig003_euc.pgf}
- \end{minipage}\hfil
- \begin{minipage}{.45\textwidth}
- Nella figura a lato, la retta $a$ taglia le rette $b$ e $c$, formando sul lato destro due angoli la cui somma è minore di due angoli retti. Prolungando opportunamente le rette $b$ e $c$ risulta che esse si incontrano sul lato destro della figura.
-  \end{minipage}
+\begin{minipage}{.49\textwidth}
+\centering\input{./lbr/chap01/fig003_euc.pgf}
+\end{minipage}\hfil
+\begin{minipage}{.45\textwidth}
+Nella figura a lato, la retta $a$ taglia le rette $b$ e $c$, formando sul lato destro due angoli la cui somma è minore di due angoli retti. Prolungando opportunamente le rette $b$ e $c$, risulta che esse si incontrano sul lato destro della figura.
+\end{minipage}
 \end{enumerate}
 
 Nell'impostazione assiomatica moderna di Hilbert, gli assiomi hanno la funzione di definire implicitamente gli enti primitivi, cioè di fissare le proprietà alle quali questi enti devono soddisfare. Hilbert aggiunge inoltre altri assiomi che Euclide stesso non aveva esplicitato chiaramente.
@@ -605,7 +605,7 @@ Si dice \emph{angolo} ciascuna delle due parti in cui un piano è diviso da due 
 \end{definizione}
 \begin{figure*}[b,t,h]
 \centering  \input{./lbr/chap01/fig013_def4.pgf}
-\caption{Le semirette $r$ e $s$, aventi l'origine $V$ comune, individuano due regioni del piano ognuna delle quali è detta angolo.}\label{fig:1.9}
+\caption{Le semirette $r$ e $s$, aventi l'origine $V$ comune, individuano due regioni del piano ognuna delle quali è detta \emph{angolo}.}\label{fig:1.9}
 \end{figure*}
 
 L'angolo individuato da tre punti $A$, $B$, $C$ è l'angolo formato dalla semiretta con origine $B$ e passante per $A$ e dalla semiretta con origine $B$ e passante per $C$. Questo angolo si indica con il simbolo $A\widehat{B}C$. Nei disegni si usa indicare l'angolo con un archetto che indica la parte di piano considerata.
@@ -691,7 +691,7 @@ Per indicare che le rette $r$ e $s$ sono parallele si usa il simbolo $r \paralle
 \osservazione Due rette non parallele possono appartenere a piani diversi, in questo caso non avranno punti in comune, sono cioè sghembe. Viceversa se due rette hanno un punto in comune allora sono sicuramente complanari. Inoltre, se hanno più di un punto in comune le rette coincidono, in questo caso ci sono infiniti piani che le contengono. 
 
 \begin{definizione}
-L'insieme di tutte le rette di un piano che passano per uno stesso punto è detto \emph{fascio proprio di rette}, il punto in comune a tutte le rette si dice centro del fascio (figura~\ref{fig:1.16}).
+L'insieme di tutte le rette di un piano che passano per uno stesso punto è detto \emph{fascio proprio di rette}, il punto in comune a tutte le rette si dice \emph{centro del fascio} (figura~\ref{fig:1.16}).
 \end{definizione}
 
 Prendendo due punti su una retta, $A$ e $B$, la retta resta divisa in tre parti: la semiretta di origine $A$ che non contiene $B$, la parte costituita dai punti compresi tra $A$ e $B$ e la semiretta di origine $B$ che non contiene $A$.

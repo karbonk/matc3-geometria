@@ -1,0 +1,63 @@
+\begin{tikzpicture}[scale=1.2,font=\small, dot/.style={circle,inner sep=1pt, fill, label={#1}, name=#1}, extended line/.style={shorten >=-#1,shorten <=-#1}, extended line/.default=1cm]
+\usetikzlibrary{calc, intersections}
+
+\begin{scope}
+
+\coordinate (c) at (0,1);
+\coordinate (a) at (-1,0);
+\coordinate (d) at (0,-1);
+\coordinate (b) at (1,0);
+\coordinate (p) at (0,0);
+\coordinate (e) at (0.5,1);
+
+%\draw[red] (-0.3,0) rectangle (0,0.3);
+\draw[blue, dashed] ($(e)!-0.3!(p)$) -- ($(e)!2.3!(p)$);
+\draw[fill] (e) circle (1pt) node[right] {$E$};
+
+\draw[blue, extended line=0.5cm] (c) -- (d);
+\draw[thick, extended line=0.5cm] (a) -- (b);
+
+\draw[fill] (a) circle (1pt) node[above] {$A$};
+\draw[fill] (b) circle (1pt) node[above] {$B$};
+\draw[fill] (c) circle (1pt) node[left] {$C$};
+\draw[fill] (d) circle (1pt) node[right] {$D$};
+\draw[fill] (p) circle (1pt) node[above=6pt, left] {$P$};
+
+\node at (0,-2) {(a)};
+
+\end{scope}
+
+
+\begin{scope}[xshift=5cm]
+
+\coordinate (p) at (0,1);
+\coordinate (a) at (-1.5,0);
+\coordinate (t) at (0,-1);
+\coordinate (b) at (1.5,0);
+\coordinate (e) at (0.5,1);
+\coordinate (q) at (-0.6,0);
+\coordinate (r) at ($(q)!1.4!(t)$);
+
+%\draw [extended line] ($(a)!(p)!(b)$) -- (p);
+
+\draw[thick, extended line=0.5cm] (a)--(b);
+
+\draw[fill] (a) circle (1pt) node[above] {$A$};
+\draw[fill] (b) circle (1pt) node[above] {$B$};
+\draw[fill] (c) circle (1pt) node[left] {$C$};
+\draw[fill] (t) circle (1pt) node[right] {$T$};
+\draw[fill] (q) circle (1pt) node[below=7pt, left] {$Q$};
+\draw[fill] (p) circle (1pt) node[above] {$P$};
+\draw[fill] (r) circle (1pt) node[right] {$R$};
+
+\draw (q) -- (p);
+\draw (q) -- ($(q)!1.2!(r)$);
+\draw[blue] (t) -- (p);
+\coordinate (h) at (intersection of t--p and a--b);
+\draw[fill] (h) circle (1pt) node[below=7pt, right] {$H$};
+
+\node at (0,-2) {(b)};
+
+\end{scope}
+
+\end{tikzpicture}
