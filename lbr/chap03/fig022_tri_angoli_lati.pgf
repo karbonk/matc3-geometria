@@ -1,0 +1,24 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+\draw[fill=yellow!10] (0,0) coordinate (b) -- ++(55:2.5) coordinate (a) -- ++(-43:3) coordinate (c) -- cycle;
+
+\draw[thick] (a) node[above] {$A$} -- (b) node[left] {$B$} -- (c) node[right] {$C$} -- cycle;
+\draw[blue,very thick] (a) -- (b);
+\draw[red,very thick] (a) -- (c);
+
+\end{scope}
+
+\begin{scope}[xshift=6cm]
+
+\draw[fill=gray!10] (0,0) coordinate (b) -- ++(67:2.5) coordinate (a) -- ++(-50:3) coordinate (c) -- cycle;
+
+\draw[thick] (a) node[above] {$D$} -- (b) node[left] {$E$} -- (c) node[right] {$F$} -- cycle;
+\draw[blue,very thick] (a) -- (b);
+\draw[red,very thick] (a) -- (c);
+
+\end{scope}
+
+\end{tikzpicture}

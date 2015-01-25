@@ -1,0 +1,16 @@
+\begin{tikzpicture}[scale=0.8,font=\small]
+\usetikzlibrary{calc, through, intersections}
+
+\begin{scope}
+\draw (0,0) coordinate (d1) node[left] {$d$} -- (5,0) coordinate (d2);
+\draw (0,1) coordinate (c1) node[left] {$c$} -- (5,1) coordinate (c2);
+\draw (1,-1) coordinate (a1) -- (1,2) coordinate (a2) node[above] {$a$};
+\draw (0,2) coordinate (b1) node[left] {$b$} -- (3.9,-1) coordinate (c2);
+\draw (0,-1) coordinate (e1) node[left] {$e$} -- (4.7,2) coordinate (e2);
+\draw[fill] (4.3,0) circle (1.5pt) coordinate (p) node[above] {$P$};
+
+%\draw[thick] (a) node[above] {$A$} -- (b) node[left] {$B$} -- (c) node[right] {$C$} -- cycle;
+
+\end{scope}
+
+\end{tikzpicture}

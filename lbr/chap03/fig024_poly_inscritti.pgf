@@ -1,0 +1,39 @@
+\begin{tikzpicture}[scale=1.1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+\coordinate (a) at (-0.8,2);
+\coordinate (b) at (1,2.5);
+\coordinate (c) at (1.9,1.2);
+\coordinate (d) at (0,0);
+
+\draw[fill, gray!10] (a) -- (b) -- (c) -- (d) -- cycle;
+
+\draw[fill, gray!30] ($(a)!0.4!(b)$) coordinate (e) -- ($(b)!0.45!(c)$) coordinate (f) -- ($(c)!0.7!(d)$) coordinate (g) -- ($(d)!0.4!(a)$) coordinate (h) -- cycle;
+
+\draw[thick] (a) node[left] {$A$} -- (b) node[above] {$B$} -- (c) node[right] {$C$} -- (d) node[below] {$D$} -- cycle;
+\draw[thick] (e) node[above] {$E$} -- (f) node[right] {$F$} -- (g) node[below] {$G$} -- (h) node[left] {$H$} -- cycle;
+
+\end{scope}
+
+\begin{scope}[xshift=-0.35cm, yshift=-3.5cm]
+
+\coordinate (m) at (0,0);
+\coordinate (i) at (-.4,1.7);
+\coordinate (j) at (1,2.5);
+\coordinate (k) at (2.3,1.5);
+\coordinate (l) at (1.5,0);
+
+\draw[fill, gray!10] (i) -- (j) -- (k) -- (l) -- (m) -- cycle;
+
+\draw[dashed] ($(i)!0.4!(j)$) coordinate (n) -- ($(j)!0.45!(k)$) coordinate (s) -- ($(k)!0.6!(l)$) coordinate (q) -- ($(l)!0.7!(m)$) coordinate (p) -- ($(m)!0.5!(i)$) coordinate (o) -- cycle;
+
+\coordinate (r) at ($(n)!0.55!(s)$);
+\draw[thick,fill=gray!30] (n) node[above] {$N$} -- (o) node[left] {$O$} -- (p) node[below] {$P$} -- (q) node[right] {$Q$} -- (r) node[above] {$R$} -- cycle;
+
+\draw[thick] (i) node[left] {$I$} -- (j) node[above] {$J$} -- (k) node[right] {$K$} -- (l) node[right] {$L$} -- (m) node[left] {$M$} -- cycle;
+
+\end{scope}
+
+\end{tikzpicture}

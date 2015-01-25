@@ -1,0 +1,26 @@
+\begin{tikzpicture}[scale=0.8,font=\small, extended line/.style={shorten >=-#1,shorten <=-#1}, extended line/.default=1cm]
+\usetikzlibrary{calc, through, intersections}
+
+\begin{scope}
+\coordinate (a) at (1.7,3.5);
+\coordinate (b) at (0,0);
+\coordinate (c) at (4,1);
+
+\draw[extended line=1.5cm] (b) -- (c);
+\draw[extended line] (a) -- (b);
+\draw[extended line=1.3cm] (a) -- (c);
+
+\draw[fill] (a) circle (1.5pt) node[shift={(-0.05,0.35)}] {$A$};
+\draw[fill] (b) circle (1.5pt) node[shift={(-0.15,0.25)}] {$B$};
+\draw[fill] (c) circle (1.5pt) node[shift={(0.05,0.3)}] {$C$};
+
+%\path (a) circle (1);
+%\path (b) circle (1);
+%\path (c) circle (1.5);
+\node at (0,-1) {};
+
+%\draw[thick] (a) node[above] {$A$} -- (b) node[left] {$B$} -- (c) node[right] {$C$} -- cycle;
+
+\end{scope}
+
+\end{tikzpicture}

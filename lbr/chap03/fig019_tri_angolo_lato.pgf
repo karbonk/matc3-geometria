@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=1.2,font=\small]
+\usetikzlibrary{calc, through, intersections}
+
+\begin{scope}
+\coordinate (a) at (0,0);
+\coordinate (b) at (0.8,1.7);
+\coordinate (c) at (2.5,0);
+\draw[fill=gray!10] (a) -- (b) -- (c) -- cycle;
+
+\begin{scope}
+\clip (a) -- (b) -- (c);
+\draw[fill, red!30] (a) circle (0.45);
+\draw[fill, blue!30] (c) circle (0.45);
+\end{scope}
+
+\draw[thick] (a) node[below] {$A$} -- (b) node[above] {$B$} -- (c) node[below] {$C$} -- cycle;
+
+\end{scope}
+
+\end{tikzpicture}

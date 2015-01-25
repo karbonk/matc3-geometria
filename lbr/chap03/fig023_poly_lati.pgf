@@ -1,0 +1,33 @@
+\begin{tikzpicture}[scale=1.3,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+\coordinate (a) at (0,0);
+\coordinate (b) at (0.5,1);
+\coordinate (c) at (1.5,1.5);
+\coordinate (d) at (2,0);
+
+\draw[fill, gray!10] (a) -- (b) -- (c) -- (d) -- cycle;
+\draw[dashed] (a) -- (c);
+
+\draw[thick] (a) node[left] {$A$} -- (b) node[left] {$B$} -- (c) node[right] {$C$} -- (d) node[right] {$D$} -- cycle;
+
+\end{scope}
+
+\begin{scope}[xshift=-0.35cm, yshift=-2.4cm]
+
+\coordinate (e) at (0.3,1);
+\coordinate (f) at (0,0);
+\coordinate (g) at (2,0);
+\coordinate (h) at (2.5,1.5);
+\coordinate (i) at (1.5,1.5);
+
+\draw[fill, gray!10] (e) -- (f) -- (g) -- (h) -- (i) -- cycle;
+\draw[dashed] (f) -- (i);
+
+\draw[thick] (e) node[left] {$E$} -- (f) node[left] {$F$} -- (g) node[right] {$G$} -- (h) node[right] {$H$} -- (i) node[above] {$I$} -- cycle;
+
+\end{scope}
+
+\end{tikzpicture}

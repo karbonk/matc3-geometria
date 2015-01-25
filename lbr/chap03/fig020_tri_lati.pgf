@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=1.2,font=\small]
+\usetikzlibrary{calc, through, intersections}
+
+\begin{scope}
+\clip (-0.1,-0.5) rectangle (2.6,4.3);
+\coordinate (a) at (0,0);
+\coordinate (b) at (0.8,1.7);
+\coordinate (c) at (2.5,0);
+\draw[fill=gray!10] (a) -- (b) -- (c) -- cycle;
+
+\node (c1) at (b) [circle through={(c)}] {};
+\coordinate(d) at (intersection 1 of c1 and a--b);
+
+\draw[dashed] (b) -- (d) node[above] {$D$} -- (c);
+
+\draw[thick] (a) node[below] {$A$} -- (b) node[shift={(-0.2,0.2)}] {$B$} -- (c) node[below] {$C$} -- cycle;
+
+\end{scope}
+
+\end{tikzpicture}

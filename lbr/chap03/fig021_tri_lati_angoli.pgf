@@ -1,0 +1,44 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+\draw[fill=yellow!10] (0,0) coordinate (b) -- ++(50:2) coordinate (a) -- ++(-50:2.5) coordinate (c) -- cycle;
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- cycle;
+\draw[thick,green!50,fill] (a) circle (0.5);
+%\node at ([shift={(0.65,0.4)}]a) {$\beta$};
+\end{scope}
+
+\draw[fill,dashed] (a) -- ++(-75:3.3) circle (1.2pt) coordinate (s) node[right] {$S$};
+\draw[fill] ($(a)!{2.5/3.3}!(s)$) circle (1.2pt) coordinate (h) node[shift={(-0.2,-0.25)}] {$H$};
+\draw (h) -- (b);
+
+\coordinate (l) at (intersection of a--s and b--c);
+\draw[fill] (l) circle (1.2pt) node[shift={(0.2,0.2)}] {$L$};
+\draw (h) -- (c);
+
+\draw[thick] (a) node[above] {$A$} -- (b) node[left] {$B$} -- (c) node[right] {$C$} -- cycle;
+\draw[blue,very thick] (a) -- (b);
+\draw[red,very thick] (a) -- (c);
+
+\end{scope}
+
+\begin{scope}[xshift=5cm]
+
+\draw[fill=gray!10] (0,0) coordinate (b) -- ++(50:2) coordinate (a) -- ++(-75:2.5) coordinate (c) -- cycle;
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- cycle;
+\draw[thick,orange!50,fill] (a) circle (0.5);
+%\node at ([shift={(0.65,0.4)}]a) {$\beta$};
+\end{scope}
+
+\draw[thick] (a) node[above] {$D$} -- (b) node[left] {$E$} -- (c) node[right] {$F$} -- cycle;
+\draw[blue,very thick] (a) -- (b);
+\draw[red,very thick] (a) -- (c);
+
+\end{scope}
+
+\end{tikzpicture}

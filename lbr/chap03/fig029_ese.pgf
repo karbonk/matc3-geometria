@@ -1,0 +1,17 @@
+\begin{tikzpicture}[scale=0.9,font=\small, extended line/.style={shorten >=-#1,shorten <=-#1}, extended line/.default=1cm]
+\usetikzlibrary{calc, through, intersections}
+
+\begin{scope}
+\clip (-0.2,-0.1) rectangle (8.2,2.8);
+\coordinate (p) at (3,0.3);
+\coordinate (q) at (4.5,0.5);
+
+\draw (0,0) node[above] {$r$} -- (5,3);
+\draw (3,3) -- (8,0) node[above] {$s$};
+
+\draw[fill] (p) circle (1.5pt) node[below] {$P$};
+\draw[fill] (q) circle (1.5pt) node[below] {$Q$};
+
+\end{scope}
+
+\end{tikzpicture}
