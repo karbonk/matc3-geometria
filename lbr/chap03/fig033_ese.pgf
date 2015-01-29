@@ -1,0 +1,25 @@
+\begin{tikzpicture}[scale=1,font=\small, extended line/.style={shorten >=-#1,shorten <=-#1}, extended line/.default=1cm]
+\usetikzlibrary{calc, through, intersections}
+
+\begin{scope}
+\coordinate (C) at (0,0);
+\coordinate (A) at (-1,-3);
+\coordinate (B) at (1,-3);
+\coordinate (D) at ($(A)!0.15!(C)$);
+\coordinate (E) at ($(B)!0.15!(C)$);
+\coordinate (U) at ($(A)!(E)!(C)$);
+\coordinate (S) at ($(B)!(D)!(C)$);
+
+\draw[fill] (E) circle (1.2pt) node[right] {$E$};
+\draw[fill] (D) circle (1.2pt) node[left] {$D$};
+\draw[dashed] (E) -- (U);
+\draw[fill] (U) circle (1.2pt) node[left] {$U$};
+\draw[dashed] (D) -- (S);
+\draw[fill] (S) circle (1.2pt) node[right] {$S$};
+\draw (U) -- (S);
+
+\draw[thick] (A) node[below] {$A$} -- (B) node[below] {$B$} -- (C) node[above] {$C$} -- cycle;
+
+\end{scope}
+
+\end{tikzpicture}

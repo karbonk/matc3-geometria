@@ -1,0 +1,31 @@
+\begin{tikzpicture}[scale=0.8,font=\small, extended line/.style={shorten >=-#1,shorten <=-#1}, extended line/.default=1cm]
+\usetikzlibrary{calc, through, intersections}
+
+\begin{scope}
+\coordinate (s1) at (0,0);
+\coordinate (s2) at (5,0.7);
+\coordinate (r1) at (-0.5,4);
+\coordinate (r2) at (5,1.5);
+\coordinate (t1) at (4,-0.3);
+\coordinate (t2) at (1,4);
+
+\coordinate (p1) at (intersection of s1--s2 and t1--t2);
+\coordinate (p2) at (intersection of r1--r2 and t1--t2);
+
+\node[black] at ([shift={(-0.7,0.6)}]p2) {$1$};
+\node[black] at ([shift={(0.3,0.35)}]p2) {$4$};
+\node[black] at ([shift={(-0.4,-0.3)}]p2) {$2$};
+\node[black] at ([shift={(0.7,-0.6)}]p2) {$3$};
+
+\node[black] at ([shift={(-0.6,0.3)}]p1) {$5$};
+\node[black] at ([shift={(0.2,0.4)}]p1) {$8$};
+\node[black] at ([shift={(-0.2,-0.4)}]p1) {$6$};
+\node[black] at ([shift={(0.6,-0.3)}]p1) {$7$};
+
+\draw (r1) node[above] {$r$} -- (r2);
+\draw (s1) node[above] {$s$} -- (s2);
+\draw (t1) -- (t2) node[above] {$t$};
+
+\end{scope}
+
+\end{tikzpicture}

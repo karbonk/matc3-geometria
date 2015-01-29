@@ -1,0 +1,70 @@
+\begin{tikzpicture}[scale=0.9,font=\small, extended line/.style={shorten >=-#1,shorten <=-#1}, extended line/.default=1cm]
+\usetikzlibrary{calc, through, intersections}
+
+\begin{scope}
+\coordinate (a1) at (0,0);
+\coordinate (a2) at (5,0.5);
+\coordinate (b1) at (0,1.2);
+\coordinate (b2) at (5,1.7);
+\coordinate (c1) at (1.5,-0.6);
+\coordinate (c2) at (3.5,2.4);
+
+\coordinate (p1) at (intersection of a1--a2 and c1--c2);
+\coordinate (p2) at (intersection of b1--b2 and c1--c2);
+
+\begin{scope}
+\clip (b1) -- (p2) -- (c2) -- cycle;
+\draw[blue, fill=blue!15] (p2) circle (0.4);
+\end{scope}
+\node[black] at ([shift={(-0.4,0.45)}]p2) {$\beta$};
+
+\begin{scope}
+\clip (c2) -- (p2) -- (b2) -- cycle;
+\draw[red, fill=red!15] (p2) circle (0.5);
+\end{scope}
+\node[black] at ([shift={(0.65,0.35)}]p2) {$\alpha$};
+
+\begin{scope}
+\clip (c1) -- (p2) -- (b1) -- cycle;
+\draw[orange, fill=orange!15] (p2) circle (0.6);
+\end{scope}
+\node[black] at ([shift={(-0.7,-0.4)}]p2) {$\gamma$};
+
+\begin{scope}
+\clip (c1) -- (p2) -- (b2) -- cycle;
+\draw[green!60!black, fill=green!15] (p2) circle (0.35);
+\end{scope}
+\node[black] at ([shift={(0.45,-0.4)}]p2) {$\delta$};
+
+\begin{scope}
+\clip (a1) -- (p1) -- (c2) -- cycle;
+\draw[blue, fill=blue!5] (p1) circle (0.4);
+\end{scope}
+\node[black] at ([shift={(-0.4,0.45)}]p1) {$\lambda$};
+
+\begin{scope}
+\clip (c2) -- (p1) -- (a2) -- cycle;
+\draw[red, fill=red!5] (p1) circle (0.5);
+\end{scope}
+\node[black] at ([shift={(0.65,0.35)}]p1) {$\epsilon$};
+
+\begin{scope}
+\clip (c1) -- (p1) -- (a1) -- cycle;
+\draw[orange, fill=orange!5] (p1) circle (0.6);
+\end{scope}
+\node[black] at ([shift={(-0.7,-0.4)}]p1) {$\phi$};
+
+\begin{scope}
+\clip (c1) -- (p1) -- (a2) -- cycle;
+\draw[green!60!black, fill=green!5] (p1) circle (0.35);
+\end{scope}
+\node[black] at ([shift={(0.45,-0.4)}]p1) {$\omega$};
+
+
+\draw (a1) -- (a2);
+\draw (b1) -- (b2);
+\draw (c1) -- (c2);
+
+\end{scope}
+
+\end{tikzpicture}

@@ -1,0 +1,68 @@
+\begin{tikzpicture}[scale=1.7,font=\small, extended line/.style={shorten >=-#1,shorten <=-#1}, extended line/.default=1cm]
+\usetikzlibrary{calc, through, intersections}
+
+\begin{scope}
+%\coordinate (C) at (0,0);
+%\coordinate (A) at (-1,-3);
+%\coordinate (B) at (1,-3);
+%\coordinate (D) at ($(A)!0.15!(C)$);
+%\coordinate (E) at ($(B)!0.15!(C)$);
+%\coordinate (U) at ($(A)!(E)!(C)$);
+%\coordinate (S) at ($(B)!(D)!(C)$);
+
+%\draw[fill] (E) circle (1.2pt) node[right] {$E$};
+%\draw[fill] (D) circle (1.2pt) node[left] {$D$};
+%\draw[dashed] (E) -- (U);
+%\draw[fill] (U) circle (1.2pt) node[left] {$U$};
+%\draw[dashed] (D) -- (S);
+%\draw[fill] (S) circle (1.2pt) node[right] {$S$};
+%\draw (U) -- (S);
+
+%\draw[thick] (A) node[below] {$A$} -- (B) node[below] {$B$} -- (C) node[above] {$C$} -- cycle;
+
+\path (0,0) coordinate (A) -- ++(60:2) coordinate (B);
+\path (B) -- ++(-60:2) coordinate (C);
+\path (C) -- (A);
+
+\path (A) -- ++(80:3) coordinate (D1);
+\path (C) -- ++(130:3) coordinate (D2);
+\coordinate (D) at (intersection of A--D1 and C--D2);
+
+\clip (-0.3,-0.01) -- (-0.3,2) -- (2.1,2) -- (2.1,-0.01) -- cycle;
+
+\begin{scope}
+\clip (A) -- (B) -- (C) -- cycle;
+\draw (A) circle (0.35);
+\node at ([shift={(0.5,0.2)}]A) {$60\grado$};
+\end{scope}
+
+\begin{scope}
+\clip (A) -- (D) -- (C) -- cycle;
+\draw[fill=gray!30] (C) circle (0.35);
+\node at ([shift={(-0.5,0.2)}]C) {$50\grado$};
+\end{scope}
+
+\begin{scope}
+\clip (C) -- (D) -- (B) -- cycle;
+\draw[very thick] (C) circle (0.5);
+\end{scope}
+\node at ([shift={(-0.1,0.55)}]C) {$10\grado$};
+
+\begin{scope}
+\clip (A) -- (D) -- (B) -- cycle;
+\draw (A) circle (0.5) circle (0.55);
+\draw[thick, red, fill=red!20] (B) circle (0.22);
+\end{scope}
+\node at ([shift={(-0.07,0.6)}]A) {$20\grado$};
+\node at ([shift={(-0.1,0.16)}]B) {$\alpha$};
+
+
+
+\draw (A) -- (B) -- (C) -- cycle;
+\draw (A) -- (D) -- (C) -- cycle;
+\draw (D) -- (B);
+
+
+\end{scope}
+
+\end{tikzpicture}
