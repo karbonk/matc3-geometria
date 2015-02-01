@@ -1,0 +1,22 @@
+\begin{tikzpicture}[scale=.8,font=\small]
+\usetikzlibrary{calc,intersections}
+
+\begin{scope}
+%\clip (-2.01,-2.01) rectangle (2.01,2.01);
+\pgfmathsetmacro{\raggio}{1.7}
+\coordinate (o) at (0,0);
+
+\draw[name path=Circle1, thick] (o) circle (\raggio);
+\draw[fill] (o) circle (1.2pt) node[left] {$O$};
+
+\coordinate (r1) at (\raggio,1.8);
+\coordinate (r2) at (\raggio,-1.8);
+
+\draw[name path=Retta, thick] (r1) -- (r2);
+
+\draw[thick] (r1) node[right] {$m$} -- (r2);
+\draw[blue] (o) -- node[black, above, midway, sloped] {$d=r$} ($(r1)!(o)!(r2)$) node[black, right] {$H$};
+
+\end{scope}
+
+\end{tikzpicture}

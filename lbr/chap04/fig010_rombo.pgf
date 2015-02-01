@@ -1,0 +1,9 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[fill=red!10] (0,0) coordinate (a) -- (1.5,-0.7) coordinate (b) -- (3,0) coordinate (c) -- (1.5,0.7) coordinate (d) -- cycle;
+\node at (1.5,-1) {rombo};
+\end{scope}
+
+\end{tikzpicture}

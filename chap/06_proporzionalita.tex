@@ -544,92 +544,111 @@ Quindi i perimetri dei due poligoni stanno tra loro come i rispettivi apotemi.
 
 Il lettore dimostri da solo, ricorrendo ai teoremi precedenti, che le aree di due poligoni regolari dello stesso numero di lati stanno tra loro come i quadrati costruiti sui rispettivi raggi o apotemi.
 
-\begin{comment}
 
-►7.  Proprietà di secanti e tangenti ad una circonferenza
+\section{Proprietà di secanti e tangenti ad una circonferenza}
+
 Osserviamo che in una circonferenza, due corde possono intersecarsi internamente al cerchio o esternamente.
-TEOREMA DELLE CORDE. Se due corde di una circonferenza si incontrano in un punto interno al cerchio allora le due corde restano divise in modo che le parti di una siano i medi e le parti dell'altra gli estremi della stessa proporzione.
-Ipotesi
-AB e CD sono due corde che si intersecano in E.
-Tesi
-EB:ED=EC:EA
-Dimostrazione
-Dovendo arrivare ad una proporzione tra segmenti, cercheremo di individuare la similitudine tra due triangoli; a questo scopo congiungiamo B con C e A con D e consideriamo i triangoli …... ed …… Essi hanno: perché opposti al vertice;  perché insistono … … … Dunque risultano simili per il primo criterio di similitudine. Quindi individuati i lati omologhi possiamo scrivere la proporzione BC:DA=EB:ED=EC:EA ▄
+\begin{teorema}[delle corde]
+Se due corde di una circonferenza si incontrano in un punto interno al cerchio allora le due corde restano divise in modo che le parti di una siano i medi e le parti dell'altra gli estremi della stessa proporzione.
+\end{teorema}
 
-TEOREMA DELLE SECANTI. Se da un punto esterno a un cerchio si conducono due secanti alla circonferenza, allora un'intera secante e la sua parte esterna formano i medi e l'altra secante e la sua parte esterna sono gli estremi di una stessa proporzione.
-Ipotesi
-AB e CD sono due corde che si intersecano in E esterno alla circonferenza.
-Tesi
-EC:ED=EA:EB
-Dimostrazione
-Dovendo determinare una proporzione tra segmenti, cercheremo di individuare la similitudine tra due triangoli; a questo scopo congiungiamo B con C e A con D. I triangoli EBC ed EAD sono simili perché hanno:  in comune, perché insistono sullo stesso arco DB. Risultano quindi simili per il primo criterio di similitudine. Possiamo allora scrivere la proporzione tra i lati EC:ED=EA:EB ▄
+\noindent Ipotesi: $AB$ e $CD$ sono due corde che si intersecano in $E$.\tab Tesi: $EB:ED=EC:EA$.
 
-TEOREMA DELLA SECANTE E DELLA TANGENTE. Se da un punto esterno a un cerchio si conduce una secante e una tangente alla circonferenza, allora il segmento di tangente è medio proporzionale tra l’intera secante e la sua parte esterna alla circonferenza.
-Ipotesi : B punto esterno alla circonferenza, BA tangente in A, BE secante in D e E.
-Tesi : BE:BA=BA:BD
-Dimostrazione: 
-Dovendo determinare una proporzione tra segmenti, cercheremo di individuare la similitudine tra due triangoli; a questo scopo congiungiamo A con E e A con D e consideriamo i triangoli EBA e DBA. Essi hanno perché coincidenti; perché angoli alla circonferenza che insistono sullo stesso arco AC. I due triangoli sono simili per il primo criterio di similitudine. Individuati i lati omologhi si può scrivere la proporzione BE: BA=BA:BD ▄
+\begin{proof}
+Dovendo arrivare ad una proporzione tra segmenti, cercheremo di individuare la similitudine tra due triangoli; a questo scopo congiungiamo $B$ con $C$ e $A$ con $D$. Consideriamo i triangoli \ldots\ldots{} ed \ldots\ldots{} Essi hanno: $\ldots\ldots{}\cong\ldots\ldots{}$ perché opposti al vertice, $C\widehat{B}A\cong C\widehat{D}A$ perché insistono \ldots\ldots\ldots{} Dunque risultano simili per il primo criterio di similitudine. Quindi, individuati i lati omologhi, possiamo scrivere la proporzione $BC:DA=EB:ED=EC:EA$.
+\end{proof}
 
-►8.  La sezione aurea
+\begin{teorema}[delle secanti]
+Se da un punto esterno a un cerchio si conducono due secanti alla circonferenza, allora un'intera secante e la sua parte esterna formano i medi e l'altra secante e la sua parte esterna sono gli estremi di una stessa proporzione.
+\end{teorema}
 
-DEFINIZIONE. La sezione aurea di un segmento AB è quella parte AC del segmento media proporzionale tra l’intero segmento e la parte rimanente CB.
+\noindent Ipotesi: $AB$ e $CD$ sono due corde che si intersecano in $E$ esterno alla circonferenza.\tab Tesi: $EC:ED=EA:EB$.
 
+\begin{proof}
+Dovendo determinare una proporzione tra segmenti, cercheremo di individuare la similitudine tra due triangoli; a questo scopo congiungiamo $B$ con $C$ e $A$ con $D$. I triangoli $EBC$ ed $EAD$ sono simili perché hanno: $B\widehat{E}C\cong D\widehat{E}A$ in comune, $B\widehat{C}E\cong D\widehat{A}E$ perché insistono sullo stesso arco $DB$. Risultano quindi simili per il primo criterio di similitudine. Possiamo allora scrivere la proporzione tra i lati $EC:ED=EA:EB$.
+\end{proof}
 
-In riferimento alla figura si ha AB : AC = AC : CB
+\begin{teorema}[della secante e della tangente]
+Se da un punto esterno a un cerchio si conduce una secante e una tangente alla circonferenza, allora il segmento di tangente è medio proporzionale tra l'intera secante e la sua parte esterna alla circonferenza.
+\end{teorema}
 
-Il punto di vista algebrico
-Dato un qualunque segmento AB di misura a, è sempre possibile determinare su di esso il punto C tale che valga la proporzione AB : AC = AC : CB?
-Soluzione
-Poniamo   e riscriviamo la proporzione passando alle misure a : x = x : (a-x).
-Per la proprietà fondamentale delle proporzioni numeriche si ottiene , da cui  sviluppando i calcoli si ha l’equazione di secondo grado  che ha discriminante  positivo per qualunque a. Quindi l'equazione ammette due soluzioni, di cui una negativa che va scartata. Rimane la soluzione .
-Il punto di vista geometrico
-Possiamo determinare la sezione aurea di un segmento con una costruzione geometrica? La risposta è positiva. La costruzione che riportiamo è quella di Eulero; essa sfrutta il teorema della tangente e della secante. 
-Eseguite tale costruzione attraverso i passi sotto descritti (potete anche usare un software di geometria dinamica come Geogebra):
-1. disegna un segmento AB;
-2. tracciate la retta p, perpendicolare ad AB e passante per B;
-3. disegnate la circonferenza γ1 di centro B e raggio AB;
-4. chiamate H uno dei punti di intersezione della retta p con γ1;
-5. chiamate M il punto medio di BH;
-6. disegnate la circonferenza γ2  di centro M e raggio MB;
-7. tracciate la retta AM;
-8. intersecate la retta AM con la circonferenza γ2; chiamate P il punto di intersezione più vicino ad A ed E quello più lontano;
-9. tracciate la circonferenza γ3 di centro A e raggio AP;
-10. chiamate C il punto d’intersezione di γ3 con AB.
-Dimostriamo che il segmento AC è la sezione aurea del segmento AB.
-Dimostrazione 
-Per costruzione risulta AB tangente a γ2 e AE secante, quindi per il teorema della tangente e della secante si ha: AE : AB = AB : AP; per la proprietà dello scomporre (AE-AB):AB=(AB-AP):AP.
-Per costruzione si sa che: AB=HB=PE e quindi AE – AB = AE-PE=AP.
-Dal momento che AP = AC  si ottiene AB – AP =  AB-AC = CB.
-Sostituendo nella proporzione (AE-AB):AB=(AB-AP):AP si ottiene la proporzione AP : AB = CB : AP.
-E infine applicando la proprietà dell’invertire si ottiene la tesi AB : AC = AC : CB ▄
+\noindent Ipotesi: $B$ punto esterno alla circonferenza, $BA$ tangente in $A$, $BE$ secante in $D$ ed $E$.\tab Tesi: $BE:BA=BA:BD$.
 
-TEOREMA. ll lato del decagono regolare è la sezione aurea del raggio della circonferenza circoscritta.
-Detto OA il raggio della circonferenza e AB il lato del decagono regolare, si deve dimostrare che: OA:AB=AB:(OA-AB)
+\begin{proof}
+Dovendo determinare una proporzione tra segmenti, cercheremo di individuare la similitudine tra due triangoli; a questo scopo congiungiamo $A$ con $E$ e $A$ con $D$ e consideriamo i triangoli $EBA$ e $DBA$. Essi hanno $E\widehat{B}A\cong D\widehat{B}A$ perché coincidenti, $B\widehat{E}A\cong D\widehat{B}A$ perché angoli alla circonferenza che insistono sullo stesso arco $AC$. I due triangoli sono simili per il primo criterio di similitudine. Individuati i lati omologhi si può scrivere la proporzione $BE:BA=BA:BD$.
+\end{proof}
 
-Dimostrazione
-Quando si congiungono i vertici di un poligono regolare con il centro della circonferenza (inscritta o circoscritta) si ottengono tanti triangoli isosceli quanti sono i lati, e questi triangoli sono tutti congruenti tra loro. 
-Consideriamo, per il decagono regolare, uno solo di questi triangoli, per esempio AOB. L'angolo in O vale 36° (infatti è un decimo dell'angolo giro), quindi gli angoli alla base varranno ciascuno 72°.
+\section{La sezione aurea}
 
-Tracciamo la bisettrice AC del triangolo AOB. Si ottiene il triangolo AOC, che è isoscele in quanto ha due angoli di 36°, ed il triangolo ACB, anch'esso isoscele poichè ha due angoli di 72° (l'angolo in B e l'angolo ).  
-Quindi avremo AC=OC=AB.
-I triangoli AOB e ACB inoltre sono simili, in quanto hanno gli angoli rispettivamente congruenti.
-Allora si può scrivere la proporzione OA:AB=AB:CB
-dove il primo AB è il lato del triangolo ACB e il secondo AB è la base di AOB.
-Abbiamo così dimostrato il teorema, in quanto CB è congruente a OB-OC = OA-AB (OA=OB perchè raggi, OC=AB per quanto prima dimostrato).
+\begin{definizione}
+La \emph{sezione aurea} di un segmento $AB$ è quella parte $AC$ del segmento media proporzionale tra l'intero segmento e la parte rimanente $CB$.
+\end{definizione}
 
-Sostituendo alle grandezze le loro misure, chiamando ad esempio r il raggio ed l il lato, la proporzione diventa:
+In riferimento alla figura si ha $AB : AC = AC : CB$
 
-moltiplichiamo tra loro gli estremi ed i medi
+\subsection{Il punto di vista algebrico}
 
-Risolvendo l'equazione rispetto ad l ottengo , tenendo conto che è accettabile solo la lunghezza positiva si ha  .
-Una importante applicazione di questo teorema è il calcolo del valore del seno dell’angolo di 18°.
-Considerando la circonferenza goniometrica, se poniamo l’angolo di 36° col vertice nell’origine degli assi, questo verrà dimezzato dall’asse x, e di conseguenza verrà dimezzato anche il lato opposto (abbiamo infatti un triangolo isoscele in cui la bisettrice dell’angolo al vertice è anche mediana relativa alla base).
-Il seno di 18° corrisponde alla lunghezza di AD, che è quindi metà del lato del decagono regolare, perciò vale , in quanto r = 1.
+Dato un qualunque segmento $AB$ di misura $a$, è sempre possibile determinare su di esso il punto $C$ tale che valga la proporzione $AB : AC = AC : CB$?
 
+La risposta è affermativa. Infatti, poniamo $\overline{AC}=x\:\Rightarrow\:\overline{CB}=a-x$ e riscriviamo la proporzione passando alle misure: $a : x = x : (a-x)$.
+Per la proprietà fondamentale delle proporzioni numeriche si ottiene $x^2=a(a-x)$, da cui  sviluppando i calcoli si ha l'equazione di secondo grado $x^2+ax-a^2=0$ che ha discriminante $5a^2$, positivo per qualunque $a$. Quindi l'equazione ammette due soluzioni, di cui una negativa che va scartata. Rimane la soluzione $x=a\dfrac{-1+\sqrt{5}}{2}$, positiva poiché $a>0$.
 
+\subsection{Il punto di vista geometrico}
 
+Possiamo determinare la sezione aurea di un segmento con una costruzione geometrica?
+
+La risposta è positiva. La costruzione che riportiamo è quella di Eulero, che sfrutta il teorema della tangente e della secante.
+La costruzione si compone dei passi passi sotto descritti (per riprodurla si può anche utilizzare un software di geometria dinamica come \emph{Geogebra}):
+\begin{enumerate*}
+\item si disegni un segmento $AB$;
+\item si tracci la retta $p$, perpendicolare ad $AB$ e passante per $B$;
+\item si disegni la circonferenza $\gamma_1$ di centro $B$ e raggio $AB$;
+\item sia $H$ uno dei punti di intersezione della retta $p$ con $\gamma_1$;
+\item sia $M$ il punto medio di $BH$;
+\item si disegni la circonferenza $\gamma_2$ di centro $M$ e raggio $MB$;
+\item si tracci la retta $AM$;
+\item siano $P$ ed $E$ i punti di intersezione della retta $AM$ con la circonferenza $\gamma_2$ (sia $P$ quello più vicino ad $A$);
+\item si tracci la circonferenza $\gamma_3$ di centro $A$ e raggio $AP$;
+\item sia $C$ il punto di intersezione di $\gamma_3$ con $AB$.
+\end{enumerate*}
+
+Dimostriamo che il segmento $AC$ è la sezione aurea del segmento $AB$.
+\begin{proof}
+Per costruzione risulta $AB$ tangente a $\gamma_2$ e $AE$ secante, quindi per il teorema della tangente e della secante si ha: $AE : AB = AB : AP$; per la proprietà dello scomporre $(AE-AB):AB=(AB-AP):AP$.
+Per costruzione si sa che: $AB\cong HB\cong PE$ e quindi $AE - AB \cong AE - PE\cong AP$.
+Dal momento che $AP\cong AC$ si ottiene $AB - AP \cong AB - AC \cong CB$.
+Sostituendo nella proporzione $(AE-AB):AB=(AB-AP):AP$ si ottiene la proporzione $AP : AB = CB : AP$.
+E infine, applicando la proprietà dell'invertire, si ottiene la tesi $AB : AC = AC : CB$.
+\end{proof}
+
+\begin{teorema}
+ll lato del decagono regolare è la sezione aurea del raggio della circonferenza ad esso circoscritta.
+\end{teorema}
+
+Detto $OA$ il raggio della circonferenza e $AB$ il lato del decagono regolare, si deve dimostrare che: $OA:AB=AB:(OA-AB)$.
+
+\begin{proof}
+Quando si congiungono i vertici di un poligono regolare con il centro della circonferenza (inscritta o circoscritta) si ottengono tanti triangoli isosceli quanti sono i lati, e questi triangoli sono tutti congruenti tra loro.
+Consideriamo, per il decagono regolare, uno solo di questi triangoli, per esempio $AOB$. L'angolo in $O$ vale $36\grado$ (è infatti un decimo dell'angolo giro), quindi gli angoli alla base varranno ciascuno $\dfrac{180\grado-36\grado}{2} = 72\grado$.
+
+Tracciamo la bisettrice $AC$ del triangolo $AOB$. Si ottiene il triangolo $AOC$ che è isoscele in quanto ha due angoli di $36\grado$, ed il triangolo $ACB$ anch'esso isoscele poiché ha due angoli di $72\grado$ (l'angolo in $B$ e l'angolo $A\widehat{C}B$).  
+Quindi avremo $AC\cong OC\cong AB$.
+Inoltre, i triangoli $AOB$ e $ACB$ sono simili in quanto hanno gli angoli rispettivamente congruenti.
+Si può quindi scrivere la proporzione $OA:AB=AB:CB$, dove il primo $AB$ è il lato del triangolo $ACB$ e il secondo $AB$ è la base di $AOB$.
+Abbiamo così dimostrato il teorema, in quanto $CB$ è congruente a $OB-OC \cong OA-AB$ ($OA\cong OB$ perché raggi della stessa circonferenza, $OC\cong AB$ per quanto dimostrato precedentemente).
+\end{proof}
+
+Sostituendo alle grandezze le loro misure, chiamando ad esempio $r$ il raggio ed $l$ il lato, la proporzione diventa $r:l=l:(r-l)$.
+Moltiplichiamo tra loro gli estremi ed i medi, si ha $l^2=r^2-rl \:\Rightarrow\: l^2+rl-r^2=0$.
+Risolvendo l'equazione rispetto ad $l$ sui ha $l=\dfrac{-r\pm r\sqrt{5}}{2}$, tenendo conto che è accettabile solo la lunghezza positiva, si ha $l=r\dfrac{\sqrt{5}-1}{2}$.
+
+Un'importante applicazione di questo teorema è il calcolo del valore del seno dell'angolo di $18\grado$.
+Considerando la circonferenza goniometrica (di raggio unitario), se poniamo l'angolo di $36\grado$ col vertice nell'origine degli assi, questo verrà dimezzato dall'asse $x$ e di conseguenza verrà dimezzato anche il lato opposto (abbiamo infatti un triangolo isoscele in cui la bisettrice dell'angolo al vertice è anche mediana relativa alla base).
+Il seno di $18\grado$ corrisponde alla lunghezza di $AD$, che è quindi metà del lato del decagono regolare, perciò vale $\sin 18\grado = \dfrac{\sqrt{5}-1}{4}$, in quanto $r = 1$.
 
 \newpage
+
+\begin{comment}
 
 \input{./chap/06_esercizi}
 

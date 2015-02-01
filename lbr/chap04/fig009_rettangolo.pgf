@@ -1,0 +1,9 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[thick, fill=red!10] (0,0) coordinate (a) -- (2.5,0) coordinate (b) -- (2.5,1.3) coordinate (c) -- (0,1.3) coordinate (d) -- cycle;
+\node at (1.25,-0.3) {rettangolo};
+\end{scope}
+
+\end{tikzpicture}

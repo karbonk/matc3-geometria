@@ -1,0 +1,34 @@
+\begin{tikzpicture}[scale=.9,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{-20};
+\pgfmathsetmacro{\abeta}{40};
+\pgfmathsetmacro{\agamma}{(\abeta+\aalpha)/2};
+
+\coordinate (o) at (0,0);
+
+\coordinate (p) at ({\agamma}:2);
+\coordinate (q) at ({\agamma+7}:2);
+
+\draw (o) circle (2);
+\draw[fill] (o) circle (1.2pt) node[right] {$O$};
+
+\draw[dashed] (o) -- node[below, midway, sloped] {$r$} (80:2) coordinate (b);
+\draw[dashed] (o) -- node[below, midway, sloped] {$r$} (180:2) coordinate (a);
+\draw[fill] (a) circle (1.2pt) node[left] {$A$};
+\draw[fill] (b) circle (1.2pt) node[above] {$B$};
+\draw (a) -- (b);
+\path (o) -- (40:2) coordinate (d2);
+\path (o) -- (40:-2) coordinate (d1);
+\draw[blue, dashed] (d1) -- node[black, shift={(0.8,0)}, below, sloped] {$d$} (d2);
+\path (o) -- (130:2) coordinate (o1);
+\path (o) -- (130:-1) coordinate (o2);
+\coordinate (h) at (intersection of o--o1 and a--b);
+\draw[red, dashdotted] (o1) -- (o2) node[black, left] {$a$};
+\draw[fill] (h) circle (1.2pt) node[above] {$H$};
+
+
+\end{scope}
+
+\end{tikzpicture}

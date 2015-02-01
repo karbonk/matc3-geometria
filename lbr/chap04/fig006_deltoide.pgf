@@ -1,0 +1,13 @@
+\begin{tikzpicture}[scale=0.8,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[fill=red!10] (0,0) coordinate (q) node[above] {$Q$} -- (1.5,-1.5) coordinate (t) node[right] {$T$} -- (0,-4) coordinate (s) node[below] {$S$} -- (-1.5,-1.5) coordinate (r) node[left] {$R$} -- cycle;
+\coordinate (h) at (intersection of r--t and q--s);
+\draw[dashed] (q) -- (s);
+\draw[dashed] (r) -- (t);
+\draw[fill] (h) circle (1.2pt) node[shift={(0.2,0.2)}] {$H$};
+\end{scope}
+
+
+\end{tikzpicture}

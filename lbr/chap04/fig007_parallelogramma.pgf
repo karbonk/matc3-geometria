@@ -1,0 +1,13 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[fill=red!10] (0,0) coordinate (a) node[below] {$A$} -- (2.5,0) coordinate (b) node[below] {$B$} -- (3,1.5) coordinate (c) node[above] {$C$} -- (0.5,1.5) coordinate (d) node[above] {$D$} -- cycle;
+\coordinate (m) at (intersection of d--b and a--c);
+\draw[dashed] (a) -- (c);
+\draw[dashed] (d) -- (b);
+\draw[fill] (m) circle (1.2pt) node[above] {$M$};
+\end{scope}
+
+
+\end{tikzpicture}

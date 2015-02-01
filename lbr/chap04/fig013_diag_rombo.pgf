@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=1.2,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[fill=red!10] (0,0) coordinate (a) node[left] {$K$} -- (1.5,-0.7) coordinate (b) node[below] {$J$} -- (3,0) coordinate (c) node[right] {$H$} -- (1.5,0.7) coordinate (d) node[above] {$G$} -- cycle;
+\draw[blue] (a) -- (c);
+\draw[blue] (b) -- (d);
+\end{scope}
+
+\end{tikzpicture}

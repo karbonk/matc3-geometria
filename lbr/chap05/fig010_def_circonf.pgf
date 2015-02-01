@@ -1,0 +1,33 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\clip (-2.4,-2.01) rectangle (2.1,2.4);
+\coordinate (o) at (0,0);
+
+\draw (o) circle (2);
+\draw[fill] (o) circle (1.2pt) node[below] {$O$};
+
+\path (o) -- (100:2) coordinate (b);
+\path (o) -- (170:2) coordinate (a);
+
+\begin{scope}
+\clip (a) -- (o) -- (b) -- cycle;
+\draw[red, fill=red!10] (o) circle (0.4);
+\end{scope}
+
+\draw[thick] ($(a)!-.25!(o)$) -- (o) -- ($(b)!-.25!(o)$);
+
+\draw[fill] (a) circle (1.2pt) node[shift={(-0.2,.-0.2)}] {$A$};
+\draw[fill] (b) circle (1.2pt) node[shift={(0.2,0.2)}] {$B$};
+
+\begin{scope}
+\clip (a) -- (o) -- ++(b) -- ++($(a)-(o)$) -- cycle;
+\draw[thick, blue] (o) circle (2) node[black, shift={(135:2.2)}, rotate=45] {arco};
+\node at (-0.95,1) {angolo};
+\node at (-0.95,0.6) {al centro};
+\end{scope}
+
+\end{scope}
+
+\end{tikzpicture}

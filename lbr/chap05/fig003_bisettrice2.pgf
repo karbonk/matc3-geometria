@@ -1,0 +1,29 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{-20};
+\pgfmathsetmacro{\abeta}{40};
+\pgfmathsetmacro{\agamma}{(\abeta+\aalpha)/2};
+
+\coordinate (o) at (0,0);
+
+\coordinate (p) at ({\agamma}:2);
+\coordinate (q) at ({\agamma+7}:2);
+
+\draw (o) node[left] {$V$} -- ++({\aalpha}:2.3) coordinate (a) node[right] {$s$};
+\draw (o) -- ++({\abeta}:2.3) coordinate (b) node[right] {$r$};
+\draw[blue, thick, dashdotted] (o) -- ++({\agamma}:2.5) coordinate (c) node[right,black] {$b$};
+\draw[fill] (q) circle (1.2pt) node[above] {$Q$};
+\draw[dashed, red] (q) -- ($(o)!(q)!(b)$) coordinate (h);
+\draw[fill] (h) circle (1.2pt) node[above] {$L$};
+\draw[dashed, red] (q) -- ($(o)!(q)!(a)$) coordinate (k);
+\draw[fill] (k) circle (1.2pt) node[below] {$T$};
+\draw[blue, dashed] (o) -- (q);
+
+%\draw[thick,gray] ([shift=({\aalpha}:.5)]o) arc [radius=.5, start angle={\aalpha}, end angle={\abeta}];
+%\draw[thick,red] ([shift=({\abeta}:.8)]o) arc [radius=.8, start angle={\abeta}, end angle={\agamma}];
+%\draw[thick,red] ([shift=({\agamma}:.7)]o) arc [radius=.7, start angle={\agamma}, end angle={\aalpha}];
+\end{scope}
+
+\end{tikzpicture}

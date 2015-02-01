@@ -1,0 +1,42 @@
+\begin{tikzpicture}[scale=.9,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{-20};
+\pgfmathsetmacro{\abeta}{40};
+\pgfmathsetmacro{\agamma}{(\abeta+\aalpha)/2};
+
+\coordinate (o) at (0,0);
+
+\draw (o) circle (2);
+\draw[fill] (o) circle (1.2pt) node[below left] {$O$};
+
+\draw[dashed] (o) -- (80:2) coordinate (b);
+\draw[dashed] (o) -- (180:2) coordinate (a);
+\draw[fill] (a) circle (1.2pt) node[left] {$A$};
+\draw[fill] (b) circle (1.2pt) node[above] {$B$};
+\path (o) -- (130:2) coordinate (o1);
+\coordinate (h) at (intersection of o--o1 and a--b);
+\begin{scope}[rotate=40]
+\draw[red,fill=red!10] (h) rectangle ([shift={(0.3,-0.3)}]h);
+\end{scope}
+\draw[thick, orange] (a) -- (b);
+\draw[fill] (h) circle (1.2pt) node[above] {$H$};
+\draw[dashed, blue] (o) -- (h);
+
+\draw[dashed] (o) -- (30:2) coordinate (c);
+\draw[dashed] (o) -- (-70:2) coordinate (d);
+\draw[fill] (c) circle (1.2pt) node[right] {$C$};
+\draw[fill] (d) circle (1.2pt) node[below] {$D$};
+\path (o) -- (-20:2) coordinate (o2);
+\coordinate (k) at (intersection of o--o2 and c--d);
+\begin{scope}[rotate=70]
+\draw[red,fill=red!10] (k) rectangle ([shift={(-0.3,0.3)}]k);
+\end{scope}
+\draw[thick, orange] (c) -- (d);
+\draw[fill] (k) circle (1.2pt) node[right] {$K$};
+\draw[dashed, blue] (o) -- (k);
+
+\end{scope}
+
+\end{tikzpicture}

@@ -1,0 +1,32 @@
+\begin{tikzpicture}[scale=.75,font=\small]
+\usetikzlibrary{calc}
+
+\clip (-2.6,-2.6) rectangle (2.6,2.01);
+\begin{scope}[rotate=180]
+\pgfmathsetmacro{\aalpha}{-20};
+\pgfmathsetmacro{\abeta}{40};
+\pgfmathsetmacro{\agamma}{(\abeta+\aalpha)/2};
+
+\coordinate (o) at (0,0);
+
+\coordinate (p) at ({\agamma}:2);
+\coordinate (q) at ({\agamma+7}:2);
+
+\draw (o) circle (2);
+\draw[fill] (o) circle (1.2pt) node[above] {$O$};
+
+\draw[dashed] (o) -- node[above, midway, sloped] {$r$} (80:2) coordinate (b);
+\draw[dashed] (o) -- node[above, midway, sloped] {$r$} (180:2) coordinate (a);
+\draw[fill] (a) circle (1.2pt) node[right] {$A$};
+\draw[fill] (b) circle (1.2pt) node[below] {$B$};
+\draw (a) -- (b);
+\path (o) -- (130:2) coordinate (o1);
+\path (o) -- (130:-2) coordinate (o2);
+\coordinate (h) at (intersection of o--o1 and a--b);
+\draw[red, dashed] (o1) -- (o2);
+\draw[fill] (h) circle (1.2pt) node[below] {$H$};
+
+
+\end{scope}
+
+\end{tikzpicture}

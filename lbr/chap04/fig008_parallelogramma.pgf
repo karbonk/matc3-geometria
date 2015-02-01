@@ -1,0 +1,23 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[fill=red!10] (0,0) coordinate (a) node[below] {$A$} -- (2.5,0) coordinate (b) node[below] {$B$} -- (3,1.7) coordinate (c) node[above] {$C$} -- (0.5,1.7) coordinate (d) node[above] {$D$} -- cycle;
+\coordinate (o) at (intersection of d--b and a--c);
+\draw[dashed] (a) -- (c);
+\draw[dashed] (d) -- (b);
+\draw[fill] (o) circle (1.2pt) node[above] {$O$};
+%\node at (1.5,-1) {(a)};
+\end{scope}
+
+%\begin{scope}[xshift=5cm]
+%\draw[fill=red!10] (0,0) coordinate (e) node[below] {$E$} -- (2.5,0) coordinate (f) node[below] {$F$} -- (3,1.7) coordinate (g) node[above] {$G$} -- (0.5,1.7) coordinate (h) node[above] {$H$} -- cycle;
+%\coordinate (o) at (intersection of d--b and a--c);
+%\draw[dashed] (e) -- (g);
+%\draw[dashed] (f) -- (h);
+%\draw[fill] (o) circle (1.2pt) node[left] {$O$};
+%\node at (1.5,-1) {(b)};
+%\end{scope}
+
+
+\end{tikzpicture}

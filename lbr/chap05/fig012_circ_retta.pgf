@@ -1,0 +1,22 @@
+\begin{tikzpicture}[scale=.8,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\raggio}{1.5}
+\coordinate (o) at (0,0);
+
+\draw[thick] (o) circle (\raggio);
+\draw[fill] (o) circle (1.2pt) node[below] {$O$};
+
+\coordinate (r1) at (2,1.6);
+\coordinate (r2) at (2,-1.6);
+
+\coordinate (r) at (60:\raggio);
+
+\draw[thick] (r1) node[right] {$m$} -- (r2);
+\draw[blue] (o) -- node[black, above, midway, sloped] {$d$} ($(r1)!(o)!(r2)$) node[black, right] {$H$};
+\draw[red] (o) -- node[black, above, midway, sloped] {$r$} (r);
+
+\end{scope}
+
+\end{tikzpicture}

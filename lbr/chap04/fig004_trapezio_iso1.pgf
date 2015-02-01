@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[fill=red!10] (0,0) coordinate (i) node[above] {$I$} -- (1.5,0) coordinate (l) node[above] {$L$} -- (3,-1.5) coordinate (k) node[below] {$K$} -- (0.6,-1.5) coordinate (j) node[below] {$J$} -- cycle;
+\draw[dashed] (i) -- ($(j)!(i)!(k)$) coordinate (g1) node[below] {$G_1$} -- (j);
+\draw[dashed] (l) -- ($(j)!(l)!(k)$) coordinate (k1) node[below] {$K_1$};
+\end{scope}
+
+\end{tikzpicture}

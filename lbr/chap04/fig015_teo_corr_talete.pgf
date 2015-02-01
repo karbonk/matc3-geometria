@@ -1,0 +1,54 @@
+\begin{tikzpicture}[scale=0.9,font=\small, extended line/.style={shorten >=-#1,shorten <=-#1},
+  extended line/.default=0.5cm]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a1) at (0,-.25);
+\coordinate (a2) at (6,-.25);
+\coordinate (b1) at (0,-1);
+\coordinate (b2) at (6,-1);
+\coordinate (c1) at (0,-2.25);
+\coordinate (c2) at (6,-2.25);
+\coordinate (d1) at (0,-3);
+\coordinate (d2) at (6,-3);
+\coordinate (t11) at (1.8,0.5);
+\coordinate (t12) at (0.5,-3.5);
+\coordinate (t21) at (3,0.5);
+\coordinate (t22) at (5.5,-3.5);
+\coordinate (A1) at (intersection of a1--a2 and t11--t12);
+\coordinate (A2) at (intersection of a1--a2 and t21--t22);
+\coordinate (B1) at (intersection of b1--b2 and t11--t12);
+\coordinate (B2) at (intersection of b1--b2 and t21--t22);
+\coordinate (C1) at (intersection of c1--c2 and t11--t12);
+\coordinate (C2) at (intersection of c1--c2 and t21--t22);
+\coordinate (D1) at (intersection of d1--d2 and t11--t12);
+\coordinate (D2) at (intersection of d1--d2 and t21--t22);
+\path (A2) -- +($(B1)-(A1)$) coordinate (B);
+\path (C2) -- +($(D1)-(C1)$) coordinate (D);
+\draw[dashed, extended line] (A2) -- (B) node[shift={(-.3,-.4)}] {$r$};
+\draw[dashed, extended line] (C2) -- (D) node[shift={(-.3,-.4)}] {$s$};
+
+\draw (a1) node[above] {$a$} -- (a2);
+\draw (b1) node[above] {$b$} -- (b2);
+\draw (c1) node[above] {$c$} -- (c2);
+\draw (d1) node[above] {$d$} -- (d2);
+\draw (t11) node[above] {$t_1$} -- (t12);
+\draw (t21) node[above] {$t_2$} -- (t22);
+\draw[thick, blue] (A1) -- (B1);
+\draw[thick, blue] (C1) -- (D1);
+\draw[thick, red] (A2) -- (B2);
+\draw[thick, red] (C2) -- (D2);
+\draw[fill] (A1) circle (1.2pt) node[shift={(-0.2,0.2)}] {$A_1$};
+\draw[fill] (A2) circle (1.2pt) node[shift={(0.3,0.2)}] {$A_2$};
+\draw[fill] (B1) circle (1.2pt) node[shift={(-0.2,0.2)}] {$B_1$};
+\draw[fill] (B2) circle (1.2pt) node[shift={(0.2,0.2)}] {$B_2$};
+\draw[fill] (C1) circle (1.2pt) node[shift={(-0.2,0.2)}] {$C_1$};
+\draw[fill] (C2) circle (1.2pt) node[shift={(0.3,0.2)}] {$C_2$};
+\draw[fill] (D1) circle (1.2pt) node[shift={(-0.2,0.2)}] {$D_1$};
+\draw[fill] (D2) circle (1.2pt) node[shift={(0.2,0.2)}] {$D_2$};
+\draw[fill] (B) circle (1.2pt) node[shift={(-0.2,0.2)}] {$B$};
+\draw[fill] (D) circle (1.2pt) node[shift={(-0.2,0.2)}] {$D$};
+
+\end{scope}
+
+\end{tikzpicture}

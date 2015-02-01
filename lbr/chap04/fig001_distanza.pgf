@@ -1,0 +1,23 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (r1) at (0.7,-2);
+\coordinate (r2) at (4.3,-2);
+\coordinate (s1) at (2,0.5);
+\coordinate (s2) at (2,-2.5);
+\coordinate (p) at (2,0);
+\coordinate (h) at (intersection of r1--r2 and s1--s2);
+\coordinate (q) at ($(r1)!0.75!(r2)$);
+
+\draw[red, fill=red!20] (h) rectangle ([shift={(0.4,0.4)}]h);
+
+\draw[thick] (r1) node[above] {$r$} -- (r2);
+\draw[dashed] (p) -- (h);
+\draw[fill] (p) circle (1.2pt) node [shift={(-.2,.2)}] {$P$};
+\draw[fill] (h) circle (1.2pt) node [shift={(-.2,.2)}] {$H$};
+\draw[fill,dashed] (p) -- (q) circle (1.2pt) node[shift={(.2,.2)}] {$Q$};
+
+\end{scope}
+
+\end{tikzpicture}

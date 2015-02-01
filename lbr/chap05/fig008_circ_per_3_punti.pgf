@@ -1,0 +1,36 @@
+\begin{tikzpicture}[scale=.9,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{-20};
+\pgfmathsetmacro{\abeta}{40};
+\pgfmathsetmacro{\agamma}{(\abeta+\aalpha)/2};
+
+\coordinate (o) at (0,0);
+
+\draw[dotted] (o) circle (2);
+\draw[fill] (o) circle (1.2pt) node[right] {$O$};
+
+\path (o) -- (80:2) coordinate (b);
+\path (o) -- (140:2) coordinate (a);
+\path (o) -- (110:2) coordinate (o1);
+\coordinate (h) at (intersection of o--o1 and a--b);
+
+\path (o) -- (10:2) coordinate (c);
+\path (o) -- (45:2) coordinate (o2);
+\coordinate (k) at (intersection of o--o2 and b--c);
+
+\draw[fill] (a) circle (1.2pt) node[left] {$A$};
+\draw[fill] (b) circle (1.2pt) node[above] {$B$};
+\draw (a) -- (b);
+%\draw[fill] (h) circle (1.2pt) node[above] {$H$};
+\draw[dashdotted] ($(o)!-.5!(h)$) -- ($(o)!1.35!(h)$);
+
+\draw[fill] (c) circle (1.2pt) node[right] {$C$};
+\draw (b) -- (c);
+%\draw[fill] (k) circle (1.2pt) node[right] {$K$};
+\draw[dashdotted] ($(o)!-.5!(k)$) -- ($(o)!1.5!(k)$);
+
+\end{scope}
+
+\end{tikzpicture}

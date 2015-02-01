@@ -1,0 +1,22 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc, through, intersections}
+
+\begin{scope}
+\coordinate (a) at (0,0);
+\coordinate (b) at (0.8,1.7);
+\coordinate (c) at (2.5,0);
+\draw[fill=gray!10] (a) -- (b) -- (c) -- cycle;
+
+\coordinate (m) at ($(a)!.5!(b)$);
+
+\path (m) -- +($(c)-(a)$) coordinate (r2);
+
+\draw[fill] (m) circle (1.2pt) node[left] {$M$} -- ($(m)!0.85!(r2)$) node[above] {$r$};
+\coordinate (n) at (intersection of m--r2 and b--c);
+\draw[fill] (n) circle (1.2pt) node[shift={(0.2,0.2)}] {$N$};
+
+\draw[thick] (a) node[left] {$A$} -- (b) node[above] {$C$} -- (c) node[right] {$B$} -- cycle;
+
+\end{scope}
+
+\end{tikzpicture}

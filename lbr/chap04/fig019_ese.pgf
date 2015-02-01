@@ -1,0 +1,19 @@
+\begin{tikzpicture}[scale=1.2,font=\small]
+\usetikzlibrary{calc, through, intersections}
+
+\begin{scope}
+\coordinate (a) at (0,0);
+\coordinate (b) at (60:2);
+\coordinate (d) at (120:2);
+\coordinate (m) at ($(a)!.5!(b)$);
+
+\path (b) -- +(170:1) coordinate (r2);
+\coordinate (s2) at (90:1);
+\coordinate (c) at (intersection of b--r2 and a--s2);
+\draw[dashed] (a) -- (c);
+
+\draw (a) node[below] {$A$} -- (b) node[right] {$B$} -- (c) node[above] {$C$} -- (d) node[left] {$D$} -- cycle;
+
+\end{scope}
+
+\end{tikzpicture}

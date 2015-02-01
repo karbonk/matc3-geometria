@@ -1,0 +1,52 @@
+\begin{tikzpicture}[scale=.8,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+%\clip (-2.01,-2.01) rectangle (2.01,2.01);
+\coordinate (o) at (0,0);
+
+\draw (o) circle (2);
+\draw[fill] (o) circle (1.2pt) node[below] {$O$};
+
+\coordinate (a) at (170:2);
+\coordinate (b) at (100:2);
+\coordinate (c) at (200:2);
+\coordinate (d) at (280:2);
+
+\coordinate (e) at (60:2);
+\coordinate (f) at (40:2);
+\coordinate (g) at (-50:2);
+\coordinate (h) at (-30:2);
+
+\begin{scope}
+\clip (a) -- (o) -- ++(b) -- ++($(a)-(o)$) -- cycle;
+\draw[thick, fill=blue!10] (o) circle (2);
+\end{scope}
+
+\draw[thick] (a) -- (o) -- (b);
+\draw[thick, fill=blue!10] (c) -- (d) arc (280:200:2) -- cycle;
+\draw[thick, fill=blue!10] (e) -- (g) arc (-50:-30:2) -- (h) -- (f) arc (40:60:2) -- cycle;
+
+\coordinate (setc) at (-1,1);
+\coordinate (setc_d) at (-1,2.3);
+\node at (setc_d) {settore circolare};
+\draw[->] ([shift={(-.5,-.3)}]setc_d) .. controls ([shift={(-.5,-.3)}]setc_d) and ([shift={(-.5,.5)}]setc) .. (setc);
+
+\coordinate (segc) at (-1,-1.5);
+\coordinate (segc_d) at (-1.2,-2.4);
+\node at (segc_d) {segmento circolare};
+\node at ([shift={(0,-.4)}]segc_d) {ad una base};
+\draw[->] ([shift={(-.1,.3)}]segc_d) .. controls ([shift={(-.1,.3)}]segc_d) and ([shift={(-.2,-.2)}]segc) .. (segc);
+
+\coordinate (segcc) at (1.5,-.8);
+\coordinate (segcc_d) at (2,-2);
+\node at (segcc_d) {segmento};
+\node at ([shift={(0,-.36)}]segcc_d) {circolare};
+\node at ([shift={(0,-.8)}]segcc_d) {a due basi};
+\draw[->] ([shift={(0,.3)}]segcc_d) .. controls ([shift={(0,.4)}]segcc_d) and ([shift={(.2,-.2)}]segcc) .. (segcc);
+
+
+
+\end{scope}
+
+\end{tikzpicture}

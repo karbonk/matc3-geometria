@@ -1,0 +1,41 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc,intersections}
+
+\begin{scope}
+\pgfmathsetmacro{\raggio}{2}
+\coordinate (o) at (0,0);
+
+\draw[name path=Circle1] (o) circle (\raggio);
+\draw[fill] (o) circle (1.2pt) node[left] {$O$};
+
+\draw[red] (o) -- (\raggio,0);
+
+\coordinate (r11) at (0.5,2.2);
+\coordinate (r12) at (0.5,-2.2);
+\draw[name path=Retta1] (r11) -- (r12);
+\path [name intersections={of=Circle1 and Retta1}] ;
+\draw[fill] (intersection-1) coordinate (a1) circle (1.2pt) node[shift={(.2,.2)}] {$A$};
+\draw[fill] (intersection-2) coordinate (b1) circle (1.2pt) node[shift={(.2,-.2)}] {$B$};
+
+\coordinate (r21) at (1,2.2);
+\coordinate (r22) at (1,-2.2);
+\draw[name path=Retta2] (r21) -- (r22);
+\path [name intersections={of=Circle1 and Retta2}] ;
+\draw[fill] (intersection-1) coordinate (a2) circle (1.2pt) node[shift={(.2,.2)}] {$A$};
+\draw[fill] (intersection-2) coordinate (b2) circle (1.2pt) node[shift={(.2,-.2)}] {$B$};
+
+\coordinate (r31) at (1.5,2.2);
+\coordinate (r32) at (1.5,-2.2);
+\draw[name path=Retta3] (r31) -- (r32);
+\path [name intersections={of=Circle1 and Retta3}] ;
+\draw[fill] (intersection-1) coordinate (a3) circle (1.2pt) node[shift={(.2,.2)}] {$A$};
+\draw[fill] (intersection-2) coordinate (b3) circle (1.2pt) node[shift={(.2,-.2)}] {$B$};
+
+\coordinate (r41) at (2,2.2);
+\coordinate (r42) at (2,-2.2);
+\draw[name path=Retta4] (r41) -- (r42);
+\draw[fill] (2,0) coordinate (a4) circle (1.2pt) node[right] {$A\equiv B$};
+
+\end{scope}
+
+\end{tikzpicture}

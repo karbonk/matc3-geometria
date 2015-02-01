@@ -25,6 +25,8 @@ Vale cioè il seguente
 \begin{teorema}
 Nel piano, il luogo geometrico dei punti equidistanti da due punti dati $A$ e $B$ è la retta $r$, perpendicolare al segmento $AB$ e passante per $M$, punto medio di $AB$.
 \end{teorema}
+
+\noindent\begin{minipage}{0.7\textwidth}\parindent15pt
 Sia $r$ la retta perpendicolare ad $AB$ condotta da $M$, punto medio di $AB$. Dimostriamo che un generico punto $P\in r$ è equidistante da $A$ e $B$ e viceversa, un generico punto $Q$ tale che $QA\cong QB$ appartiene ad $r$.
 ~\\
 
@@ -34,37 +36,52 @@ Sia $r$ la retta perpendicolare ad $AB$ condotta da $M$, punto medio di $AB$. Di
 Uniamo $P$ con $A$, $B$ ed $M$. Per ipotesi $PM \perp AB$, per cui, nel triangolo $PAB$, il segmento $PM$ è contemporaneamente altezza e mediana relative al lato $AB$; pertanto il triangolo $PAB$ è isoscele sulla base $AB$, da cui la tesi.
 \end{proof}
 
-\noindent Ipotesi: $QA\cong QB$.\tab Tesi: $Q\in r$.
+\noindent Ipotesi: $QA\cong QB$ e $AM\cong MB$.\tab Tesi: $Q\in r$.
 
 \begin{proof}
 Uniamo $Q$ con $A$, $B$ ed $M$. Per ipotesi il triangolo $QAB$ è isoscele sulla base $AB$; inoltre il segmento $QM$ è la mediana relativa alla base del triangolo isoscele, per cui $QM$ è anche altezza. dunque la retta $QM$ coincide con la retta $r$, cioè l'asse di $AB$.
 \end{proof}
+\end{minipage}\hfil
+\begin{minipage}{0.3\textwidth}
+	\centering\input{./lbr/chap05/fig001_asse_segmento.pgf}
+\end{minipage}\vspace{5pt}
 
 Analogamente, se consideriamo la classica definizione di bisettrice di un angolo come la semiretta interna all'angolo stesso avente origine nel suo vertice e tale da dividerlo in due angoli congruenti, possiamo dimostrare che la nuova definizione di bisettrice come luogo geometrico è equivalente a quest'ultima.
 Vale cioè il seguente teorema.
 \begin{teorema}
 La bisettrice di un angolo è il luogo geometrico dei punti del piano equidistanti dai lati dell'angolo.
 \end{teorema}
+
 Sia $r\widehat{V}s$ un angolo (di vertice $V$ e di lati $r$ ed $s$) e sia $b$ la sua bisettrice (semiretta di origine $V$ che divide l'angolo a metà).
 Verifichiamo prima che un generico punto $P\in b$ è equidistante da $r$ e da $s$.
 ~\\
 
-\noindent Ipotesi: $P\in b$, $PK\perp s$, $PH\perp r$, $K\widehat{V}P\cong P\widehat{V}H$.\tab Tesi: $PK\cong PH$.
+\noindent Ipotesi: $P\in b$, $PK\perp s$, $PH\perp r$, $K\widehat{V}P\cong P\widehat{V}H$.\tab Tesi: $PK\cong PH$.\vspace{10pt}
 
+\noindent\begin{minipage}{0.65\textwidth}\parindent15pt
 \begin{proof}
 Tracciamo da $P$ le perpendicolari ai lati dell'angolo e chiamiamo $H\in r$ e $K\in s$ i piedi delle due perpendicolari. Osserviamo che i triangoli $VPH$ e $VPK$, rettangoli rispettivamente in $H$ e $K$, risultano congruenti perché hanno rispettivamente congruenti l'ipotenusa e un angolo acuto, per i criteri di congruenza sui triangoli rettangoli risultano congruenti. Pertanto i cateti $PH$ e $PK$, opposti a $V$, risultano congruenti, da cui la tesi ($P$ equidistante da $r$ e da $s$).
 \end{proof}
+\end{minipage}\hfil
+\begin{minipage}{0.35\textwidth}
+	\centering\input{./lbr/chap05/fig002_bisettrice.pgf}
+\end{minipage}\vspace{5pt}
 
 Ovviamente, un qualsiasi punto appartenente ad una delle due semirette $r$ o $s$ che non sia il vertice $V$ non può essere equidistante da $r$ e da $s$, mentre il punto $V$ lo è (ha distanza nulla da entrambe).
 
 Verifichiamo ora che, se $Q$ è un generico punto interno all'angolo $r\widehat{V}s$, se $Q$ è equidistante da $r$ e da $s$, deve risultare $Q\in b$.
 ~\\
 
-\noindent Ipotesi: $PK\perp s$, $PH\perp r$, $PK\cong PH$.\tab Tesi: $K\widehat{V}P\cong P\widehat{V}H$.
+\noindent Ipotesi: $QT\perp s$, $QL\perp r$, $QL\cong QT$.\tab Tesi: $T\widehat{V}Q\cong Q\widehat{V}L$.\vspace{10pt}
 
+\noindent\begin{minipage}{0.65\textwidth}\parindent15pt
 \begin{proof}
 Infatti, se tracciamo da $Q$ le perpendicolari alle semirette $r$ ed $s$ e chiamiamo $L\in r$ e $T\in s$ i piedi delle perpendicolari, per ipotesi risulta $QL\cong QT$. Se uniamo $Q$ con $V$, si vengono a formare due triangoli rettangoli $QLV$ e $QTV$ con l'ipotenusa $QV$ in comune ed una coppia di cateti congruenti. Tali triangoli risultano pertanto congruenti per il quarto criterio (più semplicemente per il criterio particolare dei triangoli rettangoli), e di conseguenza $L\widehat{V}Q\cong Q\widehat{V}T$, per cui la semiretta $VQ$ coincide con la bisettrice $b$.
 \end{proof}
+\end{minipage}\hfil
+\begin{minipage}{0.35\textwidth}
+	\centering\input{./lbr/chap05/fig003_bisettrice2.pgf}
+\end{minipage}\vspace{5pt}
 
 
 \section{Circonferenza e cerchio: definizioni e prime proprietà}
@@ -73,14 +90,14 @@ La definizione che ha dato Euclide di circonferenza fa riferimento ai luoghi geo
 Intuitivamente, immaginiamo di fissare su di un piano un chiodo, di legare a questo chiodo una corda e di fissare all'altra estremità della corda una penna. Se facciamo ruotare la penna intorno al chiodo tenendo sempre in tensione la corda disegneremo una circonferenza.
 
 \begin{definizione}
-Assegnati nel piano un punto $C$ e un segmento $AB$, si chiama \emph{circonferenza} il luogo dei punti del piano che hanno distanza da $C$ congruente al segmento $AB$. Il punto $C$ viene detto centro della circonferenza, la distanza dei punti della circonferenza dal centro è detta \emph{raggio} della circonferenza.
+Assegnati nel piano un punto $C$ e un segmento $AB$, si chiama \emph{circonferenza} il luogo dei punti del piano che hanno distanza da $C$ congruente al segmento $AB$. Il punto $C$ viene detto \emph{centro} della circonferenza e la distanza dei punti della circonferenza dal centro è detta \emph{raggio} della circonferenza.
 \end{definizione}
 
 \osservazione Una circonferenza divide il piano in 3 insiemi:
 \begin{itemize*}
-\item l'insieme dei punti la cui distanza dal centro è minore del raggio. Questi punti si dicono interni alla circonferenza.
+\item l'insieme dei punti la cui distanza dal centro è minore del raggio. Questi punti si dicono \emph{interni} alla circonferenza.
 \item l'insieme dei punti la cui distanza dal centro è uguale al raggio. Essi sono esattamente i punti della circonferenza.
-\item l'insieme dei punti la cui distanza dal centro è maggiore del raggio. Questi punti si dicono esterni alla circonferenza.
+\item l'insieme dei punti la cui distanza dal centro è maggiore del raggio. Questi punti si dicono \emph{esterni} alla circonferenza.
 \end{itemize*}
 
 Se consideriamo l'unione dell'insieme dei punti della circonferenza con l'insieme dei punti interni alla circonferenza otteniamo un cerchio.
@@ -89,7 +106,7 @@ Se consideriamo l'unione dell'insieme dei punti della circonferenza con l'insiem
 Chiamiamo \emph{cerchio} la figura formata dai punti di una circonferenza e dai punti interni ad essa.
 \end{definizione}
 
-Abbiamo definito la circonferenza come un insieme di punti tutti equidistanti dal centro. Viceversa osserviamo che il centro è l’unico punto del piano equidistante da tutti i punti della circonferenza. Per questo motivo possiamo affermare che una circonferenza è individuata esattamente dal suo centro e dal suo raggio o equivalentemente dal centro e da un suo punto.
+Abbiamo definito la circonferenza come un insieme di punti tutti equidistanti dal centro. Viceversa osserviamo che il centro è l'unico punto del piano equidistante da tutti i punti della circonferenza. Per questo motivo possiamo affermare che una circonferenza è individuata esattamente dal suo centro e dal suo raggio o equivalentemente dal centro e da un suo punto.
 
 \begin{definizione}
 Un segmento che ha come estremi due punti distinti di una circonferenza è detto \emph{corda}. In particolare, una corda che contiene il centro della circonferenza viene definita \emph{diametro}.
@@ -97,16 +114,22 @@ Un segmento che ha come estremi due punti distinti di una circonferenza è detto
 
 I punti estremi di un diametro vengono detti \emph{diametralmente opposti}.
 Ogni diametro è il doppio di un raggio e tutti i diametri della stessa circonferenza sono fra essi congruenti. Il centro della circonferenza è anche il punto medio di ciascun diametro.
+
 Diamo ora alcune importanti proprietà delle corde.
 
 \begin{teorema}
 Il diametro è la corda di lunghezza massima.
 \end{teorema}
 
+\noindent\begin{minipage}{0.65\textwidth}\parindent15pt
 \begin{proof}
 Data una circonferenza di centro $O$ e raggio $r$, consideriamo una corda qualsiasi $AB$. Se essa passa per il centro $O$, coincide con il diametro e dunque $AB=2r$; altrimenti essa può essere considerata come la base di un triangolo isoscele $AOB$ avente come lati i due raggi $OA$ e $OB$. In tal caso per la disuguaglianza triangolare un lato di un triangolo è minore della somma degli altri due lati e dunque possiamo scrivere: $AB < OA + OB$ ovvero $AB < 2r$.
 In conclusione, il diametro è maggiore di qualunque altra corda che non passa per il centro.
 \end{proof}
+\end{minipage}\hfil
+\begin{minipage}{0.35\textwidth}
+	\centering\input{./lbr/chap05/fig004_diametro.pgf}
+\end{minipage}
 
 \begin{teorema}
 L'asse di una corda qualsiasi passa per il centro della circonferenza.
@@ -115,26 +138,32 @@ L'asse di una corda qualsiasi passa per il centro della circonferenza.
 \noindent Ipotesi: $A$ e $B$ due punti distinti appartenenti alla circonferenza, $a$ asse della corda $AB$.\tab Tesi: l'asse passa per il centro della circonferenza.
 
 \begin{proof}
-Congiungiamo $A$ e $B$ con il centro $O$ della circonferenza. Poiché $OA$ e $OB$ sono raggi della circonferenza, il triangolo $AOB$ è isoscele sulla base $AB$. Ricordiamo che l'asse relativo alla base di un triangolo isoscele contiene l'altezza (in figura $OH$).  Dunque $O$ appartiene all'asse $a$.
-Se la corda $AB$ coincide con un diametro, $O$ ne è il punto medio; ma l'asse di un segmento è la retta perpendicolare al segmento nel suo punto medio, dunque anche in questo caso l'asse passa per il centro $O$ della circonferenza.
+Facendo riferimento alla figura precedente, poiché $OA$ e $OB$ sono raggi della circonferenza, il triangolo $AOB$ è isoscele sulla base $AB$. Ricordiamo che l'asse relativo alla base di un triangolo isoscele contiene l'altezza (nella figura $OH$). Dunque $O$ appartiene all'asse $a$ di $AB$.
+Se la corda $AB$ coincide con un diametro, $O$ ne è il punto medio; ma poiché l'asse di un segmento è la retta perpendicolare al segmento stesso nel suo punto medio, in ogni caso l'asse passa per il centro $O$ della circonferenza.
 \end{proof}
 
 \begin{teorema}
 Un diametro passante per il punto medio di una corda è perpendicolare alla corda stessa.
 \end{teorema}
 
+\noindent\begin{minipage}{0.65\textwidth}\parindent15pt
 \begin{proof}
-In riferimento alla figura precedente e al teorema appena dimostrato, il diametro passa per ipotesi dal punto medio $H$ della corda $AB$ e per definizione da $O$, centro della circonferenza nonché vertice del triangolo isoscele $AOB$. Dunque $OH$ è mediana del triangolo $AOB$ relativamente alla base $AB$. Per il teorema sul triangolo isoscele, la mediana relativa alla base di un triangolo isoscele è anche altezza e quindi il diametro è perpendicolare alla corda $AB$.
+Il diametro passa per ipotesi dal punto medio $H$ della corda $AB$ e per definizione da $O$, centro della circonferenza nonché vertice del triangolo isoscele $AOB$. Dunque $OH$ è mediana del triangolo $AOB$ relativamente alla base $AB$. Per il teorema sul triangolo isoscele, la mediana relativa alla base di un triangolo isoscele è anche altezza e quindi essa è perpendicolare alla corda $AB$.
 \end{proof}
+\end{minipage}\hfil
+\begin{minipage}{0.35\textwidth}
+	\centering\input{./lbr/chap05/fig005_diametro2.pgf}
+\end{minipage}
 
 \begin{teorema}
 In una circonferenza, corde congruenti hanno eguale distanza dal centro (e viceversa).
 \end{teorema}
 
+\noindent\begin{minipage}{0.65\textwidth}\parindent15pt
 \noindent Ipotesi:
 \begin{itemize*}
-\item $AB\cong CD$ (corde congruenti),
-\item $OH\perp AB$ ($OH$ distanza della corda $AB$ dal centro $O$),
+\item $AB\cong CD$ (corde congruenti);
+\item $OH\perp AB$ ($OH$ distanza della corda $AB$ dal centro $O$);
 \item $OK\perp CD$ ($OK$ distanza della corda $CD$ dal centro $O$).
 \end{itemize*}
 \noindent Tesi: $OH\cong OK$.
@@ -143,13 +172,17 @@ In una circonferenza, corde congruenti hanno eguale distanza dal centro (e vicev
 Consideriamo triangoli isosceli $AOB$ e $COD$; essi sono congruenti per il 3\textsuperscript{o} criterio di congruenza poiché per ipotesi le basi $AB$ e $CD$ sono congruenti e i lati $AO$, $OB$, $OC$ e $OD$ sono tutti raggi della circonferenza.
 Di conseguenza anche le altezze $OH$ e $OK$ sono congruenti.
 \end{proof}
+\end{minipage}\hfil
+\begin{minipage}{0.35\textwidth}
+	\centering\input{./lbr/chap05/fig006_corde_cong.pgf}
+\end{minipage}\vspace{8pt}
 
-Viceversa
+\noindent Viceversa\vspace{5pt}
 
 \noindent Ipotesi:
 \begin{itemize*}
-\item $OH\cong OK$ (le distanze delle corde $AB$ e $CD$ dal centro $O$ sono congruenti),
-\item $OH\perp AB$ ($OH$ distanza della corda $AB$ dal centro $O$),
+\item $OH\cong OK$ (le distanze delle corde $AB$ e $CD$ dal centro $O$ sono congruenti);
+\item $OH\perp AB$ ($OH$ distanza della corda $AB$ dal centro $O$);
 \item $OK\perp CD$ ($OK$ distanza della corda $CD$ dal centro $O$).
 \end{itemize*}
 \noindent Tesi: $AB\cong CD$.
@@ -159,7 +192,7 @@ Consideriamo i triangoli rettangoli $AOH$ e $DOK$. $AO\cong DO\cong r$ (raggio d
 \end{proof}
 
 \begin{teorema}
-Fra due corde diseguali, è maggiore quella che ha distanza minore dal centro (e viceversa).
+Fra due corde disuguali, è maggiore quella che ha distanza minore dal centro (e viceversa).
 \end{teorema}
 
 \noindent Ipotesi:
@@ -168,14 +201,19 @@ Fra due corde diseguali, è maggiore quella che ha distanza minore dal centro (e
 \item $OH\perp AB$ ($OH$ distanza della corda $AB$ dal centro $O$),
 \item $OK\perp CD$ ($OK$ distanza della corda $CD$ dal centro $O$).
 \end{itemize*}
-\noindent Tesi: $OH\cong OK$.
+\noindent Tesi: $OH\cong OK$.\vspace{10pt}
 
+\noindent\begin{minipage}{0.65\textwidth}\parindent15pt
 \begin{proof}
-A partire dal punto $A$ e allontanandosi dal punto $B$ si tracci la corda $AM$, consecutiva alla corda $AB$, in modo che $AM\cong CD$. Detta $OJ$ la distanza della corda $AM$ dal centro $O$, si ha che $OJ\perp AM$. Per il teorema precedente, essendo $CD$ e $AM$ corde congruenti, sarà $OJ\cong OK$; dunque basterà dimostrare che $OH < OJ$. Per ipotesi $AB > CD$, dunque $AB > AM$. Il senso di tale diseguaglianza vale anche per le rispettive metà dei segmenti $AB$ e $AM$, per cui $AH > AJ$ ($H$ è il punto medio di $AB$ e $J$ è il punto medio di $AM$ perché i triangoli $AOB$ e $AOM$ sono isosceli sulle basi $AB$ e $AM$, per cui $OH$ ed $OJ$, altezze relative alle basi, sono anche mediane).
+A partire dal punto $A$ e allontanandosi dal punto $B$ si tracci la corda $AM$, consecutiva alla corda $AB$, in modo che $AM\cong CD$. Detta $OJ$ la distanza della corda $AM$ dal centro $O$, si ha che $OJ\perp AM$. Per il teorema precedente, essendo $CD$ e $AM$ corde congruenti, sarà $OJ\cong OK$; dunque basterà dimostrare che $OH < OJ$. Per ipotesi $AB > CD$, dunque $AB > AM$. Il senso di tale disuguaglianza vale anche per le rispettive metà dei segmenti $AB$ e $AM$, per cui $AH > AJ$ ($H$ è il punto medio di $AB$ e $J$ è il punto medio di $AM$ perché i triangoli $AOB$ e $AOM$ sono isosceli sulle basi $AB$ e $AM$, per cui $OH$ ed $OJ$, altezze relative alle basi, sono anche mediane).
 Si congiunga $J$ con $H$ e si consideri il triangolo $HAJ$. A lato maggiore si oppone angolo maggiore (per le disuguaglianze tra gli elementi di un triangolo) per cui $H\widehat{J}A>A\widehat{H}J$; i rispettivi angoli complementari sono disuguali in verso opposto, quindi $H\widehat{J}O<O\widehat{H}J$. Relativamente al triangolo $HOJ$, poiché ad angolo minore si oppone lato minore (sempre per le disuguaglianze tra gli elementi di un triangolo, proprietà inversa della precedente), possiamo concludere che $OH < OJ$.
 \end{proof}
+\end{minipage}\hfil
+\begin{minipage}{0.35\textwidth}
+	\centering\input{./lbr/chap05/fig007_corde_dis.pgf}
+\end{minipage}\vspace{10pt}
 
-Viceversa
+\noindent Viceversa\vspace{10pt}
 
 \noindent Ipotesi:
 \begin{itemize*}
@@ -201,30 +239,39 @@ Osservazioni:
 \begin{itemize*}
 \item Fissato un punto $P$, per esso passano infinite circonferenze.
 
-Infatti basta considerare un qualunque altro punto $O$: quest'ultimo può essere il centro di una circonferenza di raggio $OP$.
+Infatti, si consideri un qualunque altro punto $Q$: quest'ultimo può essere il centro di una circonferenza di raggio $QP$.
 
 \item Per due punti fissati $A$ e $B$ passano infinite circonferenze.
 
-Infatti tutti i punti dell'asse del segmento $AB$ sono equidistanti da $A$ e da $B$ e dunque possono essere centri di circonferenze passanti per $A$ e per $B$.
+Infatti, poiché tutti i punti dell'asse del segmento $AB$ sono equidistanti sia da $A$ che da $B$, essi possono essere centri di circonferenze passanti sia per $A$ che per $B$.
 \end{itemize*}
 
 \begin{definizione}
-L'insieme di tutte le circonferenze passanti per $A$ e per $B$ è detto \emph{fascio di circonferenze}. Chiamiamo $A$ e $B$ \emph{punti base del fascio}, la retta per $A$ e $B$ \emph{asse radicale} e \emph{asse centrale} l'asse del segmento $AB$ che contiene tutti i centri delle circonferenze del fascio.
+L'insieme di tutte le circonferenze passanti per due punti $A$ e $B$ è detto \emph{fascio di circonferenze}. Chiamiamo $A$ e $B$ \emph{punti base del fascio}, la retta per $A$ e $B$ \emph{asse radicale} e \emph{asse centrale} l'asse del segmento $AB$ che contiene tutti i centri delle circonferenze del fascio.
 \end{definizione}
 
 \begin{teorema}
 Per tre punti distinti non allineati passa una ed una sola circonferenza.
 \end{teorema}
 
+\noindent\begin{minipage}{0.65\textwidth}\parindent15pt
 \begin{proof}
 Siano $A$, $B$ e $C$ tre punti non allineati e congiungiamo $A$ con $B$ e $B$ con $C$. Allora gli assi dei segmenti $AB$ e $BC$ si intersecheranno in un punto $O$. Per la proprietà degli assi il punto $O$, appartenendo a entrambi gli assi, è equidistante dai punti $A$, $B$ e $C$. Allora si può costruire una circonferenza con centro in $O$ e raggio $OA$. Questa circonferenza passa per $A$, $B$ e $C$, inoltre è unica perché è unico l'asse di un segmento e di conseguenza è unico il punto di intersezione tra i due assi.
 \end{proof}
+\end{minipage}\hfil
+\begin{minipage}{0.35\textwidth}
+	\centering\input{./lbr/chap05/fig008_circ_per_3_punti.pgf}
+\end{minipage}
 
 \osservazione
 L'ipotesi che i punti siano non allineati è essenziale. Seguendo le linee della dimostrazione, i segmenti $AB$ e $BC$ sono consecutivi ma non adiacenti, cosa essenziale per affermare che i rispettivi assi non sono paralleli. Vale infatti anche la seguente proprietà:
 \begin{teorema}
 Dati tre punti distinti $A$, $B$ e $C$ appartenenti ad una stessa retta, non esiste alcuna circonferenza che passa per $A$, $B$ e $C$.
 \end{teorema}
+
+\begin{figure}[htb]
+	\centering\input{./lbr/chap05/fig009_3_punti_all.pgf}
+\end{figure}
 
 \begin{proof}
 Verifichiamo che non esiste alcun punto del piano individuato da $A$, $B$ e $C$ che possa essere il centro di una tale circonferenza, cioè che sia equidistante dai tre punti.
@@ -237,7 +284,7 @@ Tre punti qualsiasi appartenenti ad una circonferenza non sono allineati.
 
 A conclusione di queste prime proprietà, possiamo enunciare il seguente
 \begin{corollario}
-Una circonferenza è determinata univocamente dal suo centro e dal suo raggio oppure da tre suoi punti.
+Una circonferenza è univocamente determinata dal suo centro e dal suo raggio oppure da tre suoi punti.
 \end{corollario}
 
 Diamo ora la definizione di alcune parti del cerchio e della circonferenza. Ne esamineremo le proprietà in seguito.
@@ -251,9 +298,14 @@ Data una circonferenza di centro $O$,
 \end{itemize*}
 \end{definizione}
 
+\noindent\begin{minipage}{0.6\textwidth}\parindent15pt
 Ogni coppia di punti distinti su una circonferenza individua due archi sulla medesima circonferenza. Infatti se consideriamo $A$ e $B$ ottenuti come nella definizione precedente questi punti individuano l'arco su cui insiste l'angolo $\gamma$ ma anche la restante parte di circonferenza che è pure un arco.
 Congiungendo $A$ con $B$ il segmento $AB$ è una corda della circonferenza. Diremo che la corda $AB$ sottende l'arco $AB$ o viceversa che l'arco insiste sulla corda.
 Se in particolare i punti $A$ e $B$ sono diametralmente opposti, essi individuano sulla circonferenza due archi che sono due semicirconferenze.
+\end{minipage}\hfil
+\begin{minipage}{0.4\textwidth}
+	\centering\input{./lbr/chap05/fig010_def_circonf.pgf}
+\end{minipage}
 
 \begin{definizione}Dato un cerchio
 \begin{itemize*}
@@ -266,7 +318,12 @@ Se in particolare i punti $A$ e $B$ sono diametralmente opposti, essi individuan
 Ogni corda divide il cerchio in due segmenti circolari ad una base. In particolare se la corda è un diametro otteniamo due semicerchi.
 Un semicerchio, quindi, è sia un particolare settore circolare sia un particolare segmento circolare. \`E anche l'unico caso possibile di settore che sia anche segmento o viceversa.
 
+\noindent\begin{minipage}{0.5\textwidth}\parindent15pt
 Una coppia di corde parallele individua in un cerchio un segmento circolare a due basi e due segmenti circolari ad una base (se vogliamo considerare solo le tre parti non sovrapposte che hanno in comune al massimo una corda). Più in generale, date due corde parallele e distinte, queste individuano un segmento circolare a due basi e quattro segmenti circolari ad una base, ed il segmento a due basi è anche l'intersezione dei due segmenti ad una base ``sovrapposti''.
+\end{minipage}\hfil
+\begin{minipage}{0.5\textwidth}
+	\centering\input{./lbr/chap05/fig011_def_cerchio.pgf}
+\end{minipage}
 
 \section{Posizioni relative fra rette e circonferenze}
 
@@ -276,25 +333,46 @@ Consideriamo in uno stesso piano una circonferenza $C$ di centro $O$ e raggio $r
 
 \begin{enumeratea}
 
+\noindent\begin{minipage}{0.6\textwidth}\parindent15pt
 \item $d > r$ : la distanza del centro $O$ dalla retta è maggiore del raggio.\\
 Il punto $H$ è esterno alla circonferenza così come ogni altro punto della retta $m$. La retta si dice allora \emph{esterna} alla circonferenza e non ha alcun punto in comune con essa, ovvero non vi sono punti di intersezione fra $C$ ed $m$.
+\end{minipage}\hfil
+\begin{minipage}{0.4\textwidth}
+	\centering\input{./lbr/chap05/fig012_circ_retta.pgf}\\\vspace{5pt}
+\end{minipage}
 
+\noindent\begin{minipage}{0.6\textwidth}\parindent15pt
 \item $d < r$ : la distanza del centro $O$ dalla retta è minore del raggio.\\
 La retta $m$ interseca la circonferenza in due punti distinti $A$ e $B$; questi appartengono alla circonferenza e quindi $OA\cong OB\cong r$. Il segmento $AB$ appartiene alla retta e definisce anche la corda $AB$, i cui punti, tutti interni alla circonferenza, hanno una distanza dal centro minore del raggio; il punto di minore distanza è proprio $H$, che è anche il punto medio della corda $AB$. I punti della retta non appartenenti alla corda $AB$ sono esterni alla circonferenza e la loro distanza dal centro $O$ è maggiore del raggio.
 La retta viene detta \emph{secante} alla circonferenza nei punti $A$ e $B$, che sono i punti di intersezione della retta con la circonferenza stessa.
+\end{minipage}\hfil
+\begin{minipage}{0.4\textwidth}
+	\centering\input{./lbr/chap05/fig013_circ_retta2.pgf}\\\vspace{4pt}
+	\centering\input{./lbr/chap05/fig014_circ_retta3.pgf}\\\vspace{4pt}
+\end{minipage}
 
 \item $d = r$ : la distanza del centro $O$ dalla retta è pari al raggio.\\
 Il punto $H$ appartiene alla circonferenza mentre ogni altro punto della retta $m$ è esterno alla circonferenza e ha una distanza dal centro $O$ maggiore del raggio. La retta viene detta \emph{tangente} alla circonferenza e $H$ è il punto di tangenza o di contatto.
 
 \end{enumeratea}
 
+\noindent\begin{minipage}{0.5\textwidth}\parindent15pt
 Si noti che la retta tangente è perpendicolare al raggio nel punto di tangenza. Inoltre, l'unica retta perpendicolare al raggio nel punto di intersezione tra il raggio e la circonferenza è tangente.
 Consideriamo una circonferenza $C$ di centro $O$ e raggio $r$ e una retta $m$ ad essa secante nei punti distinti $A$ e $B$. Sia $OH$ la distanza del centro $O$ dalla retta. 
 Trasliamo la retta $m$ in modo da aumentare la sua distanza dal centro $O$ (vedi figura). All'aumentare della distanza $d = OH$, quella fra i punti $A$ e $B$ diminuisce; quando $OH = r$, i punti $A$ e $B$ coincidono nel punto di tangenza. Dunque la tangente è un caso particolare di secante avente due punti di intersezione coincidenti.
+\end{minipage}\hfil
+\begin{minipage}{0.5\textwidth}
+	\centering\input{./lbr/chap05/fig015_circ_retta_tan.pgf}
+\end{minipage}
 
+\noindent\begin{minipage}{0.5\textwidth}\parindent15pt
 Una più efficace ``visualizzazione'' di questo concetto è la seguente.
 Consideriamo la stessa circonferenza e la stessa retta dell'esempio precedente. Ruotiamo la retta attorno al punto $B$ (vedi figura).
 La distanza del punto $A$ dal punto $B$ diminuisce all'aumentare dell'angolo $O\widehat{B}A$ fra la retta e il raggio. Quando il punto $A$ coincide con il punto $B$, il raggio è perpendicolare alla retta e quest'ultima è tangente alla circonferenza in $B\equiv A$.
+\end{minipage}\hfil
+\begin{minipage}{0.5\textwidth}
+	\centering\input{./lbr/chap05/fig016_circ_retta_tan2.pgf}
+\end{minipage}
 
 Il lettore dimostri per esercizio il seguente teorema (si suggerisce di ricorrere alla dimostrazione per assurdo).
 \begin{teorema}

@@ -1,0 +1,74 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\pgfmathsetmacro{\aalpha}{-20};
+\pgfmathsetmacro{\abeta}{40};
+\pgfmathsetmacro{\agamma}{(\abeta+\aalpha)/2};
+
+\coordinate (o) at (0,0);
+
+\draw (o) circle (2);
+\draw[fill] (o) circle (1.2pt) node[below] {$O$};
+
+\path (o) -- (80:2) coordinate (b);
+\path (o) -- (180:2) coordinate (a);
+\path (o) -- (130:2) coordinate (o1);
+\coordinate (h) at (intersection of o--o1 and a--b);
+
+\path (o) -- (10:2) coordinate (c);
+\path (o) -- (-30:2) coordinate (d);
+\path (o) -- (-10:2) coordinate (o2);
+\coordinate (k) at (intersection of o--o2 and c--d);
+
+\path (o) -- (220:2) coordinate (m);
+\path (o) -- (200:2) coordinate (o3);
+\coordinate (j) at (intersection of o--o3 and a--m);
+
+\begin{scope}
+\clip (o) -- (j) -- (h) -- cycle;
+\draw[orange!70!black, fill=orange!10] (h) circle (0.4);
+\draw[orange!70!black, fill=orange!10] (j) circle (0.4);
+\end{scope}
+
+\begin{scope}
+\clip (a) -- (j) -- (h) -- cycle;
+\draw[green!60!black, fill=green!10] (h) circle (0.4);
+\draw[green!60!black, fill=green!10] (j) circle (0.4);
+\end{scope}
+
+\draw[dotted] (a) -- (o) -- (b);
+\draw[dotted] (o) -- (m);
+
+\draw[fill] (a) circle (1.2pt) node[left] {$A$};
+\draw[fill] (b) circle (1.2pt) node[above] {$B$};
+\begin{scope}[rotate=40]
+\draw[red,fill=red!10] (h) rectangle ([shift={(0.3,-0.3)}]h);
+\end{scope}
+\draw[thick, blue] (a) -- (b);
+\draw[fill] (h) circle (1.2pt) node[above] {$H$};
+\draw[dashed] (o) -- (h);
+
+\draw[fill] (c) circle (1.2pt) node[right] {$C$};
+\draw[fill] (d) circle (1.2pt) node[below] {$D$};
+\begin{scope}[rotate=-10]
+\draw[red,fill=red!10] (k) rectangle ([shift={(-0.3,0.3)}]k);
+\end{scope}
+\draw[thick, red] (c) -- (d);
+\draw[fill] (k) circle (1.2pt) node[right] {$K$};
+\draw[dashed] (o) -- (k);
+
+\draw[fill] (m) circle (1.2pt) node[below] {$M$};
+\begin{scope}[rotate=200]
+\draw[red,fill=red!10] (j) rectangle ([shift={(-0.3,0.3)}]j);
+\end{scope}
+\draw[red] (a) -- (m);
+\draw[fill] (j) circle (1.2pt) node[left] {$J$};
+\draw[dashed] (o) -- (j);
+
+\draw (h) -- (j);
+
+
+\end{scope}
+
+\end{tikzpicture}

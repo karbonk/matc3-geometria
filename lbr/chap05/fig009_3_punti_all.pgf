@@ -1,0 +1,16 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+\draw (0,0) coordinate (a) -- (1,0) coordinate (b) -- (3,0) coordinate (c);
+
+\draw[fill] (a) circle (1.2pt) node[above] {$A$};
+\draw[fill] (b) circle (1.2pt) node[above] {$B$};
+\draw[fill] (c) circle (1.2pt) node[above] {$C$};
+\draw[dashdotted] (0.5,0.5) -- (0.5,-1.5);
+\draw[dashdotted] (2,0.5) -- (2,-1.5);
+
+\end{scope}
+
+\end{tikzpicture}

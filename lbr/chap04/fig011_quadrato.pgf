@@ -1,0 +1,9 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[thick, fill=red!10] (0,0) coordinate (a) -- (1.5,0) coordinate (b) -- (1.5,1.5) coordinate (c) -- (0,1.5) coordinate (d) -- cycle;
+\node at (0.75,-0.3) {quadrato};
+\end{scope}
+
+\end{tikzpicture}

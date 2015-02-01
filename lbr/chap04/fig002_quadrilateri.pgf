@@ -1,0 +1,34 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[fill=red!10] (0,0) -- (-1.3,1) -- (1.5,0) -- (-1.3,-1) -- cycle;
+\node at (0.5,0) {$Q_1$};
+\end{scope}
+
+\begin{scope}[shift={(1.5cm,-1cm)}]
+\draw[fill=red!10] (0,0) -- (1,1) -- (1.9,0.7) -- (1.2,-1.5) -- cycle;
+\node at (1,0) {$Q_2$};
+\end{scope}
+
+\begin{scope}[shift={(-1.2cm,-3cm)}]
+\draw[fill=red!10] (0,0) -- (0.5,1.5) -- (2.5,1.5) -- (2,0) -- cycle;
+\node at (1.3,0.75) {$Q_3$};
+\end{scope}
+
+\begin{scope}[shift={(4cm,-.7cm)}]
+\draw[fill=red!10] (0,0) -- (0,1.5) -- (1.5,1.5) -- (2,0) -- cycle;
+\node at (0.9,0.75) {$Q_4$};
+\end{scope}
+
+\begin{scope}[shift={(4.3cm,-2.9cm)}]
+\draw[fill=red!10] (0,0) -- (-0.5,1.5) -- (0.7,1.5) -- (2,0) -- cycle;
+\node at (0.5,0.75) {$Q_5$};
+\end{scope}
+
+\begin{scope}[shift={(7.2cm,0cm)}]
+\draw[fill=red!10] (0,0.4) -- (-0.8,-1.5) -- (0,-2.5) -- (0.8,-1.5) -- cycle;
+\node at (0,-1.2) {$Q_6$};
+\end{scope}
+
+\end{tikzpicture}

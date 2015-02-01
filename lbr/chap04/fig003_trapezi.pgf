@@ -1,0 +1,24 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[thick, fill=red!10] (0,0) -- (2,0) -- (2.5,-1.5) -- (-0.5,-1.5) -- cycle;
+\node at (1,-2) {trapezio isoscele};
+\end{scope}
+
+\begin{scope}[shift={(4.5cm,0cm)}]
+\draw[thick, fill=red!10] (0,0) -- (1.7,0) -- (2.5,-1.5) -- (0,-1.5) -- cycle;
+\node at (1.25,-2) {trapezio rettangolo};
+\end{scope}
+
+\begin{scope}[shift={(-0.3cm,-2.7cm)}]
+\draw[thick, fill=red!10] (0,0) -- (1.5,0) -- (3,-1.5) -- (0.5,-1.5) -- cycle;
+\node at (1.5,-2) {trapezio scaleno};
+\end{scope}
+
+\begin{scope}[shift={(5cm,-2.7cm)}]
+\draw[thick, fill=red!10] (0,0) -- (1.3,0) -- (2.5,-1.5) -- (-0.5,-1.5) -- cycle;
+\node at (1,-2) {trapezio scaleno};
+\end{scope}
+
+\end{tikzpicture}

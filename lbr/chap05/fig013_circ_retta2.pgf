@@ -1,0 +1,26 @@
+\begin{tikzpicture}[scale=.8,font=\small]
+\usetikzlibrary{calc,intersections}
+
+\begin{scope}
+\pgfmathsetmacro{\raggio}{1.7}
+\coordinate (o) at (0,0);
+
+\draw[name path=Circle1, thick] (o) circle (\raggio);
+\draw[fill] (o) circle (1.2pt) node[left] {$O$};
+
+\coordinate (r1) at (1,2);
+\coordinate (r2) at (1,-1.8);
+
+\draw[name path=Retta, thick] (r1) -- (r2);
+
+\draw[thick] (r1) node[right] {$m$} -- (r2);
+\draw[blue] (o) -- node[black, above, midway, sloped] {$d$} ($(r1)!(o)!(r2)$) node[black, right] {$H$};
+
+\path [name intersections={of=Circle1 and Retta}] ;
+\draw[fill] (intersection-1) coordinate (a) circle (1.2pt) node[right] {$A$};
+\draw[fill] (intersection-2) coordinate (b) circle (1.2pt) node[right] {$B$};
+\draw[red] (a) -- node[black, above, midway, sloped] {$r$} (o) -- node[black, below, midway, sloped] {$r$} (b);
+
+\end{scope}
+
+\end{tikzpicture}
