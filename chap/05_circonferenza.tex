@@ -329,7 +329,7 @@ Una coppia di corde parallele individua in un cerchio un segmento circolare a du
 
 Perché alcune strade a scorrimento veloce vengono chiamate ``tangenziali''?
 Per rispondere a questa domanda dobbiamo definire le posizioni che può assumere una retta rispetto ad una circonferenza.
-Consideriamo in uno stesso piano una circonferenza $C$ di centro $O$ e raggio $r$ e una retta generica $m$; la distanza $d$ fra il centro $O$ e la retta $m$ è definita dal segmento $OH$, che ha un estremo coincidente con il centro $O$ ed è perpendicolare in $H$ alla retta $m$ ($H$ è il piede della perpendicolare). Si possono distinguere i tre casi seguenti:
+Consideriamo in uno stesso piano una circonferenza $C$ di centro $O$ e raggio $r$ e una retta generica $m$; la distanza $d$ fra il centro $O$ e la retta $m$ è definita dal segmento $OH$, che ha un estremo coincidente con il centro $O$ ed è perpendicolare in $H$ alla retta $m$ ($H$ è il piede della perpendicolare). Si possono distinguere i tre casi seguenti:\vspace{4pt}
 
 \begin{enumeratea}
 
@@ -339,7 +339,7 @@ Il punto $H$ è esterno alla circonferenza così come ogni altro punto della ret
 \end{minipage}\hfil
 \begin{minipage}{0.4\textwidth}
 	\centering\input{./lbr/chap05/fig012_circ_retta.pgf}\\\vspace{5pt}
-\end{minipage}
+\end{minipage}\vspace{4pt}
 
 \noindent\begin{minipage}{0.6\textwidth}\parindent15pt
 \item $d < r$ : la distanza del centro $O$ dalla retta è minore del raggio.\\
@@ -349,7 +349,7 @@ La retta viene detta \emph{secante} alla circonferenza nei punti $A$ e $B$, che 
 \begin{minipage}{0.4\textwidth}
 	\centering\input{./lbr/chap05/fig013_circ_retta2.pgf}\\\vspace{4pt}
 	\centering\input{./lbr/chap05/fig014_circ_retta3.pgf}\\\vspace{4pt}
-\end{minipage}
+\end{minipage}\vspace{4pt}
 
 \item $d = r$ : la distanza del centro $O$ dalla retta è pari al raggio.\\
 Il punto $H$ appartiene alla circonferenza mentre ogni altro punto della retta $m$ è esterno alla circonferenza e ha una distanza dal centro $O$ maggiore del raggio. La retta viene detta \emph{tangente} alla circonferenza e $H$ è il punto di tangenza o di contatto.
@@ -404,7 +404,9 @@ Analizziamo in dettaglio i diversi casi; come esercizio lasciamo allo studente l
 Date due circonferenze esterne, la distanza fra i due centri è maggiore della somma dei raggi.
 \end{teorema}
 
-% figura
+\begin{figure}[htb]
+	\centering\input{./lbr/chap05/fig017_circ_esterne.pgf}
+\end{figure}
 
 Abbiamo già dimostrato che per tre punti distinti non allineati passa una sola circonferenza, mentre per due punti passano infinite circonferenze. Di conseguenza due circonferenze distinte possono avere al massimo due punti in comune. \`E il caso delle circonferenze secanti. Se invece il numero di punti in comune è uno, allora ci riduciamo al caso delle circonferenze tangenti.
 
@@ -412,7 +414,9 @@ Abbiamo già dimostrato che per tre punti distinti non allineati passa una sola 
 Date due circonferenze secanti, la distanza fra i centri è maggiore della differenza dei raggi e minore della loro somma.
 \end{teorema}
 
-% figura
+\begin{figure}[htb]
+	\centering\input{./lbr/chap05/fig018_circ_secanti.pgf}
+\end{figure}
 
 La retta passante per i punti di intersezione viene detta \emph{asse radicale}.
 
@@ -422,37 +426,45 @@ Si dimostra che l'asse radicale è perpendicolare alla retta congiungente i cent
 Data una circonferenza interna ad un'altra, la distanza fra i centri è minore della differenza fra i raggi.
 \end{teorema}
 
-% figura
+\begin{figure}[htb]
+	\centering\input{./lbr/chap05/fig019_circ_interne.pgf}\hspace{1.5cm}\input{./lbr/chap05/fig020_circ_conc.pgf}
+\end{figure}
 
-Un caso particolare di circonferenze una interna all'altra è rappresentato dalle circonferenze concentriche, i cui centri coincidono. La zona di piano delimitata dalle due circonferenze è detta \emph{corona circolare}.
-
-% figura
+Un caso particolare di circonferenze una interna all'altra è rappresentato dalle \emph{circonferenze concentriche}, i cui centri coincidono. La zona di piano delimitata dalle due circonferenze è detta \emph{corona circolare}.
 
 \begin{teorema}
 Date due circonferenze tangenti esternamente in un punto $T$, la distanza fra i centri è uguale alla somma dei raggi. La retta tangente passante per $T$ è comune alle due circonferenze ed è perpendicolare alla retta congiungente i due centri.
 \end{teorema}
 
-% figura
+\begin{figure}[htb]
+	\centering\input{./lbr/chap05/fig021_circ_tang.pgf}
+\end{figure}
 
 \begin{teorema}
 Date due circonferenze tangenti internamente, la distanza fra i centri è pari alla differenza dei raggi.
 \end{teorema}
 
-% figura
 
 Anche per le circonferenze si può affermare che nel caso siano tangenti lo sono in due punti coincidenti; infatti se prendiamo due circonferenze secanti e man mano allontaniamo i loro centri, osserviamo che i due punti di intersezione si avvicinano sempre più fino a sovrapporsi nel momento in cui la distanza fra i loro centri è pari alla somma dei raggi.
 
-% figura
+\begin{figure}[htb]
+	\centering\input{./lbr/chap05/fig022_circ_tangenza.pgf}
+\end{figure}
 
 Se esaminiamo le varie posizioni reciproche nel caso di due circonferenze congruenti ($r_1 = r_2 = r$), tenendo conto anche del fatto banale che in tal caso $\abs{r_1 - r_2} = 0$ e $r_1 + r_2 = 2r$, scompaiono le ``distinte'' possibilità che esse siano concentriche, interne e tangenti internamente, ma compare la possibilità che siano coincidenti, cioè perfettamente sovrapposte.
 Lasciamo al lettore la ``rivisitazione'' dei casi precedentemente analizzati nell'ipotesi che le due circonferenze siano congruenti.
 
 \section{Angoli nelle circonferenze}
 
+\noindent\begin{minipage}{0.6\textwidth}\parindent15pt
 Ricordiamo che abbiamo definito \emph{angolo al centro} di una circonferenza di centro $O$ e raggio $r$ un qualsiasi angolo avente come vertice il centro $O$.
-Tracciato un angolo al centro, i suoi lati intersecano la circonferenza in due punti $P$ e $Q$ e di conseguenza l'angolo contiene l'arco $PQ$; si dice che l'angolo al centro $POQ$ insiste sull'arco $PQ$ o sottende l'arco $PQ$.
+Tracciato un angolo al centro, i suoi lati intersecano la circonferenza in due punti $P$ e $Q$ e di conseguenza l'angolo contiene l'arco $PQ$; si dice che l'angolo al centro $P\widehat{O}Q$ insiste sull'arco $PQ$ o sottende l'arco $PQ$.
 Si noti che tracciate due semirette uscenti dal centro $O$, si vengono a formare due angoli al centro esplementari, ovvero la cui somma è un angolo giro, a cui corrispondono due distinti archi complementari $PQ$, la cui somma è il perimetro della circonferenza. 
 I due angoli sono uno convesso e uno concavo, tranne il caso particolare in cui essi sono entrambi piatti, con le due semirette opposte. In tal caso, anche i relativi archi sono congruenti e ognuno ha misura pari al semiperimetro della circonferenza.
+\end{minipage}\hfil
+\begin{minipage}{0.4\textwidth}
+	\centering\input{./lbr/chap05/fig023_ang_centro.pgf}
+\end{minipage}
 
 Diamo ora la seguente
 \begin{definizione}
@@ -464,19 +476,27 @@ In base alla definizione si possono distinguere tre casi:
 \item un lato è secante e l'altro tangente;
 \item ambedue i lati sono tangenti.
 \end{itemize*}
-Anche gli angoli alla circonferenza insistono su archi di circonferenza. Questi appartengono all'angolo stesso e sono delimitati dai punti di tangenza o di intersezione fra i lati dell'angolo e la circonferenza. Nella figura seguente gli angoli alla circonferenza e i rispettivi archi sono segnati in rosso. Sono invece stati evidenziati in verde i corrispondenti angoli al centro, come segue dalla seguente definizione.
+
+Anche gli angoli alla circonferenza insistono su archi di circonferenza. Questi appartengono all'angolo stesso e sono delimitati dai punti di tangenza o di intersezione fra i lati dell'angolo e la circonferenza. Nella figura~\ref{fig:ang_circonf} gli angoli alla circonferenza sono segnati in rosso ed i rispettivi archi sono più marcati. Sono invece stati evidenziati in blu i corrispondenti angoli al centro, come segue dalla seguente definizione.
+
 \begin{definizione}
-Un angolo al centro ed un angolo alla circonferenza si dicono \emph{corrispondenti} se insistono sullo stesso arco.
+	Un angolo al centro ed un angolo alla circonferenza si dicono \emph{corrispondenti} se insistono sullo stesso arco.
 \end{definizione}
 
-% figura
+\begin{figure}[htb]\label{fig:ang_circonf}
+	\centering\input{./lbr/chap05/fig024_ang_circonf.pgf}
+	\caption{Angoli alla circonferenza e corrispondenti angoli al centro}
+\end{figure}
+
+\pagebreak
 
 \begin{teorema}
 L'angolo alla circonferenza è la metà del corrispondente angolo al centro.
 \end{teorema}
 
-\noindent Ipotesi: $\beta$ angolo alla circonerenza corrispondente all'angolo al centro $\alpha$ che insiste sull'arco $PQ$.\tab 
-Tesi: $\beta = 2\alpha$.
+\noindent Ipotesi:\tab $\alpha$ angolo alla circonferenza che insiste sull'arco $PQ$;\\
+\tab\tab $\beta$ angolo al centro corrispondente ad $\alpha$.\vspace{4pt}\\
+Tesi:\tab $\beta = 2\alpha$.
 
 % figura
 
@@ -486,31 +506,61 @@ Distinguiamo tre casi:
 \item Un lato dell'angolo alla circonferenza passa per il centro e dunque si sovrappone al diametro.\\
 Abbiamo due possibilità:
 \begin{enumerate*}
+\noindent\begin{minipage}{0.6\textwidth}\parindent15pt
 \item L'altro lato è secante alla circonferenza.\\
-Con riferimento alla figura a fianco, il triangolo $OVQ$ è isoscele sulla base $VQ$, in quanto i lati $OV$ e $OQ$ sono due raggi della circonferenza; ne segue che gli angoli alla base sono congruenti e dunque $O\widehat{Q}V\cong \alpha$. L'angolo al centro $P\widehat{O}Q$ giace sul prolungamento del lato $OV$ e dunque è un angolo esterno al triangolo $OVQ$. Per il teorema degli angoli esterni ad un triangolo, possiamo affermare che $P\widehat{O}Q$ è uguale alla somma degli angoli interni non adiacenti e quindi $\beta = \alpha + \alpha = 2\alpha$.
+Con riferimento alla figura a fianco, il triangolo $OVQ$ è isoscele sulla base $VQ$, in quanto i lati $OV$ e $OQ$ sono due raggi della circonferenza; ne segue che gli angoli alla base sono congruenti e dunque $O\widehat{Q}V\cong \alpha$. L'angolo al centro $P\widehat{O}Q\equiv \beta$ giace sul prolungamento del lato $OV$ e dunque è un angolo esterno al triangolo $OVQ$. Per il teorema degli angoli esterni ad un triangolo, possiamo affermare che $\beta$ è uguale alla somma degli angoli interni non adiacenti e quindi $\beta = \alpha + \alpha = 2\alpha$.
+\end{minipage}\hfil
+\noindent\hspace{-20pt}\begin{minipage}{0.4\textwidth}
+	\centering\input{./lbr/chap05/fig025_ang_circonf_meta1.pgf}
+\end{minipage}
+\noindent\begin{minipage}{0.6\textwidth}\parindent15pt
 \item L'altro lato è tangente alla circonferenza.\\
 In questo caso un lato coincide sempre con il diametro e l'altro è tangente alla circonferenza nel punto $V\equiv Q$; poiché le rette tangenti alla circonferenza sono sempre ortogonali al raggio nel punto di tangenza, i due lati sono perpendicolari. Di conseguenza l'angolo $\alpha$ è un angolo retto e il corrispondente angolo al centro $\beta$ è un angolo piatto, per cui $\beta = 2\alpha$.
+\end{minipage}\hfil
+\noindent\hspace{-20pt}\begin{minipage}{0.4\textwidth}
+	\centering\input{./lbr/chap05/fig026_ang_circonf_meta2.pgf}
+\end{minipage}
 \end{enumerate*}
 
 \item Il centro $O$ è interno all'angolo alla circonferenza.\\
 Anche in questo caso abbiamo due possibilità:
 \begin{enumerate*}
+\noindent\begin{minipage}{0.6\textwidth}\parindent15pt
 \item I lati dell'angolo alla circonferenza sono entrambi secanti.\\
 Si conduca dal vertice $V$ dell'angolo alla circonferenza $P\widehat{V}Q$ il diametro $VT$; si ottengono in tal modo due angoli alla circonferenza $P\widehat{V}T$ e $T\widehat{V}Q$ la cui somma è proprio l'angolo $P\widehat{V}Q$. Tali angoli hanno il lato comune il lato $VT$ coincidente con il diametro e dunque, essendo $P\widehat{O}T$ e $T\widehat{O}Q$ i rispettivi angoli al centro, possiamo applicare ad ognuno di essi il risultato dimostrato al punto 1: $P\widehat{O}T=2P\widehat{V}T$ e $T\widehat{O}Q=2T\widehat{V}Q$.
 Ma la somma degli angoli $P\widehat{O}T$ e $T\widehat{O}Q$ è pari all'angolo al centro $P\widehat{O}Q$, corrispondente all'angolo alla circonferenza $P\widehat{V}Q$.
 Dunque $P\widehat{O}Q=P\widehat{O}T+T\widehat{O}Q=2P\widehat{V}T+2T\widehat{V}Q=2(P\widehat{V}T+T\widehat{V}Q)=2P\widehat{V}Q$.
+\end{minipage}\hfil
+\noindent\hspace{-20pt}\begin{minipage}{0.4\textwidth}
+	\centering\input{./lbr/chap05/fig027_ang_circonf_meta3.pgf}
+\end{minipage}
+\noindent\begin{minipage}{0.6\textwidth}\parindent15pt
 \item Un lato dell'angolo alla circonferenza è tangente.\\
 La dimostrazione è del tutto simile alla precedente. Il diametro $VC$ divide l'angolo alla circonferenza $P\widehat{V}T$ negli angoli $P\widehat{V}C$ e $C\widehat{V}T$. Per il primo angolo vale quanto già dimostrato al punto 1a e ribadito al punto precedente: detto $P\widehat{O}C$ il corrispondente angolo al centro, possiamo scrivere $P\widehat{O}C=2P\widehat{V}C$. Inoltre, $C\widehat{V}T$ è retto per costruzione e difatti misura la metà del corrispondente angolo al centro $C\widehat{O}V$, che è proprio un angolo piatto (vedi quanto dimostrato nel punto 1b). Anche in questo caso, essendo $P\widehat{O}V$ l'angolo al centro corrispondente all'angolo $P\widehat{V}T$, si dimostra che $P\widehat{O}V=P\widehat{O}C+T\widehat{O}Q=2P\widehat{V}C+2C\widehat{V}T=2(P\widehat{V}C+C\widehat{V}T)=2P\widehat{V}T$.
 Si noti che $P\widehat{O}V$ è un angolo concavo, ovvero maggiore di un angolo piatto.
+\end{minipage}\hfil
+\noindent\hspace{-20pt}\begin{minipage}{0.4\textwidth}
+	\centering\input{./lbr/chap05/fig028_ang_circonf_meta4.pgf}
+\end{minipage}
 \end{enumerate*}
 
 \item Il centro $O$ è esterno all'angolo alla circonferenza.\\
 Anche qui abbiamo due casi:
 \begin{enumerate*}
+\noindent\begin{minipage}{0.6\textwidth}\parindent15pt
 \item Entrambi i lati dell'angolo alla circonferenza sono secanti.\\
-Sia $P\widehat{V}Q$ l'angolo alla circonferenza. Tracciamo il diametro $VT$. Per quanto dimostrato al punto 1a, l'angolo al centro $T\widehat{O}Q$ è il doppio del corrispondente angolo alla circonferenza $T\widehat{V}Q$ e $T\widehat{O}P$ è il doppio dell'angolo $T\widehat{V}P$. Essendo $P\widehat{O}Q$ l'angolo al centro corrispondente a quello alla circonferenza $P\widehat{V}Q$, possiamo  scrivere: $P\widehat{O}Q=T\widehat{O}Q-T\widehat{O}P=2T\widehat{V}Q-2T\widehat{V}P=2(T\widehat{V}Q+T\widehat{V}P)=2P\widehat{V}Q$.
+Sia $P\widehat{V}Q$ l'angolo alla circonferenza. Tracciamo il diametro $VT$. Per quanto dimostrato al punto 1.a, l'angolo al centro $T\widehat{O}Q$ è il doppio del corrispondente angolo alla circonferenza $T\widehat{V}Q$ e $T\widehat{O}P$ è il doppio dell'angolo $T\widehat{V}P$. Essendo $P\widehat{O}Q$ l'angolo al centro corrispondente a quello alla circonferenza $P\widehat{V}Q$, possiamo  scrivere: $P\widehat{O}Q=T\widehat{O}Q-T\widehat{O}P=2T\widehat{V}Q-2T\widehat{V}P=2(T\widehat{V}Q+T\widehat{V}P)=2P\widehat{V}Q$.
+\end{minipage}\hfil
+\noindent\hspace{-20pt}\begin{minipage}{0.4\textwidth}
+	\centering\input{./lbr/chap05/fig029_ang_circonf_meta5.pgf}
+\end{minipage}
+\noindent\begin{minipage}{0.6\textwidth}\parindent15pt
 \item Un lato dell'angolo alla circonferenza è tangente.\\
-La dimostrazione è analoga alla precedente e fa uso delle proprietà 1a e 1b. Tracciato il diametro $VC$ ed essendo $P\widehat{O}V$ e $P\widehat{V}T$ gli angoli corrispondenti, possiamo scrivere: $P\widehat{O}V=C\widehat{O}V-C\widehat{O}P=2C\widehat{V}T-2C\widehat{V}P=2(C\widehat{V}T+C\widehat{V}P)=2P\widehat{V}T$.
+La dimostrazione è analoga alla precedente e fa uso delle proprietà 1.a e 1.b. Tracciato il diametro $VC$, essendo $P\widehat{O}V$ l'angolo al centro corrispondente a quello alla circonferenza $P\widehat{V}T$, possiamo scrivere: $P\widehat{O}V=C\widehat{O}V-C\widehat{O}P=2C\widehat{V}T-2C\widehat{V}P=2(C\widehat{V}T+C\widehat{V}P)=2P\widehat{V}T$.
+\end{minipage}\hfil
+\noindent\hspace{-20pt}\begin{minipage}{0.4\textwidth}
+	\centering\input{./lbr/chap05/fig030_ang_circonf_meta6.pgf}
+\end{minipage}
 \end{enumerate*}
 \end{enumerate*}
 \end{proof}
@@ -520,16 +570,28 @@ I seguenti corollari sono immediata conseguenza del precedente teorema.
 Angoli alla circonferenza che insistono su uno stesso arco sono congruenti.
 \end{corollario}
 
-% figura
-
-Infatti gli angoli alla circonferenza che nelle figura seguente insistono sull'arco $PQ$, misurano la metà dello stesso angolo al centro $P\widehat{O}Q$.
+\noindent\begin{minipage}{0.6\textwidth}\parindent15pt
+\begin{proof}
+Gli angoli alla circonferenza che nelle figura a lato insistono sullo stesso arco $PQ$ misurano tutti la metà del corrispondente angolo al centro $P\widehat{O}Q$. Quindi sono tra loro congruenti.
+\end{proof}
+\end{minipage}\hfil
+\noindent\begin{minipage}{0.4\textwidth}
+	\centering\input{./lbr/chap05/fig031_ang_circonf_cong.pgf}
+\end{minipage}
 
 \begin{corollario}
 Ogni angolo alla circonferenza che insiste su una semicirconferenza è retto.
 \end{corollario}
-Infatti il corrispondente angolo al centro è un angolo piatto.
+\noindent\begin{minipage}{0.6\textwidth}\parindent15pt
+\begin{proof}
+Il corrispondente angolo al centro è infatti un angolo piatto.
+\end{proof}
+\end{minipage}\hfil
+\noindent\begin{minipage}{0.4\textwidth}
+	\centering\input{./lbr/chap05/fig032_ang_circonf_retto.pgf}
+\end{minipage}
 
-Premesso che affinché due circonferenze siano congruenti è sufficiente che abbiano lo steso raggio, sussistono i seguenti teoremi, di cui lasciamo la dimostrazione al lettore in quanto questa si effettua velocemente ricorrendo alla sovrapposizione tramite movimento rigido degli elementi di cui si vuole dimostrare la congruenza (in una stessa circonferenza questo si otterrà tramite rotazione intorno al centro).
+Premesso che affinché due circonferenze siano congruenti è sufficiente che abbiano lo stesso raggio, sussistono i seguenti teoremi, di cui lasciamo la dimostrazione al lettore che può essere effettuata velocemente ricorrendo alla sovrapposizione tramite movimento rigido degli elementi dei quali si vuole dimostrare la congruenza (in una stessa circonferenza questo si otterrà tramite rotazione intorno al centro).
 
 \begin{teorema}
 In una stessa circonferenza o in circonferenze congruenti

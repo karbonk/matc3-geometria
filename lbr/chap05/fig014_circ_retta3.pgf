@@ -1,9 +1,9 @@
-\begin{tikzpicture}[scale=.8,font=\small]
+\begin{tikzpicture}[scale=.7,font=\small]
 \usetikzlibrary{calc,intersections}
 
 \begin{scope}
-%\clip (-2.01,-2.01) rectangle (2.01,2.01);
 \pgfmathsetmacro{\raggio}{1.7}
+\clip (-\raggio-0.1,-\raggio-0.15) rectangle (2.9,\raggio+.4);
 \coordinate (o) at (0,0);
 
 \draw[name path=Circle1, thick] (o) circle (\raggio);

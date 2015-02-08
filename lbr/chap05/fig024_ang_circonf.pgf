@@ -1,0 +1,116 @@
+\begin{tikzpicture}[scale=0.75,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\clip (-3.4,-3.65) rectangle (3.4,2.5);
+\coordinate (o) at (0,0);
+
+\draw[very thin] (o) circle (2);
+
+\path (o) -- (100:2) coordinate (b);
+\path (o) -- (170:2) coordinate (a);
+\path (o) -- (320:2) coordinate (c);
+
+\begin{scope}
+\clip (a) -- (o) -- (b) -- cycle;
+\draw[blue, fill=blue!10] (o) circle (0.4);
+\end{scope}
+
+\begin{scope}
+\clip ($(a)!-.25!(c)$) -- (c) -- ($(b)!-.25!(c)$) -- cycle;
+\draw[thick] (o) circle (2);
+\draw[red, fill=red!15] (c) circle (0.5);
+\end{scope}
+
+\draw[blue] ($(a)!-.25!(o)$) -- (o) -- ($(b)!-.25!(o)$);
+\draw[thick, red] ($(a)!-.15!(c)$) -- (c) -- ($(b)!-.15!(c)$);
+
+\draw[fill] (a) circle (1.2pt) node[shift={(-0.2,.-0.2)}] {$P$};
+\draw[fill] (b) circle (1.2pt) node[shift={(0.2,0.2)}] {$Q$};
+\draw[fill] (c) circle (1.2pt) node[shift={(0.2,-0.2)}] {$V$};
+\draw[fill] (o) circle (1.2pt) node[below] {$O$};
+
+\node at (0,-2.4) {L'angolo al centro $P\widehat{O}Q$};
+\node at (0,-2.95) {corrisponde all'angolo};
+\node at (0,-3.4) {alla circonferenza $P\widehat{V}Q$};
+
+\end{scope}
+
+
+\begin{scope}[xshift=6cm]
+\clip (-3.4,-3.65) rectangle (3.4,2.5);
+%\clip (-2.4,-2.1) rectangle (2.1,2.5);
+\coordinate (o) at (0,0);
+
+\path (o) -- (100:2) coordinate (b);
+\path (o) -- (170:2) coordinate (a);
+\path (b) -- +(10:2) coordinate (d);
+
+\begin{scope}
+\clip (a) -- (o) -- (b) -- (2.25,2.25) -- (2.25,-2.25) -- (-2.25,-2.25) -- cycle;
+\draw[blue, fill=blue!10] (o) circle (0.4);
+\end{scope}
+
+\begin{scope}
+\clip ($(a)!-.25!(b)$) -- (b) -- (d) -- (2.25,2.25) -- (2.25,-2.25) -- (-2.25,-2.25) -- cycle;
+\draw[thick] (o) circle (2);
+\draw[red, fill=red!15] (b) circle (0.5);
+\end{scope}
+
+\begin{scope}[rotate=10]
+\draw[green!60!black, fill=green!10] (b) rectangle ([shift={(0.3,0.3)}]b);
+\end{scope}
+
+\draw[very thin] (o) circle (2);
+
+\draw[blue] ($(a)!-.25!(o)$) -- (o) -- ($(b)!-.25!(o)$);
+\draw[thick, red] ($(a)!-.25!(b)$) -- (b) -- (d);
+
+\draw[fill] (a) circle (1.2pt) node[shift={(-0.2,0.2)}] {$P$};
+\draw[fill] (b) circle (1.2pt) node[shift={(-0.6,0.2)}] {$V\equiv Q$};
+\draw[fill] (o) circle (1.2pt) node[shift={(-0.25,0.25)}] {$O$};
+\draw[fill] ($(b)!0.8!(d)$) circle (1.2pt) node[shift={(0.2,-0.2)}] {$T$};
+
+\node at (0,-2.4) {L'angolo al centro $P\widehat{O}Q$};
+\node at (0,-2.95) {corrisponde all'angolo};
+\node at (0,-3.4) {alla circonferenza $P\widehat{V}T$};
+\end{scope}
+
+
+\begin{scope}[xshift=12cm]
+\clip (-3.4,-3.65) rectangle (3.4,2.5);
+%\clip (-3.1,-2.1) rectangle (2.1,2.5);
+\coordinate (o) at (0,0);
+
+\path (o) -- (100:2) coordinate (b);
+\path (b) -- +(10:2) coordinate (d);
+\path (b) -- +(190:2) coordinate (e);
+
+\draw[blue, fill=blue!10] (o) circle (0.5);
+
+\begin{scope}
+\clip (e) -- (b) -- (d) -- (2.25,2.25) -- (2.25,-2.25) -- (-2.25,-2.25) -- cycle;
+\draw[thick] (o) circle (2);
+\draw[red, fill=red!15] (b) circle (0.5);
+\end{scope}
+
+\begin{scope}[rotate=10]
+\draw[green!60!black, fill=green!10] (b) rectangle ([shift={(0.3,0.3)}]b);
+\end{scope}
+
+\draw[very thin] (o) circle (2);
+
+\draw[blue] (o) -- ($(b)!-.25!(o)$);
+\draw[thick, red] (e) -- (b) -- (d);
+
+\draw[fill] (b) circle (1.2pt) node[shift={(-0.9,0.2)}] {$V\equiv Q\equiv P$};
+\draw[fill] (o) circle (1.2pt) node[below] {$O$};
+
+\node at (0,-2.45) {L'angolo (giro) al centro di vertice $O$};
+\node at (0,-2.95) {corrisponde all'angolo (piatto)};
+\node at (0,-3.45) {alla circonferenza di vertice $V$};
+
+\end{scope}
+
+
+\end{tikzpicture}

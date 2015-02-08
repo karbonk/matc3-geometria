@@ -1,0 +1,37 @@
+\begin{tikzpicture}[scale=0.75,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\clip (-2.7,-2.05) rectangle (2.1,2.8);
+\coordinate (o) at (0,0);
+
+\path (o) -- (135:2) coordinate (q);
+\path (o) -- (315:2) coordinate (p);
+\path (o) -- (135:2) coordinate (v);
+\path (v) -- +(45:2.1) coordinate (t);
+
+\begin{scope}
+\clip (p) -- (o) -- (q) -- (0,2.9) -- (2.1,2.1) -- (2.1,-2.1) -- cycle;
+\draw[blue, fill=blue!10] (o) circle (0.5);
+\draw[blue] (o) circle (0.4);
+\node at ([shift={(45:0.8)}]o) {$\beta$};
+\end{scope}
+
+\begin{scope}
+\clip (p) -- (v) -- (t) -- (2.1,2.1) -- (2.1,-2.1) -- cycle;
+\draw[thick] (o) circle (2);
+\draw[red, fill=red!15] (v) circle (0.5);
+\node at ([shift={(0:0.7)}]v) {$\alpha$};
+\end{scope}
+
+\draw[very thin] (o) circle (2);
+
+\draw[blue] ($(p)!-.2!(o)$) -- (o) -- ($(q)!-.1!(o)$);
+\draw[red] ($(p)!-.15!(v)$) -- (v) -- (t);
+
+\draw[fill] (p) circle (1.2pt) node[shift={(0,-0.3)}] {$P$};
+\draw[fill] (v) circle (1.2pt) node[shift={(-0.45,0.3)}] {$V\equiv Q$};
+\draw[fill] (o) circle (1.2pt) node[shift={(-0.2,-0.2)}] {$O$};
+\end{scope}
+
+\end{tikzpicture}

@@ -1,0 +1,26 @@
+\begin{tikzpicture}[scale=.7,font=\small]
+\usetikzlibrary{calc,intersections}
+
+\begin{scope}
+\pgfmathsetmacro{\raggioa}{2}
+\pgfmathsetmacro{\raggiob}{1.3}
+\coordinate (o) at (0,0);
+
+\begin{scope}
+\draw[fill=yellow!15] (o) circle (\raggioa);
+\draw[fill=white] (o) circle (\raggiob);
+\end{scope}
+
+
+\draw[red] (o) -- node[black, above, midway, sloped, shift={(-0.4,0)}] {$r_1$} (135:\raggioa);
+\draw[thick, name path=Circle1] (o) circle (\raggioa);
+\draw[fill] (o) circle (1.2pt) node[below] {$O$};
+
+\draw[red] (o) -- node[black, above, midway, sloped] {$r_2$} +(45:\raggiob);
+\draw[thick, name path=Circle2] (o) circle (\raggiob);
+
+\node at (0,-2.5) {circonferenze concentriche};
+
+\end{scope}
+
+\end{tikzpicture}
