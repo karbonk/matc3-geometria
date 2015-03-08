@@ -1,0 +1,46 @@
+\begin{tikzpicture}[scale=0.65, font=\small]
+\usetikzlibrary{calc}
+\pgfmathsetmacro{\lati}{10}
+\pgfmathsetmacro{\angoloc}{360/\lati}
+
+\begin{scope}[scale=3, rotate={-90}]
+\coordinate (o) at (0,0);
+
+\begin{scope}
+\clip ({\angoloc*1.8+180}:0.1) -- ({\angoloc*3.2+180}:0.1) -- ({\angoloc*1.8}:2.5) -- ({\angoloc*3.2}:2.5) -- cycle;
+\draw[blue] (o) circle (2);
+
+\foreach \x/\y in {0/D,1/E,2/A,3/B,4/C,5/D,6/E,7/F,8/G,9/H,10/I}
+{
+	\path +({\x*\angoloc}:2) coordinate (\y);
+}
+
+\coordinate (ax) at (0,2);
+\coordinate (d) at (intersection of B--A and o--ax);
+
+\begin{scope}
+\clip (o) -- (B) -- (ax) -- cycle;
+\draw[red, fill=red!10] (o) circle (0.35) node[black, shift={(0.17*\angoloc:1.8)}] {$\beta=18\grado$};
+\end{scope}
+
+\draw (o) -- (ax);
+
+\foreach \x/\y in {0/D,1/E,2/A,3/B,4/C,5/D,6/E,7/F,8/G,9/H,10/I}
+{
+	\draw[very thick] +({\x*\angoloc}:2) coordinate (\y) node [shift={({\x*\angoloc-72}:.25)}] {$\y$} -- ({(\x+1)*\angoloc}:2);
+}
+
+\end{scope}
+
+\draw[fill] (o) circle (0.6pt) node[above] {$O$};
+\draw[fill] (ax) circle (0.6pt) node[right] {$A'$};
+\draw[fill] (d) circle (0.6pt) node[shift={(-0.2,0.2)}] {$X$};
+
+%\draw[red, dashed] (o) -- node[black, midway, shift={((0.14,-0.1)}] {$a$} ({(4*\angoloc)+\angoloc/2}:2{*cos(\angoloc/2)}) node[black, below] {$H$};
+\draw[blue] (o) -- ({2*\angoloc}:2);
+\draw[blue] (o) -- node [black, above, rotate=18] {$r=1$} ({3*\angoloc}:2);
+
+\end{scope}
+
+
+\end{tikzpicture}

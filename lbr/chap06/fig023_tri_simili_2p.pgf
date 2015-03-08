@@ -1,0 +1,25 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}[scale=1.4]
+\coordinate (a) at (0,0);
+\coordinate (c) at (1.6,1.7);
+\coordinate (b) at (2.5,0);
+\draw[fill=yellow!10] (a) -- (b) -- (c) -- cycle;
+
+\draw[thick, blue] (a) node[black, below] {$A$} -- (b) node[black, below] {$B$} -- (c) node[black, above] {$C$} -- cycle;
+
+\end{scope}
+
+\begin{scope}[xshift=4.5cm, scale=1]
+\coordinate (a) at (0,0);
+\coordinate (c) at (1.6,1.7);
+\coordinate (b) at (2.5,0);
+\draw[fill=gray!10] (a) -- (b) -- (c) -- cycle;
+
+\draw[thick, blue] (a) node[black, below] {$A'$} -- (b) node[black, below] {$B'$} -- (c) node[black, above] {$C'$} -- cycle;
+
+\end{scope}
+
+
+\end{tikzpicture}

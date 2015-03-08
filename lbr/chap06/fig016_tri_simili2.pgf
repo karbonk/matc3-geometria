@@ -1,0 +1,41 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}[scale=1.4]
+\coordinate (a) at (0,0);
+\coordinate (c) at (1.6,1.7);
+\coordinate (b) at (2.5,0);
+\draw[fill=yellow!10] (a) -- (b) -- (c) -- cycle;
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- cycle;
+\draw[thick,orange!50,fill] (a) circle ({0.5*0.714285714});
+\node at ([shift={(0.5,0.2)}]a) {$\alpha$};
+\end{scope}
+
+\draw[thick] (a) node[below] {$A$} -- (b) node[below] {$B$} -- (c) node[above] {$C$} -- cycle;
+\draw[blue,very thick] (a) -- (b);
+\draw[red,very thick] (a) -- (c);
+
+\end{scope}
+
+\begin{scope}[xshift=4.5cm, scale=1]
+\coordinate (a) at (0,0);
+\coordinate (c) at (1.6,1.7);
+\coordinate (b) at (2.5,0);
+\draw[fill=gray!10] (a) -- (b) -- (c) -- cycle;
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- cycle;
+\draw[thick,orange!50,fill] (a) circle (0.5);
+\node at ([shift={(0.75,0.3)}]a) {$\alpha'$};
+\end{scope}
+
+\draw[thick] (a) node[below] {$D$} -- (b) node[below] {$E$} -- (c) node[above] {$F$} -- cycle;
+\draw[blue,very thick] (a) -- (b);
+\draw[red,very thick] (a) -- (c);
+
+\end{scope}
+
+
+\end{tikzpicture}

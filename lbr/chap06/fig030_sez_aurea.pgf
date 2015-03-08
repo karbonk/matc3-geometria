@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+% sez. aurea è a/b:   b:a=a:(a+b)  -> a/b = (1+sqrt(5))/2
+
+\coordinate (a) at (0,0);
+\coordinate (c) at ({2*(1+sqrt(5))/2},0);
+\coordinate (b) at ({2*(1+sqrt(5))/2+2},0);
+
+\draw[thick] (a) -- (b);
+
+\draw[fill] (a) circle (1.2pt) node[above] {$A$};
+\draw[fill] (b) circle (1.2pt) node[above] {$B$};
+\draw[fill] (c) circle (1.2pt) node[above] {$C$};
+
+\end{scope}
+
+\end{tikzpicture}

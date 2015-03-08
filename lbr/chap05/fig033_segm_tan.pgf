@@ -1,0 +1,28 @@
+\begin{tikzpicture}[scale=0.75,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\clip (-2.1,-2.1) rectangle (2.5,2.1);
+%\clip (-3.1,-2.1) rectangle (2.1,2.5);
+\coordinate (o) at (0,0);
+
+\path (o) -- (10:2) coordinate (b);
+\path (b) -- +(100:2) coordinate (d);
+\path (b) -- +(-80:2) coordinate (e);
+
+\begin{scope}[rotate=-170]
+\draw[green!60!black, fill=green!10] (b) rectangle ([shift={(0.3,0.3)}]b);
+\end{scope}
+
+\draw (o) circle (2);
+
+\draw[blue] (o) -- node[black,above, midway,sloped] {$r$} (b);
+\draw[thick, red] (e) -- (b) -- (d);
+
+\draw[fill] (b) circle (1.2pt) node[shift={(0.2,0)}] {$P$};
+\draw[fill] (o) circle (1.2pt) node[below] {$O$};
+
+\end{scope}
+
+
+\end{tikzpicture}

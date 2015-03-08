@@ -1,0 +1,46 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+%angolo piatto
+\begin{scope}
+\coordinate (a) at (-2,0);
+\coordinate (b) at (2,0);
+\coordinate (v) at (0,0);
+
+\begin{scope}
+\clip (a) -- (-.6,.6) -- (.6,.6) -- (b) -- cycle;
+\draw[blue, fill=blue!10] (v) circle (0.4);
+\end{scope}
+
+\begin{scope}
+\clip (a) -- (-.6,-.6) -- (.6,-.6) -- (b) -- cycle;
+\draw[red, fill=red!10] (v) circle (0.5);
+\end{scope}
+
+\draw (a) -- (b);
+\draw[fill] (a) circle (1.2pt) node [below] {$A$};
+\draw[fill] (b) circle (1.2pt) node [below] {$B$};
+\draw[fill] (v) circle (1.2pt) node [below] {$V$};
+
+\node at (0,0.9) {angolo piatto};
+\node at (0,-0.9) {angolo piatto};
+
+\end{scope}
+
+
+%angolo giro/nullo
+\begin{scope}[xshift=4cm]
+\coordinate (a) at (2,0);
+\coordinate (v) at (0,0);
+
+\draw[red, fill=red!10] (v) circle (0.55);
+\draw (v) -- (a);
+%\draw[fill] (a) circle (1.2pt) node [below] {$A$};
+\draw[fill] (v) circle (1.2pt) node [left] {$O$};
+
+\node at (0,0.9) {angolo giro};
+\node at (1.5,-0.25) {angolo nullo};
+
+\end{scope}
+
+\end{tikzpicture}

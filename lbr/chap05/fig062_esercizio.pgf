@@ -1,0 +1,41 @@
+\begin{tikzpicture}[scale=0.8,font=\small]
+\usetikzlibrary{calc,intersections}
+
+\begin{scope}
+\clip (-3.1,-3.5) rectangle (5.1,3.5);
+\coordinate (o) at (0,0);
+\coordinate (o1) at (-2,0);
+\coordinate (o2) at (3,0);
+\coordinate (m1) at ($(o1)!0.5!(o)$);
+\coordinate (m2) at ($(o)!0.5!(o2)$);
+
+\path[name path=Circle1] (m1) let \p1= ($(m1) - (o)$) in circle ({veclen(\x1,\y1)});
+\path[name path=Circle2] (m2) let \p1= ($(m2) - (o)$) in circle ({veclen(\x1,\y1)});
+
+\draw[name path=Circle3] (o1) circle (1);
+\draw[name path=Circle4] (o2) circle (2);
+
+\path [name intersections={of=Circle1 and Circle3}] ;
+\draw[fill] (intersection-1) coordinate (b) node [above] {$B$} circle (1.2pt);
+\draw[fill] (intersection-2) coordinate (a) node [below] {$A$} circle (1.2pt);
+\path [name intersections={of=Circle2 and Circle4}] ;
+\draw[fill] (intersection-1) coordinate (d) node [above] {$D$} circle (1.2pt);
+\draw[fill] (intersection-2) coordinate (c) node [below] {$C$} circle (1.2pt);
+
+\draw[shorten <=-1.5cm, shorten >=-2.5cm] (a) node[shift={(-1,-1)}] {$s$} -- (d);
+\draw[shorten <=-1.5cm, shorten >=-2.5cm] (b) node[shift={(-1,1)}] {$r$} -- (c);
+
+\coordinate (o3) at (intersection of a--d and b--c);
+
+\draw[fill] (o3) circle (1.2pt) node[above] {$O$};
+\draw[fill] (o1) circle (1.2pt) node[left] {$O_1$};
+\draw[fill] (o2) circle (1.2pt) node[right] {$O_2$};
+
+\draw[dashed] (o1) -- (a);
+\draw[dashed] (o1) -- (b);
+\draw[dashed] (o2) -- (c);
+\draw[dashed] (o2) -- (d);
+
+\end{scope}
+
+\end{tikzpicture}

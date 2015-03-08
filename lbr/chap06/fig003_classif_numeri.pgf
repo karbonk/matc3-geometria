@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=0.8,font=\small]
+\usetikzlibrary{calc, decorations.pathreplacing}
+
+\begin{scope}
+\node[right] at (0.3,0) {Reali};
+\node[right] at (2,1.4) {Razionali};
+\node[right] at (2,-1) {Irrazionali};
+\node[right] at (2,-1.5) {(con decimali illimitati non periodici: non possono essere scritti in forma di frazione)};
+\node[right] at (4.5,2.05) {Interi};
+\node[right] at (4.5,0.75) {Frazionari};
+\node[right] at (7,1.15) {con decimali limitati};
+\node[right] at (7,0.25) {con decimali illimitati periodici};
+
+\draw [decorate,decoration={brace,amplitude=10pt},xshift=1pt,yshift=0pt] (2,-1.8) -- (2,1.75);
+\draw [decorate,decoration={brace,amplitude=10pt},xshift=1pt,yshift=0pt] (4.5,0.35) -- (4.5,2.40);
+\draw [decorate,decoration={brace,amplitude=10pt},xshift=1pt,yshift=0pt] (7,-0.05) -- (7,1.45);
+
+\end{scope}
+
+\end{tikzpicture}

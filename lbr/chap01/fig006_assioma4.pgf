@@ -1,0 +1,26 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+%Assioma 4
+
+\begin{scope}
+\coordinate (d) at (0,0);
+\path (d) -- +(60:2) coordinate (g);
+\path (g) -- +(0:2.5) coordinate (f);
+\path (d) -- +(0:2.5) coordinate (e);
+
+\draw[fill=blue!10] (d) -- (g) -- (f) -- (e) -- cycle;
+\node at (3.2,1.6){$\pi$};
+
+\coordinate (a) at (.9,.4);
+\coordinate (b) at (2.4,.9);
+\draw ($(a)!-.4!(b)$) coordinate (x) node [shift={(.2,.2)}] {$r$} -- ($(a)!1.4!(b)$);
+
+\draw[fill] (a) circle (1pt) node[above] {$A$};
+\draw[fill] (b) circle (1pt) node[above] {$B$};
+
+
+\end{scope}
+
+
+\end{tikzpicture}

@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+% Assioma 17
+
+\begin{scope}
+\coordinate (l) at (-1,0);
+\coordinate (m) at (8.5,0);
+\foreach \x in {1, 2, ..., 7}
+{
+\draw[fill] ({\x},0) circle (1.3pt) node[above] {$A_{\x}$};
+}
+
+\draw[fill=red] (0,0) circle (1.5pt) node[above] {$A$};
+\draw[fill=red] (4.5,0) circle (1.5pt) node[below] {$B$};
+\draw (l) -- (m) node[above] {$r$};
+
+\end{scope}
+
+\end{tikzpicture}

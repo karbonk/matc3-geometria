@@ -1,0 +1,29 @@
+\begin{tikzpicture}[scale=0.65,font=\small]
+\usetikzlibrary{calc}
+\pgfmathsetmacro{\lati}{6}
+\pgfmathsetmacro{\angoloc}{360/\lati}
+
+\begin{scope}[rotate={\angoloc/2-90}]
+%\clip (-2.1,-2.1) rectangle (2.5,2.1);
+\coordinate (o) at (0,0);
+
+\draw[dashed, blue] (o) circle (2);
+\draw[dashed, red] (o) circle (2{*cos(\angoloc/2)});
+
+\foreach \x in {0,...,5}
+{
+	\draw[thick] +({\x*\angoloc}:2) -- ({(\x+1)*\angoloc}:2);
+	\draw[fill] +({\x*\angoloc}:2) circle (1.2pt);
+%	\draw[dotted, red] (o) -- ({(\x*\angoloc)+\angoloc/2}:2{*cos(\angoloc/2)});
+%	\draw[fill] +({(\x*\angoloc)+\angoloc/2}:2{*cos(\angoloc/2)}) circle (1.2pt);
+	\draw[dotted] (o) -- ({\x*\angoloc}:2);
+	\draw[fill] +({\x*\angoloc}:2) circle (1.2pt);
+}
+
+\draw[fill] (o) circle (1.2pt);
+
+\end{scope}
+
+\node at (0,-2.5) {esagono regolare};
+
+\end{tikzpicture}

@@ -418,7 +418,7 @@ Date due circonferenze secanti, la distanza fra i centri è maggiore della diffe
 	\centering\input{./lbr/chap05/fig018_circ_secanti.pgf}
 \end{figure}
 
-La retta passante per i punti di intersezione viene detta \emph{asse radicale}.
+La retta passante per i punti di intersezione viene detta \emph{asse radicale}.\label{def:asse_radicale}
 
 Si dimostra che l'asse radicale è perpendicolare alla retta congiungente i centri.
 
@@ -427,7 +427,7 @@ Data una circonferenza interna ad un'altra, la distanza fra i centri è minore d
 \end{teorema}
 
 \begin{figure}[htb]
-	\centering\input{./lbr/chap05/fig019_circ_interne.pgf}\hspace{1.5cm}\input{./lbr/chap05/fig020_circ_conc.pgf}
+	\centering\input{./lbr/chap05/fig019_circ_interne.pgf}\hspace{0.5cm}\input{./lbr/chap05/fig020_circ_conc.pgf}
 \end{figure}
 
 Un caso particolare di circonferenze una interna all'altra è rappresentato dalle \emph{circonferenze concentriche}, i cui centri coincidono. La zona di piano delimitata dalle due circonferenze è detta \emph{corona circolare}.
@@ -480,7 +480,7 @@ In base alla definizione si possono distinguere tre casi:
 Anche gli angoli alla circonferenza insistono su archi di circonferenza. Questi appartengono all'angolo stesso e sono delimitati dai punti di tangenza o di intersezione fra i lati dell'angolo e la circonferenza. Nella figura~\ref{fig:ang_circonf} gli angoli alla circonferenza sono segnati in rosso ed i rispettivi archi sono più marcati. Sono invece stati evidenziati in blu i corrispondenti angoli al centro, come segue dalla seguente definizione.
 
 \begin{definizione}
-	Un angolo al centro ed un angolo alla circonferenza si dicono \emph{corrispondenti} se insistono sullo stesso arco.
+Un angolo al centro ed un angolo alla circonferenza si dicono \emph{corrispondenti} se insistono sullo stesso arco.
 \end{definizione}
 
 \begin{figure}[htb]\label{fig:ang_circonf}
@@ -604,7 +604,18 @@ In una stessa circonferenza o in circonferenze congruenti
 
 \section{Proprietà dei segmenti di tangenza}
 
-Data una circonferenza $C$ di centro $O$ e raggio $r$, ed un punto $P$ del piano, quante sono le rette passanti per $P$ e tangenti a $C$?  Ovviamente, dipende dalla posizione del punto $P$ rispetto alla circonferenza $C$. Se $P$ è interno a $C$, non esiste alcuna retta passante per $P$ e tangente a $C$, anche perché $OP < r$. Se invece il punto $P\in C$, allora esiste una ed una sola retta passante per $P$ e tangente a $C$ ed in questo caso $OP$ coincide con un raggio di $C$ e la retta tangente è perpendicolare ad $OP$.
+\begin{wrapfigure}{r}{0.3\textwidth}
+	\centering\input{./lbr/chap05/fig033_segm_tan.pgf}
+\end{wrapfigure}
+Data una circonferenza $C$ di centro $O$ e raggio $r$, ed un punto $P$ del piano, quante sono le rette passanti per $P$ e tangenti a $C$?  Ovviamente, dipende dalla posizione del punto $P$ rispetto alla circonferenza $C$.
+
+Se $P$ è interno a $C$, non esiste alcuna retta passante per $P$ e tangente a $C$, anche perché $OP < r$.
+
+Se invece il punto $P\in C$, allora esiste una ed una sola retta passante per $P$ e tangente a $C$ ed in questo caso $OP$ coincide con un raggio di $C$ e la retta tangente è perpendicolare ad $OP$.
+
+\begin{wrapfigure}{r}{0.3\textwidth}
+	\centering\input{./lbr/chap05/fig034_2_segm_tan.pgf}
+\end{wrapfigure}
 Se consideriamo un punto $P$ esterno a $C$, allora esistono due rette distinte passanti per $P$ e tangenti a $C$. Verifichiamo, con l'aiuto di una costruzione geometrica, che da un punto esterno ad una circonferenza possiamo tracciare due tangenti, e due sole, alla circonferenza stessa.
 Uniamo $P$ con $O$ e costruiamo la circonferenza di diametro $OP$; le due circonferenze si intersecano in due punti distinti $A$ e $B$. Uniamo $A$ e $B$ con $O$ e con $P$. Gli angoli $O\widehat{A}P$ e $O\widehat{B}P$ sono retti perché sono angoli alla circonferenza che insistono su semicirconferenze. Dunque $OA\perp AP$ e $OB\perp BP$, per cui le rette $AP$ e $BP$ hanno distanza da $O$ pari ad $r$, e quindi sono tangenti a $C$. $A$ e $B$ sono gli unici punti per cui valgono le relazioni precedenti, perché sono gli unici punti di intersezione delle due circonferenze. $AP$ e $BP$ sono pertanto le due uniche rette passanti per $P$ e tangenti a $C$.
 
@@ -630,9 +641,12 @@ Date due circonferenze secanti, la congiungente dei loro centri è perpendicolar
 
 Lasciamo al lettore la dimostrazione.
 
-Abbiamo definito \emph{asse radicale} la retta passante per i due punti di intersezione di due circonferenze, ma si parla di asse radicale in maniera più generale, cioè anche nel caso di due circonferenze tra loro non sono secanti. L'asse radicale non esiste soltanto nel caso in cui le due circonferenze siano concentriche.
+\begin{wrapfigure}{r}{0pt}
+	\centering\input{./lbr/chap05/fig035_asse_radicale.pgf}
+\end{wrapfigure}
+Abbiamo definito, a pagina~\pageref{def:asse_radicale}, l'\emph{asse radicale} come la retta passante per i due punti di intersezione di due circonferenze, ma si parla di asse radicale in maniera più generale, cioè anche nel caso di due circonferenze tra loro non secanti. L'unico caso nel quale l'asse radicale non esiste è quello in cui le due circonferenze sono concentriche.
 Nel caso in cui le due circonferenze siano tangenti (sia esternamente o internamente), l'asse radicale coincide con la tangente in comune.
-Nel caso in cui le due circonferenze non abbiano punti in comune (reciprocamente esterne, o l'una interna all'altra, ma non concentriche), l'asse radicale è una particolare retta esterna ad entrambe, perpendicolare alla congiungente dei centri, e luogo geometrico dei punti tali che, tracciando da essi i segmenti tangenti alle due circonferenze essi risultano congruenti.
+Nel caso in cui le due circonferenze non abbiano punti in comune (reciprocamente esterne, o l'una interna all'altra, ma non concentriche), l'asse radicale è una particolare retta esterna ad entrambe, perpendicolare alla congiungente dei centri e luogo geometrico dei punti tali che, tracciando da essi i segmenti tangenti alle due circonferenze essi risultano congruenti.
 
 
 \section{Poligoni inscritti e circoscritti ad una circonferenza}
@@ -645,43 +659,67 @@ Un poligono si dice \emph{inscritto in una circonferenza} se tutti i vertici del
 Un poligono si dice \emph{circoscritto a una circonferenza} se tutti i suoi lati sono tangenti alla circonferenza.
 \end{definizione}
 
+\begin{figure}[htb]
+	\centering\input{./lbr/chap05/fig036_poly_circos_ins.pgf}
+\end{figure}
+
 \begin{teorema}
-Se un poligono ha gli assi dei lati che si incontrano tutti in uno stesso punto allora il poligono può essere inscritto in una circonferenza, e viceversa se un poligono è inscritto in una circonferenza allora gli assi dei suoi lati si incontrano tutti nel centro della circonferenza.
+%Se un poligono ha gli assi dei lati che si incontrano tutti in uno stesso punto allora il poligono può essere inscritto in una circonferenza, e viceversa se un poligono è inscritto in una circonferenza allora gli assi dei suoi lati si incontrano tutti nel centro della circonferenza.
+Un poligono è inscrivibile in una circonferenza se e solo se gli assi dei suoi lati si incontrano tutti in uno stesso punto (centro della circonferenza).
 \end{teorema}
 
-\begin{proof}~\\
-\begin{enumerate*}
-\item Dimostrazione diretta.\\
-Sia $ABCDEF$ un poligono che ha gli assi dei suoi lati che passano per uno stesso punto $O$. Poiché $O$ appartiene all'asse di $AB$ e poiché l'asse è il luogo dei punti equidistanti dagli estremi, si ha che $OA\cong OB$. Poiché $O$ appartiene anche all'asse di $BC$ allora $O$ è equidistante dagli estremi di $BC$, cioè $OB\cong OC$. Poiché ciò vale per tutti i lati del poligono si ha: $OA\cong OB\cong OC\cong OD\cong OE\cong OF$. Pertanto la circonferenza di centro $O$ e raggio $OA$ passa per tutti i vertici del poligono e il poligono risulta pertanto inscritto in essa.
-\item Dimostrazione inversa.\\
+\begin{figure}[htb]
+	\centering\input{./lbr/chap05/fig037_poly_inscr.pgf}
+\end{figure}
+\begin{proof}[Dimostrazione diretta.]~\\
+Sia $ABCDEF$ un poligono che ha gli assi dei suoi lati che passano per uno stesso punto $O$. Poiché $O$ appartiene all'asse di $AB$ e poiché l'asse è il luogo dei punti equidistanti dagli estremi, si ha che $OA\cong OB$. Poiché $O$ appartiene anche all'asse di $BC$ allora $O$ è equidistante dagli estremi di $BC$, cioè $OB\cong OC$. Poiché ciò vale per tutti i lati del poligono si ha: $OA\cong OB\cong OC\cong OD\cong OE\cong OF$. Pertanto la circonferenza di centro $O$ e raggio $OA$ passa per tutti i vertici del poligono e il poligono risulta pertanto inscritto in essa.\\
+\emph{Dimostrazione inversa.}\\
 Sia $ABCDEF$ un poligono inscritto in una circonferenza e che ha quindi tutti i vertici sulla circonferenza, allora tutti i suoi lati sono corde della circonferenza, di conseguenza, per una proprietà delle corde, gli assi delle corde passano per il centro della circonferenza, e quindi tutti gli assi dei lati del poligono si incontrano nel centro della circonferenza.
-\end{enumerate*}
 \end{proof}
 
 \begin{teorema}
-Se un poligono convesso ha le bisettrici degli angoli che passano tutte per uno stesso punto allora il poligono può essere circoscritto a una circonferenza, e viceversa se il poligono è circoscritto a una circonferenza allora tutte le bisettrici degli angoli del poligono passano per il centro della circonferenza.
+%Se un poligono convesso ha le bisettrici degli angoli che passano tutte per uno stesso punto allora il poligono può essere circoscritto a una circonferenza, e viceversa se il poligono è circoscritto a una circonferenza allora tutte le bisettrici degli angoli del poligono passano per il centro della circonferenza.
+Un poligono convesso è circoscrivibile ad una circonferenza se e solo se le bisettrici dei suoi angoli passano tutte per uno stesso punto (centro della circonferenza).
 \end{teorema}
 
-\begin{proof}
-Sia $ABCD$ il poligono convesso; $AO$ la bisettrice dell'angolo in $A$ e $BO$ quella dell'angolo in $B$. Poiché la bisettrice è il luogo dei punti equidistanti dai lati dell'angolo, si ha che il punto $O$ è equidistante dal lato $AD$ e dal lato $AB$, cioè $OH\cong OK$. Analogamente, $O$, appartenendo alla bisettrice $BO$ dell'angolo in $B$, è equidistante da $AB$ e da $BC$, cioè $OJ\cong OK$. Ciò vale per tutti i lati del poligono, pertanto $OH\cong OK\cong OJ\cong \ldots$. Tracciando la circonferenza di centro $O$ e raggio $OH$ si ha la circonferenza alla quale il poligono risulta circosritto.
-La dimostrazione del teorema inverso si basa anch’essa sulla proprietà della bisettrice dell’angolo.
+\noindent\begin{minipage}{0.6\textwidth}\parindent15pt
+\begin{proof}[Dimostrazione diretta.]~\\
+Sia $ABCD$ il poligono convesso; $AO$ la bisettrice dell'angolo in $A$ e $BO$ quella dell'angolo in $B$. Poiché la bisettrice è il luogo dei punti equidistanti dai lati dell'angolo, si ha che il punto $O$ è equidistante dal lato $AD$ e dal lato $AB$, cioè $OH\cong OK$. Analogamente, $O$, appartenendo alla bisettrice $BO$ dell'angolo in $B$, è equidistante da $AB$ e da $BC$, cioè $OJ\cong OK$. Ciò vale per tutti i lati del poligono, pertanto $OH\cong OK\cong OJ\cong \ldots$. Tracciando la circonferenza di centro $O$ e raggio $OH$ si ha la circonferenza alla quale il poligono risulta circoscritto.
 \end{proof}
+\end{minipage}\hfil
+\noindent\begin{minipage}{0.4\textwidth}
+	\centering\input{./lbr/chap05/fig038_poly_circos.pgf}
+\end{minipage}
+
+La dimostrazione del teorema inverso si basa anch'essa sulla proprietà della bisettrice dell'angolo.
 
 
 \section{Punti notevoli di un triangolo}
 
 \subsection{Circocentro}
 
-I vertici di un triangolo sono tre punti non allineati, dunque per essi passa una ed una sola circonferenza: il centro di tale circonferenza si trova come intersezione degli assi di due lati del triangolo. Il centro della circonferenza circoscritta al triangolo è appunto detto \emph{circocentro} del triangolo.
+I vertici di un triangolo sono tre punti non allineati, dunque per essi passa una ed una sola circonferenza: il centro di tale circonferenza si trova come intersezione degli assi di due lati del triangolo.
+
+\begin{definizione}
+Il centro della circonferenza circoscritta ad un triangolo è detto \emph{circocentro} del triangolo.
+\end{definizione}
+
 \begin{teorema}
 I tre assi dei lati di un triangolo si incontrano nel suo circocentro.
 \end{teorema}
 
+\begin{figure}[htb]
+	\centering\input{./lbr/chap05/fig039_circocentro.pgf}
+\end{figure}
 \begin{proof}
 Sia $ABC$ un triangolo e siano $e$ l'asse di $AB$, $d$ l'asse di $BC$ ed $f$ l'asse di $AC$. Sia $D$ il punto di intersezione tra $d$ ed $e$ (che, come detto in precedenza, esiste perché le due rette, in quanto perpendicolari a due segmenti non paralleli, non possono essere parallele). Allora risulta $AB\cong BD$ in quanto $D\in e$, ed anche $BC\cong CD$ in quanto $P\in d$; dunque, per la proprietà transitiva della congruenza, risulta $AD\cong CD$ e quindi $P\in f$. Pertanto $D$ risulta equidistante dai tre vertici ed è quindi il centro della circonferenza circoscritta.
 \end{proof}
 
+\begin{wrapfigure}{r}{0.5\textwidth}
+	\centering\input{./lbr/chap05/fig040_circocentro_tri_rett.pgf}
+\end{wrapfigure}
 \osservazione Il circocentro di un triangolo può essere interno o esterno al triangolo o sul perimetro. Ricordando le proprietà degli angoli alla circonferenza, il circocentro è sul perimetro solo nel caso in cui il triangolo è rettangolo, ed in tal caso si trova sul punto medio dell'ipotenusa.
+
 Da ciò seguono le seguenti importanti proprietà:
 \begin{teorema}
 In un triangolo rettangolo
@@ -695,25 +733,38 @@ Sempre per le proprietà degli angoli alla circonferenza, il circocentro di un t
 
 \subsection{Incentro}
 
-Esiste uno ed un solo punto equidistante dai tre lati di un triangolo, pertanto un triangolo è sempre circoscrivibile ad una circonferenza, cioè esiste ed è unica la circonferenza inscritta in un triangolo ed il suo centro è detto \emph{incentro} del triangolo.
+Esiste uno ed un solo punto equidistante dai tre lati di un triangolo, pertanto un triangolo è sempre circoscrivibile ad una circonferenza, cioè esiste ed è unica la circonferenza inscritta in un triangolo.
+
+\begin{definizione}
+Il centro della circonferenza inscritta in un triangolo è detto \emph{incentro} del triangolo.
+\end{definizione}
 
 \begin{teorema}
 Le bisettrici dei tre angoli di un triangolo si incontrano nel suo incentro.
 \end{teorema}
 
+\begin{figure}[htb]
+	\centering\input{./lbr/chap05/fig041_incentro.pgf}
+\end{figure}
 \begin{proof}
-Ricordiamo che la bisettrice è la semiretta che divide a metà l'angolo e quindi è anche il luogo dei punti equidistanti dai lati dell'angolo. Consideriamo un triangolo $ABC$ ed i suoi tre angoli interni. Poiché la somma degli angoli interni di un triangolo è un angolo piatto ($\pi$), abbiamo $\widehat{A}+\widehat{B}<\pi$ e a maggior ragione $\frac{1}{2}\widehat{A}+\frac{1}{2}\widehat{B}<\pi$. Quindi poiché i lati $AC$ e $BC$ non sono paralleli a maggior ragione non possono essere parallele le bisettrici degli angoli interni di vertici $A$ e $B$, anzi i segmenti di bisettrice sono certamente interni al triangolo. Detto $D$ il punto di intersezione delle bisettrici di $\widehat{A}$ e di $\widehat{B}$, verifichiamo che anche la bisettrice di $\widehat{C}$ passa per $D$. Poiché $D$ appartiene alla bisettrice di $\widehat{A}$, è equidistante dai lati $AB$ e $AC$ ($GD\cong DE$); analogamente, poiché $D$ appartiene alla bisettrice di $\widehat{B}$, è equidistante dai lati $AB$ e $BC$ ($GD\cong DF$). Dunque $Q$ deve essere equidistante dai lati $AC$ e $BC$, pertanto $D$ deve appartenere alla bisettrice di $\widehat{C}$. La distanza comune di $D$ dai tre lati è il raggio della circonferenza inscritta nel triangolo, che ha centro $D$.
+Ricordiamo che la bisettrice è la semiretta che divide a metà l'angolo e quindi è anche il luogo dei punti equidistanti dai lati dell'angolo. Consideriamo un triangolo $ABC$ ed i suoi tre angoli interni. Poiché la somma degli angoli interni di un triangolo è un angolo piatto ($\pi$), abbiamo $\widehat{A}+\widehat{B}<\pi$ e a maggior ragione $\frac{1}{2}\widehat{A}+\frac{1}{2}\widehat{B}<\pi$. Quindi poiché i lati $AC$ e $BC$ non sono paralleli a maggior ragione non possono essere parallele le bisettrici degli angoli interni di vertici $A$ e $B$, anzi i segmenti di bisettrice sono certamente interni al triangolo. Detto $D$ il punto di intersezione delle bisettrici di $\widehat{A}$ e di $\widehat{B}$, verifichiamo che anche la bisettrice di $\widehat{C}$ passa per $D$. Poiché $D$ appartiene alla bisettrice di $\widehat{A}$, è equidistante dai lati $AB$ e $AC$ ($DE\cong DG$); analogamente, poiché $D$ appartiene alla bisettrice di $\widehat{B}$, è equidistante dai lati $AB$ e $BC$ ($DE\cong DF$). Dunque $D$ deve essere equidistante dai lati $AC$ e $BC$, pertanto $D$ deve appartenere alla bisettrice di $\widehat{C}$. La distanza comune di $D$ dai tre lati è il raggio della circonferenza inscritta nel triangolo, che ha centro $D$.
 \end{proof}
 
 \subsection{Ortocentro}
 
-Un altro punto notevole di un triangolo è il punto di incontro delle altezze, detto \emph{ortocentro}. Anche questo esiste ed è unico. Ricordiamo che di solito si parla di altezza come del segmento che unisce un vertice con il piede della perpendicolare al lato opposto. Qui ci occupiamo di retta dell'altezza, cioè della retta perpendicolare ad un lato di un triangolo e passante per il vertice opposto. Osserviamo infatti che, mentre l'incentro è certamente interno al triangolo, l'ortocentro può essere esterno.
+\begin{definizione}
+Il punto di incontro delle altezze di un triangolo è detto \emph{ortocentro} del triangolo.
+\end{definizione}
+
+Anche questo esiste ed è unico. Ricordiamo che di solito si parla di altezza come del segmento che unisce un vertice con il piede della perpendicolare al lato opposto. Qui ci occupiamo di retta dell'altezza, cioè della retta perpendicolare ad un lato di un triangolo e passante per il vertice opposto. Osserviamo infatti che, mentre l'incentro è certamente interno al triangolo, l'ortocentro può essere esterno.
 
 \begin{teorema}
-Le tre altezze di un triangolo si incontrano nel suo ortocentro.
+In un triangolo esiste sempre l'ortocentro.
 \end{teorema}
 
-% figura
+\begin{figure}[htb]
+	\centering\input{./lbr/chap05/fig042_ortocentro.pgf}
+\end{figure}
 
 \begin{proof}
 Sia $ABC$ un triangolo. Tracciamo la retta parallela a $BC$ e passante per $A$; analogamente tracciamo la parallela ad $AC$ passante per $B$ e la parallela ad $AB$ passante per $C$. Le tre rette, essendo parallele ai tre lati del triangolo $ABC$, sono a due a due incidenti. Chiamiamo $A'$ il punto di intersezione tra $AB$ ed $AC$, $B'$ il punto di intersezione tra $AB$ e $BC$ e $C'$ il punto di intersezione tra $AC$ e $BC$.
@@ -734,11 +785,20 @@ In riferimento alla figura del teorema precedente, l'ortocentro del triangolo $A
 
 \subsection{Baricentro}
 
-Si chiama \emph{baricentro} di un triangolo il punto di incontro delle tre mediane. Poiché le mediane sono segmenti interni ad un triangolo, anche il baricentro lo è (segue banalmente dal teorema seguente che, oltre a dirci che il baricentro esiste ed è unico, ci dà anche un modo ``operativo'' per individuarlo).
+
+\begin{definizione}
+In un triangolo si chiama \emph{baricentro} il punto di incontro delle tre mediane.
+\end{definizione}
+
+Poiché le mediane sono segmenti interni ad un triangolo, anche il baricentro lo è (segue banalmente dal teorema seguente che, oltre a dirci che il baricentro esiste ed è unico, ci dà anche un modo ``operativo'' per individuarlo).
 
 \begin{teorema}[del baricentro]
-Le tre mediane di un triangolo si incontrano in un punto, detto baricentro, che divide ciascuna di esse in due parti tali che una (quella che contiene il vertice) è doppia dell'altra.
+Le tre mediane di un triangolo si incontrano in un punto, il baricentro, che divide ciascuna di esse in due parti tali che una (quella che contiene il vertice) è doppia dell'altra.
 \end{teorema}
+
+\begin{figure}[htb]
+	\centering\input{./lbr/chap05/fig043_baricentro.pgf}
+\end{figure}
 
 \begin{proof}
 Si tratta di una delle principali conseguenze della corrispondenza di Talete, segue in particolare dal corollario riguardante i segmenti che uniscono i punti medi dei lati di un triangolo e dalle proprietà dei parallelogrammi.
@@ -754,6 +814,10 @@ A questo punto, se il ragionamento fatto per le mediane $AE$ e $BD$ si ripete ad
 
 Oltre ai principali punti notevoli di un triangolo esistono altri tre punti particolari, detti \emph{excentri}, che sono i punti di intersezione delle bisettrici degli angoli esterni. Illustriamo quanto affermato con una figura: i punti $M$, $N$ e $O$ sono gli excentri del triangolo $ABC$. Ricordando che la bisettrice è il luogo dei punti equidistanti dai lati di un angolo, notiamo ad esempio che il punto $N$, essendo l'intersezione delle bisettrici degli angoli esterni in $B$ e $C$, è equidistante da $BC$ e dai prolungamenti dei lati $AC$ e $AB$: dunque è equidistante dalle rette dei tre lati del triangolo $ABC$. Se chiamiamo $r$ la distanza di $N$ da ciascuna delle rette dei tre lati di $ABC$, esiste una ed una sola circonferenza con centro $N$ che ha come tangenti le rette dei tre lati, e tale circonferenza ha raggio $r$. Analogo discorso si può fare per gli altri due excentri, $M$ ed $O$.
 
+\begin{figure}[htb]
+	\centering\input{./lbr/chap05/fig044_excentri.pgf}
+\end{figure}
+
 
 \section{Proprietà dei quadrilateri inscritti e circoscritti}
 
@@ -763,8 +827,12 @@ Per i quadrilateri, la proprietà di essere inscritto o circoscritto comporta no
 Se un quadrilatero è inscritto ad una circonferenza, allora la somma di due angoli opposti è uguale alla somma degli altri due, ovvero un angolo piatto.
 \end{teorema}
 
+\begin{figure}[htb]
+	\centering\input{./lbr/chap05/fig045_quadr_angoli_inscr.pgf}
+\end{figure}
+
 \begin{proof}
-Aiutiamoci con il disegno a fianco. Consideriamo il quadrilatero $ABCD$ inscritto nella circonferenza di centro $O$. Dimostriamo che la somma degli angoli in $A$ e in $C$ è un angolo piatto. Per fare questo, tracciamo gli angoli al centro insistenti sui due archi delimitati da $D$ e $B$: i rispettivi angoli alla circonferenza saranno $A$ e $C$. Se chiamiamo $\alpha$ l'angolo in $A$, il relativo angolo al centro varrà $\alpha$, per il teorema che lega angolo al centro e quello corrispondente alla circonferenza. Ripetiamo lo stesso procedimento per l'angolo in $C$, che chiamiamo $\gamma$: il corrispondente angolo al centro varrà $2\gamma$. La somma degli angoli $2\alpha$ e $2\gamma$, ovvero l'angolo $2(\alpha+\gamma)$, forma un angolo giro, dunque la sua metà $\alpha+\gamma$ è un angolo piatto. Ma $\alpha$ è proprio l'angolo in $A$ e $\gamma$ è quello in $C$. La loro somma, come volevamo dimostrare, dà un angolo piatto. Dato che la somma degli angoli interni di un quadrilatero è data da un angolo giro, sottraendo l'ampiezza degli angoli in $A$ e in $C$, che insieme danno un angolo piatto, si ottiene l'ampiezza della somma degli angoli in $B$ e $D$, dunque, anche per questi ultimi due angoli, la somma è un angolo piatto.
+Consideriamo il quadrilatero $ABCD$ inscritto nella circonferenza di centro $O$. Dimostriamo che la somma degli angoli in $A$ e in $C$ è un angolo piatto. Per fare questo, tracciamo gli angoli al centro insistenti sui due archi delimitati da $D$ e $B$: i rispettivi angoli alla circonferenza saranno $A$ e $C$. Se chiamiamo $\alpha$ l'angolo in $A$, il relativo angolo al centro varrà $\alpha$, per il teorema che lega angolo al centro e quello corrispondente alla circonferenza. Ripetiamo lo stesso procedimento per l'angolo in $C$, che chiamiamo $\gamma$: il corrispondente angolo al centro varrà $2\gamma$. La somma degli angoli $2\alpha$ e $2\gamma$, ovvero l'angolo $2(\alpha+\gamma)$, forma un angolo giro, dunque la sua metà $\alpha+\gamma$ è un angolo piatto. Ma $\alpha$ è proprio l'angolo in $A$ e $\gamma$ è quello in $C$. La loro somma, come volevamo dimostrare, dà un angolo piatto. Dato che la somma degli angoli interni di un quadrilatero è data da un angolo giro, sottraendo l'ampiezza degli angoli in $A$ e in $C$, che insieme danno un angolo piatto, si ottiene l'ampiezza della somma degli angoli in $B$ e $D$, dunque, anche per questi ultimi due angoli, la somma è un angolo piatto.
 \end{proof}
 
 Si può dimostrare che vale anche il teorema inverso: se, in un quadrilatero, la somma degli angoli opposti è uguale a un angolo piatto, allora quel quadrilatero è inscrivibile ad una circonferenza.
@@ -773,6 +841,10 @@ Possiamo dunque enunciare il teorema completo.
 \begin{teorema}[inverso]
 Se un quadrilatero ha gli angoli opposti supplementari, allora il quadrilatero è inscrivibile in una circonferenza.
 \end{teorema}
+
+\begin{figure}[htb]
+	\centering\input{./lbr/chap05/fig046_quadr_inscr_angoli.pgf}
+\end{figure}
 
 \begin{proof}
 Si dimostra per assurdo. Supponiamo che la circonferenza passi per $ABC$ ma intersechi il quadrilatero in un punto $P$ diverso da $D$. $ABCP$ è quindi un quadrilatero inscritto in una circonferenza, e per il teorema diretto gli angoli opposti dovranno essere supplementari: $\widehat{A}+\widehat{C}=\pi$, $\widehat{B}+\widehat{P}=\pi$. Ma per ipotesi è anche $\widehat{B}+C\widehat{D}A=\pi$ e quindi gli angoli $C\widehat{D}A$ e $C\widehat{P}A$ devono essere congruenti in quanto supplementari dello stesso angolo $\widehat{B}$. Questo però è assurdo, in quanto avremmo che $C\widehat{D}A$, angolo esterno del triangolo $ADP$, sarebbe congruente ad un angolo interno non adiacente ad esso, mentre per il primo teorema dell'angolo esterno deve essere sempre maggiore di ciascuno dei due angoli interni non adiacenti ad esso. Dunque anche il punto $D$ appartiene alla circonferenza.
@@ -784,6 +856,10 @@ Vediamo ora alcune proprietà dei quadrilateri circoscritti.
 Se un quadrilatero è circoscritto ad una circonferenza, allora la somma delle lunghezze di due suoi lati opposti è uguale alla somma delle lunghezze degli altri due.
 \end{teorema}
 
+\begin{figure}[htb]
+	\centering\input{./lbr/chap05/fig047_quadr_circos_lati.pgf}
+\end{figure}
+
 \begin{proof}
 Sia $ABCD$ il quadrilatero circoscritto alla circonferenza di centro $O$, come in figura. Siano $P$, $Q$, $R$ ed $S$ i punti di tangenza rispettivamente dei lati $AB$, $BC$, $CD$ e $AD$. Per il teorema sull'uguaglianza dei segmenti di tangente ad una circonferenza condotti da un punto esterno, si ha $AP\cong PS$, $BP\cong BQ$, $CQ\cong CR$ e $DR\cong DS$. Chiamando $AP=p$, $BQ=q$, $CR=r$ e $DS=s$ (vedi figura) si ha che $AB+CD = AP+PB+CR+RD = p+q+r+s$ e che $BC+AD = BQ+QC+DS+AS = p+q+r+s$.
 Per la proprietà transitiva dell'uguaglianza, risulta che $AB+CD=AD+BC$, che è proprio quanto volevamo dimostrare.
@@ -792,6 +868,10 @@ Per la proprietà transitiva dell'uguaglianza, risulta che $AB+CD=AD+BC$, che è
 \begin{teorema}[inverso]
 Se in un quadrilatero la somma di due lati opposti è uguale alla somma degli altri due, allora il quadrilatero è circoscrivibile ad una circonferenza.
 \end{teorema}
+
+\begin{figure}[htb]
+	\centering\input{./lbr/chap05/fig048_quadr_lati_circos.pgf}
+\end{figure}
 
 \begin{proof}
 Anche questo teorema si dimostra per assurdo.
@@ -810,9 +890,18 @@ Il centro comune alle due circonferenze si dice anche \emph{centro della figura}
 Nel caso di poligoni con un numero pari di lati, il centro coincide con il punto di incontro di tutte le diagonali che congiungono vertici opposti. 
 Nel caso di poligoni con un numero dispari di lati, coincide con il punto di incontro di tutti i segmenti che uniscono un vertice al punto medio del lato opposto.
 
+\begin{figure}[htb]
+	\centering\input{./lbr/chap05/fig049_pentagono_regolare.pgf}\hspace{10pt}\input{./lbr/chap05/fig050_esagono_regolare.pgf}\hspace{10pt}\input{./lbr/chap05/fig051_ettagono_regolare.pgf}\hspace{10pt}\input{./lbr/chap05/fig052_ottagono_regolare.pgf}
+\end{figure}
+
+
 \begin{teorema}
 Se si divide la circonferenza in un numero $n\geq 3$ di archi congruenti e si congiungono gli estremi di archi consecutivi, si ottiene un poligono regolare.
 \end{teorema}
+
+\begin{figure}[!htb]
+	\centering\input{./lbr/chap05/fig053_poly_reg.pgf}
+\end{figure}
 
 \begin{proof}
 Consideriamo una circonferenza e dividiamola in 5 archi congruenti (vedi figura); otteniamo il pentagono $ABCDE$.
@@ -824,14 +913,22 @@ Dunque il pentagono ottenuto è regolare poiché ha tutti i lati e tutti gli ang
 Se si divide la circonferenza in un numero $n\geq 3$ di archi congruenti e si tracciano le tangenti alla circonferenza negli  estremi di archi consecutivi, i punti intersezione di tali tangenti sono i vertici di un poligono regolare.
 \end{teorema}
 
+\begin{figure}[!htb]
+	\centering\input{./lbr/chap05/fig054_poly_reg2.pgf}
+\end{figure}
+
 \begin{proof}
 Dividiamo nuovamente una la circonferenza in 5 archi congruenti, conduciamo le tangenti negli estremi degli archi; otteniamo il pentagono circoscritto $ABCDE$.
 Congiungiamo ora gli estremi di tali archi, ottenendo, in base a quanto dimostrato prima, il pentagono regolare inscritto $NOPQR$. Consideriamo i triangoli che si vengono così a formare; sono tutti triangoli isosceli in quanto abbiamo $A\widehat{N}R\cong A\widehat{R}N$, $B\widehat{O}N\cong B\widehat{N}O$, \ldots{} in quanto angoli alla circonferenza che insistono sullo stesso arco; inoltre questi angoli sono tutti congruenti tra loro in quanto angoli alla circonferenza che insistono su archi congruenti. Infine i lati compresi tra questi angoli sono anch'essi tutti congruenti tra loro perché lati del pentagono regolare inscritto. Dunque questi triangoli sono tutti congruenti tra loro per il secondo criterio di congruenza. Da qui possiamo dedurre che $\widehat{A}\cong \widehat{B}\cong \widehat{C}\cong \widehat{D}\cong \widehat{E}$ perché angoli al vertice di triangoli isosceli congruenti, e che $AB\cong BC\cong CD\cong DE\cong EA$ perché somme di segmenti congruenti (i lati obliqui dei triangoli isosceli). Quindi il poligono circoscritto, avendo tutti i lati e tutti gli angoli congruenti, è regolare.
 \end{proof}
 
-\begin{teorema}
+\begin{teorema}\label{teo:poly_reg_circ_inscr_circos}
 Ad ogni poligono regolare si può sempre circoscrivere una circonferenza ed in esso se ne può sempre inscrivere un'altra concentrica con la prima.
 \end{teorema}
+
+\begin{figure}[!htb]
+	\centering\input{./lbr/chap05/fig055_poly_reg_circ_inscr_circos.pgf}
+\end{figure}
 
 \begin{proof}
 Consideriamo il pentagono regolare $ABCDE$. Tracciamo le bisettrici dei due angoli consecutivi $\widehat{A}$ e $\widehat{B}$ che si incontrano in un punto $O$. Il triangolo $BOA$ è isoscele poiché $O\widehat{B}A\cong O\widehat{A}B$ in quanto metà di angoli congruenti, quindi sarà $BA\cong AO$. Congiungiamo ora $O$ con il vertice $E$. I triangoli $BOA$ e $AOE$ sono congruenti per il primo criterio di congruenza, poiché hanno $AO$ in comune, $AB\cong AE$ perché lati del poligono regolare, $B\widehat{A}O\cong E\widehat{A}O$ perché metà dello stesso angolo. Dunque avremo che $BO\cong AO\cong EO$. Congiungendo successivamente $O$ con gli altri vertici si arriva a dimostrare in modo analogo che $BO\cong AO\cong EO\cong DO\cong CO$. Questo vuol dire che $O$ è equidistante dai vertici del poligono ed è quindi il centro della circonferenza circoscritta.
@@ -851,8 +948,12 @@ Dato un poligono regolare, si chiama \emph{apotema} il raggio della circonferenz
 Il lato dell'esagono regolare è congruente al raggio della circonferenza circoscritta.
 \end{teorema}
 
+\begin{figure}[!htb]
+	\centering\input{./lbr/chap05/fig056_esagono_reg_lato.pgf}
+\end{figure}
+
 \begin{proof}
-Disegniamo la circonferenza circoscritta di centro $O$ e raggio $r$, cosa che, in base al teorema precedente, è sempre possibile quando si tratta di un poligono regolare. Congiungiamo due vertici consecutivi dell'esagono con il centro della circonferenza e consideriamo il triangolo $DOE$. Questo triangolo è isoscele in quanto $OD\cong OE$ perché raggi della circonferenza. Poiché se congiungessimo col centro $O$ gli altri vertici del poligono otterremmo, per quanto dimostrato in precedenza, 6 triangoli congruenti, l'angolo al vertice $D\widehat{O}B$ sarà di $60\grado$ cioè $1/6$ dell'angolo giro. Ma allora anche gli angoli alla base, essendo congruenti tra loro, saranno di $60\grado$ (la somma degli angoli interni di un triangolo è un angolo piatto) e quindi il triangolo è equilatero. Ed essendo $OD\cong OE\cong r$, sarà anche $DE\cong r$. 
+Disegniamo la circonferenza circoscritta di centro $O$ e raggio $r$, cosa che, in base al teorema~\ref{teo:poly_reg_circ_inscr_circos}, è sempre possibile quando si tratta di un poligono regolare. Congiungiamo due vertici consecutivi dell'esagono con il centro della circonferenza e consideriamo il triangolo $ABO$. Questo triangolo è isoscele in quanto $AO\cong BO$ perché raggi della circonferenza. Poiché se congiungessimo col centro $O$ gli altri vertici del poligono otterremmo, per quanto dimostrato in precedenza, 6 triangoli congruenti, l'angolo al vertice $A\widehat{O}B$ sarà di $60\grado$ cioè $1/6$ dell'angolo giro. Ma allora anche gli angoli alla base, essendo congruenti tra loro, saranno di $60\grado$ (la somma degli angoli interni di un triangolo è un angolo piatto) e quindi il triangolo è equilatero. Ed essendo $AO\cong BO\cong r$, sarà anche $AB\cong r$. 
 \end{proof}
 
 

@@ -1,0 +1,54 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+% Assioma 15
+
+\begin{scope}
+\coordinate (b) at (0,0);
+\path (b) -- +(0:2.5) coordinate (a);
+\path (b) -- +(0:3) coordinate (i);
+\path (b) -- +(30:2.5) coordinate (c);
+\path (b) -- +(30:3) coordinate (h);
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- cycle;
+\draw[red, fill=red!10] (b) circle (0.6);
+\end{scope}
+
+\draw (b) -- (h);
+\draw (b) -- (i);
+
+\draw[fill] (b) circle (1pt) node[left] {$B$};
+\draw[fill] (a) circle (1pt) node[below] {$A$};
+\draw[fill] (c) circle (1pt) node[above] {$C$};
+\end{scope}
+
+\begin{scope}[xshift=5cm]
+\coordinate (b) at (0,0);
+\path (b) -- +(0:2.5) coordinate (a);
+\path (b) -- +(0:3) coordinate (i);
+\path (b) -- +(30:2.5) coordinate (c);
+\path (b) -- +(30:3) coordinate (h);
+\path (b) -- +(-30:2.5) coordinate (d);
+\path (b) -- +(-30:3) coordinate (j);
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- cycle;
+\draw[red, fill=red!10] (b) circle (0.6);
+\end{scope}
+\begin{scope}
+\clip (a) -- (b) -- (d) -- cycle;
+\draw[red, fill=red!10] (b) circle (0.7);
+\end{scope}
+
+\draw (b) -- (h);
+\draw (b) -- (i);
+\draw (b) -- (j);
+
+\draw[fill] (b) circle (1pt) node[left] {$B$};
+\draw[fill] (a) circle (1pt) node[below] {$C'$};
+\draw[fill] (c) circle (1pt) node[above] {$E$};
+\draw[fill] (d) circle (1pt) node[below] {$D$};
+\end{scope}
+
+\end{tikzpicture}

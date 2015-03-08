@@ -1,0 +1,26 @@
+\begin{tikzpicture}[scale=0.7,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+%\clip (-2.1,-2.1) rectangle (2.5,2.1);
+\coordinate (o) at (0,0);
+\coordinate (a) at (190:2);
+\coordinate (b) at (135:2);
+\coordinate (c) at (45:2);
+\coordinate (d) at (0:2);
+\coordinate (e) at (290:2);
+\coordinate (f) at (230:2);
+
+\draw[very thin, dotted] (o) circle (2);
+
+\draw[thick] (a) node[left] {$A$} -- (b) node[shift={(-0.2,0.2)}] {$B$} -- (c) node[shift={(0.2,0.2)}] {$C$} -- (d) node[right] {$D$} -- (e) node[shift={(0.1,-0.25)}] {$E$} -- (f) node[shift={(-0.2,-0.25)}] {$F$} -- cycle;
+\draw[fill] (o) circle (1.2pt) node[shift={(-0.2,-0.2)}] {$O$};
+\draw[dashed, blue] (a) -- (o);
+\draw[dashed, blue] (b) -- (o);
+\draw[dashed, blue] (c) -- (o);
+\draw[dashdotted, red, thick] (162.5:2.5) -- (342.5:0.5);
+\draw[dashdotted, red, thick] (90:2.5) -- (270:0.5);
+
+\end{scope}
+
+\end{tikzpicture}

@@ -1,0 +1,33 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}[scale=1.4]
+\coordinate (a) at (0,0);
+\coordinate (b) at (-.75,-1);
+\coordinate (c) at (0,-2);
+\coordinate (d) at (1.5,-2.1);
+\coordinate (e) at (2.5,-0.75);
+\draw[fill=yellow!10] (a) -- (b) -- (c) -- (d) -- (e) -- cycle;
+
+\draw[dashed] (a) -- (c);
+\draw[dashed] (e) -- (c);
+\draw[thick] (a) node[above] {$A$} -- (b) node[left] {$B$} -- (c) node[below] {$C$} -- (d) node[below] {$D$} -- (e) node[right] {$E$} -- cycle;
+
+\end{scope}
+
+\begin{scope}[xshift=5.5cm, yshift=-0.5cm, scale=1]
+\coordinate (a) at (0,0);
+\coordinate (b) at (-.75,-1);
+\coordinate (c) at (0,-2);
+\coordinate (d) at (1.5,-2.1);
+\coordinate (e) at (2.5,-0.75);
+\draw[fill=yellow!10] (a) -- (b) -- (c) -- (d) -- (e) -- cycle;
+
+\draw[dashed] (a) -- (c);
+\draw[dashed] (e) -- (c);
+\draw[thick] (a) node[above] {$A$} -- (b) node[left] {$B$} -- (c) node[below] {$C$} -- (d) node[below] {$D$} -- (e) node[right] {$E$} -- cycle;
+
+\end{scope}
+
+
+\end{tikzpicture}

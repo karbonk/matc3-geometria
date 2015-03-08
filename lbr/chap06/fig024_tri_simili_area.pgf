@@ -1,0 +1,27 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}[scale=1.4]
+\coordinate (a) at (0,0);
+\coordinate (c) at (1.6,1.7);
+\coordinate (b) at (2.5,0);
+\draw[fill=blue!10] (a) -- (b) -- (c) -- cycle;
+
+\draw[thick] (a) node[below] {$A$} -- (b) node[below] {$B$} -- (c) node[above] {$C$} -- cycle;
+\draw[dashed] (c) -- ($(a)!(c)!(b)$) node[below] {$H$};
+
+\end{scope}
+
+\begin{scope}[xshift=4.5cm, scale=1]
+\coordinate (a) at (0,0);
+\coordinate (c) at (1.6,1.7);
+\coordinate (b) at (2.5,0);
+\draw[fill=blue!10] (a) -- (b) -- (c) -- cycle;
+
+\draw[thick] (a) node[below] {$A'$} -- (b) node[below] {$B'$} -- (c) node[above] {$C'$} -- cycle;
+\draw[dashed] (c) -- ($(a)!(c)!(b)$) node[below] {$H'$};
+
+\end{scope}
+
+
+\end{tikzpicture}

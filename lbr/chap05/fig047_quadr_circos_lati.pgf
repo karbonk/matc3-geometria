@@ -1,0 +1,48 @@
+\begin{tikzpicture}[scale=0.7,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+%\clip (-2.1,-2.1) rectangle (2.5,2.1);
+\coordinate (o) at (0,0);
+\coordinate (p) at (260:2);
+\coordinate (q) at (10:2);
+\coordinate (r) at (85:2);
+\coordinate (s) at (170:2);
+
+\path (p) -- +(350:2.5) coordinate (a1);
+\path (p) -- +(350:-2.5) coordinate (a2);
+\path (q) -- +(100:2.5) coordinate (b1);
+\path (q) -- +(100:-2.5) coordinate (b2);
+\path (r) -- +(175:2.5) coordinate (c1);
+\path (r) -- +(175:-2.5) coordinate (c2);
+\path (s) -- +(260:2.5) coordinate (d1);
+\path (s) -- +(260:-2.5) coordinate (d2);
+
+\coordinate (b) at (intersection of a1--a2 and b1--b2);
+\coordinate (c) at (intersection of b1--b2 and c1--c2);
+\coordinate (d) at (intersection of c1--c2 and d1--d2);
+\coordinate (a) at (intersection of d1--d2 and a1--a2);
+
+\draw[thick] (c) node[shift={(0.2,0.2)}] {$C$} -- (d) node[shift={(-0.2,0.2)}] {$D$} -- (a) node[shift={(-0.2,-0.2)}] {$A$} -- (b) node[shift={(0.2,-0.2)}] {$B$} -- cycle;
+
+\draw[dotted] (o) circle (2);
+
+\draw[fill] (o) circle (1.2pt) node[above] {$O$};
+
+\draw[fill] (p) circle (1.2pt) node[below] {$P$};
+\draw[fill] (q) circle (1.2pt) node[right] {$Q$};
+\draw[fill] (r) circle (1.2pt) node[above] {$R$};
+\draw[fill] (s) circle (1.2pt) node[left] {$S$};
+
+\path (a) -- node[midway, below] {$p$} (p);
+\path (a) -- node[midway, left] {$p$} (s);
+\path (p) -- node[midway, below] {$q$} (b);
+\path (b) -- node[midway, right] {$q$} (q);
+\path (q) -- node[midway, right] {$r$} (c);
+\path (r) -- node[midway, above] {$r$} (c);
+\path (d) -- node[midway, above] {$s$} (r);
+\path (s) -- node[midway, left] {$s$} (d);
+
+\end{scope}
+
+\end{tikzpicture}

@@ -1,0 +1,27 @@
+\begin{tikzpicture}[scale=1.3,font=\small,shorten line/.style={shorten >=#1,shorten <=#1}]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[thick] (0,0) rectangle (1.5,2);
+\node at (0.75,1) {$R_1$};
+\node at ([shift={(-0.15,-0.15)}]0,0) {$A$};
+\node at ([shift={(0.15,-0.15)}]1.5,0) {$B$};
+\end{scope}
+
+\begin{scope}[xshift=3cm]
+\draw[thick] (0,0) rectangle (1,2);
+\node at (0.5,1) {$R_2$};
+\node at ([shift={(-0.15,-0.15)}]0,0) {$C$};
+\node at ([shift={(0.15,-0.15)}]1,0) {$D$};
+\end{scope}
+
+\begin{scope}[xshift=5.5cm]
+\draw[thick] (0,0) rectangle (2.5,2);
+\node at (1.25,1) {$R_3$};
+\node at ([shift={(-0.15,-0.15)}]0,0) {$E$};
+\node at ([shift={(0.15,-0.15)}]2.5,0) {$G$};
+\draw[thick, dashed] (1.5,0) -- (1.5,2);
+\node at ([shift={(0,-0.2)}]1.5,0) {$F$};
+\end{scope}
+
+\end{tikzpicture}

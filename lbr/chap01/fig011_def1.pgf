@@ -1,14 +1,22 @@
-\begin{tikzpicture}
-%Assioma 14
-\tkzDefPoint(0,0){L}
-\tkzDefShiftPoint[L](0:.5){A}
-\tkzDefShiftPoint[L](0:5.3){C}
-\tkzDefShiftPoint[L](0:3){O}
-\tkzDefShiftPoint[L](0:1.7){B}
-\tkzDefShiftPoint[L](0:6){M}
-\tkzDefShiftPoint[L](0:6){r}
-\tkzDrawSegment(L,M)
-\tkzDrawPoints(A,B,C,O)
-\tkzLabelPoints[font=\small, above](A,B,C,O)
-\tkzLabelPoint[font=\small](r){$r$}
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (l) at (0,0);
+\path (l) -- +(0:.5) coordinate (a);
+\path (l) -- +(0:1.7) coordinate (b);
+\path (l) -- +(0:5.3) coordinate (c);
+\path (l) -- +(0:3) coordinate (o);
+\path (l) -- +(0:4.3) coordinate (e);
+\path (l) -- +(0:6.5) coordinate (m);
+
+\draw (l) -- (m) node [above] {$r$};
+
+\draw[fill] (a) circle (1pt) node [above] {$A$};
+\draw[fill] (b) circle (1pt) node [above] {$B$};
+\draw[fill] (c) circle (1pt) node [above] {$C$};
+\draw[fill] (o) circle (1pt) node [above] {$O$};
+
+\end{scope}
+
 \end{tikzpicture}

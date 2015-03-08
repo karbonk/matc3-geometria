@@ -1,0 +1,27 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (0,2);
+\coordinate (b) at (-2,0);
+\coordinate (c) at (1,0);
+
+\coordinate (t1) at (-2.5,0.8);
+\coordinate (t2) at (1.5,0.8);
+\coordinate (d) at (intersection of t1--t2 and a--b);
+\coordinate (e) at (intersection of t1--t2 and a--c);
+\coordinate (r1) at (d);
+\coordinate (r2) at (1.5,1.5);
+
+\draw[thick] (a) node[above] {$A$} -- (b) node[below] {$B$} -- (c) node[below] {$C$} -- cycle;
+\draw[blue] (t1) -- (t2);
+\draw[dashed, blue] ($(r1)!-.5!(r2)$) -- (r2);
+\coordinate (f) at (intersection of r1--r2 and a--c);
+
+\draw[fill] (d) circle (1.2pt) node[shift={(-0.2,0.2)}] {$D$};
+\draw[fill] (e) circle (1.2pt) node[shift={(0.2,0.2)}] {$E$};
+\draw[fill] (f) circle (1.2pt) node[shift={(0.2,0.2)}] {$F$};
+
+\end{scope}
+
+\end{tikzpicture}

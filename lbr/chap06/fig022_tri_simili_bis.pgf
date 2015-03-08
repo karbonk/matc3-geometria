@@ -1,0 +1,58 @@
+\begin{tikzpicture}[scale=0.8,font=\small]
+\usetikzlibrary{calc}
+
+\clip (-0.6,-0.65) rectangle (7.6,4.1);
+\node at (3.5, 3.8) {Ipotesi: $ABC\sim A'B'C'$, $\alpha\cong\beta$, $\gamma\cong\delta$};
+\node at (3.5, 3.3) {Tesi: $AB:A'B'=CD:C'D'$};
+
+\begin{scope}[scale=1.4]
+\coordinate (a) at (0,0);
+\coordinate (c) at (1.6,1.7);
+\coordinate (b) at (2.5,0);
+\draw[fill=yellow!10] (a) -- (b) -- (c) -- cycle;
+
+\path (c) let \p1 = ($(b)-(c)$) in -- ($(c)!{veclen(\x1,\y1)}!(a)$) -- +($(b)-(c)$) coordinate (c1);
+\coordinate (d) at (intersection of c--c1 and a--b);
+
+\begin{scope}
+\clip (c) -- (a) -- (d) -- cycle;
+\draw[orange, fill=orange!20] (c) circle (0.55) node[black, shift={(245:0.8)}] {$\alpha$};
+\end{scope}
+
+\begin{scope}
+\clip (c) -- (d) -- (b) -- cycle;
+\draw[orange, fill=orange!20] (c) circle (0.45) node[black, shift={(278:0.75)}] {$\beta$};
+\end{scope}
+
+
+\draw[red, dashdotted] (c) -- (d) node[black, below] {$D$};
+\draw[thick] (a) node[below] {$A$} -- (b) node[below] {$B$} -- (c) node[above] {$C$} -- cycle;
+
+\end{scope}
+
+\begin{scope}[xshift=4.5cm, scale=1]
+\coordinate (a) at (0,0);
+\coordinate (c) at (1.6,1.7);
+\coordinate (b) at (2.5,0);
+\draw[fill=gray!10] (a) -- (b) -- (c) -- cycle;
+
+\path (c) let \p1 = ($(b)-(c)$) in -- ($(c)!{veclen(\x1,\y1)}!(a)$) -- +($(b)-(c)$) coordinate (c1);
+\coordinate (d) at (intersection of c--c1 and a--b);
+
+\begin{scope}
+\clip (c) -- (a) -- (d) -- cycle;
+\draw[orange, fill=orange!20] (c) circle (0.55) node[black, shift={(245:0.7)}] {$\gamma$};
+\end{scope}
+
+\begin{scope}
+\clip (c) -- (d) -- (b) -- cycle;
+\draw[orange, fill=orange!20] (c) circle (0.45) node[black, shift={(278:0.6)}] {$\delta$};
+\end{scope}
+
+\draw[red, dashdotted] (c) -- (d) node[black, below] {$D'$};
+\draw[thick] (a) node[below] {$A'$} -- (b) node[below] {$B'$} -- (c) node[above] {$C'$} -- cycle;
+
+\end{scope}
+
+
+\end{tikzpicture}

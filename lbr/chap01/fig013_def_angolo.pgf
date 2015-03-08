@@ -1,0 +1,33 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+% Angolo
+
+\begin{scope}
+\coordinate (h) at (0,0);
+\coordinate (i) at (0,3);
+\path (h) -- +(0:6) coordinate (m);
+\path (i) -- +(0:6) coordinate (l);
+\coordinate (v) at (2,1.5);
+\coordinate (m1) at ($(v)!0.5!(l)$);
+\coordinate (m2) at ($(v)!0.5!(m)$);
+
+\draw[yellow!30, fill=yellow!30] (l) -- (v) -- (m) -- (h) -- (i) -- cycle;
+\draw[blue!10, fill=blue!10] (l) -- (v) -- (m) -- cycle;
+
+\draw (v) -- (l);
+\draw (v) -- (m);
+
+\draw[fill] (v) circle (1pt) node [above] {$V$};
+
+\node at (1,.5) {angolo};
+\node[left] at (v) {vertice};
+\node at (3.5,1.5) {angolo};
+\node[above] at (m1) {lato};
+\node[below] at (m2) {lato};
+\node[shift={(-.2,-.3)}] at (l) {$r$};
+\node[shift={(-.2,.3)}] at (m) {$s$};
+
+\end{scope}
+
+\end{tikzpicture}

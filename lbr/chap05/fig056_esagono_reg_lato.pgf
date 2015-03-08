@@ -1,0 +1,29 @@
+\begin{tikzpicture}[scale=0.75,font=\small]
+\usetikzlibrary{calc}
+\pgfmathsetmacro{\lati}{6}
+\pgfmathsetmacro{\angoloc}{360/\lati}
+
+\begin{scope}[rotate={\angoloc/2}]
+%\clip (-2.1,-2.1) rectangle (2.5,2.1);
+\coordinate (o) at (0,0);
+\foreach \x/\s in {0/A,1/B,2/C,3/D,4/E,5/F}
+{
+	\draw[thick] +({\x*\angoloc}:2) -- ({(\x+1)*\angoloc}:2) coordinate (\s) node [shift={({\x*\angoloc+90}:.25)}] {$\s$};
+	\draw[fill] +({\x*\angoloc}:2) circle (1.2pt);
+}
+
+\begin{scope}
+\clip (A) -- (B) -- (o) -- cycle;
+\draw[red, fill=red!10] (o) circle (0.4) node[black, shift={(118:0.5)}] {$60\grado$};
+\end{scope}
+
+\draw (o) circle (2);
+
+\draw[fill] (o) circle (1.2pt) node[below] {$O$};
+
+\end{scope}
+
+\draw[dashed] (o) -- node[midway, sloped, below] {$r$} (A);
+\draw[dashed] (o) -- node[midway, sloped, below] {$r$} (B);
+
+\end{tikzpicture}

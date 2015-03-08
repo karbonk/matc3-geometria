@@ -1,0 +1,94 @@
+\begin{tikzpicture}[scale=.9,font=\small]
+\usetikzlibrary{calc}
+
+\clip (-0.9,-9.5) rectangle (3.8,1.25);
+
+\begin{scope}
+\coordinate (o1) at (0,0);
+\coordinate (o2) at (2.5,0);
+
+\draw[fill=red!10] (o1) circle(0.55);
+\draw[fill=blue!10] (o2) circle(1);
+%\draw[fill] (o1) circle (1.2pt) node[left] {$O_1$};
+%\draw[fill] (o2) circle (1.2pt) node[left] {$O_2$};
+\node at (o1) {$C_1$};
+\node at (o2) {$C_2$};
+
+\end{scope}
+
+
+\begin{scope}[yshift=-2.5cm, xshift=-.5cm]
+\draw[fill=red!10] (0,0) rectangle (1,1);
+\draw[fill=blue!10] (2,0) rectangle (4,1.3);
+\node at (0.5,0.5) {$P_1$};
+\node at (3,0.65) {$P_2$};
+
+\end{scope}
+
+
+\begin{scope}[yshift=-3.5cm, xshift=0cm]
+\coordinate (g) at (0,0);
+\coordinate (f) at (1,0);
+\coordinate (e) at (0.5,-1);
+\coordinate (d) at (-0.5,-1);
+\coordinate (h) at (2,-1);
+\coordinate (x) at (2.5,-1);
+\coordinate (l) at (2.75,-0.5);
+\coordinate (m) at (3.25,-0.5);
+
+\draw (g) -- (f) -- (e) -- (d);
+\draw[fill] (g) circle (1.2pt) node[above] {$G$};
+\draw[fill] (f) circle (1.2pt) node[above] {$F$};
+\draw[fill] (e) circle (1.2pt) node[below] {$E$};
+\draw[fill] (d) circle (1.2pt) node[below] {$D$};
+\draw (h) -- (x) -- (l) -- (m);
+\draw[fill] (h) circle (1.2pt) node[below] {$H$};
+\draw[fill] (x) circle (1.2pt) node[below] {$X$};
+\draw[fill] (l) circle (1.2pt) node[above] {$L$};
+\draw[fill] (m) circle (1.2pt) node[above] {$M$};
+
+\end{scope}
+
+
+\begin{scope}[yshift=-5.5cm]
+\begin{scope}[scale=1.3, xshift=-0.5cm]
+\coordinate (p1) at (0,0);
+\coordinate (p2) at (0.5,0);
+\coordinate (p3) at (1,0.25);
+\coordinate (p4) at (1.5,0);
+\coordinate (p5) at (1,-0.75);
+\coordinate (p6) at (0,-1);
+\draw[fill=red!10] (p1) -- (p2) -- (p3) -- (p4) -- (p5) -- (p6) -- cycle;
+\node at (0.7,-0.4) {$P_3$};
+\end{scope}
+\begin{scope}[yshift=-.25cm, xshift=2cm, scale=1.3]
+\coordinate (q1) at (0,0);
+\coordinate (q2) at (0.25,0);
+\coordinate (q3) at (0.75,0.25);
+\coordinate (q4) at (1.25,0.125);
+\coordinate (q5) at (1,-0.30);
+\coordinate (q6) at (0.5,-0.5);
+\coordinate (q7) at (0,-0.5);
+\draw[fill=blue!10] (q1) -- (q2) -- (q3) -- (q4) -- (q5) -- (q6) -- (q7) -- cycle;
+\node at (0.6,-0.2) {$P_4$};
+\end{scope}
+
+\end{scope}
+
+
+\begin{scope}[yshift=-7cm, xshift=2.5cm]
+\coordinate (a) at (0,0);
+\coordinate (b) at (-1,-1.5);
+\coordinate (c) at (0,-0.75);
+\coordinate (w) at (-2,-1.5);
+\coordinate (z) at (0,-1.5);
+
+\draw[fill=blue!10] (a) node[right] {$A$} -- (z) node[below] {$Z$} -- (w) node[below] {$W$} -- cycle;
+\path[fill=red!10, opacity=.5] (b) -- (c) -- (z) -- cycle;
+\draw (b) node[below] {$B$} -- (c) node[right] {$C$} -- (z) -- cycle;
+
+\end{scope}
+
+
+
+\end{tikzpicture}

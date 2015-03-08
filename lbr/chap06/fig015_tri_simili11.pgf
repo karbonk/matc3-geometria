@@ -1,0 +1,31 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\clip (-0.3,-0.4) rectangle (3.8,2.9);
+
+\begin{scope}[scale=1.4]
+\coordinate (a) at (0,0);
+\coordinate (c) at (1.6,1.7);
+\coordinate (b) at (2.5,0);
+\draw[fill=yellow!10] (a) -- (b) -- (c) -- cycle;
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- cycle;
+\draw[thick,red!50,fill] (a) circle ({0.5*0.714285714});
+\node at ([shift={(0.50,0.2)}]a) {$\alpha$};
+\draw[thick,orange!50,fill] (b) circle ({0.5*0.714285714});
+\node at ([shift={(-0.50,0.2)}]b) {$\beta$};
+\end{scope}
+
+\draw[thick] (a) node[below] {$A$} -- (b) node[below] {$B$} -- (c) node[above] {$C$} -- cycle;
+\draw[blue, dashed] ($(c)!0.714285714!(b)$) coordinate (l) node[black, right] {$L$} -- ($(c)!0.714285714!(a)$) coordinate (k) node[black, left] {$K$};
+\path (k) -- +($(b)-(c)$) coordinate (k1);
+\coordinate (m) at (intersection of k--k1 and a--b);
+\draw[blue, dashed] (k) -- (m) node [black, below] {$M$};
+%\draw[fill] (k) circle (1pt);
+%\draw[fill] (m) circle (1pt);
+%\draw[fill] (l) circle (1pt);
+
+\end{scope}
+
+\end{tikzpicture}

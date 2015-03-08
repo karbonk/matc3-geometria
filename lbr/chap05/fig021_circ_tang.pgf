@@ -20,7 +20,9 @@
 
 \draw[fill] (2,0) circle (1.5pt) node[shift={(-.2,-.25)}] {$T$};
 
-\node at (2,-2.5) {circonferenze tangenti esternamente};
+\node at (1.2,2.6) {$\overline{O_1O_2}=r_1+r_2$};
+
+\node at (1.2,-2.6) {circonferenze tangenti esternamente};
 
 \end{scope}
 
@@ -44,7 +46,9 @@
 
 \draw[fill] (2,0) circle (1.5pt) node[right] {$T$};
 
-\node at (0.2,-2.5) {circonferenze tangenti internamente};
+\node at (0.2,2.6) {$\overline{O_1O_2}=\abs{r_1-r_2}$};
+
+\node at (0.2,-2.6) {circonferenze tangenti internamente};
 
 \end{scope}
 

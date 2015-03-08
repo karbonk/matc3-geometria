@@ -1,0 +1,47 @@
+\begin{tikzpicture}[scale=0.8,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+%\clip (-2.1,-2.1) rectangle (2.5,2.1);
+\coordinate (o) at (0,0);
+\coordinate (a) at (325:2);
+\coordinate (b) at (110:2);
+\coordinate (c) at (200:2);
+
+\draw[very thin, shorten >=-1.6cm,shorten <=-1.7cm] (a) -- (b);
+\draw[very thin, shorten >=-1.6cm,shorten <=-1.7cm] (a) -- (c);
+\draw[very thin, shorten >=-3cm,shorten <=-3cm] (c) -- (b);
+
+\draw[very thick] (a) node[shift={(0.3,-0.1)}] {$A$} -- (b) node[shift={(-0.1,0.3)}] {$B$} -- (c) node[shift={(-0.2,-0.2)}] {$C$} -- cycle;
+
+\path (b) let \p1 = ($(a)-(b)$) in -- ($(b)!{-veclen(\x1,\y1)}!(c)$) -- +($(a)-(b)$) coordinate (ob);
+\path (a) let \p1 = ($(b)-(a)$) in -- ($(a)!{-veclen(\x1,\y1)}!(c)$) -- +($(b)-(a)$) coordinate (oa);
+\coordinate (o) at (intersection of b--ob and a--oa);
+\path (c) let \p1 = ($(a)-(c)$) in -- ($(c)!-{veclen(\x1,\y1)}!(b)$) -- +($(a)-(c)$) coordinate (mc);
+\path (a) let \p1 = ($(c)-(a)$) in -- ($(a)!-{veclen(\x1,\y1)}!(b)$) -- +($(c)-(a)$) coordinate (ma);
+\coordinate (m) at (intersection of c--mc and a--ma);
+\coordinate (n) at (intersection of m--c and o--b);
+
+\draw[dashed, blue, shorten >=-1cm,shorten <=-1cm] (m) -- (o);
+\draw[dashed, blue, shorten >=-1cm,shorten <=-1cm] (n) -- (o);
+\draw[dashed, blue, shorten >=-1cm,shorten <=-1cm] (m) -- (n);
+
+\coordinate (or) at ($(a)!(o)!(b)$);
+\coordinate (mr) at ($(a)!(m)!(c)$);
+\coordinate (nr) at ($(b)!(n)!(c)$);
+
+\draw[dotted] (o) -- (or);
+\draw[dotted] (m) -- (mr);
+\draw[dotted] (n) -- (nr);
+
+\draw[dashed] (o) let \p1 = ($(or) - (o)$) in circle ({veclen(\x1,\y1)});
+\draw[dashed] (m) let \p1 = ($(mr) - (m)$) in circle ({veclen(\x1,\y1)});
+\draw[dashed] (n) let \p1 = ($(nr) - (n)$) in circle ({veclen(\x1,\y1)});
+
+\draw[fill] (o) circle (1.2pt) node[shift={(0.2,-0.2)}] {$O$};
+\draw[fill] (m) circle (1.2pt) node[shift={(0.25,0)}] {$M$};
+\draw[fill] (n) circle (1.2pt) node[shift={(0.1,0.2)}] {$N$};
+
+\end{scope}
+
+\end{tikzpicture}

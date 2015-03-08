@@ -467,7 +467,7 @@ Dal punto di vista della rappresentazione grafica si usano le convenzioni come n
 
 \vspazio\ovalbox{\risolvi \ref{ese:1.32}}
 
-\subsection{Postulati}
+\subsection{Postulati e assiomi}
 
 Un \emph{postulato}, o \emph{assioma}, è una proposizione, spesso intuitiva, evidente ma non dimostrata, ammessa come vera in quanto necessaria per costruire poi le dimostrazioni dei teoremi.
 
@@ -508,28 +508,28 @@ Hilbert assume come enti primitivi della geometria piana il \emph{punto} e la \e
 
 \paragraph{Assiomi di appartenenza} ``giacere su''
 \begin{enumerate}[label=\Roman{*}.]
-\item dati due punti distinti, esiste una e una sola retta che contiene entrambi i punti;
-\item ogni retta contiene almeno due punti. Esistono almeno tre punti che non giacciono sulla stessa retta (figura~\ref{fig:1.3});
-\item dati tre punti non allineati, esiste uno e un solo piano che contiene tutti e tre i punti. Ogni piano contiene almeno un punto (figura~\ref{fig:1.4});
-\item se due punti di una retta giacciono su un piano, allora anche tutti gli altri punti della retta giacciono su questo piano (figura~\ref{fig:1.5});
-\item se un punto giace su due piani distinti, allora esiste almeno un altro punto giacente su entrambi questi piani;
-\item esistono almeno quattro punti che non giacciono sullo stesso piano.
+\item Dati due punti distinti, esiste una e una sola retta che contiene entrambi i punti.
+\item Ogni retta contiene almeno due punti. Esistono almeno tre punti che non giacciono sulla stessa retta (figura~\ref{fig:1.3}).
+\item Dati tre punti non allineati, esiste uno e un solo piano che contiene tutti e tre i punti. Ogni piano contiene almeno un punto (figura~\ref{fig:1.4}).
+\item Se due punti di una retta giacciono su un piano, allora anche tutti gli altri punti della retta giacciono su questo piano (figura~\ref{fig:1.5}).
+\item Se un punto giace su due piani distinti, allora esiste almeno un altro punto giacente su entrambi questi piani.
+\item Esistono almeno quattro punti che non giacciono sullo stesso piano.
 \end{enumerate}
 
 \begin{figure}[b,t,h]
  \begin{minipage}[b]{.32\textwidth}
  \centering
- \input{./lbr/chap01/fig004_as2.pgf}
+ \input{./lbr/chap01/fig004_assioma2.pgf}
  \caption{Assioma II}\label{fig:1.3}
  \end{minipage}
  \begin{minipage}[b]{.32\textwidth}
  \centering
- \input{./lbr/chap01/fig005_as3.pgf}
+ \input{./lbr/chap01/fig005_assioma3.pgf}
  \caption{Assioma III}\label{fig:1.4}
  \end{minipage}
  \begin{minipage}[b]{.32\textwidth}
  \centering
- \input{./lbr/chap01/fig006_as4.pgf}
+ \input{./lbr/chap01/fig006_assioma4.pgf}
  \caption{Assioma IV}\label{fig:1.5}
  \end{minipage}
 \end{figure}
@@ -537,10 +537,17 @@ Hilbert assume come enti primitivi della geometria piana il \emph{punto} e la \e
 \paragraph{Assiomi di ordinamento} ``stare fra''
 \begin{enumerate}[label=\Roman{*}.]
 \setcounter{enumi}{6}
-\item Se un punto $B$ giace fra i punti $A$ e $C$, allora i punti $A$, $B$ e $C$ sono tre punti distinti sulla stessa retta, e $B$ giace fra $C$ ed $A$ (figura~\ref{fig:1.6});
-\item dati due punti $A$ e $C$, esiste almeno un punto $B$, sulla retta $AC$, giacente fra di essi;
-\item dati tre punti qualsiasi di una retta, uno e uno solo di essi giace fra gli altri due.
+\item Se un punto $B$ giace fra i punti $A$ e $C$, allora i punti $A$, $B$ e $C$ sono tre punti distinti sulla stessa retta, e $B$ giace fra $C$ ed $A$ (figura~\ref{fig:1.6}).
+\item Dati due punti $A$ e $C$, esiste almeno un punto $B$, sulla retta $AC$, giacente fra di essi.
+\item Dati tre punti qualsiasi di una retta, uno e uno solo di essi giace fra gli altri due.
 \end{enumerate}
+
+\begin{figure}[htb]
+ \centering
+ \input{./lbr/chap01/fig007_assioma7.pgf}
+ \caption{Assioma VII}\label{fig:1.6}
+\end{figure}
+
 Gli ultimi assiomi ci permettono di dedurre il seguente teorema.
 \begin{teorema}
 Tra due punti di una retta esiste sempre una quantità illimitata di altri punti.
@@ -549,7 +556,7 @@ Tra due punti di una retta esiste sempre una quantità illimitata di altri punti
 Data una retta $r$ e due suoi punti $A$ e $B$, per l'assioma~VIII sappiamo che esiste un terzo punto $C$ sulla retta $r$ che giace tra $A$ e $B$. Ma allora esiste un punto $D$ su $r$ che giace tra $A$ e $C$ e un punto $E$ che giace tra $C$ e $B$. Per lo stesso assioma esisterà un punto tra $A$ e $D$, uno tra $D$ e $C$, uno tra $C$ e $B$ e così via.
 \end{proof}
 \begin{center}
-\input{./lbr/chap01/fig010_teo1.pgf}
+\input{./lbr/chap01/fig010_teo_dens_retta.pgf}
 \end{center}
 \begin{definizione}
 Si chiama \emph{segmento} $AB$ l'insieme dei punti $A$ e $B$ e di tutti quelli che stanno sulla retta tra $A$ e $B$.
@@ -563,30 +570,25 @@ Presi quattro punti $A$, $B$, $C$, $O$ su una retta, in modo che $B$ stia tra $A
 \input{./lbr/chap01/fig011_def1.pgf}
 \end{center}
 
-\osservazione Trascuriamo in questa trattazione elementare l'assioma di Pasch\footnote{Moritz Pasch è stato un matematico tedesco (1843 - 1930).} (X) e l'assioma delle parallele (XI).
+\osservazione Trascuriamo in questa trattazione elementare l'\emph{assioma di Pasch}\footnote{chiamato così in onore del matematico tedesco Moritz Pasch (1843 - 1930) che ne mise in evidenza l'indeducibilità dagli altri assiomi di Euclide, è uno degli assiomi che Hilbert aggiunse ai postulati di Euclide per renderli completi. Il suo enunciato è il seguente: <<Dati un triangolo nel piano, una retta che ne attraversi un lato in un punto che non sia un estremo, deve necessariamente intersecare un altro dei due lati o il vertice in comune tra essi.>>} (X) e l'\emph{assioma delle parallele}\footnote{si tratta del V postulato di Euclide, anche se nella tradizione didattica moderna esso viene in genere sostituito dall'assioma di Playfair (più restrittivo): <<Data una qualsiasi retta $r$ ed un punto $P$ non appartenente ad essa, è possibile tracciare per $P$ una ed una sola retta parallela alla retta $r$ data.>>} (XI).
 
 \paragraph{Assiomi di congruenza} ``essere congruente a''
 \begin{enumerate}[label=\Roman{*}.]
 \setcounter{enumi}{11}
-\item \emph{Assioma del trasporto di un segmento}. Se $A$, $B$ sono due punti di una retta $r$ e $A'$ è un punto sulla stessa retta (o fissato su un'altra retta $r'$), si può sempre trovare un punto $B'$ sulla retta $r$ (o su $r'$), da una data parte rispetto ad $A'$, tale che il segmento $AB$ sia congruente al segmento $A'B'$;
-\item la relazione di congruenza tra segmenti è transitiva, cioè se $A'B'$ è congruente ad $AB$ e $A''B''$ è congruente ad $AB$ allora $A'B'$ è congruente ad $A''B''$ (figura~\ref{fig:1.7});
-\item siano $AB$ e $BC$ segmenti su una retta $r$ privi di punti comuni a parte $B$, e siano $A'B'$ e $B'C'$ segmenti su una retta $r'$ privi di punti comuni a parte $B'$. Se $AB\equiv A'B'$ e $BC\equiv B'C'$, allora  $AC\equiv A'C'$ (figura~\ref{fig:1.8}).
+\item \emph{Assioma del trasporto di un segmento}. Se $A$, $B$ sono due punti di una retta $r$ e $A'$ è un punto sulla stessa retta (o fissato su un'altra retta $r'$), si può sempre trovare un punto $B'$ sulla retta $r$ (o su $r'$), da una data parte rispetto ad $A'$, tale che il segmento $AB$ sia congruente al segmento $A'B'$ (figura~\ref{fig:1.7}).
+\item La relazione di congruenza tra segmenti è transitiva, cioè se $A'B'$ è congruente ad $AB$ e $A''B''$ è congruente ad $AB$ allora $A'B'$ è congruente ad $A''B''$.
+\item Siano $AB$ e $BC$ segmenti su una retta $r$ privi di punti comuni a parte $B$, e siano $A'B'$ e $B'C'$ segmenti su una retta $r'$ privi di punti comuni a parte $B'$. Se $AB\cong A'B'$ e $BC\cong B'C'$, allora  $AC\cong A'C'$ (figura~\ref{fig:1.8}).
 \end{enumerate}
 
-\begin{figure}[b,t,h]
- \begin{minipage}[b]{.28\textwidth}
+\begin{figure}[htb]
+ \begin{minipage}[b]{.5\textwidth}
  \centering
- \input{./lbr/chap01/fig007_as7.pgf}
- \caption{Assioma VII}\label{fig:1.6}
- \end{minipage}
- \begin{minipage}[b]{.34\textwidth}
- \centering
- \input{./lbr/chap01/fig008_as12.pgf}
+ \input{./lbr/chap01/fig008_assioma12.pgf}
  \caption{Assioma XII}\label{fig:1.7}
  \end{minipage}
- \begin{minipage}[b]{.34\textwidth}
+ \begin{minipage}[b]{.5\textwidth}
  \centering
- \input{./lbr/chap01/fig009_as14.pgf}
+ \input{./lbr/chap01/fig009_assioma14.pgf}
  \caption{Assioma XIV}\label{fig:1.8}
  \end{minipage}
 \end{figure}
@@ -597,14 +599,14 @@ Chiamiamo \emph{semiretta} la parte di retta costituita da un punto di essa, det
 \end{definizione}
 
 \begin{center}
- \input{./lbr/chap01/fig012_def2.pgf}
+ \input{./lbr/chap01/fig012_def_semiretta.pgf}
 \end{center}
 
 \begin{definizione}
 Si dice \emph{angolo} ciascuna delle due parti in cui un piano è diviso da due semirette aventi l'origine in comune; le semirette si dicono \emph{lati} dell'angolo; l'origine comune alle due semirette si dice \emph{vertice} dell'angolo (figura~\ref{fig:1.9}).
 \end{definizione}
 \begin{figure*}[b,t,h]
-\centering  \input{./lbr/chap01/fig013_def4.pgf}
+\centering  \input{./lbr/chap01/fig013_def_angolo.pgf}
 \caption{Le semirette $r$ e $s$, aventi l'origine $V$ comune, individuano due regioni del piano ognuna delle quali è detta \emph{angolo}.}\label{fig:1.9}
 \end{figure*}
 
@@ -612,9 +614,9 @@ L'angolo individuato da tre punti $A$, $B$, $C$ è l'angolo formato dalla semire
 
 \begin{enumerate}[label=\Roman{*}.]
 \setcounter{enumi}{14}
-\item Dati un angolo $A\widehat{B}C$ ed una semiretta $B'C'$, esistono e sono uniche due semirette $B'D$ e $B'E$, tali che l'angolo $D\widehat{B'}C'$ è congruente all'angolo $A\widehat{B}C$ e l'angolo $E\widehat{B'}C'$ è congruente all'angolo $A\widehat{B}C$ (figura~\ref{fig:1.10});
+\item Dati un angolo $A\widehat{B}C$ ed una semiretta $B'C'$, esistono e sono uniche due semirette $B'D$ e $B'E$, tali che sia l'angolo $D\widehat{B'}C'$ che $E\widehat{B'}C'$ sono congruenti all'angolo $A\widehat{B}C$ (figura~\ref{fig:1.10});
 \begin{figure}[b,t,h]
- \centering \input{./lbr/chap01/fig014_as15.pgf}
+ \centering \input{./lbr/chap01/fig014_assioma15.pgf}
  \caption{Assioma XV}\label{fig:1.10}
 \end{figure}
 \item La relazione di congruenza tra angoli è transitiva, cioè se  $A'\widehat{B'}C'$ e  $A''\widehat{B''}C''$ sono congruenti ad $A\widehat{B}C$, allora  $A'\widehat{B'}C' \equiv A''\widehat{B''}C''$.
@@ -626,8 +628,8 @@ L'angolo individuato da tre punti $A$, $B$, $C$ è l'angolo formato dalla semire
 \setcounter{enumi}{16}
 \item \emph{Assioma di Archimede}. Sulla retta che unisce due punti qualsiasi $A$ e $B$ si prende un punto $A_1$, quindi si prendono i punti $A_2$, $A_3$, $A_4$, \ldots in modo che $A_1$ sia tra $A$ e $A_2$, $A_2$ tra $A_1$ e $A_3$, $A_3$ tra $A_2$ e $A_4$, ecc. e che  $AA_1\equiv A_1A_2\equiv A_2A_3\equiv A_3A_4\equiv\ldots$ allora tra tutti questi punti esiste sempre un punto $A_n$ tale che $B$ sta tra $A$ e $A_n$ (figura~\ref{fig:1.11}).
 \begin{figure}[b,t,h]
- \centering \input{./lbr/chap01/fig015_as17.pgf}
- \caption{Assioma XVII di Archimede}\label{fig:1.11}
+ \centering \input{./lbr/chap01/fig015_assioma17.pgf}
+ \caption{Assioma di Archimede (XVII)}\label{fig:1.11}
 \end{figure}
 \end{enumerate}
 
@@ -663,7 +665,7 @@ In base agli assiomi di ordinamento un qualunque punto $P$ su una retta divide l
 \begin{definizione}
 Si chiama \emph{semiretta} la parte di retta costituita da un punto di essa, detto origine della semiretta, e da tutti i punti che stanno dalla stessa parte rispetto all'origine.
 \end{definizione}
-Solitamente, la semiretta si indica con una lettera latina minuscola.
+Solitamente una semiretta viene indicata con una lettera latina minuscola.
 
 Prendendo due qualsiasi rette dello spazio esse si possono trovare in diverse posizioni reciproche, cioè una rispetto all'altra.
 \begin{definizione}
@@ -671,7 +673,7 @@ Due rette che appartengono ad uno stesso piano si dicono \emph{complanari}, altr
 \end{definizione}
 
 \begin{definizione}
-Due rette complanari che non hanno nessun punto in comune si dicono \emph{parallele}.
+Due rette complanari $r$ ed $s$ che non hanno nessun punto in comune si dicono \emph{parallele} e si scrive $r\parallel s$.
 \end{definizione}
 
 \begin{definizione}
@@ -683,18 +685,22 @@ Se due rette hanno almeno due punti in comune sono \emph{coincidenti}.
 \end{definizione}
 
 \begin{figure}[hbt]
- \centering \input{./lbr/chap01/fig016_def8.pgf}
+ \centering \input{./lbr/chap01/fig016_tipi_rette.pgf}
  \caption{Relazioni tra rette complanari}\label{fig:1.12}
 \end{figure}
-Per indicare che le rette $r$ e $s$ sono parallele si usa il simbolo $r \parallel s$.
 
 \osservazione Due rette non parallele possono appartenere a piani diversi, in questo caso non avranno punti in comune, sono cioè sghembe. Viceversa se due rette hanno un punto in comune allora sono sicuramente complanari. Inoltre, se hanno più di un punto in comune le rette coincidono, in questo caso ci sono infiniti piani che le contengono. 
+
+\begin{figure}[!htb]
+	\centering\input{./lbr/chap01/fig020_fascio_proprio_rette.pgf}
+	\caption{Fascio proprio di rette}\label{fig:1.16}
+\end{figure}
 
 \begin{definizione}
 L'insieme di tutte le rette di un piano che passano per uno stesso punto è detto \emph{fascio proprio di rette}, il punto in comune a tutte le rette si dice \emph{centro del fascio} (figura~\ref{fig:1.16}).
 \end{definizione}
 
-Prendendo due punti su una retta, $A$ e $B$, la retta resta divisa in tre parti: la semiretta di origine $A$ che non contiene $B$, la parte costituita dai punti compresi tra $A$ e $B$ e la semiretta di origine $B$ che non contiene $A$.
+Prendendo su una retta due punti $A$ e $B$, la retta resta divisa in tre parti: la semiretta di origine $A$ che non contiene $B$, la parte costituita dai punti compresi tra $A$ e $B$ e la semiretta di origine $B$ che non contiene $A$.
 
 \begin{definizione}
 Si chiama \emph{segmento} $AB$ l'insieme dei punti $A$ e $B$ e di tutti quelli che stanno tra $A$ e $B$.
@@ -702,8 +708,8 @@ I punti $A$ e $B$ si dicono \emph{estremi} del segmento.
 \end{definizione}
 Un segmento viene indicato con le due lettere maiuscole dei suoi estremi.
 \begin{figure}[bth]
- \centering \input{./lbr/chap01/fig017_def10.pgf}
- \caption{I punti $A$ e $B$ formano le due semirette $r$ e $s$, e il segmento $AB$}\label{fig:1.13}
+ \centering \input{./lbr/chap01/fig017_segmento.pgf}
+ \caption{I punti $A$ e $B$ formano le due semirette $r$ ed $s$, e il segmento $AB$}\label{fig:1.13}
 \end{figure}
 
 Due segmenti nel piano possono trovarsi in diverse posizioni reciproche. Alcune di esse hanno un interesse per la geometria.
@@ -731,14 +737,8 @@ Due segmenti si dicono \emph{adiacenti} se sono consecutivi ed appartengono alla
 Si dice \emph{semipiano} di origine la retta $r$ la figura formata dalla retta $r$ e da una delle due parti in cui essa divide il piano (figura~\ref{fig:1.17}).
 \end{definizione}
 \begin{figure}[b,t,h]
- \begin{minipage}[b]{.40\textwidth}
- \centering\input{./lbr/chap01/fig020_def9.pgf}
- \caption{Fascio proprio di rette}\label{fig:1.16}
- \end{minipage}\hfil
- \begin{minipage}[b]{.40\textwidth}
  \centering\input{./lbr/chap01/fig021_def13.pgf}
   \caption{Semipiani opposti}\label{fig:1.17}
-  \end{minipage}
 \end{figure}
 In un piano ${\pi}$, una qualsiasi retta $r \subset \pi$ dà origine a due semipiani distinti, che si dicono semipiani \emph{opposti}.
 
@@ -764,7 +764,7 @@ Un angolo si dice \emph{nullo} se è costituito solo da due semirette sovrappost
 \`E detto \emph{angolo giro} l'angolo che ha per lati due semirette sovrapposte e che contiene tutti i punti del piano (figura~\ref{fig:1.19}).
 \end{definizione}
 \begin{figure}[bth]
- \centering \input{./lbr/chap01/fig023_def15.pgf}
+ \centering \input{./lbr/chap01/fig023_angolo_piatto_e_giro.pgf}
  \caption{L'angolo  $\widehat{ab}$ a sinistra è piatto (sia quello sopra che quello sotto), gli angoli a destra, individuati dalle semirette coindicenti con origine in $O$, sono rispettivamente un angolo giro (quello esterno) e un angolo nullo (quello interno).}\label{fig:1.19}
 \end{figure}
 
@@ -1216,9 +1216,9 @@ Nel confronto tra il segmento $AB$ e il segmento $u$, possono verificarsi i tre 
 
 Proponiamo una dimostrazione dell'irrazionalità del numero $\sqrt{2}$ utilizzando il metodo della dimostrazione per assurdo.
 
-\begin{teorema}
-$\sqrt{2}$ è un numero irrazionale.
-\end{teorema}
+%\begin{teorema}
+%$\sqrt{2}$ è un numero irrazionale.
+%\end{teorema}
 
 \begin{proof}
 Supponiamo per assurdo che $\sqrt{2}$ sia un numero razionale, cioè che sia possibile scrivere $\sqrt{2}=\dfrac{m}{n}$, con $m,n \in \insN$ e $n\neq 0$. Allora, per definizione di radice quadrata, si avrebbe $2=\dfrac{m^2}{n^2}$, da cui $2n^2=m^2$. I due membri dovrebbero quindi rappresentare lo stesso numero naturale (il teorema fondamentale dell'Aritmetica assicura l'unicità della scomposizione in fattori primi). Essendo 2 un numero primo, dovrebbe comparire come fattore sia al primo sia al secondo membro lo stesso numero di volte. Inoltre $m^2$ ed $n^2$ o sono dispari e quindi se contengono il fattore 2 lo contengono un numero pari di volte (vediamo qualche esempio $24=2^3\cdot3 \rightarrow 24^2=2^6\cdot3^2$, $20=2^2\cdot5 \rightarrow 20^2=2^4\cdot5^2$). Ma $2n^2$ contiene il fattore 2 un numero dispari di volte, mentre $m^2$ lo contiene un numero pari. Pertanto l'uguaglianza $2n^2=m^2$ non può essere mai verificata; l'assurdo deriva dall'aver supposto $\sqrt{2}$ razionale.
@@ -1300,8 +1300,8 @@ Il sistema di misura degli angoli che abbiamo illustrato prende il nome di \emph
 In base a quanto descritto, vediamo brevemente come si passa da un sistema all'altro.
 
 \begin{itemize}
-\item $10\grado 42' 23'',2 = 10+\dfrac{42}{60}+\dfrac{23,2}{3600} = 10\grado,706\overline{4}$;
-\item $50\grado,748 = 50\grado + (0,748\cdot 60)'=50\grado + 44',88 = 50\grado + 44'+(0,88\cdot 60)'' = 50\grado 44' 52'',8$.
+\item $10\grado 42' 23''\np{,2} = 10+\dfrac{42}{60}+\dfrac{\np{23,2}}{3600} = 10\grado\np{,706}\overline{4}$;
+\item $50\grado\np{,748} = 50\grado + (\np{0,748}\cdot 60)'=50\grado + 44'\np{,88} = 50\grado + 44'+(\np{0,88}\cdot 60)'' = 50\grado 44' 52''\np{,8}$.
 \end{itemize}
 
 I sistemi sessagesimale e sessadecimale non sono gli unici usati per le misure degli angoli.
@@ -1332,7 +1332,7 @@ dove con $\alpha\grado$ abbiamo indicato l'ampiezza dell'angolo in gradi e con $
 
 Quindi, avendo un angolo espresso in radianti, per convertirlo in gradi si può utilizzare la prima formula inserendo al posto di $\alpha$ la sua effettiva misura in radianti, mentre se abbiamo un angolo espresso in gradi e lo vogliamo trasformare in radianti si può utilizzare la seconda formula inserendo al posto di $\alpha\grado$ l'effettiva misura dell'angolo in gradi.
 
-Possiamo pertanto calcolare la misura in gradi di un angolo di 1~radiante ponendo nella prima formula $\alpha=1$. Si ottiene così $\alpha\grado = 180\grado/\pi \simeq 57\grado,297469362 \simeq 57\grado 17'51''$.
+Possiamo pertanto calcolare la misura in gradi di un angolo di 1~radiante ponendo nella prima formula $\alpha=1$. Si ottiene così $\alpha\grado = 180\grado/\pi \simeq 57\grado\np{,297469362} \simeq 57\grado 17'51''$.
 
 Riportiamo di seguito una tabella che fornisce i valori degli angoli più comuni espressi sia in gradi che in radianti.
 
@@ -1356,13 +1356,13 @@ $30\grado$ & $\pi/6$\\
 
 Nei paragrafi precedenti abbiamo definito l'angolo come l'insieme dei punti compresi tra due semirette aventi la stessa origine $O$. Possiamo però definire l'angolo anche come rotazione di una semiretta intorno alla propria origine, la misura di un angolo diventa allora la misura dell'entità della rotazione.
 
+\begin{figure}[!htb]
+	\centering\input{./lbr/chap01/fig060_angoli_negativi.pgf}
+	\caption{Il verso positivo nella misura degli angoli è quello antiorario}\label{fig:1.43}
+\end{figure}
+
 Dal momento che una rotazione può essere effettuata in due versi, orario o antiorario, si assume uno dei due versi di rotazione come positivo e l'altro negativo. Per motivi storici si è assunto per convenzione come positivo il verso di rotazione antiorario e negativo quello orario.
 Da questa definizione segue che $A\widehat{O}B = -B\widehat{O}A$, dove $A\widehat{O}B$ è l'angolo formato dalla semiretta $OB$ rispetto alla semiretta $OA$ (figura~\ref{fig:1.43}).
-
-\begin{figure}[htb]
-\centering\input{./lbr/chap01/fig060_angoli_negativi.pgf}
-\caption{Il verso positivo nella misura degli angoli è quello antiorario}\label{fig:1.43}
-\end{figure}
 
 Inoltre, la misura di un angolo è definita a meno di un multiplo intero di $360\grado$, ovvero gli angoli $\alpha$ e $\alpha+360\grado$ hanno la stessa ampiezza, lo stesso dicasi per tutti gli angoli del tipo $\alpha+n\cdot 360\grado$ o $\alpha - n\cdot 360\grado$ con $n$ intero. Per esempio, sono tra loro congruenti gli angoli di $45\grado$, $405\grado$, $765\grado$, \ldots{}
 

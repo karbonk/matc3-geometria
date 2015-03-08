@@ -1,0 +1,21 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+%Assioma 2
+
+\begin{scope}
+\coordinate (o) at (0,0);
+\path (o) -- +(20:0.7) coordinate (a);
+\path (o) -- +(20:2) coordinate (b);
+\path (o) -- +(20:2.7) coordinate (m);
+\path (o) -- +(50:1.5) coordinate (c);
+\path (o) -- +(30:0) coordinate (r);
+
+\draw (o) node [above] {$r$} -- (m);
+\draw[fill] (a) circle (1pt) node[above] {$A$};
+\draw[fill] (b) circle (1pt) node[above] {$B$};
+\draw[fill] (c) circle (1pt) node[above] {$C$};
+
+\end{scope}
+
+\end{tikzpicture}

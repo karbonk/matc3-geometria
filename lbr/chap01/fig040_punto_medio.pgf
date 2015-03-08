@@ -9,8 +9,8 @@
 
 \draw[fill] (a) circle (1.5pt) node[above] {$A$} -- (b) circle (1.5pt) node[above] {$B$};
 \draw[fill] (m) circle (1.5pt) node[above] {$M$};
-\draw [gray,decorate,decoration={brace,amplitude=10pt,mirror},xshift=0.4pt,yshift=-0.4pt](0,-0.2) -- (3,-0.2) node[midway] {};
-\draw [gray,decorate,decoration={brace,amplitude=10pt,mirror},xshift=0.4pt,yshift=-0.4pt](3,-0.2) -- (6,-0.2) node[midway] {};
+%\draw [gray,decorate,decoration={brace,amplitude=10pt,mirror},xshift=0.4pt,yshift=-0.4pt](0,-0.2) -- (3,-0.2) node[midway] {};
+%\draw [gray,decorate,decoration={brace,amplitude=10pt,mirror},xshift=0.4pt,yshift=-0.4pt](3,-0.2) -- (6,-0.2) node[midway] {};
 \end{scope}
 
 \end{tikzpicture}

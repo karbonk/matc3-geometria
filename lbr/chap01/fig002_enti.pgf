@@ -1,37 +1,46 @@
-\begin{tikzpicture}[font=\small]
-%i punti
-\tkzDefPoint(0,0){A}
-\tkzDefPoint(1.5,1){B}
-\tkzDefPoint(1,-1){C}
-\tkzDrawPoints(A,B,C)
-\tkzLabelPoints(A,B,C)
-\node at(.75,-2){punti};
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
 
-%le rette
-\tkzDefPoint(3,-.5){D}
-\tkzDefShiftPoint[D](30:1){E}
-\tkzDefShiftPoint[D](30:3){F}
-\tkzDefShiftPoint[D](30:4){G}
-\tkzDrawSegments[style=dashed](D,E F,G)
-\tkzDrawSegment(E,F)
-\node at(4.3,.5){$r$};
-\node at(4.3,-.5){$s$};
 
-\tkzDefPoint(3,-1){D}
-\tkzDefShiftPoint[D](35:1){E}
-\tkzDefShiftPoint[D](35:3){F}
-\tkzDefShiftPoint[D](35:4){G}
-\tkzDrawSegments[style=dashed](D,E F,G)
-\tkzDrawSegment(E,F)
-\node at(4,-1-1){rette};
+\begin{scope}
+\draw[fill] (0,0.2) circle (1pt) node[above] {$A$};
+\draw[fill] (1.5,1) circle (1pt) node[above] {$B$};
+\draw[fill] (1,-0.3) circle (1pt) node[above] {$C$};
+\node at(.75,-1.2){punti};
+\end{scope}
 
-%il piano
-\tkzDefPoint(6,-1){H}
-\tkzDefShiftPoint[H](60:2.5){I}
-\tkzDefShiftPoint[I](0:3){L}
-\tkzDefShiftPoint[H](0:3){M}
-\tkzDrawPolygon[fill=blue!10](H,I,L,M)
-\node at(7.5,-1-1){piano};
-\node at(10.3,.7){$\pi$};
+\begin{scope}[xshift=2.5cm]
+\coordinate (d) at (0,0);
+\path (d) -- +(20:1) coordinate (e);
+\path (d) -- +(20:3) coordinate (f);
+\path (d) -- +(20:4) coordinate (g);
+\draw[dashed] (d) -- (e);
+\draw[dashed] (f) -- (g);
+\draw (e) -- node[above] {$r$} (f);
+
+\coordinate (d) at (0.5,-.7);
+\path (d) -- +(30:1) coordinate (e);
+\path (d) -- +(30:3) coordinate (f);
+\path (d) -- +(30:4) coordinate (g);
+
+\draw[dashed] (d) -- (e);
+\draw[dashed] (f) -- (g);
+\draw (e) -- node[below] {$s$} (f);
+
+\node at(2.1,-1.2){rette};
+\end{scope}
+
+
+\begin{scope}[xshift=4cm]
+\coordinate (h) at (3,-0.75);
+\path (h) -- +(60:2.2) coordinate (i);
+\path (i) -- +(0:3) coordinate (l);
+\path (h) -- +(0:3) coordinate (m);
+\draw[fill=blue!10] (h)--(i)--(l)--(m)--cycle;
+\node at(4.7,-1.2){piano};
+\node at(6.5,.9){$\pi$};
+
+\end{scope}
+
 
 \end{tikzpicture}

@@ -1,0 +1,58 @@
+\begin{tikzpicture}[scale=1.1,font=\small]
+\usetikzlibrary{calc}
+
+\clip (-.5,-3.5) rectangle (4.35,0.35);
+
+\begin{scope}
+\coordinate (a1) at (0,0);
+\coordinate (a2) at (1,0);
+\coordinate (b1) at (0,-0.5);
+\coordinate (b2) at (2,-0.5);
+\coordinate (c1) at (0,-1);
+\coordinate (c2) at (1.5,-1);
+\draw (a1)-- node[above] {$a$} (a2);
+\draw (b1)-- node[above] {$b$} (b2);
+\draw (c1)-- node[above] {$c$} (c2);
+\draw[fill] (a1) circle (1.2pt);
+\draw[fill] (a2) circle (1.2pt);
+\draw[fill] (b1) circle (1.2pt);
+\draw[fill] (b2) circle (1.2pt);
+\draw[fill] (c1) circle (1.2pt);
+\draw[fill] (c2) circle (1.2pt);
+\end{scope}
+
+\begin{scope}[yshift=-3cm]
+\coordinate (p) at (0,0);
+\coordinate (p1) at (30:5);
+\coordinate (a) at (30:1);
+\coordinate (b) at (30:3);
+\coordinate (c) at (30:4.5);
+\coordinate (q) at (0:3);
+
+\draw[very thin] (p)--(p1);
+\draw[fill] (p) circle (1.2pt) node[left] {$P$};
+\draw[fill] (a) circle (1.2pt) node[above] {$A$};
+\draw[fill] (b) circle (1.2pt) node[above] {$B$};
+\draw[fill] (c) circle (1.2pt) node[above] {$C$};
+
+\draw[thick] (p)--(q);
+\draw[dashed] (c)--(q);
+
+\path (b) -- +($(q)-(c)$) coordinate (bx);
+\path (a) -- +($(q)-(c)$) coordinate (ax);
+\coordinate (b1) at (intersection of b--bx and p--q);
+\coordinate (a1) at (intersection of a--ax and p--q);
+\draw[dashed] (b) -- (b1);
+\draw[dashed] (a) -- (a1);
+
+\path (p) -- node[above] {$a$} (a);
+\path (a) -- node[above] {$b$} (b);
+\path (b) -- node[above] {$c$} (c);
+
+\draw[fill] (a1) circle (1.2pt) node[below] {$A'$};
+\draw[fill] (b1) circle (1.2pt) node[below] {$B'$};
+\draw[fill] (q) circle (1.2pt) node[right] {$Q$};
+
+\end{scope}
+
+\end{tikzpicture}

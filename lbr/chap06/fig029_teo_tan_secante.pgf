@@ -1,0 +1,40 @@
+\begin{tikzpicture}[scale=0.8,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+\coordinate (a) at (60:2);
+\path (a) -- +(150:3) coordinate (b1);
+\coordinate (d) at (120:2);
+\coordinate (e) at (260:2);
+\coordinate (o) at (0,0);
+
+\draw[fill] (o) circle (1.2pt) node[below] {$O$};
+
+\coordinate (b) at (intersection of e--d and a--b1);
+
+\begin{scope}
+\clip (a)--(b)--(d) -- cycle;
+\draw[orange!70!black, fill=orange!10] (a) circle (0.4);
+\draw[red, fill=red!10] (b) circle (0.4);
+\end{scope}
+\begin{scope}
+\clip (a)--(d)--(e) -- cycle;
+\draw[orange!70!black, fill=orange!10] (e) circle (0.4);
+\end{scope}
+
+\draw (o) circle (2);
+
+\draw ($(a)!-0.4!(b)$) -- (b);
+\draw ($(e)!-0.1!(b)$) -- (b);
+\draw[dashed] (a) -- (d);
+\draw[dashed] (a) -- (e);
+
+\draw[fill] (a) circle (1.2pt) node[shift={(0.2,0.2)}] {$A$};
+\draw[fill] (b) circle (1.2pt) node[above] {$B$};
+\draw[fill] (d) circle (1.2pt) node[shift={(-0.2,0.2)}] {$D$};
+\draw[fill] (e) circle (1.2pt) node[shift={(-0.2,-0.2)}] {$E$};
+
+\end{scope}
+
+\end{tikzpicture}

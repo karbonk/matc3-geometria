@@ -1,0 +1,26 @@
+\begin{tikzpicture}[scale=0.8,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\clip (-2.1,-2.4) rectangle (2.1,2.4);
+\coordinate (o) at (0,0);
+\coordinate (a) at (250:2);
+\coordinate (b) at (290:2);
+\coordinate (c) at (70:2);
+
+\begin{scope}
+\clip (a) -- (o) -- (b) -- cycle;
+\draw[red, fill=red!10] (o) circle (0.5);
+\node at (270:1.05) {$40\grado$};
+\end{scope}
+
+\draw[fill] (o) circle (1.2pt) node[shift={(-0.2,0.2)}] {$O$};
+
+\draw (a) node [shift={(250:0.3)}] {$A$} -- (c) node [shift={(70:0.3)}] {$C$} -- (b) node [shift={(290:0.3)}] {$B$};
+\draw (o) -- (b);
+
+\draw (o) circle (2);
+
+\end{scope}
+
+\end{tikzpicture}

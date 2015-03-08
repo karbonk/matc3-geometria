@@ -1,0 +1,17 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+%Semiretta
+
+\begin{scope}
+\coordinate (o) at (0,0);
+\path (o) -- +(0:5) coordinate (c);
+\path (o) -- +(0:6) coordinate (m);
+
+\draw (o) --  node [above] {$s$} (c);
+\draw[dashed] (c) -- (m);
+
+\draw[fill] (o) circle (1pt) node [above] {$O$};
+\end{scope}
+
+\end{tikzpicture}

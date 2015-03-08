@@ -19,6 +19,8 @@
 
 \node at (0,-2.5) {circonferenza interna ad un'altra};
 
+\node at (5.5,0) {$\overline{O_1O_2}<r_1-r_2$};
+
 \end{scope}
 
 \end{tikzpicture}

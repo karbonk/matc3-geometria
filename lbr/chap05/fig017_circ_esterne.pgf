@@ -17,6 +17,7 @@
 \draw[thick, name path=Circle2] (ob) circle (\raggiob);
 \draw[fill] (ob) circle (1.2pt) node[below] {$O_2$};
 
+\node at (8.5,0) {$\overline{O_1O_2}>r_1+r_2$};
 
 \end{scope}
 

@@ -1,0 +1,30 @@
+\begin{tikzpicture}[scale=0.6,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\clip (-2.01,-2.01) rectangle (2.01,2.01);
+\coordinate (o) at (0,0);
+\coordinate (a) at (20:2);
+\coordinate (b) at (130:2);
+\coordinate (c) at (290:2);
+
+\draw (o) circle (2);
+
+\draw[thick] (a) -- (b) -- (c) -- cycle;
+%\draw[fill] (o) circle (1.2pt) node[shift={(0.25,-0.1)}] {$O$};
+
+\path (b) let \p1 = ($(a)-(b)$) in -- ($(b)!{veclen(\x1,\y1)}!(c)$) -- +($(a)-(b)$) coordinate (ob);
+%\path (a) let \p1 = ($(b)-(a)$) in -- ($(a)!{-veclen(\x1,\y1)}!(c)$) -- +($(b)-(a)$) coordinate (oa);
+%\coordinate (o) at (intersection of b--ob and a--oa);
+\path (c) let \p1 = ($(a)-(c)$) in -- ($(c)!{veclen(\x1,\y1)}!(b)$) -- +($(a)-(c)$) coordinate (oc);
+%\path (a) let \p1 = ($(c)-(a)$) in -- ($(a)!-{veclen(\x1,\y1)}!(b)$) -- +($(c)-(a)$) coordinate (ma);
+%\coordinate (m) at (intersection of c--mc and a--ma);
+%\coordinate (n) at (intersection of m--c and o--b);
+\coordinate (oi) at (intersection of b--ob and c--oc);
+\coordinate (h) at ($(b)!(oi)!(c)$);
+
+\draw (oi) let \p1 = ($(oi)-(h)$) in circle ({veclen(\x1,\y1)});
+
+\end{scope}
+
+\end{tikzpicture}

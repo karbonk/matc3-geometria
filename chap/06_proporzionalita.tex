@@ -37,7 +37,9 @@ Data una grandezza geometrica $A$ ed un numero naturale $n$, la grandezza geomet
 
 Dato un segmento $AB$ possiamo dare un significato alla scrittura $\dfrac{3}{2}AB$ nel seguente modo:
 
-%figura
+\begin{figure}[!htb]
+	\centering\input{./lbr/chap06/fig001_mult_segmento.pgf}
+\end{figure}
 
 Il segmento $AB$ è costituito da 3 segmenti ciascuno congruente alla metà di $AB$.
 \begin{definizione}
@@ -49,6 +51,10 @@ L'esistenza di grandezze incommensurabili è confermata dal seguente teorema.
 \begin{teorema}
 Il lato e la diagonale di un quadrato sono grandezze incommensurabili.
 \end{teorema}
+
+\begin{figure}[!htb]
+	\centering\input{./lbr/chap06/fig002_diag_quadrato.pgf}
+\end{figure}
 
 \begin{proof}
 La dimostrazione si sviluppa per assurdo. Con riferimento alla figura, verifichiamo che  il lato $AB$ e la diagonale $AC$ del quadrato $ABCD$ sono incommensurabili.
@@ -62,11 +68,11 @@ Siano $A$ e $B$ due grandezze omogenee commensurabili, sia $C$ la grandezza sott
 \begin{definizione}
 Si dice \emph{rapporto di due grandezze omogenee} $A$ e $B$ il numero razionale $\dfrac{n}{m}$ tale che $A=\dfrac{n}{m}B$.
 \end{definizione}
-Occorre supporre la validità dei seguenti postulati.
+Occorre supporre la validità dei seguenti postulati.\vspace{8pt}
 
-\noindent \emph{Postulato della divisibilità.} Ogni grandezza geometrica è sempre divisibile in un numero qualunque di parti.
+\noindent \emph{Postulato della divisibilità.} Ogni grandezza geometrica è sempre divisibile in un numero qualunque di parti.\vspace{8pt}
 
-\noindent \emph{Postulato di Eudosso-Archimede.} Date due grandezze omogenee disuguali esiste sempre una grandezza multipla della minore che supera la maggiore.
+\noindent \emph{Postulato di Eudosso-Archimede.} Date due grandezze omogenee disuguali esiste sempre una grandezza multipla della minore che supera la maggiore.\vspace{8pt}
 
 Possiamo dare ora la definizione di misura di un segmento rispetto a un altro, nel caso in cui i due segmenti sono commensurabili.
 \begin{definizione}
@@ -75,9 +81,9 @@ Date due grandezze $A$ e $U$ tra loro commensurabili si definisce \emph{misura d
 
 Per le definizioni precedenti, la misura di $U$ rispetto a se stessa è evidentemente 1.
 
-Solitamente si usa come unità di misura delle lunghezze il metro, con il suo multipli (decametro, ettometro, chilometro, \ldots{}) ed i suoi sottomultipli (decimetro, centimetro, millimetro, \ldots{}). Per misurare gli angoli si usa il grado che è la 360\textsuperscript{a} parte dell'angolo giro. Per misurare le superfici si usa come unità di superficie quella di un quadrato di lato 1 m (metro quadrato). Per misurare i solidi si usa il volume di un cubo di lato 1 m (metro cubo).
+Solitamente si usa come unità di misura delle lunghezze il metro (indicato con il simbolo m), con il suo multipli (decametro dam, ettometro hm, chilometro km, \ldots{}) ed i suoi sottomultipli (decimetro dm, centimetro cm, millimetro mm, \ldots{}). Per misurare gli angoli si usa il grado che è la 360\textsuperscript{a} parte dell'angolo giro. Per misurare le superfici si usa come unità di superficie quella di un quadrato di lato 1~m (metro quadrato, indicato con il simbolo m\textsuperscript{2}) con i suoi multipli e sottomultipli. Per misurare i solidi si usa il volume di un cubo di lato 1~m (metro cubo, indicato con il simbolo m\textsuperscript{3}).
 
-Circa la scrittura delle misure, in Italia valgono le seguenti norme: l'unità di misura si scrive sempre dopo il numero che la indica, tranne le misure monetarie: si scrive 12 m e non m 12; si scrive \officialeuro 12 e non 12 \officialeuro. L'unità di misura non è mai seguita dal puntino e non va mai espressa al plurale.
+Per quanto riguarda la scrittura delle misure, in Italia valgono le seguenti norme: l'unità di misura si scrive sempre dopo il numero che la indica, tranne per le misure monetarie: si scrive 12~m e non m~12; si scrive \officialeuro~12 e non 12~\officialeuro. L'unità di misura non è mai seguita dal puntino e non va mai espressa al plurale.
 
 \`E possibile estendere la definizione di rapporto e la conseguente definizione di misura anche per la grandezze tra loro incommensurabili, come per esempio lato e diagonale dello stesso quadrato. Il percorso però è più lungo e complesso, poiché il rapporto tra due grandezze commensurabili è sempre un numero razionale mentre il rapporto tra due grandezze incommensurabili non è un numero razionale.
 
@@ -110,23 +116,28 @@ Possiamo naturalmente definire in questo modo anche i numeri interi. Per esempio
 
 Concludiamo quindi affermando che un qualunque numero reale $r$ può essere definito come l'elemento separatore di una coppia di classi numeriche contigue.
 
-I numeri reali sono pertanto il raggruppamento di numero razionali e irrazionali:
+\pagebreak
 
-% figura -- \usetikzlibrary{decorations.pathreplacing}
+I numeri reali sono pertanto il raggruppamento di numeri razionali e irrazionali:
+
+\begin{figure}[!htb]
+	\centering\input{./lbr/chap06/fig003_classif_numeri.pgf}
+\end{figure}
 
 Passiamo ora a definire la misura delle grandezze incommensurabili.
-
 Date le lunghezze incommensurabili AB e CD, poniamo
 \[A=\left\{\dfrac{m}{n}\in\insQ^+\mid\dfrac{m}{n}CD<AB\right\}\qquad\text{e}\qquad B=\left\{\dfrac{m}{n}\in\insQ^+\mid\dfrac{m}{n}CD>AB\right\}.\]
 Si dimostra che la coppia $(A\text{, }B)$ è una coppia di classi contigue di $\insQ^+$. In maniera intuitiva possiamo dire che $A$ contiene i valori approssimati per difetto e $B$ contiene i valori approssimati per eccesso del rapporto $\dfrac{m}{n}$.
-Chiamiamo \emph{rapporto fra le lunghe incommensurabili} $AB$ e $CD$ il numero irrazionale dato dalle classi contigue $(A\text{, }B)$.
+Chiamiamo \emph{rapporto fra le lunghezze incommensurabili} $AB$ e $CD$ il numero irrazionale dato dalle classi contigue $(A\text{, }B)$.
 
 
 \section{Proporzionalità tra grandezze}
 
 \begin{definizione}
 Date quattro grandezze $A$, $B$, $C$ e $D$, le prime due omogenee tra loro così come le ultime due, queste formano una \emph{proporzione} se il rapporto delle prime due è uguale al rapporto delle ultime due. Si scrive
-\[ A : B = C : D\]
+\begin{empheq}[box=\fbox]{equation*}
+A : B = C : D
+\end{empheq}
 e si legge ``$A$ sta a $B$ come $C$ sta a $D$''.
 \end{definizione}
 
@@ -145,7 +156,7 @@ In una proporzione
 Se in una proporzione tra grandezze tutte omogenee i medi sono uguali tra loro $A : B = B : C$, la proporzione si dice \emph{continua}, la grandezza $B$ si chiama \emph{media proporzionale} e la grandezza $C$ si dice \emph{terza proporzionale}.
 \end{definizione}
 
-\begin{teorema}[fondamentale delle proporsioni]
+\begin{teorema}[fondamentale delle proporzioni]\label{teo:fond_prop}
 Condizione necessaria e sufficiente affinché quattro grandezze siano in proporzione è che siano in proporzione le loro misure.
 \end{teorema}
 
@@ -171,7 +182,7 @@ Condizione necessaria e sufficiente affinché quattro numeri siano in proporzion
 
 \subsection{Proprietà delle proporzioni}
 
-Grazie al teorema fondamentale delle proporzioni possiamo trasferire le proprietà delle proporzioni tra numeri alle proporzioni tra grandezze.
+Grazie al teorema fondamentale delle proporzioni (teorema~\ref{teo:fond_prop}) possiamo trasferire le proprietà delle proporzioni tra numeri alle proporzioni tra grandezze.
 
 \begin{enumerate*}
 \item \textbf{Proprietà dell'invertire}\\
@@ -184,11 +195,15 @@ Se le quattro grandezze sono tutte omogenee, possiamo scambiare tra loro i medi 
 
 \item \textbf{Proprietà del comporre}
 La somma delle prime due grandezze sta alla prima (o alla seconda) grandezza come la somma delle altre due sta alla terza (o alla quarta).
-\[A : B = C : D \:\Rightarrow\: (A + B) : A = (C + D) : C\qquad\text{e}\qquad A : B = C : D \:\Rightarrow\: (A + B) : B = (C + D) : D\]
+\[A : B = C : D \:\Rightarrow\: (A + B) : A = (C + D) : C\]
+\noindent e
+\[A : B = C : D \:\Rightarrow\: (A + B) : B = (C + D) : D\]
 
 \item \textbf{Proprietà dello scomporre}
 La differenza tra la prima e la seconda grandezza sta alla prima (o alla seconda) grandezza come la differenza tra le altre due sta alla terza (o alla quarta). Questa proprietà richiede che ogni antecedente sia  maggiore del proprio conseguente. Se dunque $A > B$ e $C > D$ avremo che
-\[A : B = C : D \:\Rightarrow\: (A - B) : A = (C - D) : C\qquad\text{e}\qquad A : B = C : D \:\Rightarrow\: (A - B) : B = (C - D) : D\]
+\[A : B = C : D \:\Rightarrow\: (A - B) : A = (C - D) : C\]
+\noindent e
+\[A : B = C : D \:\Rightarrow\: (A - B) : B = (C - D) : D\]
 \end{enumerate*}
 
 In riferimento alla disuguaglianza precedente, va precisato che se quattro grandezze sono in proporzione, tra antecedenti e conseguenti intercorre sempre la stessa relazione, vale a dire che se la prima grandezza è uguale, maggiore o minore della seconda, anche la terza sarà uguale, maggiore o minore della quarta.
@@ -199,13 +214,13 @@ Date tre grandezze $A$, $B$ e $C$, con $A$ e $B$ omogenee tra loro, esiste ed è
 
 \begin{proof}
 Siano $A$, $B$ e $C$ tre grandezze, le prime due omogenee tra loro. Supponiamo che esista una quarta grandezza $X$, omogenea a $C$, tale che valga la proporzione $A : B = C : X$.
-Sostituendo alle grandezze le loro misure, per il teorema fondamentale dovrà essere $a : b = c : x$.
+Sostituendo alle grandezze le loro misure, per il teorema fondamentale delle proporzioni (\ref{teo:fond_prop}) dovrà essere $a : b = c : x$.
 Applichiamo ora la proprietà fondamentale delle proporzioni numeriche, uguagliando il prodotto dei medi a quello degli estremi $ax = bc$.
 Risolvendo l'equazione in $x$ otteniamo $x = \dfrac{bc}{a}$, e poiché $a$, $b$ e $c$ sono diversi da zero (e positivi), in quanto misure di grandezze geometriche, quest'equazione avrà come soluzione uno e un solo numero reale (positivo), in quanto la soluzione di un'equazione di primo grado, se esiste, è unica.
 Questo numero reale sarà quindi la misura della quarta grandezza $X$, e poiché tra grandezze omogenee ad ogni numero reale corrisponde una e una sola grandezza, questa quarta proporzionale esiste ed è unica.
 \end{proof}
 
-\subsection{Grandezze direttamente e inversamente proprozionali}
+\subsection{Grandezze direttamente e inversamente proporzionali}
 
 Consideriamo due classi di grandezze
 \[A\text{,}\quad B\text{,}\quad C\text{,}\quad D\text{,}\quad \ldots{}\]
@@ -217,11 +232,11 @@ Le grandezze di queste due classi si dicono \emph{direttamente proporzionali} qu
 \[A : B = A' : B'\qquad\qquad A : C = A' : C'\qquad\qquad B : C = B' : C'\qquad\qquad\ldots{}\]
 Se poi le grandezze della prima classe sono omogenee con quelle della seconda, allora possiamo permutare i medi
 \[A : A' = B : B'\qquad\qquad A : A' = C : C'\qquad\qquad B : B' = C : C'\qquad\qquad\ldots{}\]
-E, applicando la proprietà transitiva dell'uguaglianza, otteniamo
+e, applicando la proprietà transitiva dell'uguaglianza, otteniamo
 \[A : A' = B : B' = C : C' = \ldots{} = k\]
-da cui segue che il rapporto tra due grandezze corrispondenti è costante. Questo rapporto costante è un numero detto \emph{costante di proporzionalità}.
+da cui segue che \emph{il rapporto tra due grandezze corrispondenti è costante}. Questo rapporto costante è un numero detto \emph{costante di proporzionalità}.
 
-Se le grandezze della prima classe non fossero omogenee con quelle della seconda, dovremmo passare dalla proporzionalità tra le grandezze a quella tra le loro misure (reso sempre possibile dal teorema fondamentale), ed in questo caso sarebbe il rapporto tra le loro misure ad essere costante.
+Se le grandezze della prima classe non fossero omogenee con quelle della seconda, dovremmo passare dalla proporzionalità tra le grandezze a quella tra le loro misure (reso sempre possibile dal teorema fondamentale delle proporzioni -- \ref{teo:fond_prop}), ed in questo caso sarebbe il rapporto tra le loro misure ad essere costante.
 
 Per determinare se due classi di grandezze sono direttamente proporzionali si applica il seguente teorema
 \begin{teorema}\label{teo:6.1}
@@ -253,7 +268,7 @@ Analogamente si dimostra che se $A < B$, allora $A' < B'$.
 
 Sempre per la seconda proprietà, moltiplicando le grandezze per uno stesso numero naturale avremo che ad $n\cdot A$ corrisponderà $n\cdot A'$ e ad $m\cdot B$ corrisponderà $m\cdot B'$. Per quanto premesso, avremo che se $n\cdot A = m\cdot B$, sarà anche $n\cdot A' = m\cdot B'$; se $n\cdot A > m\cdot B$, sarà anche $n\cdot A' > m\cdot B'$ ed infine, se $n\cdot A < m\cdot B$, ne deriverà che $n\cdot A' < m\cdot B'$.
 Questo vuol dire che, andando a costruire il rapporto tra le grandezze, avremo
-\[\dfrac{A}{B} = \dfrac{m}{n} \:\Leftarrow\: \dfrac{A'}{B'} = \dfrac{m}{n}\qquad \dfrac{A}{B} > \dfrac{m}{n} \:\Leftarrow\: \dfrac{A'}{B'} > \dfrac{m}{n}\qquad \dfrac{A}{B} < \dfrac{m}{n} \:\Leftarrow\: \dfrac{A'}{B'} < \dfrac{m}{n}.\]
+\[\dfrac{A}{B} = \dfrac{m}{n} \:\Rightarrow\: \dfrac{A'}{B'} = \dfrac{m}{n}\qquad \dfrac{A}{B} > \dfrac{m}{n} \:\Rightarrow\: \dfrac{A'}{B'} > \dfrac{m}{n}\qquad \dfrac{A}{B} < \dfrac{m}{n} \:\Rightarrow\: \dfrac{A'}{B'} < \dfrac{m}{n}.\]
  
 Dunque i rapporti $\dfrac{A}{B}$ e $\dfrac{A'}{B'}$ ammettono gli stessi valori approssimati per difetto o per eccesso, e quindi questi rapporti rappresentano lo stesso numero reale. Per cui, concludendo, si ha $A : B = A' : B'$.
 \end{itemize*}
@@ -261,20 +276,25 @@ Dunque i rapporti $\dfrac{A}{B}$ e $\dfrac{A'}{B'}$ ammettono gli stessi valori 
 
 \subsection{Grandezze inversamente proporzionali}
 
-Le grandezze di due classi in corrispondenza biunivoca si dicono inversamente proporzionali quando il rapporto di due grandezze qualunque della prima classe è uguale al rapporto inverso delle due grandezze corrispondenti della seconda classe, cioè quando valgono le proporzioni
+Le grandezze di due classi in corrispondenza biunivoca si dicono \emph{inversamente proporzionali} quando il rapporto di due grandezze qualunque della prima classe è uguale al rapporto inverso delle due grandezze corrispondenti della seconda classe, cioè quando valgono le proporzioni
 \[A : B = B' : A'\qquad\qquad A : C = C' : A'\qquad\qquad B : C = C' : B'\qquad\qquad \ldots{}\]
 Se dalla proporzionalità tra le grandezze passiamo a quella tra le loro misure avremo
 \[a : b = b' : a'\qquad\qquad a : c = c' : a'\qquad\qquad b : c = c' : b'\qquad\qquad \ldots{}\]
 Applicando la proprietà fondamentale della proporzionalità tra numeri (il prodotto dei medi è uguale al prodotto degli estremi) avremo
 \[aa' = bb'\qquad\qquad aa' = cc'\qquad\qquad bb' = cc'\qquad\qquad \ldots{}\]
-E, applicando la proprietà transitiva dell'uguaglianza
+e, applicando la proprietà transitiva dell'uguaglianza
 \[aa' = bb' = cc' = \ldots{} =k\]
-da cui segue che il prodotto tra le misure di due grandezze corrispondenti è costante. Anche in questo caso il prodotto costante è un numero detto costante di proporzionalità.
+da cui segue che \emph{il prodotto tra le misure di due grandezze corrispondenti è costante}. Anche in questo caso il prodotto costante è un numero detto \emph{costante di proporzionalità}.
 
-Teoremi su particolari classi di grandezze direttamente proporzionali
+\subsubsection{Teoremi su particolari classi di grandezze direttamente proporzionali}
+
 \begin{teorema}\label{teo:6.2}
 I rettangoli aventi altezze congruenti sono proporzionali alle rispettive basi.
 \end{teorema}
+
+\begin{figure}[!htb]
+	\centering\input{./lbr/chap06/fig004_classi_rettangoli.pgf}	
+\end{figure}
 
 \begin{proof}
 Consideriamo la classe di grandezze costituita da tutti i rettangoli con altezze congruenti e la classe costituita dalle rispettive basi. Queste due classi sono in corrispondenza biunivoca, in quanto ad ogni rettangolo corrisponde una ed una sola base e viceversa.
@@ -292,8 +312,8 @@ $R_2 : R_3 = CD  : EG$, \ldots{} e quindi le due classi di grandezze sono dirett
 
 In modo analogo si dimostra che:
 \begin{itemize*}
-\item I rettangoli aventi basi congruenti sono direttamente proporzionali alle rispettive altezze.
-\item Gli archi di un stessa circonferenza sono direttamente proporzionali ai corrispondenti angoli al centro.
+\item \emph{I rettangoli aventi basi congruenti sono direttamente proporzionali alle rispettive altezze.}
+\item \emph{Gli archi di una stessa circonferenza sono direttamente proporzionali ai corrispondenti angoli al centro.}
 \end{itemize*}
 
 
@@ -304,8 +324,12 @@ Un fascio di rette parallele determina su due trasversali classi di segmenti dir
 \end{teorema}
 
 \begin{proof}
-Assumiamo come ipotesi di avere cinque rette parallele $a$, $b$, $c$, $d$ ed $e$. Dimostriamo che sono proporzione i segmenti 
-$AB : A'B' = BC : B'C' = AC : A'C' = BD : B'D' = \ldots{}$
+Assumiamo come ipotesi di avere quattro rette parallele $a$, $b$, $c$ e $d$. Dimostriamo che sono proporzione i segmenti 
+$A_1B_1 : A_2B_2 = B_1C_1 : B_2C_2 = A_1C_1 : A_2C_2 = B_1D_1 : B_2D_2$.
+
+\begin{figure}[!htb]
+	\centering\input{./lbr/chap06/fig005_talete_gen.pgf}	
+\end{figure}
 
 A questo scopo ricorriamo alla condizione necessaria e sufficiente sulla proporzionalità tra grandezze (teorema~\ref{teo:6.1}):
 condizione necessaria e sufficiente affinché due classi di grandezze in corrispondenza biunivoca siano direttamente proporzionali è che
@@ -317,10 +341,10 @@ condizione necessaria e sufficiente affinché due classi di grandezze in corrisp
 La prima proprietà è stata dimostrata nel capitolo~\ref{chap:circonferenza}, dove è stato esposto il teorema di Talete: a segmenti congruenti su una trasversale corrispondono segmenti congruenti sull'altra trasversale.
 
 Dimostriamo allora che vale anche la seconda proprietà.
-Consideriamo il fascio di rette parallele tagliato da due trasversali della figura.
-Abbiamo come ipotesi che $CD = AB + BC$ e dobbiamo dimostrare che $C'D' = A'B' + B'C'$.
+Consideriamo il fascio di rette parallele tagliato da due trasversali $t_1$ e $t_2$ della figura.
+Abbiamo come ipotesi che $C_1D_1 = A_1B_1 + B_1C_1$ e dobbiamo dimostrare che $C_2D_2 = A_2B_2 + B_2C_2$.
 
-Poiché $CD = AB + BC$, determiniamo al suo interno il punto $E$ che lo divide nei due segmenti $CE=AB$ e $ED=BC$. Tracciamo la parallela alle rette date passante per $F$, che intersecherà la trasversale $t'$ nel punto $F'$. Per la prima parte del teorema, avremo che da $CF=AB$ segue che $C'F' = A'B'$ e da $FD = BC$ segue che $F'D'=B'C'$. Ma $C'D'=C'F' + F'D' = A'B' + B'C'$.
+Poiché $C_1D_1 = A_1B_1 + B_1C_1$, determiniamo al suo interno il punto $E_1$ che lo divide nei due segmenti $C_1E_1=A_1B_1$ e $E_1D_1=B_1C_1$. Tracciamo la parallela $e$ alle rette date passante per $E_1$, che intersecherà la trasversale $t_2$ nel punto $E_2$. Per la prima parte del teorema, avremo che da $C_1E_1=A_1B_1$ segue che $C_2E_2 = A_2B_2$ e da $E_1D_1 = B_1C_1$ segue che $E_2D_2=B_2C_2$. Ma $C_2D_2=C_2E_2 + E_2D_2 = A_2B_2 + B_2C_2$.
 \end{proof}
 
 \subsection{Conseguenze del teorema di Talete}
@@ -329,6 +353,10 @@ Dal teorema di Talete discendono due importanti corollari.
 \begin{corollario}\label{cor:6.1}
 Una retta parallela ad un lato di un triangolo determina sugli altri due lati, o sui loro prolungamenti, segmenti proporzionali.
 \end{corollario}
+
+\begin{figure}[!htb]
+	\centering\input{./lbr/chap06/fig006_talete_gen_coroll1.pgf}	
+\end{figure}
 
 \begin{proof}
 Sia $ABC$ il triangolo in questione. Tracciamo una retta parallela al lato $BC$ che intersechi gli altri due nei punti $D$ ed $E$. Vogliamo dimostrare che $AE : AD = EC : DB$.
@@ -340,6 +368,10 @@ La stessa dimostrazione vale nel caso in cui la parallela al lato $BC$ interseca
 \begin{corollario}\label{cor:6.2}
 La retta che divide due lati di un triangolo (o i loro prolungamenti) in segmenti proporzionali è parallela al terzo lato.
 \end{corollario}
+
+\begin{figure}[!htb]
+	\centering\input{./lbr/chap06/fig007_talete_gen_coroll2.pgf}	
+\end{figure}
 
 \begin{proof}
 Abbiamo in ipotesi che $AE : AD = AC : AB$ e dobbiamo dimostrare che $DE$ è parallela a $BC$.
@@ -353,7 +385,8 @@ Un'altra importante conseguenza del teorema di Talete è il \emph{teorema della 
 La bisettrice di un angolo interno di un triangolo divide il lato opposto in parti proporzionali agli altri due lati.
 \end{teorema}
 
-\noindent Ipotesi: $A\widehat{B}D\cong D\widehat{B}C$.\tab Tesi: $AD : DC = AB : BC$.
+\noindent\begin{minipage}{0.65\textwidth}\parindent15pt
+\noindent Ipotesi: $A\widehat{B}D\cong D\widehat{B}C$.\tab\tab Tesi: $AD : DC = AB : BC$.
 
 \begin{proof}
 Dal vertice $C$ tracciamo la parallela alla bisettrice $BD$ che incontra il prolungamento del lato $AB$ in $E$. Notiamo le seguenti congruenze tra angoli: $A\widehat{D}B\cong B\widehat{E}C$ in quanto corrispondenti rispetto alle parallele $BD$ ed $EC$ tagliate da $AE$; $D\widehat{B}C\cong B\widehat{C}E$ in quanto alterni interni rispetto alle parallele $BD$ ed $EC$ tagliate da $BC$.
@@ -361,9 +394,16 @@ Confrontando queste congruenze con quella in ipotesi ed applicando la proprietà
 Applichiamo ora il primo corollario del teorema di Talete (corollario~\ref{cor:6.1}) al triangolo $AEC$. Si ha $AB : BE = AD : DC$. 
 Per quanto appena dimostrato possiamo sostituire $BC$ a $BE$ ed avremo $AB : BC = AD : DC$.
 \end{proof}
+\end{minipage}\hfil
+\begin{minipage}{0.35\textwidth}
+	\centering\input{./lbr/chap06/fig008_teo_bisettrice.pgf}
+\end{minipage}\vspace{5pt}
 
 \subsubsection{Dividere un dato segmento in parti direttamente proporzionali a più segmenti dati}
 
+\begin{wrapfigure}{r}{0.4\textwidth}
+	\centering\input{./lbr/chap06/fig009_prop_segm.pgf}
+\end{wrapfigure}
 Sia $PQ$ il segmento da dividere in parti direttamente proporzionali a tre segmenti dati $a$, $b$ e $c$.
 Da un suo estremo, ad esempio $P$, si tracci una semiretta (non contenente $Q$) e su di essa si prendano i segmenti $PA$, $AB$ e $BC$ rispettivamente congruenti ad $a$, $b$ e $c$; si unisca $C$ con $Q$ e si traccino per $A$ e per $B$ le parallele a $CQ$ che incontrano il segmento $PQ$ rispettivamente in $A'$ e $B'$. Il segmento $PQ$ risulta così diviso nei segmenti $PA'$, $A'B'$ e $B'Q$ che, per il teorema di Talete, sono direttamente proporzionali ai segmenti $a$, $b$ e $c$.
 
@@ -371,31 +411,40 @@ Da notare che se i segmenti dati fossero tutti fra loro congruenti, il problema 
 
 \subsubsection{Costruire il segmento quarto proporzionale dopo tre segmenti dati}
 
+\begin{wrapfigure}{r}{0.4\textwidth}
+	\centering\input{./lbr/chap06/fig010_quarto_prop.pgf}
+\end{wrapfigure}
 Siano $a$, $b$, $c$ i tre segmenti dati; si vuol costruire un segmento $d$ tale che valga la proporzione $a:b=c:d$.
 Si consideri un angolo di vertice $O$ e su un suo lato si prendano i punti $A$ e $B$ tali che i segmenti $OA$ ed $AB$ siano congruenti rispettivamente ai segmenti $a$ e $b$; sull'altro lato dell'angolo si prenda il punto $C$ tale che il segmento $OC$ sia congruente al segmento $c$. Si traccino la retta $AC$ e la parallela ad essa per $B$, indicando con $D$ il punto in cui quest'ultima incontra la semiretta $OC$. Per il teorema di Talete il segmento $CD$ è il quarto proporzionale richiesto. 
 
-Si noti che, per il teorema della quarta proporzionale, il segmento richiesto è unico, quindi si giunge allo stesso segmento indipendentemente dall'angolo utilizzato nella costruzione. 
+Si noti che, per il teorema della quarta proporzionale, il segmento richiesto è unico, quindi si giunge allo stesso segmento indipendentemente dall'angolo utilizzato nella costruzione.
 
 Nel caso particolare in cui $b = c$, la costruzione appena descritta consente di trovare il segmento terzo proporzionale a due segmenti dati.
 
 \subsubsection{Proprietà}
 
-Dato un angolo di vertice $V$ e lati due semirette $r$ ed $s$, staccare su $r$ il segmento $VR_5$ e su $S$ il segmento $VS_1$, di lunghezza arbitraria. Successivamente, usando un compasso, staccare su $s$ i segmenti $S_1S_2$, $S_2S_3$, $S_3S_4$ e $S_4S_5$, tutti congruenti a $VS_1$. Dimostrare che, tracciando la retta per $R_5S_5$ e le corrispondenti parallele per $S_1$, $S_2$, $S_3$ ed $S_4$, il segmento $VR_5$ risulta suddiviso in parti uguali.
+\begin{wrapfigure}{r}{0.45\textwidth}
+	\centering\input{./lbr/chap06/fig011_prop_div_retta.pgf}
+\end{wrapfigure}
+Dato un angolo di vertice $V$ e lati due semirette $r$ ed $s$, staccare su $r$ il segmento $VR_5$ e su $s$ il segmento $VS_1$, di lunghezza arbitraria. Successivamente, usando un compasso, staccare su $s$ i segmenti $S_1S_2$, $S_2S_3$, $S_3S_4$ e $S_4S_5$, tutti congruenti a $VS_1$. Dimostrare che, tracciando la retta per $R_5S_5$ e le corrispondenti parallele per $S_1$, $S_2$, $S_3$ ed $S_4$, il segmento $VR_5$ risulta suddiviso in parti uguali.
 
 Osservando che questo procedimento può essere esteso per induzione a qualunque numero finito di segmenti, si può constatare che la divisibilità di un segmento in parti uguali non è un postulato autonomo, ma una proprietà intrinseca della geometria euclidea.
 
 
 \section{Avere la stessa forma}
 
-Osserviamo le coppie di figure sotto rappresentate e cerchiamo di capire cosa intendiamo dire quando affermiamo che due figure hanno  la stessa forma.
+\begin{wrapfigure}{r}{0.37\textwidth}
+	\centering\input{./lbr/chap06/fig012_stessa_forma.pgf}
+\end{wrapfigure}
+Osserviamo le coppie di figure rappresentate a lato e cerchiamo di capire cosa intendiamo dire quando affermiamo che due figure hanno  la stessa forma.
 
-I due cerchi della figura hanno certamente la stessa forma.
+I due cerchi $C_1$ e $C_1$ hanno certamente la stessa forma.
 
-In questa figura i poligoni $P_1$ e $P_2$ hanno gli angoli rispettivamente congruenti, ma non possiamo dire che abbiano la stessa forma.
+I poligoni $P_1$ e $P_2$ hanno gli angoli rispettivamente congruenti, ma non possiamo dire che abbiano la stessa forma.
 
-In questa figura osserviamo che i lati di $HKLM$ sono rispettivamente la metà dei lati di $DEFG$, ma anche in questo caso non possiamo dire che i due disegni abbiano la stessa forma: gli angoli formati dai lati non sono rispettivamente congruenti.
+I segmenti di $HKLM$ sono rispettivamente la metà dei segmenti di $DEFG$, ma anche in questo caso non possiamo dire che i due disegni abbiano la stessa forma: gli angoli formati dai segmenti non sono rispettivamente congruenti.
 
-In questa figura i poligoni $P_3$ e $P_4$ non hanno la stessa forma, addirittura non hanno lo stesso numero di lati.
+I poligoni $P_3$ e $P_4$ non hanno la stessa forma, addirittura non hanno lo stesso numero di lati.
 
 I triangoli $AWZ$ e $BCZ$ hanno la stessa forma. Hanno gli angoli rispettivamente congruenti. Inoltre, essendo $B$ punto medio di $WZ$ e $C$ punto medio di $AZ$, i lati di $BCZ$ sono ciascuno la metà dei corrispondenti lati del triangolo $AWZ$, anche il lato $BC$ che congiunge i punti è la metà di $AW$, per un teorema che hai già studiato; in definitiva, il rapporto tra $BC$ e $WA$, tra $BZ$ e $WZ$, tra $CZ$ e $AZ$ è sempre di 1 a 2; i lati sono quindi in proporzione  $AZ : CZ = WZ : BZ = AW : BC$.
 
@@ -403,8 +452,11 @@ I triangoli $AWZ$ e $BCZ$ hanno la stessa forma. Hanno gli angoli rispettivament
 Due poligoni $P$ e $Q$ aventi angoli rispettivamente congruenti e lati in proporzione si dicono \emph{simili} e scriviamo $P\sim Q$.
 \end{definizione}
 
+\begin{wrapfigure}{r}{0.55\textwidth}
+	\centering\input{./lbr/chap06/fig013_pol_simili.pgf}
+\end{wrapfigure}
 Nella figura precedente, i due triangoli $AWZ$ e $CBZ$ sono simili.
-Sono simili anche i due trapezi della figura seguente, hanno infatti gli angoli congruenti e i lati in proporzione: i lati del primo trapezio sono tutti il doppio dei lati del secondo trapezio.
+Sono simili anche i due trapezi della figura a lato, hanno infatti gli angoli congruenti e i lati in proporzione: i lati del primo trapezio sono tutti il doppio di quelli del secondo trapezio.
 
 \begin{definizione}
 Si chiamano \emph{omologhi} sia i vertici degli angoli rispettivamente congruenti sia i lati e le diagonali che congiungono vertici omologhi. Si chiama \emph{rapporto di similitudine} il rapporto tra due lati omologhi.
@@ -429,6 +481,10 @@ La definizione di triangoli simili non si differenzia da quella data per i polig
 Due triangoli aventi due angoli rispettivamente congruenti sono simili.
 \end{teorema}
 
+\begin{figure*}[!htb]
+	\centering\input{./lbr/chap06/fig014_tri_simili1.pgf}\hspace{2cm}\input{./lbr/chap06/fig015_tri_simili11.pgf}
+\end{figure*}
+
 \begin{proof}
 Osserviamo che se due triangoli hanno due angoli congruenti, per il teorema della somma degli angoli interni di un triangolo, avranno anche il terzo angolo congruente.
 Nella figura, i due triangoli $ABC$ e $DEJ$ hanno $\widehat{A}\cong \widehat{D}$ e $\widehat{B}\cong \widehat{E}$ di conseguenza $\widehat{C}\cong \widehat{J}$. Vogliamo dimostrare che i due triangoli hanno anche i lati in proporzione.
@@ -448,6 +504,10 @@ Due triangoli aventi due lati in proporzione e l'angolo tra essi compreso congru
 %Con riferimento alla figura
 \noindent Ipotesi: $AC : DF = AB : DE$, $\widehat{A}\cong \widehat{D}$.\tab Tesi: $B\cong E$, $C\cong F$, $CB : FE = AB : DE$.
 
+\begin{figure*}[!htb]
+	\centering\input{./lbr/chap06/fig016_tri_simili2.pgf}\hspace{2cm}\input{./lbr/chap06/fig017_tri_simili21.pgf}
+\end{figure*}
+
 \begin{proof}
 Se $DF=AC$, dalla proporzione in ipotesi $AC:DF=AB:DE$ si avrebbe $DE\cong AB$ e i due triangoli sarebbero congruenti per il primo criterio di congruenza, pertanto anche simili.
 Supponiamo $AC>DF$; su $AC$ fissiamo un punto $K$ in modo che $AK=DF$, da $K$ tracciamo la parallela a $CB$ che incontra $AB$ in $M$. Si ha che $\widehat{M}\cong \widehat{B}$ e $\widehat{K}\cong \widehat{C}$ perché corrispondenti delle rette parallele $KM$ e $CB$ rispettivamente con trasversale $AB$ e $AC$, dunque $AMK$ e $ABC$ sono simili per il primo criterio di similitudine, quindi $AB:AM=AC:AK=CB:KM$.
@@ -462,6 +522,10 @@ Due triangoli aventi i lati in proporzione sono simili.
 
 \noindent Ipotesi: $AC : DF = AB : DE = CB : EF$.\tab Tesi: $\widehat{A}\cong \widehat{D}$, $\widehat{B}\cong \widehat{E}$, $\widehat{C}\cong \widehat{F}$.
 
+\begin{figure*}[!htb]
+	\centering\input{./lbr/chap06/fig018_tri_simili3.pgf}\hspace{2cm}\input{./lbr/chap06/fig019_tri_simili31.pgf}
+\end{figure*}
+
 \begin{proof}
 Se $DF=AC$, dall'ipotesi si avrebbe anche $DE=AB$ e $FE=CB$, i due triangoli sarebbero allora congruenti per il terzo criterio di congruenza e dunque anche simili.
 Supponiamo $AC>DF$; su $AC$ fissiamo un punto $K$ in modo che $AK=DF$ e da questo tracciamo la parallela a $CB$ che incontra $AB$ in $M$ ottenendo $\widehat{M}\cong \widehat{B}$ e $\widehat{K}\cong \widehat{C}$ perché corrispondenti delle rette parallele $KM$ e $CB$ rispettivamente con trasversale $AB$ e $AC$. Per il 1\textsuperscript{o} criterio di similitudine $ABC\sim AKM$, possiamo allora scrivere $AC:AK=AB:AM=CB:KM$; confrontandola con la proporzione nell'ipotesi e tenendo presente la costruzione effettuata e l'unicità della quarta proporzionale, si deducono le congruenze $AM=DE$ e $KM=EF$. Pertanto risulta $AMK\cong DEF$ per il 3\textsuperscript{o} criterio di congruenza e dunque anche $\widehat{A}\cong \widehat{D}$, $\widehat{M}\cong \widehat{E}$, $\widehat{K}\cong \widehat{F}$; quindi anche $\widehat{A}\cong \widehat{D}$, $\widehat{B}\cong \widehat{E}$, $\widehat{C}\cong \widehat{F}$.
@@ -469,11 +533,26 @@ Supponiamo $AC>DF$; su $AC$ fissiamo un punto $K$ in modo che $AK=DF$ e da quest
 
 \subsection{Proprietà dei triangoli simili}
 
-Nei paragrafi precedenti abbiamo dimostrato che in due triangoli simili, il rapporto di due lati omologhi è uguale
+Nei paragrafi precedenti abbiamo dimostrato che in due triangoli simili, il rapporto tra due lati omologhi è uguale
 \begin{itemize*}
+\noindent\begin{minipage}{0.35\textwidth}\parindent15pt
 \item al rapporto tra le rispettive altezze;
+\end{minipage}\hfil
+\begin{minipage}{0.65\textwidth}
+	\centering\input{./lbr/chap06/fig020_tri_simili_alt.pgf}
+\end{minipage}\vspace{5pt}
+\noindent\begin{minipage}{0.35\textwidth}\parindent15pt
 \item al rapporto tra le rispettive mediane;
+\end{minipage}\hfil
+\begin{minipage}{0.65\textwidth}
+	\centering\input{./lbr/chap06/fig021_tri_simili_med.pgf}
+\end{minipage}\vspace{5pt}
+\noindent\begin{minipage}{0.35\textwidth}\parindent15pt
 \item al rapporto tra le bisettrici uscenti da due vertici omologhi.
+\end{minipage}\hfil
+\begin{minipage}{0.65\textwidth}
+	\centering\input{./lbr/chap06/fig022_tri_simili_bis.pgf}
+\end{minipage}\vspace{5pt}
 \end{itemize*}
 
 Ricordiamo che il rapporto di similitudine è il rapporto tra due lati omologhi.
@@ -484,6 +563,10 @@ Il rapporto tra i perimetri di due triangoli simili è uguale al rapporto di sim
 
 \noindent Ipotesi: $AB:A'B'=AC:A'C'=BC:B'C'$.\tab Tesi: $2p : 2p' = AB : A'B'$.
 
+\begin{figure*}[!htb]
+	\centering\input{./lbr/chap06/fig023_tri_simili_2p.pgf}
+\end{figure*}
+
 \begin{proof}
 Dall'ipotesi, applicando la proprietà del comporre si ha $(AB+AC+BC):AB=(A'B'+A'C'+B'C'):A'B'$ e permutando i medi si ottiene la tesi $(AB+AC+BC):(A'B'+A'C'+B'C')=AB:A'B'$.
 \end{proof}
@@ -493,6 +576,10 @@ Il rapporto tra le aree\footnote{una definizione più rigorosa dell'area di un p
 \end{teorema}
 
 \noindent Ipotesi: $AB:A'B'=AC:A'C'=BC:B'C'$.\tab Tesi: $A_{ABC}=A_{A'B'C'}=\overline{AB}^2:\overline{A'B'}^2$.
+
+\begin{figure*}[!htb]
+	\centering\input{./lbr/chap06/fig024_tri_simili_area.pgf}
+\end{figure*}
 
 \begin{proof}
 Prendiamo come riferimento la figura, sappiamo che 
@@ -509,6 +596,10 @@ Dati due poligoni simili, le diagonali uscenti da uno stesso vertice li decompon
 \end{teorema}
 
 \noindent Ipotesi: $ABCDE\sim A'B'C'D'E'$.\tab Tesi: $ABC\sim A'B'C'$; $ACE\sim A'C'E'$; $ECD\sim E'C'D'$.
+
+\begin{figure*}[!htb]
+	\centering\input{./lbr/chap06/fig025_fig_simili_decomp.pgf}
+\end{figure*}
 
 \begin{proof}
 Ricordiamo che due poligoni si dicono simili se hanno tutti gli angoli congruenti e tutti i lati ordinatamente in proporzione. Consideriamo, ad esempio, i due pentagoni simili della figura; tracciamo le diagonali $CE$, $CA$ e le corrispondenti $C'E'$, $C'A'$. Confrontiamo i triangoli $ABC$ e $A'B'C'$; essi sono simili per il secondo criterio in quanto hanno due lati in proporzione $AB : A'B' = BC : B'C'$ e l'angolo in $B$ congruente a quello in $B'$. Possiamo quindi scrivere la proporzione tra i lati omologhi $AB : A'B' = AC : A'C'$ e dedurre che $B\widehat{A}C\cong B'\widehat{A'}C'$. Dalla similitudine dei due poligoni deduciamo che $C\widehat{A}E\cong C'\widehat{A'}E'$ perché differenze di angoli congruenti, e dalla proporzione $AB:A'B'=AE:A'E'$, confrontata con la precedente, deduciamo la proporzione $AC:A'C'=AE:A'E'$. Consideriamo a questo punto i triangoli $ACE$ e $A'C'E'$; anch'essi sono simili per il secondo criterio. Ragionando in modo analogo si dimostra la similitudine dell'ultima coppia di triangoli.
@@ -527,7 +618,12 @@ Ricordiamo che si chiama raggio di un poligono regolare il raggio della circonfe
 
 Consideriamo, ad esempio, due pentagoni regolari: $ABCDE$ e $A'B'C'D'E'$
 
-\noindent Ipotesi: $ABCDE\sim A'B'C'D'E'$.\tab Tesi: $2p : 2p' = r : r'$, $2p : 2p' = a : a'$ (dove $r$ ed $r'$ sono i raggi, $a$ e $a'$ gli apotemi).
+\noindent Ipotesi: $ABCDE\sim A'B'C'D'E'$.\\
+Tesi: $2p : 2p' = r : r'$, $2p : 2p' = a : a'$ (dove $r$ ed $r'$ sono i raggi, $a$ e $a'$ gli apotemi).
+
+\begin{figure*}[!htb]
+	\centering\input{./lbr/chap06/fig026_pol_reg_sim_apo.pgf}
+\end{figure*}
 
 \begin{proof}
 Innanzitutto ricordiamo che in due poligoni simili i perimetri stanno tra loro come due lati omologhi, quindi avremo ad esempio che
@@ -554,9 +650,14 @@ Se due corde di una circonferenza si incontrano in un punto interno al cerchio a
 
 \noindent Ipotesi: $AB$ e $CD$ sono due corde che si intersecano in $E$.\tab Tesi: $EB:ED=EC:EA$.
 
+\noindent\begin{minipage}{0.65\textwidth}\parindent15pt
 \begin{proof}
 Dovendo arrivare ad una proporzione tra segmenti, cercheremo di individuare la similitudine tra due triangoli; a questo scopo congiungiamo $B$ con $C$ e $A$ con $D$. Consideriamo i triangoli \ldots\ldots{} ed \ldots\ldots{} Essi hanno: $\ldots\ldots{}\cong\ldots\ldots{}$ perché opposti al vertice, $C\widehat{B}A\cong C\widehat{D}A$ perché insistono \ldots\ldots\ldots{} Dunque risultano simili per il primo criterio di similitudine. Quindi, individuati i lati omologhi, possiamo scrivere la proporzione $BC:DA=EB:ED=EC:EA$.
 \end{proof}
+\end{minipage}\hfil
+\begin{minipage}{0.35\textwidth}
+	\centering\input{./lbr/chap06/fig027_teo_corde.pgf}
+\end{minipage}\vspace{5pt}
 
 \begin{teorema}[delle secanti]
 Se da un punto esterno a un cerchio si conducono due secanti alla circonferenza, allora un'intera secante e la sua parte esterna formano i medi e l'altra secante e la sua parte esterna sono gli estremi di una stessa proporzione.
@@ -564,9 +665,14 @@ Se da un punto esterno a un cerchio si conducono due secanti alla circonferenza,
 
 \noindent Ipotesi: $AB$ e $CD$ sono due corde che si intersecano in $E$ esterno alla circonferenza.\tab Tesi: $EC:ED=EA:EB$.
 
+\noindent\begin{minipage}{0.65\textwidth}\parindent15pt
 \begin{proof}
 Dovendo determinare una proporzione tra segmenti, cercheremo di individuare la similitudine tra due triangoli; a questo scopo congiungiamo $B$ con $C$ e $A$ con $D$. I triangoli $EBC$ ed $EAD$ sono simili perché hanno: $B\widehat{E}C\cong D\widehat{E}A$ in comune, $B\widehat{C}E\cong D\widehat{A}E$ perché insistono sullo stesso arco $DB$. Risultano quindi simili per il primo criterio di similitudine. Possiamo allora scrivere la proporzione tra i lati $EC:ED=EA:EB$.
 \end{proof}
+\end{minipage}\hfil
+\begin{minipage}{0.35\textwidth}
+	\centering\input{./lbr/chap06/fig028_teo_secanti.pgf}
+\end{minipage}\vspace{5pt}
 
 \begin{teorema}[della secante e della tangente]
 Se da un punto esterno a un cerchio si conduce una secante e una tangente alla circonferenza, allora il segmento di tangente è medio proporzionale tra l'intera secante e la sua parte esterna alla circonferenza.
@@ -574,9 +680,14 @@ Se da un punto esterno a un cerchio si conduce una secante e una tangente alla c
 
 \noindent Ipotesi: $B$ punto esterno alla circonferenza, $BA$ tangente in $A$, $BE$ secante in $D$ ed $E$.\tab Tesi: $BE:BA=BA:BD$.
 
+\noindent\begin{minipage}{0.65\textwidth}\parindent15pt
 \begin{proof}
 Dovendo determinare una proporzione tra segmenti, cercheremo di individuare la similitudine tra due triangoli; a questo scopo congiungiamo $A$ con $E$ e $A$ con $D$ e consideriamo i triangoli $EBA$ e $DBA$. Essi hanno $E\widehat{B}A\cong D\widehat{B}A$ perché coincidenti, $B\widehat{E}A\cong D\widehat{B}A$ perché angoli alla circonferenza che insistono sullo stesso arco $AC$. I due triangoli sono simili per il primo criterio di similitudine. Individuati i lati omologhi si può scrivere la proporzione $BE:BA=BA:BD$.
 \end{proof}
+\end{minipage}\hfil
+\begin{minipage}{0.35\textwidth}
+	\centering\input{./lbr/chap06/fig029_teo_tan_secante.pgf}
+\end{minipage}\vspace{5pt}
 
 \section{La sezione aurea}
 
@@ -584,7 +695,12 @@ Dovendo determinare una proporzione tra segmenti, cercheremo di individuare la s
 La \emph{sezione aurea} di un segmento $AB$ è quella parte $AC$ del segmento media proporzionale tra l'intero segmento e la parte rimanente $CB$.
 \end{definizione}
 
-In riferimento alla figura si ha $AB : AC = AC : CB$
+\begin{figure}[!htb]
+	\centering\input{./lbr/chap06/fig030_sez_aurea.pgf}
+	\caption{$AC$ è la sezione aurea del segmento $AB$}\label{fig:sez_aurea}
+\end{figure}
+
+In riferimento alla figura~\ref{fig:sez_aurea} si ha $AB : AC = AC : CB$.
 
 \subsection{Il punto di vista algebrico}
 
@@ -598,7 +714,8 @@ Per la proprietà fondamentale delle proporzioni numeriche si ottiene $x^2=a(a-x
 Possiamo determinare la sezione aurea di un segmento con una costruzione geometrica?
 
 La risposta è positiva. La costruzione che riportiamo è quella di Eulero, che sfrutta il teorema della tangente e della secante.
-La costruzione si compone dei passi passi sotto descritti (per riprodurla si può anche utilizzare un software di geometria dinamica come \emph{Geogebra}):
+La costruzione, riportata in figura~\ref{fig:sez_aurea2}, si compone dei passi passi sotto descritti (per riprodurla si può anche utilizzare un software di geometria dinamica come \emph{Geogebra}):
+
 \begin{enumerate*}
 \item si disegni un segmento $AB$;
 \item si tracci la retta $p$, perpendicolare ad $AB$ e passante per $B$;
@@ -612,7 +729,12 @@ La costruzione si compone dei passi passi sotto descritti (per riprodurla si pu�
 \item sia $C$ il punto di intersezione di $\gamma_3$ con $AB$.
 \end{enumerate*}
 
-Dimostriamo che il segmento $AC$ è la sezione aurea del segmento $AB$.
+\begin{figure}[!htb]
+	\centering\input{./lbr/chap06/fig031_sez_aurea2.pgf}
+	\caption{Costruzione della sezione aurea $AC$ di $AB$}\label{fig:sez_aurea2}
+\end{figure}
+
+Dimostriamo che il segmento $AC$ così costruito è la sezione aurea del segmento $AB$.
 \begin{proof}
 Per costruzione risulta $AB$ tangente a $\gamma_2$ e $AE$ secante, quindi per il teorema della tangente e della secante si ha: $AE : AB = AB : AP$; per la proprietà dello scomporre $(AE-AB):AB=(AB-AP):AP$.
 Per costruzione si sa che: $AB\cong HB\cong PE$ e quindi $AE - AB \cong AE - PE\cong AP$.
@@ -627,24 +749,31 @@ ll lato del decagono regolare è la sezione aurea del raggio della circonferenza
 
 Detto $OA$ il raggio della circonferenza e $AB$ il lato del decagono regolare, si deve dimostrare che: $OA:AB=AB:(OA-AB)$.
 
+\begin{figure*}[!htb]
+	\noindent\centering\input{./lbr/chap06/fig032_dec_reg.pgf}\hspace{2cm}\input{./lbr/chap06/fig033_dec_reg2.pgf}
+\end{figure*}
+
 \begin{proof}
 Quando si congiungono i vertici di un poligono regolare con il centro della circonferenza (inscritta o circoscritta) si ottengono tanti triangoli isosceli quanti sono i lati, e questi triangoli sono tutti congruenti tra loro.
 Consideriamo, per il decagono regolare, uno solo di questi triangoli, per esempio $AOB$. L'angolo in $O$ vale $36\grado$ (è infatti un decimo dell'angolo giro), quindi gli angoli alla base varranno ciascuno $\dfrac{180\grado-36\grado}{2} = 72\grado$.
 
-Tracciamo la bisettrice $AC$ del triangolo $AOB$. Si ottiene il triangolo $AOC$ che è isoscele in quanto ha due angoli di $36\grado$, ed il triangolo $ACB$ anch'esso isoscele poiché ha due angoli di $72\grado$ (l'angolo in $B$ e l'angolo $A\widehat{C}B$).  
-Quindi avremo $AC\cong OC\cong AB$.
-Inoltre, i triangoli $AOB$ e $ACB$ sono simili in quanto hanno gli angoli rispettivamente congruenti.
-Si può quindi scrivere la proporzione $OA:AB=AB:CB$, dove il primo $AB$ è il lato del triangolo $ACB$ e il secondo $AB$ è la base di $AOB$.
-Abbiamo così dimostrato il teorema, in quanto $CB$ è congruente a $OB-OC \cong OA-AB$ ($OA\cong OB$ perché raggi della stessa circonferenza, $OC\cong AB$ per quanto dimostrato precedentemente).
+Tracciamo la bisettrice $BX$ dell'angolo $A\widehat{B}O$. Si ottiene il triangolo $OBX$ che è isoscele in quanto ha due angoli di $36\grado$, ed il triangolo $AXB$ anch'esso isoscele poiché ha due angoli di $72\grado$ (l'angolo $A\widehat{B}X$ e l'angolo $A\widehat{X}B$).  
+Quindi avremo $BX\cong OX\cong AB$.
+Inoltre, i triangoli $AOB$ e $ABX$ sono simili in quanto hanno gli angoli rispettivamente congruenti.
+Si può quindi scrivere la proporzione $OA:AB=AB:AX$, dove il primo $AB$ è il lato obliquo del triangolo $ABX$ e il secondo $AB$ è la base di $AOB$.
+Abbiamo così dimostrato il teorema, in quanto $AX$ è congruente a $OA-OX \cong OA-AB$ ($OA\cong OB$ perché raggi della stessa circonferenza, $OX\cong AB$ per quanto dimostrato precedentemente).
 \end{proof}
 
-Sostituendo alle grandezze le loro misure, chiamando ad esempio $r$ il raggio ed $l$ il lato, la proporzione diventa $r:l=l:(r-l)$.
-Moltiplichiamo tra loro gli estremi ed i medi, si ha $l^2=r^2-rl \:\Rightarrow\: l^2+rl-r^2=0$.
-Risolvendo l'equazione rispetto ad $l$ sui ha $l=\dfrac{-r\pm r\sqrt{5}}{2}$, tenendo conto che è accettabile solo la lunghezza positiva, si ha $l=r\dfrac{\sqrt{5}-1}{2}$.
+Sostituendo alle grandezze le loro misure, chiamando ad esempio $r$ il raggio della circonferenza circoscritta ed $l$ il lato del decagono regolare, la proporzione diventa $r:l=l:(r-l)$.
+Moltiplicando tra loro gli estremi ed i medi, si ha $l^2=r^2-rl \:\Rightarrow\: l^2+rl-r^2=0$.
+Risolvendo l'equazione rispetto ad $l$ si ha $l=\dfrac{-r\pm r\sqrt{5}}{2}$, tenendo conto che è accettabile solo la lunghezza positiva, si ottiene $l=r\dfrac{\sqrt{5}-1}{2}$.
 
+\begin{wrapfigure}{r}{0.35\textwidth}
+	\centering\input{./lbr/chap06/fig034_sin_18.pgf}
+\end{wrapfigure}
 Un'importante applicazione di questo teorema è il calcolo del valore del seno dell'angolo di $18\grado$.
 Considerando la circonferenza goniometrica (di raggio unitario), se poniamo l'angolo di $36\grado$ col vertice nell'origine degli assi, questo verrà dimezzato dall'asse $x$ e di conseguenza verrà dimezzato anche il lato opposto (abbiamo infatti un triangolo isoscele in cui la bisettrice dell'angolo al vertice è anche mediana relativa alla base).
-Il seno di $18\grado$ corrisponde alla lunghezza di $AD$, che è quindi metà del lato del decagono regolare, perciò vale $\sin 18\grado = \dfrac{\sqrt{5}-1}{4}$, in quanto $r = 1$.
+Il seno di $18\grado$ corrisponde alla lunghezza di $XB$, che è quindi metà del lato del decagono regolare, perciò vale $\sin 18\grado = \dfrac{\sqrt{5}-1}{4}$.
 
 \newpage
 

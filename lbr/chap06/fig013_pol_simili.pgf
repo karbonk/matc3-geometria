@@ -1,0 +1,24 @@
+\begin{tikzpicture}[scale=.8,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}[scale=0.8]
+\coordinate (a) at (0,0);
+\coordinate (b) at (6,0);
+\coordinate (c) at (4,2);
+\coordinate (d) at (2,2);
+
+\draw[fill=red!10] (a) node[below] {$A$} -- (b) node[below] {$B$} -- (c) node[above] {$C$} -- (d) node[above] {$D$} -- cycle;
+
+\end{scope}
+
+
+\begin{scope}[xshift=6cm, scale=0.4]
+\coordinate (a) at (0,0);
+\coordinate (b) at (6,0);
+\coordinate (c) at (4,2);
+\coordinate (d) at (2,2);
+
+\draw[fill=blue!10] (a) node[below] {$E$} -- (b) node[below] {$F$} -- (c) node[above] {$G$} -- (d) node[above] {$H$} -- cycle;
+\end{scope}
+
+\end{tikzpicture}

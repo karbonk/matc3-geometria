@@ -1,0 +1,31 @@
+\begin{tikzpicture}[scale=0.7,font=\small,shorten line/.style={shorten >=#1,shorten <=#1}]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (0,0);
+\coordinate (b) at (4,0);
+
+\draw[fill] (a) circle (1.5pt) node[above] {$A$} -- (b) circle (1.5pt) node[above] {$B$};
+\end{scope}
+
+\begin{scope}[xshift=6cm]
+\coordinate (a) at (0,0);
+\coordinate (b) at (2,0);
+
+\draw[fill] (a) circle (1.5pt) -- node[below=7pt, midway] {$\frac{1}{2}AB$} (b) circle (1.5pt);
+\end{scope}
+
+\begin{scope}[xshift=10cm]
+\coordinate (a) at (0,0);
+\coordinate (b) at (6,0);
+
+\foreach \x in {2,4}{%
+\draw ({\x},-1pt) -- ({\x},1pt);
+}
+
+\draw[fill] (a) circle (1.5pt) -- node[below=7pt, midway] {$\frac{3}{2}AB=\frac{1}{2}AB+\frac{1}{2}AB+\frac{1}{2}AB$} (b) circle (1.5pt);
+
+\end{scope}
+
+
+\end{tikzpicture}

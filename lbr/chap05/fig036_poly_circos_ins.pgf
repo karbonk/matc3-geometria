@@ -1,0 +1,64 @@
+\begin{tikzpicture}[scale=0.7,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+%\clip (-2.1,-2.1) rectangle (2.5,2.1);
+\coordinate (o) at (0,0);
+\coordinate (a) at (0:2);
+\coordinate (b) at (50:2);
+\coordinate (c) at (135:2);
+\coordinate (d) at (215:2);
+\coordinate (e) at (295:2);
+
+\draw[very thin] (o) circle (2);
+
+\draw[thick, fill=red!10] (a) -- (b) -- (c) -- (d) -- (e) -- cycle;
+
+\node at (0,-3) {poligono inscritto};
+\node at (0,-3.5) {in una circonferenza};
+
+\end{scope}
+
+\begin{scope}[xshift=9cm]
+%\clip (-2.1,-2.1) rectangle (2.5,2.1);
+\coordinate (o) at (0,0);
+\coordinate (a) at (0:2);
+\coordinate (b) at (70:2);
+\coordinate (c) at (115:2);
+\coordinate (d) at (215:2);
+\coordinate (e) at (285:2);
+
+%\draw[ultra thin] (o) -- (a);
+%\draw[ultra thin] (o) -- (b);
+%\draw[ultra thin] (o) -- (c);
+%\draw[ultra thin] (o) -- (d);
+%\draw[ultra thin] (o) -- (e);
+
+\path (a) -- +(90:2.5) coordinate (a1);
+\path (a) -- +(90:-2.5) coordinate (a2);
+\path (b) -- +(160:2.5) coordinate (b1);
+\path (b) -- +(160:-2.5) coordinate (b2);
+\path (c) -- +(205:2.5) coordinate (c1);
+\path (c) -- +(205:-2.5) coordinate (c2);
+\path (d) -- +(305:2.5) coordinate (d1);
+\path (d) -- +(305:-2.5) coordinate (d2);
+\path (e) -- +(375:2.5) coordinate (e1);
+\path (e) -- +(375:-2.5) coordinate (e2);
+
+\coordinate (i1) at (intersection of a1--a2 and b1--b2);
+\coordinate (i2) at (intersection of b1--b2 and c1--c2);
+\coordinate (i3) at (intersection of c1--c2 and d1--d2);
+\coordinate (i4) at (intersection of d1--d2 and e1--e2);
+\coordinate (i5) at (intersection of e1--e2 and a1--a2);
+
+\draw[thick, fill=red!10] (i1) -- (i2) -- (i3) -- (i4) -- (i5) -- cycle;
+
+\draw[very thin] (o) circle (2);
+
+\node at (0,-3) {poligono circoscritto};
+\node at (0,-3.5) {ad una circonferenza};
+
+\end{scope}
+
+
+\end{tikzpicture}

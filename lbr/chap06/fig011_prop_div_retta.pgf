@@ -1,0 +1,47 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\clip (-0.4,-0.6) rectangle (5,2.5);
+\coordinate (v) at (0,0);
+\coordinate (s) at (30:5);
+\coordinate (r) at (0:5);
+\coordinate (t11) at (1.5,-1);
+\coordinate (t21) at (0,1.5);
+\coordinate (S1) at (intersection of t11--t21 and v--s);
+\coordinate (R1) at (intersection of t11--t21 and v--r);
+\path (R1) let \p1 = ($(R1)-(v)$) in -- +($(v)!{veclen(\x1,\y1)}!(R1)$) coordinate (R2);
+\path (R2) -- +($(S1)-(R1)$) coordinate (P2);
+\coordinate (S2) at (intersection of R2--P2 and v--s);
+\path (R1) let \p1 = ($(R2)-(R1)$) in -- +($(R1)!{veclen(\x1,\y1)}!(R2)$) coordinate (R3);
+\path (R3) -- +($(S2)-(R2)$) coordinate (P3);
+\coordinate (S3) at (intersection of R3--P3 and v--s);
+\path (R1) let \p1 = ($(R3)-(R2)$) in -- +($(R2)!{veclen(\x1,\y1)}!(R3)$) coordinate (R4);
+\path (R4) -- +($(S3)-(R3)$) coordinate (P4);
+\coordinate (S4) at (intersection of R4--P4 and v--s);
+\path (R1) let \p1 = ($(R4)-(R3)$) in -- +($(R3)!{veclen(\x1,\y1)}!(R4)$) coordinate (R5);
+\path (R5) -- +($(S4)-(R4)$) coordinate (P5);
+\coordinate (S5) at (intersection of R5--P5 and v--s);
+
+\draw (v) -- (r);
+\draw (v) -- (s);
+\draw[blue] ($(R1)!-2!(S1)$) -- ($(R1)!6!(S1)$);
+\draw[blue] ($(R2)!-2!(S2)$) -- ($(R2)!4!(S2)$);
+\draw[blue] ($(R3)!-2!(S3)$) -- ($(R3)!4!(S3)$);
+\draw[blue] ($(R4)!-2!(S4)$) -- ($(R4)!4!(S4)$);
+\draw[blue] ($(R5)!-2!(S5)$) -- ($(R5)!4!(S5)$);
+\draw[fill] (v) circle (1.2pt) node[left] {$V$};
+\draw[fill] (S1) circle (1.2pt) node[shift={(0.05,0.25)}] {$S_1$};
+\draw[fill] (R1) circle (1.2pt) node[shift={(-0.1,-0.2)}] {$R_1$};
+\draw[fill] (S2) circle (1.2pt) node[shift={(0.05,0.25)}] {$S_2$};
+\draw[fill] (R2) circle (1.2pt) node[shift={(-0.1,-0.2)}] {$R_2$};
+\draw[fill] (S3) circle (1.2pt) node[shift={(0.05,0.25)}] {$S_3$};
+\draw[fill] (R3) circle (1.2pt) node[shift={(-0.1,-0.2)}] {$R_3$};
+\draw[fill] (S4) circle (1.2pt) node[shift={(0.05,0.25)}] {$S_4$};
+\draw[fill] (R4) circle (1.2pt) node[shift={(-0.1,-0.2)}] {$R_4$};
+\draw[fill] (S5) circle (1.2pt) node[shift={(0.05,0.25)}] {$S_5$};
+\draw[fill] (R5) circle (1.2pt) node[shift={(-0.1,-0.2)}] {$R_5$};
+
+\end{scope}
+
+\end{tikzpicture}

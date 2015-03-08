@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale=0.7,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+%\clip (-2.1,-2.1) rectangle (2.5,2.1);
+\coordinate (o) at (0,0);
+\coordinate (a) at (260:2);
+\coordinate (b) at (340:2);
+\coordinate (c) at (80:2);
+
+\draw (o) circle (2);
+
+\draw[thick] (a) node[shift={(-0.1,-0.25)}] {$A$} -- (b) node[shift={(0.2,-0.1)}] {$B$} -- (c) node[shift={(0,0.25)}] {$C$} -- cycle;
+\draw[fill] (o) circle (1.2pt) node[shift={(-0.25,0)}] {$O$};
+
+\end{scope}
+
+\end{tikzpicture}

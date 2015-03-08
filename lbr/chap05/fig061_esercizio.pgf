@@ -1,0 +1,37 @@
+\begin{tikzpicture}[scale=0.8,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+%\clip (-2.1,-2.1) rectangle (2.5,2.1);
+\coordinate (o) at (0,0);
+\coordinate (a) at (255:2);
+\coordinate (b) at (285:2);
+\coordinate (c) at (-15:2);
+\coordinate (d) at (15:2);
+\coordinate (v) at (80:2);
+
+\draw (o) circle (2);
+
+\begin{scope}
+\clip (a) -- (o) -- (b);
+\draw[red, fill=red!10] (o) circle (0.6);
+\end{scope}
+
+\begin{scope}
+\clip (c) -- (o) -- (d);
+\draw[red, fill=red!10] (o) circle (0.6);
+\end{scope}
+
+\begin{scope}
+\clip (b) -- (v) -- (c);
+\draw[red, fill=red!10] (v) circle (0.6);
+\end{scope}
+
+\draw (a) node[shift={(-0.1,-0.25)}] {$A$} -- (o) -- (b) node[shift={(0,-0.25)}] {$B$};
+\draw (c) node[shift={(0.25,0)}] {$C$} -- (o) -- (d) node[shift={(0.25,0)}] {$D$};
+\draw (b) -- (v) node[shift={(0,0.25)}] {$V$} -- (c);
+\draw[fill] (o) circle (1.2pt) node[shift={(-0.2,0.2)}] {$O$};
+
+\end{scope}
+
+\end{tikzpicture}

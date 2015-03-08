@@ -1,0 +1,23 @@
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (l) at (0,0);
+\path (l) -- +(0:.3) coordinate (a);
+\path (l) -- +(0:5.7) coordinate (b);
+\path (l) -- +(0:3) coordinate (c);
+\path (l) -- +(0:1.7) coordinate (d);
+\path (l) -- +(0:4.3) coordinate (e);
+\path (l) -- +(0:6.5) coordinate (m);
+
+\draw (l) -- (m) node [above] {$r$};
+
+\draw[fill] (a) circle (1pt) node [above] {$A$};
+\draw[fill] (b) circle (1pt) node [above] {$B$};
+\draw[fill] (c) circle (1pt) node [above] {$C$};
+\draw[fill] (d) circle (1pt) node [above] {$D$};
+\draw[fill] (e) circle (1pt) node [above] {$E$};
+
+\end{scope}
+
+\end{tikzpicture}

@@ -1,0 +1,628 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\chapter{Equiestensione e aree}
+
+\includegraphics[width=0.95\textwidth]{window_geometry.jpg}
+  \begin{center}
+    {\large ``Window geometry''}\par
+    Foto di midori.no.kerochan\par
+    \url{http://www.flickr.com/photos/28661972@N05/2751042868/}\par
+    Licenza: Creative Commons Attribution 2.0\par
+  \end{center}
+\newpage
+
+
+\section{Estensione superficiale}
+
+Il \emph{tangram}\label{tangram} è un antichissimo gioco cinese. Il nome con cui lo conosciamo si pensa derivato dall'unione della parola \emph{tang} o \emph{tan}, che significa \emph{cinese}, e \emph{gram} che significa \emph{immagine}. Anticamente in Cina era chiamato ``schema intelligente a sette pezzi'' o anche ``le sette pietre della saggezza'' poiché si riteneva che la padronanza del gioco fosse la chiave per ottenere saggezza e talento.
+Il gioco è costituito da un quadrato ritagliato in 7 pezzi poligonali aventi in comune solo punti del loro contorno (come mostra la figura ...).
+
+% figura
+
+I pezzi possono essere disposti e accostati gli uni agli altri senza sovrapposizioni in modo da ottenere una grande varietà di figure; la regola base è che devono essere utilizzati tutti i 7 pezzi. Si possono così formare alcuni disegni come mostrato nelle figure ....
+
+Potete osservare che si forma un poligono quando i singoli pezzi vengono accostati mediante un lato: l'uomo seduto è un poligono, ma non la candela; i due poligoni rappresentati sono l'uno concavo e l'altro convesso.
+
+Con tutti i 7 pezzi del gioco si possono costruire 13 poligoni convessi, compreso il quadrato iniziale, provate a costruirli: fotocopiate la pagina precedente e ritagliate i 7 pezzi del tangram.
+
+Evidentemente i 13 poligoni che avrete costruito non sono congruenti, né hanno la stessa forma; potete dire che sono formati dalle stesse parti poligonali, ciascuno può cioè essere pensato come unione dei \emph{tan} aventi in comune almeno un punto del loro perimetro, ma nessun punto interno.
+
+
+\begin{definizione}
+Con \emph{somma} di due \emph{figure piane} $X$ e $Y$, non aventi punti comuni o aventi in comune solo punti del loro contorno, intendiamo la figura $Z$ unione dei punti di $X$ e $Y$ e la indicheremo con $Z=X+Y$. Diremo inoltre che $X$ è la \emph{differenza} tra $Z$ e $Y$ e scriveremo $X=Z-Y$.
+\end{definizione}
+
+\begin{definizione}
+Due poligoni sono \emph{equicomposti} se sono formati dalle stesse parti poligonali (figure piane).
+Due poligoni sono \emph{equiscomponibili} se è possibile decomporre uno di essi in un numero finito di parti poligonali con le quali si possa ricoprire l'altro.
+\end{definizione}
+
+Tutte le figure poligonali costruite con i pezzi del tangram sono dunque poligoni equicomposti, ma possono anche essere considerati poligoni equiscomponibili: tale caratteristica si esprime in simboli scrivendo $p_1 \doteq p_2 \doteq \ldots{}$ che si legge ``$p_1$ equicomposto $p_2$ equicomposto \ldots{}''.
+
+Ritagliate da un quadrato i quattro triangoli rettangoli isosceli che si ottengono tracciando le sue diagonali. Disponendo fianco a fianco i triangoli ottenuti in modo che i due lati comuni abbiano la stessa lunghezza, si ottengono 14 figure diverse. Due di esse sono riportate nella figura. Realizzate tutte le altre figure.
+Le figure ottenute sono \ldots\ldots\ldots\ldots{} perché sono formate da \ldots\ldots\ldots\ldots{}
+
+(da: Prova di allenamento della gara di ``Matematica senza frontiere'' del 9/02/1994)
+
+Nella figura sono disegnati un quadrato $ABCD$, un rettangolo $PQRS$ avente $PQ=2AB$ e $SP=AB/2$ e un rombo $FGHK$ avente una diagonale uguale al lato del quadrato e l'altra il doppio. Mostrate come sia possibile scomporre ciascuno dei tre poligoni in parti tali da poter ricoprire gli altri due. Puoi concludere che i tre poligoni assegnati sono equiscomponibili? \ldots\ldots{}
+
+Dato l'insieme $F = \{f_1\text{,}f_2\text{,}f_3\}$ delle figure poligonali disegnate a lato, seguite le seguenti istruzioni:\\
+\verb|   |\textsl{ripeti:}\\
+\verb|      |\textsl{scegli una figura dell'insieme $F$;}\\
+\verb|      |\textsl{traccia alcuni segmenti che la decompongano in parti poligonali;}\\
+\verb|      |\textsl{forma con le parti ottenute altre 3 figure poligonali;}\\
+\verb|   |\textsl{finché non hai esaurito le figure.}\\
+Costruite l'insieme $G$ di tutti i poligoni ottenuti con questa procedura e indicate con simboli arbitrari i suoi elementi.
+
+
+Nell'insieme $S=F\cup G$ la relazione $R$ espressa dal predicato: <<essere equicomposti>> gode della proprietà
+\begin{itemize*}
+\item riflessiva, infatti \ldots\ldots\ldots\ldots\ldots{}
+\item simmetrica, infatti \ldots\ldots\ldots\ldots\ldots{}
+\item transitiva, infatti \ldots\ldots\ldots\ldots\ldots{}
+\end{itemize*}
+
+Si può dunque concludere che la relazione $R$ è una relazione di equivalenza; si possono quindi costruire sia l'insieme delle parti $P(S)$ dell'insieme $S$ sia l'insieme quoziente $E=S/R$ avente come elementi le tre classi di equivalenza, ciascuna rappresentata dal poligono iniziale:
+\[ [f_1] = \{x:x\text{ è un poligono equicomposto con }f_1\}; \]
+\[ [f_2] = \{x:x\text{ è un poligono equicomposto con }f_2\}; \]
+\[ [f_3] = \{x:x\text{ è un poligono equicomposto con }f_3\}. \]
+
+\begin{definizione}
+Diciamo che due qualunque poligoni $p_1$ e $p_2$ appartenenti alla stessa classe sono \emph{equivalenti} e useremo la scrittura $p_1\doteq p_2$ per esprimere questa caratteristica (\emph{equivalenza per scomposizione}); essi hanno una caratteristica comune che chiamiamo \emph{estensione superficiale} (ES).
+\end{definizione}
+
+I poligoni costruiti con i pezzi del tangram appartengono alla stessa classe di equivalenza; essi sono dunque poligoni equivalenti e hanno la stessa estensione superficiale del quadrato iniziale.
+Anche i 14 poligoni realizzati nell'esercizio~2 ??? appartengono alla stessa classe di equivalenza; essi sono dunque poligoni equivalenti e hanno la stessa estensione superficiale del quadrato assegnato.
+
+\osservazione Sin dalla scuola elementare avete usato termini come superficie, estensione, area quando vi siete accostati allo studio dei poligoni, probabilmente ritenendoli sinonimi. Lo studio di una particolare relazione di equivalenza vi ha mostrato che il concetto di estensione di un poligono si ottiene attraverso il procedimento di passaggio al quoziente nell'insieme dei poligoni piani.
+
+\begin{definizione}
+Chiamiamo \emph{area} di un poligono $p$ il numero reale positivo $A(p)$ che esprime la misura della sua estensione superficiale.
+\end{definizione}
+
+Possiamo concludere che ad ogni classe di equivalenza, generata con la relazione <<essere equicomposti>> o <<essere equiscomponibili>>, può essere associato un numero: l'area della figura scelta come rappresentante della classe di equivalenza. In tal modo trasformeremo una relazione di equivalenza tra poligoni, espressa con il simbolo $\doteq$ in una relazione di uguaglianza tra numeri.
+Ad esempio, riferendoci ai poligoni costruiti con i pezzi del tangram possiamo trasformare la relazione di equivalenza $p_1\doteq p_2\doteq p_3\doteq \ldots{}$ in una uguaglianza tra le aree scrivendo $A(p_1)=A(p_2)=A(p_3)=\ldots{}$
+
+
+\section{Poligoni equivalenti}
+
+Premettiamo alcuni assiomi:
+\begin{enumerate}
+\item Poligoni congruenti sono equivalenti.
+\item Un poligono non è equivalente ad una sua parte propria.
+\item Somma e differenza di poligoni equivalenti originano poligoni equivalenti.
+\end{enumerate}
+
+\begin{teorema}\label{teo:7.1}
+Due parallelogrammi aventi rispettivamente congruenti le basi e le rispettive altezze, sono equivalenti.
+\end{teorema}
+
+Nella figura sottostante sono rappresentati alcuni degli infiniti parallelogrammi aventi basi e altezze congruenti; le loro basi appartengono a rette parallele. 
+
+\noindent Ipotesi: $AB\cong EF\cong IJ$, $CM\perp AB$, $HN\perp EF$, $KO\perp IJ$, $CM\cong HN\cong KO$.\\
+Tesi: $ABCD\doteq EFGH\doteq IJLK$.\\
+
+\begin{proof}
+Per dimostrare l'equivalenza tra questi parallelogrammi, costruiamo su $ABCD$ un altro parallelogramma, facendo sovrapporre le loro basi. Avremo tre casi:\\
+\emph{Primo caso}\\
+Costruiamo su $ABCD$ il parallelogramma $ABFE$ avente la stessa base $AB$ e la stessa altezza; il vertice $E$ è un punto interno a $DC$. $ABCD$ è scomposto in $ADE + ABCE$; $ABFE$ è scomposto in $BCF + ABCE$. Se dimostriamo la congruenza dei triangoli $ADE$ e $CBF$ potremo concludere che i due parallelogrammi, essendo equicomposti, sono equivalenti.
+Consideriamo i due triangoli $ADE$ e $CBF$, essi sono congruenti per il terzo criterio di congruenza, infatti: $AD\cong CD$ perché lati opposti del parallelogramma $ABCD$; $AE\cong BF$ perché lati opposti del parallelogramma $ABFE$; $DE\cong CF$ perché differenza di segmenti congruenti, precisamente $DE=DC-EC$ e $CF=EF-EC$. Dalla congruenza dei triangoli segue anche la loro equivalenza $ADE\cong CBF \:\Rightarrow\: ADE\doteq CBF$. Possiamo allora concludere che $ABCD\doteq ABFE$.\\
+\emph{Secondo caso}\\
+Costruiamo su $ABCD$ il parallelogramma $ABEF$ avente la stessa base $AB$ e la stessa altezza; il vertice $C$ coincide con $F$ e $ABCD$ è scomposto in $ADC + ACB$; $ABEF$ è scomposto in $ABC + CEB$. Se dimostriamo la congruenza dei triangoli $ADC$ e $CBE$ possiamo concludere che i due parallelogrammi, essendo equicomposti, sono equivalenti. Infatti, $ADC$ e $CBE$ hanno $AD\cong CB$ perché lati opposti di uno stesso parallelogramma, $DC\cong CE$, $AC\cong BE$, pertanto $ADC$ e $BCE$ sono triangoli congruenti.\\
+\emph{Terzo caso}\\
+Costruiamo su $ABCD$ il parallelogramma $ABEF$ avente la stessa base $AB$ e la stessa altezza; il vertice $F$ è esterno al lato $DC$ e i lati $AF$ e $BC$ si intersecano nel punto $G$.
+$ABCD$ è scomposto in $ADCG + AGB$ mentre $ABEF$ è scomposto in $BGFE + AGB$, inoltre $ADCG$ si può scomporre in $ADF - CGF$ come $BGFE$ si può scomporre in $BCE - CGF$.
+Quindi $ABCD$ è scomposto in $ADF - CGF + AGB$ e $ABEF$ è scomposto in $BCE - CGF + AGB$.
+Basta allora dimostrare la congruenza dei triangoli $ADF$ e $BCE$ per dire che $ABCD$ e $ABEF$ sono equiscomposti e dunque equivalenti. Infatti $ADF$ e $BCE$ sono congruenti perché hanno $AD\cong BC$ lati opposti del parallelogramma, analogamente $AF\cong BE$ e $DF\cong CE$ perché somma di segmenti congruenti.
+\end{proof}
+
+\begin{corollario}
+Ogni parallelogramma è equivalente al rettangolo avente un lato congruente alla sua base e l'altro lato congruente alla sua altezza.
+\end{corollario}
+
+\noindent Ipotesi: $AB\cong EF$, $CF\perp AB$, $CK\cong HE$.\\
+Tesi: $ABCD\doteq EFGH$.
+
+\begin{proof}
+Dal vertice $D$ tracciamo l'altezza $DL$ relativa alla base $AB$; il quadrilatero $DLKC$ è un rettangolo congruente a $EFGH$; dimostrando che $ABCD\doteq DLKC$ si ottiene la tesi.\\
+Completate la dimostrazione.\\
+Osserviamo che $ABCD$ è composto da \ldots\ldots\ldots\ldots{}
+e $DLKC$ è composto da \ldots\ldots\ldots\ldots{} 
+Consideriamo i triangoli \ldots\ldots\ldots\ldots{}
+Sono congruenti perché \ldots\ldots\ldots\ldots{}
+quindi \ldots\ldots\ldots\ldots{}
+\end{proof}
+
+Il teorema~\ref{teo:7.1} e il suo corollario ci assicurano che i parallelogrammi aventi rispettivamente congruenti le basi e le rispettive altezze formano una classe di equivalenza avente come rappresentante il rettangolo che ha un lato congruente alla base del parallelogramma e l'altro lato congruente alla sua altezza. Possiamo quindi affermare che $ABCD\doteq EFGH \:\Rightarrow\: A_{ABCD} = A_{EFGH}$.
+
+\begin{teorema}\label{teo:7.2}
+Un triangolo è equivalente ad un parallelogramma avente:
+\begin{enumeratea}
+\item base congruente alla metà della base del triangolo e altezza congruente all'altezza del triangolo, oppure
+\item base congruente alla base del triangolo e altezza congruente alla metà dell'altezza del triangolo.
+\end{enumeratea}
+\end{teorema}
+
+Nella figura sono rappresentati il triangolo $ABC$, il parallelogramma $DEFG$ avente base congruente alla metà della base del triangolo e altezza congruente all'altezza del triangolo, il parallelogramma $IJLM$ avente altezza congruente alla metà dell'altezza del triangolo e base congruente alla base del triangolo.
+
+\noindent Ipotesi: $AB\perp CH$, $DE\cong \frac{1}{2}AB$, $GK\perp DE$, $GK\cong CH$, $IJ\cong AB$, $MN\perp IJ$, $MN\cong \frac{1}{2}CH$.\\
+Tesi: a) $ABC\doteq DEFG$;\quad b) $ABC\doteq IJLM$.
+
+\begin{proof}~\\
+\emph{Caso a).}\\
+Dal punto medio $T$ della base $AB$ tracciamo la parallela al lato $AC$ che incontra $CB$ in $S$; dal vertice $C$ tracciamo la parallela alla base $AB$ che interseca in $R$ la retta $ST$; il parallelogramma $ATRC$ soddisfa le ipotesi del caso a) ed è equivalente a $DEFG$ per il teorema~\ref{teo:7.1}.
+Confrontiamo il triangolo e il parallelogramma: possiamo pensare $ABC$ composto da $CATS+BST$ e $ATRC$ composto da $CATS+CSR$.
+Se dimostriamo la congruenza dei triangoli $CSR$ e $BST$ potremo concludere che triangolo e parallelogramma, essendo equicomposti, sono equivalenti.\\ Completate con le corrette motivazioni:\\
+$TB\cong CR$ infatti \ldots\ldots\ldots\ldots{}\\
+$SB\cong CS$ infatti \ldots\ldots\ldots\ldots{}\\
+$T\widehat{B}S\cong S\widehat{C}R$ infatti \ldots\ldots\ldots\ldots{}\\
+Allora per il primo criterio di congruenza $TBS\cong SCR$ e quindi $ATRC\doteq BST$.\\
+\emph{Caso b).}\\
+Dal punto medio $V$ dell'altezza $CH$ tracciamo la parallela alla base $AB$ che interseca i lati $AC$ e $BC$ rispettivamente in $W$ e $Z$; da $B$ tracciamo la parallela al lato $AC$ che interseca la retta $WZ$ in $U$; il parallelogramma $AWUB$ soddisfa le ipotesi del caso b) ed è equivalente a $IJLM$ per il teorema~\ref{teo:7.1}.
+Confrontiamo il triangolo e il parallelogramma: possiamo pensare $ABC$ composto da \ldots\ldots\ldots{} e $AWUB$ composto da \ldots\ldots\ldots{}
+Se dimostriamo la congruenza dei triangoli $CWZ$ e $ZBU$ potremo concludere che triangolo e parallelogramma, essendo equicomposti, sono equivalenti.
+$CW\cong \ldots{}$ infatti \ldots\ldots\ldots\ldots{}\\
+$CZ\cong \ldots{}$ infatti \ldots\ldots\ldots\ldots{}\\
+$\ldots{}\cong Z\widehat{B}U$ infatti \ldots\ldots\ldots\ldots{}\\
+Pertanto \ldots\ldots\ldots\ldots{}
+\end{proof}
+
+\begin{corollario}
+I triangoli aventi la stessa base e la stessa altezza sono equivalenti.
+\end{corollario}
+
+Lasciamo al lettore la dimostrazione di questa proprietà.
+
+Il teorema~\ref{teo:7.2} e il suo corollario ci assicurano che i triangoli aventi rispettivamente congruenti la base e la rispettiva altezza formano una classe di equivalenza avente come rappresentante il rettangolo con un lato congruente alla base del triangolo e l'altro lato congruente a metà della sua altezza, oppure un lato congruente all'altezza del triangolo e l'altro lato congruente a metà della base. 
+
+\noindent Ipotesi: $CL\perp AB$, $DE\cong AB$, $DG\cong \frac{1}{2}CL$, $KH\cong CL$, $HI\cong\frac{1}{2}AB$.\\
+Tesi: $ABC\doteq DEFG\doteq HIJK \:\Rightarrow\: A_{ABC}=A_{DEFG}=A_{HIJK}$.
+
+
+\begin{teorema}\label{teo:7.3}
+Un trapezio è equivalente a un triangolo avente per base la somma delle basi del trapezio e per altezza la stessa altezza.
+\end{teorema}
+
+\noindent Ipotesi: $EF\cong AB+CD$, $DH\perp AB$, $GI\perp EF$, $GI\cong DH$.\\
+Tesi: $ABCD\doteq EFG$.
+
+\begin{proof}
+Prolunghiamo la base $AB$ del segmento $BP$ congruente a $DC$ e congiungiamo $D$ con $P$.
+$APD$ è un triangolo equivalente a $EFG$ avendo stessa base e stessa altezza, quindi basta dimostrare che $ABCD\cong EFG$.
+Confrontiamo il trapezio e il triangolo: possiamo pensare 
+$ABCD$ composto da \ldots\ldots\ldots\ldots{} 
+e $APD$ composto da \ldots\ldots\ldots\ldots{}
+Se dimostriamo la congruenza dei triangoli \ldots\ldots\ldots\ldots{}
+potremo concludere che trapezio e triangolo, essendo equicomposti, sono equivalenti. 
+I due triangoli sono congruenti perché hanno \ldots\ldots\ldots\ldots{} 
+Possiamo quindi affermare che $ABCD\cong EFG \:\Rightarrow\: A_{ABCD}=A_{EFG}$.
+\end{proof}
+
+Pertanto, utilizzando il teorema~\ref{teo:7.2} e il suo corollario possiamo sempre determinare il rettangolo equivalente a un trapezio dato.
+
+\begin{teorema}\label{teo:7.4}
+Ogni poligono circoscritto ad una circonferenza è equivalente ad un triangolo avente per base il segmento somma dei lati del poligono e per altezza il raggio della circonferenza.
+\end{teorema}
+
+\noindent \emph{Caso del poligono regolare (pentagono).}\vspace{10pt}
+
+\noindent Ipotesi: $LO\cong MN$, $AF\cong KG+GH+HI+IJ+LK$, $AB\cong KG$, $BC\cong GH$, $CD\cong HI$, $DE\cong IJ$, $EF\cong JK$.\\
+Tesi : $KGHIJ\doteq AFM$.
+
+\begin{proof}
+I cinque triangoli che compongono il triangolo $AFM$ sono equivalenti ai 5 triangoli che compongono il poligono assegnato, infatti hanno basi \ldots\ldots\ldots\ldots{} altezza \ldots\ldots\ldots\ldots{} 
+Quindi \ldots\ldots\ldots\ldots{}
+\end{proof}\vspace{10pt}
+
+\noindent \emph{Caso del poligono qualunque.}\vspace{10pt}
+
+\noindent Lasciamo al lettore la costruzione di un poligono circoscritto a una circonferenza e del triangolo equivalente.\vspace{10pt}
+
+Possiamo quindi affermare che ogni poligono circoscritto a una circonferenza è equivalente ad un triangolo e per il teorema~\ref{teo:7.2} è anche equivalente a un rettangolo.
+
+Si pone ora la questione: è possibile trasformare un qualunque poligono in un rettangolo equivalente?
+
+\subsection{Costruzione di un rettangolo equivalente a un poligono assegnato}
+
+\subsubsection{Caso 1: poligono convesso}
+Un qualunque poligono convesso può essere trasformato in un poligono equivalente avente un lato di meno.
+
+\paragraph{Esempio 1.}
+In figura è rappresentato il quadrilatero convesso $ABCD$, ci proponiamo di costruire un triangolo equivalente ad esso. Dal vertice $B$ tracciamo la parallela $b$ alla diagonale $AC$; il vertice $E$ è il punto di intersezione di $b$ con la retta per $DC$. I triangoli $ABC$ e $ACE$ sono equivalenti in quanto hanno la stessa base $AC$ e stessa altezza, poiché i loro vertici si trovano sulla retta $b$ parallela alla base. Il quadrilatero $ABCD$ si può pensare composto da $ADC + ACB$; il triangolo $ADE$ è composto da \ldots\ldots\ldots{}; poiché sono poligono equicomposti possiamo concludere che $ABCD\doteq ACE$.
+
+\paragraph{Esempio 2.}
+Costruzione di un triangolo equivalente al pentagono convesso $ABCDE$ rappresentato in figura.
+Tracciare la diagonale $DB$.
+Dal vertice $C$ tracciare la parallela a $DB$.
+Prolungare il lato $AB$ fino a incontrare in $F$ la retta $r$.
+Congiungere $D$ con $F$.
+Si ha che  infatti \ldots\ldots\ldots{} 
+Sul quadrilatero $FDE$ procedere come nell'esempio 1.
+
+Conclusione: ogni poligono convesso è equivalente a un triangolo e quindi a un rettangolo.
+
+\subsubsection{Caso 2: poligono concavo}
+
+Premettiamo la costruzione di un triangolo con base assegnata equivalente ad un triangolo $ABC$ dato. 
+
+Sia $ABC$ il triangolo e $DE$ il segmento che vogliamo come base del triangolo equivalente.
+Sovrapponiamo il segmento $DE$ al lato $AC$ facendo coincidere $D$ con $A$; l'estremo $E$ è esterno al triangolo assegnato. Indichiamo con $D_1E_1$ la base del triangolo che stiamo costruendo, equivalente ad $ABC$. Dopo aver congiunto $B$ con $E_1$, da $C$ tracciamo la parallela a $BE_1$ che incontra in $M$ il lato $AB$. Il triangolo $MD_1E_1$ è equivalente ad $ABC$.\\
+Completate il ragionamento.\\
+Si ha per costruzione: 
+$D_1BE_1=ABC+BCE$ e $D_1BE_1=D_1ME_1+BME$.
+Quindi $ABC=D_1BE_1-BCE_1$ e $D_1ME_1-BME_1$.
+I triangoli $BCE_1$ e $BME_1$ sono equivalenti, avendo stessa base $BE_1$ e stessa altezza perché \ldots\ldots\ldots{}	Possiamo concludere che \ldots\ldots\ldots{}
+
+Passiamo ora alla costruzione di un rettangolo equivalente a un poligono concavo.
+
+Assegnato il poligono concavo $ABCDE$, spezziamo il poligono in 3 triangoli tracciando due diagonali e fissiamo arbitrariamente un segmento $HK$. Ciascun triangolo in cui è spezzato $ABCDE$ può essere trasformato in un triangolo equivalente avente $HK$ come base e dunque in un rettangolo avente $HK$ come base; con questi rettangoli possiamo costruire, sormontando l'uno all'altro, il rettangolo equivalente ad $ABCDE$.  
+Possiamo quindi concludere che un qualunque poligono è equivalente a un rettangolo.
+
+\subsection{Da un poligono al quadrato equivalente}
+
+Nella classe di equivalenza di un qualsiasi poligono c'è sempre un quadrato. Ossia, dato un poligono possiamo sempre trovare un quadrato equivalente.
+Abbiamo dimostrato che un qualunque poligono è equivalente a un rettangolo, ora vogliamo dimostrare che, dato un rettangolo esiste sempre un quadrato equivalente ad esso.
+Vediamo due possibili costruzioni.
+
+\paragraph{1\textsuperscript{o} modo}
+Costruiamo la semicirconferenza di diametro $DC$ e fissiamo su di esso il punto $E$ tale che $DE\cong AD$. Dal punto $E$ tracciamo la perpendicolare al diametro e sia $F$ il punto di intersezione con la semicirconferenza. Il triangolo $DFE$ è retto in $F$ perché \ldots\ldots\ldots{}
+Il quadrato avente come lato $DF$ soddisfa la richiesta perché \ldots\ldots\ldots{}
+
+\paragraph{2\textsuperscript{o} modo}
+Costruiamo il segmento $EF$ tale che $EF\cong EG+GF$, con $EG\cong AB$ e $GF\cong AD$, e la semicirconferenza di diametro $EF$. Dal punto $G$ tracciamo la perpendicolare al diametro e sia $H$ il punto di intersezione con la semicirconferenza. Il triangolo $EHF$ è retto in $H$ perché \ldots\ldots\ldots{}
+Il quadrato avente come lato $HG$ soddisfa la richiesta perché \ldots\ldots\ldots{}
+
+Costruite il quadrato equivalente al seguente poligono.
+
+
+\section{Aree dei principali poligoni}
+
+Per \emph{area} di una qualunque figura piana intendiamo il numero reale che esprime la misura dell'estensione superficiale della figura data.
+
+Per calcolare le aree dei principali poligoni si ricava per prima l'area del rettangolo e poi, basandosi sui teoremi relativi all'equivalenza delle figure piane, da questa si ricavano le aree di altri poligoni fondamentali.
+
+\subsection{Area del rettangolo}
+
+\begin{teorema}
+L’area del rettangolo è data dal prodotto della misura delle sue dimensioni: $A=b\cdot h$.
+\end{teorema}
+
+\begin{proof}
+A questo scopo ricorriamo al teorema~\ref{teo:XXX} <<I rettangoli aventi una dimensione congruente sono direttamente proporzionali all'altra dimensione>>. Consideriamo allora il rettangolo di dimensioni $B$ e $H$, aventi rispettivamente misura $b$ e $h$, poi il rettangolo che otteniamo dal dato trasformando una dimensione in quella unitaria: $U$, di misura 1, ed infine il quadrato di lato $U$.
+Applichiamo il teorema enunciato in precedenza al rettangolo $R$, di dimensioni $B$ e $H$, e al rettangolo $R'$, di dimensioni $U$ e $H$:
+$R : R' = B : U$
+Ora applichiamo lo stesso teorema al rettangolo $R'$ ed al quadrato unitario $U$:
+$R' : U = H : U$
+Passiamo dalla proporzione tra le grandezze alla proporzione tra le loro misure, iniziando dall'ultima proporzione e chiamando rispettivamente $A$ ed $A'$ le misure delle estensioni superficiali di $R$ ed $R'$. Si ha $A' : 1 = h : 1$, da cui ricaviamo $A' = h$.
+Sostituiamo nella prima proporzione le misure di $R'$, $B$ ed $U$, si ha $A : b = h : 1$, da cui ricaviamo $A=b\cdot h$, che è proprio ciò che volevamo dimostrare.
+\end{proof}
+
+\subsection{Area del quadrato}
+
+Poiché il quadrato è un particolare rettangolo avente le dimensioni congruenti tra loro, $b = h = l$, anche la sua area si calcolerà in modo analogo a quella del rettangolo $A=b\cdot h=l\cdot l=l^2$.
+Dunque l'area del quadrato è data dal quadrato del lato.
+
+\subsection{Area del parallelogramma}
+
+Ricordando il teorema sull'equivalenza tra parallelogrammi, secondo il quale due parallelogrammi sono equivalenti quando hanno un lato (base) e l'altezza ad esso relativa congruenti, da cui deriva come corollario che un parallelogramma è equivalente ad un rettangolo avente base ed altezza congruenti a quelle del parallelogramma stesso, è immediato dedurre che anche l'area del parallelogramma si calcola moltiplicando un lato, ritenuto la base, per l'altezza ad esso relativa, cioè $A=b\cdot h$.
+
+\subsection{Area del triangolo}
+
+Anche in questo caso ci si deve rifare al teorema sull'equivalenza tra un triangolo e un parallelogramma ... <<Un triangolo è equivalente ad un parallelogramma avente come base metà della base del triangolo ed altezza congruente a quella del triangolo>>. Appare allora evidente che l'area del triangolo è $A=\dfrac{b}{2}\cdot h$, dove $b/2$ è la base del parallelogramma ad esso equivalente.
+
+\subsection{Area del trapezio}
+
+Sempre dai teoremi sull'equivalenza, sappiamo che <<Un trapezio è equivalente ad un triangolo la cui base è congruente alla somma delle basi del trapezio e la cui altezza ad essa relativa è congruente all'altezza del trapezio>>. Dunque l'area del trapezio sarà $A=\dfrac{B+b}{2}\cdot h$, dove $B + b$ è la somma delle basi del trapezio, e quindi $(B + b)/2$ è la base del triangolo ad esso equivalente.
+
+\subsection{Area del rombo}
+
+Poiché il rombo è un particolare parallelogramma, la sua area si trova moltiplicando uno dei suoi lati per l'altezza ad esso relativa (ad esempio, il lato $AD$ per l'altezza $BH$).
+Possiamo però notare che un rombo si può considerare come la metà di un rettangolo le cui dimensioni sono congruenti alle diagonali del rombo ($D$ e $d$).
+Come si può facilmente dimostrare, le due diagonali dividono il rombo in quattro triangoli rettangoli congruenti ai quattro triangoli rettangoli esterni al rombo, e quindi il rombo è equivalente alla metà del rettangolo, per cui la sua area si trova $A=\dfrac{D\cdot d}{2}$.
+Analogamente si dimostra che l'area di un qualsiasi quadrilatero con le diagonali perpendicolari si può determinare in questo modo.
+
+\subsection{Area di un poligono circoscrivibile ad una circonferenza}
+
+Ricordiamo anche in questo caso il teorema <<un poligono circoscrivibile ad una circonferenza è equivalente ad un triangolo che ha per base il perimetro del poligono e per altezza il raggio della circonferenza inscritta>>. 
+Da qui segue immediatamente che l'area di questo tipo di poligono è data da $A=\dfrac{2p\cdot r}{2}=p\cdot r$, dove, come di consuetudine, $p$ indica il semiperimetro.
+
+In particolare, se il poligono è regolare, sarà sempre possibile calcolare l'area per mezzo della formula $A=p\cdot a$, dove $a$ è l'apotema, cioè il raggio della circonferenza inscritta nel poligono regolare.
+
+\section{Teoremi di Pitagora e di Euclide}
+
+\begin{teorema}[Primo teorema di Euclide]
+In un triangolo rettangolo, il quadrato costruito su un cateto è equivalente al rettangolo che ha come dimensioni l'ipotenusa e la proiezione del cateto stesso sull'ipotenusa.
+\end{teorema}
+
+\begin{proof}
+Facciamo riferimento alla figura a lato.
+Sia $ABC$ un triangolo rettangolo in $B$. Tracciamo l'altezza $BH$ relativa all'ipotenusa $AC$ e prolunghiamola di un segmento $HD$ congruente all'ipotenusa stessa.
+Costruiamo il rettangolo di lati $AH$ ed $HD$. Costruiamo sul cateto $AB$ il quadrato $ABGF$. Prolunghiamo i lati $HD$ ed $AE$ del rettangolo ed il lato $FG$ del quadrato e chiamiamo $I$ e $J$ i punti di intersezione tra questi prolungamenti. Otteniamo il parallelogramma $ABJI$.
+La tesi da dimostrare è che il quadrato $ABGF$ è equivalente al rettangolo $AEDH$.
+
+Consideriamo innanzitutto i triangoli $AIF$ e $ABC$, essi sono congruenti in quanto hanno entrambi un angolo retto ($A\widehat{F}I$ e $A\widehat{B}C$), $AF\cong AB$ in quanto lati di un quadrato, $F\widehat{A}I\cong B\widehat{A}C$ in quanto complementari dello stesso angolo $I\widehat{A}B$.
+Dunque i due triangoli sono congruenti per il secondo criterio generalizzato, ed in particolare avranno $AI\cong AC$.
+
+Consideriamo ora il parallelogramma $ABJI$ ed il quadrato $ABGF$; essi sono equivalenti in quanto hanno il lato $AB$ in comune e la stessa altezza $BG$ relativa a questo lato. 
+Consideriamo poi il parallelogramma $ABJI$ ed il rettangolo $AHDE$; anch'essi sono equivalenti poiché hanno basi congruenti $AE$ e $AI$, entrambe congruenti ad $AC$, e stessa altezza $AH$.
+Allora per la proprietà transitiva dell'equivalenza avremo che anche il quadrato $ABGF$ è equivalente al rettangolo $AHDE$ e così la tesi è provata.
+\end{proof}
+
+Vale anche il teorema inverso.
+\begin{teorema}[Primo teorema di Euclide {[}inverso{]}]
+Se in un triangolo il quadrato costruito su un lato è equivalente al rettangolo che ha per dimensioni il lato maggiore del triangolo e la proiezione del primo lato su di esso, allora il triangolo è rettangolo.
+\end{teorema}
+
+\begin{proof}
+Per la dimostrazione si usa la stessa costruzione fatta per il teorema diretto. Si inizia dimostrando nello stesso modo l'equivalenza tra il quadrato $ABGF$ ed il parallelogramma $ABJI$. Poiché per ipotesi il rettangolo $AHDE$ è equivalente al quadrato $ABGF$, allora per la proprietà transitiva dell'equivalenza avremo che il rettangolo $AHDE$ ed il parallelogramma $ABJI$ sono equivalenti. Poiché parallelogramma e rettangolo hanno la stessa altezza $AH$, essendo equivalenti dovranno avere congruenti le basi $HD\cong BJ$. Ma per costruzione $HD\cong AC$, e quindi sarà anche $BJ\cong AC$, da cui segue $AI\cong BJ\cong AC$. Quindi i triangoli $AIF$ ed $ABC$ saranno congruenti per il primo criterio in quanto hanno $AI\cong AC$ e $AB\cong AF$, poiché lati di un quadrato, e $F\widehat{A}I\cong B\widehat{A}C$ in quanto complementari dello stesso angolo $I\widehat{A}B$. Dunque avranno anche gli angoli $A\widehat{F}I\cong A\widehat{B}C$ e poiché $A\widehat{F}I$ è retto lo sarà anche $A\widehat{B}C$.
+\end{proof}
+
+\begin{teorema}[di Pitagora]
+In un triangolo rettangolo il quadrato costruito sull’ipotenusa è equivalente alla somma dei quadrati costruiti sui cateti.
+\end{teorema}
+
+\begin{proof}
+Dopo aver disegnato i quadrati di cui parla l'ipotesi, tracciamo l'altezza $BH$ relativa all'ipotenusa $AC$ e prolunghiamola finché non incontra il lato $IE$ del quadrato $Q$, il quale risulta così diviso in due rettangoli $R_1$ ed $R_2$.
+Consideriamo il triangolo rettangolo $ABH$ ed applichiamo ad esso il primo teorema di Euclide; avremo quindi che $Q_1\doteq R_1$. Applichiamo ora il primo teorema di Euclide al triangolo rettangolo $BHC$; avremo che $Q_2\doteq R_2$. Sommiamo ambo i membri di queste due equivalenze ed otteniamo che $Q_1+Q_2\doteq R_1+R_2$. Ma $R_1+R_2\doteq Q$, da cui segue, per la proprietà transitiva dell'equivalenza $Q\doteq Q_1+Q_2$, che è proprio quanto volevamo dimostrare.
+\end{proof}
+
+Anche per il teorema di Pitagora vale il teorema inverso.
+
+\begin{teorema}[di Pitagora {[}inverso{]}]
+Se in un triangolo il quadrato costruito su un lato  è equivalente alla somma dei quadrati costruiti sugli altri due lati, allora il triangolo è rettangolo.
+\end{teorema}
+
+\begin{proof}
+Sia $ABC$ il triangolo per cui vale il teorema di Pitagora; vogliamo dimostrare che questo triangolo è rettangolo.
+Consideriamo il triangolo rettangolo $A'B'C'$, i cui cateti $A'B'$ e $A'C'$ siano rispettivamente congruenti ai due lati del triangolo $AB$ e $AC$. Al triangolo $A'B'C'$ possiamo applicare il teorema di Pitagora, per cui abbiamo che il quadrato costruito su $B'C'$ è equivalente alla somma dei quadrati costruiti sui cateti $A'B'$ e $A'C'$. I quadrati costruiti sui lati congruenti $AB$ e $A'B'$ sono congruenti, così come lo sono i quadrati costruiti su $AC$ e $A'C'$, quindi avremo che: $Q_{AB} + Q_{AC} = Q_{A'B'} + Q_{A'C'}$. Poiché per ipotesi $Q_{AB} + Q_{AC} = Q_{BC}$ e, avendo applicato il teorema di Pitagora al triangolo $A'B'C'$, sarà anche $Q_{A'B'} + Q_{A'C'} = Q_{B'C'}$. Per la proprietà transitiva dell'equivalenza avremo che: $Q_{BC} = Q_{B'C'}$. Poiché due quadrati sono equivalenti quando hanno lo stesso lato, avremo che $BC\cong B'C'$, e quindi i due triangoli sono congruenti per il terzo criterio. Allora saranno congruenti anche gli angoli $\widehat{A}$ e $\widehat{A'}$, e poiché $\widehat{A'}$ è retto, lo sarà anche $\widehat{A}$. Quindi $ABC$ è un triangolo rettangolo.
+\end{proof}
+
+\begin{teorema}[Secondo teorema di Euclide]
+In un triangolo rettangolo, il quadrato costruito sull'altezza relativa all'ipotenusa è equivalente al rettangolo che ha per dimensioni le proiezioni dei cateti sull'ipotenusa.
+\end{teorema}
+
+\begin{proof}
+Dobbiamo dimostrare che il quadrato $Q$ che ha come lato l'altezza relativa all'ipotenusa è equivalente al rettangolo $R_1$ che ha come lati le due proiezioni dei cateti sull'ipotenusa.
+
+La costruzione è la seguente: dopo aver disegnato il quadrato $Q$ si disegnano anche il quadrato $Q_1$, che ha come lato il cateto $AB$, ed il rettangolo $R$, che ha come lati l'ipotenusa e la proiezione $AH$ di $AB$ sull'ipotenusa. All'interno di questo rettangolo possiamo individuare il quadrato $Q_2$, di lato $AH$, ed il rettangolo $R_1$, che ha come dimensioni $NM\cong AH$ e $MD\cong HD-HM\cong HC$, in quanto $HD\cong AC$ e $HM\cong AH$.
+
+Consideriamo ora il triangolo rettangolo $ABH$, e applichiamo ad esso il teorema di Pitagora, risulta $Q_1\doteq Q+Q_2$. Applichiamo ora al triangolo $ABC$ il primo teorema di Euclide, si ha $Q_1\cdot R$. Confrontiamo le due relazioni ed applichiamo la proprietà transitiva dell'equivalenza $Q+Q_2\doteq R$. Ma $R\doteq Q_2 + R_1$, quindi sostituendo avremo $Q+Q_2\doteq Q_2 + R_1$ e sottraendo ad ambo i membri la stessa quantità $Q_2$ otteniamo la tesi $Q\doteq R_1$.
+\end{proof}
+
+Anche per questo teorema vale il teorema inverso.
+
+\begin{teorema}[Secondo teorema di Euclide {[}inverso{]}]
+Se in un triangolo il quadrato costruito sull'altezza relativa all'ipotenusa è equivalente al rettangolo che ha per dimensioni le proiezioni dei cateti sull'ipotenusa, il triangolo è rettangolo.
+\end{teorema}
+
+\begin{proof}
+Costruiamo il quadrato $BILH$ sull'altezza relativa all'ipotenusa ed il rettangolo $AHDE$ che ha come lati le proiezioni dei due cateti sull'ipotenusa; essi sono equivalenti per ipotesi. Dobbiamo dimostrare che il triangolo $ABC$ è rettangolo.
+
+Congiungiamo $D$ con $C$, tracciamo la diagonale $BL$ del quadrato e prolunghiamola finché non incontra $DC$ in $M$. Tracciamo infine la diagonale $AD$ del rettangolo. Consideriamo i triangoli $ADH$ e $BHL$: sono equivalenti in quanto metà di figure equivalenti. Ora consideriamo i triangoli $ADL$ e $BDL$, sono equivalenti in quanto somme di figure equivalenti: i triangoli $ADH$, $BHL$ a cui aggiungiamo lo stesso triangolo $HDL$. Essendo equivalenti ed avendo la stessa base $DL$ dovranno avere anche la stessa altezza $AF\cong BK$, cioè la stessa distanza tra $AB$ e $DK$ e quindi $AB$ e $DK$ sono paralleli.
+
+Detto $M$ il punto intersezione tra le rette $DC$ e $BL$, notiamo che, essendo $BHL$ e $HDC$ triangoli rettangoli isosceli, avranno gli angoli alla base di $45\grado$; ma è anche $H\widehat{L}B\cong M\widehat{L}C=45\grado$ in quanto opposti al vertice, perciò $L\widehat{M}C=90\grado$. Allora $BM$ e $CH$ sono due altezze del triangolo $BDC$, e poiché s'incontrano nel punto $L$ questo risulta essere l'ortocentro del triangolo, e poiché il segmento $BK$ passa per l'ortocentro deve essere a sua volta altezza relativa a $BC$. Ma poiché avevamo già dimostrato che $DK$ è parallelo al $AB$, se $DK$ è perpendicolare a $BC$ lo sarà anche $AB$ e quindi il triangolo $ABC$ è un triangolo rettangolo.
+\end{proof}
+
+\section{Applicazioni dei teoremi di Euclide e Pitagora}
+
+Consideriamo il triangolo rettangolo $ABC$ in figura.
+Supponiamo di conoscere la misura dell'ipotenusa $BC$ e della proiezione $CH$ del cateto $AC$, sull'ipotenusa; allora possiamo applicare il primo teorema di Euclide per trovare la lunghezza del cateto $AC$: $\overline{AC}^2=\overline{BC}\cdot \overline{CH}$, da cui si ricava $\overline{AC}=\sqrt{\overline{BC}\cdot \overline{CH}}$.
+
+Se invece conosciamo la lunghezza del cateto $AC$ e quella della sua proiezione $CH$ e vogliamo trovare l'ipotenusa, allora avremo $\overline{BC}=\dfrac{\overline{AC}^2}{\overline{CH}}$.
+
+Supponiamo ora di conoscere le misure delle due proiezioni dei cateti sull'ipotenusa, $BH$ e $CH$, e di voler trovare la misura di $AH$, altezza relativa all'ipotenusa, applicando il secondo teorema di Euclide avremo $\overline{AH}^2=\overline{BH}\cdot \overline{CH}$, da cui si ricava $\overline{AH}=\sqrt{\overline{BH}\cdot\overline{CH}}$.
+
+Se invece conosciamo l'altezza relativa all'ipotenusa ed una delle due proiezioni dei cateti, ad esempio $CH$, e vogliamo trovare la lunghezza dell'altra ($BH$), avremo $BH=\dfrac{\overline{AH}^2}{\overline{CH}}$.
+
+Per quanto riguarda poi le applicazioni del teorema di Pitagora, che sicuramente lo studente conosce già dalle scuole medie, ricordiamo che se abbiamo la misura dei due cateti avremo $\overline{BC}^2=\overline{AB}^2+\overline{AC}^2$, da cui $\overline{BC}=\sqrt{\overline{AB}^2+\overline{AC}^2}$; viceversa, conoscendo l'ipotenusa ed un cateto, ad esempio $AC$, avremo $\overline{AB}=\sqrt{\overline{BC}^2-\overline{AC}^2}$.
+
+\begin{exrig}
+\begin{esempio}
+Calcolare perimetro ed area di un triangolo rettangolo che ha un cateto lungo 10~cm e la sua proiezione sull'ipotenusa lunga 8~cm.\vspace{7pt}
+
+Facendo riferimento alla figura a lato, $\overline{AC}=10$~cm, $\overline{CH}=8$~cm.
+
+Applichiamo il primo teorema di Euclide per trovare la lunghezza dell'ipotenusa $\overline{BC}=\dfrac{\overline{AC}^2}{\overline{CH}}=\dfrac{10^2}{8}=\dfrac{100}{8}=\np{12,5}$~cm. Per trovare l'altro cateto possiamo applicare il teorema di Pitagora $\overline{AB}=\sqrt{\overline{BC}^2-\overline{AC}^2}=\sqrt{\dfrac{625}{4}-100}=\sqrt{\dfrac{225}{4}}=\dfrac{15}{2}=\np{7,5}$~cm.
+Quando il teorema di Pitagora viene applicato per trovare un cateto si può anche semplificare il calcolo scomponendo la differenza di quadrati
+\begin{align*}
+\overline{AB}&=\sqrt{\overline{BC}^2-\overline{AC}^2}=\sqrt{(\overline{BC}-\overline{AC})\cdot(\overline{BC}+\overline{AC})}=\sqrt{\left(\dfrac{25}{2}-10\right)\cdot\left(\dfrac{25}{2}+10\right)}=\sqrt{\dfrac{5}{2}\cdot\dfrac{45}{2}}\\
+&=\sqrt{\dfrac{5^2\cdot 3^2}{2^2}}=\dfrac{5\cdot 3}{2}=\dfrac{15}{2}=\np{7,5}\text{~cm.}
+\end{align*}
+
+A questo punto conosciamo tutti i lati, quindi possiamo calcolare il perimetro $2p=8+\np{7,5}+\np{12,5}=30$~cm e l'area $A=(\text{cateto}\times\text{cateto})/2 = \np{37,5}$~cm\textsuperscript{2}.
+\end{esempio}
+
+\begin{esempio}
+Nel triangolo rettangolo $ABC$ l'altezza relativa all'ipotenusa misura 12~cm. Il perimetro del triangolo formato dall'altezza e da uno dei cateti è 36~cm. Determina la proiezione dell'altro cateto sull'ipotenusa e il perimetro del triangolo $ABC$.\vspace{7pt}
+
+Dai dati si ha che $AH = 12$~cm, e $2p_{ABH} = 36$~cm.
+Questo vuol dire che $AB + BH = 2p - AH = 24$~cm. 
+Posso allora porre $AB = x$, da cui $BH = 24 – x$.
+Applichiamo il teorema di Pitagora ed otteniamo l'equazione
+\[x^2 = 12^2 + (24 - x)^2 \quad\Rightarrow\quad x^2 = 12^2 + 24^2 - 48x + x^2\]
+sviluppando i calcoli, il termine in $x^2$ si elimina e otteniamo l'equazione di primo grado $48x = 24^2 + 12^2$.
+Per evitare i calcoli raccogliamo al secondo membro $12^2$, quindi ricaviamo $x=\dfrac{12^2\cdot\left(2^2+1\right)}{4\cdot 12}=15$~cm.
+
+A questo punto possiamo ottenere $BH = 24-x = 24-15 = 9$~cm. Oppure, ricorrendo alla terna pitagorica fondamentale 3, 4, 5, di cui i lati del triangolo $ABH$ sono multipli secondo il numero 3, ho $BH = 3 \cdot 3 = 9$~cm.
+
+Per ricavare $CH$ applichiamo il secondo teorema di Euclide $\overline{CH}=\dfrac{\overline{AH}^2}{\overline{BH}}=\dfrac{144}{9}=16$~cm.
+
+Sommando $CH$ con $BH$ troviamo l'ipotenusa $BC=25$~cm. Per ricavare l'altro cateto ricorriamo alla terna pitagorica fondamentale $AB=3\cdot 5=15$~cm, $BC=5\cdot 5=25$~cm, da cui $AC=4\cdot 5=20$~cm.
+Il perimetro vale quindi $2p=15+25+20=60$~cm.
+\end{esempio}
+\end{exrig}
+
+\section{Applicazioni dell'algebra alla geometria}
+
+\subsection{Triangoli rettangoli con angoli di 45°}
+
+Un triangolo rettangolo avente un angolo di $45\grado$ è necessariamente isoscele, in quanto anche il terzo angolo varrà $45\grado$, infatti $180\grado - (90\grado+45\grado)=45\grado$.
+Indicando con $i$ l'ipotenusa e con $c$ ognuno dei due cateti, applicando il teorema di Pitagora avremo $i=\sqrt{c^2+c^2}=\sqrt{2c^2}=c\sqrt{2}$.
+
+Viceversa, se conosciamo l'ipotenusa e vogliamo ricavare i cateti, passando alla formula inversa e razionalizzando avremo $c=\dfrac{i}{\sqrt{2}}=i\dfrac{\sqrt{2}}{2}$.
+
+Un triangolo rettangolo isoscele può anche essere interpretato come metà di un quadrato, di cui i cateti sono i lati e l'ipotenusa è la diagonale.
+Indicando con $l$ il lato e $d$ la diagonale, anche per un quadrato varranno quindi le precedenti relazioni, ovvero $d=l\sqrt{2}$ e $l=d\dfrac{\sqrt{2}}{2}$.
+
+\subsection{Triangoli rettangoli con angoli di 30° e 60°}
+
+Un triangolo rettangolo con un angolo di $30\grado$ avrà il secondo angolo acuto di $60\grado$, infatti $180\grado- (90\grado+30\grado)=60\grado$. Questo triangolo può essere interpretato come metà di un triangolo equilatero: l'ipotenusa coincide con il lato di questo triangolo, il cateto adiacente all'angolo di $60\grado$ è metà del lato del triangolo equilatero ed il cateto adiacente all'angolo di $30\grado$ è l'altezza del triangolo equilatero.
+Dunque, indicando con $i$ l'ipotenusa, il cateto $BD$, adiacente all'angolo di $60\grado$, varrà $\dfrac{i}{2}$, mentre il cateto $AD$, opposto all'angolo di $60\grado$ e adiacente a quello di $30\grado$, applicando il teorema di Pitagora, varrà $AD=\sqrt{i^2-\left(\dfrac{i}{2}\right)^2}=\sqrt{i^2-\dfrac{i^2}{4}}=\sqrt{\dfrac{3i^2}{4}}=i\dfrac{\sqrt{3}}{2}$.
+
+Viceversa, se conosciamo il cateto $AD$ e vogliamo ricavare l'ipotenusa, passando alla formula inversa e razionalizzando avremo $i=\dfrac{2AD}{\sqrt{3}}=2AD\dfrac{\sqrt{3}}{3}$.
+
+Indicando quindi con $l$ il lato del triangolo equilatero e con $h$ la sua altezza avremo analogamente $h=l\dfrac{\sqrt{3}}{2}$ e $l=2h\dfrac{\sqrt{3}}{3}$.
+
+In questo modo possiamo anche determinare l'area di un qualunque triangolo equilatero conoscendone soltanto il lato $A=\dfrac{b\cdot h}{2}=\dfrac{1}{2}\cdot l\cdot l\dfrac{\sqrt{3}}{2}=l^2\dfrac{\sqrt{3}}{4}$.
+
+\begin{exrig}
+\begin{esempio}
+Gli angoli adiacenti alla base minore di un trapezio isoscele misurano $135\grado$. Determinare area e perimetro del trapezio, sapendo che le basi misurano 4~cm e 20~cm.\vspace{7pt}
+
+Tracciamo l'altezza $AH$; si verrà così a determinare il triangolo rettangolo $ABH$. Poiché $A\widehat{B}H=45\grado$, anche $B\widehat{A}H=45\grado$. Avremo quindi $\overline{BH}=\overline{AH}$; ma $\overline{BH}=\dfrac{\overline{BC}-\overline{AD}}{2}=8$~cm, quindi $\overline{AH}=8$~cm. L'area vale dunque $A=\dfrac{(20+4)\cdot 8}{2}=96$~cm\textsuperscript{2}.
+
+Per calcolare il perimetro ricordiamo che $\overline{AB}=\overline{BH}\sqrt{2}=8\sqrt{2}$~cm e $\overline{CD}=\overline{AB}$.
+Dunque $2p=20+4+2\cdot 8\sqrt{2}=24+16\sqrt{2}=8(3+2\sqrt{2})$~cm.
+\end{esempio}
+
+\begin{esempio}
+Un triangolo isoscele ha l'angolo al vertice di $120\grado$. Determina perimetro ed area sapendo che la base è lunga 60~cm.\vspace{7pt}
+
+Tracciamo l'altezza $BH$. Poiché il triangolo è isoscele, l'altezza relativa alla base è anche mediana, quindi $AH\cong HC$; ma $BH$ è anche bisettrice dell'angolo al vertice $B$, quindi si ottengono due triangoli rettangoli tra loro congruenti, ciascuno dei quali ha in $B$ un angolo di $60\grado$. Consideriamo uno dei due triangoli, ad esempio $ABH$; il cateto $\overline{AH}=30$~cm; poiché l'angolo $\widehat{A}=30\grado$, per calcolare $\overline{AB}$ si deve usare la formula inversa $\overline{AB}=\dfrac{2\overline{AH}\sqrt{3}}{3}=\dfrac{2\cdot 30\sqrt{3}}{3}=20\sqrt{3}$~cm.
+Il perimetro vale dunque $2p=60 + 40\sqrt{3} = 20 (3 + 2\sqrt{3})$~cm.
+
+Per calcolare l'area bisogna prima trovare $\overline{BH}$, che è congruente a metà ipotenusa $\overline{BH}=10\sqrt{3}$~cm. Quindi $A=\dfrac{60\cdot 10\sqrt{3}}{2}=300\sqrt{3}$~cm\textsuperscript{2}.
+\end{esempio}
+\end{exrig}
+
+\subsection{Formula di Erone per il calcolo dell'area di un triangolo}
+
+La \emph{formula di Erone} permette di calcolare l'area di un triangolo qualsiasi se si conoscono le misure dei suoi lati.
+Sia $a$ la misura del lato $BC$ e sia $H$ il piede dell'altezza $h$ del triangolo rispetto a $BC$. Ponendo $BH = x$ si avrà $HC = a - x$.
+Dal teorema di Pitagora si ha
+\begin{equation}\label{eq:7.1}
+h^2=c^2-x^2
+\end{equation}
+ma anche $h^2=b^2-(a-x)^2$. Uguagliamo le due espressioni e svolgiamo i calcoli. Otteniamo $c^2-x^2=b^2-a^2+2ax-x^2$, da cui $x=\dfrac{c^2+a^2-b^2}{2a}$. Sostituiamo questo valore di $x$ nella~(\ref{eq:7.1}), otteniamo $h^2=c^2-\left(\dfrac{c^2+a^2-b^2}{2a}\right)=\dfrac{4a^2c^2-(c^2+a^2-b^2)^2}{4a^2}$.
+Poiché il numeratore è una differenza di quadrati possiamo scomporlo ottenendo
+\begin{align*}
+h^2&=\dfrac{\left[2ac-(c^2+a^2-b^2)\right]\cdot\left[2ac+(c^2+a^2-b^2)\right]}{4a^2}\\
+&=\dfrac{\left[2ac-c^2-a^2+b^2)\right]\cdot\left[2ac+c^2+a^2-b^2\right]}{4a^2}\\
+&=\dfrac{\left[b^2-(a-c)^2\right]\cdot\left[(a+c)^2-b^2\right]}{4a^2}.
+\end{align*}
+Abbiamo ottenuto nuovamente delle differenze di quadrati che possiamo ulteriormente scomporre
+\[h^2=\dfrac{(b+a-c)\cdot(b-a+c)\cdot(a+c+b)\cdot(a+c-b)}{4a^2}.\]
+Adesso al numeratore abbiamo: $a + c + b = 2p$, $b + a - c$ può essere scritto come $b+a+c-2c = 2p-2c = 2(p-c)$, analogamente $b - a + c = 2p - 2a = 2 (p - a)$ e $a + c - b = 2p - 2b = 2(p - b)$.
+Quindi
+\begin{align*}
+h&=\sqrt{\dfrac{2p\cdot 2(p-a) \cdot 2(p-b) \cdot 2(p-c)}{4a^2}}=\sqrt{\dfrac{16p\cdot (p-a) \cdot (p-b) \cdot (p-c)}{4a^2}}\\
+&=\dfrac{2}{a}\sqrt{p(p-a)(p-b)(p-c)}.
+\end{align*}
+
+Infine calcoliamo l'area, ottenendo così la formula di Erone
+\[A=\dfrac{1}{2}a\cdot\dfrac{2}{a}\sqrt{p(p-a)(p-b)(p-c)}=\sqrt{p(p-a)(p-b)(p-c)}.\]
+
+\subsection{Triangoli equilateri inscritti e circoscritti}
+
+Consideriamo un triangolo equilatero inscritto in una circonferenza e vediamo che relazione c'è tra il suo lato ed il raggio della circonferenza stessa.
+Poiché in un triangolo equilatero il circocentro coincide con il baricentro, ricordando il teorema del baricentro, secondo il quale le tre mediane di un triangolo si incontrano in uno stesso, il baricentro appunto, che le divide in modo tale che la parte che contiene il vertice è il doppio dell'altra, avremo che $AO = r$, $OH = r/2$, quindi l'altezza $AH$ (che coincide con la mediana) è data da $AH = r+\dfrac{r}{2}=\dfrac{3}{2}r$.
+Per quanto visto precedentemente, il lato è dato da $l=\dfrac{3}{2}r\cdot\dfrac{2\sqrt{3}}{3}=r\sqrt{3}$. 
+
+Consideriamo ora un triangolo equilatero circoscritto ad una circonferenza.
+Per quanto detto prima, $AO$, parte della mediana che contiene il vertice, è il doppio di $OH = r$, raggio della circonferenza inscritta, e quindi, se conosciamo il raggio della circonferenza inscritta, avremo che $AH$ (mediana e altezza del triangolo) vale $3r$. Da qui possiamo, anche in questo caso, ricavare il lato del triangolo $l=3r\dfrac{2\sqrt{3}}{3}=2r\sqrt{3}$.
+
+\begin{exrig}
+\begin{esempio}
+Determina l'area di un triangolo equilatero sapendo che il raggio della circonferenza inscritta è lungo 6~cm. Determina quindi anche il raggio della circonferenza circoscritta.\vspace{7pt}
+
+Facendo riferimento alla figura, $AH=3r$, quindi $AH = 18$~cm. 
+Ognuno dei lati vale $2r$, quindi $BC = 12$~cm.
+L'area è $A = 12\cdot 18 / 2 = 108$~cm\textsuperscript{2}.
+Il raggio della circonferenza circoscritta è $R= AO = 2r = 12$~cm.
+\end{esempio}
+\end{exrig}
+
+\subsection{Trapezi circoscritti ad una circonferenza}
+
+Sappiamo che in un qualunque quadrilatero circoscrivibile ad una circonferenza la somma di due lati opposti è congruente alla somma degli altri due; questo teorema vale ovviamente per tutti i trapezi circoscrivibili.
+Inoltre possiamo dimostrare un'altra importante proprietà.
+
+\begin{proprieta}
+In ogni trapezio circoscrivibile ad una circonferenza, ognuno dei due triangoli che si ottengono congiungendo gli estremi di un lato obliquo con il centro della circonferenza è un triangolo rettangolo.
+\end{proprieta}
+
+Infatti, $CO$ e $OF$ sono le bisettrici degli angoli in $C$ e in $D$, lo stesso dicasi per $DO$ ed $EO$ (vedi la dimostrazione del teorema sulle tangenti condotte da un punto esterno ad una circonferenza); poiché gli angoli in $C$ e in $D$ sono tra loro supplementari, così come gli angoli in $E$ e in $F$, le loro metà saranno complementari, cioè $O\widehat{C}F+C\widehat{F}O=90\grado$ e $O\widehat{D}E+D\widehat{E}O=90\grado$. Ma allora gli angoli $C\widehat{O}F$ e $D\widehat{O}E$ sono retti, per differenza tra $180\grado$ (somma degli angoli interni di un triangolo) e $90\grado$.
+
+Queste importanti proprietà permettono di risolvere la maggior parte dei problemi sui trapezi circoscrivibili.
+
+\begin{exrig}
+\begin{esempio}
+In un trapezio rettangolo, circoscrivibile ad una circonferenza di raggio 6~cm, il lato obliquo misura $25/2$~cm. Determina perimetro ed area del trapezio.\vspace{7pt}
+
+L'altezza $CH$ è congruente al diametro della circonferenza inscritta, quindi $CH = AD = 12$~cm.
+Applicando il teorema sui quadrilateri circoscrivibili ad una circonferenza, abbiamo $BC + AD = AB + CD$.
+Poiché $BC + AD = (12 + 25/2) = 49/2$~cm, per trovare il perimetro basta moltiplicare questa misura per 2 e si ha $2p=49/2 \cdot 2=49$~cm.
+Anche il calcolo dell'area è immediato: $A=\dfrac{(AB+CD)\cdot CH}{2}=\dfrac{\frac{49}{2}\cdot 12}{2}=147$~cm\textsuperscript{2}. 
+\end{esempio}
+
+\begin{esempio}
+Nel trapezio $ABCD$, circoscritto ad una circonferenza, il punto $E$ di tangenza con la base minore $CD$ la divide in due parti: $CE = 6a$ e $DE = 12a$. Sapendo che la base maggiore $AB$ è il doppio del lato obliquo $AD$, determina perimetro ed area del trapezio.\vspace{7pt}
+
+Dai dati si deduce immediatamente che la base minore $CD = 18a$.
+Per il teorema delle tangenti condotte da un punto esterno ad una circonferenza sappiamo che, se $OH$ è il raggio, sarà $CE=CH=6a$, $DE=DK=12a$.
+Applichiamo ora il secondo teorema di Euclide prima al triangolo rettangolo $BOC$ e poi al triangolo rettangolo $AOD$, si ha $\overline{OH}^2=\overline{BH}\cdot\overline{HC}$ e $\overline{OK}^2=\overline{DK}\cdot\overline{AK}$.
+Poiché $\overline{OH}=\overline{OK}$ in quanto raggi, possiamo uguagliare i secondi membri ed avremo $\overline{BH}\cdot\overline{HC}=\overline{DK}\cdot\overline{AK}$. Sostituiamo i valori forniti dal testo ed abbiamo $\overline{BH}\cdot 6a=\overline{AK}\cdot 12a$, da cui ricaviamo $\overline{BH}=2\overline{AK}$. Poniamo quindi $\overline{AK} = x$, allora sarà $\overline{AD}=x+12a$, $\overline{BH}=2x$ e $\overline{BC}=2x+6a$. Poiché inoltre $\overline{AB}=2\overline{AD}$, avremo $\overline{AB} = 2(x + 12a)$. Ma $\overline{AB}=\overline{AI}+\overline{BI}$, e cioè, sempre per il teorema delle tangenti, $\overline{AB}=\overline{BH}+\overline{AK}$, cioè $\overline{AB} = 2x + x = 3x$. Uguagliando anche in questo caso i secondi membri avremo $2(x+12a)=3x$, da cui $x = \overline{AK} = 24a$. Sostituendo il valore di $x$ nelle uguaglianze precedenti avremo: $\overline{AB}=72a$, $\overline{BC}=54a$ e $\overline{AD}=36a$. 
+
+Calcoliamo il perimetro: $2p=72a+54a+36a+18a=180a$.
+
+Per calcolare l'area occorre determinare la lunghezza del raggio, in quanto l'altezza del trapezio è uguale al diametro della circonferenza. Applicando il secondo teorema di Euclide, poiché $\overline{BH}=2x=48a$, sarà $\overline{OH}^2=\overline{BH}\cdot\overline{HC}=48a\cdot 6a=288a^2$ e quindi $\overline{OH}=12a\sqrt{2}$. Dunque l'altezza del trapezio vale pertanto $2\overline{OH}=24a\sqrt{2}$. L'area allora sarà $A=\dfrac{(72a+18a)\cdot 24a\sqrt{2}}{2}=\np{1080}a^2\sqrt{2}$.
+\end{esempio}
+\end{exrig}
+
+\subsection{Trapezi circoscritti ad una semicirconferenza}
+
+\begin{definizione}
+Un \emph{trapezio} si dice \emph{circoscritto ad una semicirconferenza} se la sua base maggiore sta sulla retta che contiene il diametro della circonferenza e la base minore ed i lati obliqui sono tangenti alla semicirconferenza.
+\end{definizione}
+
+Per i trapezi appartenenti a questa categoria, sussiste la seguente proprietà.
+
+\begin{proprieta}
+Dato un trapezio circoscritto ad una semicirconferenza, ognuna delle due parti in cui la base maggiore è divisa dal centro della semicirconferenza è congruente al lato obliquo ad essa adiacente.
+\end{proprieta}
+
+\begin{proof}
+Dato il trapezio $ABCD$ nella figura~... ciò significa che $OB\cong BC$ e $OA\cong AD$. Dimostriamo la proprietà considerando i due triangoli $OBH_1$ e $BCH$ (ragionamento analogo varrà per gli altri due triangoli); questi due triangoli sono entrambi rettangoli in quanto $CH$ è altezza ($C\widehat{H}B$ è retto) e $OH_1$ è raggio che cade nel punto di tangenza ($O\widehat{H_1}B$ è retto); inoltre hanno $CH\cong OH_1$ in quanto entrambi raggi e l'angolo acuto $H\widehat{B}C$ in comune, quindi sono congruenti per uno dei criteri di congruenza dei triangoli rettangoli (un cateto e l'angolo acuto ad esso opposto rispettivamente congruenti). Da qui segue la congruenza tra le due ipotenuse $OB\cong BC$.
+\end{proof}
+
+\begin{exrig}
+\begin{esempio}
+Nel trapezio $ABCD$, circoscritto ad una semicirconferenza, la base minore ed un lato obliquo misurano entrambi 6~cm, mentre la base maggiore misura 15~cm. Calcolare perimetro ed area del trapezio.\vspace{7pt}
+
+Per quanto appena dimostrato, la base maggiore è uguale alla somma dei due lati obliqui, dunque avremo $AB=BC+AD$; sapendo che uno dei due lati obliqui, ad esempio $AD$, vale 6~cm, ricaviamo  subito $BC=AB-AD=15-6=9$~cm.
+Il perimetro dunque vale $2p = 15 + 9 + 6 + 6 = 36$~cm.
+Per calcolare l'area abbiamo bisogno dell'altezza.
+Poniamo $BH=x$, quindi sarà $AK=AB-(CD+BH)=15-6-x=9-x$.
+Applichiamo ora il teorema di Pitagora ai triangoli rettangoli $BCH$ e $DAK$, si ha $CH^2 = BC^2 - BH^2$; $DK^2 = AD^2 - DK^2$. Poiché $CH=DK$, l'uguaglianza varrà anche per i loro quadrati e quindi, per la proprietà transitiva, possiamo uguagliare i secondi membri ed avremo
+$BC^2 - BH^2 = AD^2 - DK^2$. Sostituiamo i valori $81-x^2=36-(9-x)^2$.
+Svolgiamo i calcoli, semplifichiamo ed otteniamo $18x=126$, da cui $x=7$. Dunque $HB = 7$~cm.
+Poiché $CH^2=BC^2-BH^2=81-49=32$, ??? si ha $x=4\sqrt{2}$  (possiamo accettare solo la soluzione positiva in quanto si tratta di una lunghezza). Calcoliamo l'area $A=\dfrac{(15+6)\cdot 4\sqrt{2}}{2}=42\sqrt{2}$~cm\textsuperscript{2}.
+\end{esempio}
+\end{exrig}
+
+\subsection{Raggio della circonferenza inscritta in un triangolo}
+
+Ricordando che l'area di un poligono circoscrivibile ad una circonferenza, e quindi in particolare l'area di un triangolo (che è sempre circoscrivibile), si può trovare come prodotto tra il semiperimetro e l'apotema, cioè il raggio della circonferenza inscritta, allora, applicando la formula inversa, il raggio della circonferenza inscritta sarà $r=\dfrac{2A}{2p}$, cioè sarà dato dal rapporto tra la doppia area ed il perimetro del triangolo.
+
+
+\subsection{Raggio della circonferenza circoscritta ad un triangolo}
+
+Consideriamo il triangolo $ACH$, ottenuto tracciando l'altezza $CH$ relativa alla base $AB$ del triangolo $ABC$, ed il triangolo $BCD$, ottenuto tracciando il diametro $CD$. Questi due triangoli sono simili per il primo criterio di similitudine, in quanto hanno entrambi un angolo retto $C\widehat{H}A$ e $C\widehat{B}D$ (l'angolo è retto in quanto inscritto in una semicirconferenza), gli angoli $C\widehat{A}H\cong C\widehat{D}B$ in quanto angoli alla circonferenza che insistono sullo stesso arco $BC$, quindi anche gli angoli $A\widehat{C}H$ e $D\widehat{C}B$ sono congruenti, poiché differenze di angoli congruenti. Possiamo dunque scrivere la proporzione tra i lati omologhi $CD:AC=BC:CH$.
+Indicando con $R$ il raggio della circonferenza circoscritta e con $a$, $b$, $c$ le misure dei lati e con $h$ quella dell'altezza relativa al lato $AB$, si avrà $CD=2R$, $AC=b$, $BC=a$ e $CH=h$. Sostituendo questi valori nella proporzione otteniamo $2R : b = a : h$.
+Da qui ricaviamo $R=\dfrac{a\cdot b}{h}$ che esprime il raggio della circonferenza circoscritta in funzione delle misure dei lati del triangolo e della sua altezza. Se poi conoscessimo solo i lati del triangolo, allora dovremmo applicare la formula che si ottiene moltiplicando numeratore e denominatore per il terzo lato $R=\dfrac{a\cdot b\cdot c}{h\cdot c}$, in quanto $A=\dfrac{c\cdot h}{2}$.
+
+
+\newpage
+
+\input{./chap/07_esercizi}
+
+\cleardoublepage

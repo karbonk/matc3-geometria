@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=2,font=\small,shorten line/.style={shorten >=#1,shorten <=#1}]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw (0,0) rectangle (1,1);
+\node at ([shift={(-0.1,-0.1)}]0,0) {$A$};
+\node at ([shift={(0.1,-0.1)}]1,0) {$B$};
+\node at ([shift={(0.1,0.1)}]1,1) {$C$};
+\node at ([shift={(-0.1,0.1)}]0,1) {$D$};
+\draw[blue] (0,0) -- (1,1);
+
+\end{scope}
+
+\end{tikzpicture}

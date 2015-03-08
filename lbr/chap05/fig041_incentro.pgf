@@ -1,0 +1,44 @@
+\begin{tikzpicture}[scale=0.9,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+%\clip (-2.1,-2.1) rectangle (2.5,2.1);
+\coordinate (o) at (0,0);
+\coordinate (a) at (110:2);
+\coordinate (b) at (200:2);
+\coordinate (c) at (325:2);
+
+\draw[thick] (a) node[above] {$A$} -- (b) node[shift={(-0.2,-0.2)}] {$B$} -- (c) node[shift={(0.2,-0.2)}] {$C$} -- cycle;
+%\draw[fill] (o) circle (1.2pt) node[shift={(0.15,-0.25)}] {$D$};
+%\draw[dotted, blue] (a) -- (o);
+%\draw[dotted, blue] (b) -- (o);
+%\draw[dotted, blue] (c) -- (o);
+%\draw[dashdotted, red, thick] (37.5:1.3) node[black, above] {$f$} -- (217.5:0.5);
+%\draw[dashdotted, red, thick] (262.5:1.5) node[black, left] {$d$} -- (82.5:0.5);
+%\draw[dashdotted, red, thick] (155:1.9) node[black, above] {$e$} -- (335:0.5);
+
+\path (a) let \p1 = ($(b)-(a)$) in -- ($(a)!{veclen(\x1,\y1)}!(c)$) coordinate (ac);
+\coordinate (a1) at ($(b)!0.5!(ac)$);
+\draw[thick, dashed, red] (a) -- ($(a)!0.85!(a1)$);
+\path (b) let \p1 = ($(a)-(b)$) in -- ($(b)!{veclen(\x1,\y1)}!(c)$) coordinate (bc);
+\coordinate (b1) at ($(a)!0.5!(bc)$);
+\draw[thick, dashed, red] (b) -- ($(b)!0.85!(b1)$);
+\path (c) let \p1 = ($(c)-(b)$) in -- ($(c)!{veclen(\x1,\y1)}!(a)$) coordinate (cb);
+\coordinate (c1) at ($(b)!0.5!(cb)$);
+\draw[thick, dashed, red] (c) -- ($(c)!0.85!(c1)$);
+\coordinate (d) at (intersection of a--a1 and b--b1);
+\coordinate (r1) at ($(a)!(d)!(b)$);
+\coordinate (r2) at ($(b)!(d)!(c)$);
+\coordinate (r3) at ($(c)!(d)!(a)$);
+\draw[dotted, blue] (d) -- (r1);
+\draw[dotted, blue] (d) -- (r2);
+\draw[dotted, blue] (d) -- (r3);
+\draw[fill] (d) circle (1.2pt) node[shift={(0.1,-0.3)}] {$D$}; 
+\draw[dashed] (d) let \p1 = ($(d) - (r1)$) in circle ({veclen(\x1,\y1)});
+\draw[fill] (r1) circle (1.2pt) node[shift={(-0.2,0.2)}] {$E$}; 
+\draw[fill] (r2) circle (1.2pt) node[shift={(0,-0.25)}] {$F$}; 
+\draw[fill] (r3) circle (1.2pt) node[shift={(0.2,0.2)}] {$G$}; 
+
+\end{scope}
+
+\end{tikzpicture}

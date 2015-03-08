@@ -1,0 +1,45 @@
+\begin{tikzpicture}[scale=0.8,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (-1,2);
+\coordinate (b) at (-2,0);
+\coordinate (c) at (1,0);
+
+\path (b) let \p1 = ($(a)-(b)$) in -- ($(b)!{veclen(\x1,\y1)}!(c)$) -- +($(a)-(b)$) coordinate (ob);
+
+\begin{scope}
+\clip (a) -- (b) -- (ob) -- cycle;
+\draw[blue, fill=blue!10] (b) circle (0.5);
+\end{scope}
+
+\begin{scope}
+\clip (ob) -- (b) -- (c) -- cycle;
+\draw[red, fill=red!10] (b) circle (0.5);
+\end{scope}
+
+\draw[blue, dashed] (b) -- (intersection of b--ob and a--c) coordinate (d);
+\path (c) -- +($(b)-(d)$) coordinate (c1);
+\coordinate (e) at (intersection of a--b and c--c1);
+
+\begin{scope}
+\clip (e) -- (c) -- (b) -- cycle;
+\draw[red, fill=red!10] (c) circle (0.5);
+\end{scope}
+
+\begin{scope}
+\clip (b) -- (e) -- (c) -- cycle;
+\draw[blue, fill=blue!10] (e) circle (0.5);
+\end{scope}
+
+\draw[thick] (a) node[above] {$A$} -- (b) node[shift={(-0.25,0)}] {$B$} -- (c) node[shift={(0.25,0)}] {$C$} -- cycle;
+
+\draw[very thin] (b) -- (e);
+\draw[very thin] (c) -- (e);
+
+\draw[fill] (d) circle (1.2pt) node[shift={(0.2,0.2)}] {$D$};
+\draw[fill] (e) circle (1.2pt) node[shift={(-0.25,-0.2)}] {$E$};
+
+\end{scope}
+
+\end{tikzpicture}

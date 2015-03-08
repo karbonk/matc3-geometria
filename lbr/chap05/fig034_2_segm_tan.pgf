@@ -1,0 +1,39 @@
+\begin{tikzpicture}[scale=0.75,font=\small]
+\usetikzlibrary{calc,intersections}
+
+\begin{scope}
+%\clip (-2.1,-2.1) rectangle (2.5,2.1);
+\coordinate (o) at (0,0);
+\coordinate (p) at (3,0);
+\coordinate (ox) at (1.5,0);
+
+\path[name path=Circle1] (o) circle (2);
+\path[name path=Circle2] (ox) circle (1.5);
+
+\path [name intersections={of=Circle1 and Circle2}] ;
+\draw[fill] (intersection-1) coordinate (a) circle (1.2pt) node[shift={(0,.3)}] {$A$};
+\draw[fill] (intersection-2) coordinate (b) circle (1.2pt) node[shift={(0,-.3)}] {$B$};
+
+\begin{scope}[rotate=-131]
+\draw[green!60!black, fill=green!10] (a) rectangle ([shift={(0.3,0.3)}]a);
+\end{scope}
+
+\begin{scope}[rotate=41]
+\draw[green!60!black, fill=green!10] (b) rectangle ([shift={(0.3,0.3)}]b);
+\end{scope}
+
+\draw[dotted] (ox) circle (1.5);
+\draw (o) circle (2);
+
+\draw[dashed] (o) -- (p);
+\draw[blue] (o) -- node[black,below, midway,sloped] {$r$} (a);
+\draw[blue] (o) -- node[black,above, midway,sloped] {$r$} (b);
+\draw[thick, red] (p) -- ($(p)!1.5!(a)$);
+\draw[thick, red] (p) -- ($(p)!1.5!(b)$);
+
+\draw[fill] (p) circle (1.2pt) node[shift={(0.2,0)}] {$P$};
+\draw[fill] (o) circle (1.2pt) node[left] {$O$};
+
+\end{scope}
+
+\end{tikzpicture}

@@ -1,0 +1,37 @@
+\begin{tikzpicture}[scale=0.9,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+%\clip (-2.1,-2.1) rectangle (2.5,2.1);
+\coordinate (o) at (0,0);
+\coordinate (a) at (225:2);
+\coordinate (b) at (-45:2);
+\coordinate (c) at (35:2);
+\coordinate (p) at (180:2);
+
+\draw[dotted] (o) circle (2);
+
+\coordinate (d) at ($(p)!-0.15!(c)$);
+
+\begin{scope}
+\clip (d) -- (a) -- (b) -- (c) -- cycle;
+\draw[blue, fill=blue!10] (a) circle (0.4);
+\draw[green!60!black,fill=green!10] (c) circle (0.4);
+\draw[red,fill=red!10] (b) circle (0.3);
+\draw[orange!70!black,fill=orange!10] (d) circle (0.3);
+\end{scope}
+
+\begin{scope}
+\clip (p) -- (a) -- (b) -- (c) -- cycle;
+\draw[gray,fill=gray!10] (p) circle (0.3);
+\end{scope}
+
+\draw[thick, dashed] (p) -- ($(p)!-0.15!(c)$) coordinate (d) node[shift={(-0.2,0)}] {$D$} -- (a);
+
+\draw[thick] (a) node[shift={(-0.1,-0.2)}] {$A$} -- (b) node[shift={(0.2,-0.2)}] {$B$} -- (c) node[shift={(0.2,0.2)}] {$C$} -- (p) node[shift={(-0.15,0.2)}] {$P$} -- cycle;
+
+\draw[fill] (o) circle (1.2pt) node[shift={(-0.1,-0.2)}] {$O$};
+
+\end{scope}
+
+\end{tikzpicture}

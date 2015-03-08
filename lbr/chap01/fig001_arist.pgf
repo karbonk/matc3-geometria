@@ -1,56 +1,72 @@
-\begin{tikzpicture}[font=\small]
-\tkzDefPoint(0,0){Y}
-\tkzDefPoint(.2,0){X}
-% cerchio di centro Y e raggio 1 cm
-\tkzDrawCircle[R,color=blue](Y,.9 cm)
-% cerchio di centro X e raggio 0.5 cm
-\tkzDrawCircle[R,color=red,fill=orange!40,opacity=.5](X,.5 cm)
-\node at(.2,0){X};
-\node at(-.5,.4){Y};
-\node at(0,1.2){A};
-\node at(0,-1.3){Ogni $ x $ è $ y $};
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
 
-\tkzDefPoint(2.3,0){Y}
-\tkzDefPoint(4,0){X}
-% cerchio di centro Y e raggio .7 cm
-\tkzDrawCircle[R,color=red](Y,.7 cm)
-% cerchio di centro X e raggio 0.7 cm
-\tkzDrawCircle[R,color=blue](X,.7 cm)
-\node at(2.3,0){X};
-\node at(4,0){Y};
-\node at(3.2,1.2){E};
-\node at(3.2,-1.3){Nessun $ x $ è $ y $};
-
-\tkzDefPoint(6,0){Y}
-\tkzDefPoint(6.8,0){X}
-% cerchio di centro Y e raggio .7 cm
-\tkzDrawCircle[R,color=red](Y,.7 cm)
-% cerchio di centro X e raggio 0.7 cm
-\tkzDrawCircle[R,color=blue](X,.7 cm)
-\node at(6.4,0){X};
-\node at(7.1,.3){Y};
-\node at(6.4,1.2){I};
-\node at(6.4,-1.3){Qualche $ x $ è $ y $};
 
 \begin{scope}
-\tkzClipCircle[R](X,.7 cm)
-\tkzDrawCircle[R,color=red,fill=orange!40,opacity=.4](Y,.7 cm)
-\end{scope}
-
-\tkzDefPoint(8.8,0){Y}
-\tkzDefPoint(9.6,0){X}
-% cerchio di centro Y e raggio .7 cm
-\tkzDrawCircle[R,color=red,fill=orange!40,opacity=.4](Y,.7 cm)
-% cerchio di centro X e raggio 0.7 cm
-\tkzDrawCircle[R,color=blue](X,.7 cm)
-\node at(8.5,0){X};
-\node at(9.9,.3){Y};
-\node at(9.2,1.2){O};
-\node at(9.2,-1.3){Qualche $ x $ non è $ y $};
+\coordinate (oy) at (0,0);
+\coordinate (ox) at (.2,0);
+\draw[red] (oy) circle (0.9);
 
 \begin{scope}
-\tkzClipCircle[R](Y,.7 cm)
-\tkzDrawCircle[R,color=red,fill=white](X,.7 cm)
+\clip (ox) circle (0.5);
+\draw[fill=orange!40,opacity=.4] (ox) circle (0.5);
 \end{scope}
+
+\draw[blue] (ox) circle (.5);
+\node at(.2,0){$X$};
+\node at(-.5,.4){$Y$};
+\node at(0,1.2){$A$};
+\node at(0,-1.3){Ogni $x$ è $y$};
+\end{scope}
+
+\begin{scope}[xshift=2.5cm]
+\coordinate (ox) at (0,0);
+\coordinate (oy) at (1.5,0);
+\draw[blue] (ox) circle (0.65);
+\draw[red] (oy) circle (0.65);
+\node at(0,0){$X$};
+\node at(1.5,0){$Y$};
+\node at(0.75,1.2){$E$};
+\node at(0.75,-1.3){Nessun $x$ è $y$};
+\end{scope}
+
+\begin{scope}[xshift=6cm]
+\coordinate (ox) at (0,0);
+\coordinate (oy) at (0.85,0);
+
+\begin{scope}
+\clip (ox) circle (0.7);
+\draw[fill=orange!40,opacity=.4] (oy) circle (0.7);
+\end{scope}
+
+\draw[blue] (ox) circle (0.7);
+\draw[red] (oy) circle (0.7);
+
+\node at(-0.1,0){$X$};
+\node at(0.95,0){$Y$};
+\node at(0.425,1.2){$I$};
+\node at(0.425,-1.3){Qualche $x$ è $y$};
+\end{scope}
+
+\begin{scope}[xshift=9cm]
+\coordinate (ox) at (0,0);
+\coordinate (oy) at (0.85,0);
+
+\begin{scope}
+\clip (ox) circle (0.7);
+\draw[fill=orange!40,opacity=.4] (ox) circle (0.7);
+\draw[fill=white] (oy) circle (0.7);
+\end{scope}
+
+\draw[blue] (ox) circle (0.7);
+\draw[red] (oy) circle (0.7);
+
+\node at(-0.1,0){$X$};
+\node at(0.95,0){$Y$};
+\node at(0.425,1.2){$O$};
+\node at(0.425,-1.3){Qualche $x$ non è $y$};
+\end{scope}
+
+
 
 \end{tikzpicture}

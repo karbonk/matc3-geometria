@@ -1,17 +1,28 @@
-\begin{tikzpicture}[font=\small]
-%i punti
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
 
-\tkzDefPoint(0,0){O}
-\tkzDefPoint(4,.7){c}
-\tkzDefPoint(1,-.5){A}
-\tkzDefPoint(2.4,2){a}
-\tkzDefPoint(.2,1.6){D}
-\tkzDefPoint(4,1.2){b}
-\tkzInterLL(A,a)(O,c) \tkzGetPoint{K}
-\tkzInterLL(A,a)(D,b) \tkzGetPoint{L}
-\tkzMarkAngles[fill=blue!10, size=.5](A,L,b c,K,a)
-\tkzDrawSegments[](O,c A,a D,b)
-\tkzLabelPoints(a,c)
-\tkzLabelPoint[above](b){b}
+
+\begin{scope}
+\coordinate (c1) at (0,0);
+\coordinate (c2) at (4,0.7);
+\coordinate (a1) at (1,-0.5);
+\coordinate (a2) at (2.4,2);
+\coordinate (b1) at (0.2,1.6);
+\coordinate (b2) at (4,1.2);
+\coordinate (ab) at (intersection of a1--a2 and b1--b2);
+\coordinate (ac) at (intersection of a1--a2 and c1--c2);
+
+\begin{scope}
+\clip (b2) -- (ab) -- (ac) -- (c2) -- cycle;
+\draw[blue, fill=blue!10] (ab) circle (0.3);
+\draw[red, fill=red!10] (ac) circle (0.3);
+\end{scope}
+
+\draw (a1) -- (a2) node [left] {$a$};
+\draw (b1) -- (b2) node [above] {$b$};
+\draw (c1) -- (c2) node [below] {$c$};
+
+\end{scope}
+
 
 \end{tikzpicture}

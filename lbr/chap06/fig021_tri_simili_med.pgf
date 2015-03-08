@@ -1,0 +1,31 @@
+\begin{tikzpicture}[scale=0.8,font=\small]
+\usetikzlibrary{calc}
+
+\clip (-1.8,-0.7) rectangle (8.8,4.1);
+\node at (3.5, 3.8) {Ipotesi: $ABC\sim A'B'C'$, $AD\cong DB$, $A'D'\cong D'B'$};
+\node at (3.5, 3.3) {Tesi: $AB:A'B'=CD:C'D'$};
+
+\begin{scope}[scale=1.4]
+\coordinate (a) at (0,0);
+\coordinate (c) at (1.6,1.7);
+\coordinate (b) at (2.5,0);
+\draw[fill=yellow!10] (a) -- (b) -- (c) -- cycle;
+
+\draw[thick] (a) node[below] {$A$} -- (b) node[below] {$B$} -- (c) node[above] {$C$} -- cycle;
+\draw[red, dashed] (c) -- ($(a)!0.5!(b)$) node[black, below] {$D$};
+
+\end{scope}
+
+\begin{scope}[xshift=4.5cm, scale=1]
+\coordinate (a) at (0,0);
+\coordinate (c) at (1.6,1.7);
+\coordinate (b) at (2.5,0);
+\draw[fill=gray!10] (a) -- (b) -- (c) -- cycle;
+
+\draw[thick] (a) node[below] {$A'$} -- (b) node[below] {$B'$} -- (c) node[above] {$C'$} -- cycle;
+\draw[red, dashed] (c) -- ($(a)!0.5!(b)$) node[black, below] {$D'$};
+
+\end{scope}
+
+
+\end{tikzpicture}

@@ -1,0 +1,41 @@
+\begin{tikzpicture}[scale=0.55,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+%\clip (-2.1,-2.1) rectangle (2.5,2.1);
+\coordinate (o) at (0,0);
+\coordinate (a) at (-5:2);
+\coordinate (b) at (100:2);
+\coordinate (c) at (150:2);
+\coordinate (d) at (260:2);
+
+\path (a) -- +(85:2.5) coordinate (a1);
+\path (a) -- +(85:-2.5) coordinate (a2);
+\path (b) -- +(190:2.5) coordinate (b1);
+\path (b) -- +(190:-2.5) coordinate (b2);
+\path (c) -- +(240:2.5) coordinate (c1);
+\path (c) -- +(240:-2.5) coordinate (c2);
+\path (d) -- +(350:2.5) coordinate (d1);
+\path (d) -- +(350:-2.5) coordinate (d2);
+
+\coordinate (i1) at (intersection of a1--a2 and b1--b2);
+\coordinate (i2) at (intersection of b1--b2 and c1--c2);
+\coordinate (i3) at (intersection of c1--c2 and d1--d2);
+\coordinate (i4) at (intersection of d1--d2 and a1--a2);
+
+\draw[thick, dashed] (i2) -- ($(i2)!-0.2!(i1)$) coordinate (p) node[shift={(-0.2,0.2)}] {$P$} -- (i3);
+
+\draw[thick, red] (i1) node[black, shift={(0.2,0.2)}] {$C$} -- (i2) node[black, shift={(-0.2,0.2)}] {$D$};
+\draw[thick, blue] (i2) -- (i3) node[black, shift={(-0.2,-0.2)}] {$A$};
+\draw[thick, orange!70!black] (i3) -- (i4) node[black, shift={(0.2,-0.1)}] {$B$};
+\draw[thick, green!70!black] (i4) -- (i1);
+
+%\draw[thick] (i1) node[shift={(0.2,0.2)}] {$C$} -- (i2) node[shift={(-0.2,0.2)}] {$D$} -- (i3) node[shift={(-0.2,-0.2)}] {$A$} -- (i4) node[shift={(0.2,-0.2)}] {$B$} -- cycle;
+
+\draw[dotted] (o) circle (2);
+
+\draw[fill] (o) circle (1.2pt) node[above] {$O$};
+
+\end{scope}
+
+\end{tikzpicture}
