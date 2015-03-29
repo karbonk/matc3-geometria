@@ -1,0 +1,16 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1.2,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\path[fill=red!10, opacity=0.5] (0,0) coordinate (a) -- (2,0) coordinate (b) -- (1.5,1.5) coordinate (c) -- (-0.5,1.5) coordinate (d) -- cycle;
+\draw[thick] (a) node[shift={(-0.2,-0.2)}] {$A$} -- (b) node[shift={(0.2,-0.2)}] {$B$} -- (c) node[shift={(0.2,0.2)}] {$C$} -- (d) node[shift={(-0.2,0.2)}] {$D$} -- cycle;
+\node[below] at ($(a)!(c)!(b)$) {$K$};
+\end{scope}
+
+\begin{scope}[xshift=-.5cm]
+\path[fill=red!10, opacity=0.5] (0,0) coordinate (e) -- (2,0) coordinate (f) -- (2,1.5) coordinate (g) -- (0,1.5) coordinate (h) -- cycle;
+\draw[thick] (e) node[shift={(-0.2,-0.2)}] {$L$} -- (f) -- (g) -- (h) -- cycle;
+\end{scope}
+
+\end{tikzpicture}

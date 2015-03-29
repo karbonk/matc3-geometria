@@ -1,0 +1,47 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1.4,font=\small]
+\usetikzlibrary{calc}
+
+%\clip (-0.2,-0.45) rectangle (3.2,2.45);
+
+\begin{scope}
+\coordinate (b) at (0,0);
+\coordinate (a) at (0.4,1.7);
+\coordinate (c) at (1.9,0);
+\coordinate (r1) at (-0.3,1.1);
+\coordinate (r2) at (1.3,1.1);
+\coordinate (s1) at (-0.3,0.5);
+\coordinate (s2) at (1.8,0.5);
+
+\coordinate (d) at (intersection of r1--r2 and a--b);
+\coordinate (f) at (intersection of r1--r2 and a--c);
+\coordinate (e) at (intersection of s1--s2 and a--b);
+\coordinate (g) at (intersection of s1--s2 and a--c);
+
+\node[shift={(-.2,-.2)}] at (d) {$D$};
+\node[shift={(-.2,-.2)}] at (e) {$E$};
+\node[shift={(.2,.2)}] at (f) {$F$};
+\node[shift={(.2,.2)}] at (g) {$G$};
+\path (d) -- +($(c)-(a)$) coordinate (t2);
+\path (e) -- +($(c)-(a)$) coordinate (u2);
+
+
+\coordinate (i) at (intersection of d--t2 and b--c);
+\coordinate (h) at (intersection of e--u2 and b--c);
+
+\node[below] at (h) {$H$};
+\node[below] at (i) {$I$};
+
+\draw (r1) -- (r2);
+\draw (s1) -- (s2);
+\draw ($(d)!-0.3!(i)$) -- ($(d)!1.3!(i)$);
+\draw ($(e)!-0.5!(h)$) -- ($(e)!1.5!(h)$);
+\draw[thick] (a) node[above] {$A$} -- (b) node[below] {$B$} --(c) node[below] {$C$} -- cycle;
+%\path (a) -- node[left] {$a$} (c);
+%\path (a) -- node[below] {$x$} (d);
+%\path (d) -- node[below] {$y$} (b);
+
+\end{scope}
+
+
+\end{tikzpicture}

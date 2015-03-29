@@ -1,0 +1,25 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.8,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (k1) at (0.5,1);
+\coordinate (k2) at (-0.5,-1);
+\coordinate (p) at (-1.5,0.7);
+
+\coordinate (p0) at ($(k1)!(p)!(k2)$);
+
+\draw[dotted] (p) -- ($(p)!2!(p0)$) coordinate (p1);
+
+\draw[thick, blue] (k1) node[black, left] {$k$} -- (k2);
+\draw[fill] (p) circle (1pt) node[shift={(0,0.25)}] {$P$};
+\draw[fill] (p1) circle (1pt) node[shift={(0,0.25)}] {$P'$};
+\draw[fill] (p0) circle (1pt) node[black, shift={(-0.25,-0.09)}] {$M$};
+
+\node at (0,-1.5) {$PP'\perp k$};
+\node at (0,-2) {$PM \cong MP'$};
+
+\end{scope}
+
+
+\end{tikzpicture}

@@ -1,3 +1,4 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
 \begin{tikzpicture}[scale=1.1,font=\small, dot/.style={circle,inner sep=1pt, fill, label={#1}, name=#1}, extended line/.style={shorten >=-#1,shorten <=-#1}, extended line/.default=1cm]
 \usetikzlibrary{calc, intersections}
 

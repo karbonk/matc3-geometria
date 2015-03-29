@@ -1,0 +1,23 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (0,0);
+\path (a) -- +(15:1.5) coordinate (b);
+\coordinate (c) at (0.3,-1);
+\path (c) -- +(0:1.5) coordinate (d);
+
+\draw[thick] (a) -- node [below] {$a$} (b);
+\draw[thick] (c) -- node [below] {$c$} (d);
+
+\draw[fill] (a) circle (1pt) node [above] {$A$};
+\draw[fill] (b) circle (1pt) node [above] {$B$};
+\draw[fill] (c) circle (1pt) node [above] {$C$};
+\draw[fill] (d) circle (1pt) node [above] {$D$};
+
+\end{scope}
+
+
+\end{tikzpicture}
+

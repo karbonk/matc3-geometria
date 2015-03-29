@@ -1,0 +1,41 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1.2,font=\small]
+\usetikzlibrary{calc}
+
+%\begin{scope}[rotate=121]
+\begin{scope}[rotate=-121]
+\path (0,0) coordinate (a) -- (-1.5,0) coordinate (b) -- (-1.5,2.5) coordinate (c) -- cycle;
+\end{scope}
+\coordinate (h) at ($(a)!(b)!(c)$);
+
+\draw[fill=blue!10] (b) let \p1=($(b)-(h)$) in -- (h) -- ++({\y1},0) coordinate (l) node[below] {$L$} -- ++(0,{\y1}) coordinate (i) node [above] {$I$} -- cycle;
+\path (h) -- node {$Q$} (i);
+
+%\path (a) -- (h) let \p1=(h) in -- ++(0,{-\x1}) coordinate (m1) -- +({-\x1},0) coordinate (n1) -- cycle;
+\path[fill=blue!10] (a) -- (h) let \p1=($(c)-(h)$) in -- ++(0,{-\x1}) coordinate (d) let \p2=(h) in -- +({-\x2},0) coordinate (e) -- cycle;
+\path (a) -- node {$R_1$} (d);
+
+\draw (a) -- (h) -- (d) node[below right] {$D$} -- (e) node[below left] {$E$} -- cycle;
+
+\draw[dashed] (d) -- (c);
+\coordinate (m) at (intersection of b--l and d--c);
+\draw (b) -- (m);
+\draw (a) -- (d);
+\coordinate (k) at (intersection of d--l and b--c);
+\draw (d) -- (l);
+\draw[dashed] (l) -- (k);
+\draw[dashed] (a) -- ($(d)!(a)!(l)$) coordinate (f);
+
+\draw[thick] (a) node[left] {$A$} -- (b) node [above]{$B$} -- (c) node[right] {$C$} -- cycle;
+
+\draw[fill] (h) circle (1.2pt) node[below right] {$H$};
+\draw[fill] (m) circle (1.2pt) node[below right] {$M$};
+\draw[fill] (k) circle (1.2pt) node[above right] {$K$};
+\draw[fill] (f) circle (1.2pt) node[below right] {$F$};
+
+\begin{scope}
+\clip (h) let \p1 = ($(c)-(h)$) in -- +({veclen(\x1+0.1,\y1)},0) -- +({veclen(\x1+0.1,\y1+0.1)},-{veclen(\x1+0.1,\y1+0.1)}) -- +(0,-{veclen(\x1,\y1+0.1)}) -- cycle;
+\draw[dotted] (h) let \p1 = ($(c)-(h)$) in circle ({veclen(\x1,\y1)});
+\end{scope}
+
+\end{tikzpicture}

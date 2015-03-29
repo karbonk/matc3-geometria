@@ -1,0 +1,29 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1.2,font=\small]
+\usetikzlibrary{calc, intersections}
+
+\clip (-1.3,-0.3) rectangle (2.3,2.8);
+
+\begin{scope}
+\draw[thick, fill=red!10] (0,0) coordinate (a) node[shift={(-0.2,-0.2)}] {$A$} -- (2,0) coordinate (b) node[shift={(0.2,-0.2)}] {$B$} -- (2,0.75) coordinate (c) node[shift={(0.2,0.2)}] {$C$} -- (0,0.75) coordinate (d) node[shift={(-0.2,-0.2)}] {$D$} -- cycle;
+\path[name path=Circle1] ($(c)!0.5!(d)$) circle (1);
+\path[name path=rettaae] (0.75, 0.75) coordinate (e) -- (0.75,1.8);
+\path [name intersections={of=Circle1 and rettaae}] ;
+\path[fill] (intersection-1) coordinate (f);
+
+\begin{scope}[yshift=0.75cm, rotate=52]
+\draw[thick, fill=red!10] (0,0) -- (1.23,0) -- (1.23,1.23) node[shift={(0,.2)}] {$G$} -- (0,1.23) node[shift={(-.2,0)}] {$H$} -- cycle;
+\end{scope}
+
+\draw[fill] (f) circle (1pt) node[shift={(.2,.2)}] {$F$};
+\draw[fill] (e) circle (1pt) node[shift={(.2,.2)}] {$E$};
+\draw[dashed] (e) -- (f);
+
+\begin{scope}
+\clip (-0.1,0.75) -- (2.1,0.75) -- (2.1,1.77) -- (-0.1,1.77);
+\draw ($(c)!0.5!(d)$) circle (1);
+\end{scope}
+
+\end{scope}
+
+\end{tikzpicture}

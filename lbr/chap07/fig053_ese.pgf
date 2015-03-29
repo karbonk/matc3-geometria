@@ -1,0 +1,18 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.8,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+%\clip (-2.1,-2.1) rectangle (2.5,2.1);
+\coordinate (a) at (0,0);
+\coordinate (b) at (2.5,0);
+\coordinate (c) at (0,3);
+
+\draw[thick] (a) node[shift={(-0.2,-0.2)}] {$A$} -- (b) node[shift={(0.2,-0.2)}] {$B$} -- (c) node[shift={(0,0.2)}] {$C$} -- cycle;
+
+\draw[thick] ($(a)!0.7!(b)$) node[shift={(0,-0.25)}] {$B'$} -- ($(a)!0.7!(c)$) node[shift={(-0.25,0)}] {$C'$};
+
+\end{scope}
+
+
+\end{tikzpicture}

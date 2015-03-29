@@ -1,0 +1,32 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.9,font=\small]
+\usetikzlibrary{calc}
+
+%\begin{scope}[rotate=121]
+\begin{scope}[rotate=-121]
+\path[fill=red!10] (0,0) coordinate (a) -- (-1.5,0) coordinate (b) -- (-1.5,2.5) coordinate (c) -- cycle;
+\draw[green!70!black, fill=green!10] (b) rectangle +(0.3,0.3);
+\draw[fill=blue!10] (a) let \p1=(b) in -- (b) -- (\x1,\x1) coordinate (g) node[above left] {$G$} -- (0,\x1) coordinate (f) node [left] {$F$} -- cycle;
+\end{scope}
+\draw (b) -- ($(a)!(b)!(c)$) coordinate (h);
+\draw[fill=blue!10] (a) let \p1=(c) in -- (0,{-\x1}) coordinate (e) node[below left] {$E$} let \p2=(h) in -- +({\x2},0) coordinate (d) node[below right] {$D$} -- (h) -- cycle;
+\begin{scope}
+\clip (a) let \p1=(c) in -- ({\x1+0.1},0) -- ({\x1},{-\x1}) -- (0,{-\x1}) -- cycle;
+\draw[dotted] (a) let \p1=(c) in circle ({\x1});
+\end{scope}
+
+\draw[thick] (a) node[left] {$A$} -- (b) node [above right]{$B$} -- (c) node[right] {$C$} -- cycle;
+
+\path (a) -- (0,1) coordinate (a1);
+\coordinate (i) at (intersection of a--a1 and f--g);
+\coordinate (j) at (intersection of h--b and f--g);
+\draw (g) -- (j);
+\draw (a) -- (i);
+\draw (b) -- (j);
+
+\draw[fill] (h) circle (1.2pt) node[below right] {$H$};
+\draw[fill] (i) circle (1.2pt) node[above left] {$I$};
+\draw[fill] (j) circle (1.2pt) node[above] {$J$};
+%\end{scope}
+
+\end{tikzpicture}

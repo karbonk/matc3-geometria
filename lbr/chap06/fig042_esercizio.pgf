@@ -1,0 +1,35 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1.2,font=\small]
+\usetikzlibrary{calc}
+
+
+\begin{scope}
+\coordinate (m) at (0,0);
+\coordinate (n) at (2.9,0);
+\coordinate (o) at (0.7,1.7);
+\coordinate (p) at (1.7,1.7);
+
+
+\draw[thick] (m) node[below] {$M$} -- (n) node[below] {$N$} -- (p) node[above] {$P$} -- (o) node[above] {$O$} -- cycle;
+
+\end{scope}
+
+
+\coordinate (q) at (intersection of m--p and n--o);
+
+\path (q) -- +(-180:1.2) coordinate (r1);
+\path (q) -- +(0:1.5) coordinate (r2);
+
+\coordinate (r) at (intersection of r1--r2 and m--o);
+\coordinate (s) at (intersection of r1--r2 and n--p);
+
+\draw[dashed] (m) -- (p);
+\draw[dashed] (n) -- (o);
+
+\draw[dashed] (r1) -- (r2);
+
+\draw[fill] (r) circle (1pt) node[shift={(-.2,.2)}] {$R$};
+\draw[fill] (s) circle (1pt) node[shift={(.2,.2)}] {$S$};
+\draw[fill] (q) circle (1pt) node[shift={(0,-.25)}] {$Q$};
+
+\end{tikzpicture}

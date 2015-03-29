@@ -1,0 +1,34 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+%\begin{scope}[rotate=121]
+\begin{scope}[rotate=-121]
+\path (0,0) coordinate (a) -- (-1.5,0) coordinate (b) -- (-1.5,2.5) coordinate (c) -- cycle;
+%\draw[gray!70!black, fill=gray!10] (b) rectangle +(0.3,0.3);
+\draw[fill=green!10] (a) let \p1=(b) in -- (b) -- (\x1,\x1) coordinate (g) node[above] {$G$} -- (0,\x1) coordinate (f) node [left] {$F$} -- cycle;
+\path (f) -- node {$Q_1$} (b);
+\end{scope}
+\coordinate (h) at ($(a)!(b)!(c)$);
+
+\draw[fill=blue!10] (b) let \p1=($(b)-(h)$) in -- (h) -- ++({\y1},0) coordinate (l) node[below right] {$L$} -- ++(0,{\y1}) coordinate (i) node [above] {$I$} -- cycle;
+\path (h) -- node {$Q$} (i);
+
+\draw[fill=yellow!20] (a) -- (h) let \p1=(h) in -- ++(0,{-\x1}) coordinate (m) node[right] {$M$} -- +({-\x1},0) coordinate (n) node[left] {$N$} -- cycle;
+\draw[fill=blue!10] (n) -- (m) let \p1=($(c)-(h)$) in -- ++(0,{-\x1}) coordinate (d) node[below right] {$D$} let \p2=(h) in -- +({-\x2},0) coordinate (e) node[below left] {$E$} -- cycle;
+
+%\draw (a) -- (e) node[below left] {$E$} -- (i) node[below right] {$I$} -- (c) -- cycle;
+%\draw[dashed] (b) -- (d);
+\path (a) -- node {$Q_2$} (m);
+\path (n) -- node {$R_1$} (d);
+%\path (a) -- node {$Q$} (i);
+
+\draw[thick] (a) node[left] {$A$} -- (b) node [above]{$B$} -- (c) node[right] {$C$} -- cycle;
+
+\draw[fill] (h) circle (1.2pt) node[below right] {$H$};
+\begin{scope}
+\clip (a) -- (2.92,0) -- (2.92, -2.92) -- (0,-2.92) -- cycle;
+\draw[dotted] (a) circle (2.912);
+\end{scope}
+
+\end{tikzpicture}

@@ -1,0 +1,22 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1.2,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+\draw (0,0) -- (4,0);
+\draw (1,1) -- (5,1);
+\draw (0,0) -- (1,1) -- (2,0) -- (3,1) -- (4,0) -- (5,1);
+
+\end{scope}
+
+
+\begin{scope}[xshift=6cm, yshift=0.5cm]
+
+\draw (0,0) -- (2,0);
+\draw (1,1) -- (3,1);
+\draw (0,0) -- (1,1) -- (2,0) -- (3,1) -- (3,-1) -- (2,0) -- (1,-1) -- (3,-1);
+
+\end{scope}
+
+\end{tikzpicture}

@@ -1,0 +1,42 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1.4,font=\small]
+\usetikzlibrary{calc}
+
+
+\begin{scope}
+\coordinate (c) at (1.5,1.7);
+\coordinate (a) at (0,0);
+\coordinate (b) at (2.2,0);
+
+
+\draw[thick] (a) node[below] {$A$} -- (b) node[below] {$B$} -- (c) node[above] {$C$} -- cycle;
+
+\end{scope}
+
+
+\begin{scope}[xshift=3cm]
+\coordinate (e) at (0.6,1.7);
+\coordinate (d) at (0,0);
+\coordinate (f) at (1.2,0);
+\draw[thick] (d) node[below] {$D$} -- (f) node[below] {$F$} -- (e) node[above] {$E$} -- cycle;
+
+\end{scope}
+
+\coordinate (r1) at (0,0.7);
+\coordinate (r2) at (4.5,0.7);
+\coordinate (s1) at (0,1.7);
+\coordinate (s2) at (4.5,1.7);
+\coordinate (i) at (intersection of r1--r2 and a--c);
+\coordinate (j) at (intersection of r1--r2 and b--c);
+\coordinate (k) at (intersection of r1--r2 and d--e);
+\coordinate (l) at (intersection of r1--r2 and e--f);
+
+\draw (r1) -- (r2);
+\draw (s1) -- (s2);
+
+\draw[fill] (i) circle (1pt) node[shift={(-.2,.2)}] {$I$};
+\draw[fill] (j) circle (1pt) node[shift={(.2,.2)}] {$J$};
+\draw[fill] (k) circle (1pt) node[shift={(-.2,.2)}] {$K$};
+\draw[fill] (l) circle (1pt) node[shift={(.2,.2)}] {$L$};
+
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1.1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+\path (0,0) coordinate (a) -- (1.5,1) coordinate (b) -- (3,0) coordinate (c) -- cycle;
+
+\coordinate (h) at ($(a)!(b)!(c)$);
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- cycle;
+\draw[blue, fill=blue!10] (b) circle (0.3) node[black, shift={(270:0.5)}] {$120\grado$};
+\end{scope}
+
+\draw[dashed] (b) -- (h) node[below] {$H$};
+
+\draw[thick] (a) node[shift={(-0.2,-0.2)}] {$A$} -- (b) node[shift={(0,0.2)}] {$B$} -- (c) node[shift={(0.2,-0.2)}] {$C$} -- cycle;
+
+\draw[fill] (h) circle (1pt);
+
+\end{scope}
+
+\end{tikzpicture}

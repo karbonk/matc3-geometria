@@ -1,0 +1,40 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.7,font=\small]
+\usetikzlibrary{calc}
+
+\pgfmathsetmacro{\const}{2.5}
+
+\begin{scope}
+\coordinate (o) at (0,0);
+\coordinate (a) at (-3,-0.5);
+\coordinate (b) at (-1.5,-0.5);
+\coordinate (c) at (-1.5,-2);
+\coordinate (d) at (-3,-2);
+
+\path (a) let \p1 = (a) in -- ({\x1*\const},{\y1*\const}) coordinate (a1);
+\path (b) let \p1 = (b) in -- ({\x1*\const},{\y1*\const}) coordinate (b1);
+\path (c) let \p1 = (c) in -- ({\x1*\const},{\y1*\const}) coordinate (c1);
+\path (d) let \p1 = (d) in -- ({\x1*\const},{\y1*\const}) coordinate (d1);
+
+\draw[thick, fill=red!10] (a) -- (b) -- (c) -- (d) -- cycle;
+\draw[thick, fill=blue!10] (a1) -- (b1) -- (c1) -- (d1) -- cycle;
+
+\draw[dotted] (o) -- (a1);
+\draw[dotted] (o) -- (b1);
+\draw[dotted] (o) -- (c1);
+\draw[dotted] (o) -- (d1);
+
+\draw[blue, fill] (o) circle (1pt) node[black, shift={(0.2,0.2)}] {$O$};
+\draw[fill] (a) circle (1pt) node[shift={(-0.2,0.2)}] {$A$};
+\draw[fill] (b) circle (1pt) node[shift={(0.2,0.2)}] {$B$};
+\draw[fill] (c) circle (1pt) node[shift={(0.2,-0.2)}] {$C$};
+\draw[fill] (d) circle (1pt) node[shift={(-0.2,-0.2)}] {$D$};
+\draw[fill] (a1) circle (1pt) node[shift={(-0.2,0.2)}] {$A'$};
+\draw[fill] (b1) circle (1pt) node[shift={(0.2,0.2)}] {$B'$};
+\draw[fill] (c1) circle (1pt) node[shift={(0.2,-0.2)}] {$C'$};
+\draw[fill] (d1) circle (1pt) node[shift={(-0.2,-0.2)}] {$D'$};
+
+\end{scope}
+
+
+\end{tikzpicture}

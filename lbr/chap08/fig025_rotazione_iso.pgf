@@ -1,0 +1,38 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}
+\pgfmathsetmacro{\myscale}{1};
+
+\begin{scope}[scale={\myscale},font=\small]
+\usetikzlibrary{calc}
+
+\coordinate (o) at (0,0);
+\path (o) -- ++(55:1.4) coordinate (b) node[above] {$a$};
+\path (o) -- ++(0:1.4) coordinate (a) node[above] {$b$};
+
+\begin{scope}
+\clip (o) -- (a) -- (b) -- cycle;
+\draw[thick, blue, fill=blue!10] (o) circle (0.5);
+\node[shift={(27:0.7)}] at (o) {$\alpha$};
+\end{scope}
+
+\draw (o) -- (b);
+\draw (o) -- (a);
+
+\end{scope}
+
+
+\begin{scope}[scale={\myscale},font=\small,xshift=3.2cm]
+
+\coordinate (o) at (-0.5,2);
+\coordinate (p) at (0,1);
+\coordinate (q) at (1.5,1.5);
+
+\draw[thick] (p) -- (q);
+
+\draw[blue, fill] (o) circle (1pt) node[black, above] {$O$};
+\draw[fill] (p) circle (1pt) node[above] {$P$};
+\draw[fill] (q) circle (1pt) node[above] {$Q$};
+
+\end{scope}
+
+\end{tikzpicture}

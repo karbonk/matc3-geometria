@@ -1,0 +1,27 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1.3,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (k1) at (-1.2,0);
+\coordinate (k2) at (1.2,0);
+\coordinate (r1) at (-0.9,0.6);
+\coordinate (r2) at (0.9,-0.4);
+
+\coordinate (r01) at ($(k1)!(r1)!(k2)$);
+\coordinate (r02) at ($(k1)!(r2)!(k2)$);
+
+\coordinate (r11) at ($(r1)!2!(r01)$);
+\coordinate (r21) at ($(r2)!2!(r02)$);
+\draw (r1) node[black, left] {$r$} -- (r2);
+\draw (r11) node[black, left] {$r'$} -- (r21);
+
+\coordinate (r) at (intersection of r1--r2 and r11--r21);
+
+\draw[thick, blue] (k1) node[black, left] {$k$} -- (k2);
+\draw[fill] (r) circle (1pt) node[above] {$R$};
+
+\end{scope}
+
+
+\end{tikzpicture}

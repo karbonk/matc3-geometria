@@ -1,0 +1,21 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1.2,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}[xshift=2.5cm]
+\draw[thick, fill=red!10] (0,0) coordinate (a) node[shift={(-0.2,-0.2)}] {$A$} -- (1.7,0) coordinate (b) node[shift={(0.2,-0.2)}] {$B$} -- (1.3,1.5) coordinate (c) node[shift={(0.2,0.2)}] {$C$} -- (0.7,1.5) coordinate (d) node[shift={(-0.2,0.2)}] {$D$} -- cycle;
+\draw[dashed, red] (d) -- ($(a)!(d)!(b)$) coordinate (h) node[below, black] {$H$};
+\draw[thick, blue] (a) -- (b);
+\draw[thick, green!80!black] (c) -- (d);
+\end{scope}
+
+\begin{scope}[xshift=6cm]
+\draw[thick, fill=red!10] (0,0) coordinate (e) node[shift={(-0.2,-0.2)}] {$E$} -- (2.3,0) coordinate (f) node[shift={(0.2,-0.2)}] {$F$} -- (0.7,1.5) coordinate (g) node[shift={(0,0.2)}] {$G$} -- cycle;
+\draw[dashed, red] (g) -- ($(e)!(g)!(f)$) coordinate (j) node[below, black] {$I$};
+
+\draw[thick, blue] (e) -- +(0:1.7) coordinate (x);
+\draw[thick, green!70!black] (x) -- (f);
+
+\end{scope}
+
+\end{tikzpicture}

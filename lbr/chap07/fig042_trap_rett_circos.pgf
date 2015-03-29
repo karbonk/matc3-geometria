@@ -1,0 +1,38 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.55,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (o) at (0,0);
+\coordinate (a) at (90:2);
+\coordinate (b) at (180:2);
+\coordinate (c) at (270:2);
+\coordinate (d) at (30:2);
+
+\draw[blue] (o) circle (2);
+
+\path (a) -- +(180:2.5) coordinate (a1);
+\path (a) -- +(180:-2.5) coordinate (a2);
+\path (b) -- +(270:2.5) coordinate (b1);
+\path (b) -- +(270:-2.5) coordinate (b2);
+\path (c) -- +(0:2.5) coordinate (c1);
+\path (c) -- +(0:-2.5) coordinate (c2);
+\path (d) -- +(120:2.5) coordinate (d1);
+\path (d) -- +(120:-2.5) coordinate (d2);
+
+\coordinate (i1) at (intersection of a1--a2 and b1--b2);
+\coordinate (i2) at (intersection of b1--b2 and c1--c2);
+\coordinate (i3) at (intersection of c1--c2 and d1--d2);
+\coordinate (i4) at (intersection of d1--d2 and a1--a2);
+
+\draw[thick] (i1) node[shift={(-0.2,0.2)}] {$D$} -- (i2) node[shift={(-0.2,-0.2)}] {$A$} -- (i3) node[shift={(0.2,-0.2)}] {$B$} -- (i4) node[shift={(0.2,0.2)}] {$C$} -- cycle;
+
+\draw[dashed] (i4) -- ($(i2)!(i4)!(i3)$) coordinate (h);
+
+\draw[fill] (o) circle (1.2 pt) node[black, shift={(0,-0.25)}] {$O$};
+\draw[fill] (h) circle (1.2 pt) node[black, shift={(0,-0.25)}] {$H$};
+
+\end{scope}
+
+
+\end{tikzpicture}

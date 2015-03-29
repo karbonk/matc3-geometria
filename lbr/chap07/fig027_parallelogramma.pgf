@@ -1,0 +1,10 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[thick, fill=red!10] (0,0) coordinate (a) -- node [below] {$b$} (2,0) coordinate (b) -- (2.5,1.5) -- (0.5,1.5) coordinate (d) -- cycle;
+\draw[dashed] (d) -- node[right] {$h$} ($(a)!(d)!(b)$);
+\end{scope}
+
+\end{tikzpicture}

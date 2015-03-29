@@ -1,0 +1,22 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1.2,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[thick] (0,0) coordinate (a) node[shift={(-0.2,-0.2)}] {$A$} -- ++(0:2) coordinate (c) node[shift={(0.2,-0.2)}] {$C$} -- ++(120:2) coordinate (b) node[shift={(0,0.2)}] {$B$} -- cycle;
+
+\coordinate (d) at ($(a)!0.33!(c)$);
+\coordinate (f) at ($(c)!0.33!(b)$);
+\path (d) let \p1 = (d) in -- ({\x1},{\y1+1}) coordinate (d1);
+\coordinate (e) at (intersection of d--d1 and a--b);
+
+\draw (d) -- (e) -- (f) -- cycle;
+
+\draw[fill] (d) circle (1pt) node[shift={(0,-0.2)}] {$D$};
+\draw[fill] (e) circle (1pt) node[shift={(-0.2,0.1)}] {$E$};
+\draw[fill] (f) circle (1pt) node[shift={(0.2,0.1)}] {$F$};
+
+\end{scope}
+
+
+\end{tikzpicture}

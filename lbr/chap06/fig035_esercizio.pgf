@@ -1,0 +1,24 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.6,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+\begin{scope}[rotate=20]
+\foreach \x in {0,1,2,3}
+{
+	\draw (\x, -.05) -- (\x, .05);
+}
+\draw (0,0) -- (3,0);
+\end{scope}
+
+\foreach \x in {0,1,2,3,4,5}
+{
+	\draw (\x, -1.05) -- (\x, -.95);
+}
+\draw (0,-1) -- (5,-1);
+
+\end{scope}
+
+
+\end{tikzpicture}

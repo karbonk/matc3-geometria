@@ -1,0 +1,31 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1,font=\small, x=5.9mm, y=5.9mm, smooth]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+\coordinate (k1) at (-3,-3);
+\coordinate (k2) at (0.2,3);
+
+\coordinate (k3) at (-4,0);
+\coordinate (k4) at (3,0);
+
+\coordinate (k) at (intersection of k1--k2 and k3--k4);
+
+\begin{scope}
+\clip (k) -- (k2) -- (k4) -- cycle;
+\draw[red, fill=red!10] (k) circle (0.6) node[black, shift={(23:1)}] {$\alpha$};
+\end{scope}
+
+\draw[blue, thick] (k1) -- (k2) node [black, left] {$a$};
+\draw[blue, thick] (k3) -- (k4) node [black, above] {$b$};
+
+\coordinate (b) at (-1.5,2.3);
+
+\draw[fill] (b) circle (1pt) node[above] {$P$};
+\draw[fill] (k) circle (1pt) node[above left] {$A$};
+
+\end{scope}
+
+
+\end{tikzpicture}

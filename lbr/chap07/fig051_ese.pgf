@@ -1,0 +1,28 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.7,font=\small]
+\usetikzlibrary{calc}
+\pgfmathsetmacro{\lati}{8}
+\pgfmathsetmacro{\angoloc}{360/\lati}
+
+\begin{scope}[rotate={\angoloc/2-90}]
+\coordinate (o) at (0,0);
+
+\foreach \x/\y in {0/A,1/B,2/C,3/D,4/E,5/F,6/G,7/H}
+{
+	\path +({\x*\angoloc}:2) coordinate (\y) -- ({(\x+1)*\angoloc}:2);
+}
+\draw[thick] (A) -- (B) -- (C) -- (D) -- (E) -- (F) -- (G) -- (H) -- cycle; 
+
+\end{scope}
+
+\coordinate (ef) at (intersection of D--E and G--F);
+\coordinate (cd) at (intersection of D--E and C--B);
+\coordinate (ab) at (intersection of C--B and A--H);
+\coordinate (gh) at (intersection of A--H and F--G);
+
+\draw[dashed] (F) -- (ef) -- (E);
+\draw[dashed] (D) -- (cd) -- (C);
+\draw[dashed] (A) -- (ab) -- (B);
+\draw[dashed] (G) -- (gh) -- (H);
+
+\end{tikzpicture}

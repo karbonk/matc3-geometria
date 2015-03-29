@@ -1,0 +1,17 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (0,0);
+
+\draw[blue, thick] (-1.5,-0.5) -- (1.5,-0.5) node [black, above] {$a$};
+\draw[blue, thick] (-1.5,-1.5) -- (1.5,-1.5) node [black, above] {$b$};
+
+\draw[fill] (a) circle (1pt) node [above right] {$A$};
+
+\end{scope}
+
+
+\end{tikzpicture}
+

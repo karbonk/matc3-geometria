@@ -1,0 +1,33 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.9,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (k) at (0,0);
+\coordinate (a) at (-1.5,0.5);
+\coordinate (b) at (-1,1.3);
+\coordinate (c) at (0.2,0.7);
+
+\path (a) let \p1 = (a) in -- ({-\x1},{-\y1}) coordinate (a1);
+\path (b) let \p1 = (b) in -- ({-\x1},{-\y1}) coordinate (b1);
+\path (c) let \p1 = (c) in -- ({-\x1},{-\y1}) coordinate (c1);
+
+\draw[thick, fill=red!10] (a) -- (b) -- (c) -- cycle;
+\draw[thick, fill=blue!10] (a1) -- (b1) -- (c1) -- cycle;
+
+\draw[dotted] (a) -- (a1);
+\draw[dotted] (b) -- (b1);
+\draw[dotted] (c) -- (c1);
+
+\draw[blue, fill] (k) circle (1pt) node[black, shift={(0.2,0.1)}] {$K$};
+\draw[fill] (a) circle (1pt) node[shift={(-0.2,0)}] {$A$};
+\draw[fill] (b) circle (1pt) node[shift={(-0.1,0.2)}] {$B$};
+\draw[fill] (c) circle (1pt) node[shift={(0.2,0)}] {$C$};
+\draw[fill] (a1) circle (1pt) node[shift={(0.2,0)}] {$A'$};
+\draw[fill] (b1) circle (1pt) node[shift={(0.1,-0.2)}] {$B'$};
+\draw[fill] (c1) circle (1pt) node[shift={(-0.2,0)}] {$C'$};
+
+\end{scope}
+
+
+\end{tikzpicture}

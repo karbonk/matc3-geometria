@@ -1,0 +1,17 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}[scale=0.8]
+\draw[thick] (0,0) -- (2,0) -- (2,2) -- (0,2) -- cycle;
+\end{scope}
+
+\begin{scope}[xshift=3cm, scale=1]
+\draw[thick] (0,0) coordinate (a) -- (2.5,0) coordinate (b) -- (3,1.5) coordinate (c) -- (0.5,1.5) coordinate (d) -- cycle;
+\end{scope}
+
+\begin{scope}[xshift=7cm, yshift=0.75cm, scale=1]
+\draw[thick] (0,0) coordinate (a) -- (1.5,-0.7) coordinate (b) -- (3,0) coordinate (c) -- (1.5,0.7) coordinate (d) -- cycle;
+\end{scope}
+
+\end{tikzpicture}

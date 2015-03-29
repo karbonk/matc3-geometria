@@ -1,0 +1,120 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.6,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a1) at (0,0);
+\coordinate (a2) at (4,0);
+\coordinate (b1) at (0,-1.6);
+\coordinate (b2) at (4,-1.6);
+\coordinate (c1) at (0,-3.5);
+\coordinate (c2) at (4,-3.5);
+\coordinate (t11) at (1.5,0.5);
+\coordinate (t12) at (0.5,-4);
+\coordinate (t21) at (3.5,0.5);
+\coordinate (t22) at (1.5,-4);
+\coordinate (A1) at (intersection of a1--a2 and t11--t12);
+\coordinate (A2) at (intersection of a1--a2 and t21--t22);
+\coordinate (B1) at (intersection of b1--b2 and t11--t12);
+\coordinate (B2) at (intersection of b1--b2 and t21--t22);
+\coordinate (C1) at (intersection of c1--c2 and t11--t12);
+\coordinate (C2) at (intersection of c1--c2 and t21--t22);
+
+\draw (a1) -- (a2);
+\draw (b1) -- (b2);
+\draw (c1) -- (c2);
+\draw (t11) -- (t12);
+\draw (t21) -- (t22);
+\draw[fill] (A1) circle (1.2pt) node[shift={(-0.2,0.2)}] {$A_1$};
+\draw[fill] (A2) circle (1.2pt) node[shift={(0.3,0.2)}] {$A_2$};
+\draw[fill] (B1) circle (1.2pt) node[shift={(-0.2,0.2)}] {$B_1$};
+\draw[fill] (B2) circle (1.2pt) node[shift={(0.3,0.2)}] {$B_2$};
+\draw[fill] (C1) circle (1.2pt) node[shift={(-0.2,0.2)}] {$C_1$};
+\draw[fill] (C2) circle (1.2pt) node[shift={(0.3,0.2)}] {$C_2$};
+
+\node[left] at (1.25, -0.6) {10 cm};
+\node[left] at (0.9, -2.5) {15 cm};
+\node[right] at (3, -0.6) {15 cm};
+\node[right] at (2.25, -2.5) {?};
+
+\end{scope}
+
+
+
+\begin{scope}[xshift=6cm]
+\coordinate (a1) at (0,0);
+\coordinate (a2) at (4,0);
+\coordinate (b1) at (0,-1.6);
+\coordinate (b2) at (4,-1.6);
+\coordinate (c1) at (0,-3.5);
+\coordinate (c2) at (4,-3.5);
+\coordinate (t11) at (2,0.5);
+\coordinate (t12) at (0.5,-4);
+\coordinate (t21) at (3,0.5);
+\coordinate (t22) at (3.5,-4);
+\coordinate (A1) at (intersection of a1--a2 and t11--t12);
+\coordinate (A2) at (intersection of a1--a2 and t21--t22);
+\coordinate (B1) at (intersection of b1--b2 and t11--t12);
+\coordinate (B2) at (intersection of b1--b2 and t21--t22);
+\coordinate (C1) at (intersection of c1--c2 and t11--t12);
+\coordinate (C2) at (intersection of c1--c2 and t21--t22);
+
+\draw (a1) -- (a2);
+\draw (b1) -- (b2);
+\draw (c1) -- (c2);
+\draw (t11) -- (t12);
+\draw (t21) -- (t22);
+\draw[fill] (A1) circle (1.2pt) node[shift={(-0.2,0.2)}] {$A_1$};
+\draw[fill] (A2) circle (1.2pt) node[shift={(0.2,0.2)}] {$A_2$};
+\draw[fill] (B1) circle (1.2pt) node[shift={(-0.2,0.2)}] {$B_1$};
+\draw[fill] (B2) circle (1.2pt) node[shift={(0.2,0.2)}] {$B_2$};
+\draw[fill] (C1) circle (1.2pt) node[shift={(-0.2,0.2)}] {$C_1$};
+\draw[fill] (C2) circle (1.2pt) node[shift={(0.2,0.2)}] {$C_2$};
+
+\node[left] at (1.5, -0.6) {6 cm};
+\node[left] at (0.95, -2.5) {?};
+\node[right] at (3.1, -0.6) {8 cm};
+\node[right] at (3.25, -2.5) {12 cm};
+
+\end{scope}
+
+
+
+\begin{scope}[xshift=12cm]
+\coordinate (a1) at (0,0.1);
+\coordinate (a2) at (4,0.1);
+\coordinate (b1) at (0,-1.5);
+\coordinate (b2) at (4,-1.5);
+\coordinate (c1) at (0,-3.7);
+\coordinate (c2) at (4,-3.7);
+\coordinate (t11) at (1,0.5);
+\coordinate (t12) at (0.7,-4);
+\coordinate (t21) at (2,0.5);
+\coordinate (t22) at (3.5,-4);
+\coordinate (A1) at (intersection of a1--a2 and t11--t12);
+\coordinate (A2) at (intersection of a1--a2 and t21--t22);
+\coordinate (B1) at (intersection of b1--b2 and t11--t12);
+\coordinate (B2) at (intersection of b1--b2 and t21--t22);
+\coordinate (C1) at (intersection of c1--c2 and t11--t12);
+\coordinate (C2) at (intersection of c1--c2 and t21--t22);
+
+\draw (a1) -- (a2);
+\draw (b1) -- (b2);
+\draw (c1) -- (c2);
+\draw (t11) -- (t12);
+\draw (t21) -- (t22);
+\draw[fill] (A1) circle (1.2pt) node[shift={(-0.2,0.2)}] {$A_1$};
+\draw[fill] (A2) circle (1.2pt) node[shift={(0.2,0.2)}] {$A_2$};
+\draw[fill] (B1) circle (1.2pt) node[shift={(-0.2,0.2)}] {$B_1$};
+\draw[fill] (B2) circle (1.2pt) node[shift={(0.2,0.2)}] {$B_2$};
+\draw[fill] (C1) circle (1.2pt) node[shift={(-0.2,0.2)}] {$C_1$};
+\draw[fill] (C2) circle (1.2pt) node[shift={(0.2,0.2)}] {$C_2$};
+
+\node[left] at (1, -0.6) {?};
+\node[left] at (0.9, -2.5) {16 cm};
+\node[right] at (2.4, -0.6) {8 cm};
+\node[right] at (3, -2.5) {18 cm};
+
+\end{scope}
+
+\end{tikzpicture}

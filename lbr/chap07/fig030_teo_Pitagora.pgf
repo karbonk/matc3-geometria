@@ -1,0 +1,30 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.9,font=\small]
+\usetikzlibrary{calc}
+
+%\begin{scope}[rotate=121]
+\begin{scope}[rotate=-121]
+\path[fill=red!10] (0,0) coordinate (a) -- (-1.5,0) coordinate (b) -- (-1.5,2.5) coordinate (c) -- cycle;
+\draw[gray!70!black, fill=gray!10] (b) rectangle +(0.3,0.3);
+\draw[fill=green!10] (a) let \p1=(b) in -- (b) -- (\x1,\x1) coordinate (g) node[above] {$G$} -- (0,\x1) coordinate (f) node [left] {$F$} -- cycle;
+\draw[fill=blue!10] (b) let \p1=($(c)-(b)$) in -- (c) -- ++(-\y1,0) coordinate (k) node[right] {$K$} -- ++(0,-\y1) coordinate (j) node [above] {$J$} -- cycle;
+\path (f) -- node {$Q_1$} (b);
+\path (c) -- node {$Q_2$} (j);
+\end{scope}
+\coordinate (h) at ($(a)!(b)!(c)$);
+\path[fill=green!10] (a) let \p1=(c) in -- (0,{-\x1}) coordinate (e) node[below left] {$E$} let \p2=(h) in -- +({\x2},0) coordinate (d) -- (h) -- cycle;
+\path[fill=blue!10] (h) -- (c) let \p1=(c) in -- +(0,{-\x1}) coordinate (i) -- (d) -- cycle;
+
+\draw (a) -- (e) node[below left] {$E$} -- (i) node[below right] {$I$} -- (c) -- cycle;
+\draw[dashed] (b) -- (d);
+\path (a) -- node {$R_1$} (d);
+\path (d) -- node {$R_2$} (c);
+\path (a) -- node[shift={(0,-0.7)}] {$Q$} (i);
+
+\draw[thick] (a) node[left] {$A$} -- (b) node [above]{$B$} -- (c) node[right] {$C$} -- cycle;
+
+\draw[fill] (h) circle (1.2pt) node[below right] {$H$};
+\draw[fill] (d) circle (1.2pt) node[below] {$D$};
+%\end{scope}
+
+\end{tikzpicture}

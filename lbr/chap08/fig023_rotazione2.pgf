@@ -1,0 +1,81 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}
+\pgfmathsetmacro{\myscale}{1};
+
+\begin{scope}[scale={\myscale},font=\small]
+\usetikzlibrary{calc}
+
+\coordinate (o) at (0,0);
+\path (o) -- ++(35:2) coordinate (b) node[above] {$b$};
+\path (o) -- ++(0:2) coordinate (a) node[above] {$a$};
+
+\begin{scope}
+\clip (o) -- (a) -- (b) -- cycle;
+\draw[thick, blue, fill=blue!10] (o) circle (0.5);
+\node[shift={(17:0.7)}] at (o) {$\alpha$};
+\end{scope}
+
+\draw (o) node[left] {$A$} -- (b);
+\draw (o) -- (a);
+
+\end{scope}
+
+
+\begin{scope}[scale={\myscale},font=\small,xshift=3.5cm,yshift=1.3cm]
+\usetikzlibrary{calc}
+
+\coordinate (o) at (0,0);
+\path (o) -- ++(310:2) coordinate (b) node[left] {$f$};
+\path (o) -- ++(0:2) coordinate (a) node[above] {$g$};
+
+\begin{scope}
+\clip (o) -- (a) -- ++(90:1) -- ++(-180:4) -- ++(-90:3) -- (b) -- cycle;
+\draw[thick, blue, fill=blue!10] (o) circle (0.45);
+\node[shift={(170:0.65)}] at (o) {$\gamma$};
+\end{scope}
+
+\draw (o) node[left] {$G$} -- (a);
+\draw (o) -- (b);
+
+\end{scope}
+
+
+\begin{scope}[scale={\myscale},font=\small,xshift=7.5cm]
+\usetikzlibrary{calc}
+
+\coordinate (o) at (0,0);
+\path (o) -- ++(20:2) coordinate (a) node[above] {$d$};
+\path (o) -- ++(130:2) coordinate (b) node[above] {$e$};
+
+\begin{scope}
+\clip (o) -- (a) -- (b) -- cycle;
+\draw[thick, blue, fill=blue!10] (o) circle (0.45);
+\node[shift={(80:0.65)}] at (o) {$\beta$};
+\end{scope}
+
+\draw (o) node[below] {$D$} -- (a);
+\draw (o) -- (b);
+
+\end{scope}
+
+
+\begin{scope}[scale={\myscale},font=\small,xshift=11.5cm]
+\usetikzlibrary{calc}
+
+\coordinate (o) at (0,0);
+\path (o) -- ++(32:2) coordinate (a) node[above] {$t$};
+\path (o) -- ++(135:2) coordinate (b) node[above] {$p$};
+
+\begin{scope}
+\clip (o) -- (a) -- (b) -- cycle;
+\draw[thick, blue, fill=blue!10] (o) circle (0.45);
+\node[shift={(85:0.65)}] at (o) {$\epsilon$};
+\end{scope}
+
+\draw (o) node[below] {$T$} -- (a);
+\draw (o) -- (b);
+
+\end{scope}
+
+
+\end{tikzpicture}

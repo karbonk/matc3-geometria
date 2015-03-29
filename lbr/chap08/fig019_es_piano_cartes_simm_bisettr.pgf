@@ -1,0 +1,53 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.8,font=\small, x=7mm, y=7mm, smooth]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+\coordinate (o) at (0,0);
+
+\begin{scope}[dotted,orange]
+\draw[step=7mm] (-4.5,-4.5) grid (5.7,5.7);
+\end{scope}
+
+\begin{scope}[->]
+\draw (-4.5,0) -- (5.7,0) node [below] {$x$};
+\draw (0,-4.5) -- (0,5.7) node [left] {$y$};
+\end{scope}
+
+\foreach \x in {-4,-3,-2,-1, 1, 2, 3, 4, 5}
+\draw (\x,1.5pt) -- (\x,-1.5pt) node[below] {$\x$};
+
+\foreach \y in {-4,-3,-2,-1, 1, 2, 3, 4, 5}
+\draw (1.5pt,\y) -- (-1.5pt,\y) node[left] {$\y$};
+
+\node[below left] at (o) {O};
+%\filldraw[fill=white, draw=black] (0,0) coordinate (o) circle (2pt);
+
+\coordinate (k1) at (-4,-4);
+\coordinate (k2) at (5,5);
+
+\draw[thick, blue] (k1) -- node[black, above, sloped, shift={(4.3,0)}] {$y=x$} (k2);
+
+\coordinate (p) at (4,2);
+\coordinate (q) at (-1,-3);
+\coordinate (h) at ($(k1)!(p)!(k2)$);
+\coordinate (q0) at ($(k1)!(q)!(k2)$);
+
+\path (h) let \p1 = ($(h)-(p)$) in -- +({\x1}, {\y1}) coordinate (a1);
+\path (q0) let \p1 = ($(q0)-(q)$) in -- +({\x1}, {\y1}) coordinate (q1);
+\draw[dotted] (p) -- (a1);
+\draw[dashed] (o) -- (p);
+\draw[dashed] (o) -- (a1);
+\draw[dotted] (q) -- (q1);
+
+\draw[fill] (p) circle (1pt) node [below] {$P$};
+\draw[fill] (a1) circle (1pt) node [above] {$P'$};
+\draw[fill] (h) circle (1pt) node [right] {$M$};
+\draw[fill] (q) circle (1pt) node [left] {$Q$};
+\draw[fill] (q1) circle (1pt) node [below] {$Q'$};
+
+\end{scope}
+
+
+\end{tikzpicture}

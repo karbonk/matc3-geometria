@@ -1,0 +1,35 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.8,font=\small]
+\usetikzlibrary{calc}
+
+\clip (-0.2,-0.45) rectangle (3.2,2.45);
+
+\begin{scope}[scale=1.4]
+\coordinate (a) at (0,0);
+\coordinate (c) at (0.4,1.7);
+\coordinate (b) at (2.2,0);
+
+\path (c) let \p1 = ($(b)-(c)$) in -- ($(c)!{veclen(\x1,\y1)}!(a)$) -- +($(b)-(c)$) coordinate (c1);
+\coordinate (d) at (intersection of c--c1 and a--b);
+
+\begin{scope}
+\clip (c) -- (a) -- (d) -- cycle;
+\draw[orange, fill=orange!20] (c) circle (0.55);
+\end{scope}
+
+\begin{scope}
+\clip (c) -- (d) -- (b) -- cycle;
+\draw[orange, fill=orange!20] (c) circle (0.45);
+\end{scope}
+
+
+\draw[dashdotted] (c) -- node[right] {$m$} (d);
+\draw[thick] (a) -- (b) -- node[right] {$b$} (c) -- cycle;
+\path (a) -- node[left] {$a$} (c);
+\path (a) -- node[below] {$x$} (d);
+\path (d) -- node[below] {$y$} (b);
+
+\end{scope}
+
+
+\end{tikzpicture}

@@ -1,0 +1,20 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=2,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw (0,0) -- (1,0) -- (0.75,0.5) -- (-0.25,0.5) -- cycle;
+\node at (0.4,0.25) {$f_1$};
+\end{scope}
+
+\begin{scope}[xshift=1.7cm]
+\draw (0,0) -- (0.5,0.5) -- (-0.4,0.5) -- cycle;
+\node at (0,0.3) {$f_2$};
+\end{scope}
+
+\begin{scope}[xshift=0.25cm, yshift=-1.1cm]
+\draw (0,0) -- (1.5,0) -- (1,0.7) -- (0.25,0.5) -- cycle;
+\node at (0.7,0.25) {$f_3$};
+\end{scope}
+
+\end{tikzpicture}

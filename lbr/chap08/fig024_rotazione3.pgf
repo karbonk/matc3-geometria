@@ -1,0 +1,30 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}
+\pgfmathsetmacro{\myscale}{1};
+
+\clip (-0.4,-0.4) rectangle (1.7,2.4);
+\begin{scope}[scale={\myscale},font=\small]
+\usetikzlibrary{calc}
+
+\coordinate (o) at (0,0);
+\path (o) -- ++(85:2) coordinate (p1);
+\path (o) -- ++(40:2) coordinate (p);
+
+\begin{scope}
+\clip (o) -- ($(o)!1.5!(p)$) -- ($(o)!1.5!(p1)$) -- cycle;
+\draw[thick, blue, fill=blue!10] (o) circle (0.5);
+\node[shift={(65:0.7)}] at (o) {$\alpha$};
+\draw[dotted] (o) circle (2);
+\end{scope}
+
+\draw[dotted] (o) -- (p);
+\draw[dotted] (o) -- (p1);
+\draw[fill, blue] (o) circle(1pt) node [black, below left] {$O$};
+\draw[fill] (p) circle(1pt) node [above] {$P$};
+\draw[fill] (p1) circle(1pt) node [above] {$P'$};
+
+\end{scope}
+
+
+\end{tikzpicture}
+

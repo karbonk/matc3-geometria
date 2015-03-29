@@ -1,0 +1,20 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.8,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[thick, fill=red!10] (0,0) coordinate (a) -- node [below] {$l$} ++(0:2) coordinate (b) -- node[right] {$l$} ++(60:2) -- ++(180:2) coordinate (d) -- cycle;
+\draw[dashed] (d) -- node[right] {$h$} ($(a)!(d)!(b)$);
+\end{scope}
+
+\begin{scope}[xshift=5cm]
+\draw[dotted] (-1,0) rectangle (1,{sqrt(3)*2});
+
+\begin{scope}[rotate=60]
+\draw[thick, fill=red!10] (0,0) coordinate (a) -- ++(0:2) coordinate (b) -- ++(60:2) coordinate (c) -- ++(180:2) coordinate (d) -- cycle;
+\draw[dashed] (a) -- node[right, shift={(-0.05,0.5)}] {$D$} (c);
+\draw[dashed] (b) -- node[above, shift={(-0.4,-0.05)}] {$d$} (d);
+\end{scope}
+\end{scope}
+
+\end{tikzpicture}

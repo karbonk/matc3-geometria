@@ -1,0 +1,43 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.8,font=\small, x=7mm, y=7mm, smooth]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+\begin{scope}[dotted,orange]
+\draw[step=7mm] (-1.5,-1.5) grid (5.7,7.7);
+\end{scope}
+
+\begin{scope}[->]
+\draw (-1.5,0) -- (5.7,0) node [below] {$x$};
+\draw (0,-1.5) -- (0,7.7) node [left] {$y$};
+\end{scope}
+
+\foreach \x in {-1, 1, 2, 3, 4, 5}
+\draw (\x,1.5pt) -- (\x,-1.5pt) node[below] {$\x$};
+
+\foreach \y in {-1, 1, 2, 3, 4, 5, 6, 7}
+\draw (1.5pt,\y) -- (-1.5pt,\y) node[left] {$\y$};
+
+\node[below left] at (0,0) {O};
+%\filldraw[fill=white, draw=black] (0,0) circle (2pt);
+
+\coordinate (k1) at (-1.5,3);
+\coordinate (k2) at (5.5,3);
+
+\draw[blue, thick] (k1) -- (k2) node[black, above left] {$y=3$};
+
+\coordinate (p) at (2,-1);
+\coordinate (h) at ($(k1)!(p)!(k2)$);
+
+\path (h) let \p1 = ($(h)-(p)$) in -- +({\x1}, {\y1}) coordinate (a1);
+\draw[dotted] (p) -- (a1);
+
+\draw[fill] (p) circle (1pt) node [below] {$P$};
+\draw[fill] (a1) circle (1pt) node [above] {$P'$};
+\draw[fill] (h) circle (1pt) node [above left] {$H$};
+
+\end{scope}
+
+
+\end{tikzpicture}

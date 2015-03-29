@@ -1,3 +1,4 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
 \begin{tikzpicture}[scale=0.85,font=\small]
 \usetikzlibrary{calc}
 

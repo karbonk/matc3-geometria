@@ -1,0 +1,33 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1.4,font=\small]
+\usetikzlibrary{calc}
+
+
+\begin{scope}
+\coordinate (c) at (0.8,1.5);
+\coordinate (a) at (0,0);
+\coordinate (b) at (2.2,0);
+
+\draw (c) -- ($(a)!(c)!(b)$) coordinate (v);
+\coordinate (w) at ($(c)!0.333!(v)$);
+
+\path (w) -- +(-180:1.2) coordinate (r1);
+\path (w) -- +(0:1.5) coordinate (r2);
+
+\coordinate (t) at (intersection of r1--r2 and c--a);
+\coordinate (u) at (intersection of r1--r2 and c--b);
+
+\draw (t) -- (u);
+
+\draw[thick] (a) node[below] {$A$} -- (b) node[below] {$B$} -- (c) node[above] {$C$} -- cycle;
+
+
+\draw[fill] (t) circle (1pt) node[shift={(-.2,.2)}] {$T$};
+\draw[fill] (u) circle (1pt) node[shift={(.2,.2)}] {$U$};
+\draw[fill] (v) circle (1pt) node[below] {$V$};
+\draw[fill] (w) circle (1pt) node[shift={(.2,.2)}] {$W$};
+
+\end{scope}
+
+
+\end{tikzpicture}

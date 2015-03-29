@@ -1,0 +1,38 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (0,0);
+\coordinate (b) at (3,0);
+\coordinate (c) at (2.5,1.5);
+\coordinate (d) at (1.5,1.5);
+
+
+\draw[thick] (a) node[shift={(-0.2,-0.1)}] {$A$} -- (b) node[shift={(0.2,-0.1)}] {$B$} -- (c) node[shift={(0.1,0.2)}] {$C$} -- (d) node[shift={(-0.1,0.2)}] {$D$} -- cycle;
+
+
+\coordinate (e) at ($(a)!0.5!(d)$);
+\coordinate (h) at ($(a)!(e)!(b)$);
+\coordinate (f) at ($(b)!0.5!(c)$);
+\coordinate (j) at ($(a)!(f)!(b)$);
+\coordinate (g) at (intersection of h--e and c--d);
+\coordinate (i) at (intersection of j--f and c--d);
+
+\draw[dashed] (d) -- ($(d)!1.3!(g)$);
+\draw[dashed] (c) -- ($(c)!2!(i)$);
+
+\draw[dashed] (g) -- (h);
+\draw[dashed] (i) -- (j);
+
+\draw[fill] (e) circle (1.2pt) node[left] {$E$};
+\draw[fill] (f) circle (1.2pt) node[right] {$F$};
+\draw[fill] (g) circle (1.2pt) node[shift={(-0.1,0.2)}] {$G$};
+\draw[fill] (i) circle (1.2pt) node[shift={(0.1,0.2)}] {$I$};
+\draw[fill] (h) circle (1.2pt) node[below] {$H$};
+\draw[fill] (j) circle (1.2pt) node[below] {$J$};
+
+\end{scope}
+
+
+\end{tikzpicture}

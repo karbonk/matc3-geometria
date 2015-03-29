@@ -1,3 +1,4 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
 \begin{tikzpicture}[scale=0.9,font=\small, extended line/.style={shorten >=-#1,shorten <=-#1},
   extended line/.default=0.5cm]
 \usetikzlibrary{calc}

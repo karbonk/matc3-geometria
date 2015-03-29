@@ -1,0 +1,25 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.9,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (0,0);
+\path (a) -- +(0:1.5) coordinate (b);
+\path (b) -- +(270:1.5) coordinate (c);
+\path (c) -- +(180:1.5) coordinate (d);
+\coordinate (a1) at (4,-0.75);
+
+\draw[thick] (a) -- (b) -- (c) -- (d) -- cycle;
+
+\node[above left] at (a) {$A$};
+\node[above right] at (b) {$B$};
+\node[below right] at (c) {$C$};
+\node[below left] at (d) {$D$};
+
+\draw[fill] (a1) circle (1pt) node[above] {$A'$};
+
+\end{scope}
+
+
+\end{tikzpicture}
+

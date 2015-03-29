@@ -1,0 +1,23 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.7,font=\small]
+\usetikzlibrary{calc, intersections}
+
+\begin{scope}
+\clip (-0.5,-1.6) rectangle (4.6,3.5);
+\coordinate (a) at (0,0);
+\coordinate (b) at (3,0);
+\coordinate (c) at (3,3);
+\coordinate (d) at (0,3);
+
+\path[name path = Circle1] (a) let \p1 = ($(c)-(a)$) in circle ({veclen(\x1,\y1)});
+\path[name path = Circle2] (c) let \p1 = ($(a)-(c)$) in circle ({veclen(\x1,\y1)});
+\path [name intersections={of=Circle1 and Circle2}];
+\path (intersection-2) coordinate (e) node[shift={(0.2,-0.2)}] {$E$};
+
+\draw[thick] (a) node[shift={(-0.2,-0.1)}] {$A$} -- (b) node[shift={(0.2,-0.1)}] {$B$} -- (c) node[shift={(0.2,0.2)}] {$C$} -- (d) node[shift={(-0.2,0.2)}] {$D$} -- cycle;
+\draw[thick] (a) -- (c) -- (e) -- cycle;
+
+\end{scope}
+
+
+\end{tikzpicture}

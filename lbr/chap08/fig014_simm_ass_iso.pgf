@@ -1,0 +1,28 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (k1) at (-1.2,0);
+\coordinate (k2) at (1.2,0);
+\coordinate (a) at (-0.7,0.3);
+\coordinate (b) at (0.7,0.8);
+
+\coordinate (a0) at ($(k1)!(a)!(k2)$);
+\coordinate (b0) at ($(k1)!(b)!(k2)$);
+
+\draw[dotted] (a) -- ($(a)!2!(a0)$) coordinate (a1);
+\draw[dotted] (b) -- ($(b)!2!(b0)$) coordinate (b1);
+\draw (a) -- (b);
+\draw (a1) -- (b1);
+
+\draw[thick, blue] (k1) node[black, left] {$k$} -- (k2);
+\draw[fill] (a) circle (1pt) node[shift={(0,0.25)}] {$A$};
+\draw[fill] (a1) circle (1pt) node[shift={(0,-0.25)}] {$A'$};
+\draw[fill] (b) circle (1pt) node[shift={(0,0.25)}] {$B$};
+\draw[fill] (b1) circle (1pt) node[shift={(0,-0.25)}] {$B'$};
+
+\end{scope}
+
+
+\end{tikzpicture}

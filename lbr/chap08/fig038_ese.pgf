@@ -1,0 +1,27 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1,font=\small, x=6.3mm, y=6.3mm, smooth]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (t) at (0,0);
+\coordinate (f) at (3,0);
+\coordinate (o) at (3,-1.5);
+\path (t) -- +(20:2) coordinate (t1);
+\path (t) -- +(150:2) coordinate (t2);
+
+\begin{scope}
+\clip (t1) -- (t) -- (t2) -- cycle;
+\draw[blue, fill=blue!10] (t) circle (0.4) node [black, shift={(90:0.6)}] {$\epsilon$};
+\end{scope}
+
+\draw (t) -- node[shift={(0.3,-0.25)}] {$t$} (t1);
+\draw (t) -- node[shift={(-0.3,-0.3)}] {$p$} (t2);
+
+\draw[fill] (t) circle (1pt) node [below] {$T$};
+\draw[fill] (f) circle (1pt) node [above right] {$F$};
+\draw[fill] (o) circle (1pt) node [above right] {$O$};
+
+\end{scope}
+
+
+\end{tikzpicture}

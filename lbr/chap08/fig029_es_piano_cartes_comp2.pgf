@@ -1,0 +1,43 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1,font=\small, x=5.9mm, y=5.9mm, smooth]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+\begin{scope}[dotted,orange]
+\draw[step=5.9mm] (-4.5,-1.5) grid (3.7,3.7);
+\end{scope}
+
+\begin{scope}[->]
+\draw (-4.5,0) -- (3.7,0) node [below] {$x$};
+\draw (0,-1.5) -- (0,3.7) node [left] {$y$};
+\end{scope}
+
+\foreach \x in {-4, -3, -2, -1, 1, 2, 3}
+\draw (\x,1.5pt) -- (\x,-1.5pt) node[below] {$\x$};
+
+\foreach \y in {-1, 1, 2, 3}
+\draw (1.5pt,\y) -- (-1.5pt,\y) node[left] {$\y$};
+
+\coordinate (k1) at (-1,-1.5);
+\coordinate (k2) at (-1,3.7);
+
+\coordinate (k3) at (-4.5,2);
+\coordinate (k4) at (3.7,2);
+
+\draw[blue, thick] (k1) -- (k2);
+\draw[blue, thick] (k3) -- (k4);
+
+\coordinate (b) at (2,1);
+\coordinate (k) at (intersection of k1--k2 and k3--k4);
+
+\draw[fill] (b) circle (1pt) node[above] {$B$};
+\draw[fill] (k) circle (1pt) node[above left] {$K$};
+
+\node[below left] at (0,0) {O};
+%\filldraw[fill=white, draw=black] (0,0) circle (2pt);
+
+\end{scope}
+
+
+\end{tikzpicture}

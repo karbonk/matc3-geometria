@@ -1,0 +1,63 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.7,font=\small]
+\usetikzlibrary{calc, intersections}
+
+\begin{scope}
+%\clip (-2.1,-2.1) rectangle (2.5,2.1);
+\coordinate (o) at (0,0);
+\coordinate (a) at (90:2);
+\coordinate (b) at (155:2);
+\coordinate (c) at (40:2);
+
+\begin{scope}
+\clip (-2.1,0) rectangle (2.1,2.1);
+\draw[name path = Circle1, blue] (o) circle (2);
+\end{scope}
+
+\coordinate (d1) at (-2.5,0);
+\coordinate (d2) at (2.5,0);
+
+\path (a) -- +(180:2.5) coordinate (a1);
+\path (a) -- +(180:-2.5) coordinate (a2);
+\path (b) -- +(245:2.5) coordinate (b1);
+\path (b) -- +(245:-2.5) coordinate (b2);
+\path (c) -- +(130:2.5) coordinate (c1);
+\path (c) -- +(130:-2.5) coordinate (c2);
+
+\coordinate (i1) at (intersection of a1--a2 and b1--b2);
+\coordinate (i2) at (intersection of a1--a2 and c1--c2);
+\coordinate (i3) at (intersection of c1--c2 and d1--d2);
+\coordinate (i4) at (intersection of d1--d2 and b1--b2);
+
+%\draw[thick, dashed, red] (i2) -- ($(i2)!1.3!(o)$);
+%\draw[thick, dashed, red] (i3) -- ($(i3)!1.3!(o)$);
+
+\draw[thick] (i1) node[shift={(-0.2,0.2)}] {$D$} -- (i2) node[shift={(0.2,0.2)}] {$C$} -- (i3) node[shift={(0.2,-0.2)}] {$B$} -- (i4) node[shift={(-0.2,-0.2)}] {$A$} -- cycle;
+
+\path [name path = rettaab] (i4) -- (i3);
+\path [name intersections={of=Circle1 and rettaab}];
+
+\path (intersection-1) coordinate (B1);
+\path (intersection-2) coordinate (A1);
+
+\draw[dashed] (i1) -- ($(i4)!(i1)!(i3)$) coordinate (k);
+\draw[dashed] (i2) -- ($(i4)!(i2)!(i3)$) coordinate (h);
+
+%\draw[blue, dashed] (a) -- (o);
+\draw[blue, dashed] (b) -- (o);
+\draw[blue, dashed] (c) -- (o);
+
+
+\draw[fill] (o) circle (1.2 pt) node[shift={(0,-0.25)}] {$O$};
+%\draw[fill] (a) circle (1.2 pt) node[shift={(0,0.25)}] {$E$};
+\draw[fill] (b) circle (1.2 pt) node[shift={(-0.25,0.05)}] {$K_1$};
+\draw[fill] (c) circle (1.2 pt) node[shift={(0.25,0.2)}] {$H_1$};
+\draw[fill] (h) circle (1.2 pt) node[shift={(0,-0.25)}] {$H$};
+\draw[fill] (k) circle (1.2 pt) node[shift={(0,-0.25)}] {$K$};
+%\draw[fill] (A1) circle (1.2 pt) node[shift={(0,-0.25)}] {$A_1$};
+%\draw[fill] (B1) circle (1.2 pt) node[shift={(0,-0.25)}] {$B_1$};
+
+\end{scope}
+
+
+\end{tikzpicture}

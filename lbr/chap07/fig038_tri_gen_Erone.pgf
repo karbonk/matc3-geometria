@@ -1,0 +1,21 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1.3,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+\path (0,0) coordinate (b) -- (2,0) coordinate (c) -- (0.5,1.5) coordinate (a) -- cycle;
+
+\coordinate (h) at ($(b)!(a)!(c)$);
+
+\draw[dashed] (a) -- node[shift={(0.25,-0.2)}] {$h$} (h) node[below] {$H$};
+
+\draw[thick] (a) node[shift={(0,0.2)}] {$A$} -- node[left] {$c$} (b) node[shift={(-0.2,-0.2)}] {$B$} -- node[below] {$a$} (c) node[shift={(0.2,-0.2)}] {$C$} -- cycle;
+
+\draw[fill] (h) circle (1pt);
+\path (c) -- node[shift={(0.25,0.1)}] {$b$} (a);
+
+\end{scope}
+
+
+\end{tikzpicture}

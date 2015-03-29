@@ -1,0 +1,13 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[fill] (0,0) coordinate (c) circle (1pt) node[above right] {$C$};
+\draw[fill] (1.7,0) coordinate (d) circle (1pt) node[above right] {$D$};
+\draw[thick, blue, ->] (c) -- (d);
+\draw[fill] (-0.4,-0.8) coordinate (a) circle (1pt) node[above right] {$A$};
+\draw[fill] (0.7,-1.7) coordinate (b) circle (1pt) node[above right] {$B$};
+\end{scope}
+
+\end{tikzpicture}

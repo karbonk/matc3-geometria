@@ -1,0 +1,25 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1.5,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw (0,0) rectangle (1,1);
+\node[shift={(-.2,-.2)}] at (0,0) {$A$};
+\node[shift={(.2,-.2)}] at (1,0) {$D$};
+\node[shift={(.2,.2)}] at (1,1) {$C$};
+\node[shift={(-.2,.2)}] at (0,1) {$D$};
+\end{scope}
+
+\begin{scope}[xshift=2cm, yshift=0.25cm]
+\draw (0,0) rectangle (2,0.5);
+\node[shift={(-.2,-.2)}] at (0,0) {$P$};
+\node[shift={(.2,-.2)}] at (2,0) {$Q$};
+\node[shift={(.2,.2)}] at (2,0.5) {$R$};
+\node[shift={(-.2,.2)}] at (0,0.5) {$S$};
+\end{scope}
+
+\begin{scope}[xshift=5cm, yshift=0.5cm]
+\draw (0,0) node[shift={(-.2,0)}] {$F$} -- (1,-0.5) node[shift={(0,-.2)}] {$G$} -- (2,0) node[shift={(.2,0)}] {$H$} -- (1,0.5) node[shift={(0,.2)}] {$K$} -- cycle;
+\end{scope}
+
+\end{tikzpicture}

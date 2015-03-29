@@ -1,0 +1,48 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.7,font=\small]
+\usetikzlibrary{calc}
+\pgfmathsetmacro{\lati}{5}
+\pgfmathsetmacro{\angoloc}{360/\lati}
+
+\begin{scope}[rotate={\angoloc/2-90}]
+%\clip (-2.1,-2.1) rectangle (2.5,2.1);
+\coordinate (o) at (0,0);
+
+\foreach \x/\y in {0/G,1/H,2/I,3/J,4/K}
+{
+	\path +({\x*\angoloc}:2) coordinate (\y) node [shift={({\x*\angoloc-45}:.2)}] {$\y$} -- ({(\x+1)*\angoloc}:2);
+}
+\draw[thick, blue, fill=red!10] (I) -- (J) -- (K) -- (G) -- (H) -- cycle; 
+\draw[red] (o) circle(1.61);
+
+\draw[fill] (o) circle (1.3pt) node[shift={(0.2,0.3)}] {$L$};
+
+\draw[red, dashed] (o) -- node[black, midway, shift={(0.16,-0.1)}] {$a$} ({(4*\angoloc)+\angoloc/2}:2{*cos(\angoloc/2)}) coordinate (h) node[black, below] {$O$};
+%\draw (o) let \p1 = ($(h)-(o)$) in circle ({veclen(\x1,\y1)});
+
+\foreach \y in {I, J, K, G, H}
+{
+%	\node[shift={({\x*\angoloc-45}:.2)}] at (\y) {$\y$};
+	\draw[dotted] (\y) -- (o);
+}
+
+\end{scope}
+
+\begin{scope}[xshift=4cm, yshift=-1.618cm]
+\path [fill=red!10] (0,0) coordinate(A) node[below] {$A$} let \p1 = ($(G)-(H)$) in -- ({5*veclen(\x1,\y1)},0) coordinate (F) node[below] {$F$} let \p2 = ($(h)-(o)$) in -- ({2.5*veclen(\x1,\y1)},{veclen(\x2,\y2)}) coordinate (m);
+
+\foreach \a/\b in {1/B,2/C,3/D,4/E}
+{
+	\path[fill] let \p1 = ($(G)-(H)$) in ({\a*veclen(\x1,\y1)},0) circle (1.5pt) coordinate (\b) node [below] {$\b$};
+   \draw[dotted] (\b) -- (m);
+%	\draw[fill] ({\a*\x1}) circle (1pt) coordinate (\y) node [below] {$\y$};
+}
+
+\node[above] at (m) {$M$};
+\draw[dashed, red] (m) -- ($(C)!(m)!(D)$) node[below, black] {$N$};
+\draw[thick] (A) -- (m) -- (F) -- cycle;
+\draw[thick, blue] (A) -- (F);
+\end{scope}
+
+
+\end{tikzpicture}

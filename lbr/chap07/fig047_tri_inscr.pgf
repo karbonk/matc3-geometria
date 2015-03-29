@@ -1,0 +1,31 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.7,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+%\clip (-2.1,-2.1) rectangle (2.5,2.1);
+\coordinate (o) at (0,0);
+\coordinate (a) at (210:2);
+\coordinate (b) at (0:2);
+\coordinate (c) at (90:2);
+
+\draw[blue] (o) circle (2);
+
+
+\draw[thick] (a) node[shift={(-0.2,-0.2)}] {$A$} -- node[shift={(-0.4,-0.35)}] {$c$} (b) node[shift={(0.2,0)}] {$B$} -- node[right] {$a$} (c) node[shift={(0,0.2)}] {$C$} -- cycle;
+
+\path (c) -- node[left] {$b$} (a);
+
+\draw[dashed] (c) -- node[right] {$h$} ($(a)!(c)!(b)$) coordinate (h);
+
+\draw[fill] (o) circle (1.2pt) node[shift={(-0.25,0)}] {$O$};
+\draw[fill] (h) circle (1.2pt) node[below] {$H$};
+%\draw[blue, dashed] (c) -- node[black, right] {$r$} (o);
+
+\draw[dashed] (c) -- (270:2) coordinate (d) node[below] {$D$} -- (b);
+
+
+\end{scope}
+
+
+\end{tikzpicture}

@@ -1,0 +1,9 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1.5,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[thick, fill=red!10] (0,0) coordinate (a) node[shift={(-0.2,-0.2)}] {$A$} -- (1.5,0) coordinate (b) node[shift={(0.2,-0.2)}] {$B$} -- (2,0.75) coordinate (c) node[shift={(0.2,0)}] {$C$} -- (1,1.5) coordinate (d) node[shift={(0,0.2)}] {$D$} -- (0.1,0.75) coordinate (e) node[shift={(-0.2,0.2)}] {$E$} -- cycle;
+\end{scope}
+
+\end{tikzpicture}

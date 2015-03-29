@@ -1,0 +1,51 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.7,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[fill=red!10] (0,0) -- (2,0) -- (1,1.5) -- cycle;
+\draw[fill=blue!10] (0,-2) -- (0,-0.5) -- (2.5,-2) -- cycle;
+\node at (1,-2.8) {(a)};
+\end{scope}
+
+\begin{scope}[xshift=3cm]
+\begin{scope}
+\draw[fill=red!10] (0,0) -- (2,0) -- (2.5,1) -- (0.5,1) -- cycle;
+\end{scope}
+\begin{scope}[xshift=1.2cm, yshift=-2cm, rotate=26]
+\draw[fill=blue!10] (0,0) -- (2,0) -- (2.5,1) -- (0.5,1) -- cycle;
+\end{scope}
+\node at (1.3,-2.8) {(b)};
+\end{scope}
+
+\begin{scope}[xshift=7.3cm]
+\begin{scope}[xshift=1cm, yshift=0.5cm]
+\draw[fill=red!10] (0,0) ellipse (0.8 and 0.4);
+\end{scope}
+\begin{scope}[xshift=1cm, yshift=-1.3cm]
+\draw[fill=blue!10] (0,0) ellipse (1.4 and 0.7);
+\end{scope}
+\node at (1.1,-2.8) {(c)};
+\end{scope}
+
+\begin{scope}[xshift=10.5cm]
+\begin{scope}
+\draw[fill=red!10] (0,0) to[out=30,in=155] (1,0) to[out=-25,in=-150] (2,0) -- (2,1) to[out=210,in=-25] (1,1) to[out=155,in=30] (0,1) -- cycle;
+\end{scope}
+\begin{scope}[xshift=0cm, yshift=-2cm]
+\draw[fill=blue!10] (0,0) to[out=30,in=270] (1,0) to[out=90,in=-150] (2,0) -- (2,1) to[out=210,in=90] (1,1) to[out=270,in=30] (0,1) -- cycle;
+\end{scope}
+\node at (1.1,-2.8) {(d)};
+\end{scope}
+
+\begin{scope}[xshift=13.5cm]
+\begin{scope}[yshift=0.5cm]
+\draw[fill=red!10] (0,0) -- (0.5,0.5) -- (2,0.5) -- (1.5,0) -- (2,-0.5) -- (0.5,-0.5)  -- cycle;
+\end{scope}
+\begin{scope}[xshift=2cm, yshift=-1.5cm, rotate=180]
+\draw[fill=blue!10] (0,0) -- (0.5,0.5) -- (2,0.5) -- (1.5,0) -- (2,-0.5) -- (0.5,-0.5)  -- cycle;
+\end{scope}
+\node at (1.1,-2.8) {(d)};
+\end{scope}
+
+\end{tikzpicture}

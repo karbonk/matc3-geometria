@@ -1,0 +1,25 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.55,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (k) at (0,0);
+\coordinate (a) at (-1,1.1);
+\coordinate (b) at (1,1.7);
+
+\draw[dotted] (b) let \p1 = (b) in -- ({-\x1},{-\y1}) coordinate (b1);
+\draw[dotted] (a) let \p1 = (a) in -- ({-\x1},{-\y1}) coordinate (a1);
+
+\draw[thick] ($(a)!-0.8!(b)$) -- ($(a)!1.8!(b)$) node[above] {$r$};
+\draw[thick] ($(a1)!-0.8!(b1)$) -- ($(a1)!1.8!(b1)$) node[above] {$r'$};
+
+\draw[blue, fill] (k) circle (1.4pt) node[black, shift={(0.25,0.05)}] {$K$};
+\draw[fill] (a) circle (1.4pt) node[shift={(-0.15,0.2)}] {$A$};
+\draw[fill] (b) circle (1.4pt) node[shift={(0.1,0.3)}] {$B$};
+\draw[fill] (a1) circle (1.4pt) node[shift={(0.15,0.3)}] {$A'$};
+\draw[fill] (b1) circle (1.4pt) node[shift={(-0.1,0.2)}] {$B'$};
+
+\end{scope}
+
+
+\end{tikzpicture}

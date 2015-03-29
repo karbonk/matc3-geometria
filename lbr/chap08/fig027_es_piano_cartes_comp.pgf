@@ -1,0 +1,83 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.8,font=\small, x=9mm, y=9mm, smooth]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+\begin{scope}[dotted,orange]
+\draw[step=9mm] (-3.5,-2.5) grid (9.7,4.7);
+\end{scope}
+
+\begin{scope}[->]
+\draw (-3.5,0) -- (9.7,0) node [below] {$x$};
+\draw (0,-2.5) -- (0,4.7) node [left] {$y$};
+\end{scope}
+
+\foreach \x in {-3, -2, -1, 1, 2,3,4,5,6,7,8,9}
+\draw (\x,1.5pt) -- (\x,-1.5pt) node[below] {$\x$};
+
+\foreach \y in {-2, -1, 1, 2,3,4}
+\draw (1.5pt,\y) -- (-1.5pt,\y) node[left] {$\y$};
+
+\node[below left] at (0,0) {O};
+%\filldraw[fill=white, draw=black] (0,0) circle (2pt);
+
+\coordinate (k1) at (3,-2.5);
+\coordinate (k2) at (3,4.7);
+
+\draw[blue, thick] (k1) -- node[black, above, sloped, shift={(1.4,0)}] {$x=3$} (k2);
+
+\coordinate (d) at (5,-2);
+\coordinate (e) at (8,2);
+\coordinate (f) at (9,-1);
+
+\path[fill=red!10, opacity=0.3] (d) -- (e) -- (f) -- cycle;
+\draw[thick] (d) -- (e) -- (f) -- cycle;
+
+\coordinate (v) at (0,2);
+
+\coordinate (d1) at ($(d)+(v)$);
+\coordinate (e1) at ($(e)+(v)$);
+\coordinate (f1) at ($(f)+(v)$);
+
+\path[fill=blue!10, opacity=0.3] (d1) -- (e1) -- (f1) -- cycle;
+\draw[thick] (d1) -- (e1) -- (f1) -- cycle;
+
+\draw[dotted] (d) -- (d1);
+\draw[dotted] (e) -- (e1);
+\draw[dotted] (f) -- (f1);
+
+\coordinate (d0) at ($(k1)!(d1)!(k2)$);
+\coordinate (e0) at ($(k1)!(e1)!(k2)$);
+\coordinate (f0) at ($(k1)!(f1)!(k2)$);
+
+\path (d0) let \p1 = ($(d0)-(d1)$) in -- +({\x1}, {\y1}) coordinate (d2);
+\path (e0) let \p1 = ($(e0)-(e1)$) in -- +({\x1}, {\y1}) coordinate (e2);
+\path (f0) let \p1 = ($(f0)-(f1)$) in -- +({\x1}, {\y1}) coordinate (f2);
+
+\path[fill=green!10, opacity=0.3] (d2) -- (e2) -- (f2) -- cycle;
+\draw[thick] (d2) -- (e2) -- (f2) -- cycle;
+
+\draw[dotted] (d1) -- (d2);
+\draw[dotted] (e1) -- (e2);
+\draw[dotted] (f1) -- (f2);
+
+\draw[fill] (d) circle (1pt) node [left] {$D$};
+\draw[fill] (e) circle (1pt) node [above] {$E$};
+\draw[fill] (f) circle (1pt) node [right] {$F$};
+
+\draw[fill] (d1) circle (1pt) node [above left] {$D'$};
+\draw[fill] (e1) circle (1pt) node [above] {$E'$};
+\draw[fill] (f1) circle (1pt) node [right] {$F'$};
+
+\draw[fill] (d2) circle (1pt) node [above right] {$D''$};
+\draw[fill] (e2) circle (1pt) node [above] {$E''$};
+\draw[fill] (f2) circle (1pt) node [left] {$F''$};
+
+\draw[thick, blue, ->] (5,2) -- node[black, left] {$\vec{u}$} ($(5,2)+(v)$);
+
+\end{scope}
+
+
+\end{tikzpicture}
+

@@ -1,0 +1,37 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.8,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw (0,0) rectangle (2,1);
+\draw (0,-2) -- (1.5,-2) -- (2,-0.5) -- (0.5,-0.5) -- cycle;
+\node at (1,-2.8) {(a)};
+\end{scope}
+
+\begin{scope}[xshift=3.5cm]
+\draw (0,0) -- (0,1) -- (2,0) -- cycle;
+\draw (0,-2) -- (0,-0.5) -- (3,-2) -- cycle;
+\node at (1.5,-2.8) {(b)};
+\end{scope}
+
+\begin{scope}[xshift=7cm]
+\begin{scope}[yshift=-0.3cm]
+\draw (0,0) -- (0,0.7) -- (2,0.7) -- (2.5,0.35) -- (2,0) -- cycle;
+\draw (0,-1) -- (1.25,-0.5) -- (2.5,-1) -- (2.1,-1.5) -- (0.4,-1.5) -- cycle;
+\end{scope}
+\node at (1.25,-2.8) {(c)};
+\end{scope}
+
+\begin{scope}[xshift=10.5cm]
+\begin{scope}[yshift=-1.2cm]
+\draw (0,0) -- (0,1) -- (0.3,1.5) -- (0.6,1) -- (0.6,0) -- cycle;
+\draw (0,1) -- (0.6,1);
+\end{scope}
+\begin{scope}[xshift=1.3cm, yshift=-1cm]
+\draw (0,0) -- (0,0.6) -- (1,0.6) -- (1,0) -- cycle;
+\draw (0.4,0.6) -- (0.7,1.1) -- (1,0.6);
+\end{scope}
+\node at (1.1,-2.8) {(d)};
+\end{scope}
+
+\end{tikzpicture}

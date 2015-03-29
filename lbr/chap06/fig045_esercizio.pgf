@@ -1,0 +1,47 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=.75,font=\small]
+\usetikzlibrary{calc,intersections}
+
+\begin{scope}
+\pgfmathsetmacro{\raggioa}{1.4}
+\pgfmathsetmacro{\raggiob}{2}
+\coordinate (oa) at (0,0);
+\coordinate (ob) at (2.4,0);
+
+\draw[name path=Circle1] (oa) circle (\raggioa);
+
+\draw[name path=Circle2] (ob) circle (\raggiob);
+
+\path [name intersections={of=Circle1 and Circle2}] ;
+\draw[fill] (intersection-1) coordinate (f) circle (1.5pt) node[above] {$F$};
+\draw[fill] (intersection-2) coordinate (c) circle (1.5pt) node[below] {$C$};
+
+\coordinate (a) at (-2.7,0.3);
+
+\path [name path=rettaae] (a) -- ($(a)!2!(f)$) coordinate (ae);
+\path [name path=rettaad] (a) -- ($(a)!2!(c)$) coordinate (ad);
+
+
+\path [name intersections={of=Circle1 and rettaae}] ;
+\draw[fill] (intersection-2) coordinate (g) circle (1.5pt) node[shift={(-.2,.2)}] {$G$};
+\path [name intersections={of=Circle2 and rettaae}] ;
+\draw[fill] (intersection-1) coordinate (e) circle (1.5pt) node[above] {$E$};
+
+\path [name intersections={of=Circle1 and rettaad}] ;
+\draw[fill] (intersection-1) coordinate (b) circle (1.5pt) node[shift={(-.2,-.2)}] {$B$};
+\path [name intersections={of=Circle2 and rettaad}] ;
+\draw[fill] (intersection-2) coordinate (d) circle (1.5pt) node[below] {$D$};
+
+\draw[fill] (a) circle (1.5pt) node[left] {$A$};
+
+\draw (a)--(ae);
+\draw (a)--(ad);
+\draw (g)--(c);
+\draw (b)--(f);
+\draw (f)--(d);
+\draw (c)--(e);
+
+\end{scope}
+
+\end{tikzpicture}
+

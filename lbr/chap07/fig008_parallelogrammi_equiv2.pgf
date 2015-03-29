@@ -1,0 +1,12 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1.2,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\path[fill=blue!10, opacity=0.4] (0,0) coordinate (a) -- (1,0) coordinate (b) -- (1.3,2) coordinate (c) -- (0.3,2) coordinate (d) -- cycle;
+\path[fill=red!10, opacity=0.4] (a) -- (b) -- (2.3,2) coordinate (c1) -- (c) -- cycle;
+\draw[thick] (a) node[shift={(-0.2,-0.2)}] {$A$} -- (b) node[shift={(0.2,-0.2)}] {$B$} -- (c) node[shift={(0,0.2)}] {$C\equiv D'$} -- (d) node[shift={(-0.2,0.2)}] {$D$} -- cycle;
+\draw[thick] (a) -- (b) -- (c1) node[shift={(0.2,0.2)}] {$C'$} -- (c) -- cycle;
+\end{scope}
+
+\end{tikzpicture}

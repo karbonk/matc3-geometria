@@ -1,0 +1,35 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1.2,font=\small]
+\usetikzlibrary{calc, intersections}
+
+\clip (-0.3,-0.85) rectangle (2.85,1.55);
+
+\begin{scope}
+\draw[thick, fill=red!10] (0,-0.75) coordinate (a) node[left] {$A$} -- (2,-0.75) coordinate (b) node[right] {$B$} -- (2,0) coordinate (c)-- (0,0) coordinate (d) node[shift={(-.2,.2)}] {$D$} -- cycle;
+\coordinate (e) at (0,0);
+\draw (c) -- (2.75,0) coordinate (f);
+\path[name path=rettag] (2, 0) coordinate (g) -- (2,1.5);
+\path[name path=rettaj] (0.75, 0) coordinate (j) -- (0.75,1.5);
+\path[name path=Circle1] ($(e)!0.5!(f)$) circle (1.375);
+
+\path [name intersections={of=Circle1 and rettag}] ;
+\path[fill] (intersection-1) coordinate (h);
+\path [name intersections={of=Circle1 and rettaj}] ;
+\path[fill] (intersection-1) coordinate (i);
+
+\draw[thick, fill=red!10] (g) -- (h) -- (i) -- (j) -- cycle;
+
+\draw[fill] (h) circle (1pt) node[shift={(.2,.2)}] {$G$};
+\draw[fill] (i) circle (1pt) node[shift={(-.2,.2)}] {$H$};
+\draw[fill] (j) circle (1pt) node[shift={(-.2,.2)}] {$I$};
+\draw[fill] (c) circle (1pt) node[shift={(.2,.2)}] {$C$};
+\draw[fill] (f) circle (1pt) node[below] {$E$};
+
+\begin{scope}
+\clip (-0.1,0) -- (2.8,0) -- (2.8,1.38) -- (-0.1,1.38);
+\draw ($(e)!0.5!(f)$) circle (1.375);
+\end{scope}
+
+\end{scope}
+
+\end{tikzpicture}

@@ -1,0 +1,30 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.8,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a) at (0,0);
+\coordinate (b) at (2.5,0);
+\coordinate (c) at (4.3,3);
+\coordinate (d) at (1.8,3);
+\coordinate (e) at ($(a)!0.5!(b)$);
+\coordinate (f) at ($(c)!0.5!(d)$);
+
+\draw[thick] (a) node[shift={(-0.2,-0.2)}] {$A$} -- (b) node[shift={(0.2,-0.2)}] {$B$} -- (c) node[shift={(0,0.2)}] {$C$} -- (d) node[shift={(0,0.2)}] {$D$} -- cycle;
+
+\draw (a) -- (f) -- (b);
+\draw (c) -- (e) -- (d);
+
+\coordinate (h) at (intersection of e--c and f--b);
+\coordinate (g) at (intersection of d--e and a--f);
+
+\node[above] at (f) {$F$};
+\node[below] at (e) {$E$};
+
+\node[left] at (g) {$G$};
+\node[left] at (h) {$H$};
+
+\end{scope}
+
+
+\end{tikzpicture}

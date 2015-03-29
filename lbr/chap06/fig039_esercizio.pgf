@@ -1,0 +1,44 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (a1) at (0,0);
+\coordinate (a2) at (4,0);
+\coordinate (b1) at (0,-.9);
+\coordinate (b2) at (4,-.9);
+\coordinate (c1) at (0,-1.9);
+\coordinate (c2) at (4,-1.9);
+\coordinate (d1) at (0,-3.2);
+\coordinate (d2) at (4,-3.2);
+\coordinate (t11) at (2,0.5);
+\coordinate (t12) at (0.5,-3.5);
+\coordinate (t21) at (3,0.5);
+\coordinate (t22) at (3.5,-3.5);
+\coordinate (A1) at (intersection of a1--a2 and t11--t12);
+\coordinate (A2) at (intersection of a1--a2 and t21--t22);
+\coordinate (B1) at (intersection of b1--b2 and t11--t12);
+\coordinate (B2) at (intersection of b1--b2 and t21--t22);
+\coordinate (C1) at (intersection of c1--c2 and t11--t12);
+\coordinate (C2) at (intersection of c1--c2 and t21--t22);
+\coordinate (D1) at (intersection of d1--d2 and t11--t12);
+\coordinate (D2) at (intersection of d1--d2 and t21--t22);
+
+\draw (a1) node[above] {$r$} -- (a2);
+\draw (b1) node[above] {$s$} -- (b2);
+\draw (c1) node[above] {$t$} -- (c2);
+\draw (d1) node[above] {$u$} -- (d2);
+\draw (t11) -- (t12);
+\draw (t21) -- (t22);
+\draw[fill] (A1) circle (1.2pt) node[shift={(-0.2,0.2)}] {$A$};
+\draw[fill] (A2) circle (1.2pt) node[shift={(0.2,0.2)}] {$A'$};
+\draw[fill] (B1) circle (1.2pt) node[shift={(-0.2,0.2)}] {$B$};
+\draw[fill] (B2) circle (1.2pt) node[shift={(0.2,0.2)}] {$B'$};
+\draw[fill] (C1) circle (1.2pt) node[shift={(-0.2,0.2)}] {$C$};
+\draw[fill] (C2) circle (1.2pt) node[shift={(0.2,0.2)}] {$C'$};
+\draw[fill] (D1) circle (1.2pt) node[shift={(-0.2,0.2)}] {$D$};
+\draw[fill] (D2) circle (1.2pt) node[shift={(0.2,0.2)}] {$D'$};
+
+\end{scope}
+
+\end{tikzpicture}

@@ -1,0 +1,33 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1.5,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+
+\path (0,0) coordinate (b) -- (3.5,0) coordinate (c) -- (2.3,1.2) coordinate (d) -- (1.2,1.2) coordinate (a) -- cycle;
+
+\coordinate (h) at ($(b)!(a)!(c)$);
+
+\begin{scope}
+\clip (a) -- (b) -- (c) -- (d) -- cycle;
+\draw[green!70!black, fill=green!10] (a) circle (0.3) node[black, shift={(305:0.7)}] {$90\grado$};
+\draw[blue, fill=blue!10] (d) circle (0.3) node[black, shift={(250:0.7)}] {$135\grado$};
+\draw[red, fill=red!10] (b) circle (0.3) node[black, shift={(23:0.75)}] {$45\grado$};
+\draw[red, fill=red!10] (c) circle (0.3) node[black, shift={(158:0.7)}] {$45\grado$};
+\end{scope}
+
+\begin{scope}
+\clip (a) -- (b) -- (h) -- cycle;
+\draw[red, fill=red!10] (a) circle (0.3) node[black, shift={(248:0.7)}] {$45\grado$};
+\end{scope}
+
+\draw[dashed] (a) -- node[shift={(0.15,-0.3)}] {$h$} (h) node[below] {$H$};
+
+\draw[thick] (b) node[shift={(-0.2,-0.2)}] {$B$} -- (c) node[shift={(0.2,-0.2)}] {$C$} -- (d) node[shift={(0.2,0.2)}] {$D$} -- (a) node[shift={(-0.2,0.2)}] {$A$} -- cycle;
+
+\draw[fill] (h) circle (.8pt);
+
+\end{scope}
+
+
+\end{tikzpicture}

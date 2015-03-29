@@ -1,0 +1,18 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}
+\pgfmathsetmacro{\myscale}{1};
+
+\begin{scope}[scale={\myscale},font=\small]
+\usetikzlibrary{calc}
+
+\coordinate (o) at (0,0);
+\draw (o) node[left] {$V$} -- ++(35:2.5) coordinate (b) node[above] {$b$};
+\draw (o) -- ++(0:2.5) coordinate (a) node[above] {$a$};
+
+\begin{scope}
+\clip (o) -- (a) -- (b) -- cycle;
+\draw[thick, blue] (o) circle (0.5);
+\end{scope}
+
+\end{scope}
+\end{tikzpicture}

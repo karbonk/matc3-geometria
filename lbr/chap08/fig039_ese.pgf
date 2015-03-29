@@ -1,0 +1,20 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=1,font=\small, x=6.3mm, y=6.3mm, smooth]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\coordinate (v) at (0,0);
+\coordinate (c) at (1.8,2);
+\coordinate (p) at (-.2,2.3);
+\path (v) -- +(15:2.5) coordinate (v1);
+
+\draw[blue, thick, ->] (v) -- node [black, above] {$\vec{v}$} (v1);
+
+\draw[fill] (v) circle (1pt);
+\draw[fill] (c) circle (1pt) node [above right] {$C$};
+\draw[fill] (p) circle (1pt) node [above right] {$P$};
+
+\end{scope}
+
+
+\end{tikzpicture}

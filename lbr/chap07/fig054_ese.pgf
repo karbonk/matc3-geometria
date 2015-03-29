@@ -1,0 +1,30 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.8,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+%\clip (-2.1,-2.1) rectangle (2.5,2.1);
+\coordinate (a) at (0,0);
+\coordinate (b) at (2.5,0);
+\coordinate (c) at (3,3);
+\coordinate (d) at (0.5,3);
+
+\draw[thick] (a) node[shift={(-0.2,-0.2)}] {$N$} -- (b) node[shift={(0.2,-0.2)}] {$I$} -- (c) node[shift={(0.2,0.2)}] {$O$} -- (d) node[shift={(-0.2,0.2)}] {$F$} -- cycle;
+
+\draw[very thin, <->] (0,-1.2) coordinate (n1) -- node[above] {1001 m} (2.5,-1.2) coordinate (i1);
+\draw[very thin, <->] (4,0) coordinate (i2) -- node[sloped,above] {2012 m} (4,3) coordinate (o2);
+
+\draw[dotted] (c) -- ($(c)!1.2!(o2)$);
+\draw[dotted] (b) -- ($(b)!1.2!(i2)$);
+\draw[dotted] (a) -- ($(a)!1.2!(n1)$);
+\draw[dotted] (b) -- ($(b)!1.2!(i1)$);
+
+\draw (d) -- ($(a)!0.75!(b)$) coordinate (s) node[below] {$S$};
+\draw (a) -- (c);
+\coordinate (r) at (intersection of d--s and a--c);
+\node[above] at (r) {$B$};
+
+\end{scope}
+
+
+\end{tikzpicture}

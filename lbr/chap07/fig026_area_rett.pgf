@@ -1,0 +1,21 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[scale=0.8,font=\small]
+\usetikzlibrary{calc}
+
+\begin{scope}
+\draw[thick, fill=red!10] (0,0) -- node[below] {$b$} (3,0) -- node[right] {$h$} (3,2) -- (0,2) -- cycle;
+\node at (1.5,1) {$R$};
+\end{scope}
+
+\begin{scope}[xshift=4.5cm]
+\draw[thick, fill=blue!10] (0,0) -- node[below] {$u$} (1,0) -- node[right] {$h$} (1,2) -- (0,2) -- cycle;
+\node at (0.5,1) {$R'$};
+\end{scope}
+
+\begin{scope}[xshift=7cm]
+\draw[thick, fill=yellow!10] (0,0) -- node[below] {$u$} (1,0) -- node[right] {$u$} (1,1) -- (0,1) -- cycle;
+\node at (0.5,0.5) {$Q$};
+\end{scope}
+
+
+\end{tikzpicture}
