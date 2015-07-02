@@ -1,8 +1,8 @@
 # makefile per geometria.tex
 #
-# (c) 2015 Daniele Masini - d.masini.it@gmail.com
+# Copyright (c) 2015 Daniele Masini - d.masini.it@gmail.com
 # v1.0
-#
+
 NAME = geometria
 
 SHORT_NAME = geometria_clr

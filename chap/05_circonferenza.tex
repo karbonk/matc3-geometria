@@ -1,4 +1,5 @@
-% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+% Copyright (c) 2015 Daniele Masini - d.masini.it@gmail.com
+
 \chapter{Circonferenza}\label{chap:circonferenza}
 
 \includegraphics[width=0.95\textwidth]{circle.jpg}
@@ -10,7 +11,7 @@
   \end{center}
 \newpage
 
-\section{Luoghi geometrici}
+\section{Luoghi geometrici}\label{sect:luoghi_geometrici}
 
 \begin{definizione}
 Nel piano, si dice \emph{luogo geometrico} l'insieme di tutti e soli i punti del piano che verificano una proprietà, detta \emph{proprietà caratteristica} del luogo geometrico.
@@ -84,7 +85,7 @@ Infatti, se tracciamo da $Q$ le perpendicolari alle semirette $r$ ed $s$ e chiam
 \end{minipage}\vspace{5pt}
 
 
-\section{Circonferenza e cerchio: definizioni e prime proprietà}
+\section{Circonferenza e cerchio: definizioni e prime proprietà}\label{sect:circonferenza_cerchio_def}
 
 La definizione che ha dato Euclide di circonferenza fa riferimento ai luoghi geometrici: la circonferenza è il luogo geometrico dei punti del piano equidistanti da un punto del piano stesso, detto centro.
 Intuitivamente, immaginiamo di fissare su di un piano un chiodo, di legare a questo chiodo una corda e di fissare all'altra estremità della corda una penna. Se facciamo ruotare la penna intorno al chiodo tenendo sempre in tensione la corda disegneremo una circonferenza.
@@ -235,6 +236,7 @@ Se fosse vera la (2), per la prima parte di questo stesso teorema risulterebbe $
 Rimane solo la possibilità che valga la relazione (3), la quale non è in contraddizione con la prima parte del teorema e che anzi la conferma. Dunque la tesi è verificata.
 \end{proof}
 
+\pagebreak
 Osservazioni:
 \begin{itemize*}
 \item Fissato un punto $P$, per esso passano infinite circonferenze.
@@ -325,7 +327,7 @@ Una coppia di corde parallele individua in un cerchio un segmento circolare a du
 	\centering\input{./lbr/chap05/fig011_def_cerchio.pgf}
 \end{minipage}
 
-\section{Posizioni relative fra rette e circonferenze}
+\section{Posizioni relative fra rette e circonferenze}\label{sect:posizioni_rette_circonferenze}
 
 Perché alcune strade a scorrimento veloce vengono chiamate ``tangenziali''?
 Per rispondere a questa domanda dobbiamo definire le posizioni che può assumere una retta rispetto ad una circonferenza.
@@ -454,7 +456,7 @@ Anche per le circonferenze si può affermare che nel caso siano tangenti lo sono
 Se esaminiamo le varie posizioni reciproche nel caso di due circonferenze congruenti ($r_1 = r_2 = r$), tenendo conto anche del fatto banale che in tal caso $\abs{r_1 - r_2} = 0$ e $r_1 + r_2 = 2r$, scompaiono le ``distinte'' possibilità che esse siano concentriche, interne e tangenti internamente, ma compare la possibilità che siano coincidenti, cioè perfettamente sovrapposte.
 Lasciamo al lettore la ``rivisitazione'' dei casi precedentemente analizzati nell'ipotesi che le due circonferenze siano congruenti.
 
-\section{Angoli nelle circonferenze}
+\section{Angoli nelle circonferenze}\label{sect:angoli_circonferenze}
 
 \noindent\begin{minipage}{0.6\textwidth}\parindent15pt
 Ricordiamo che abbiamo definito \emph{angolo al centro} di una circonferenza di centro $O$ e raggio $r$ un qualsiasi angolo avente come vertice il centro $O$.
@@ -602,7 +604,7 @@ In una stessa circonferenza o in circonferenze congruenti
 \end{itemize*}
 \end{teorema}
 
-\section{Proprietà dei segmenti di tangenza}
+\section{Proprietà dei segmenti di tangenza}\label{sect:proprieta_tangenti}
 
 \begin{wrapfigure}{r}{0.3\textwidth}
 	\centering\input{./lbr/chap05/fig033_segm_tan.pgf}
@@ -649,7 +651,7 @@ Nel caso in cui le due circonferenze siano tangenti (sia esternamente o internam
 Nel caso in cui le due circonferenze non abbiano punti in comune (reciprocamente esterne, o l'una interna all'altra, ma non concentriche), l'asse radicale è una particolare retta esterna ad entrambe, perpendicolare alla congiungente dei centri e luogo geometrico dei punti tali che, tracciando da essi i segmenti tangenti alle due circonferenze essi risultano congruenti.
 
 
-\section{Poligoni inscritti e circoscritti ad una circonferenza}
+\section{Poligoni inscritti e circoscritti ad una circonferenza}\label{sect:poligoni_circonferenza}
 
 \begin{definizione}
 Un poligono si dice \emph{inscritto in una circonferenza} se tutti i vertici del poligono appartengono alla circonferenza.
@@ -672,7 +674,7 @@ Un poligono è inscrivibile in una circonferenza se e solo se gli assi dei suoi 
 	\centering\input{./lbr/chap05/fig037_poly_inscr.pgf}
 \end{figure}
 \begin{proof}[Dimostrazione diretta.]~\\
-Sia $ABCDEF$ un poligono che ha gli assi dei suoi lati che passano per uno stesso punto $O$. Poiché $O$ appartiene all'asse di $AB$ e poiché l'asse è il luogo dei punti equidistanti dagli estremi, si ha che $OA\cong OB$. Poiché $O$ appartiene anche all'asse di $BC$ allora $O$ è equidistante dagli estremi di $BC$, cioè $OB\cong OC$. Poiché ciò vale per tutti i lati del poligono si ha: $OA\cong OB\cong OC\cong OD\cong OE\cong OF$. Pertanto la circonferenza di centro $O$ e raggio $OA$ passa per tutti i vertici del poligono e il poligono risulta pertanto inscritto in essa.\\
+Sia $ABCDEF$ un poligono che ha gli assi dei suoi lati che passano per uno stesso punto $O$. Poiché $O$ appartiene all'asse di $AB$ e poiché l'asse è il luogo dei punti equidistanti dagli estremi, si ha che $OA\cong OB$. Poiché $O$ appartiene anche all'asse di $BC$ allora $O$ è equidistante dagli estremi di $BC$, cioè $OB\cong OC$. Poiché ciò vale per tutti i lati del poligono si ha: $OA\cong OB\cong OC\cong OD\cong OE\cong OF$. Pertanto la circonferenza di centro $O$ e raggio $OA$ passa per tutti i vertici del poligono e il poligono risulta pertanto inscritto in essa.\vspace{4pt}\\
 \emph{Dimostrazione inversa.}\\
 Sia $ABCDEF$ un poligono inscritto in una circonferenza e che ha quindi tutti i vertici sulla circonferenza, allora tutti i suoi lati sono corde della circonferenza, di conseguenza, per una proprietà delle corde, gli assi delle corde passano per il centro della circonferenza, e quindi tutti gli assi dei lati del poligono si incontrano nel centro della circonferenza.
 \end{proof}
@@ -694,7 +696,7 @@ Sia $ABCD$ il poligono convesso; $AO$ la bisettrice dell'angolo in $A$ e $BO$ qu
 La dimostrazione del teorema inverso si basa anch'essa sulla proprietà della bisettrice dell'angolo.
 
 
-\section{Punti notevoli di un triangolo}
+\section{Punti notevoli di un triangolo}\label{sect:punti_notevoli_triangolo}
 
 \subsection{Circocentro}
 
@@ -819,7 +821,7 @@ Oltre ai principali punti notevoli di un triangolo esistono altri tre punti part
 \end{figure}
 
 
-\section{Proprietà dei quadrilateri inscritti e circoscritti}
+\section{Proprietà dei quadrilateri inscritti e circoscritti}\label{sect:quadrilateri_circonferenza}
 
 Per i quadrilateri, la proprietà di essere inscritto o circoscritto comporta notevoli proprietà.
 
@@ -883,7 +885,7 @@ Siamo giunti all'assurdo, in quanto avremmo che nel triangolo $ADP$ un lato è u
 \end{proof}
 
 
-\section{Poligoni regolari}
+\section{Poligoni regolari}\label{sect:poligoni_regolari}
 
 I poligoni regolari, cioè quelli che hanno tutti i lati e tutti gli angoli interni congruenti, sono sia inscrivibili sia circoscrivibili, e la circonferenza circoscritta e quella inscritta sono concentriche.
 Il centro comune alle due circonferenze si dice anche \emph{centro della figura}.

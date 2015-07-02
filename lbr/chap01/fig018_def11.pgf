@@ -1,4 +1,5 @@
-% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+% Copyright (c) 2015 Daniele Masini - d.masini.it@gmail.com
+
 \begin{tikzpicture}[font=\small]
 %segmenti consecutivi
 \tkzDefPoint(0,0){B}

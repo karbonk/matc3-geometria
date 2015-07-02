@@ -1,4 +1,5 @@
-% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+% Copyright (c) 2015 Daniele Masini - d.masini.it@gmail.com
+
 \begin{tikzpicture}[scale=0.8,font=\small, extended line/.style={shorten >=-#1,shorten <=-#1}, extended line/.default=1cm]
 \usetikzlibrary{calc, through, intersections}
 

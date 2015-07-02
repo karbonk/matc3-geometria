@@ -1,4 +1,5 @@
-% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+% Copyright (c) 2015 Daniele Masini - d.masini.it@gmail.com
+
 \begin{tikzpicture}[scale=0.7,font=\small,shorten line/.style={shorten >=#1,shorten <=#1}]
 \usetikzlibrary{calc}
 

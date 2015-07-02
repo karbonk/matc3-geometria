@@ -1,5 +1,6 @@
-% (c) 2014 Daniele Masini - d.masini.it@gmail.com
-\chapter{Equiestensione e aree}
+% Copyright (c) 2015 Daniele Masini - d.masini.it@gmail.com
+
+\chapter{Equiestensione e aree}\label{chap:equiestensione_aree}
 
 \includegraphics[width=0.95\textwidth]{window_geometry.jpg}
   \begin{center}
@@ -11,7 +12,7 @@
 \newpage
 
 
-\section{Estensione superficiale}
+\section{Estensione superficiale}\label{sect:estensione_superficiale}
 
 Il \emph{tangram}\label{tangram} è un antichissimo gioco cinese. Il nome con cui lo conosciamo si pensa derivato dall'unione della parola \emph{tang} o \emph{tan}, che significa \emph{cinese}, e \emph{gram} che significa \emph{immagine}. Anticamente in Cina era chiamato ``schema intelligente a sette pezzi'' o anche ``le sette pietre della saggezza'' poiché si riteneva che la padronanza del gioco fosse la chiave per ottenere saggezza e talento.
 Il gioco è costituito da un quadrato ritagliato in 7~pezzi poligonali aventi in comune solo punti del loro contorno (figura~\ref{fig:tangram}).
@@ -135,10 +136,10 @@ Chiamiamo \emph{area} di un poligono $p$ il numero reale positivo $A(p)$ che esp
 Possiamo concludere che ad ogni classe di equivalenza, generata con la relazione <<essere equicomposti>> o <<essere equiscomponibili>>, può essere associato un numero: l'area della figura scelta come rappresentante della classe di equivalenza. In tal modo trasformeremo una relazione di equivalenza tra poligoni, espressa con il simbolo $\doteq$ in una relazione di uguaglianza tra numeri.
 Ad esempio, riferendoci ai poligoni costruiti con i pezzi del tangram possiamo trasformare la relazione di equivalenza $p_1\doteq p_2\doteq p_3\doteq \ldots{}$ in un'uguaglianza tra le aree scrivendo $A(p_1)=A(p_2)=A(p_3)=\ldots{}$
 
-
-\section{Poligoni equivalenti}
+\section{Poligoni equivalenti}\label{sect:poligoni_equivalenti}
 
 Premettiamo alcuni assiomi:
+\nopagebreak
 \begin{enumerate}
 \item Poligoni congruenti sono equivalenti.
 \item Un poligono non è equivalente ad una sua parte propria.
@@ -404,7 +405,7 @@ Il quadrato avente come lato $CG$ è equivalente al rettangolo $ABCD$ perché \l
 \paragraph*{}
 Costruite il quadrato equivalente al poligono $ABCDE$ riportato nella figura a fianco.
 
-\section{Aree dei principali poligoni}
+\section{Aree dei principali poligoni}\label{sect:aree_poligoni}
 
 Per \emph{area} di una qualunque figura piana intendiamo il numero reale che esprime la misura dell'estensione superficiale della figura data.
 
@@ -495,7 +496,7 @@ A=p\cdot a
 \end{empheq}
 dove $a$ è l'apotema, cioè il raggio della circonferenza inscritta nel poligono regolare.
 
-\section{Teoremi di Pitagora e di Euclide}
+\section{Teoremi di Pitagora e di Euclide}\label{sect:teoremi_pitagora_euclide}
 
 \begin{teorema}[Primo teorema di Euclide]
 In un triangolo rettangolo, il quadrato costruito su un cateto è equivalente al rettangolo che ha come dimensioni l'ipotenusa e la proiezione del cateto stesso sull'ipotenusa.
@@ -588,7 +589,7 @@ Congiungiamo $D$ con $C$, tracciamo la diagonale $BL$ del quadrato e prolunghiam
 Detto $M$ il punto intersezione tra le rette $DC$ e $BL$, notiamo che, essendo $BHL$ e $HDC$ triangoli rettangoli isosceli, avranno gli angoli alla base di $45\grado$; ma è anche $H\widehat{L}B\cong M\widehat{L}C=45\grado$ in quanto opposti al vertice, perciò $L\widehat{M}C=90\grado$. Allora $BM$ e $CH$ sono due altezze del triangolo $BDC$, e poiché si incontrano nel punto $L$ questo risulta essere l'ortocentro del triangolo, e poiché il segmento $BK$ passa per l'ortocentro deve essere a sua volta altezza relativa a $BC$. Ma poiché avevamo già dimostrato che $DK$ è parallelo al $AB$, se $DK$ è perpendicolare a $BC$ lo sarà anche $AB$ e quindi il triangolo $ABC$ è un triangolo rettangolo.
 \end{proof}
 
-\section{Applicazioni dei teoremi di Euclide e Pitagora}
+\section{Applicazioni dei teoremi di Euclide e Pitagora}\label{sect:applicazioni_pitagora_euclide}
 
 \begin{wrapfigure}{r}{0.25\textwidth}
 	\centering\input{./lbr/chap07/fig033_tri_rett.pgf}
@@ -645,7 +646,7 @@ Il perimetro vale quindi $2p=15+25+20=60$~cm.
 \end{esempio}
 \end{exrig}
 
-\section{Applicazioni dell'algebra alla geometria}
+\section{Applicazioni dell'algebra alla geometria}\label{sect:applicazioni_algebra}
 
 \subsection{Triangoli rettangoli con angoli di 45°}
 
@@ -747,7 +748,7 @@ Infine calcoliamo l'area, ottenendo così la formula di Erone
 %\begin{empheq}[box=\fbox]{equation*}
 %A=\dfrac{1}{2}a\cdot h= \dfrac{1}{\cancel{2}}\cancel{a}\cdot\dfrac{\cancel{2}}{\cancel{a}}\sqrt{p(p-a)(p-b)(p-c)}=\sqrt{p(p-a)(p-b)(p-c)}.
 %\end{empheq}
-
+\pagebreak
 \subsection{Triangoli equilateri inscritti e circoscritti}
 
 \setlength{\intextsep}{3pt plus 2.0pt minus 2.0pt}
@@ -762,15 +763,16 @@ Per quanto visto precedentemente, il lato è dato da $l=\dfrac{3}{2}r\cdot\dfrac
 	\centering\input{./lbr/chap07/fig040_tri_equi_circ.pgf}
 \end{wrapfigure}
 Consideriamo ora un triangolo equilatero circoscritto ad una circonferenza.
-Per quanto detto prima, $AO$, parte della mediana che contiene il vertice, è il doppio di $OH = r$, raggio della circonferenza inscritta, e quindi, se conosciamo il raggio della circonferenza inscritta, avremo che $AH$ (mediana e altezza del triangolo) vale $3r$. Da qui possiamo, anche in questo caso, ricavare il lato del triangolo $l=3r\dfrac{2\sqrt{3}}{3}=2r\sqrt{3}$.
+Per quanto detto prima, $AO$, parte della mediana che contiene il vertice, è il doppio di $OH = r$, raggio della circonferenza inscritta, e quindi, se conosciamo il raggio della circonferenza inscritta, avremo che $AH$ (mediana e altezza del triangolo) vale $3r$. Da qui possiamo, anche in questo caso, ricavare il lato del triangolo $l=3r\dfrac{2\sqrt{3}}{3}=2r\sqrt{3}$.\\
+~\\
 
 \begin{exrig}
 \begin{esempio}
 Determina l'area di un triangolo equilatero sapendo che il raggio della circonferenza inscritta è lungo 6~cm. Determina quindi anche il raggio della circonferenza circoscritta.\vspace{7pt}
 
 Facendo riferimento alla figura precedente, $AH=3r$, quindi $AH = 18$~cm. 
-Ognuno dei lati vale $2r$, quindi $BC = 12$~cm.
-L'area è $A = 12\cdot 18 / 2 = 108$~cm\textsuperscript{2}.
+Ognuno dei lati vale $2r$, quindi $BC = 12\sqrt{3}$~cm.
+L'area è $A = \dfrac{12\sqrt{3}\cdot 18}{2} = 108\sqrt{3}$~cm\textsuperscript{2}.
 Il raggio della circonferenza circoscritta è $R= AO = 2r = 12$~cm.
 \end{esempio}
 \end{exrig}
@@ -786,11 +788,11 @@ Inoltre possiamo dimostrare un'altra importante proprietà.
 In ogni trapezio circoscrivibile ad una circonferenza, ognuno dei due triangoli che si ottengono congiungendo gli estremi di un lato obliquo con il centro della circonferenza è un triangolo rettangolo.
 \end{proprieta}
 
-\setlength{\intextsep}{3pt plus 2.0pt minus 2.0pt}
-\begin{wrapfigure}{r}{0.35\textwidth}
+%\setlength{\intextsep}{3pt plus 2.0pt minus 2.0pt}
+\begin{figure}[htb]
 	\centering\input{./lbr/chap07/fig041_trap_circos.pgf}
-\end{wrapfigure}
-Infatti, $CO$ e $FO$ sono le bisettrici degli angoli in $C$ e in $F$, lo stesso dicasi per $DO$ ed $EO$ (vedi il corollario~\ref{cor:5.1} sulle tangenti condotte da un punto esterno ad una circonferenza). Poiché gli angoli in $C$ e in $F$ sono tra loro supplementari, così come gli angoli in $E$ e in $D$, le loro metà saranno complementari, cioè $O\widehat{C}F+C\widehat{F}O=90\grado$ e $O\widehat{D}E+D\widehat{E}O=90\grado$. Quindi gli angoli $C\widehat{O}F$ e $D\widehat{O}E$ sono retti, per differenza tra $180\grado$ (somma degli angoli interni di un triangolo) e $90\grado$ (somma degli altri due angoli di ognuno dei triangoli considerati).
+\end{figure}
+Infatti, considerando un trapezio $ABCD$ circoscritto ad una circonferenza di centro $O$, $AO$ e $DO$ sono le bisettrici degli angoli in $A$ e in $D$, lo stesso dicasi per $BO$ e $CO$ (vedi il corollario~\ref{cor:5.1} sulle tangenti condotte da un punto esterno ad una circonferenza). Poiché gli angoli in $A$ e in $D$ sono tra loro supplementari, così come gli angoli in $B$ e in $C$, le loro metà saranno complementari, cioè $O\widehat{D}A+D\widehat{A}O=90\grado$ e $O\widehat{C}B+C\widehat{B}O=90\grado$. Quindi gli angoli $D\widehat{O}A$ e $C\widehat{O}B$ sono retti, per differenza tra $180\grado$ (somma degli angoli interni di un triangolo) e $90\grado$ (somma degli altri due angoli di ognuno dei triangoli considerati).
 
 Queste importanti proprietà permettono di risolvere la maggior parte dei problemi sui trapezi circoscrivibili.
 
@@ -843,8 +845,7 @@ Un \emph{trapezio} si dice \emph{circoscritto ad una semicirconferenza} se la su
 \end{definizione}
 
 \begin{figure*}[!htb]
-	\centering
-	\input{./lbr/chap07/fig044_trap_circos_semi.pgf}
+	\centering\input{./lbr/chap07/fig044_trap_circos_semi.pgf}
 \end{figure*}
 
 Per i trapezi appartenenti a questa categoria, sussiste la seguente proprietà.
@@ -861,7 +862,7 @@ Dato il trapezio $ABCD$ nella figura a fianco ciò significa che $OB\cong BC$ e 
 \begin{minipage}{0.35\textwidth}
 	\centering\input{./lbr/chap07/fig045_trap_circos_semi2.pgf}
 \end{minipage}\vspace{8pt}
-
+\pagebreak
 \begin{exrig}
 \begin{esempio}
 Nel trapezio $ABCD$, circoscritto ad una semicirconferenza, la base minore ed un lato obliquo misurano entrambi 6~cm, mentre la base maggiore misura 15~cm. Calcolare perimetro ed area del trapezio.\vspace{7pt}
@@ -881,7 +882,7 @@ Poiché $CH^2=BC^2-BH^2=81-49=32$, si ha $CH=4\sqrt{2}$ (possiamo accettare solo
 
 \setlength{\intextsep}{3pt plus 2.0pt minus 2.0pt}
 \begin{wrapfigure}{r}{0.3\textwidth}
-	\centering\input{./lbr/chap07/fig046_tri_circos.pgf}
+	\input{./lbr/chap07/fig046_tri_circos.pgf}
 \end{wrapfigure}
 Ricordando che l'area di un poligono circoscrivibile ad una circonferenza, e quindi in particolare l'area di un triangolo (che è sempre circoscrivibile), si può trovare come prodotto tra il semiperimetro e l'apotema, cioè il raggio della circonferenza inscritta, allora, applicando la formula inversa, il raggio della circonferenza inscritta sarà $r=\dfrac{2A}{2p}$, cioè sarà dato dal rapporto tra la doppia area ed il perimetro del triangolo.
 
@@ -889,7 +890,7 @@ Ricordando che l'area di un poligono circoscrivibile ad una circonferenza, e qui
 \subsection{Raggio della circonferenza circoscritta ad un triangolo}
 
 \begin{wrapfigure}{r}{0.3\textwidth}
-	\centering\input{./lbr/chap07/fig047_tri_inscr.pgf}
+	\input{./lbr/chap07/fig047_tri_inscr.pgf}
 \end{wrapfigure}
 Consideriamo il triangolo $ACH$, ottenuto tracciando l'altezza $CH$ relativa alla base $AB$ del triangolo $ABC$, ed il triangolo $BCD$, ottenuto tracciando il diametro $CD$. Questi due triangoli sono simili per il primo criterio di similitudine, in quanto hanno entrambi un angolo retto $C\widehat{H}A$ e $C\widehat{B}D$ (l'angolo è retto in quanto inscritto in una semicirconferenza), gli angoli $C\widehat{A}H\cong C\widehat{D}B$ in quanto angoli alla circonferenza che insistono sullo stesso arco $BC$, quindi anche gli angoli $A\widehat{C}H$ e $D\widehat{C}B$ sono congruenti, poiché differenze di angoli congruenti. Possiamo dunque scrivere la proporzione tra i lati omologhi $CD:AC=BC:CH$.
 

@@ -1,5 +1,6 @@
-% (c) 2014 Daniele Masini - d.masini.it@gmail.com
-\chapter{Quadrilateri}
+% Copyright (c) 2015 Daniele Masini - d.masini.it@gmail.com
+
+\chapter{Quadrilateri}\label{chap:quadrilateri}
 
 \includegraphics[width=0.95\textwidth]{rhombus.jpg}
   \begin{center}
@@ -10,18 +11,14 @@
   \end{center}
 \newpage
 
-\section{Generalità sui quadrilateri}
+\section{Generalità sui quadrilateri}\label{sect:generalita_quadrilateri}
 
 \subsection{Distanza di un punto da una retta e altezza di una striscia di piano}
 
-Ricordiamo che come definizione di (\emph{misura} della) \emph{distanza di un punto da una retta} è stata presa la lunghezza del segmento congiungente il punto con il piede della perpendicolare mandata dal punto alla retta (vedi figura). Analogamente, per \emph{distanza tra due rette parallele}, detta anche \emph{altezza della striscia di piano individuata dalle due rette parallele}, si intende la distanza di un punto qualsiasi di una retta dall'altra retta. Vogliamo far vedere ora che queste definizioni sono coerenti con il concetto di distanza tra due insiemi di punti come \emph{percorso più breve} che congiunge un qualsiasi punto del primo insieme con un generico punto appartenente al secondo insieme.\vspace{5pt}
-
-\noindent\begin{minipage}{0.65\textwidth}\parindent15pt
-Se congiungiamo, infatti, un generico punto $P$ sia con $H$, piede della perpendicolare alla retta $r$, che con un altro punto $Q\in r$, viene individuato un triangolo rettangolo $PHQ$, di cui $PH$ è un cateto e $PQ$ l'ipotenusa. Dal teorema sulle disuguaglianze degli elementi di un triangolo, l'ipotenusa è certamente maggiore di un cateto in quanto lato che si oppone ad angolo maggiore (quello retto). Dunque $PH$ è il segmento di lunghezza minore tra tutti quelli che congiungono $P$ con un punto della retta $r$.
-\end{minipage}\hfil
-\begin{minipage}{0.35\textwidth}
+\begin{wrapfigure}{r}{0.3\textwidth}
 \centering\input{./lbr/chap04/fig001_distanza.pgf}
-\end{minipage}
+\end{wrapfigure}
+Ricordiamo che come definizione di (\emph{misura} della) \emph{distanza di un punto da una retta} è stata presa la lunghezza del segmento congiungente il punto con il piede della perpendicolare mandata dal punto alla retta (vedi figura). Analogamente, per \emph{distanza tra due rette parallele}, detta anche \emph{altezza della striscia di piano individuata dalle due rette parallele}, si intende la distanza di un punto qualsiasi di una retta dall'altra retta. Vogliamo far vedere ora che queste definizioni sono coerenti con il concetto di distanza tra due insiemi di punti come \emph{percorso più breve} che congiunge un qualsiasi punto del primo insieme con un generico punto appartenente al secondo insieme. Se congiungiamo, infatti, un generico punto $P$ sia con $H$, piede della perpendicolare alla retta $r$, che con un altro punto $Q\in r$, viene individuato un triangolo rettangolo $PHQ$, di cui $PH$ è un cateto e $PQ$ l'ipotenusa. Dal teorema sulle disuguaglianze degli elementi di un triangolo, l'ipotenusa è certamente maggiore di un cateto in quanto lato che si oppone ad angolo maggiore (quello retto). Dunque $PH$ è il segmento di lunghezza minore tra tutti quelli che congiungono $P$ con un punto della retta $r$.
 
 \subsection{Generalità sui poligoni}
 
@@ -41,7 +38,7 @@ I quadrilateri che, come $Q_6$, hanno due lati consecutivi congruenti ed altri d
 
 \osservazione In analogia alla definizione di triangolo isoscele (come triangolo avente ``almeno'' due lati congruenti), alcuni autori definiscono trapezio un quadrilatero avente ``almeno'' una coppia di lati opposti paralleli: con questa definizione un parallelogramma è un particolare tipo di trapezio. Ricordiamo anche che Euclide, al contrario, classificava come trapezi tutti i quadrilateri che non fossero parallelogrammi. Noi useremo come definizione di \emph{trapezio} quella di un \emph{quadrilatero avente ``solo'' una coppia di lati opposti paralleli}. Ci riferiremo al parallelogramma come a una figura piana costituita dall'intersezione di due strisce di piano non parallele fra loro; al trapezio come intersezione tra una striscia di piano ed un angolo convesso con vertice esterno alla striscia e lati che intersecano la striscia stessa. Poiché le strisce di piano sono convesse, sia i parallelogrammi sia i trapezi, come intersezioni di figure convesse, sono convessi.
 
-\section{Trapezio e deltoide}
+\section{Trapezio e deltoide}\label{sect:trapezio_deltoide}
 
 Osserviamo le figure seguenti. I quadrilateri $ABCD$, $EFGH$, $IJKL$ e $MNOP$ sono trapezi perché hanno una coppia di lati opposti paralleli. Tali lati paralleli si dicono \emph{basi} e si distinguono in \emph{base maggiore} e \emph{base minore}. Gli altri lati si dicono \emph{lati obliqui}. La distanza tra le rette parallele si dice \emph{altezza} del trapezio.
 Un trapezio avente i lati obliqui congruenti si dice \emph{isoscele}. Un trapezio avente un lato perpendicolare alle basi si dice \emph{rettangolo}. Un trapezio che non è né isoscele né rettangolo si dice \emph{scaleno}.
@@ -58,21 +55,17 @@ In un trapezio rettangolo, gli angoli adiacenti alla base maggiore sono uno rett
 
 Un trapezio scaleno può avere gli angoli adiacenti alla base maggiore entrambi acuti (e quindi gli angoli adiacenti alla base minore entrambi ottusi) oppure due angoli opposti entrambi acuti e gli altri ottusi (i due tipi di trapezio scaleno sono rappresentati nella figura precedente). I quattro angoli sono comunque non congruenti, altrimenti il trapezio risulterebbe isoscele nel primo caso e un parallelogramma nel secondo caso.
 
-\noindent\begin{minipage}{0.7\textwidth}\parindent15pt
+\begin{wrapfigure}{r}{0.3\textwidth}
+	\centering\input{./lbr/chap04/fig004_trapezio_iso1.pgf}
+\end{wrapfigure}
 In un trapezio isoscele, gli angoli adiacenti alla base maggiore sono acuti e quelli adiacenti alla base minore sono ottusi. 
 A tal proposito, facciamo riferimento al trapezio $IJKL$ nella figura a fianco per dire che non può esistere un trapezio isoscele con due angoli acuti opposti e due angoli ottusi opposti. Infatti, se fosse $IJ\cong LK$, i triangoli $IG_1J$ e $LK_1K$ risulterebbero congruenti per il criterio particolare dei triangoli rettangoli, avendo congruenti le ipotenuse (i lati obliqui del trapezio $IJ$ e $LK$) ed una coppia di cateti (le altezze $IG_1$ e $LK_1$), da cui seguirebbe in particolare che $I\widehat{J}G_1\cong L\widehat{K}K_1$, e pertanto l'angolo in $K$ sarebbe supplementare dell'angolo in $J$, cosa che garantirebbe il parallelismo dei lati obliqui. Dunque, un ipotetico trapezio isoscele con due angoli acuti opposti sarebbe un parallelogramma.
-\end{minipage}\hfil
-\begin{minipage}{0.3\textwidth}
-	\centering\input{./lbr/chap04/fig004_trapezio_iso1.pgf}
-\end{minipage}
 
-\noindent\begin{minipage}{0.7\textwidth}\parindent15pt
+\begin{wrapfigure}{r}{0.3\textwidth}
+	\centering\input{./lbr/chap04/fig005_trapezio_iso2.pgf}
+\end{wrapfigure}
 Inoltre, se il trapezio è isoscele, gli angoli adiacenti a ciascuna delle basi sono congruenti. 
 Infatti, in riferimento al trapezio $ABCD$, traccia le altezze $BD_1$ e $CE_1$ (tra loro congruenti perché entrambe rappresentano la distanza tra due rette parallele), i triangoli $AD_1B$ e $E_1DC$ risultano congruenti per il criterio particolare dei triangoli rettangoli, avendo congruenti le ipotenuse (i lati obliqui del trapezio) ed una coppia di cateti (le altezze del trapezio). Pertanto i rimanenti elementi risultano ordinatamente congruenti: $B\widehat{A}D\cong A\widehat{D}C$, $A\widehat{B}D_1\cong D\widehat{C}E_1$, $AD_1\cong E_1D$.
-\end{minipage}\hfil
-\begin{minipage}{0.3\textwidth}
-	\centering\input{./lbr/chap04/fig005_trapezio_iso2.pgf}
-\end{minipage}
 
 Dunque sono congruenti  anche le proiezioni dei lati obliqui sulla base maggiore. 
 Quindi anche $A\widehat{B}C\cong B\widehat{C}D$ in quanto somme di angoli congruenti $A\widehat{B}D_1+\widehat{R}\cong D\widehat{C}E_1+\widehat{R}$.
@@ -81,19 +74,19 @@ In un trapezio isoscele, inoltre, anche le due diagonali sono congruenti. Infatt
 
 \subsection{Proprietà del deltoide}
 
-\noindent\begin{minipage}{0.7\textwidth}\parindent15pt
-Il poligono $QRST$ nella figura a fianco è un deltoide, ha i lati a due a due congruenti $QR\cong QT$ e $RS\cong TS$. Tracciamo le diagonali $QS$ ed $RT$. I triangoli $QRT$ e $STR$ sono isosceli sulla base comune $RT$. Dunque, se chiamiamo $H$ il punto medio di $RT$, $QH$ ed $SH$ sono mediane, bisettrici e altezze (relative alla base ed agli angoli al vertice dei due triangoli isosceli), per cui $QS$ è perpendicolare ad $RT$ e passa per il punto $H$. Quindi le due diagonali sono perpendicolari e si incontrano nel punto medio di $RT$. Inoltre i triangoli $SQR$ ed $STQ$ sono congruenti per il terzo criterio, pertanto $Q\widehat{R}S\cong Q\widehat{T}S$.
-\end{minipage}\hfil
-\begin{minipage}{0.3\textwidth}
+\begin{wrapfigure}{r}{0.3\textwidth}
 	\centering\input{./lbr/chap04/fig006_deltoide.pgf}
-\end{minipage}
+\end{wrapfigure}
+Il poligono $QRST$ nella figura a fianco è un deltoide, ha i lati a due a due congruenti $QR\cong QT$ e $RS\cong TS$. Tracciamo le diagonali $QS$ ed $RT$. I triangoli $QRT$ e $STR$ sono isosceli sulla base comune $RT$. Dunque, se chiamiamo $H$ il punto medio di $RT$, $QH$ ed $SH$ sono mediane, bisettrici e altezze (relative alla base ed agli angoli al vertice dei due triangoli isosceli), per cui $QS$ è perpendicolare ad $RT$ e passa per il punto $H$. Quindi le due diagonali sono perpendicolari e si incontrano nel punto medio di $RT$. Inoltre i triangoli $SQR$ ed $STQ$ sono congruenti per il terzo criterio, pertanto $Q\widehat{R}S\cong Q\widehat{T}S$.
 
 I quattro lati di un deltoide non potrebbero essere tutti congruenti, in quanto, dalla congruenza degli angoli opposti banalmente deducibile, risulterebbero i lati opposti paralleli, e quindi il deltoide sarebbe un parallelogramma. Non è al contrario escluso che un angolo possa essere retto (ma non più di uno, altrimenti il deltoide sarebbe un parallelogramma), mentre gli angoli ottusi possono essere uno, due o tre (come pure gli angoli acuti).
 
 Lasciamo al lettore il compito di provare queste semplici proprietà, costruendo vari tipi di deltoidi.
 
 
-\section{Proprietà dei parallelogrammi}
+\section{Proprietà dei parallelogrammi}\label{sect:proprieta_parallelogrammi}
+
+Ricordiamo che, per definizione, un parallelogramma è un quadrilatero che ha i lati opposti paralleli.
 
 \begin{teorema}
 In ogni parallelogramma:
@@ -162,7 +155,7 @@ allora il quadrilatero è un parallelogramma.
 \end{enumerate*}
 \end{proof}
 
-\section{Parallelogrammi particolari}
+\section{Parallelogrammi particolari}\label{sect:parallelogrammi_particolari}
 
 I parallelogrammi possono essere sia equiangoli sia equilateri.
 
@@ -218,7 +211,7 @@ I teoremi precedenti si estendono automaticamente ai quadrati.
 Le diagonali di un quadrato sono fra loro congruenti e perpendicolari e dividono per metà gli angoli. Viceversa, se un parallelogramma ha le diagonali congruenti e perpendicolari, allora è un quadrato; inoltre, se le diagonali di un parallelogramma sono congruenti ed un angolo è diviso a metà da una diagonale, allora il parallelogramma è un quadrato.
 \end{corollario}
 
-\section{Corrispondenza di Talete}
+\section{Corrispondenza di Talete}\label{sect:corrispondenza_talete}
 
 \begin{definizione}
 Nel piano, si definisce \emph{fascio improprio di rette} un insieme di rette tutte parallele tra loro.
@@ -259,7 +252,7 @@ Nella figura seguente, si considerino, oltre alla corrispondenza tra i segmenti 
 \end{minipage}
 
 
-\section{Conseguenze della corrispondenza di Talete}
+\section{Conseguenze della corrispondenza di Talete}\label{sect:conseguenze_corrispondenza_talete}
 
 \begin{corollario}
 Se dal punto medio di un lato di un triangolo tracciamo la parallela ad un altro lato del triangolo, questa interseca il terzo lato nel suo punto medio.
