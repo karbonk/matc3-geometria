@@ -686,15 +686,25 @@ Dunque $2p=20+4+2\cdot 8\sqrt{2}=24+16\sqrt{2}=8(3+2\sqrt{2})$~cm.
 \end{esempio}
 
 \begin{figure}[!htb]
-	\centering\input{./lbr/chap07/fig036_trap_iso_45g.pgf}\hspace{1cm}
-	\input{./lbr/chap07/fig037_tri_iso_120g.pgf}
-	\caption{A sinistra il trapezio dell'esempio~\ref{es:7.6} e a destra il triangolo dell'esempio~\ref{es:7.7}}\label{fig:es7.6}
+	\begin{center}
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\input{./lbr/chap07/fig036_trap_iso_45g.pgf}
+			\caption{Esempio~\ref{es:7.6}}\label{fig:es7.6}
+		\end{minipage}
+		\hspace{0.03\textwidth}	
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\input{./lbr/chap07/fig037_tri_iso_120g.pgf}
+			\caption{Esempio~\ref{es:7.7}}\label{fig:es7.7}
+		\end{minipage}
+	\end{center}
 \end{figure}
 
 \begin{esempio}\label{es:7.7}
 Un triangolo isoscele ha l'angolo al vertice di $120\grado$. Determina perimetro ed area sapendo che la base è lunga 60~cm.\vspace{7pt}
 
-Tracciamo l'altezza $BH$ (figura~\ref{fig:es7.6}). Poiché il triangolo è isoscele, l'altezza relativa alla base è anche mediana, quindi $AH\cong HC$; ma $BH$ è anche bisettrice dell'angolo al vertice $B$, quindi si ottengono due triangoli rettangoli tra loro congruenti, ciascuno dei quali ha in $B$ un angolo di $60\grado$. Consideriamo uno dei due triangoli, ad esempio $ABH$; il cateto $\overline{AH}=30$~cm; poiché l'angolo $\widehat{A}=30\grado$, per calcolare $\overline{AB}$ si deve usare la formula inversa $\overline{AB}=\dfrac{2\overline{AH}\sqrt{3}}{3}=\dfrac{2\cdot 30\sqrt{3}}{3}=20\sqrt{3}$~cm.
+Tracciamo l'altezza $BH$ (figura~\ref{fig:es7.7}). Poiché il triangolo è isoscele, l'altezza relativa alla base è anche mediana, quindi $AH\cong HC$; ma $BH$ è anche bisettrice dell'angolo al vertice $B$, quindi si ottengono due triangoli rettangoli tra loro congruenti, ciascuno dei quali ha in $B$ un angolo di $60\grado$. Consideriamo uno dei due triangoli, ad esempio $ABH$; il cateto $\overline{AH}=30$~cm; poiché l'angolo $\widehat{A}=30\grado$, per calcolare $\overline{AB}$ si deve usare la formula inversa $\overline{AB}=\dfrac{2\overline{AH}\sqrt{3}}{3}=\dfrac{2\cdot 30\sqrt{3}}{3}=20\sqrt{3}$~cm.
 Il perimetro vale dunque $2p=60 + 40\sqrt{3} = 20 (3 + 2\sqrt{3})$~cm.
 
 Per calcolare l'area bisogna prima trovare $\overline{BH}$, che è congruente a metà ipotenusa $\overline{BH}=10\sqrt{3}$~cm. Quindi $A=\dfrac{60\cdot 10\sqrt{3}}{2}=300\sqrt{3}$~cm\textsuperscript{2}.
@@ -705,10 +715,9 @@ Per calcolare l'area bisogna prima trovare $\overline{BH}$, che è congruente a 
 
 La \emph{formula di Erone} permette di calcolare l'area di un triangolo qualsiasi se si conoscono le misure dei suoi lati.
 
-\pagebreak
-
 \begin{wrapfigure}{r}{0.3\textwidth}
 	\centering\input{./lbr/chap07/fig038_tri_gen_Erone.pgf}
+	\vspace{10pt}
 \end{wrapfigure}
 Sia $a$ la misura del lato $BC$ e sia $H$ il piede dell'altezza $h$ del triangolo rispetto a $BC$. Ponendo $BH = x$ si avrà $HC = a - x$.
 Dal teorema di Pitagora si ha
@@ -717,26 +726,30 @@ h^2=c^2-x^2
 \end{equation}
 ma anche
 \[h^2=b^2-(a-x)^2.\]
+
 Uguagliamo le due espressioni e svolgiamo i calcoli. Otteniamo
 \[c^2-x^2=b^2-a^2+2ax-x^2\]
 da cui
 \[x=\dfrac{c^2+a^2-b^2}{2a}.\]
+
 Sostituendo questo valore di $x$ nella~(\ref{eq:7.1}), otteniamo
 \[h^2=c^2-\left(\dfrac{c^2+a^2-b^2}{2a}\right)=\dfrac{4a^2c^2-\left(c^2+a^2-b^2\right)^2}{4a^2}.\]
+
 Poiché il numeratore è una differenza di quadrati possiamo scomporlo ottenendo
 \begin{align*}
 h^2&=\dfrac{\left[2ac-\left(c^2+a^2-b^2\right)\right]\cdot\left[2ac+\left(c^2+a^2-b^2\right)\right]}{4a^2}\\
 &=\dfrac{\left[2ac-c^2-a^2+b^2\right]\cdot\left[2ac+c^2+a^2-b^2\right]}{4a^2}\\
 &=\dfrac{\left[b^2-(a-c)^2\right]\cdot\left[(a+c)^2-b^2\right]}{4a^2}.
 \end{align*}
+
 Abbiamo ottenuto nuovamente delle differenze di quadrati che possiamo ulteriormente scomporre
 \[h^2=\dfrac{(b+a-c)\cdot(b-a+c)\cdot(a+c+b)\cdot(a+c-b)}{4a^2}.\]
 Al numeratore abbiamo
 \[a + c + b = 2p\]
 \[b + a - c = b+a+c-2c = 2p-2c = 2(p-c)\]
 \[b - a + c = 2p - 2a = 2 (p - a)\]
-\[a + c - b = 2p - 2b = 2(p - b).\]
-Quindi
+\[a + c - b = 2p - 2b = 2(p - b)\]
+quindi
 \begin{align*}
 h&=\sqrt{\dfrac{2p\cdot 2(p-a) \cdot 2(p-b) \cdot 2(p-c)}{4a^2}}=\sqrt{\dfrac{16p\cdot (p-a) \cdot (p-b) \cdot (p-c)}{4a^2}}\\
 &=\dfrac{2}{a}\sqrt{p(p-a)(p-b)(p-c)}.
@@ -744,11 +757,13 @@ h&=\sqrt{\dfrac{2p\cdot 2(p-a) \cdot 2(p-b) \cdot 2(p-c)}{4a^2}}=\sqrt{\dfrac{16
 
 Infine calcoliamo l'area, ottenendo così la formula di Erone
 
-\noindent{\begin{center} $A=\dfrac{1}{2}a\cdot h= \dfrac{1}{\cancel{2}}\cancel{a}\cdot\dfrac{\cancel{2}}{\cancel{a}}\sqrt{p(p-a)(p-b)(p-c)} \:\Rightarrow$ \fbox{$A=\sqrt{p(p-a)(p-b)(p-c)}$}\end{center}}
+\noindent{\begin{center} $A=\dfrac{1}{2}a\cdot h= \dfrac{1}{\cancel{2}}\cancel{a}\cdot\dfrac{\cancel{2}}{\cancel{a}}\sqrt{p(p-a)(p-b)(p-c)} \:\Rightarrow$ \fbox{$A=\sqrt{p(p-a)(p-b)(p-c)}$}.\end{center}}
 %\begin{empheq}[box=\fbox]{equation*}
 %A=\dfrac{1}{2}a\cdot h= \dfrac{1}{\cancel{2}}\cancel{a}\cdot\dfrac{\cancel{2}}{\cancel{a}}\sqrt{p(p-a)(p-b)(p-c)}=\sqrt{p(p-a)(p-b)(p-c)}.
 %\end{empheq}
+
 \pagebreak
+
 \subsection{Triangoli equilateri inscritti e circoscritti}
 
 \setlength{\intextsep}{3pt plus 2.0pt minus 2.0pt}
@@ -792,7 +807,7 @@ In ogni trapezio circoscrivibile ad una circonferenza, ognuno dei due triangoli 
 \begin{figure}[htb]
 	\centering\input{./lbr/chap07/fig041_trap_circos.pgf}
 \end{figure}
-Infatti, considerando un trapezio $ABCD$ circoscritto ad una circonferenza di centro $O$, $AO$ e $DO$ sono le bisettrici degli angoli in $A$ e in $D$, lo stesso dicasi per $BO$ e $CO$ (vedi il corollario~\ref{cor:5.1} sulle tangenti condotte da un punto esterno ad una circonferenza). Poiché gli angoli in $A$ e in $D$ sono tra loro supplementari, così come gli angoli in $B$ e in $C$, le loro metà saranno complementari, cioè $O\widehat{D}A+D\widehat{A}O=90\grado$ e $O\widehat{C}B+C\widehat{B}O=90\grado$. Quindi gli angoli $D\widehat{O}A$ e $C\widehat{O}B$ sono retti, per differenza tra $180\grado$ (somma degli angoli interni di un triangolo) e $90\grado$ (somma degli altri due angoli di ognuno dei triangoli considerati).
+Infatti, considerando un trapezio $ABCD$ circoscritto ad una circonferenza di centro $O$, $AO$ e $DO$ sono le bisettrici degli angoli in $A$ e in $D$, lo stesso dicasi per $BO$ e $CO$ (vedi il corollario~\ref{cor:5.1} sulle tangenti condotte da un punto esterno ad una circonferenza, a pag.~\pageref{cor:5.1}). Poiché gli angoli in $A$ e in $D$ sono tra loro supplementari, così come gli angoli in $B$ e in $C$, le loro metà saranno complementari, cioè $O\widehat{D}A+D\widehat{A}O=90\grado$ e $O\widehat{C}B+C\widehat{B}O=90\grado$. Quindi gli angoli $D\widehat{O}A$ e $C\widehat{O}B$ sono retti, per differenza tra $180\grado$ (somma degli angoli interni di un triangolo) e $90\grado$ (somma degli altri due angoli di ognuno dei triangoli considerati).
 
 Queste importanti proprietà permettono di risolvere la maggior parte dei problemi sui trapezi circoscrivibili.
 
@@ -862,7 +877,9 @@ Dato il trapezio $ABCD$ nella figura a fianco ciò significa che $OB\cong BC$ e 
 \begin{minipage}{0.35\textwidth}
 	\centering\input{./lbr/chap07/fig045_trap_circos_semi2.pgf}
 \end{minipage}\vspace{8pt}
+
 \pagebreak
+
 \begin{exrig}
 \begin{esempio}
 Nel trapezio $ABCD$, circoscritto ad una semicirconferenza, la base minore ed un lato obliquo misurano entrambi 6~cm, mentre la base maggiore misura 15~cm. Calcolare perimetro ed area del trapezio.\vspace{7pt}

@@ -428,8 +428,18 @@ Si dimostra che l'asse radicale è perpendicolare alla retta congiungente i cent
 Data una circonferenza interna ad un'altra, la distanza fra i centri è minore della differenza fra i raggi.
 \end{teorema}
 
-\begin{figure}[htb]
-	\centering\input{./lbr/chap05/fig019_circ_interne.pgf}\hspace{0.5cm}\input{./lbr/chap05/fig020_circ_conc.pgf}
+\begin{figure}[!htb]
+	\begin{center}
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\input{./lbr/chap05/fig019_circ_interne.pgf}
+		\end{minipage}
+		\hspace{0.03\textwidth}	
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\input{./lbr/chap05/fig020_circ_conc.pgf}
+		\end{minipage}
+	\end{center}
 \end{figure}
 
 Un caso particolare di circonferenze una interna all'altra è rappresentato dalle \emph{circonferenze concentriche}, i cui centri coincidono. La zona di piano delimitata dalle due circonferenze è detta \emph{corona circolare}.
@@ -489,8 +499,6 @@ Un angolo al centro ed un angolo alla circonferenza si dicono \emph{corrisponden
 	\centering\input{./lbr/chap05/fig024_ang_circonf.pgf}
 	\caption{Angoli alla circonferenza e corrispondenti angoli al centro}
 \end{figure}
-
-\pagebreak
 
 \begin{teorema}
 L'angolo alla circonferenza è la metà del corrispondente angolo al centro.
@@ -604,10 +612,12 @@ In una stessa circonferenza o in circonferenze congruenti
 \end{itemize*}
 \end{teorema}
 
+\pagebreak
+
 \section{Proprietà dei segmenti di tangenza}\label{sect:proprieta_tangenti}
 
 \begin{wrapfigure}{r}{0.3\textwidth}
-	\centering\input{./lbr/chap05/fig033_segm_tan.pgf}
+	\centering\input{./lbr/chap05/fig033_segm_tan.pgf}\vspace{20pt}\input{./lbr/chap05/fig034_2_segm_tan.pgf}
 \end{wrapfigure}
 Data una circonferenza $C$ di centro $O$ e raggio $r$, ed un punto $P$ del piano, quante sono le rette passanti per $P$ e tangenti a $C$?  Ovviamente, dipende dalla posizione del punto $P$ rispetto alla circonferenza $C$.
 
@@ -615,9 +625,6 @@ Se $P$ è interno a $C$, non esiste alcuna retta passante per $P$ e tangente a $
 
 Se invece il punto $P\in C$, allora esiste una ed una sola retta passante per $P$ e tangente a $C$ ed in questo caso $OP$ coincide con un raggio di $C$ e la retta tangente è perpendicolare ad $OP$.
 
-\begin{wrapfigure}{r}{0.3\textwidth}
-	\centering\input{./lbr/chap05/fig034_2_segm_tan.pgf}
-\end{wrapfigure}
 Se consideriamo un punto $P$ esterno a $C$, allora esistono due rette distinte passanti per $P$ e tangenti a $C$. Verifichiamo, con l'aiuto di una costruzione geometrica, che da un punto esterno ad una circonferenza possiamo tracciare due tangenti, e due sole, alla circonferenza stessa.
 Uniamo $P$ con $O$ e costruiamo la circonferenza di diametro $OP$; le due circonferenze si intersecano in due punti distinti $A$ e $B$. Uniamo $A$ e $B$ con $O$ e con $P$. Gli angoli $O\widehat{A}P$ e $O\widehat{B}P$ sono retti perché sono angoli alla circonferenza che insistono su semicirconferenze. Dunque $OA\perp AP$ e $OB\perp BP$, per cui le rette $AP$ e $BP$ hanno distanza da $O$ pari ad $r$, e quindi sono tangenti a $C$. $A$ e $B$ sono gli unici punti per cui valgono le relazioni precedenti, perché sono gli unici punti di intersezione delle due circonferenze. $AP$ e $BP$ sono pertanto le due uniche rette passanti per $P$ e tangenti a $C$.
 
@@ -892,8 +899,31 @@ Il centro comune alle due circonferenze si dice anche \emph{centro della figura}
 Nel caso di poligoni con un numero pari di lati, il centro coincide con il punto di incontro di tutte le diagonali che congiungono vertici opposti. 
 Nel caso di poligoni con un numero dispari di lati, coincide con il punto di incontro di tutti i segmenti che uniscono un vertice al punto medio del lato opposto.
 
-\begin{figure}[htb]
-	\centering\input{./lbr/chap05/fig049_pentagono_regolare.pgf}\hspace{10pt}\input{./lbr/chap05/fig050_esagono_regolare.pgf}\hspace{10pt}\input{./lbr/chap05/fig051_ettagono_regolare.pgf}\hspace{10pt}\input{./lbr/chap05/fig052_ottagono_regolare.pgf}
+\begin{figure}[!htb]
+	\begin{center}
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\input{./lbr/chap05/fig049_pentagono_regolare.pgf}
+		\end{minipage}
+		\hspace{0.03\textwidth}	
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\input{./lbr/chap05/fig050_esagono_regolare.pgf}
+		\end{minipage}
+	\end{center}
+\end{figure}
+\begin{figure}[!htb]
+	\begin{center}
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\input{./lbr/chap05/fig051_ettagono_regolare.pgf}
+		\end{minipage}
+		\hspace{0.03\textwidth}	
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\input{./lbr/chap05/fig052_ottagono_regolare.pgf}
+		\end{minipage}
+	\end{center}
 \end{figure}
 
 

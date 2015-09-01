@@ -38,9 +38,9 @@ Data una grandezza geometrica $A$ ed un numero naturale $n$, la grandezza geomet
 
 Dato un segmento $AB$ possiamo dare un significato alla scrittura $\dfrac{3}{2}AB$ nel seguente modo:
 
-\begin{figure}[!htb]
+\begin{figure*}[!htb]
 	\centering\input{./lbr/chap06/fig001_mult_segmento.pgf}
-\end{figure}
+\end{figure*}
 
 Il segmento $AB$ è costituito da 3 segmenti ciascuno congruente alla metà di $AB$.
 \begin{definizione}
@@ -53,9 +53,9 @@ L'esistenza di grandezze incommensurabili è confermata dal seguente teorema.
 Il lato e la diagonale di un quadrato sono grandezze incommensurabili.
 \end{teorema}
 
-\begin{figure}[!htb]
+\begin{figure*}[!htb]
 	\centering\input{./lbr/chap06/fig002_diag_quadrato.pgf}
-\end{figure}
+\end{figure*}
 
 \begin{proof}
 La dimostrazione si sviluppa per assurdo. Con riferimento alla figura, verifichiamo che  il lato $AB$ e la diagonale $AC$ del quadrato $ABCD$ sono incommensurabili.
@@ -121,9 +121,9 @@ Concludiamo quindi affermando che un qualunque numero reale $r$ può essere defi
 
 I numeri reali sono pertanto il raggruppamento di numeri razionali e irrazionali:
 
-\begin{figure}[!htb]
+\begin{figure*}[!htb]
 	\centering\input{./lbr/chap06/fig003_classif_numeri.pgf}
-\end{figure}
+\end{figure*}
 
 Passiamo ora a definire la misura delle grandezze incommensurabili.
 Date le lunghezze incommensurabili AB e CD, poniamo
@@ -293,9 +293,9 @@ da cui segue che \emph{il prodotto tra le misure di due grandezze corrispondenti
 I rettangoli aventi altezze congruenti sono proporzionali alle rispettive basi.
 \end{teorema}
 
-\begin{figure}[!htb]
+\begin{figure*}[!htb]
 	\centering\input{./lbr/chap06/fig004_classi_rettangoli.pgf}	
-\end{figure}
+\end{figure*}
 
 \begin{proof}
 Consideriamo la classe di grandezze costituita da tutti i rettangoli con altezze congruenti e la classe costituita dalle rispettive basi. Queste due classi sono in corrispondenza biunivoca, in quanto ad ogni rettangolo corrisponde una ed una sola base e viceversa.
@@ -328,9 +328,9 @@ Un fascio di rette parallele determina su due trasversali classi di segmenti dir
 Assumiamo come ipotesi di avere quattro rette parallele $a$, $b$, $c$ e $d$. Dimostriamo che sono proporzione i segmenti 
 $A_1B_1 : A_2B_2 = B_1C_1 : B_2C_2 = A_1C_1 : A_2C_2 = B_1D_1 : B_2D_2$.
 
-\begin{figure}[!htb]
+\begin{figure*}[!htb]
 	\centering\input{./lbr/chap06/fig005_talete_gen.pgf}	
-\end{figure}
+\end{figure*}
 
 A questo scopo ricorriamo alla condizione necessaria e sufficiente sulla proporzionalità tra grandezze (teorema~\ref{teo:6.1}):
 condizione necessaria e sufficiente affinché due classi di grandezze in corrispondenza biunivoca siano direttamente proporzionali è che
@@ -355,9 +355,9 @@ Dal teorema di Talete discendono due importanti corollari.
 Una retta parallela ad un lato di un triangolo determina sugli altri due lati, o sui loro prolungamenti, segmenti proporzionali.
 \end{corollario}
 
-\begin{figure}[!htb]
+\begin{figure*}[!htb]
 	\centering\input{./lbr/chap06/fig006_talete_gen_coroll1.pgf}	
-\end{figure}
+\end{figure*}
 
 \begin{proof}
 Sia $ABC$ il triangolo in questione. Tracciamo una retta parallela al lato $BC$ che intersechi gli altri due nei punti $D$ ed $E$. Vogliamo dimostrare che $AE : AD = EC : DB$.
@@ -370,9 +370,9 @@ La stessa dimostrazione vale nel caso in cui la parallela al lato $BC$ interseca
 La retta che divide due lati di un triangolo (o i loro prolungamenti) in segmenti proporzionali è parallela al terzo lato.
 \end{corollario}
 
-\begin{figure}[!htb]
+\begin{figure*}[!htb]
 	\centering\input{./lbr/chap06/fig007_talete_gen_coroll2.pgf}	
-\end{figure}
+\end{figure*}
 
 \begin{proof}
 Abbiamo in ipotesi che $AE : AD = AC : AB$ e dobbiamo dimostrare che $DE$ è parallela a $BC$.
@@ -573,8 +573,10 @@ Dall'ipotesi, applicando la proprietà del comporre si ha $(AB+AC+BC):AB=(A'B'+A
 \end{proof}
 
 \begin{teorema}\label{teo:6.4}% teorema 2
-Il rapporto tra le aree\footnote{una definizione più rigorosa dell'area di un poligono verrà data nel capitolo seguente.} di due triangoli simili è uguale al quadrato del rapporto di similitudine.
+Il rapporto tra le aree\footnotemark{} di due triangoli simili è uguale al quadrato del rapporto di similitudine.
 \end{teorema}
+
+\footnotetext{una definizione più rigorosa dell'area di un poligono verrà data nel capitolo seguente.}
 
 \noindent Ipotesi: $AB:A'B'=AC:A'C'=BC:B'C'$.\tab Tesi: $A_{ABC}=A_{A'B'C'}=\overline{AB}^2:\overline{A'B'}^2$.
 
@@ -751,7 +753,17 @@ ll lato del decagono regolare è la sezione aurea del raggio della circonferenza
 Detto $OA$ il raggio della circonferenza e $AB$ il lato del decagono regolare, si deve dimostrare che: $OA:AB=AB:(OA-AB)$.
 
 \begin{figure*}[!htb]
-	\noindent\centering\input{./lbr/chap06/fig032_dec_reg.pgf}\hspace{2cm}\input{./lbr/chap06/fig033_dec_reg2.pgf}
+	\begin{center}
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\input{./lbr/chap06/fig032_dec_reg.pgf}
+		\end{minipage}
+		\hspace{0.03\textwidth}	
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\input{./lbr/chap06/fig033_dec_reg2.pgf}
+		\end{minipage}
+	\end{center}
 \end{figure*}
 
 \begin{proof}

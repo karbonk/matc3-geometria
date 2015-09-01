@@ -14,7 +14,7 @@
 \draw[very thin, shorten >=-1.6cm,shorten <=-1.7cm] (a) -- (c);
 \draw[very thin, shorten >=-3cm,shorten <=-3cm] (c) -- (b);
 
-\draw[very thick] (a) node[shift={(0.3,-0.1)}] {$A$} -- (b) node[shift={(-0.1,0.3)}] {$B$} -- (c) node[shift={(-0.2,-0.2)}] {$C$} -- cycle;
+\draw[very thick] (a) node[shift={(0.35,-0.18)}] {$A$} -- (b) node[shift={(-0.03,0.3)}] {$B$} -- (c) node[shift={(-0.25,-0.15)}] {$C$} -- cycle;
 
 \path (b) let \p1 = ($(a)-(b)$) in -- ($(b)!{-veclen(\x1,\y1)}!(c)$) -- +($(a)-(b)$) coordinate (ob);
 \path (a) let \p1 = ($(b)-(a)$) in -- ($(a)!{-veclen(\x1,\y1)}!(c)$) -- +($(b)-(a)$) coordinate (oa);
@@ -41,8 +41,8 @@
 \draw[dashed] (n) let \p1 = ($(nr) - (n)$) in circle ({veclen(\x1,\y1)});
 
 \draw[fill] (o) circle (1.2pt) node[shift={(0.2,-0.2)}] {$O$};
-\draw[fill] (m) circle (1.2pt) node[shift={(0.25,0)}] {$M$};
-\draw[fill] (n) circle (1.2pt) node[shift={(0.1,0.2)}] {$N$};
+\draw[fill] (m) circle (1.2pt) node[shift={(0.3,0)}] {$M$};
+\draw[fill] (n) circle (1.2pt) node[shift={(0.1,0.25)}] {$N$};
 
 \end{scope}
 

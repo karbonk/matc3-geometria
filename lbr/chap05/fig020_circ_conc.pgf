@@ -21,7 +21,8 @@
 \draw[red] (o) -- node[black, above, midway, sloped] {$r_2$} +(45:\raggiob);
 \draw[thick, name path=Circle2] (o) circle (\raggiob);
 
-\node at (0,-2.5) {circonferenze concentriche};
+\node at (0,2.6) {$O_1\equiv O_2\equiv O$};
+\node at (0,-2.6) {circonferenze concentriche};
 
 \end{scope}
 
