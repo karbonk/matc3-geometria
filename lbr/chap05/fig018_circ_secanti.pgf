@@ -24,7 +24,7 @@
 \draw[fill] (intersection-2) coordinate (b) circle (1.5pt) node[shift={(.15,-.3)}] {$B$};
 \draw[thick,green!40!black,dashdotted] ($(a)!-0.5!(b)$)--($(a)!1.5!(b)$);
 
-\node at (8,0) {$\abs{r_1-r_2}<\overline{O_1O_2}<r_1+r_2$};
+\node at (8,0) {$\valass{r_1-r_2}<\overline{O_1O_2}<r_1+r_2$};
 
 \end{scope}
 

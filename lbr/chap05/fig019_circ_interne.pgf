@@ -19,7 +19,7 @@
 \draw[thick, name path=Circle2] (ob) circle (\raggiob);
 \draw[fill] (ob) circle (1.2pt) node[shift={(.1,-.25)}] {$O_2$};
 
-\node at (0,2.6) {$\overline{O_1O_2}< \abs{r_1-r_2}$};
+\node at (0,2.6) {$\overline{O_1O_2}< \valass{r_1-r_2}$};
 \node at (0,-2.6) {circonferenza interna ad un'altra};
 
 \end{scope}
