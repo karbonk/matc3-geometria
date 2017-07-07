@@ -290,17 +290,18 @@ Sapendo che le rette $r$, $s$, $t$ e $u$ della figura a fianco sono parallele, c
 	\centering\input{./lbr/chap06/fig039_esercizio.pgf}
 \end{minipage}
 
-\begin{multicols}{2}
-
+\noindent\begin{minipage}{0.6\textwidth}\parindent15pt
 \begin{esercizio}
 \label{ese:6.35}
-Nel triangolo $ABC$, individua sul lato $AB$ i punti $D$ ed $E$, con $D$ più vicino ad $A$. Da $D$ ed $E$ traccia le parallele sia al lato $AC$ che al lato $BC$, come in figura~\ref{fig:ese6.35}. Dimostra che sussiste la seguente proporzione $AC:BC=FG:HI$.
+Nel triangolo $ABC$, individua sul lato $AB$ i punti $D$ ed $E$, con $D$ più vicino ad $A$. Da $D$ ed $E$ traccia le parallele sia al lato $AC$ che al lato $BC$, come nella figura a fianco. Dimostra che sussiste la seguente proporzione $AC:BC=FG:HI$.
 \end{esercizio}
-
-\begin{figure}[!htb]
+\end{minipage}\hfil
+\begin{minipage}{0.4\textwidth}
 	\centering\input{./lbr/chap06/fig040_esercizio.pgf}
-	\caption{Esercizio~\ref{ese:6.35}}\label{fig:ese6.35}
-\end{figure}
+%	\caption{Esercizio~\ref{ese:6.35}}\label{fig:ese6.35}
+\end{minipage}
+
+\begin{multicols}{2}
 
 \begin{esercizio}
 \label{ese:6.36}
@@ -464,7 +465,7 @@ $ABC$ e $A'B'C'$ sono due triangoli simili, $CR$ e $C'R'$ sono le bisettrici ris
 
 \begin{esercizio}
 \label{ese:6.64}
-In un trapezio $ABCD$ di basi $AB=4$~cm, $DC=8$~cm, traccia le diagonali $AC$ e $BD$ sapendo che esse misurano rispettivamente \np{7,62}~cm e \np{5,83}~cm. Indicato con $K$ il punto di intersezione delle diagonali, determina le misure in cui ciascuna diagonale resta divisa dall'altra.
+In un trapezio $ABCD$ di basi $AB=4$~cm, $DC=8$~cm, traccia le diagonali $AC$ e $BD$. Sapendo che esse misurano rispettivamente \np{7,62}~cm e \np{5,83}~cm, determina le misure in cui ciascuna diagonale resta divisa dall'altra.
 \end{esercizio}
 
 \begin{esercizio}
@@ -579,15 +580,29 @@ Nel trapezio $ABCD$ rettangolo in $A$ e in $D$, le diagonali $BD$ e $AC$ sono pe
 Il rapporto fra le basi di due triangoli isosceli è $2/5$ e la somma delle loro aree è 435~cm\textsuperscript{2}; sapendo che l'altezza relativa alla base del primo triangolo misura 10~cm, calcolare i perimetri dei due triangoli. 
 \end{esercizio}
 
+\end{multicols}
+
+\begin{figure}[htb]
+	\centering\input{./lbr/chap06/fig041_esercizio.pgf}
+	\caption{Esercizio~\ref{ese:6.86}}\label{fig:ese6.86}
+\end{figure}
+
+\begin{figure}[htb]
+	\begin{minipage}[b]{.5\textwidth}
+	\centering\input{./lbr/chap06/fig042_esercizio.pgf}
+	\caption{Esercizio~\ref{ese:6.90}}\label{fig:ese6.90}
+	\end{minipage}
+	\begin{minipage}[b]{.5\textwidth}
+	\centering\input{./lbr/chap06/fig043_esercizio.pgf}
+	\caption{Esercizio~\ref{ese:6.91}}\label{fig:ese6.91}
+	\end{minipage}
+\end{figure}
+
+\begin{multicols}{2}
 \begin{esercizio}
 \label{ese:6.86}
 Due triangoli $ABC$ e $DEF$ (figura~\ref{fig:ese6.86}) hanno le basi $AB$ e $DF$ e i vertici $C$ ed $E$ su rette parallele. Dimostrate che $IJ:KL=AB:DF$, dove $IJ$ e $KL$ sono le corde intercettate dai lati dei due triangoli su una retta parallela alle basi (tracciate le altezze $CP$ e $EQ$).
 \end{esercizio}
-
-\begin{figure}[!htb]
-	\centering\input{./lbr/chap06/fig041_esercizio.pgf}
-	\caption{Esercizio~\ref{ese:6.86}}\label{fig:ese6.86}
-\end{figure}
 
 \begin{esercizio}
 \label{ese:6.87}
@@ -611,20 +626,10 @@ Ipotesi: $OP\parallel MN\parallel RS$.\\
 Tesi: $RQ\cong QS$.
 \end{esercizio}
 
-\begin{figure}[!htb]
-	\centering\input{./lbr/chap06/fig042_esercizio.pgf}
-	\caption{Esercizio~\ref{ese:6.90}}\label{fig:ese6.90}
-\end{figure}
-
 \begin{esercizio}
 \label{ese:6.91}
 Considerate la figura~\ref{fig:ese6.91}. \`E sufficiente sapere che $VW=2CW$ per stabilire il rapporto di similitudine tra $ABC$ e $CTU$? Se $Area(ABC) = 54$ rispetto al metro quadrato, quanto è l'area di $CTU$? Completate: <<Il rapporto tra le due parti in cui $ABC$ rimane diviso dal segmento $TU$ è \ldots{}>>.
 \end{esercizio}
-
-\begin{figure}[!htb]
-	\centering\input{./lbr/chap06/fig043_esercizio.pgf}
-	\caption{Esercizio~\ref{ese:6.91}}\label{fig:ese6.91}
-\end{figure}
 
 \begin{esercizio}
 \label{ese:6.92}
@@ -808,7 +813,7 @@ $AB=\frac{7}{3}CD$.
 $\np{2,54}$~cm,\quad $\np{5,08}$~cm,\quad $\np{3,89}$~cm,\quad $\np{1,94}$~cm.
 
 \paragraph{\ref{ese:6.67}.}
-$\np{21,52}$~cm.
+$11$~cm.
 
 \paragraph{\ref{ese:6.69}.}
 16~cm.

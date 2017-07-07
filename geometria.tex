@@ -21,6 +21,9 @@
 %  -  README
 %  -  files under chap/, lbr/ and img/ directories
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\def \versans {}  % Togliere il commento per ottenere il testo in sans serif
+
 \pdfminorversion=5
 \pdfcompresslevel=9
 \pdfobjcompresslevel=3
@@ -39,6 +42,14 @@
 \usepackage{mathpazo}
 \usepackage[scaled=.95]{helvet}
 \usepackage{eulervm}
+% Gestione versione in serif o sans serif
+\ifx \versans \undefined
+% (serif)
+\else
+% (sans serif)
+\usepackage{sfmath}
+\renewcommand{\familydefault}{\sfdefault}
+\fi
 %========================
 % Tipografia
 %========================
@@ -112,7 +123,6 @@
 \usepackage{marvosym}
 \usepackage{eurosym}
 \usepackage{pifont}
-\usepackage{pdfpages}
 %========================
 % Geometria Razionale
 %========================
@@ -122,10 +132,14 @@
 %========================
 \usepackage[colorlinks, hypertexnames=false]{hyperref}
 \usepackage{bookmark}
+
 %========================
 % Personalizzazioni
 %========================
+\usepackage{pdfpages}
+
 \input{lbr/variabili}
+
 \graphicspath{{img/}}
 \setsecnumdepth{subsection} 
 \maxtocdepth{subsection}
@@ -150,7 +164,7 @@
   filecolor=black,%
   urlcolor=RoyalBlue,%
   plainpages=false,%
-  pdftitle={\pdftitolo, \edizione \tipo},%
+  pdftitle={\pdftitolo, \edizione{} (\tipo\versnote)},%
   pdfauthor=Daniele Masini,%
   pdfsubject=Testo di Geometria per la Scuola Superiore di $II$ grado,%
   pdfkeywords=geometria scuola matematica C3 matematicamente.it,%

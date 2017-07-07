@@ -517,7 +517,7 @@ Hilbert assume come enti primitivi della geometria piana il \emph{punto} e la \e
 \item Esistono almeno quattro punti che non giacciono sullo stesso piano.
 \end{enumerate}
 
-\begin{figure}[b,t,h]
+\begin{figure}[bth]
  \begin{minipage}[b]{.32\textwidth}
  \centering
  \input{./lbr/chap01/fig004_assioma2.pgf}
@@ -606,7 +606,7 @@ Chiamiamo \emph{semiretta} la parte di retta costituita da un punto di essa, det
 \begin{definizione}
 Si dice \emph{angolo} ciascuna delle due parti in cui un piano è diviso da due semirette aventi l'origine in comune; le semirette si dicono \emph{lati} dell'angolo; l'origine comune alle due semirette si dice \emph{vertice} dell'angolo (figura~\ref{fig:1.9}).
 \end{definizione}
-\begin{figure*}[b,t,h]
+\begin{figure*}[bth]
 \centering  \input{./lbr/chap01/fig013_def_angolo.pgf}
 \caption{Le semirette $r$ e $s$, aventi l'origine $V$ comune, individuano due regioni del piano ognuna delle quali è detta \emph{angolo}.}\label{fig:1.9}
 \end{figure*}
@@ -616,7 +616,7 @@ L'angolo individuato da tre punti $A$, $B$, $C$ è l'angolo formato dalla semire
 \begin{enumerate}[label=\Roman{*}.]
 \setcounter{enumi}{14}
 \item Dati un angolo $A\widehat{B}C$ ed una semiretta $B'C'$, esistono e sono uniche due semirette $B'D$ e $B'E$, tali che sia l'angolo $D\widehat{B'}C'$ che $E\widehat{B'}C'$ sono congruenti all'angolo $A\widehat{B}C$ (figura~\ref{fig:1.10});
-\begin{figure}[b,t,h]
+\begin{figure}[bth]
  \centering \input{./lbr/chap01/fig014_assioma15.pgf}
  \caption{Assioma XV}\label{fig:1.10}
 \end{figure}
@@ -628,7 +628,7 @@ L'angolo individuato da tre punti $A$, $B$, $C$ è l'angolo formato dalla semire
 \begin{enumerate}[label=\Roman{*}.]
 \setcounter{enumi}{16}
 \item \emph{Assioma di Archimede}. Sulla retta che unisce due punti qualsiasi $A$ e $B$ si prende un punto $A_1$, quindi si prendono i punti $A_2$, $A_3$, $A_4$, \ldots in modo che $A_1$ sia tra $A$ e $A_2$, $A_2$ tra $A_1$ e $A_3$, $A_3$ tra $A_2$ e $A_4$, ecc. e che  $AA_1\equiv A_1A_2\equiv A_2A_3\equiv A_3A_4\equiv\ldots$ allora tra tutti questi punti esiste sempre un punto $A_n$ tale che $B$ sta tra $A$ e $A_n$ (figura~\ref{fig:1.11}).
-\begin{figure}[b,t,h]
+\begin{figure}[bth]
  \centering \input{./lbr/chap01/fig015_assioma17.pgf}
  \caption{Assioma di Archimede (XVII)}\label{fig:1.11}
 \end{figure}
@@ -704,7 +704,7 @@ L'insieme di tutte le rette di un piano che passano per uno stesso punto è dett
 Prendendo su una retta due punti $A$ e $B$, la retta resta divisa in tre parti: la semiretta di origine $A$ che non contiene $B$, la parte costituita dai punti compresi tra $A$ e $B$ e la semiretta di origine $B$ che non contiene $A$.
 
 \begin{definizione}
-Si chiama \emph{segmento} $AB$ l'insieme dei punti $A$ e $B$ e di tutti quelli che stanno tra $A$ e $B$.
+Si chiama \emph{segmento} $AB$ l'insieme dei punti $A$ e $B$ e di tutti quelli della retta $AB$ che stanno tra $A$ e $B$.
 I punti $A$ e $B$ si dicono \emph{estremi} del segmento.
 \end{definizione}
 Un segmento viene indicato con le due lettere maiuscole dei suoi estremi.
@@ -737,7 +737,7 @@ Due segmenti si dicono \emph{adiacenti} se sono consecutivi ed appartengono alla
 \begin{definizione}
 Si dice \emph{semipiano} di origine la retta $r$ la figura formata dalla retta $r$ e da una delle due parti in cui essa divide il piano (figura~\ref{fig:1.17}).
 \end{definizione}
-\begin{figure}[b,t,h]
+\begin{figure}[bth]
  \centering\input{./lbr/chap01/fig021_def13.pgf}
   \caption{Semipiani opposti}\label{fig:1.17}
 \end{figure}
@@ -746,7 +746,7 @@ In un piano ${\pi}$, una qualsiasi retta $r \subset \pi$ dà origine a due semip
 \begin{definizione}
 Una figura si dice \emph{convessa} se, considerati due suoi qualsiasi punti, il segmento che li unisce è contenuto nella figura. Si dice \emph{concava} se esistono almeno due punti per i quali il segmento che li unisce non è interamente contenuto nella figura (figura~\ref{fig:1.18}).
 \end{definizione}
-\begin{figure}[b,t,h]
+\begin{figure}[bth]
  \centering \input{./lbr/chap01/fig022_def14.pgf}
  \caption{La figura $ F $ è convessa, per qualsiasi coppia di punti interni a $ F $ il segmento che li unisce è interamente nella figura; la figura $ G $ è concava perché unendo i punti $ P $ e $ Q $ si ha un segmento che cade in parte esternamente alla figura.}\label{fig:1.18}
 \end{figure}
@@ -1492,8 +1492,7 @@ Un poligono si dice \emph{equiangolo} se ha tutti gli angoli interni congruenti 
 Un poligono equiangolo e equilatero si dice \emph{poligono regolare}.
 \end{definizione}
 
-\ovalbox{\risolvii \ref{ese:1.125}, \ref{ese:1.126}, \ref{ese:1.127}, \ref{ese:1.128}, \ref{ese:1.129}, \ref{ese:1.130}, \ref{ese:1.131}, \ref{ese:1.132}, \ref{ese:1.133}, \ref{ese:1.134}}
-
+\ovalbox{\risolvii \ref{ese:1.125}, \ref{ese:1.126}, \ref{ese:1.127}, \ref{ese:1.128}, \ref{ese:1.129}, \ref{ese:1.130}, \ref{ese:1.131}, \ref{ese:1.132}, \ref{ese:1.133}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
